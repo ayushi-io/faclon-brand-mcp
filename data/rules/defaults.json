@@ -1,0 +1,94 @@
+{
+  "about": "What to use when a request doesn't specify. Every entry comes from a DEFAULT marker in the Figma file (frame labels or variable descriptions).",
+  "defaults": {
+    "canvas": {
+      "fill": "background/primary",
+      "border": null,
+      "source": "Variable description: background/primary"
+    },
+    "container": {
+      "fill": "container/primary",
+      "border": "border/container",
+      "borderWidth": "border-width/default (1px)",
+      "radius": "radius/default (2px)",
+      "padding": "padding/container",
+      "elevation": "none",
+      "source": "Variable description: container/primary, border/container; card borders decided by brand team 2026-10-09"
+    },
+    "nested_container": {
+      "fill": "container/secondary",
+      "source": "Variable description: container/secondary"
+    },
+    "raised_surface": {
+      "fill": "container/elevated",
+      "elevation": "mid-raised",
+      "use": "modals and popovers only",
+      "source": "Variable description: container/elevated; Elevation/Mid Raised"
+    },
+    "success_container": {
+      "fill": "container/success",
+      "border": null,
+      "text": "text/success",
+      "source": "Variable description: container/success"
+    },
+    "error_container": {
+      "fill": "container/error",
+      "border": null,
+      "text": "text/error",
+      "source": "Variable description: container/error"
+    },
+    "heading": {
+      "family": "TASA Orbiter",
+      "color": "text/heading",
+      "source": "Variable description: text/heading, family/heading"
+    },
+    "body": {
+      "family": "Inter",
+      "style": "body/md",
+      "color": "text/body",
+      "source": "Variable description: text/body, size/body/md"
+    },
+    "eyebrow": {
+      "family": "Inter",
+      "weight": 500,
+      "size": 10,
+      "lineHeight": 16,
+      "case": "uppercase",
+      "color": "text/eyebrow",
+      "source": "Eyebrow style; Variable description: weight/eyebrow"
+    },
+    "border_width": {
+      "value": "border-width/default (1px)",
+      "source": "Variable description: border-width/default"
+    },
+    "radius": {
+      "value": "radius/default (2px)",
+      "source": "Variable description: radius/default"
+    },
+    "opacity": {
+      "value": "opacity/full (100%)",
+      "source": "Variable description: opacity/full"
+    },
+    "elevation": {
+      "value": "none",
+      "source": "Elevation/None"
+    },
+    "gap_inline": {
+      "value": "gap/inline",
+      "source": "Variable description: gap/inline"
+    },
+    "gap_stack": {
+      "value": "gap/stack",
+      "source": "Variable description: gap/stack"
+    },
+    "padding_container": {
+      "value": "padding/container",
+      "source": "Variable description: padding/container"
+    },
+    "font_fallback": {
+      "TASA Orbiter": "Inter",
+      "Inter": null,
+      "source": "Variable description: global/family/* (TWO FAMILIES ONLY)"
+    }
+  }
+}

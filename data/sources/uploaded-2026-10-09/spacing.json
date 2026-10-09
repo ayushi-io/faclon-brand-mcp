@@ -1,0 +1,12 @@
+{
+  "scale": [4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56],
+  "unit": "px",
+  "rule": "Uniform 4px steps. No zero, no in-between values.",
+  "roles": {
+    "gapInline": { "desktop": 8, "mobile": 8, "use": "icon and label, items in a row" },
+    "gapStack": { "desktop": 12, "mobile": 12, "use": "stacked elements inside a grouping" },
+    "gapGrid": { "desktop": 24, "mobile": 16, "use": "repeated blocks in a grid" },
+    "paddingContainer": { "desktop": 16, "mobile": 12, "use": "inside a card, panel, or surface" },
+    "paddingSection": { "desktop": 56, "mobile": 32, "use": "vertical rhythm between major sections" }
+  }
+}

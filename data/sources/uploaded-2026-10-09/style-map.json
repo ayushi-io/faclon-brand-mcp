@@ -1,0 +1,24 @@
+{
+  "_comment": "Maps Figma style names to token paths. Only mapped styles sync; unmapped ones are listed in the Action log. Colour is intentionally empty - the palette lives in Figma variables, which this plan does not expose over the API.",
+  "text": {
+    "Display/XL": "display.xl",
+    "Display/LG": "display.lg",
+    "Display/MD": "display.md",
+    "Heading/H1": "heading.h1",
+    "Heading/H2": "heading.h2",
+    "Heading/H3": "heading.h3",
+    "Heading/H4": "heading.h4",
+    "Heading/H5": "heading.h5",
+    "Heading/H6": "heading.h6",
+    "Body/XL": "body.xl",
+    "Body/LG": "body.lg",
+    "Body/MD": "body.md",
+    "Body/SM": "body.sm",
+    "Body/XS": "body.xs",
+    "Body/2XS": "body.2xs",
+    "Eyebrow": "eyebrow.default"
+  },
+  "families": { "heading": "Heading/H1", "body": "Body/MD" },
+  "fill": {},
+  "effect": {}
+}

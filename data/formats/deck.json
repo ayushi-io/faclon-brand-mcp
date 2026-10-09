@@ -1,0 +1,24 @@
+{
+  "id": "deck",
+  "name": "Presentation (16:9)",
+  "status": "draft",
+  "note": "Draft values for the brand team to confirm. Every value here is a proposal, not taken from Figma.",
+  "audience": "external",
+  "canvas": { "width": 1920, "height": 1080, "unit": "px" },
+  "safe_area": { "top": 80, "right": 96, "bottom": 80, "left": 96 },
+  "grid": { "columns": 12, "gutter": "spacing.24" },
+  "typography": {
+    "breakpoint_mode": "desktop",
+    "title_style": "display/md",
+    "heading_style": "heading/h2",
+    "body_style": "body/xl",
+    "max_words_per_slide": 40,
+    "max_bullets": 5
+  },
+  "overrides": [
+    { "rule": "type.min-size", "value": 24, "reason": "Legible from the back of a room." }
+  ],
+  "logo": { "position": "bottom-right", "min_width": 120 },
+  "export": { "file_types": ["pptx", "pdf"] },
+  "severity": { "max_words_per_slide": "warning", "max_bullets": "warning" }
+}

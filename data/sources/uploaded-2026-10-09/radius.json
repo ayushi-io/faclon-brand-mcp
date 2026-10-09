@@ -1,0 +1,10 @@
+{
+  "default": 2,
+  "md": 4,
+  "lg": 6,
+  "xl": 8,
+  "2xl": 10,
+  "3xl": 12,
+  "pill": "chips, tags, badges, avatars only — not a step in the scale",
+  "note": "Corners are softened, not rounded. No zero radius exists — square corners mean no radius set. Pill is a shape, not a scale step, and must not be applied to cards, panels, inputs, or images."
+}

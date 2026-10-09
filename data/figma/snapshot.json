@@ -1,0 +1,5533 @@
+{
+  "source": {
+    "fileName": "Design MCP",
+    "fileKey": "UDARPzxpNySOS2F3mxhgUs",
+    "extractedAt": "2026-10-09T05:58:30.253Z",
+    "method": "figma-console Desktop Bridge"
+  },
+  "collections": [
+    {
+      "name": "Global Colors",
+      "modes": [
+        "Default"
+      ],
+      "variables": [
+        {
+          "name": "brand/050",
+          "type": "COLOR",
+          "values": {
+            "Default": "#F4F8FF"
+          },
+          "description": ""
+        },
+        {
+          "name": "brand/100",
+          "type": "COLOR",
+          "values": {
+            "Default": "#DCE8FE"
+          },
+          "description": ""
+        },
+        {
+          "name": "brand/200",
+          "type": "COLOR",
+          "values": {
+            "Default": "#B8D0FD"
+          },
+          "description": ""
+        },
+        {
+          "name": "brand/300",
+          "type": "COLOR",
+          "values": {
+            "Default": "#8AB1FB"
+          },
+          "description": ""
+        },
+        {
+          "name": "brand/400",
+          "type": "COLOR",
+          "values": {
+            "Default": "#5A8DF7"
+          },
+          "description": ""
+        },
+        {
+          "name": "brand/500",
+          "type": "COLOR",
+          "values": {
+            "Default": "#165FF2"
+          },
+          "description": ""
+        },
+        {
+          "name": "brand/600",
+          "type": "COLOR",
+          "values": {
+            "Default": "#124ED0"
+          },
+          "description": ""
+        },
+        {
+          "name": "brand/700",
+          "type": "COLOR",
+          "values": {
+            "Default": "#0E3FAA"
+          },
+          "description": ""
+        },
+        {
+          "name": "brand/800",
+          "type": "COLOR",
+          "values": {
+            "Default": "#0A3083"
+          },
+          "description": ""
+        },
+        {
+          "name": "brand/900",
+          "type": "COLOR",
+          "values": {
+            "Default": "#07215C"
+          },
+          "description": ""
+        },
+        {
+          "name": "brand/1000",
+          "type": "COLOR",
+          "values": {
+            "Default": "#041438"
+          },
+          "description": ""
+        },
+        {
+          "name": "green/050",
+          "type": "COLOR",
+          "values": {
+            "Default": "#EBFAF3"
+          },
+          "description": ""
+        },
+        {
+          "name": "green/100",
+          "type": "COLOR",
+          "values": {
+            "Default": "#DAF5E8"
+          },
+          "description": ""
+        },
+        {
+          "name": "green/200",
+          "type": "COLOR",
+          "values": {
+            "Default": "#B6ECD1"
+          },
+          "description": ""
+        },
+        {
+          "name": "green/300",
+          "type": "COLOR",
+          "values": {
+            "Default": "#91E3BA"
+          },
+          "description": ""
+        },
+        {
+          "name": "green/400",
+          "type": "COLOR",
+          "values": {
+            "Default": "#48D08C"
+          },
+          "description": ""
+        },
+        {
+          "name": "green/500",
+          "type": "COLOR",
+          "values": {
+            "Default": "#00BE5F"
+          },
+          "description": ""
+        },
+        {
+          "name": "green/600",
+          "type": "COLOR",
+          "values": {
+            "Default": "#00A251"
+          },
+          "description": ""
+        },
+        {
+          "name": "green/700",
+          "type": "COLOR",
+          "values": {
+            "Default": "#008743"
+          },
+          "description": ""
+        },
+        {
+          "name": "green/800",
+          "type": "COLOR",
+          "values": {
+            "Default": "#006C36"
+          },
+          "description": ""
+        },
+        {
+          "name": "green/900",
+          "type": "COLOR",
+          "values": {
+            "Default": "#005128"
+          },
+          "description": ""
+        },
+        {
+          "name": "green/1000",
+          "type": "COLOR",
+          "values": {
+            "Default": "#00361B"
+          },
+          "description": ""
+        },
+        {
+          "name": "red/050",
+          "type": "COLOR",
+          "values": {
+            "Default": "#FFF5F5"
+          },
+          "description": ""
+        },
+        {
+          "name": "red/100",
+          "type": "COLOR",
+          "values": {
+            "Default": "#FEE4E2"
+          },
+          "description": ""
+        },
+        {
+          "name": "red/200",
+          "type": "COLOR",
+          "values": {
+            "Default": "#FEC6C3"
+          },
+          "description": ""
+        },
+        {
+          "name": "red/300",
+          "type": "COLOR",
+          "values": {
+            "Default": "#FD9D96"
+          },
+          "description": ""
+        },
+        {
+          "name": "red/400",
+          "type": "COLOR",
+          "values": {
+            "Default": "#F96C62"
+          },
+          "description": ""
+        },
+        {
+          "name": "red/500",
+          "type": "COLOR",
+          "values": {
+            "Default": "#F04438"
+          },
+          "description": ""
+        },
+        {
+          "name": "red/600",
+          "type": "COLOR",
+          "values": {
+            "Default": "#D92D20"
+          },
+          "description": ""
+        },
+        {
+          "name": "red/700",
+          "type": "COLOR",
+          "values": {
+            "Default": "#B42318"
+          },
+          "description": ""
+        },
+        {
+          "name": "red/800",
+          "type": "COLOR",
+          "values": {
+            "Default": "#9A0E0E"
+          },
+          "description": ""
+        },
+        {
+          "name": "red/900",
+          "type": "COLOR",
+          "values": {
+            "Default": "#880C0C"
+          },
+          "description": ""
+        },
+        {
+          "name": "red/1000",
+          "type": "COLOR",
+          "values": {
+            "Default": "#750A0A"
+          },
+          "description": ""
+        },
+        {
+          "name": "neutral-light/100",
+          "type": "COLOR",
+          "values": {
+            "Default": "#F1F5FA"
+          },
+          "description": ""
+        },
+        {
+          "name": "neutral-light/200",
+          "type": "COLOR",
+          "values": {
+            "Default": "#E3EAF3"
+          },
+          "description": ""
+        },
+        {
+          "name": "neutral-light/300",
+          "type": "COLOR",
+          "values": {
+            "Default": "#CBD5E2"
+          },
+          "description": ""
+        },
+        {
+          "name": "neutral-light/400",
+          "type": "COLOR",
+          "values": {
+            "Default": "#B1C1D2"
+          },
+          "description": ""
+        },
+        {
+          "name": "neutral-light/500",
+          "type": "COLOR",
+          "values": {
+            "Default": "#90A5BB"
+          },
+          "description": ""
+        },
+        {
+          "name": "neutral-light/600",
+          "type": "COLOR",
+          "values": {
+            "Default": "#768EA7"
+          },
+          "description": ""
+        },
+        {
+          "name": "neutral-light/700",
+          "type": "COLOR",
+          "values": {
+            "Default": "#6C849D"
+          },
+          "description": ""
+        },
+        {
+          "name": "neutral-light/800",
+          "type": "COLOR",
+          "values": {
+            "Default": "#58728D"
+          },
+          "description": ""
+        },
+        {
+          "name": "neutral-light/900",
+          "type": "COLOR",
+          "values": {
+            "Default": "#40566D"
+          },
+          "description": ""
+        },
+        {
+          "name": "neutral-light/1000",
+          "type": "COLOR",
+          "values": {
+            "Default": "#2F4256"
+          },
+          "description": ""
+        },
+        {
+          "name": "neutral-light/1100",
+          "type": "COLOR",
+          "values": {
+            "Default": "#243547"
+          },
+          "description": ""
+        },
+        {
+          "name": "neutral-light/1200",
+          "type": "COLOR",
+          "values": {
+            "Default": "#192839"
+          },
+          "description": ""
+        },
+        {
+          "name": "neutral-dark/000",
+          "type": "COLOR",
+          "values": {
+            "Default": "#FCFCFD"
+          },
+          "description": ""
+        },
+        {
+          "name": "neutral-dark/050",
+          "type": "COLOR",
+          "values": {
+            "Default": "#E7E9EE"
+          },
+          "description": ""
+        },
+        {
+          "name": "neutral-dark/100",
+          "type": "COLOR",
+          "values": {
+            "Default": "#D0D4DD"
+          },
+          "description": ""
+        },
+        {
+          "name": "neutral-dark/200",
+          "type": "COLOR",
+          "values": {
+            "Default": "#B8C0CC"
+          },
+          "description": ""
+        },
+        {
+          "name": "neutral-dark/300",
+          "type": "COLOR",
+          "values": {
+            "Default": "#8A98AD"
+          },
+          "description": ""
+        },
+        {
+          "name": "neutral-dark/400",
+          "type": "COLOR",
+          "values": {
+            "Default": "#5A6B87"
+          },
+          "description": ""
+        },
+        {
+          "name": "neutral-dark/500",
+          "type": "COLOR",
+          "values": {
+            "Default": "#485770"
+          },
+          "description": ""
+        },
+        {
+          "name": "neutral-dark/600",
+          "type": "COLOR",
+          "values": {
+            "Default": "#3A495F"
+          },
+          "description": ""
+        },
+        {
+          "name": "neutral-dark/700",
+          "type": "COLOR",
+          "values": {
+            "Default": "#2D3A4D"
+          },
+          "description": ""
+        },
+        {
+          "name": "neutral-dark/800",
+          "type": "COLOR",
+          "values": {
+            "Default": "#273244"
+          },
+          "description": ""
+        },
+        {
+          "name": "neutral-dark/900",
+          "type": "COLOR",
+          "values": {
+            "Default": "#232E3E"
+          },
+          "description": ""
+        },
+        {
+          "name": "neutral-dark/1000",
+          "type": "COLOR",
+          "values": {
+            "Default": "#1D2635"
+          },
+          "description": ""
+        },
+        {
+          "name": "neutral-dark/1100",
+          "type": "COLOR",
+          "values": {
+            "Default": "#171F2B"
+          },
+          "description": ""
+        },
+        {
+          "name": "base/black",
+          "type": "COLOR",
+          "values": {
+            "Default": "#0A111A"
+          },
+          "description": ""
+        },
+        {
+          "name": "base/white",
+          "type": "COLOR",
+          "values": {
+            "Default": "#FFFFFF"
+          },
+          "description": ""
+        },
+        {
+          "name": "accent",
+          "type": "COLOR",
+          "values": {
+            "Default": "#68DD68"
+          },
+          "description": ""
+        },
+        {
+          "name": "neutral-light/1300",
+          "type": "COLOR",
+          "values": {
+            "Default": "#0C1927"
+          },
+          "description": "Darkest neutral. Default heading colour (Light) and secondary background (Dark)."
+        }
+      ]
+    },
+    {
+      "name": "Semantic Colors",
+      "modes": [
+        "Light",
+        "Dark"
+      ],
+      "variables": [
+        {
+          "name": "background/primary",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "base/white",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "neutral-dark/1100",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "DEFAULT canvas background. Apply to every page/screen root. No border. Override only when a specific colour is requested."
+        },
+        {
+          "name": "background/secondary",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "neutral-light/100",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "neutral-light/1300",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Alternate canvas for banded/striped sections. No border. Dark: neutral-light/1300 (#0C1927)."
+        },
+        {
+          "name": "background/tertiary",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "neutral-light/200",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "neutral-dark/900",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Deepest canvas tone. Section wells and recessed page areas."
+        },
+        {
+          "name": "background/inverse",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "neutral-light/1200",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "neutral-dark/000",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Inverted canvas — dark band in Light theme. Pair with text/inverse."
+        },
+        {
+          "name": "background/brand",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "brand/500",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "brand/500",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Brand-filled canvas region: hero, CTA band. Pair with text/on-brand."
+        },
+        {
+          "name": "background/brand-subtle",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "brand/050",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "brand/900",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Tinted brand canvas for informational bands."
+        },
+        {
+          "name": "background/success-subtle",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "green/050",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "green/900",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Success banner / confirmation band. Pair with text/success."
+        },
+        {
+          "name": "background/error-subtle",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "red/050",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "red/900",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Error banner band. Pair with text/error."
+        },
+        {
+          "name": "container/primary",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "neutral-light/100",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "neutral-dark/1000",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "DEFAULT container background — cards, panels, sheets. Light: neutral-light/100, paired with a border/container border by default."
+        },
+        {
+          "name": "container/secondary",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "neutral-light/200",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "neutral-dark/900",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Container nested inside a container/primary."
+        },
+        {
+          "name": "container/tertiary",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "neutral-light/300",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "neutral-dark/800",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Third-level nesting, inset wells, code blocks."
+        },
+        {
+          "name": "container/selected",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "brand/050",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "brand/900",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Selected / active state for rows, tabs, nav items."
+        },
+        {
+          "name": "container/brand",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "brand/500",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "brand/500",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Brand-filled container. Pair with text/on-brand."
+        },
+        {
+          "name": "container/success",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "green/100",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "green/800",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "DEFAULT success container — green/100 in Light. No border. Pair with text/success."
+        },
+        {
+          "name": "container/error",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "red/100",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "red/800",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "DEFAULT error container — red/100 in Light. No border. Pair with text/error."
+        },
+        {
+          "name": "container/inverse",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "neutral-light/1200",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "neutral-dark/000",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Inverted container. Pair with text/inverse."
+        },
+        {
+          "name": "text/primary",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "neutral-light/1100",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "neutral-light/300",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "LEGACY ALIAS — intentionally resolves to the same value as text/body. Kept so existing work keeps resolving; prefer text/body in new work, which states intent."
+        },
+        {
+          "name": "text/secondary",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "neutral-light/900",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "neutral-dark/100",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Supporting copy, descriptions, secondary labels. Light: neutral-light/900 (#40566D)."
+        },
+        {
+          "name": "text/tertiary",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "neutral-light/600",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "neutral-dark/200",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Muted text: timestamps, captions, helper text. Light: neutral-light/600 (#768EA7). Contrast is 3.4:1 on background/primary, so use it for large or non-essential text only."
+        },
+        {
+          "name": "text/placeholder",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "neutral-light/800",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "neutral-dark/300",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Input placeholder text ONLY — never for real content. Meets AA on container/primary."
+        },
+        {
+          "name": "text/inverse",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "base/white",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "neutral-dark/1100",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Text on background/inverse or container/inverse."
+        },
+        {
+          "name": "text/brand",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "brand/600",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "brand/300",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Brand-coloured text and emphasis."
+        },
+        {
+          "name": "text/link",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "brand/500",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "brand/300",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Hyperlinks in body copy. Currently shares a value with text/eyebrow and border/focus by coincidence, not by design — these are kept SEPARATE so they can diverge later."
+        },
+        {
+          "name": "text/success",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "green/800",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "green/100",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Success messaging. Tuned so Light and Dark land on the same contrast (5.69 on container/success in both) — neither theme is the weaker one."
+        },
+        {
+          "name": "text/error",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "red/700",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "red/200",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Error messaging and validation. 4.50:1 on error-subtle — passes AA with no headroom."
+        },
+        {
+          "name": "text/on-brand",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "base/white",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "base/white",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Text on any brand-filled surface (background/brand, container/brand, primary button)."
+        },
+        {
+          "name": "border/primary",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "neutral-light/300",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "neutral-dark/700",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "OPT-IN only. Default containers already carry a 1px border/container edge; use border/primary instead when a stronger border is needed: inputs, table dividers, or when a request explicitly calls for one."
+        },
+        {
+          "name": "border/secondary",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "neutral-light/200",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "neutral-dark/800",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Subtle dividers and separators."
+        },
+        {
+          "name": "border/strong",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "neutral-light/500",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "neutral-dark/500",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "High-emphasis border for inputs needing definition."
+        },
+        {
+          "name": "border/brand",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "brand/500",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "brand/400",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Brand-emphasised border, selected cards."
+        },
+        {
+          "name": "border/focus",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "brand/500",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "brand/300",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Keyboard focus ring. Shares a value with text/link and text/eyebrow today but is kept separate so it can diverge. Never remove focus without an equivalent indicator."
+        },
+        {
+          "name": "border/success",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "green/500",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "green/400",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Valid input border."
+        },
+        {
+          "name": "border/error",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "red/500",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "red/400",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Invalid input border. Never the sole error signal — pair with text/error."
+        },
+        {
+          "name": "border/inverse",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "base/white",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "neutral-dark/1100",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Border on inverted surfaces."
+        },
+        {
+          "name": "container/elevated",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "base/white",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "neutral-dark/800",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Surface that reads as RAISED — modals and popovers only. ELEVATION IS CARRIED BY THE SHADOW, which is identical in Light and Dark (Elevation/Low Raised, Elevation/Mid Raised have no theme variants). The fill only assists. In Dark it shares a value with container/tertiary; that is acceptable because the shadow, not the tone, does the lifting."
+        },
+        {
+          "name": "text/heading",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "neutral-light/1300",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "neutral-light/100",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "DEFAULT for all headings (h1–h6). Light: neutral-light/1300 (#0C1927). Dark: neutral-light/100 (#F1F5FA). Do not use for body copy."
+        },
+        {
+          "name": "text/body",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "neutral-light/1100",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "neutral-light/300",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "DEFAULT for all body copy and paragraph text. Light: neutral-light/1100 (#243547). Dark: neutral-light/300 (#CBD5E2)."
+        },
+        {
+          "name": "text/eyebrow",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "brand/500",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "brand/300",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Eyebrow / kicker / overline. brand/500 Light, brand/300 Dark. 10px, Medium (Semi Bold permitted), ALL CAPS — so ALWAYS small text: 4.5:1 required, the 3:1 large-text exemption never applies. PLACEMENT: only on background/primary, container/primary, background/brand-subtle or container/selected. Fails on container/secondary (4.38) and container/tertiary (3.58). Shares a value with text/link and border/focus today but is a separate token so it can diverge."
+        },
+        {
+          "name": "border/container",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "neutral-dark/050",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "neutral-dark/800",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "DEFAULT border for container/primary. Light: neutral-dark/050, paired with the neutral-light/100 fill. Very low contrast by design — see the ratios in semantic.css."
+        },
+        {
+          "name": "background/accent",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "accent",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "accent",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Accent fill for a highlight moment — a callout band, a stat, a graphic block. Pair with text/on-accent. ACCENT BUDGET: roughly 10-15% of any asset, counting fills and accent text together."
+        },
+        {
+          "name": "container/accent",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "accent",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "accent",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Accent-filled container. Pair with text/on-accent.  ACCENT BUDGET: accent is a highlight, not a palette. Keep it to roughly 10-15% of any asset — enough that the design does not read as flat, never so much that it competes with brand blue."
+        },
+        {
+          "name": "text/on-accent",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "base/black",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "base/black",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Text on any accent-filled surface. Accent is a bright lime, so text on it must be near-black — white fails badly.  ACCENT BUDGET: accent is a highlight, not a palette. Keep it to roughly 10-15% of any asset — enough that the design does not read as flat, never so much that it competes with brand blue."
+        },
+        {
+          "name": "border/accent",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "accent",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "accent",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Accent border for a highlighted edge.  ACCENT BUDGET: accent is a highlight, not a palette. Keep it to roughly 10-15% of any asset — enough that the design does not read as flat, never so much that it competes with brand blue."
+        },
+        {
+          "name": "text/accent",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "accent",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "accent",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Accent AS TEXT. Permitted ONLY on a dark ground — verify 4.5:1 before using. LIGHT theme: background/inverse and container/inverse only (8.64). It FAILS on every light surface: background/primary 1.73, container/primary 1.58, container/tertiary 1.17. DARK theme: passes on all standard dark surfaces (7.43-9.57) but FAILS on background/inverse and container/inverse (1.69, they are light in Dark) and on brand fills (3.07). Counts toward the 10-15% accent budget. Default remains text/on-accent for text sitting ON an accent fill; this token is for accent text sitting on something else."
+        }
+      ]
+    },
+    {
+      "name": "Global Typography",
+      "modes": [
+        "Default"
+      ],
+      "variables": [
+        {
+          "name": "global/fz/12",
+          "type": "FLOAT",
+          "values": {
+            "Default": 12
+          },
+          "description": "12px. — FLOOR: 10px minimum, whole pixels only. No fractional sizes (7.5, 7.69) anywhere."
+        },
+        {
+          "name": "global/fz/14",
+          "type": "FLOAT",
+          "values": {
+            "Default": 14
+          },
+          "description": "14px. — FLOOR: 10px minimum, whole pixels only. No fractional sizes (7.5, 7.69) anywhere."
+        },
+        {
+          "name": "global/fz/16",
+          "type": "FLOAT",
+          "values": {
+            "Default": 16
+          },
+          "description": "16px. — FLOOR: 10px minimum, whole pixels only. No fractional sizes (7.5, 7.69) anywhere."
+        },
+        {
+          "name": "global/fz/18",
+          "type": "FLOAT",
+          "values": {
+            "Default": 18
+          },
+          "description": "18px. — FLOOR: 10px minimum, whole pixels only. No fractional sizes (7.5, 7.69) anywhere."
+        },
+        {
+          "name": "global/fz/20",
+          "type": "FLOAT",
+          "values": {
+            "Default": 20
+          },
+          "description": "20px. — FLOOR: 10px minimum, whole pixels only. No fractional sizes (7.5, 7.69) anywhere."
+        },
+        {
+          "name": "global/fz/22",
+          "type": "FLOAT",
+          "values": {
+            "Default": 22
+          },
+          "description": "22px. — FLOOR: 10px minimum, whole pixels only. No fractional sizes (7.5, 7.69) anywhere."
+        },
+        {
+          "name": "global/fz/24",
+          "type": "FLOAT",
+          "values": {
+            "Default": 24
+          },
+          "description": "24px. — FLOOR: 10px minimum, whole pixels only. No fractional sizes (7.5, 7.69) anywhere."
+        },
+        {
+          "name": "global/fz/26",
+          "type": "FLOAT",
+          "values": {
+            "Default": 26
+          },
+          "description": "26px. — FLOOR: 10px minimum, whole pixels only. No fractional sizes (7.5, 7.69) anywhere."
+        },
+        {
+          "name": "global/fz/30",
+          "type": "FLOAT",
+          "values": {
+            "Default": 30
+          },
+          "description": "30px. — FLOOR: 10px minimum, whole pixels only. No fractional sizes (7.5, 7.69) anywhere."
+        },
+        {
+          "name": "global/fz/32",
+          "type": "FLOAT",
+          "values": {
+            "Default": 32
+          },
+          "description": "32px. — FLOOR: 10px minimum, whole pixels only. No fractional sizes (7.5, 7.69) anywhere."
+        },
+        {
+          "name": "global/fz/36",
+          "type": "FLOAT",
+          "values": {
+            "Default": 36
+          },
+          "description": "36px. — FLOOR: 10px minimum, whole pixels only. No fractional sizes (7.5, 7.69) anywhere."
+        },
+        {
+          "name": "global/fz/40",
+          "type": "FLOAT",
+          "values": {
+            "Default": 40
+          },
+          "description": "40px. — FLOOR: 10px minimum, whole pixels only. No fractional sizes (7.5, 7.69) anywhere."
+        },
+        {
+          "name": "global/fz/48",
+          "type": "FLOAT",
+          "values": {
+            "Default": 48
+          },
+          "description": "48px. — FLOOR: 10px minimum, whole pixels only. No fractional sizes (7.5, 7.69) anywhere."
+        },
+        {
+          "name": "global/fz/60",
+          "type": "FLOAT",
+          "values": {
+            "Default": 60
+          },
+          "description": "60px. — FLOOR: 10px minimum, whole pixels only. No fractional sizes (7.5, 7.69) anywhere."
+        },
+        {
+          "name": "global/fz/72",
+          "type": "FLOAT",
+          "values": {
+            "Default": 72
+          },
+          "description": "72px. — FLOOR: 10px minimum, whole pixels only. No fractional sizes (7.5, 7.69) anywhere."
+        },
+        {
+          "name": "global/family/tasa-orbiter",
+          "type": "STRING",
+          "values": {
+            "Default": "TASA Orbiter"
+          },
+          "description": "Verified installed in this file. — TWO FAMILIES ONLY: TASA Orbiter and Inter. No third typeface may be referenced anywhere, including as a fallback. If TASA is unavailable, fall back to Inter and stop there."
+        },
+        {
+          "name": "global/family/inter",
+          "type": "STRING",
+          "values": {
+            "Default": "Inter"
+          },
+          "description": "Body typeface, and the only sanctioned fallback for TASA. — TWO FAMILIES ONLY: TASA Orbiter and Inter. No third typeface may be referenced anywhere, including as a fallback. If TASA is unavailable, fall back to Inter and stop there."
+        },
+        {
+          "name": "global/fw/tasa/regular",
+          "type": "STRING",
+          "values": {
+            "Default": "Regular"
+          },
+          "description": "TASA Orbiter style name. — WEIGHT RANGE: Regular (400) to Bold (700). Thin, ExtraLight, Light, ExtraBold and Black are banned in every family."
+        },
+        {
+          "name": "global/fw/tasa/medium",
+          "type": "STRING",
+          "values": {
+            "Default": "Medium"
+          },
+          "description": "TASA Orbiter style name. — WEIGHT RANGE: Regular (400) to Bold (700). Thin, ExtraLight, Light, ExtraBold and Black are banned in every family."
+        },
+        {
+          "name": "global/fw/tasa/semibold",
+          "type": "STRING",
+          "values": {
+            "Default": "SemiBold"
+          },
+          "description": "TASA Orbiter style name. — WEIGHT RANGE: Regular (400) to Bold (700). Thin, ExtraLight, Light, ExtraBold and Black are banned in every family."
+        },
+        {
+          "name": "global/fw/tasa/bold",
+          "type": "STRING",
+          "values": {
+            "Default": "Bold"
+          },
+          "description": "TASA Orbiter style name. — WEIGHT RANGE: Regular (400) to Bold (700). Thin, ExtraLight, Light, ExtraBold and Black are banned in every family."
+        },
+        {
+          "name": "global/fw/inter/regular",
+          "type": "STRING",
+          "values": {
+            "Default": "Regular"
+          },
+          "description": "Inter style name. — WEIGHT RANGE: Regular (400) to Bold (700). Thin, ExtraLight, Light, ExtraBold and Black are banned in every family."
+        },
+        {
+          "name": "global/fw/inter/medium",
+          "type": "STRING",
+          "values": {
+            "Default": "Medium"
+          },
+          "description": "Inter style name. — WEIGHT RANGE: Regular (400) to Bold (700). Thin, ExtraLight, Light, ExtraBold and Black are banned in every family."
+        },
+        {
+          "name": "global/fw/inter/semibold",
+          "type": "STRING",
+          "values": {
+            "Default": "Semi Bold"
+          },
+          "description": "Inter style name. — WEIGHT RANGE: Regular (400) to Bold (700). Thin, ExtraLight, Light, ExtraBold and Black are banned in every family."
+        },
+        {
+          "name": "global/fw/inter/bold",
+          "type": "STRING",
+          "values": {
+            "Default": "Bold"
+          },
+          "description": "Inter style name. — WEIGHT RANGE: Regular (400) to Bold (700). Thin, ExtraLight, Light, ExtraBold and Black are banned in every family."
+        },
+        {
+          "name": "global/ls/n144",
+          "type": "FLOAT",
+          "values": {
+            "Default": -1.440000057220459
+          },
+          "description": "-1.44px tracking. Figma binds letter-spacing variables in PIXELS, never percent — that is why these are per-size rather than one value per category."
+        },
+        {
+          "name": "global/ls/n120",
+          "type": "FLOAT",
+          "values": {
+            "Default": -1.2000000476837158
+          },
+          "description": "-1.2px tracking. Figma binds letter-spacing variables in PIXELS, never percent — that is why these are per-size rather than one value per category."
+        },
+        {
+          "name": "global/ls/n96",
+          "type": "FLOAT",
+          "values": {
+            "Default": -0.9599999785423279
+          },
+          "description": "-0.96px tracking. Figma binds letter-spacing variables in PIXELS, never percent — that is why these are per-size rather than one value per category."
+        },
+        {
+          "name": "global/ls/n80",
+          "type": "FLOAT",
+          "values": {
+            "Default": -0.800000011920929
+          },
+          "description": "-0.8px tracking. Figma binds letter-spacing variables in PIXELS, never percent — that is why these are per-size rather than one value per category."
+        },
+        {
+          "name": "global/ls/n72",
+          "type": "FLOAT",
+          "values": {
+            "Default": -0.7200000286102295
+          },
+          "description": "-0.72px tracking. Figma binds letter-spacing variables in PIXELS, never percent — that is why these are per-size rather than one value per category."
+        },
+        {
+          "name": "global/ls/n64",
+          "type": "FLOAT",
+          "values": {
+            "Default": -0.6399999856948853
+          },
+          "description": "-0.64px tracking. Figma binds letter-spacing variables in PIXELS, never percent — that is why these are per-size rather than one value per category."
+        },
+        {
+          "name": "global/ls/n40",
+          "type": "FLOAT",
+          "values": {
+            "Default": -0.4000000059604645
+          },
+          "description": "-0.4px tracking. Figma binds letter-spacing variables in PIXELS, never percent — that is why these are per-size rather than one value per category."
+        },
+        {
+          "name": "global/ls/n32",
+          "type": "FLOAT",
+          "values": {
+            "Default": -0.3199999928474426
+          },
+          "description": "-0.32px tracking. Figma binds letter-spacing variables in PIXELS, never percent — that is why these are per-size rather than one value per category."
+        },
+        {
+          "name": "global/ls/n30",
+          "type": "FLOAT",
+          "values": {
+            "Default": -0.30000001192092896
+          },
+          "description": "-0.3px tracking. Figma binds letter-spacing variables in PIXELS, never percent — that is why these are per-size rather than one value per category."
+        },
+        {
+          "name": "global/ls/n26",
+          "type": "FLOAT",
+          "values": {
+            "Default": -0.25999999046325684
+          },
+          "description": "-0.26px tracking. Figma binds letter-spacing variables in PIXELS, never percent — that is why these are per-size rather than one value per category."
+        },
+        {
+          "name": "global/ls/n24",
+          "type": "FLOAT",
+          "values": {
+            "Default": -0.23999999463558197
+          },
+          "description": "-0.24px tracking. Figma binds letter-spacing variables in PIXELS, never percent — that is why these are per-size rather than one value per category."
+        },
+        {
+          "name": "global/ls/n22",
+          "type": "FLOAT",
+          "values": {
+            "Default": -0.2199999988079071
+          },
+          "description": "-0.22px tracking. Figma binds letter-spacing variables in PIXELS, never percent — that is why these are per-size rather than one value per category."
+        },
+        {
+          "name": "global/ls/n20",
+          "type": "FLOAT",
+          "values": {
+            "Default": -0.20000000298023224
+          },
+          "description": "-0.2px tracking. Figma binds letter-spacing variables in PIXELS, never percent — that is why these are per-size rather than one value per category."
+        },
+        {
+          "name": "global/ls/n18",
+          "type": "FLOAT",
+          "values": {
+            "Default": -0.18000000715255737
+          },
+          "description": "-0.18px tracking. Figma binds letter-spacing variables in PIXELS, never percent — that is why these are per-size rather than one value per category."
+        },
+        {
+          "name": "global/ls/n16",
+          "type": "FLOAT",
+          "values": {
+            "Default": -0.1599999964237213
+          },
+          "description": "-0.16px tracking. Figma binds letter-spacing variables in PIXELS, never percent — that is why these are per-size rather than one value per category."
+        },
+        {
+          "name": "global/ls/p96",
+          "type": "FLOAT",
+          "values": {
+            "Default": 0.9599999785423279
+          },
+          "description": "0.96px tracking. Figma binds letter-spacing variables in PIXELS, never percent — that is why these are per-size rather than one value per category."
+        },
+        {
+          "name": "global/fz/10",
+          "type": "FLOAT",
+          "values": {
+            "Default": 10
+          },
+          "description": "10px. THE FLOOR — the smallest size this system permits. Never go below it, and never use a fractional size: font sizes are whole pixels only."
+        },
+        {
+          "name": "global/lh/16",
+          "type": "FLOAT",
+          "values": {
+            "Default": 16
+          },
+          "description": "16px. Line-height scale — multiples of 2. Most values are also multiples of 4 and share the spacing rhythm; 18 and 22 exist because no multiple of 4 puts 12px and 14px body copy in its 1.45-1.65 ratio band."
+        },
+        {
+          "name": "global/lh/20",
+          "type": "FLOAT",
+          "values": {
+            "Default": 20
+          },
+          "description": "20px. Line-height scale — multiples of 2. Most values are also multiples of 4 and share the spacing rhythm; 18 and 22 exist because no multiple of 4 puts 12px and 14px body copy in its 1.45-1.65 ratio band."
+        },
+        {
+          "name": "global/lh/24",
+          "type": "FLOAT",
+          "values": {
+            "Default": 24
+          },
+          "description": "24px. Line-height scale — multiples of 2. Most values are also multiples of 4 and share the spacing rhythm; 18 and 22 exist because no multiple of 4 puts 12px and 14px body copy in its 1.45-1.65 ratio band."
+        },
+        {
+          "name": "global/lh/28",
+          "type": "FLOAT",
+          "values": {
+            "Default": 28
+          },
+          "description": "28px. Line-height scale — multiples of 2. Most values are also multiples of 4 and share the spacing rhythm; 18 and 22 exist because no multiple of 4 puts 12px and 14px body copy in its 1.45-1.65 ratio band."
+        },
+        {
+          "name": "global/lh/32",
+          "type": "FLOAT",
+          "values": {
+            "Default": 32
+          },
+          "description": "32px. Line-height scale — multiples of 2. Most values are also multiples of 4 and share the spacing rhythm; 18 and 22 exist because no multiple of 4 puts 12px and 14px body copy in its 1.45-1.65 ratio band."
+        },
+        {
+          "name": "global/lh/36",
+          "type": "FLOAT",
+          "values": {
+            "Default": 36
+          },
+          "description": "36px. Line-height scale — multiples of 2. Most values are also multiples of 4 and share the spacing rhythm; 18 and 22 exist because no multiple of 4 puts 12px and 14px body copy in its 1.45-1.65 ratio band."
+        },
+        {
+          "name": "global/lh/40",
+          "type": "FLOAT",
+          "values": {
+            "Default": 40
+          },
+          "description": "40px. Line-height scale — multiples of 2. Most values are also multiples of 4 and share the spacing rhythm; 18 and 22 exist because no multiple of 4 puts 12px and 14px body copy in its 1.45-1.65 ratio band."
+        },
+        {
+          "name": "global/lh/44",
+          "type": "FLOAT",
+          "values": {
+            "Default": 44
+          },
+          "description": "44px. Line-height scale — multiples of 2. Most values are also multiples of 4 and share the spacing rhythm; 18 and 22 exist because no multiple of 4 puts 12px and 14px body copy in its 1.45-1.65 ratio band."
+        },
+        {
+          "name": "global/lh/48",
+          "type": "FLOAT",
+          "values": {
+            "Default": 48
+          },
+          "description": "48px. Line-height scale — multiples of 2. Most values are also multiples of 4 and share the spacing rhythm; 18 and 22 exist because no multiple of 4 puts 12px and 14px body copy in its 1.45-1.65 ratio band."
+        },
+        {
+          "name": "global/lh/56",
+          "type": "FLOAT",
+          "values": {
+            "Default": 56
+          },
+          "description": "56px. Line-height scale — multiples of 2. Most values are also multiples of 4 and share the spacing rhythm; 18 and 22 exist because no multiple of 4 puts 12px and 14px body copy in its 1.45-1.65 ratio band."
+        },
+        {
+          "name": "global/lh/68",
+          "type": "FLOAT",
+          "values": {
+            "Default": 68
+          },
+          "description": "68px. Line-height scale — multiples of 2. Most values are also multiples of 4 and share the spacing rhythm; 18 and 22 exist because no multiple of 4 puts 12px and 14px body copy in its 1.45-1.65 ratio band."
+        },
+        {
+          "name": "global/lh/80",
+          "type": "FLOAT",
+          "values": {
+            "Default": 80
+          },
+          "description": "80px. Line-height scale — multiples of 2. Most values are also multiples of 4 and share the spacing rhythm; 18 and 22 exist because no multiple of 4 puts 12px and 14px body copy in its 1.45-1.65 ratio band."
+        },
+        {
+          "name": "global/lh/18",
+          "type": "FLOAT",
+          "values": {
+            "Default": 18
+          },
+          "description": "18px. Line-height scale — multiples of 2. Most values are also multiples of 4 and share the spacing rhythm; 18 and 22 exist because no multiple of 4 puts 12px and 14px body copy in its 1.45-1.65 ratio band."
+        },
+        {
+          "name": "global/lh/22",
+          "type": "FLOAT",
+          "values": {
+            "Default": 22
+          },
+          "description": "22px. Line-height scale — multiples of 2. Most values are also multiples of 4 and share the spacing rhythm; 18 and 22 exist because no multiple of 4 puts 12px and 14px body copy in its 1.45-1.65 ratio band."
+        },
+        {
+          "name": "global/ls/n60",
+          "type": "FLOAT",
+          "values": {
+            "Default": -0.6000000238418579
+          },
+          "description": ""
+        },
+        {
+          "name": "global/ls/n48",
+          "type": "FLOAT",
+          "values": {
+            "Default": -0.47999998927116394
+          },
+          "description": ""
+        },
+        {
+          "name": "global/ls/n36",
+          "type": "FLOAT",
+          "values": {
+            "Default": -0.36000001430511475
+          },
+          "description": ""
+        },
+        {
+          "name": "global/ls/n14",
+          "type": "FLOAT",
+          "values": {
+            "Default": -0.14000000059604645
+          },
+          "description": ""
+        },
+        {
+          "name": "global/ls/n12",
+          "type": "FLOAT",
+          "values": {
+            "Default": -0.11999999731779099
+          },
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Semantic Typography",
+      "modes": [
+        "Desktop",
+        "Mobile"
+      ],
+      "variables": [
+        {
+          "name": "family/heading",
+          "type": "STRING",
+          "values": {
+            "Desktop": {
+              "alias": "global/family/tasa-orbiter",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/family/tasa-orbiter",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "ALL headings and display type — TASA Orbiter. — TWO FAMILIES ONLY: TASA Orbiter and Inter. No third typeface may be referenced anywhere, including as a fallback. If TASA is unavailable, fall back to Inter and stop there."
+        },
+        {
+          "name": "family/body",
+          "type": "STRING",
+          "values": {
+            "Desktop": {
+              "alias": "global/family/inter",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/family/inter",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "ALL body copy, labels, captions, eyebrows — Inter. — TWO FAMILIES ONLY: TASA Orbiter and Inter. No third typeface may be referenced anywhere, including as a fallback. If TASA is unavailable, fall back to Inter and stop there."
+        },
+        {
+          "name": "weight/heading/regular",
+          "type": "STRING",
+          "values": {
+            "Desktop": {
+              "alias": "global/fw/tasa/regular",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/fw/tasa/regular",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "TASA style name. \"SemiBold\" has no space; Inter uses \"Semi Bold\". Not interchangeable. — WEIGHT RANGE: Regular (400) to Bold (700). Thin, ExtraLight, Light, ExtraBold and Black are banned in every family."
+        },
+        {
+          "name": "weight/body/regular",
+          "type": "STRING",
+          "values": {
+            "Desktop": {
+              "alias": "global/fw/inter/regular",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/fw/inter/regular",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "Inter style name. \"Semi Bold\" has a space; TASA uses \"SemiBold\". Not interchangeable. — WEIGHT RANGE: Regular (400) to Bold (700). Thin, ExtraLight, Light, ExtraBold and Black are banned in every family."
+        },
+        {
+          "name": "weight/heading/medium",
+          "type": "STRING",
+          "values": {
+            "Desktop": {
+              "alias": "global/fw/tasa/medium",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/fw/tasa/medium",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "TASA style name. \"SemiBold\" has no space; Inter uses \"Semi Bold\". Not interchangeable. — WEIGHT RANGE: Regular (400) to Bold (700). Thin, ExtraLight, Light, ExtraBold and Black are banned in every family."
+        },
+        {
+          "name": "weight/body/medium",
+          "type": "STRING",
+          "values": {
+            "Desktop": {
+              "alias": "global/fw/inter/medium",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/fw/inter/medium",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "Inter style name. \"Semi Bold\" has a space; TASA uses \"SemiBold\". Not interchangeable. — WEIGHT RANGE: Regular (400) to Bold (700). Thin, ExtraLight, Light, ExtraBold and Black are banned in every family."
+        },
+        {
+          "name": "weight/heading/semibold",
+          "type": "STRING",
+          "values": {
+            "Desktop": {
+              "alias": "global/fw/tasa/semibold",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/fw/tasa/semibold",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "TASA style name. \"SemiBold\" has no space; Inter uses \"Semi Bold\". Not interchangeable. — WEIGHT RANGE: Regular (400) to Bold (700). Thin, ExtraLight, Light, ExtraBold and Black are banned in every family."
+        },
+        {
+          "name": "weight/body/semibold",
+          "type": "STRING",
+          "values": {
+            "Desktop": {
+              "alias": "global/fw/inter/semibold",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/fw/inter/semibold",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "Inter style name. \"Semi Bold\" has a space; TASA uses \"SemiBold\". Not interchangeable. — WEIGHT RANGE: Regular (400) to Bold (700). Thin, ExtraLight, Light, ExtraBold and Black are banned in every family."
+        },
+        {
+          "name": "weight/heading/bold",
+          "type": "STRING",
+          "values": {
+            "Desktop": {
+              "alias": "global/fw/tasa/bold",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/fw/tasa/bold",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "TASA style name. \"SemiBold\" has no space; Inter uses \"Semi Bold\". Not interchangeable. — WEIGHT RANGE: Regular (400) to Bold (700). Thin, ExtraLight, Light, ExtraBold and Black are banned in every family."
+        },
+        {
+          "name": "weight/body/bold",
+          "type": "STRING",
+          "values": {
+            "Desktop": {
+              "alias": "global/fw/inter/bold",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/fw/inter/bold",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "Inter style name. \"Semi Bold\" has a space; TASA uses \"SemiBold\". Not interchangeable. — WEIGHT RANGE: Regular (400) to Bold (700). Thin, ExtraLight, Light, ExtraBold and Black are banned in every family."
+        },
+        {
+          "name": "size/display/xl",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/fz/72",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/fz/40",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "— MINIMUM FONT SIZE IS 10px. Never set type below 10px anywhere, at any breakpoint. The smallest tokens are 10px (body/2xs, eyebrow), exactly at the floor, so staying on-token keeps you legal. — FLOOR: 10px minimum, whole pixels only. No fractional sizes (7.5, 7.69) anywhere."
+        },
+        {
+          "name": "size/display/lg",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/fz/60",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/fz/36",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "— MINIMUM FONT SIZE IS 10px. Never set type below 10px anywhere, at any breakpoint. The smallest tokens are 10px (body/2xs, eyebrow), exactly at the floor, so staying on-token keeps you legal. — FLOOR: 10px minimum, whole pixels only. No fractional sizes (7.5, 7.69) anywhere."
+        },
+        {
+          "name": "size/display/md",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/fz/48",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/fz/32",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "— MINIMUM FONT SIZE IS 10px. Never set type below 10px anywhere, at any breakpoint. The smallest tokens are 10px (body/2xs, eyebrow), exactly at the floor, so staying on-token keeps you legal. — FLOOR: 10px minimum, whole pixels only. No fractional sizes (7.5, 7.69) anywhere."
+        },
+        {
+          "name": "size/heading/h1",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/fz/40",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/fz/30",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "— MINIMUM FONT SIZE IS 10px. Never set type below 10px anywhere, at any breakpoint. The smallest tokens are 10px (body/2xs, eyebrow), exactly at the floor, so staying on-token keeps you legal. — FLOOR: 10px minimum, whole pixels only. No fractional sizes (7.5, 7.69) anywhere."
+        },
+        {
+          "name": "size/heading/h2",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/fz/32",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/fz/26",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "— MINIMUM FONT SIZE IS 10px. Never set type below 10px anywhere, at any breakpoint. The smallest tokens are 10px (body/2xs, eyebrow), exactly at the floor, so staying on-token keeps you legal. — FLOOR: 10px minimum, whole pixels only. No fractional sizes (7.5, 7.69) anywhere."
+        },
+        {
+          "name": "size/heading/h3",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/fz/24",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/fz/22",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "— MINIMUM FONT SIZE IS 10px. Never set type below 10px anywhere, at any breakpoint. The smallest tokens are 10px (body/2xs, eyebrow), exactly at the floor, so staying on-token keeps you legal. — FLOOR: 10px minimum, whole pixels only. No fractional sizes (7.5, 7.69) anywhere."
+        },
+        {
+          "name": "size/heading/h4",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/fz/20",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/fz/18",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "— MINIMUM FONT SIZE IS 10px. Never set type below 10px anywhere, at any breakpoint. The smallest tokens are 10px (body/2xs, eyebrow), exactly at the floor, so staying on-token keeps you legal. — FLOOR: 10px minimum, whole pixels only. No fractional sizes (7.5, 7.69) anywhere."
+        },
+        {
+          "name": "size/heading/h5",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/fz/18",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/fz/18",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "— MINIMUM FONT SIZE IS 10px. Never set type below 10px anywhere, at any breakpoint. The smallest tokens are 10px (body/2xs, eyebrow), exactly at the floor, so staying on-token keeps you legal. — FLOOR: 10px minimum, whole pixels only. No fractional sizes (7.5, 7.69) anywhere."
+        },
+        {
+          "name": "size/heading/h6",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/fz/16",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/fz/16",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "— MINIMUM FONT SIZE IS 10px. Never set type below 10px anywhere, at any breakpoint. The smallest tokens are 10px (body/2xs, eyebrow), exactly at the floor, so staying on-token keeps you legal. — FLOOR: 10px minimum, whole pixels only. No fractional sizes (7.5, 7.69) anywhere."
+        },
+        {
+          "name": "size/body/xl",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/fz/20",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/fz/18",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "— MINIMUM FONT SIZE IS 10px. Never set type below 10px anywhere, at any breakpoint. The smallest tokens are 10px (body/2xs, eyebrow), exactly at the floor, so staying on-token keeps you legal. — FLOOR: 10px minimum, whole pixels only. No fractional sizes (7.5, 7.69) anywhere."
+        },
+        {
+          "name": "size/body/lg",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/fz/18",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/fz/16",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "— MINIMUM FONT SIZE IS 10px. Never set type below 10px anywhere, at any breakpoint. The smallest tokens are 10px (body/2xs, eyebrow), exactly at the floor, so staying on-token keeps you legal. — FLOOR: 10px minimum, whole pixels only. No fractional sizes (7.5, 7.69) anywhere."
+        },
+        {
+          "name": "size/body/md",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/fz/16",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/fz/16",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "Base body size. Unchanged on mobile — reading size should not shrink. — FLOOR: 10px minimum, whole pixels only. No fractional sizes (7.5, 7.69) anywhere."
+        },
+        {
+          "name": "size/body/sm",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/fz/14",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/fz/14",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "— MINIMUM FONT SIZE IS 10px. Never set type below 10px anywhere, at any breakpoint. The smallest tokens are 10px (body/2xs, eyebrow), exactly at the floor, so staying on-token keeps you legal. — FLOOR: 10px minimum, whole pixels only. No fractional sizes (7.5, 7.69) anywhere."
+        },
+        {
+          "name": "size/body/xs",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/fz/12",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/fz/12",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "— MINIMUM FONT SIZE IS 10px. Never set type below 10px anywhere, at any breakpoint. The smallest tokens are 10px (body/2xs, eyebrow), exactly at the floor, so staying on-token keeps you legal. — FLOOR: 10px minimum, whole pixels only. No fractional sizes (7.5, 7.69) anywhere."
+        },
+        {
+          "name": "size/eyebrow",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": 10,
+            "Mobile": 10
+          },
+          "description": "Eyebrow size: 10px only (line height 16px). An eyebrow is therefore ALWAYS small text for WCAG: 4.5:1 required, and the 3:1 large-text exemption never applies. Always ALL CAPS, with +8% letter spacing (0.96px)."
+        },
+        {
+          "name": "line-height/display/xl",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/lh/80",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/lh/44",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "line-height/display/lg",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/lh/68",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/lh/40",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "line-height/display/md",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/lh/56",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/lh/36",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "line-height/heading/h1",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/lh/48",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/lh/36",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "line-height/heading/h2",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/lh/40",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/lh/32",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "line-height/heading/h3",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/lh/32",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/lh/28",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "line-height/heading/h4",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/lh/28",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/lh/24",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "line-height/heading/h5",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/lh/24",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/lh/24",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "Heading leading. Kept in the 1.20-1.42 heading band — a small heading at body leading stops reading as a heading."
+        },
+        {
+          "name": "line-height/heading/h6",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/lh/20",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/lh/20",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "Heading leading. 16px is nearly body size, so the tighter ratio is what distinguishes it from body copy."
+        },
+        {
+          "name": "line-height/body/xl",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/lh/32",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/lh/28",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "line-height/body/lg",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/lh/28",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/lh/24",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "line-height/body/md",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/lh/24",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/lh/24",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "line-height/body/sm",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/lh/22",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/lh/22",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "Body leading, 1.57 at 14px. Uses an off-grid value — small text read in bulk needs the openness more than it needs grid alignment."
+        },
+        {
+          "name": "line-height/body/xs",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/lh/18",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/lh/18",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "Body leading, 1.50 at 12px. Off-grid for the same reason as body/sm."
+        },
+        {
+          "name": "line-height/eyebrow",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/lh/16",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/lh/16",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "letter-spacing/display/xl",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/ls/n144",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/ls/n80",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "Tracking for display/xl. Equivalent to -2% of its font size, expressed in px because Figma cannot bind percent."
+        },
+        {
+          "name": "letter-spacing/display/lg",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/ls/n120",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/ls/n72",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "Tracking for display/lg. Equivalent to -2% of its font size, expressed in px because Figma cannot bind percent."
+        },
+        {
+          "name": "letter-spacing/display/md",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/ls/n96",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/ls/n64",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "Tracking for display/md. Equivalent to -2% of its font size, expressed in px because Figma cannot bind percent."
+        },
+        {
+          "name": "letter-spacing/heading/h1",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/ls/n40",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/ls/n30",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "Tracking for heading/h1. Equivalent to -1% of its font size, expressed in px because Figma cannot bind percent."
+        },
+        {
+          "name": "letter-spacing/heading/h2",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/ls/n32",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/ls/n26",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "Tracking for heading/h2. Equivalent to -1% of its font size, expressed in px because Figma cannot bind percent."
+        },
+        {
+          "name": "letter-spacing/heading/h3",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/ls/n24",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/ls/n22",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "Tracking for heading/h3. Equivalent to -1% of its font size, expressed in px because Figma cannot bind percent."
+        },
+        {
+          "name": "letter-spacing/heading/h4",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/ls/n20",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/ls/n18",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "Tracking for heading/h4. Equivalent to -1% of its font size, expressed in px because Figma cannot bind percent."
+        },
+        {
+          "name": "letter-spacing/heading/h5",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/ls/n18",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/ls/n18",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "Tracking for heading/h5. Equivalent to -1% of its font size, expressed in px because Figma cannot bind percent."
+        },
+        {
+          "name": "letter-spacing/heading/h6",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/ls/n16",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/ls/n16",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "Tracking for heading/h6. Equivalent to -1% of its font size, expressed in px because Figma cannot bind percent."
+        },
+        {
+          "name": "letter-spacing/eyebrow",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/ls/p96",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/ls/p96",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "Tracking for eyebrow. Equivalent to +8% of its font size, expressed in px because Figma cannot bind percent."
+        },
+        {
+          "name": "size/body/2xs",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/fz/10",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/fz/10",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "Smallest permitted size — 10px, the floor. Legal notices, dense table labels. Same on mobile. Never set type below this, and never at a fractional size. — FLOOR: 10px minimum, whole pixels only. No fractional sizes (7.5, 7.69) anywhere."
+        },
+        {
+          "name": "line-height/body/2xs",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/lh/16",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/lh/16",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "weight/eyebrow",
+          "type": "STRING",
+          "values": {
+            "Desktop": {
+              "alias": "global/fw/inter/medium",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/fw/inter/medium",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "Eyebrow weight — DEFAULT is Medium (500). Semi Bold (600) is the only permitted alternative, for an eyebrow that needs more presence. Nothing lighter than Medium and nothing heavier than Semi Bold. Eyebrows are always ALL CAPS."
+        },
+        {
+          "name": "size/body/72",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/fz/72",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/fz/40",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "line-height/body/72",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/lh/80",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/lh/48",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "size/body/60",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/fz/60",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/fz/36",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "line-height/body/60",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/lh/68",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/lh/44",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "size/body/48",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/fz/48",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/fz/32",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "line-height/body/48",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/lh/56",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/lh/40",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "size/body/32",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/fz/32",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/fz/26",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "line-height/body/32",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/lh/40",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/lh/32",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "size/body/24",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/fz/24",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/fz/22",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "line-height/body/24",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/lh/32",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/lh/28",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "letter-spacing/body/72",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/ls/n72",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/ls/n40",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "letter-spacing/body/60",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/ls/n60",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/ls/n36",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "letter-spacing/body/48",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/ls/n48",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/ls/n32",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "letter-spacing/body/32",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/ls/n32",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/ls/n26",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "letter-spacing/body/24",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/ls/n24",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/ls/n22",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "letter-spacing/body/xl",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/ls/n20",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/ls/n18",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "letter-spacing/body/lg",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/ls/n18",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/ls/n16",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "letter-spacing/body/md",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/ls/n16",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/ls/n16",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "letter-spacing/body/sm",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/ls/n14",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/ls/n14",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "letter-spacing/body/xs",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/ls/n12",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/ls/n12",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "size/body/40",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/fz/40",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/fz/30",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "Large body (Inter) at 40px, the same step as heading/h1. 30px on mobile."
+        },
+        {
+          "name": "line-height/body/40",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/lh/48",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/lh/36",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "Leading for body/40: 48px desktop, 36px mobile."
+        },
+        {
+          "name": "letter-spacing/body/40",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/ls/n40",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/ls/n30",
+              "collection": "Global Typography"
+            }
+          },
+          "description": "Tracking for body/40. Equivalent to -1% of its font size."
+        }
+      ]
+    },
+    {
+      "name": "Global Styles",
+      "modes": [
+        "Default"
+      ],
+      "variables": [
+        {
+          "name": "global/opacity/9",
+          "type": "FLOAT",
+          "values": {
+            "Default": 0.09000000357627869
+          },
+          "description": "9% opacity."
+        },
+        {
+          "name": "global/opacity/12",
+          "type": "FLOAT",
+          "values": {
+            "Default": 0.11999999731779099
+          },
+          "description": "12% opacity."
+        },
+        {
+          "name": "global/opacity/18",
+          "type": "FLOAT",
+          "values": {
+            "Default": 0.18000000715255737
+          },
+          "description": "18% opacity."
+        },
+        {
+          "name": "global/opacity/24",
+          "type": "FLOAT",
+          "values": {
+            "Default": 0.23999999463558197
+          },
+          "description": "24% opacity."
+        },
+        {
+          "name": "global/opacity/32",
+          "type": "FLOAT",
+          "values": {
+            "Default": 0.3199999928474426
+          },
+          "description": "32% opacity."
+        },
+        {
+          "name": "global/opacity/48",
+          "type": "FLOAT",
+          "values": {
+            "Default": 0.47999998927116394
+          },
+          "description": "48% opacity."
+        },
+        {
+          "name": "global/opacity/56",
+          "type": "FLOAT",
+          "values": {
+            "Default": 0.5600000023841858
+          },
+          "description": "56% opacity."
+        },
+        {
+          "name": "global/opacity/64",
+          "type": "FLOAT",
+          "values": {
+            "Default": 0.6399999856948853
+          },
+          "description": "64% opacity."
+        },
+        {
+          "name": "global/opacity/72",
+          "type": "FLOAT",
+          "values": {
+            "Default": 0.7200000286102295
+          },
+          "description": "72% opacity."
+        },
+        {
+          "name": "global/opacity/80",
+          "type": "FLOAT",
+          "values": {
+            "Default": 0.800000011920929
+          },
+          "description": "80% opacity."
+        },
+        {
+          "name": "global/opacity/88",
+          "type": "FLOAT",
+          "values": {
+            "Default": 0.8799999952316284
+          },
+          "description": "88% opacity."
+        },
+        {
+          "name": "global/opacity/100",
+          "type": "FLOAT",
+          "values": {
+            "Default": 1
+          },
+          "description": "100% opacity."
+        },
+        {
+          "name": "global/border-width/1",
+          "type": "FLOAT",
+          "values": {
+            "Default": 1
+          },
+          "description": "1px stroke. The scale runs 1-4px in whole pixels — there is no 0 and no fractional step. To remove a border, remove the stroke, do not set it to zero."
+        },
+        {
+          "name": "global/border-width/2",
+          "type": "FLOAT",
+          "values": {
+            "Default": 2
+          },
+          "description": "2px stroke. The scale runs 1-4px in whole pixels — there is no 0 and no fractional step. To remove a border, remove the stroke, do not set it to zero."
+        },
+        {
+          "name": "global/border-width/3",
+          "type": "FLOAT",
+          "values": {
+            "Default": 3
+          },
+          "description": "3px stroke. The scale runs 1-4px in whole pixels — there is no 0 and no fractional step. To remove a border, remove the stroke, do not set it to zero."
+        },
+        {
+          "name": "global/border-width/4",
+          "type": "FLOAT",
+          "values": {
+            "Default": 4
+          },
+          "description": "4px stroke. The scale runs 1-4px in whole pixels — there is no 0 and no fractional step. To remove a border, remove the stroke, do not set it to zero."
+        },
+        {
+          "name": "global/radius/2",
+          "type": "FLOAT",
+          "values": {
+            "Default": 2
+          },
+          "description": "2px corner radius. The scale runs 2-12px in 2px steps. There is no 0 (square corners = no radius set). Pill (9999px) is a separate shape for chips, tags, badges and avatars only."
+        },
+        {
+          "name": "global/radius/4",
+          "type": "FLOAT",
+          "values": {
+            "Default": 4
+          },
+          "description": "4px corner radius. The scale runs 2-12px in 2px steps. There is no 0 (square corners = no radius set). Pill (9999px) is a separate shape for chips, tags, badges and avatars only."
+        },
+        {
+          "name": "global/radius/6",
+          "type": "FLOAT",
+          "values": {
+            "Default": 6
+          },
+          "description": "6px corner radius. The scale runs 2-12px in 2px steps. There is no 0 (square corners = no radius set). Pill (9999px) is a separate shape for chips, tags, badges and avatars only."
+        },
+        {
+          "name": "global/radius/8",
+          "type": "FLOAT",
+          "values": {
+            "Default": 8
+          },
+          "description": "8px corner radius. The scale runs 2-12px in 2px steps. There is no 0 (square corners = no radius set). Pill (9999px) is a separate shape for chips, tags, badges and avatars only."
+        },
+        {
+          "name": "global/radius/pill",
+          "type": "FLOAT",
+          "values": {
+            "Default": 9999
+          },
+          "description": "9999px — fully round. NOT a step on the 2-12px scale: it is a shape declaration, and the only value permitted outside that scale."
+        },
+        {
+          "name": "global/radius/10",
+          "type": "FLOAT",
+          "values": {
+            "Default": 10
+          },
+          "description": "10px corner radius. Part of the 2-12px scale, 2px steps."
+        },
+        {
+          "name": "global/radius/12",
+          "type": "FLOAT",
+          "values": {
+            "Default": 12
+          },
+          "description": "12px corner radius. Part of the 2-12px scale, 2px steps."
+        }
+      ]
+    },
+    {
+      "name": "Semantic Styles",
+      "modes": [
+        "Default"
+      ],
+      "variables": [
+        {
+          "name": "opacity/subtle",
+          "type": "FLOAT",
+          "values": {
+            "Default": {
+              "alias": "global/opacity/32",
+              "collection": "Global Styles"
+            }
+          },
+          "description": "32% — faint washes."
+        },
+        {
+          "name": "opacity/overlay",
+          "type": "FLOAT",
+          "values": {
+            "Default": {
+              "alias": "global/opacity/48",
+              "collection": "Global Styles"
+            }
+          },
+          "description": "48% — scrim behind modals and image overlays."
+        },
+        {
+          "name": "opacity/muted",
+          "type": "FLOAT",
+          "values": {
+            "Default": {
+              "alias": "global/opacity/72",
+              "collection": "Global Styles"
+            }
+          },
+          "description": "72% — de-emphasised but still legible."
+        },
+        {
+          "name": "opacity/full",
+          "type": "FLOAT",
+          "values": {
+            "Default": {
+              "alias": "global/opacity/100",
+              "collection": "Global Styles"
+            }
+          },
+          "description": "DEFAULT — 100%, per the styles page. Everything is fully opaque unless stated otherwise."
+        },
+        {
+          "name": "border-width/default",
+          "type": "FLOAT",
+          "values": {
+            "Default": {
+              "alias": "global/border-width/1",
+              "collection": "Global Styles"
+            }
+          },
+          "description": "DEFAULT border width — 1px. Every border is this unless stated otherwise."
+        },
+        {
+          "name": "border-width/thick",
+          "type": "FLOAT",
+          "values": {
+            "Default": {
+              "alias": "global/border-width/2",
+              "collection": "Global Styles"
+            }
+          },
+          "description": "2px — emphasis, selected states."
+        },
+        {
+          "name": "border-width/thicker",
+          "type": "FLOAT",
+          "values": {
+            "Default": {
+              "alias": "global/border-width/3",
+              "collection": "Global Styles"
+            }
+          },
+          "description": "3px — strong emphasis."
+        },
+        {
+          "name": "border-width/thickest",
+          "type": "FLOAT",
+          "values": {
+            "Default": {
+              "alias": "global/border-width/4",
+              "collection": "Global Styles"
+            }
+          },
+          "description": "4px — the heaviest stroke permitted. Nothing goes above this."
+        },
+        {
+          "name": "radius/default",
+          "type": "FLOAT",
+          "values": {
+            "Default": {
+              "alias": "global/radius/2",
+              "collection": "Global Styles"
+            }
+          },
+          "description": "DEFAULT corner radius — 2px. Every rounded corner is this unless stated otherwise.  Scale: 2/4/6/8/10/12px for all surfaces. radius/full (pill) is the only exception, pills only."
+        },
+        {
+          "name": "radius/md",
+          "type": "FLOAT",
+          "values": {
+            "Default": {
+              "alias": "global/radius/4",
+              "collection": "Global Styles"
+            }
+          },
+          "description": "4px.  Scale: 2/4/6/8/10/12px for all surfaces. radius/full (pill) is the only exception, pills only."
+        },
+        {
+          "name": "radius/lg",
+          "type": "FLOAT",
+          "values": {
+            "Default": {
+              "alias": "global/radius/6",
+              "collection": "Global Styles"
+            }
+          },
+          "description": "6px.  Scale: 2/4/6/8/10/12px for all surfaces. radius/full (pill) is the only exception, pills only."
+        },
+        {
+          "name": "radius/xl",
+          "type": "FLOAT",
+          "values": {
+            "Default": {
+              "alias": "global/radius/8",
+              "collection": "Global Styles"
+            }
+          },
+          "description": "8px.  Scale: 2/4/6/8/10/12px for all surfaces. radius/full (pill) is the only exception, pills only."
+        },
+        {
+          "name": "radius/pill",
+          "type": "FLOAT",
+          "values": {
+            "Default": {
+              "alias": "global/radius/pill",
+              "collection": "Global Styles"
+            }
+          },
+          "description": "PILL — the default fully-round radius, 9999px. For chips, tags, badges, avatars and circular icon buttons. A shape declaration, not a step on the scale, which is why it skips from 12px to fully round. Never use on a card, panel, container, input or image: those take 2-12px from radius/default..radius/3xl. This is the single documented exception to the 12px ceiling."
+        },
+        {
+          "name": "radius/2xl",
+          "type": "FLOAT",
+          "values": {
+            "Default": {
+              "alias": "global/radius/10",
+              "collection": "Global Styles"
+            }
+          },
+          "description": "10px.  Scale: 2/4/6/8/10/12px for all surfaces. radius/full (pill) is the only exception, pills only."
+        },
+        {
+          "name": "radius/3xl",
+          "type": "FLOAT",
+          "values": {
+            "Default": {
+              "alias": "global/radius/12",
+              "collection": "Global Styles"
+            }
+          },
+          "description": "12px — the largest radius permitted on a surface.  Scale: 2/4/6/8/10/12px for all surfaces. radius/full (pill) is the only exception, pills only."
+        }
+      ]
+    },
+    {
+      "name": "Global Spacing",
+      "modes": [
+        "Default"
+      ],
+      "variables": [
+        {
+          "name": "global/spacing/4",
+          "type": "FLOAT",
+          "values": {
+            "Default": 4
+          },
+          "description": "4px. Uniform 4px scale, 4 to 56. Every step is a multiple of 4 — no 2px, no odd values, no gaps. If a design wants 6px or 14px, it rounds to the scale."
+        },
+        {
+          "name": "global/spacing/8",
+          "type": "FLOAT",
+          "values": {
+            "Default": 8
+          },
+          "description": "8px. Uniform 4px scale, 4 to 56. Every step is a multiple of 4 — no 2px, no odd values, no gaps. If a design wants 6px or 14px, it rounds to the scale."
+        },
+        {
+          "name": "global/spacing/12",
+          "type": "FLOAT",
+          "values": {
+            "Default": 12
+          },
+          "description": "12px. Uniform 4px scale, 4 to 56. Every step is a multiple of 4 — no 2px, no odd values, no gaps. If a design wants 6px or 14px, it rounds to the scale."
+        },
+        {
+          "name": "global/spacing/16",
+          "type": "FLOAT",
+          "values": {
+            "Default": 16
+          },
+          "description": "16px. Uniform 4px scale, 4 to 56. Every step is a multiple of 4 — no 2px, no odd values, no gaps. If a design wants 6px or 14px, it rounds to the scale."
+        },
+        {
+          "name": "global/spacing/20",
+          "type": "FLOAT",
+          "values": {
+            "Default": 20
+          },
+          "description": "20px. Uniform 4px scale, 4 to 56. Every step is a multiple of 4 — no 2px, no odd values, no gaps. If a design wants 6px or 14px, it rounds to the scale."
+        },
+        {
+          "name": "global/spacing/24",
+          "type": "FLOAT",
+          "values": {
+            "Default": 24
+          },
+          "description": "24px. Uniform 4px scale, 4 to 56. Every step is a multiple of 4 — no 2px, no odd values, no gaps. If a design wants 6px or 14px, it rounds to the scale."
+        },
+        {
+          "name": "global/spacing/28",
+          "type": "FLOAT",
+          "values": {
+            "Default": 28
+          },
+          "description": "28px. Uniform 4px scale, 4 to 56. Every step is a multiple of 4 — no 2px, no odd values, no gaps. If a design wants 6px or 14px, it rounds to the scale."
+        },
+        {
+          "name": "global/spacing/32",
+          "type": "FLOAT",
+          "values": {
+            "Default": 32
+          },
+          "description": "32px. Uniform 4px scale, 4 to 56. Every step is a multiple of 4 — no 2px, no odd values, no gaps. If a design wants 6px or 14px, it rounds to the scale."
+        },
+        {
+          "name": "global/spacing/36",
+          "type": "FLOAT",
+          "values": {
+            "Default": 36
+          },
+          "description": "36px. Uniform 4px scale, 4 to 56. Every step is a multiple of 4 — no 2px, no odd values, no gaps. If a design wants 6px or 14px, it rounds to the scale."
+        },
+        {
+          "name": "global/spacing/40",
+          "type": "FLOAT",
+          "values": {
+            "Default": 40
+          },
+          "description": "40px. Uniform 4px scale, 4 to 56. Every step is a multiple of 4 — no 2px, no odd values, no gaps. If a design wants 6px or 14px, it rounds to the scale."
+        },
+        {
+          "name": "global/spacing/44",
+          "type": "FLOAT",
+          "values": {
+            "Default": 44
+          },
+          "description": "44px. Uniform 4px scale, 4 to 56. Every step is a multiple of 4 — no 2px, no odd values, no gaps. If a design wants 6px or 14px, it rounds to the scale."
+        },
+        {
+          "name": "global/spacing/48",
+          "type": "FLOAT",
+          "values": {
+            "Default": 48
+          },
+          "description": "48px. Uniform 4px scale, 4 to 56. Every step is a multiple of 4 — no 2px, no odd values, no gaps. If a design wants 6px or 14px, it rounds to the scale."
+        },
+        {
+          "name": "global/spacing/52",
+          "type": "FLOAT",
+          "values": {
+            "Default": 52
+          },
+          "description": "52px. Uniform 4px scale, 4 to 56. Every step is a multiple of 4 — no 2px, no odd values, no gaps. If a design wants 6px or 14px, it rounds to the scale."
+        },
+        {
+          "name": "global/spacing/56",
+          "type": "FLOAT",
+          "values": {
+            "Default": 56
+          },
+          "description": "56px. Uniform 4px scale, 4 to 56. Every step is a multiple of 4 — no 2px, no odd values, no gaps. If a design wants 6px or 14px, it rounds to the scale."
+        }
+      ]
+    },
+    {
+      "name": "Semantic Spacing",
+      "modes": [
+        "Desktop",
+        "Mobile"
+      ],
+      "variables": [
+        {
+          "name": "spacing/4",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/spacing/4",
+              "collection": "Global Spacing"
+            },
+            "Mobile": {
+              "alias": "global/spacing/4",
+              "collection": "Global Spacing"
+            }
+          },
+          "description": "4px."
+        },
+        {
+          "name": "spacing/8",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/spacing/8",
+              "collection": "Global Spacing"
+            },
+            "Mobile": {
+              "alias": "global/spacing/8",
+              "collection": "Global Spacing"
+            }
+          },
+          "description": "8px."
+        },
+        {
+          "name": "spacing/12",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/spacing/12",
+              "collection": "Global Spacing"
+            },
+            "Mobile": {
+              "alias": "global/spacing/12",
+              "collection": "Global Spacing"
+            }
+          },
+          "description": "12px."
+        },
+        {
+          "name": "spacing/16",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/spacing/16",
+              "collection": "Global Spacing"
+            },
+            "Mobile": {
+              "alias": "global/spacing/16",
+              "collection": "Global Spacing"
+            }
+          },
+          "description": "16px."
+        },
+        {
+          "name": "spacing/20",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/spacing/20",
+              "collection": "Global Spacing"
+            },
+            "Mobile": {
+              "alias": "global/spacing/20",
+              "collection": "Global Spacing"
+            }
+          },
+          "description": "20px."
+        },
+        {
+          "name": "spacing/24",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/spacing/24",
+              "collection": "Global Spacing"
+            },
+            "Mobile": {
+              "alias": "global/spacing/24",
+              "collection": "Global Spacing"
+            }
+          },
+          "description": "24px."
+        },
+        {
+          "name": "spacing/28",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/spacing/28",
+              "collection": "Global Spacing"
+            },
+            "Mobile": {
+              "alias": "global/spacing/28",
+              "collection": "Global Spacing"
+            }
+          },
+          "description": "28px."
+        },
+        {
+          "name": "spacing/32",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/spacing/32",
+              "collection": "Global Spacing"
+            },
+            "Mobile": {
+              "alias": "global/spacing/32",
+              "collection": "Global Spacing"
+            }
+          },
+          "description": "32px."
+        },
+        {
+          "name": "spacing/36",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/spacing/36",
+              "collection": "Global Spacing"
+            },
+            "Mobile": {
+              "alias": "global/spacing/36",
+              "collection": "Global Spacing"
+            }
+          },
+          "description": "36px."
+        },
+        {
+          "name": "spacing/40",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/spacing/40",
+              "collection": "Global Spacing"
+            },
+            "Mobile": {
+              "alias": "global/spacing/40",
+              "collection": "Global Spacing"
+            }
+          },
+          "description": "40px."
+        },
+        {
+          "name": "spacing/44",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/spacing/44",
+              "collection": "Global Spacing"
+            },
+            "Mobile": {
+              "alias": "global/spacing/44",
+              "collection": "Global Spacing"
+            }
+          },
+          "description": "44px."
+        },
+        {
+          "name": "spacing/48",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/spacing/48",
+              "collection": "Global Spacing"
+            },
+            "Mobile": {
+              "alias": "global/spacing/48",
+              "collection": "Global Spacing"
+            }
+          },
+          "description": "48px."
+        },
+        {
+          "name": "spacing/52",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/spacing/52",
+              "collection": "Global Spacing"
+            },
+            "Mobile": {
+              "alias": "global/spacing/52",
+              "collection": "Global Spacing"
+            }
+          },
+          "description": "52px."
+        },
+        {
+          "name": "spacing/56",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/spacing/56",
+              "collection": "Global Spacing"
+            },
+            "Mobile": {
+              "alias": "global/spacing/56",
+              "collection": "Global Spacing"
+            }
+          },
+          "description": "56px."
+        },
+        {
+          "name": "gap/inline",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/spacing/8",
+              "collection": "Global Spacing"
+            },
+            "Mobile": {
+              "alias": "global/spacing/8",
+              "collection": "Global Spacing"
+            }
+          },
+          "description": "DEFAULT horizontal gap between adjacent items — icon and label, chips in a row."
+        },
+        {
+          "name": "gap/stack",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/spacing/12",
+              "collection": "Global Spacing"
+            },
+            "Mobile": {
+              "alias": "global/spacing/12",
+              "collection": "Global Spacing"
+            }
+          },
+          "description": "DEFAULT vertical gap between stacked elements inside a component."
+        },
+        {
+          "name": "gap/grid",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/spacing/24",
+              "collection": "Global Spacing"
+            },
+            "Mobile": {
+              "alias": "global/spacing/16",
+              "collection": "Global Spacing"
+            }
+          },
+          "description": "Gap between cards in a grid. Tightens on mobile."
+        },
+        {
+          "name": "padding/container",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/spacing/16",
+              "collection": "Global Spacing"
+            },
+            "Mobile": {
+              "alias": "global/spacing/12",
+              "collection": "Global Spacing"
+            }
+          },
+          "description": "DEFAULT padding inside a container, card or panel."
+        },
+        {
+          "name": "padding/section",
+          "type": "FLOAT",
+          "values": {
+            "Desktop": {
+              "alias": "global/spacing/56",
+              "collection": "Global Spacing"
+            },
+            "Mobile": {
+              "alias": "global/spacing/32",
+              "collection": "Global Spacing"
+            }
+          },
+          "description": "Vertical rhythm between page sections. Largest step, and the one that changes most on mobile — 56px of air on a phone wastes a screen."
+        }
+      ]
+    },
+    {
+      "name": "Header Weights",
+      "modes": [
+        "Bold",
+        "Medium",
+        "Semi Bold"
+      ],
+      "variables": [
+        {
+          "name": "weight/display/xl",
+          "type": "STRING",
+          "values": {
+            "Bold": {
+              "alias": "global/fw/tasa/bold",
+              "collection": "Global Typography"
+            },
+            "Medium": {
+              "alias": "global/fw/tasa/medium",
+              "collection": "Global Typography"
+            },
+            "Semi Bold": {
+              "alias": "global/fw/tasa/semibold",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "weight/display/lg",
+          "type": "STRING",
+          "values": {
+            "Bold": {
+              "alias": "global/fw/tasa/bold",
+              "collection": "Global Typography"
+            },
+            "Medium": {
+              "alias": "global/fw/tasa/medium",
+              "collection": "Global Typography"
+            },
+            "Semi Bold": {
+              "alias": "global/fw/tasa/semibold",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "weight/display/md",
+          "type": "STRING",
+          "values": {
+            "Bold": {
+              "alias": "global/fw/tasa/bold",
+              "collection": "Global Typography"
+            },
+            "Medium": {
+              "alias": "global/fw/tasa/medium",
+              "collection": "Global Typography"
+            },
+            "Semi Bold": {
+              "alias": "global/fw/tasa/semibold",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "weight/heading/h1",
+          "type": "STRING",
+          "values": {
+            "Bold": {
+              "alias": "global/fw/tasa/bold",
+              "collection": "Global Typography"
+            },
+            "Medium": {
+              "alias": "global/fw/tasa/medium",
+              "collection": "Global Typography"
+            },
+            "Semi Bold": {
+              "alias": "global/fw/tasa/semibold",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "weight/heading/h2",
+          "type": "STRING",
+          "values": {
+            "Bold": {
+              "alias": "global/fw/tasa/bold",
+              "collection": "Global Typography"
+            },
+            "Medium": {
+              "alias": "global/fw/tasa/medium",
+              "collection": "Global Typography"
+            },
+            "Semi Bold": {
+              "alias": "global/fw/tasa/semibold",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "weight/heading/h3",
+          "type": "STRING",
+          "values": {
+            "Bold": {
+              "alias": "global/fw/tasa/bold",
+              "collection": "Global Typography"
+            },
+            "Medium": {
+              "alias": "global/fw/tasa/medium",
+              "collection": "Global Typography"
+            },
+            "Semi Bold": {
+              "alias": "global/fw/tasa/semibold",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "weight/heading/h4",
+          "type": "STRING",
+          "values": {
+            "Bold": {
+              "alias": "global/fw/tasa/bold",
+              "collection": "Global Typography"
+            },
+            "Medium": {
+              "alias": "global/fw/tasa/medium",
+              "collection": "Global Typography"
+            },
+            "Semi Bold": {
+              "alias": "global/fw/tasa/semibold",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "weight/heading/h5",
+          "type": "STRING",
+          "values": {
+            "Bold": {
+              "alias": "global/fw/tasa/bold",
+              "collection": "Global Typography"
+            },
+            "Medium": {
+              "alias": "global/fw/tasa/medium",
+              "collection": "Global Typography"
+            },
+            "Semi Bold": {
+              "alias": "global/fw/tasa/semibold",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "weight/heading/h6",
+          "type": "STRING",
+          "values": {
+            "Bold": {
+              "alias": "global/fw/tasa/bold",
+              "collection": "Global Typography"
+            },
+            "Medium": {
+              "alias": "global/fw/tasa/medium",
+              "collection": "Global Typography"
+            },
+            "Semi Bold": {
+              "alias": "global/fw/tasa/semibold",
+              "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "textStyles": [
+    {
+      "name": "Eyebrow",
+      "description": "Eyebrow / kicker / overline. Inter Medium, ALL CAPS, 10px / 16px, +8% tracking (0.96px). Semi Bold is the only permitted alternative weight. Size is always 10px.",
+      "fontFamily": "Inter",
+      "fontStyle": "Medium",
+      "fontSize": 10,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 16
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0.9599999785423279
+      },
+      "textCase": "UPPER"
+    },
+    {
+      "name": "Display/XL",
+      "description": "",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "Bold",
+      "fontSize": 72,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 80
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -1.440000057220459
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Display/LG",
+      "description": "",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "Bold",
+      "fontSize": 60,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 68
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -1.2000000476837158
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Display/MD",
+      "description": "",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "Bold",
+      "fontSize": 48,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 56
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.9599999785423279
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Display/XL/Regular",
+      "description": "Display/XL in Regular. Same size, line height and tracking as Display/XL.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "Regular",
+      "fontSize": 72,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 80
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -1.440000057220459
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Display/XL/Medium",
+      "description": "Display/XL in Medium. Same size, line height and tracking as Display/XL.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "Medium",
+      "fontSize": 72,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 80
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -1.440000057220459
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Display/XL/Semi Bold",
+      "description": "Display/XL in Semi Bold. Same size, line height and tracking as Display/XL.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "SemiBold",
+      "fontSize": 72,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 80
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -1.440000057220459
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Display/XL/Bold",
+      "description": "Display/XL in Bold. Same size, line height and tracking as Display/XL.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "Bold",
+      "fontSize": 72,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 80
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -1.440000057220459
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Display/LG/Regular",
+      "description": "Display/LG in Regular. Same size, line height and tracking as Display/LG.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "Regular",
+      "fontSize": 60,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 68
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -1.2000000476837158
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Display/LG/Medium",
+      "description": "Display/LG in Medium. Same size, line height and tracking as Display/LG.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "Medium",
+      "fontSize": 60,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 68
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -1.2000000476837158
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Display/LG/Semi Bold",
+      "description": "Display/LG in Semi Bold. Same size, line height and tracking as Display/LG.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "SemiBold",
+      "fontSize": 60,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 68
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -1.2000000476837158
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Display/LG/Bold",
+      "description": "Display/LG in Bold. Same size, line height and tracking as Display/LG.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "Bold",
+      "fontSize": 60,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 68
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -1.2000000476837158
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Display/MD/Regular",
+      "description": "Display/MD in Regular. Same size, line height and tracking as Display/MD.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "Regular",
+      "fontSize": 48,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 56
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.9599999785423279
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Display/MD/Medium",
+      "description": "Display/MD in Medium. Same size, line height and tracking as Display/MD.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "Medium",
+      "fontSize": 48,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 56
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.9599999785423279
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Display/MD/Semi Bold",
+      "description": "Display/MD in Semi Bold. Same size, line height and tracking as Display/MD.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "SemiBold",
+      "fontSize": 48,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 56
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.9599999785423279
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Display/MD/Bold",
+      "description": "Display/MD in Bold. Same size, line height and tracking as Display/MD.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "Bold",
+      "fontSize": 48,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 56
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.9599999785423279
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Heading/H1",
+      "description": "",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "SemiBold",
+      "fontSize": 40,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 48
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.4000000059604645
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Heading/H2",
+      "description": "",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "SemiBold",
+      "fontSize": 32,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 40
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.3199999928474426
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Heading/H3",
+      "description": "",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "SemiBold",
+      "fontSize": 24,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 32
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.23999999463558197
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Heading/H4",
+      "description": "",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "SemiBold",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 28
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.20000000298023224
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Heading/H5",
+      "description": "",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "Medium",
+      "fontSize": 18,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 24
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.18000000715255737
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Heading/H6",
+      "description": "",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "Medium",
+      "fontSize": 16,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.1599999964237213
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Heading/H1/Regular",
+      "description": "Heading/H1 in Regular. Same size, line height and tracking as Heading/H1.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "Regular",
+      "fontSize": 40,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 48
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.4000000059604645
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Heading/H1/Medium",
+      "description": "Heading/H1 in Medium. Same size, line height and tracking as Heading/H1.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "Medium",
+      "fontSize": 40,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 48
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.4000000059604645
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Heading/H1/Semi Bold",
+      "description": "Heading/H1 in Semi Bold. Same size, line height and tracking as Heading/H1.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "SemiBold",
+      "fontSize": 40,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 48
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.4000000059604645
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Heading/H1/Bold",
+      "description": "Heading/H1 in Bold. Same size, line height and tracking as Heading/H1.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "Bold",
+      "fontSize": 40,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 48
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.4000000059604645
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Heading/H2/Regular",
+      "description": "Heading/H2 in Regular. Same size, line height and tracking as Heading/H2.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "Regular",
+      "fontSize": 32,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 40
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.3199999928474426
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Heading/H2/Medium",
+      "description": "Heading/H2 in Medium. Same size, line height and tracking as Heading/H2.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "Medium",
+      "fontSize": 32,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 40
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.3199999928474426
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Heading/H2/Semi Bold",
+      "description": "Heading/H2 in Semi Bold. Same size, line height and tracking as Heading/H2.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "SemiBold",
+      "fontSize": 32,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 40
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.3199999928474426
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Heading/H2/Bold",
+      "description": "Heading/H2 in Bold. Same size, line height and tracking as Heading/H2.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "Bold",
+      "fontSize": 32,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 40
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.3199999928474426
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Heading/H3/Regular",
+      "description": "Heading/H3 in Regular. Same size, line height and tracking as Heading/H3.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "Regular",
+      "fontSize": 24,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 32
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.23999999463558197
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Heading/H3/Medium",
+      "description": "Heading/H3 in Medium. Same size, line height and tracking as Heading/H3.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "Medium",
+      "fontSize": 24,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 32
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.23999999463558197
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Heading/H3/Semi Bold",
+      "description": "Heading/H3 in Semi Bold. Same size, line height and tracking as Heading/H3.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "SemiBold",
+      "fontSize": 24,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 32
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.23999999463558197
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Heading/H3/Bold",
+      "description": "Heading/H3 in Bold. Same size, line height and tracking as Heading/H3.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "Bold",
+      "fontSize": 24,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 32
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.23999999463558197
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Heading/H4/Regular",
+      "description": "Heading/H4 in Regular. Same size, line height and tracking as Heading/H4.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 28
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.20000000298023224
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Heading/H4/Medium",
+      "description": "Heading/H4 in Medium. Same size, line height and tracking as Heading/H4.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "Medium",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 28
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.20000000298023224
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Heading/H4/Semi Bold",
+      "description": "Heading/H4 in Semi Bold. Same size, line height and tracking as Heading/H4.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "SemiBold",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 28
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.20000000298023224
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Heading/H4/Bold",
+      "description": "Heading/H4 in Bold. Same size, line height and tracking as Heading/H4.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "Bold",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 28
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.20000000298023224
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Heading/H5/Regular",
+      "description": "Heading/H5 in Regular. Same size, line height and tracking as Heading/H5.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "Regular",
+      "fontSize": 18,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 24
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.18000000715255737
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Heading/H5/Medium",
+      "description": "Heading/H5 in Medium. Same size, line height and tracking as Heading/H5.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "Medium",
+      "fontSize": 18,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 24
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.18000000715255737
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Heading/H5/Semi Bold",
+      "description": "Heading/H5 in Semi Bold. Same size, line height and tracking as Heading/H5.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "SemiBold",
+      "fontSize": 18,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 24
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.18000000715255737
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Heading/H5/Bold",
+      "description": "Heading/H5 in Bold. Same size, line height and tracking as Heading/H5.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "Bold",
+      "fontSize": 18,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 24
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.18000000715255737
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Heading/H6/Regular",
+      "description": "Heading/H6 in Regular. Same size, line height and tracking as Heading/H6.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "Regular",
+      "fontSize": 16,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.1599999964237213
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Heading/H6/Medium",
+      "description": "Heading/H6 in Medium. Same size, line height and tracking as Heading/H6.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "Medium",
+      "fontSize": 16,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.1599999964237213
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Heading/H6/Semi Bold",
+      "description": "Heading/H6 in Semi Bold. Same size, line height and tracking as Heading/H6.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "SemiBold",
+      "fontSize": 16,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.1599999964237213
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Heading/H6/Bold",
+      "description": "Heading/H6 in Bold. Same size, line height and tracking as Heading/H6.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "Bold",
+      "fontSize": 16,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.1599999964237213
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/72",
+      "description": "Large body text in Inter, 72px. Same size steps as the TASA Orbiter heading scale; for big statements, stats and pull quotes set in the body face.",
+      "fontFamily": "Inter",
+      "fontStyle": "Regular",
+      "fontSize": 72,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 80
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.7200000286102295
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/60",
+      "description": "Large body text in Inter, 60px. Same size steps as the TASA Orbiter heading scale; for big statements, stats and pull quotes set in the body face.",
+      "fontFamily": "Inter",
+      "fontStyle": "Regular",
+      "fontSize": 60,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 68
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.6000000238418579
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/48",
+      "description": "Large body text in Inter, 48px. Same size steps as the TASA Orbiter heading scale; for big statements, stats and pull quotes set in the body face.",
+      "fontFamily": "Inter",
+      "fontStyle": "Regular",
+      "fontSize": 48,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 56
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.47999998927116394
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/40",
+      "description": "Large body text in Inter, 40px. Same size steps as the TASA Orbiter heading scale; for big statements, stats and pull quotes set in the body face.",
+      "fontFamily": "Inter",
+      "fontStyle": "Regular",
+      "fontSize": 40,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 48
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.4000000059604645
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/32",
+      "description": "Large body text in Inter, 32px. Same size steps as the TASA Orbiter heading scale; for big statements, stats and pull quotes set in the body face.",
+      "fontFamily": "Inter",
+      "fontStyle": "Regular",
+      "fontSize": 32,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 40
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.3199999928474426
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/24",
+      "description": "Large body text in Inter, 24px. Same size steps as the TASA Orbiter heading scale; for big statements, stats and pull quotes set in the body face.",
+      "fontFamily": "Inter",
+      "fontStyle": "Regular",
+      "fontSize": 24,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 32
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.23999999463558197
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/XL",
+      "description": "",
+      "fontFamily": "Inter",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 32
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/LG",
+      "description": "",
+      "fontFamily": "Inter",
+      "fontStyle": "Regular",
+      "fontSize": 18,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 28
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/MD",
+      "description": "",
+      "fontFamily": "Inter",
+      "fontStyle": "Regular",
+      "fontSize": 16,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 24
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/SM",
+      "description": "",
+      "fontFamily": "Inter",
+      "fontStyle": "Regular",
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 22
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/XS",
+      "description": "",
+      "fontFamily": "Inter",
+      "fontStyle": "Regular",
+      "fontSize": 12,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 18
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/2XS",
+      "description": "",
+      "fontFamily": "Inter",
+      "fontStyle": "Regular",
+      "fontSize": 10,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 16
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/72/Regular",
+      "description": "Body/72 in Regular. Same size, line height and tracking as Body/72.",
+      "fontFamily": "Inter",
+      "fontStyle": "Regular",
+      "fontSize": 72,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 80
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.7200000286102295
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/72/Medium",
+      "description": "Body/72 in Medium. Same size, line height and tracking as Body/72.",
+      "fontFamily": "Inter",
+      "fontStyle": "Medium",
+      "fontSize": 72,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 80
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.7200000286102295
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/72/Semi Bold",
+      "description": "Body/72 in Semi Bold. Same size, line height and tracking as Body/72.",
+      "fontFamily": "Inter",
+      "fontStyle": "Semi Bold",
+      "fontSize": 72,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 80
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.7200000286102295
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/72/Bold",
+      "description": "Body/72 in Bold. Same size, line height and tracking as Body/72.",
+      "fontFamily": "Inter",
+      "fontStyle": "Bold",
+      "fontSize": 72,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 80
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.7200000286102295
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/60/Regular",
+      "description": "Body/60 in Regular. Same size, line height and tracking as Body/60.",
+      "fontFamily": "Inter",
+      "fontStyle": "Regular",
+      "fontSize": 60,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 68
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.6000000238418579
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/60/Medium",
+      "description": "Body/60 in Medium. Same size, line height and tracking as Body/60.",
+      "fontFamily": "Inter",
+      "fontStyle": "Medium",
+      "fontSize": 60,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 68
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.6000000238418579
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/60/Semi Bold",
+      "description": "Body/60 in Semi Bold. Same size, line height and tracking as Body/60.",
+      "fontFamily": "Inter",
+      "fontStyle": "Semi Bold",
+      "fontSize": 60,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 68
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.6000000238418579
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/60/Bold",
+      "description": "Body/60 in Bold. Same size, line height and tracking as Body/60.",
+      "fontFamily": "Inter",
+      "fontStyle": "Bold",
+      "fontSize": 60,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 68
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.6000000238418579
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/48/Regular",
+      "description": "Body/48 in Regular. Same size, line height and tracking as Body/48.",
+      "fontFamily": "Inter",
+      "fontStyle": "Regular",
+      "fontSize": 48,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 56
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.47999998927116394
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/48/Medium",
+      "description": "Body/48 in Medium. Same size, line height and tracking as Body/48.",
+      "fontFamily": "Inter",
+      "fontStyle": "Medium",
+      "fontSize": 48,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 56
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.47999998927116394
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/48/Semi Bold",
+      "description": "Body/48 in Semi Bold. Same size, line height and tracking as Body/48.",
+      "fontFamily": "Inter",
+      "fontStyle": "Semi Bold",
+      "fontSize": 48,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 56
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.47999998927116394
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/48/Bold",
+      "description": "Body/48 in Bold. Same size, line height and tracking as Body/48.",
+      "fontFamily": "Inter",
+      "fontStyle": "Bold",
+      "fontSize": 48,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 56
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.47999998927116394
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/40/Regular",
+      "description": "Body/40 in Regular. Same size, line height and tracking as Body/40.",
+      "fontFamily": "Inter",
+      "fontStyle": "Regular",
+      "fontSize": 40,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 48
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.4000000059604645
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/40/Medium",
+      "description": "Body/40 in Medium. Same size, line height and tracking as Body/40.",
+      "fontFamily": "Inter",
+      "fontStyle": "Medium",
+      "fontSize": 40,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 48
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.4000000059604645
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/40/Semi Bold",
+      "description": "Body/40 in Semi Bold. Same size, line height and tracking as Body/40.",
+      "fontFamily": "Inter",
+      "fontStyle": "Semi Bold",
+      "fontSize": 40,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 48
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.4000000059604645
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/40/Bold",
+      "description": "Body/40 in Bold. Same size, line height and tracking as Body/40.",
+      "fontFamily": "Inter",
+      "fontStyle": "Bold",
+      "fontSize": 40,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 48
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.4000000059604645
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/32/Regular",
+      "description": "Body/32 in Regular. Same size, line height and tracking as Body/32.",
+      "fontFamily": "Inter",
+      "fontStyle": "Regular",
+      "fontSize": 32,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 40
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.3199999928474426
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/32/Medium",
+      "description": "Body/32 in Medium. Same size, line height and tracking as Body/32.",
+      "fontFamily": "Inter",
+      "fontStyle": "Medium",
+      "fontSize": 32,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 40
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.3199999928474426
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/32/Semi Bold",
+      "description": "Body/32 in Semi Bold. Same size, line height and tracking as Body/32.",
+      "fontFamily": "Inter",
+      "fontStyle": "Semi Bold",
+      "fontSize": 32,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 40
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.3199999928474426
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/32/Bold",
+      "description": "Body/32 in Bold. Same size, line height and tracking as Body/32.",
+      "fontFamily": "Inter",
+      "fontStyle": "Bold",
+      "fontSize": 32,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 40
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.3199999928474426
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/24/Regular",
+      "description": "Body/24 in Regular. Same size, line height and tracking as Body/24.",
+      "fontFamily": "Inter",
+      "fontStyle": "Regular",
+      "fontSize": 24,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 32
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.23999999463558197
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/24/Medium",
+      "description": "Body/24 in Medium. Same size, line height and tracking as Body/24.",
+      "fontFamily": "Inter",
+      "fontStyle": "Medium",
+      "fontSize": 24,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 32
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.23999999463558197
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/24/Semi Bold",
+      "description": "Body/24 in Semi Bold. Same size, line height and tracking as Body/24.",
+      "fontFamily": "Inter",
+      "fontStyle": "Semi Bold",
+      "fontSize": 24,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 32
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.23999999463558197
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/24/Bold",
+      "description": "Body/24 in Bold. Same size, line height and tracking as Body/24.",
+      "fontFamily": "Inter",
+      "fontStyle": "Bold",
+      "fontSize": 24,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 32
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.23999999463558197
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/XL/Regular",
+      "description": "Body/XL in Regular. Same size, line height and tracking as Body/XL.",
+      "fontFamily": "Inter",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 32
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/XL/Medium",
+      "description": "Body/XL in Medium. Same size, line height and tracking as Body/XL.",
+      "fontFamily": "Inter",
+      "fontStyle": "Medium",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 32
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/XL/Semi Bold",
+      "description": "Body/XL in Semi Bold. Same size, line height and tracking as Body/XL.",
+      "fontFamily": "Inter",
+      "fontStyle": "Semi Bold",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 32
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/XL/Bold",
+      "description": "Body/XL in Bold. Same size, line height and tracking as Body/XL.",
+      "fontFamily": "Inter",
+      "fontStyle": "Bold",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 32
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/LG/Regular",
+      "description": "Body/LG in Regular. Same size, line height and tracking as Body/LG.",
+      "fontFamily": "Inter",
+      "fontStyle": "Regular",
+      "fontSize": 18,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 28
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/LG/Medium",
+      "description": "Body/LG in Medium. Same size, line height and tracking as Body/LG.",
+      "fontFamily": "Inter",
+      "fontStyle": "Medium",
+      "fontSize": 18,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 28
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/LG/Semi Bold",
+      "description": "Body/LG in Semi Bold. Same size, line height and tracking as Body/LG.",
+      "fontFamily": "Inter",
+      "fontStyle": "Semi Bold",
+      "fontSize": 18,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 28
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/LG/Bold",
+      "description": "Body/LG in Bold. Same size, line height and tracking as Body/LG.",
+      "fontFamily": "Inter",
+      "fontStyle": "Bold",
+      "fontSize": 18,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 28
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/MD/Regular",
+      "description": "Body/MD in Regular. Same size, line height and tracking as Body/MD.",
+      "fontFamily": "Inter",
+      "fontStyle": "Regular",
+      "fontSize": 16,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 24
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/MD/Medium",
+      "description": "Body/MD in Medium. Same size, line height and tracking as Body/MD.",
+      "fontFamily": "Inter",
+      "fontStyle": "Medium",
+      "fontSize": 16,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 24
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/MD/Semi Bold",
+      "description": "Body/MD in Semi Bold. Same size, line height and tracking as Body/MD.",
+      "fontFamily": "Inter",
+      "fontStyle": "Semi Bold",
+      "fontSize": 16,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 24
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/MD/Bold",
+      "description": "Body/MD in Bold. Same size, line height and tracking as Body/MD.",
+      "fontFamily": "Inter",
+      "fontStyle": "Bold",
+      "fontSize": 16,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 24
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/SM/Regular",
+      "description": "Body/SM in Regular. Same size, line height and tracking as Body/SM.",
+      "fontFamily": "Inter",
+      "fontStyle": "Regular",
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 22
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/SM/Medium",
+      "description": "Body/SM in Medium. Same size, line height and tracking as Body/SM.",
+      "fontFamily": "Inter",
+      "fontStyle": "Medium",
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 22
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/SM/Semi Bold",
+      "description": "Body/SM in Semi Bold. Same size, line height and tracking as Body/SM.",
+      "fontFamily": "Inter",
+      "fontStyle": "Semi Bold",
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 22
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/SM/Bold",
+      "description": "Body/SM in Bold. Same size, line height and tracking as Body/SM.",
+      "fontFamily": "Inter",
+      "fontStyle": "Bold",
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 22
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/XS/Regular",
+      "description": "Body/XS in Regular. Same size, line height and tracking as Body/XS.",
+      "fontFamily": "Inter",
+      "fontStyle": "Regular",
+      "fontSize": 12,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 18
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/XS/Medium",
+      "description": "Body/XS in Medium. Same size, line height and tracking as Body/XS.",
+      "fontFamily": "Inter",
+      "fontStyle": "Medium",
+      "fontSize": 12,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 18
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/XS/Semi Bold",
+      "description": "Body/XS in Semi Bold. Same size, line height and tracking as Body/XS.",
+      "fontFamily": "Inter",
+      "fontStyle": "Semi Bold",
+      "fontSize": 12,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 18
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/XS/Bold",
+      "description": "Body/XS in Bold. Same size, line height and tracking as Body/XS.",
+      "fontFamily": "Inter",
+      "fontStyle": "Bold",
+      "fontSize": 12,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 18
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/2XS/Regular",
+      "description": "Body/2XS in Regular. Same size, line height and tracking as Body/2XS.",
+      "fontFamily": "Inter",
+      "fontStyle": "Regular",
+      "fontSize": 10,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 16
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/2XS/Medium",
+      "description": "Body/2XS in Medium. Same size, line height and tracking as Body/2XS.",
+      "fontFamily": "Inter",
+      "fontStyle": "Medium",
+      "fontSize": 10,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 16
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/2XS/Semi Bold",
+      "description": "Body/2XS in Semi Bold. Same size, line height and tracking as Body/2XS.",
+      "fontFamily": "Inter",
+      "fontStyle": "Semi Bold",
+      "fontSize": 10,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 16
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Body/2XS/Bold",
+      "description": "Body/2XS in Bold. Same size, line height and tracking as Body/2XS.",
+      "fontFamily": "Inter",
+      "fontStyle": "Bold",
+      "fontSize": 10,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 16
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Eyebrow/Semi Bold",
+      "description": "Eyebrow in Semi Bold, the only permitted alternative weight, for an eyebrow that needs more presence. 10px, ALL CAPS, +8% tracking.",
+      "fontFamily": "Inter",
+      "fontStyle": "Semi Bold",
+      "fontSize": 10,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 16
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0.9599999785423279
+      },
+      "textCase": "UPPER"
+    }
+  ],
+  "effectStyles": [
+    {
+      "name": "Elevation/None",
+      "description": "No shadow. DEFAULT — surfaces are flat unless raised.",
+      "effects": []
+    },
+    {
+      "name": "Elevation/Low Raised",
+      "description": "From the styles page: y 2px, blur 16px, spread 0. Cards lifted off the canvas.",
+      "effects": [
+        {
+          "type": "DROP_SHADOW",
+          "x": 0,
+          "y": 2,
+          "blur": 16,
+          "spread": 0,
+          "color": "#1928391A",
+          "opacity": 0.1
+        }
+      ]
+    },
+    {
+      "name": "Elevation/Mid Raised",
+      "description": "y 8px, blur 24px, spread 0. Modals and popovers only. Pair with container/elevated.",
+      "effects": [
+        {
+          "type": "DROP_SHADOW",
+          "x": 0,
+          "y": 8,
+          "blur": 24,
+          "spread": 0,
+          "color": "#19283924",
+          "opacity": 0.14
+        }
+      ]
+    }
+  ]
+}

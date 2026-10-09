@@ -1,0 +1,88 @@
+{
+  "about": "Places where the Figma file disagrees with itself. The tokens follow the variables (they are what designs actually bind to); the brand team should confirm each item and fix the other side in Figma.",
+  "items": [],
+  "resolved": [
+    {
+      "id": "eyebrow-size",
+      "decision": "Eyebrow is 10px (line height 16px). The Typography frames saying 12px are wrong and will be corrected in Figma.",
+      "decided_on": "2026-10-09"
+    },
+    {
+      "id": "eyebrow-color",
+      "decision": "Eyebrow colour is brand/500 (text/eyebrow). The Semantic Colours frame saying brand/600 is wrong and will be corrected in Figma.",
+      "decided_on": "2026-10-09"
+    },
+    {
+      "id": "weights",
+      "decision": "Weights are 400–700. ExtraBold and Black are banned (typography.json).",
+      "decided_on": "2026-10-09"
+    },
+    {
+      "id": "semantic-text-and-bg-colours",
+      "decision": "colors.json wins. Applied as overrides in data/overrides/semantic-colors.json; #0C1927 added to the palette as neutral-light/1300. Figma variables need updating to match.",
+      "decided_on": "2026-10-09"
+    },
+    {
+      "id": "heavy-border",
+      "decision": "A heavy border is 2px or more; a shadow with the default 1px border is allowed.",
+      "decided_on": "2026-10-09"
+    },
+    {
+      "id": "h5-h6-line-height",
+      "decision": "Typography frames updated to match the variables (H5 18/24, H6 16/20, Body/MD 16/24, plus mobile line heights).",
+      "decided_on": "2026-10-09"
+    },
+    {
+      "id": "letter-spacing",
+      "decision": "Typefaces frame updated: -2% Display, -1% Headings, 0% body.",
+      "decided_on": "2026-10-09"
+    },
+    {
+      "id": "eyebrow-letter-spacing",
+      "decision": "size/eyebrow description updated to +8% (0.96px), matching the variable, text style and typography.json.",
+      "decided_on": "2026-10-09"
+    },
+    {
+      "id": "stale-descriptions",
+      "decision": "Descriptions updated: 10px floor note, radius scale 2–12px plus pill, Eyebrow style 10px.",
+      "decided_on": "2026-10-09"
+    },
+    {
+      "id": "eyebrow-semibold-12px",
+      "decision": "Eyebrow is 10px at any weight; Eyebrow style and text/eyebrow descriptions updated.",
+      "decided_on": "2026-10-09"
+    },
+    {
+      "id": "container-border-default",
+      "decision": "Cards have borders: default container = container/primary + 1px border/container. border/primary description updated in Figma.",
+      "decided_on": "2026-10-09"
+    },
+    {
+      "id": "mid-raised-dropdowns",
+      "decision": "Mid Raised is for modals and popovers only (borders-elevation.json). Effect style and container/elevated descriptions updated in Figma.",
+      "decided_on": "2026-10-09"
+    },
+    {
+      "id": "container-hover-token",
+      "decision": "Hover removed: the container/hover swatches were deleted from both Semantic Colours frames.",
+      "decided_on": "2026-10-09"
+    },
+    {
+      "id": "legacy-type-frames",
+      "decision": "'Type Scale' and 'Responsive Type Styles' moved to a new Archive page and labelled [Archived 2026-10-09]. The typography page (Typefaces, Typography — Desktop/Mobile) is the reference. Anything on the Archive page is not a brand source.",
+      "decided_on": "2026-10-09"
+    },
+    {
+      "id": "tertiary-text-contrast",
+      "decision": "Keep text/tertiary as #768EA7 (neutral-light/600) in Light mode. Accepted by the brand team with its 3.4:1 contrast on background/primary.",
+      "decided_on": "2026-10-09"
+    }
+  ],
+  "figma_updates_needed": [],
+  "figma_updates_done": [
+    "2026-10-09: added neutral-light/1300; repointed text/heading, text/body, text/primary, text/secondary, text/tertiary, background/secondary; deleted ExtraBold variables; updated weight, size, radius and eyebrow descriptions; corrected Typography, Typefaces and Semantic Colours frames (48 labels).",
+    "2026-10-09: removed container/hover swatches; border/primary, Mid Raised and container/elevated descriptions; added size/line-height/letter-spacing body/40 variables; created text styles Body/72, 60, 48, 40, 32, 24; added Body/40 rows to the Typography frames.",
+    "2026-10-09: created Regular, Medium, Semi Bold and Bold variants for every Display, Heading and Body style (67 new) plus Eyebrow/Semi Bold; bound all variants to the typography variables; bound Heading/H1 size, line height and tracking.",
+    "2026-10-09: created Archive page; moved Type Scale and Responsive Type Styles there."
+  ]
+}

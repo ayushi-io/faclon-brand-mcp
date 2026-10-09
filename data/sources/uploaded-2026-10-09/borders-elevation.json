@@ -1,0 +1,9 @@
+{
+  "borderWidth": { "default": 1, "thick": 2, "thicker": 3, "thickest": 4 },
+  "elevation": {
+    "none": "default — backgrounds are flat",
+    "lowRaised": "0 2px 16px, 10% opacity, tinted #192839",
+    "midRaised": "0 8px 24px, 14% opacity, tinted #192839 — modals, popovers only"
+  },
+  "rule": "Never a shadow and a heavy border together. Identical in Light and Dark."
+}

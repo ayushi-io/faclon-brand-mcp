@@ -1,0 +1,48 @@
+{
+  "id": "newsletter",
+  "name": "Email newsletter",
+  "status": "draft",
+  "note": "Draft values for the brand team to confirm. Every value here is a proposal, not taken from Figma.",
+  "audience": "external",
+  "canvas": {
+    "width": 600,
+    "height": "auto",
+    "unit": "px"
+  },
+  "safe_area": {
+    "left": 24,
+    "right": 24
+  },
+  "typography": {
+    "breakpoint_mode": "mobile",
+    "heading_style": "heading/h3",
+    "body_style": "body/md",
+    "max_heading_chars": 60,
+    "font_note": "Most email clients won't load TASA Orbiter or Inter. Per the two-typefaces rule there is no third fallback; text falls back to TASA → Inter only. Render headings as live text in Inter, or as images, and confirm with the brand team."
+  },
+  "overrides": [
+    {
+      "rule": "type.min-size",
+      "value": 14,
+      "reason": "Email clients render small text poorly."
+    }
+  ],
+  "logo": {
+    "position": "top-center",
+    "format": "png",
+    "retina": true
+  },
+  "images": {
+    "max_width": 552,
+    "alt_text_required": true
+  },
+  "export": {
+    "file_types": [
+      "html",
+      "png"
+    ]
+  },
+  "severity": {
+    "alt_text_required": "error"
+  }
+}

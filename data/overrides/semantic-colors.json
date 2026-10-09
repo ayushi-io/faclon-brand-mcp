@@ -1,0 +1,8 @@
+{
+  "about": "Brand-team decisions that override the Figma snapshot until Figma is updated. Applied by scripts/build-tokens.mjs after resolving Figma. When Figma matches, delete the entry.",
+  "primitives": [],
+  "semantic": [],
+  "history": [
+    "2026-10-09: colors.json decisions applied as overrides, then written into the Figma file the same day; overrides retired."
+  ]
+}
