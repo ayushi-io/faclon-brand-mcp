@@ -240,3 +240,10 @@ test("information and strong status colours exist in both modes", () => {
   assert.equal(semantic.light.container.info.ref, "brand/100");
   assert.equal(semantic.light.container["info-strong"].ref, "brand/800");
 });
+
+test("defaults agree with the status-container border rule", () => {
+  const { defaults, rules } = getBrandGuidelines({ section: "rules" });
+  const borders = rules.find((r) => r.id === "color.status-containers-border").check.borders;
+  assert.equal(defaults.success_container.border, borders[defaults.success_container.fill]);
+  assert.equal(defaults.error_container.border, borders[defaults.error_container.fill]);
+});
