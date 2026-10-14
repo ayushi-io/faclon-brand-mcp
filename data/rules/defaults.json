@@ -27,15 +27,17 @@
     },
     "success_container": {
       "fill": "container/success",
-      "border": null,
+      "border": "border/success",
       "text": "text/success",
-      "source": "Variable description: container/success"
+      "source": "Variable description: container/success; border decided by brand team 2026-10-14 (color.status-containers-border)",
+      "borderWidth": "border-width/default (1px)"
     },
     "error_container": {
       "fill": "container/error",
-      "border": null,
+      "border": "border/error",
       "text": "text/error",
-      "source": "Variable description: container/error"
+      "source": "Variable description: container/error; border decided by brand team 2026-10-14 (color.status-containers-border)",
+      "borderWidth": "border-width/default (1px)"
     },
     "heading": {
       "family": "TASA Orbiter",
