@@ -16,7 +16,7 @@
     "200": "#B8D0FD",
     "300": "#8AB1FB",
     "400": "#5A8DF7",
-    "500": "#165FF2",
+    "500": "#1655F2",
     "600": "#124ED0",
     "700": "#0E3FAA",
     "800": "#0A3083",
@@ -31,7 +31,7 @@
     "secondaryLight": "#F1F5FA",
     "primaryDark": "#171F2B",
     "secondaryDark": "#0C1927",
-    "brand": "#165FF2"
+    "brand": "#1655F2"
   },
   "text": {
     "headingLight": "#0C1927",

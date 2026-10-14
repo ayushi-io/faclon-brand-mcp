@@ -47,7 +47,7 @@ test("spacing, radius, border and elevation come through", () => {
 
 test("CSS output has variables, dark theme and mobile overrides", () => {
   const { code } = getTokens({ as: "css" });
-  assert.match(code, /--color-brand-500: #165FF2;/);
+  assert.match(code, /--color-brand-500: #1655F2;/);
   assert.match(code, /:root\[data-theme="dark"\]/);
   assert.match(code, /@media \(max-width: 767px\)/);
   assert.match(code, /--text-display-xl-size: 72px;/);
@@ -186,4 +186,57 @@ test("every text style has all four weights (eyebrow: Medium and Semi Bold)", ()
   assert.equal(styles["heading/h2"].weights["700"], "Heading/H2/Bold");
   assert.equal(styles["display/xl"].weight, 700);
   assert.equal(styles["heading/h1"].mobile.size, 30);
+});
+
+test("text roles resolve per format and breakpoint from the Text Roles collection", () => {
+  const { roles, formats } = getTokens({ category: "typography" }).tokens;
+  assert.deepEqual(formats, ["document", "newsletter", "deck"]);
+  assert.equal(Object.keys(roles).length, 11);
+  assert.equal(roles.eyebrow.textCase, "uppercase");
+  assert.deepEqual([roles.eyebrow.formats.document.desktop.size, roles.eyebrow.formats.document.desktop.lineHeight], [10, 16]);
+  assert.deepEqual([roles.body.formats.document.desktop.size, roles.body.formats.newsletter.desktop.size, roles.body.formats.deck.desktop.size], [14, 16, 24]);
+  assert.equal(roles.title.family, "TASA Orbiter");
+  assert.equal(roles.body.family, "Inter");
+  assert.equal(roles.metric.formats.deck.desktop.size, 48);
+  assert.equal(roles.metric.formats.deck.ref, "size/display/md");
+  // Inter body roles carry no tracking; TASA roles keep theirs.
+  assert.equal(roles.body.formats.document.desktop.letterSpacing, 0);
+  assert.ok(roles.title.formats.document.desktop.letterSpacing < 0);
+});
+
+test("every text role respects its format profile's minimum size", () => {
+  const { roles } = getTokens({ category: "typography" }).tokens;
+  for (const format of ["document", "newsletter", "deck"]) {
+    const profile = getBrandGuidelines({ section: "rules", format_profile: format });
+    const min = profile.rules.find((r) => r.id === "type.min-size").check.value;
+    const bp = profile.format_profile.typography.breakpoint_mode;
+    for (const [name, r] of Object.entries(roles)) {
+      assert.ok(r.formats[format][bp].size >= min, `${name} is ${r.formats[format][bp].size}px in ${format} (${bp}), below ${min}px`);
+    }
+  }
+});
+
+test("format narrows text roles and switches them in CSS", () => {
+  const deck = getTokens({ category: "typography", format: "deck", mode: "desktop" }).tokens.roles;
+  assert.equal(deck.body.size, 24);
+  assert.equal(deck.body.formats, undefined);
+  const css = getTokens({ category: "typography", as: "css" }).code;
+  assert.match(css, /--role-body-size: 14px;/);
+  assert.match(css, /\[data-format="deck"\] \{[^}]*--role-body-size: 24px;/);
+  assert.match(css, /--role-eyebrow-text-transform: uppercase;/);
+  const nl = getTokens({ category: "typography", as: "css", format: "newsletter" }).code;
+  assert.match(nl, /:root \{[^}]*--role-body-size: 16px;/);
+  assert.doesNotMatch(nl, /data-format/);
+  assert.throws(() => getTokens({ category: "color", format: "deck" }), (e) => e.code === "INVALID_PARAM");
+  assert.throws(() => getTokens({ format: "billboard" }), (e) => e.code === "INVALID_PARAM");
+});
+
+test("information and strong status colours exist in both modes", () => {
+  const { semantic } = getTokens({ category: "color" }).tokens;
+  for (const mode of ["light", "dark"]) {
+    for (const k of ["info", "info-strong", "success-strong", "error-strong"]) assert.match(semantic[mode].container[k].value, HEX, `${mode} container/${k}`);
+    assert.equal(semantic[mode].text["on-strong"].value, "#FFFFFF");
+  }
+  assert.equal(semantic.light.container.info.ref, "brand/100");
+  assert.equal(semantic.light.container["info-strong"].ref, "brand/800");
 });

@@ -1,0 +1,14 @@
+{
+  "name": "Faclon Brand Sync",
+  "id": "faclon-brand-sync",
+  "api": "1.0.0",
+  "main": "code.js",
+  "ui": "ui.html",
+  "editorType": ["figma"],
+  "documentAccess": "dynamic-page",
+  "enablePrivatePluginApi": true,
+  "networkAccess": {
+    "allowedDomains": ["https://api.github.com"],
+    "reasoning": "Opens a pull request with the exported design tokens on the brand MCP's GitHub repository."
+  }
+}

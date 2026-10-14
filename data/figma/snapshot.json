@@ -2,8 +2,9 @@
   "source": {
     "fileName": "Design MCP",
     "fileKey": "UDARPzxpNySOS2F3mxhgUs",
-    "extractedAt": "2026-10-09T05:58:30.253Z",
-    "method": "figma-console Desktop Bridge"
+    "extractedAt": "2026-10-14T09:38:20.220Z",
+    "method": "figma-console Desktop Bridge",
+    "note": "2026-10-14: merged Figma changes (eyebrow aliases, 6 semantic colours, Text Roles collection, Role/* styles), verified entry by entry against Figma fingerprints."
   },
   "collections": [
     {
@@ -56,7 +57,7 @@
           "name": "brand/500",
           "type": "COLOR",
           "values": {
-            "Default": "#165FF2"
+            "Default": "#1655F2"
           },
           "description": ""
         },
@@ -1176,6 +1177,96 @@
             }
           },
           "description": "Accent AS TEXT. Permitted ONLY on a dark ground — verify 4.5:1 before using. LIGHT theme: background/inverse and container/inverse only (8.64). It FAILS on every light surface: background/primary 1.73, container/primary 1.58, container/tertiary 1.17. DARK theme: passes on all standard dark surfaces (7.43-9.57) but FAILS on background/inverse and container/inverse (1.69, they are light in Dark) and on brand fills (3.07). Counts toward the 10-15% accent budget. Default remains text/on-accent for text sitting ON an accent fill; this token is for accent text sitting on something else."
+        },
+        {
+          "name": "container/info",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "brand/100",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "brand/800",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Added 2026-10-14 at the brand team's request for Badge intents (Information, Intense Positive/Negative)."
+        },
+        {
+          "name": "text/info",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "brand/800",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "brand/100",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Added 2026-10-14 at the brand team's request for Badge intents (Information, Intense Positive/Negative)."
+        },
+        {
+          "name": "container/info-strong",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "brand/800",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "brand/600",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Added 2026-10-14 at the brand team's request for Badge intents (Information, Intense Positive/Negative)."
+        },
+        {
+          "name": "container/success-strong",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "green/700",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "green/700",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Added 2026-10-14 at the brand team's request for Badge intents (Information, Intense Positive/Negative)."
+        },
+        {
+          "name": "container/error-strong",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "red/600",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "red/600",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Added 2026-10-14 at the brand team's request for Badge intents (Information, Intense Positive/Negative)."
+        },
+        {
+          "name": "text/on-strong",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "base/white",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "base/white",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Added 2026-10-14 at the brand team's request for Badge intents (Information, Intense Positive/Negative)."
         }
       ]
     },
@@ -2046,10 +2137,16 @@
           "name": "size/eyebrow",
           "type": "FLOAT",
           "values": {
-            "Desktop": 10,
-            "Mobile": 10
+            "Desktop": {
+              "alias": "global/fz/10",
+              "collection": "Global Typography"
+            },
+            "Mobile": {
+              "alias": "global/fz/10",
+              "collection": "Global Typography"
+            }
           },
-          "description": "Eyebrow size: 10px only (line height 16px). An eyebrow is therefore ALWAYS small text for WCAG: 4.5:1 required, and the 3:1 large-text exemption never applies. Always ALL CAPS, with +8% letter spacing (0.96px)."
+          "description": "Eyebrow size: 10px (line height 16px); confirmed 2026-10-14, minimum text size is 10px. An eyebrow is always small text for WCAG: 4.5:1 required, the 3:1 large-text exemption never applies. Always ALL CAPS, with 0.96px letter spacing. In components use Role/Eyebrow, which scales per format."
         },
         {
           "name": "line-height/display/xl",
@@ -2274,7 +2371,7 @@
               "collection": "Global Typography"
             }
           },
-          "description": ""
+          "description": "Eyebrow line height: 16px."
         },
         {
           "name": "letter-spacing/display/xl",
@@ -3772,6 +3869,529 @@
             "Semi Bold": {
               "alias": "global/fw/tasa/semibold",
               "collection": "Global Typography"
+            }
+          },
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Text Roles",
+      "modes": [
+        "Document",
+        "Newsletter",
+        "Deck"
+      ],
+      "variables": [
+        {
+          "name": "role/eyebrow/size",
+          "type": "FLOAT",
+          "values": {
+            "Document": {
+              "alias": "size/eyebrow",
+              "collection": "Semantic Typography"
+            },
+            "Newsletter": {
+              "alias": "size/body/sm",
+              "collection": "Semantic Typography"
+            },
+            "Deck": {
+              "alias": "size/body/24",
+              "collection": "Semantic Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "role/eyebrow/line-height",
+          "type": "FLOAT",
+          "values": {
+            "Document": {
+              "alias": "line-height/eyebrow",
+              "collection": "Semantic Typography"
+            },
+            "Newsletter": {
+              "alias": "line-height/body/sm",
+              "collection": "Semantic Typography"
+            },
+            "Deck": {
+              "alias": "line-height/body/24",
+              "collection": "Semantic Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "role/eyebrow/letter-spacing",
+          "type": "FLOAT",
+          "values": {
+            "Document": {
+              "alias": "letter-spacing/eyebrow",
+              "collection": "Semantic Typography"
+            },
+            "Newsletter": {
+              "alias": "letter-spacing/eyebrow",
+              "collection": "Semantic Typography"
+            },
+            "Deck": {
+              "alias": "letter-spacing/eyebrow",
+              "collection": "Semantic Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "role/title/size",
+          "type": "FLOAT",
+          "values": {
+            "Document": {
+              "alias": "size/heading/h5",
+              "collection": "Semantic Typography"
+            },
+            "Newsletter": {
+              "alias": "size/heading/h4",
+              "collection": "Semantic Typography"
+            },
+            "Deck": {
+              "alias": "size/heading/h2",
+              "collection": "Semantic Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "role/title/line-height",
+          "type": "FLOAT",
+          "values": {
+            "Document": {
+              "alias": "line-height/heading/h5",
+              "collection": "Semantic Typography"
+            },
+            "Newsletter": {
+              "alias": "line-height/heading/h4",
+              "collection": "Semantic Typography"
+            },
+            "Deck": {
+              "alias": "line-height/heading/h2",
+              "collection": "Semantic Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "role/title/letter-spacing",
+          "type": "FLOAT",
+          "values": {
+            "Document": {
+              "alias": "letter-spacing/heading/h5",
+              "collection": "Semantic Typography"
+            },
+            "Newsletter": {
+              "alias": "letter-spacing/heading/h4",
+              "collection": "Semantic Typography"
+            },
+            "Deck": {
+              "alias": "letter-spacing/heading/h2",
+              "collection": "Semantic Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "role/subtitle/size",
+          "type": "FLOAT",
+          "values": {
+            "Document": {
+              "alias": "size/body/xs",
+              "collection": "Semantic Typography"
+            },
+            "Newsletter": {
+              "alias": "size/body/sm",
+              "collection": "Semantic Typography"
+            },
+            "Deck": {
+              "alias": "size/body/24",
+              "collection": "Semantic Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "role/subtitle/line-height",
+          "type": "FLOAT",
+          "values": {
+            "Document": {
+              "alias": "line-height/body/xs",
+              "collection": "Semantic Typography"
+            },
+            "Newsletter": {
+              "alias": "line-height/body/sm",
+              "collection": "Semantic Typography"
+            },
+            "Deck": {
+              "alias": "line-height/body/24",
+              "collection": "Semantic Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "role/body/size",
+          "type": "FLOAT",
+          "values": {
+            "Document": {
+              "alias": "size/body/sm",
+              "collection": "Semantic Typography"
+            },
+            "Newsletter": {
+              "alias": "size/body/md",
+              "collection": "Semantic Typography"
+            },
+            "Deck": {
+              "alias": "size/body/24",
+              "collection": "Semantic Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "role/body/line-height",
+          "type": "FLOAT",
+          "values": {
+            "Document": {
+              "alias": "line-height/body/sm",
+              "collection": "Semantic Typography"
+            },
+            "Newsletter": {
+              "alias": "line-height/body/md",
+              "collection": "Semantic Typography"
+            },
+            "Deck": {
+              "alias": "line-height/body/24",
+              "collection": "Semantic Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "role/caption/size",
+          "type": "FLOAT",
+          "values": {
+            "Document": {
+              "alias": "size/body/xs",
+              "collection": "Semantic Typography"
+            },
+            "Newsletter": {
+              "alias": "size/body/sm",
+              "collection": "Semantic Typography"
+            },
+            "Deck": {
+              "alias": "size/body/24",
+              "collection": "Semantic Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "role/caption/line-height",
+          "type": "FLOAT",
+          "values": {
+            "Document": {
+              "alias": "line-height/body/xs",
+              "collection": "Semantic Typography"
+            },
+            "Newsletter": {
+              "alias": "line-height/body/sm",
+              "collection": "Semantic Typography"
+            },
+            "Deck": {
+              "alias": "line-height/body/24",
+              "collection": "Semantic Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "role/label/size",
+          "type": "FLOAT",
+          "values": {
+            "Document": {
+              "alias": "size/body/xs",
+              "collection": "Semantic Typography"
+            },
+            "Newsletter": {
+              "alias": "size/body/sm",
+              "collection": "Semantic Typography"
+            },
+            "Deck": {
+              "alias": "size/body/24",
+              "collection": "Semantic Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "role/label/line-height",
+          "type": "FLOAT",
+          "values": {
+            "Document": {
+              "alias": "line-height/body/xs",
+              "collection": "Semantic Typography"
+            },
+            "Newsletter": {
+              "alias": "line-height/body/sm",
+              "collection": "Semantic Typography"
+            },
+            "Deck": {
+              "alias": "line-height/body/24",
+              "collection": "Semantic Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "role/label-md/size",
+          "type": "FLOAT",
+          "values": {
+            "Document": {
+              "alias": "size/body/sm",
+              "collection": "Semantic Typography"
+            },
+            "Newsletter": {
+              "alias": "size/body/md",
+              "collection": "Semantic Typography"
+            },
+            "Deck": {
+              "alias": "size/body/24",
+              "collection": "Semantic Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "role/label-md/line-height",
+          "type": "FLOAT",
+          "values": {
+            "Document": {
+              "alias": "line-height/body/sm",
+              "collection": "Semantic Typography"
+            },
+            "Newsletter": {
+              "alias": "line-height/body/md",
+              "collection": "Semantic Typography"
+            },
+            "Deck": {
+              "alias": "line-height/body/24",
+              "collection": "Semantic Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "role/label-lg/size",
+          "type": "FLOAT",
+          "values": {
+            "Document": {
+              "alias": "size/body/md",
+              "collection": "Semantic Typography"
+            },
+            "Newsletter": {
+              "alias": "size/body/lg",
+              "collection": "Semantic Typography"
+            },
+            "Deck": {
+              "alias": "size/body/32",
+              "collection": "Semantic Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "role/label-lg/line-height",
+          "type": "FLOAT",
+          "values": {
+            "Document": {
+              "alias": "line-height/body/md",
+              "collection": "Semantic Typography"
+            },
+            "Newsletter": {
+              "alias": "line-height/body/lg",
+              "collection": "Semantic Typography"
+            },
+            "Deck": {
+              "alias": "line-height/body/32",
+              "collection": "Semantic Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "role/button/size",
+          "type": "FLOAT",
+          "values": {
+            "Document": {
+              "alias": "size/heading/h6",
+              "collection": "Semantic Typography"
+            },
+            "Newsletter": {
+              "alias": "size/heading/h5",
+              "collection": "Semantic Typography"
+            },
+            "Deck": {
+              "alias": "size/heading/h3",
+              "collection": "Semantic Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "role/button/line-height",
+          "type": "FLOAT",
+          "values": {
+            "Document": {
+              "alias": "line-height/heading/h6",
+              "collection": "Semantic Typography"
+            },
+            "Newsletter": {
+              "alias": "line-height/heading/h5",
+              "collection": "Semantic Typography"
+            },
+            "Deck": {
+              "alias": "line-height/heading/h3",
+              "collection": "Semantic Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "role/button/letter-spacing",
+          "type": "FLOAT",
+          "values": {
+            "Document": {
+              "alias": "letter-spacing/heading/h6",
+              "collection": "Semantic Typography"
+            },
+            "Newsletter": {
+              "alias": "letter-spacing/heading/h5",
+              "collection": "Semantic Typography"
+            },
+            "Deck": {
+              "alias": "letter-spacing/heading/h3",
+              "collection": "Semantic Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "role/metric/size",
+          "type": "FLOAT",
+          "values": {
+            "Document": {
+              "alias": "size/heading/h3",
+              "collection": "Semantic Typography"
+            },
+            "Newsletter": {
+              "alias": "size/heading/h2",
+              "collection": "Semantic Typography"
+            },
+            "Deck": {
+              "alias": "size/display/md",
+              "collection": "Semantic Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "role/metric/line-height",
+          "type": "FLOAT",
+          "values": {
+            "Document": {
+              "alias": "line-height/heading/h3",
+              "collection": "Semantic Typography"
+            },
+            "Newsletter": {
+              "alias": "line-height/heading/h2",
+              "collection": "Semantic Typography"
+            },
+            "Deck": {
+              "alias": "line-height/display/md",
+              "collection": "Semantic Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "role/metric/letter-spacing",
+          "type": "FLOAT",
+          "values": {
+            "Document": {
+              "alias": "letter-spacing/heading/h3",
+              "collection": "Semantic Typography"
+            },
+            "Newsletter": {
+              "alias": "letter-spacing/heading/h2",
+              "collection": "Semantic Typography"
+            },
+            "Deck": {
+              "alias": "letter-spacing/display/md",
+              "collection": "Semantic Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "role/tag/size",
+          "type": "FLOAT",
+          "values": {
+            "Document": {
+              "alias": "size/heading/h5",
+              "collection": "Semantic Typography"
+            },
+            "Newsletter": {
+              "alias": "size/heading/h4",
+              "collection": "Semantic Typography"
+            },
+            "Deck": {
+              "alias": "size/heading/h3",
+              "collection": "Semantic Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "role/tag/line-height",
+          "type": "FLOAT",
+          "values": {
+            "Document": {
+              "alias": "line-height/heading/h5",
+              "collection": "Semantic Typography"
+            },
+            "Newsletter": {
+              "alias": "line-height/heading/h4",
+              "collection": "Semantic Typography"
+            },
+            "Deck": {
+              "alias": "line-height/heading/h3",
+              "collection": "Semantic Typography"
+            }
+          },
+          "description": ""
+        },
+        {
+          "name": "role/tag/letter-spacing",
+          "type": "FLOAT",
+          "values": {
+            "Document": {
+              "alias": "letter-spacing/heading/h5",
+              "collection": "Semantic Typography"
+            },
+            "Newsletter": {
+              "alias": "letter-spacing/heading/h4",
+              "collection": "Semantic Typography"
+            },
+            "Deck": {
+              "alias": "letter-spacing/heading/h3",
+              "collection": "Semantic Typography"
             }
           },
           "description": ""
@@ -5489,6 +6109,182 @@
       "letterSpacing": {
         "unit": "PIXELS",
         "value": 0.9599999785423279
+      },
+      "textCase": "UPPER"
+    },
+    {
+      "name": "Role/Eyebrow",
+      "description": "Small uppercase kicker above a title. Document eyebrow (10/16) · Newsletter body/sm · Deck body/24. Switch the Text Roles mode on a frame to change format.",
+      "fontFamily": "Inter",
+      "fontStyle": "Medium",
+      "fontSize": 10,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 16
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0.9599999785423279
+      },
+      "textCase": "UPPER"
+    },
+    {
+      "name": "Role/Title",
+      "description": "Card and block titles. Document heading/h5 · Newsletter heading/h4 · Deck heading/h2. Switch the Text Roles mode on a frame to change format.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "Medium",
+      "fontSize": 18,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 24
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.18000000715255737
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Role/Subtitle",
+      "description": "One line under a title. Document body/xs · Newsletter body/sm · Deck body/24. Switch the Text Roles mode on a frame to change format.",
+      "fontFamily": "Inter",
+      "fontStyle": "Regular",
+      "fontSize": 12,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 18
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Role/Body",
+      "description": "Paragraphs and list items. Document body/sm · Newsletter body/md · Deck body/24. Switch the Text Roles mode on a frame to change format.",
+      "fontFamily": "Inter",
+      "fontStyle": "Regular",
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 22
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Role/Caption",
+      "description": "Meta text: dates, roles, sources, metric labels. Document body/xs · Newsletter body/sm · Deck body/24. Switch the Text Roles mode on a frame to change format.",
+      "fontFamily": "Inter",
+      "fontStyle": "Regular",
+      "fontSize": 12,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 18
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Role/Label",
+      "description": "Chips and small badges. Document body/xs · Newsletter body/sm · Deck body/24. Switch the Text Roles mode on a frame to change format.",
+      "fontFamily": "Inter",
+      "fontStyle": "Medium",
+      "fontSize": 12,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 18
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Role/Label Md",
+      "description": "Medium badges. Document body/sm · Newsletter body/md · Deck body/24. Switch the Text Roles mode on a frame to change format.",
+      "fontFamily": "Inter",
+      "fontStyle": "Medium",
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 22
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Role/Label Lg",
+      "description": "Large badges and pills. Document body/md · Newsletter body/lg · Deck body/32. Switch the Text Roles mode on a frame to change format.",
+      "fontFamily": "Inter",
+      "fontStyle": "Medium",
+      "fontSize": 16,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 24
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Role/Button",
+      "description": "Button labels. Document heading/h6 · Newsletter heading/h5 · Deck heading/h3. Switch the Text Roles mode on a frame to change format.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "Medium",
+      "fontSize": 16,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.1599999964237213
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Role/Metric",
+      "description": "Big numbers and KPIs. Document heading/h3 · Newsletter heading/h2 · Deck display/md. Switch the Text Roles mode on a frame to change format.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "SemiBold",
+      "fontSize": 24,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 32
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.23999999463558197
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Role/Tag",
+      "description": "Uppercase statement tag. Document heading/h5 · Newsletter heading/h4 · Deck heading/h3. Switch the Text Roles mode on a frame to change format.",
+      "fontFamily": "TASA Orbiter",
+      "fontStyle": "SemiBold",
+      "fontSize": 18,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 24
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.18000000715255737
       },
       "textCase": "UPPER"
     }

@@ -8,6 +8,7 @@
   "safe_area": { "top": 80, "right": 96, "bottom": 80, "left": 96 },
   "grid": { "columns": 12, "gutter": "spacing.24" },
   "typography": {
+    "text_roles_mode": "Deck",
     "breakpoint_mode": "desktop",
     "title_style": "display/md",
     "heading_style": "heading/h2",

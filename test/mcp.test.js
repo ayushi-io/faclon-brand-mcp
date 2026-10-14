@@ -42,3 +42,11 @@ test("schema rejects an unknown enum value", async () => {
   const res = await client.callTool({ name: "get_tokens", arguments: { category: "shadows" } });
   assert.equal(res.isError, true);
 });
+
+test("get_tokens accepts a format over the protocol", async () => {
+  const client = await connect();
+  const r = body(await client.callTool({ name: "get_tokens", arguments: { category: "typography", format: "newsletter" } }));
+  assert.equal(r.ok, true);
+  assert.equal(r.data.format, "newsletter");
+  assert.equal(r.data.tokens.roles.body.desktop.size, 16);
+});

@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 12px/1.5 Inter, system-ui, sans-serif; margin: 0; padding: 16px; color: var(--figma-color-text, #0C1927); background: var(--figma-color-bg, #fff); }
+  h1 { font-size: 14px; margin: 0 0 4px; }
+  p.hint { margin: 0 0 12px; color: var(--figma-color-text-secondary, #40566D); }
+  label { display: block; font-weight: 500; margin: 10px 0 4px; }
+  input, textarea { box-sizing: border-box; width: 100%; padding: 6px 8px; border: 1px solid var(--figma-color-border, #CBD5E2); border-radius: 2px; font: inherit; background: transparent; color: inherit; }
+  textarea { height: 64px; resize: vertical; }
+  button { margin-top: 14px; width: 100%; padding: 8px; border: 0; border-radius: 2px; font: inherit; font-weight: 600; cursor: pointer; background: var(--figma-color-bg-brand, #1655F2); color: var(--figma-color-text-onbrand, #fff); }
+  button:disabled { opacity: 0.5; cursor: default; }
+  button.secondary { background: transparent; color: inherit; border: 1px solid var(--figma-color-border, #CBD5E2); font-weight: 500; }
+  details { margin-top: 16px; border-top: 1px solid var(--figma-color-border, #E3EAF3); padding-top: 8px; }
+  summary { cursor: pointer; font-weight: 500; }
+  #status { margin-top: 14px; white-space: pre-wrap; }
+  #status.error { color: var(--figma-color-text-danger, #B42318); }
+  #status.ok { color: var(--figma-color-text-success, #006C36); }
+</style>
+</head>
+<body>
+  <h1>Save version &amp; sync to the brand MCP</h1>
+  <p class="hint">Saves a version in Figma, exports the design system and opens a pull request. Merge it on GitHub and Vercel updates the MCP.</p>
+
+  <label for="title">Version name</label>
+  <input id="title" placeholder="e.g. Badge intents and text roles" />
+  <label for="description">What changed (optional)</label>
+  <textarea id="description" placeholder="Shown in Figma's version history and in the pull request."></textarea>
+  <button id="sync">Save version &amp; open pull request</button>
+  <div id="status"></div>
+
+  <details id="settings">
+    <summary>GitHub settings</summary>
+    <label for="repo">Repository (owner/name)</label>
+    <input id="repo" value="ayushi-io/faclon-brand-mcp" />
+    <label for="base">Base branch</label>
+    <input id="base" value="main" />
+    <label for="token">Fine-grained token</label>
+    <input id="token" type="password" placeholder="github_pat_…" autocomplete="off" />
+    <p class="hint">Only this repository; permissions Contents: read &amp; write, Pull requests: read &amp; write. Stored on this computer only.</p>
+    <button id="save" class="secondary">Save settings</button>
+  </details>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const post = (msg) => parent.postMessage({ pluginMessage: msg }, "*");
+const status = (text, kind = "") => { $("status").textContent = text; $("status").className = kind; };
+let pending = null;
+
+// ---------- GitHub (Git Data API: one commit, one branch, one pull request) ----------
+const SNAPSHOT_PATH = "data/figma/snapshot.json";
+
+async function gh(settings, method, path, body) {
+  const res = await fetch(`https://api.github.com/repos/${settings.repo}${path}`, {
+    method,
+    headers: {
+      Authorization: `Bearer ${settings.token}`,
+      Accept: "application/vnd.github+json",
+      "X-GitHub-Api-Version": "2022-11-28",
+      ...(body ? { "Content-Type": "application/json" } : {}),
+    },
+    body: body ? JSON.stringify(body) : undefined,
+  });
+  if (!res.ok) {
+    const detail = await res.text();
+    const hint = res.status === 401 ? " Check the token." : res.status === 403 || res.status === 404 ? " Check the repository name and that the token has Contents and Pull requests write access to it." : "";
+    throw new Error(`GitHub ${method} ${path} failed (${res.status}).${hint}\n${detail.slice(0, 300)}`);
+  }
+  return res.json();
+}
+
+const decodeBase64Utf8 = (b64) => new TextDecoder().decode(Uint8Array.from(atob(b64.replace(/\n/g, "")), (c) => c.charCodeAt(0)));
+// Everything except `source` (export time, version id) decides whether anything changed.
+const designOf = (snapshot) => JSON.stringify({ collections: snapshot.collections, textStyles: snapshot.textStyles, effectStyles: snapshot.effectStyles });
+
+async function openPullRequest(settings, snapshot, title, description) {
+  const base = settings.base || "main";
+  const ref = await gh(settings, "GET", `/git/ref/heads/${encodeURIComponent(base)}`);
+  const baseSha = ref.object.sha;
+
+  // Skip when Figma matches what is already on the base branch.
+  const current = await gh(settings, "GET", `/contents/${SNAPSHOT_PATH}?ref=${encodeURIComponent(base)}`);
+  if (current.content && designOf(JSON.parse(decodeBase64Utf8(current.content))) === designOf(snapshot)) {
+    return { unchanged: true };
+  }
+
+  const baseCommit = await gh(settings, "GET", `/git/commits/${baseSha}`);
+  const blob = await gh(settings, "POST", "/git/blobs", { content: JSON.stringify(snapshot, null, 2) + "\n", encoding: "utf-8" });
+  const tree = await gh(settings, "POST", "/git/trees", { base_tree: baseCommit.tree.sha, tree: [{ path: SNAPSHOT_PATH, mode: "100644", type: "blob", sha: blob.sha }] });
+  const commit = await gh(settings, "POST", "/git/commits", { message: `Figma sync: ${title}\n\n${description || ""}`.trim(), tree: tree.sha, parents: [baseSha] });
+
+  const stamp = new Date().toISOString().replace(/[-:]/g, "").replace(/\..+/, "").replace("T", "-");
+  const branch = `figma-sync/${stamp}`;
+  await gh(settings, "POST", "/git/refs", { ref: `refs/heads/${branch}`, sha: commit.sha });
+
+  const pr = await gh(settings, "POST", "/pulls", {
+    title: `Figma sync: ${title}`,
+    head: branch,
+    base,
+    body: [
+      `Exported from Figma file **${snapshot.source.fileName}** with the Faclon Brand Sync plugin.`,
+      "",
+      `**Figma version:** ${title}${snapshot.source.figmaVersion ? ` (id ${snapshot.source.figmaVersion.id})` : ""}`,
+      description ? `**What changed:** ${description}` : "",
+      "",
+      "The *Figma sync* workflow rebuilds `data/tokens.json`, bumps `brand_version` and runs the tests on this branch. Merge when it is green; Vercel then deploys the MCP.",
+    ].filter((l) => l !== null).join("\n"),
+  });
+  return { url: pr.html_url, number: pr.number, branch };
+}
+
+// ---------- UI wiring ----------
+$("save").onclick = () => {
+  const settings = { repo: $("repo").value.trim(), base: $("base").value.trim() || "main", token: $("token").value.trim() };
+  post({ type: "save-settings", settings });
+};
+
+$("sync").onclick = () => {
+  const title = $("title").value.trim();
+  if (!title) return status("Give the version a name first.", "error");
+  if (!$("token").value.trim()) { $("settings").open = true; return status("Add a GitHub token in GitHub settings first.", "error"); }
+  pending = { title, description: $("description").value.trim() };
+  $("sync").disabled = true;
+  status("Saving the version in Figma and exporting…");
+  post({ type: "export", title: pending.title, description: pending.description });
+};
+
+onmessage = async (event) => {
+  const msg = event.data.pluginMessage;
+  if (!msg) return;
+  if (msg.type === "settings") {
+    if (msg.settings.repo) $("repo").value = msg.settings.repo;
+    if (msg.settings.base) $("base").value = msg.settings.base;
+    if (msg.settings.token) $("token").value = msg.settings.token;
+    else $("settings").open = true;
+  }
+  if (msg.type === "settings-saved") status("Settings saved on this computer.", "ok");
+  if (msg.type === "error") { $("sync").disabled = false; status(msg.message, "error"); }
+  if (msg.type === "snapshot") {
+    const settings = { repo: $("repo").value.trim(), base: $("base").value.trim() || "main", token: $("token").value.trim() };
+    try {
+      status("Version saved in Figma. Opening the pull request on GitHub…");
+      const result = await openPullRequest(settings, msg.snapshot, pending.title, pending.description);
+      if (result.unchanged) {
+        status("Version saved in Figma. No design-system changes since the last sync, so no pull request was needed.", "ok");
+      } else {
+        status(`Pull request #${result.number} opened.\nWait for the green check, then merge it.`, "ok");
+        const open = document.createElement("button");
+        open.textContent = "Open pull request";
+        open.className = "secondary";
+        open.onclick = () => post({ type: "open-url", url: result.url });
+        $("status").appendChild(open);
+      }
+    } catch (err) {
+      status(`The version is saved in Figma, but the pull request failed:\n${err.message}`, "error");
+    } finally {
+      $("sync").disabled = false;
+    }
+  }
+};
+
+post({ type: "load-settings" });
+</script>
+</body>
+</html>

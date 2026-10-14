@@ -76,6 +76,86 @@
       "id": "tertiary-text-contrast",
       "decision": "Keep text/tertiary as #768EA7 (neutral-light/600) in Light mode. Accepted by the brand team with its 3.4:1 contrast on background/primary.",
       "decided_on": "2026-10-09"
+    },
+    {
+      "id": "min-size-12-text-roles",
+      "decision": "Minimum type size is 12px. Components use Role/* text styles; a Text Roles collection (Document, Newsletter, Deck) sets sizes per format. Supersedes 'eyebrow-size': the eyebrow is 12px in Document.",
+      "decided_on": "2026-10-14"
+    },
+    {
+      "id": "cards-follow-container-default",
+      "decision": "Cards follow the container default: container/primary, 1px border/container, radius/default, padding/container, gap/stack.",
+      "decided_on": "2026-10-14"
+    },
+    {
+      "id": "status-cards-have-border",
+      "decision": "Positive and Negative cards keep a 1px border in their status colour. Replaces 'status containers have no border'.",
+      "decided_on": "2026-10-14"
+    },
+    {
+      "id": "tone-naming",
+      "decision": "Card, Chip and Badge use one vocabulary: Positive, Negative, Information, Neutral, Primary (no Success/Error/Brand names).",
+      "decided_on": "2026-10-14"
+    },
+    {
+      "id": "status-intents",
+      "decision": "Warnings use Negative (no notice colour). Information reuses the brand blue family. Added container/info, text/info, container/info-strong, container/success-strong (green/700), container/error-strong (red/600), text/on-strong.",
+      "decided_on": "2026-10-14"
+    },
+    {
+      "id": "button-radius",
+      "decision": "Buttons are squared with radius/default (2px).",
+      "decided_on": "2026-10-14"
+    },
+    {
+      "id": "tag-pill-button-styles",
+      "decision": "Tag, Contact Pill and Button have Style = Neutral (container/inverse + text/inverse) or Brand (container/brand + text/on-brand), so they follow Light and Dark.",
+      "decided_on": "2026-10-14"
+    },
+    {
+      "id": "no-interaction-states",
+      "decision": "Components are for marketing collateral, not product UI: no hover, pressed, disabled or expanded states are defined. HTML output still keeps the browser focus ring (color.focus-visible).",
+      "decided_on": "2026-10-14"
+    },
+    {
+      "id": "icons-lucide",
+      "decision": "Icons come from Lucide when one is asked for; no icon set is built in Figma ahead of time.",
+      "decided_on": "2026-10-14"
+    },
+    {
+      "id": "eyebrow-12px",
+      "decision": "Eyebrow is 12px / 18px (size/eyebrow -> global/fz/12, line-height/eyebrow -> global/lh/18); tracking stays 0.96px, which is +8% at 12px. Supersedes eyebrow-size and eyebrow-semibold-12px.",
+      "decided_on": "2026-10-14"
+    },
+    {
+      "id": "document-format",
+      "decision": "Documents and 2-pagers are A4 portrait (794 x 1123 px at 96 dpi). Margins and section spacing use padding/section; see data/formats/document.json.",
+      "decided_on": "2026-10-14"
+    },
+    {
+      "id": "min-size-10-kept",
+      "decision": "Minimum text size stays 10px, the eyebrow included (Eyebrow back to 10/16; Role/Eyebrow is 10/16 in Document mode). Body/2XS stays 10px for documents. Supersedes min-size-12-text-roles and eyebrow-12px; resolves 10px-base-styles.",
+      "decided_on": "2026-10-14"
+    },
+    {
+      "id": "brand-blue-1655F2",
+      "decision": "Brand blue brand/500 is #1655F2. Updated on 2026-10-14 in Figma (variable, 45 unbound fills, Colours-page labels), the snapshot, tokens.json and the uploaded colors.json.",
+      "decided_on": "2026-10-14"
+    },
+    {
+      "id": "email-fonts",
+      "decision": "Newsletters use TASA Orbiter for headings, falling back to Inter; Inter for body. No third fallback, even in email.",
+      "decided_on": "2026-10-14"
+    },
+    {
+      "id": "newsletter-esp-brevo",
+      "decision": "Newsletters are built for Brevo: {{ unsubscribe }} link mandatory, {{ mirror }} optional, {{ contact.ATTRIBUTE }} for personalisation.",
+      "decided_on": "2026-10-14"
+    },
+    {
+      "id": "design-system-only",
+      "decision": "The Figma design system (served by this MCP) is the only source for every format: newsletter, deck and A4 document. No other reference material is used.",
+      "decided_on": "2026-10-14"
     }
   ],
   "figma_updates_needed": [],
@@ -83,6 +163,10 @@
     "2026-10-09: added neutral-light/1300; repointed text/heading, text/body, text/primary, text/secondary, text/tertiary, background/secondary; deleted ExtraBold variables; updated weight, size, radius and eyebrow descriptions; corrected Typography, Typefaces and Semantic Colours frames (48 labels).",
     "2026-10-09: removed container/hover swatches; border/primary, Mid Raised and container/elevated descriptions; added size/line-height/letter-spacing body/40 variables; created text styles Body/72, 60, 48, 40, 32, 24; added Body/40 rows to the Typography frames.",
     "2026-10-09: created Regular, Medium, Semi Bold and Bold variants for every Display, Heading and Body style (67 new) plus Eyebrow/Semi Bold; bound all variants to the typography variables; bound Heading/H1 size, line height and tracking.",
-    "2026-10-09: created Archive page; moved Type Scale and Responsive Type Styles there."
+    "2026-10-09: created Archive page; moved Type Scale and Responsive Type Styles there.",
+    "2026-10-14: added Text Roles collection (Document, Newsletter, Deck; 27 variables) and 11 Role/* text styles; added container/info, text/info, container/info-strong, container/success-strong, container/error-strong, text/on-strong; components moved to Role/* styles and the container default; Badge rebuilt (5 intents x Subtle/Intense x 3 sizes); Tag, Contact Pill and Button given Neutral/Brand styles, Button radius 2px; AI Export cards moved to Archive.",
+    "2026-10-14: size/eyebrow and line-height/eyebrow repointed to 12/18; Eyebrow style descriptions and both Typography spec rows updated; 11 Risk Evaluation cards moved to Archive.",
+    "2026-10-14: size/eyebrow and line-height/eyebrow back to 10/16 and Role/Eyebrow Document mode pointed at them; brand/500 changed to #1655F2 and the three Colours-page labels updated.",
+    "2026-10-14: snapshot re-synced from Figma (Text Roles collection, 6 semantic colours, eyebrow aliases, 11 Role/* styles) and verified variable-by-variable against Figma; tokens.json rebuilt with typography.roles."
   ]
 }
