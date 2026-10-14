@@ -1,8 +1,8 @@
 {
   "id": "newsletter",
-  "name": "Email newsletter",
+  "name": "Email newsletter (Brevo)",
   "status": "draft",
-  "note": "Draft values for the brand team to confirm. Every value here is a proposal, not taken from Figma.",
+  "note": "Built for Brevo. Brevo requirements below are from Brevo's documentation (2026-10-14); layout values are draft proposals for the brand team to confirm. Colours and type come from the design system only.",
   "audience": "external",
   "canvas": {
     "width": 600,
@@ -14,11 +14,21 @@
     "right": 24
   },
   "typography": {
+    "text_roles_mode": "Newsletter",
     "breakpoint_mode": "mobile",
     "heading_style": "heading/h3",
     "body_style": "body/md",
     "max_heading_chars": 60,
-    "font_note": "Most email clients won't load TASA Orbiter or Inter. Per the two-typefaces rule there is no third fallback; text falls back to TASA → Inter only. Render headings as live text in Inter, or as images, and confirm with the brand team."
+    "font_note": "Per the two-typefaces rule there is no third fallback: headings are TASA Orbiter falling back to Inter, body is Inter. Email clients that don't load web fonts will show their default font; this is accepted (brand team, 2026-10-14).",
+    "font_stack": {
+      "heading": [
+        "TASA Orbiter",
+        "Inter"
+      ],
+      "body": [
+        "Inter"
+      ]
+    }
   },
   "overrides": [
     {
@@ -44,5 +54,26 @@
   },
   "severity": {
     "alt_text_required": "error"
+  },
+  "platform": {
+    "esp": "brevo",
+    "html": "Custom HTML: table-based layout, inline styles, 600px max width",
+    "merge_tags": {
+      "unsubscribe": {
+        "tag": "{{ unsubscribe }}",
+        "required": true,
+        "use": "href of an <a> link; mandatory in every campaign"
+      },
+      "mirror": {
+        "tag": "{{ mirror }}",
+        "required": false,
+        "use": "href of a 'View in browser' link"
+      },
+      "contact_attribute": {
+        "tag": "{{ contact.ATTRIBUTE }}",
+        "use": "personalisation; ATTRIBUTE must match the Brevo contact attribute name exactly (case-sensitive), e.g. {{ contact.FIRSTNAME }}"
+      }
+    },
+    "quotes_note": "Use straight double quotes around placeholders (href=\"{{ unsubscribe }}\"); typographic quotes break Brevo's template rendering."
   }
 }

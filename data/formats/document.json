@@ -1,0 +1,89 @@
+{
+  "id": "document",
+  "name": "Document / 2-pager (A4)",
+  "status": "draft",
+  "note": "A4 portrait decided 2026-10-14. Margins, spacing and type come from the design system. Title/heading styles, header/footer content and logo size are proposals to confirm.",
+  "audience": "external",
+  "canvas": {
+    "paper": "A4",
+    "orientation": "portrait",
+    "width": 794,
+    "height": 1123,
+    "unit": "px",
+    "dpi": 96,
+    "pages": {
+      "two_pager": 2,
+      "document": "any"
+    }
+  },
+  "safe_area": {
+    "top": 56,
+    "right": 56,
+    "bottom": 56,
+    "left": 56,
+    "token": "padding/section"
+  },
+  "content_width": 682,
+  "grid": {
+    "columns": 12,
+    "gutter": "gap/grid"
+  },
+  "spacing": {
+    "between_sections": "padding/section",
+    "within_section": "gap/stack",
+    "between_cards": "gap/grid",
+    "inline": "gap/inline",
+    "card_padding": "padding/container"
+  },
+  "typography": {
+    "text_roles_mode": "Document",
+    "breakpoint_mode": "desktop",
+    "title_style": "heading/h2",
+    "heading_style": "heading/h4",
+    "body_style": "role/body",
+    "min_size": 10
+  },
+  "colour": {
+    "canvas": "background/primary",
+    "theme": "light"
+  },
+  "header": {
+    "logo": "top-left, inside the safe area",
+    "logo_variant": "blue"
+  },
+  "footer": {
+    "content": [
+      "page number",
+      "contact details"
+    ],
+    "style": "role/caption"
+  },
+  "logo": {
+    "position": "top-left",
+    "variant": "blue",
+    "min_width": null,
+    "min_width_note": "Logo minimum size and clear space are not defined in Figma yet."
+  },
+  "page_breaks": {
+    "keep_together": [
+      "card",
+      "table row",
+      "heading with its first paragraph"
+    ]
+  },
+  "images": {
+    "max_width": 682,
+    "alt_text_required": true
+  },
+  "overrides": [],
+  "export": {
+    "file_types": [
+      "pdf",
+      "html"
+    ]
+  },
+  "severity": {
+    "alt_text_required": "error",
+    "two_pager_max_pages": "error"
+  }
+}

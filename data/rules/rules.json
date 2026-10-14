@@ -88,14 +88,14 @@
     {
       "id": "type.min-size",
       "category": "typography",
-      "rule": "Never set type below 10px, at any breakpoint.",
+      "rule": "Never set type below 10px, in any format or at any breakpoint. Format profiles may raise this (newsletter 14px, deck 24px).",
       "check": {
         "type": "font-size-min",
         "value": 10
       },
       "severity": "error",
       "locked": false,
-      "source": "Variable description: global/fz/10, size/* (FLOOR)"
+      "source": "Brand team decision 2026-10-14 (10px floor kept, applies to the eyebrow too)"
     },
     {
       "id": "type.whole-pixels",
@@ -154,12 +154,17 @@
     {
       "id": "type.eyebrow",
       "category": "typography",
-      "rule": "Eyebrows are Inter, 10px / 16px, ALL CAPS, colour text/eyebrow. Weight is Medium (500) by default; Semi Bold (600) is the only alternative.",
+      "rule": "Eyebrows are Inter, 10px / 16px, ALL CAPS, 0.96px tracking, colour text/eyebrow. In components use Role/Eyebrow, which is 10/16 in Document, 14/22 in Newsletter and 24/32 in Deck. Weight is Medium (500) by default; Semi Bold (600) is the only alternative.",
       "check": {
         "type": "text-style",
         "style": "eyebrow",
         "size": 10,
         "lineHeight": 16,
+        "roleSizes": {
+          "document": 10,
+          "newsletter": 14,
+          "deck": 24
+        },
         "weights": [
           500,
           600
@@ -168,7 +173,102 @@
       },
       "severity": "error",
       "locked": false,
-      "source": "Text style 'Eyebrow'; Variable description: weight/eyebrow, size/eyebrow; size confirmed by brand team 2026-10-09"
+      "source": "Brand team decision 2026-10-14; Text styles 'Eyebrow' and 'Role/Eyebrow'"
+    },
+    {
+      "id": "type.text-roles",
+      "category": "typography",
+      "rule": "Text in components and layouts uses a Role/* text style, picked by purpose, never a raw size. Set the Text Roles mode on the page or frame to the output format (Document for 2-pagers and documents, Newsletter, Deck); sizes then follow the format, and Desktop/Mobile still applies.",
+      "check": {
+        "type": "text-roles",
+        "modes": [
+          "Document",
+          "Newsletter",
+          "Deck"
+        ],
+        "roles": {
+          "eyebrow": {
+            "use": "kicker above a title",
+            "font": "Inter Medium, uppercase",
+            "document": "eyebrow",
+            "newsletter": "body/sm",
+            "deck": "body/24"
+          },
+          "title": {
+            "use": "card and block titles",
+            "font": "TASA Orbiter Medium",
+            "document": "heading/h5",
+            "newsletter": "heading/h4",
+            "deck": "heading/h2"
+          },
+          "subtitle": {
+            "use": "one line under a title",
+            "font": "Inter Regular",
+            "document": "body/xs",
+            "newsletter": "body/sm",
+            "deck": "body/24"
+          },
+          "body": {
+            "use": "paragraphs and list items",
+            "font": "Inter Regular",
+            "document": "body/sm",
+            "newsletter": "body/md",
+            "deck": "body/24"
+          },
+          "caption": {
+            "use": "meta: dates, roles, sources, metric labels",
+            "font": "Inter Regular",
+            "document": "body/xs",
+            "newsletter": "body/sm",
+            "deck": "body/24"
+          },
+          "label": {
+            "use": "chips and small badges",
+            "font": "Inter Medium",
+            "document": "body/xs",
+            "newsletter": "body/sm",
+            "deck": "body/24"
+          },
+          "label-md": {
+            "use": "medium badges",
+            "font": "Inter Medium",
+            "document": "body/sm",
+            "newsletter": "body/md",
+            "deck": "body/24"
+          },
+          "label-lg": {
+            "use": "large badges and pills",
+            "font": "Inter Medium",
+            "document": "body/md",
+            "newsletter": "body/lg",
+            "deck": "body/32"
+          },
+          "button": {
+            "use": "button labels",
+            "font": "TASA Orbiter Medium",
+            "document": "heading/h6",
+            "newsletter": "heading/h5",
+            "deck": "heading/h3"
+          },
+          "metric": {
+            "use": "big numbers and KPIs",
+            "font": "TASA Orbiter Semi Bold",
+            "document": "heading/h3",
+            "newsletter": "heading/h2",
+            "deck": "display/md"
+          },
+          "tag": {
+            "use": "uppercase statement tag",
+            "font": "TASA Orbiter Semi Bold, uppercase",
+            "document": "heading/h5",
+            "newsletter": "heading/h4",
+            "deck": "heading/h3"
+          }
+        }
+      },
+      "severity": "error",
+      "locked": false,
+      "source": "Brand team decision 2026-10-14; Figma collection 'Text Roles' and Role/* text styles"
     },
     {
       "id": "type.body-regular-no-tracking",
@@ -291,7 +391,7 @@
     {
       "id": "color.pairings",
       "category": "color",
-      "rule": "Fills and text go in fixed pairs: brand fills (background/brand, container/brand, primary button) take text/on-brand; inverse surfaces take text/inverse; success surfaces take text/success; error surfaces take text/error; accent fills take text/on-accent.",
+      "rule": "Fills and text go in fixed pairs: brand fills (background/brand, container/brand, primary button) take text/on-brand; inverse surfaces take text/inverse; success surfaces take text/success; error surfaces take text/error; accent fills take text/on-accent; information surfaces take text/info; strong status fills (success, error, info) take text/on-strong.",
       "check": {
         "type": "color-pairs",
         "pairs": {
@@ -304,12 +404,16 @@
           "background/error-subtle": "text/error",
           "container/error": "text/error",
           "background/accent": "text/on-accent",
-          "container/accent": "text/on-accent"
+          "container/accent": "text/on-accent",
+          "container/info": "text/info",
+          "container/info-strong": "text/on-strong",
+          "container/success-strong": "text/on-strong",
+          "container/error-strong": "text/on-strong"
         }
       },
       "severity": "error",
       "locked": true,
-      "source": "Variable description: background/*, container/*"
+      "source": "Variable description: background/*, container/*; info and strong pairs added Brand team decision 2026-10-14"
     },
     {
       "id": "color.container-default",
@@ -326,20 +430,45 @@
       "source": "Variable description: container/primary, container/secondary, container/tertiary, border/container; card borders decided by brand team 2026-10-09"
     },
     {
-      "id": "color.status-containers-no-border",
+      "id": "color.status-containers-border",
       "category": "color",
-      "rule": "Success and error containers have no border.",
+      "rule": "Positive and Negative containers have a 1px border in their status colour: container/success with border/success, container/error with border/error.",
       "check": {
         "type": "container-style",
-        "fills": [
-          "container/success",
-          "container/error"
-        ],
-        "border": null
+        "borders": {
+          "container/success": "border/success",
+          "container/error": "border/error"
+        },
+        "borderWidth": 1
       },
       "severity": "warning",
       "locked": false,
-      "source": "Variable description: container/success, container/error"
+      "source": "Brand team decision 2026-10-14"
+    },
+    {
+      "id": "color.status-intents",
+      "category": "color",
+      "rule": "Status uses five intents: Positive, Negative, Information, Neutral, Primary. Warnings use Negative; there is no separate warning or notice colour. Information uses the brand blue family (container/info, text/info, container/info-strong).",
+      "check": {
+        "type": "allowed-values",
+        "field": "intent",
+        "values": [
+          "positive",
+          "negative",
+          "information",
+          "neutral",
+          "primary"
+        ],
+        "aliases": {
+          "warning": "negative",
+          "notice": "negative",
+          "success": "positive",
+          "error": "negative"
+        }
+      },
+      "severity": "error",
+      "locked": false,
+      "source": "Brand team decision 2026-10-14"
     },
     {
       "id": "color.border-primary-opt-in",
@@ -552,6 +681,19 @@
       "source": "Variable description: radius/pill; Uploaded token files 2026-10-09 (radius.json)"
     },
     {
+      "id": "radius.buttons",
+      "category": "radius",
+      "rule": "Buttons are squared with softened corners: radius/default (2px). Never pill.",
+      "check": {
+        "type": "component-radius",
+        "component": "button",
+        "value": "radius/default"
+      },
+      "severity": "error",
+      "locked": false,
+      "source": "Brand team decision 2026-10-14"
+    },
+    {
       "id": "border.width-scale-only",
       "category": "border",
       "rule": "Every border is 1px (border-width/default) unless stated otherwise. Thicker steps are 2px (emphasis, selected), 3px (strong emphasis) and 4px (the maximum). There is no 0 and no fractional width: to remove a border, remove the stroke.",
@@ -605,6 +747,18 @@
       "severity": "warning",
       "locked": false,
       "source": "Variable description: opacity/*"
+    },
+    {
+      "id": "icon.lucide-only",
+      "category": "icon",
+      "rule": "When an icon is needed, use Lucide (lucide.dev) and no other icon set. Keep Lucide's stroke style; colour icons with a text token that matches the surface.",
+      "check": {
+        "type": "icon-source",
+        "value": "lucide"
+      },
+      "severity": "error",
+      "locked": false,
+      "source": "Brand team decision 2026-10-14"
     }
   ]
 }

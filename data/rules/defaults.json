@@ -55,7 +55,8 @@
       "lineHeight": 16,
       "case": "uppercase",
       "color": "text/eyebrow",
-      "source": "Eyebrow style; Variable description: weight/eyebrow"
+      "source": "Brand team decision 2026-10-14; Eyebrow style (10/16), Role/Eyebrow in Document mode",
+      "style": "Role/Eyebrow"
     },
     "border_width": {
       "value": "border-width/default (1px)",
@@ -89,6 +90,10 @@
       "TASA Orbiter": "Inter",
       "Inter": null,
       "source": "Variable description: global/family/* (TWO FAMILIES ONLY)"
+    },
+    "text_roles": {
+      "mode": "Document",
+      "source": "Brand team decision 2026-10-14; Text Roles collection, first mode"
     }
   }
 }

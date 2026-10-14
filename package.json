@@ -8,6 +8,7 @@
   "scripts": {
     "start": "node src/local.js",
     "build:tokens": "node scripts/build-tokens.mjs",
+    "bump:version": "node scripts/bump-version.mjs",
     "test": "node --test \"test/*.test.js\""
   },
   "dependencies": {

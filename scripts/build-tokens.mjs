@@ -1,7 +1,7 @@
 // Builds data/tokens.json from data/figma/snapshot.json.
 // Run after every new Figma snapshot: `npm run build:tokens`.
 // Every alias is resolved to its final value, and the reference is kept
-// alongside it so tools can show both ("#165FF2" and "brand/500").
+// alongside it so tools can show both ("#1655F2" and "brand/500").
 
 import fs from "node:fs";
 import path from "node:path";
@@ -111,9 +111,10 @@ const modeValue = (name, mode, styleValue) => {
 // Weight variants ("Heading/H1/Bold", "Eyebrow/Semi Bold") share size, line
 // height and tracking with their base style; they're listed under the base.
 const isVariant = (name) => /^(regular|medium|semi ?bold|bold)$/i.test(name.split("/").at(-1));
+const isRole = (name) => name.startsWith("Role/");
 const styles = {};
 for (const s of snapshot.textStyles) {
-  if (isVariant(s.name)) continue;
+  if (isVariant(s.name) || isRole(s.name)) continue;
   const parts = s.name.split("/");
   const stem = stemFor(s.name);
   const ls = s.letterSpacing.unit === "PIXELS" ? s.letterSpacing.value : (s.letterSpacing.value / 100) * s.fontSize;
@@ -145,7 +146,39 @@ for (const st of Object.values(styles)) {
   st.weights[st.weight] ??= st.figmaTextStyle; // the base style itself is its default weight
   st.weights = Object.fromEntries(Object.entries(st.weights).sort(([a], [b]) => a - b));
 }
-const typography = { families, weights, styles, breakpoint: { mobileMax: 767 } };
+// Text roles: one Role/* style per purpose. The Text Roles collection picks a
+// semantic size per format (Document, Newsletter, Deck); that size then still
+// follows Desktop/Mobile, so each role resolves to format x breakpoint.
+const TR = "Text Roles";
+const roles = {};
+const roleRef = (name, format) => {
+  const raw = find(TR, name).values[format];
+  if (!(raw && typeof raw === "object" && "alias" in raw)) throw new Error(`${name} (${format}) must alias a Semantic Typography variable`);
+  return raw.alias;
+};
+for (const s of snapshot.textStyles.filter((x) => isRole(x.name))) {
+  const key = s.name.slice("Role/".length).toLowerCase().replace(/\s+/g, "-");
+  const hasLs = collections[TR].variables.some((v) => v.name === `role/${key}/letter-spacing`);
+  const formats = {};
+  for (const format of collections[TR].modes) {
+    const refs = { size: roleRef(`role/${key}/size`, format), lineHeight: roleRef(`role/${key}/line-height`, format), letterSpacing: hasLs ? roleRef(`role/${key}/letter-spacing`, format) : null };
+    const at = (mode) => ({
+      size: resolve(ST, refs.size, mode),
+      lineHeight: resolve(ST, refs.lineHeight, mode),
+      letterSpacing: refs.letterSpacing ? round(resolve(ST, refs.letterSpacing, mode)) : 0,
+    });
+    formats[format.toLowerCase()] = { ref: refs.size, desktop: at("Desktop"), mobile: at("Mobile") };
+  }
+  roles[key] = {
+    family: s.fontFamily,
+    weight: weightNum(s.fontStyle),
+    textCase: s.textCase === "UPPER" ? "uppercase" : "none",
+    use: s.description.split(". ")[0].replace(/\.$/, ""),
+    figmaTextStyle: s.name,
+    formats,
+  };
+}
+const typography = { families, weights, styles, roles, formats: collections[TR].modes.map((m) => m.toLowerCase()), breakpoint: { mobileMax: 767 } };
 
 // ---------- spacing ----------
 const spacing = {

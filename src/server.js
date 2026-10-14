@@ -1,12 +1,12 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
 import { run } from "./lib/envelope.js";
-import { getTokens, CATEGORIES, OUTPUTS, MODES } from "./tools/tokens.js";
+import { getTokens, CATEGORIES, OUTPUTS, MODES, FORMATS } from "./tools/tokens.js";
 import { getBrandGuidelines, SECTIONS, formatProfiles } from "./tools/guidelines.js";
 
 export const INSTRUCTIONS = `Faclon brand server. Use it whenever you create anything that should look or sound like Faclon.
 1. Before building, call get_brand_guidelines with section "rules" (and format_profile when you know the output type). It returns the rules and the defaults to use whenever the request doesn't specify. Then call get_tokens for exact values.
-2. Every colour, font, size, spacing, radius and shadow must come from get_tokens. Never sample a colour from an image or pick a near neighbour. Only TASA Orbiter and Inter may be used, with no other fallback font.
+2. Every colour, font, size, spacing, radius and shadow must come from get_tokens. Never sample a colour from an image or pick a near neighbour. Only TASA Orbiter and Inter may be used, with no other fallback font. Set text by role (eyebrow, title, subtitle, body, caption, label, label-md, label-lg, button, metric, tag): call get_tokens with category "typography" and format "document", "newsletter" or "deck" to get the sizes for the output you are making.
 3. If a guideline section returns status "not_written", tell the user it is missing. Do not invent brand guidance.
 4. Every response has ok, data or error, and brand_version. On an error, follow error.fix.`;
 
@@ -22,10 +22,12 @@ export function createServer() {
       description:
         "Get Faclon design tokens from the Figma source. Every colour, font, size, spacing, radius and shadow in generated output must come from here. " +
         "Omit category for everything. Colours have light and dark modes; typography and spacing have desktop and mobile modes; omit mode to get all modes. " +
+        "Typography includes text roles (eyebrow, title, body, caption, label, button, metric, tag…) whose sizes depend on the output format: pass format to get one. " +
         'as: "json" (resolved values with their token references), "css" (custom properties), "tailwind" (theme.extend), "figma" (raw Figma variables).',
       inputSchema: {
         category: z.enum(CATEGORIES).optional().describe("Token group. Omit for all."),
         mode: z.enum(MODES).optional().describe("light/dark for color; desktop/mobile for typography and spacing. Omit for all modes."),
+        format: z.enum(FORMATS).optional().describe("Output format for text roles: document (A4, 2-pagers), newsletter (Brevo email) or deck. Applies to typography only. Omit for all formats."),
         as: z.enum(OUTPUTS).optional().describe('Output format. Default "json".'),
       },
       annotations: { title: "Get design tokens", ...readOnly },

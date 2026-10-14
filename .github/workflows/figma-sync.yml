@@ -1,0 +1,68 @@
+# Runs when the Faclon Brand Sync Figma plugin pushes a figma-sync/* branch
+# (the plugin then opens the pull request). This workflow rebuilds tokens.json,
+# bumps brand_version, commits both to the branch and runs the tests.
+# The result is posted as the "Build and test" check on the final commit, so the
+# pull request shows a green tick (or a red cross) before you merge.
+name: Figma sync
+
+on:
+  push:
+    branches: ["figma-sync/**"]
+
+permissions:
+  contents: write
+  statuses: write
+
+concurrency:
+  group: figma-sync-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Kolkata
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build tokens and bump brand_version
+        id: build
+        run: |
+          npm run build:tokens
+          echo "version=$(node scripts/bump-version.mjs)" >> "$GITHUB_OUTPUT"
+
+      - name: Commit to the sync branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/tokens.json data/version.json
+          git commit -m "Build tokens and bump brand_version to ${{ steps.build.outputs.version }}"
+          git push
+          echo "SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+
+      - name: Test
+        id: test
+        continue-on-error: true
+        run: npm test
+
+      - name: Report the result on the pull request
+        run: |
+          if [ "${{ steps.test.outcome }}" = "success" ]; then
+            state=success; desc="brand_version ${{ steps.build.outputs.version }}: tokens built, all tests pass"
+          else
+            state=failure; desc="Tests failed: open the workflow run for details"
+          fi
+          gh api "repos/${{ github.repository }}/statuses/$SHA" \
+            -f state="$state" \
+            -f context="Build and test" \
+            -f description="$desc" \
+            -f target_url="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          [ "$state" = success ]

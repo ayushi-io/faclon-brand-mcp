@@ -1,0 +1,48 @@
+# Checks every pull request (and main) before Vercel deploys it.
+# Figma-sync branches are handled by figma-sync.yml, which builds and tests them itself.
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Build and test
+    if: ${{ !startsWith(github.head_ref, 'figma-sync/') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: tokens.json matches the Figma snapshot
+        run: |
+          npm run build:tokens
+          if ! git diff --quiet -- data/tokens.json; then
+            echo "::error file=data/tokens.json::data/tokens.json is out of date with data/figma/snapshot.json. Run 'npm run build:tokens' and commit the result."
+            git diff --stat -- data/tokens.json
+            exit 1
+          fi
+
+      - name: brand_version bumped when brand data changes
+        if: github.event_name == 'pull_request'
+        run: |
+          changed=$(git diff --name-only "origin/${{ github.base_ref }}...HEAD")
+          if echo "$changed" | grep -q '^data/' && ! echo "$changed" | grep -qx 'data/version.json'; then
+            echo "::error file=data/version.json::This pull request changes files in data/ but not data/version.json. Run 'npm run bump:version' and commit it."
+            exit 1
+          fi
+
+      - run: npm test
