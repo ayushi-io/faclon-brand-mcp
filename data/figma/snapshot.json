@@ -2,8 +2,8 @@
   "source": {
     "fileName": "Design MCP",
     "fileKey": "UDARPzxpNySOS2F3mxhgUs",
-    "extractedAt": "2026-10-14T10:44:00.506Z",
-    "method": "Faclon Brand Sync plugin",
+    "extractedAt": "2026-10-16T02:59:16.305Z",
+    "method": "figma-console Desktop Bridge (verified against Figma fingerprints)",
     "figmaVersion": {
       "id": "2410168722638087800",
       "title": "Status container borders"
@@ -502,7 +502,7 @@
           "values": {
             "Default": "#68DD68"
           },
-          "description": ""
+          "description": "ACCENT BUDGET: accent and accent-2 together cover only roughly 10–15% of any canvas."
         },
         {
           "name": "neutral-light/1300",
@@ -511,6 +511,14 @@
             "Default": "#0C1927"
           },
           "description": "Darkest neutral. Default heading colour (Light) and secondary background (Dark)."
+        },
+        {
+          "name": "accent-2",
+          "type": "COLOR",
+          "values": {
+            "Default": "#B4FF6B"
+          },
+          "description": "Second accent (#B4FF6B), for highlighted text on brand-blue surfaces (4.83:1 on brand/500). ACCENT BUDGET: accent and accent-2 together cover only roughly 10–15% of any canvas. Added 2026-10-16; the existing accent (#68DD68) is unchanged."
         }
       ]
     },
@@ -1270,6 +1278,21 @@
             }
           },
           "description": "Added 2026-10-14 at the brand team's request for Badge intents (Information, Intense Positive/Negative)."
+        },
+        {
+          "name": "text/accent-on-brand",
+          "type": "COLOR",
+          "values": {
+            "Light": {
+              "alias": "accent-2",
+              "collection": "Global Colors"
+            },
+            "Dark": {
+              "alias": "accent-2",
+              "collection": "Global Colors"
+            }
+          },
+          "description": "Highlighted text (a key phrase) on background/brand or container/brand only, e.g. the last item of a proof strip on a page breaker. 4.83:1 on brand/500. Never on light or dark surfaces: there use text/link (light) or text/accent (dark). Counts toward the 10–15% accent budget."
         }
       ]
     },
@@ -2928,97 +2951,97 @@
           "name": "global/opacity/9",
           "type": "FLOAT",
           "values": {
-            "Default": 0.09000000357627869
+            "Default": 9
           },
-          "description": "9% opacity."
+          "description": "9% opacity. Stored as 0–100 because Figma reads opacity variables as percentages."
         },
         {
           "name": "global/opacity/12",
           "type": "FLOAT",
           "values": {
-            "Default": 0.11999999731779099
+            "Default": 12
           },
-          "description": "12% opacity."
+          "description": "12% opacity. Stored as 0–100 because Figma reads opacity variables as percentages."
         },
         {
           "name": "global/opacity/18",
           "type": "FLOAT",
           "values": {
-            "Default": 0.18000000715255737
+            "Default": 18
           },
-          "description": "18% opacity."
+          "description": "18% opacity. Stored as 0–100 because Figma reads opacity variables as percentages."
         },
         {
           "name": "global/opacity/24",
           "type": "FLOAT",
           "values": {
-            "Default": 0.23999999463558197
+            "Default": 24
           },
-          "description": "24% opacity."
+          "description": "24% opacity. Stored as 0–100 because Figma reads opacity variables as percentages."
         },
         {
           "name": "global/opacity/32",
           "type": "FLOAT",
           "values": {
-            "Default": 0.3199999928474426
+            "Default": 32
           },
-          "description": "32% opacity."
+          "description": "32% opacity. Stored as 0–100 because Figma reads opacity variables as percentages."
         },
         {
           "name": "global/opacity/48",
           "type": "FLOAT",
           "values": {
-            "Default": 0.47999998927116394
+            "Default": 48
           },
-          "description": "48% opacity."
+          "description": "48% opacity. Stored as 0–100 because Figma reads opacity variables as percentages."
         },
         {
           "name": "global/opacity/56",
           "type": "FLOAT",
           "values": {
-            "Default": 0.5600000023841858
+            "Default": 56
           },
-          "description": "56% opacity."
+          "description": "56% opacity. Stored as 0–100 because Figma reads opacity variables as percentages."
         },
         {
           "name": "global/opacity/64",
           "type": "FLOAT",
           "values": {
-            "Default": 0.6399999856948853
+            "Default": 64
           },
-          "description": "64% opacity."
+          "description": "64% opacity. Stored as 0–100 because Figma reads opacity variables as percentages."
         },
         {
           "name": "global/opacity/72",
           "type": "FLOAT",
           "values": {
-            "Default": 0.7200000286102295
+            "Default": 72
           },
-          "description": "72% opacity."
+          "description": "72% opacity. Stored as 0–100 because Figma reads opacity variables as percentages."
         },
         {
           "name": "global/opacity/80",
           "type": "FLOAT",
           "values": {
-            "Default": 0.800000011920929
+            "Default": 80
           },
-          "description": "80% opacity."
+          "description": "80% opacity. Stored as 0–100 because Figma reads opacity variables as percentages."
         },
         {
           "name": "global/opacity/88",
           "type": "FLOAT",
           "values": {
-            "Default": 0.8799999952316284
+            "Default": 88
           },
-          "description": "88% opacity."
+          "description": "88% opacity. Stored as 0–100 because Figma reads opacity variables as percentages."
         },
         {
           "name": "global/opacity/100",
           "type": "FLOAT",
           "values": {
-            "Default": 1
+            "Default": 100
           },
-          "description": "100% opacity."
+          "description": "100% opacity. Stored as 0–100 because Figma reads opacity variables as percentages."
         },
         {
           "name": "global/border-width/1",

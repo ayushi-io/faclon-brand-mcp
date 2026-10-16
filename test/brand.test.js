@@ -76,7 +76,7 @@ test("guidelines: written sections, gaps and overview", () => {
 
 test("format profiles can tighten rules but not loosen or touch locked ones", () => {
   const deck = getBrandGuidelines({ section: "rules", format_profile: "deck" });
-  assert.equal(deck.rules.find((r) => r.id === "type.min-size").check.value, 24);
+  assert.equal(deck.rules.find((r) => r.id === "type.min-size").check.value, 14);
   const loosen = mergeRules({ id: "x", name: "X", overrides: [{ rule: "type.min-size", value: 8 }, { rule: "color.tokens-only", value: false }] });
   assert.equal(loosen.applied.length, 0);
   assert.equal(loosen.rejected.length, 2);
@@ -209,9 +209,11 @@ test("every text role respects its format profile's minimum size", () => {
   for (const format of ["document", "newsletter", "deck"]) {
     const profile = getBrandGuidelines({ section: "rules", format_profile: format });
     const min = profile.rules.find((r) => r.id === "type.min-size").check.value;
-    const bp = profile.format_profile.typography.breakpoint_mode;
-    for (const [name, r] of Object.entries(roles)) {
-      assert.ok(r.formats[format][bp].size >= min, `${name} is ${r.formats[format][bp].size}px in ${format} (${bp}), below ${min}px`);
+    const ty = profile.format_profile.typography;
+    for (const bp of ty.breakpoint_modes ?? [ty.breakpoint_mode]) {
+      for (const [name, r] of Object.entries(roles)) {
+        assert.ok(r.formats[format][bp].size >= min, `${name} is ${r.formats[format][bp].size}px in ${format} (${bp}), below ${min}px`);
+      }
     }
   }
 });
@@ -246,4 +248,197 @@ test("defaults agree with the status-container border rule", () => {
   const borders = rules.find((r) => r.id === "color.status-containers-border").check.borders;
   assert.equal(defaults.success_container.border, borders[defaults.success_container.fill]);
   assert.equal(defaults.error_container.border, borders[defaults.error_container.fill]);
+});
+
+test("format guardrails are complete and every item is grounded in the design system", () => {
+  const rules = readData("rules/rules.json").rules.map((r) => r.id);
+  const defaults = readData("rules/defaults.json").defaults;
+  const decisions = readData("rules/open-questions.json").resolved.map((r) => r.id);
+  const at = (obj, path) => path.split(".").reduce((o, k) => (o == null ? undefined : o[k]), obj);
+  for (const format of ["document", "newsletter", "deck", "architecture"]) {
+    const profile = getBrandGuidelines({ section: "rules", format_profile: format }).format_profile;
+    const g = profile.guardrails;
+    assert.ok(g, `${format} has guardrails`);
+    for (const part of ["fixed", "must_not", "avoid", "design_direction"]) {
+      assert.ok(g[part].length > 0, `${format}.${part} is empty`);
+      const ids = g[part].map((i) => i.id);
+      assert.equal(new Set(ids).size, ids.length, `${format}.${part} has duplicate ids`);
+      for (const item of g[part]) {
+        assert.ok(item.text && item.basis.length, `${format}.${part}.${item.id} needs text and a basis`);
+        for (const b of item.basis) {
+          const [kind, ref] = [b.slice(0, b.indexOf(":")), b.slice(b.indexOf(":") + 1)];
+          const ok = { rule: () => rules.includes(ref), default: () => ref in defaults, decision: () => decisions.includes(ref), profile: () => at(readData(`formats/${format}.json`), ref) !== undefined }[kind];
+          assert.ok(ok && ok(), `${format}.${part}.${item.id}: basis "${b}" does not exist`);
+        }
+      }
+    }
+    assert.ok(g.claude_decides.length >= 4, `${format} must say what the designer decides`);
+    assert.ok(g.user_decides.length >= 3, `${format} must say what the user decides`);
+    assert.ok(g.user_decides.some((s) => /scope/i.test(s)), `${format}: the user controls scope`);
+    // The minimum-size guardrail states the same number as the merged rule.
+    const min = getBrandGuidelines({ section: "rules", format_profile: format }).rules.find((r) => r.id === "type.min-size").check.value;
+    assert.match(g.must_not.find((i) => i.id === "min-size").text, new RegExp(`below ${min}px`));
+  }
+});
+
+test("server instructions: the user decides what, Claude designs how, inside the frame", async () => {
+  const { INSTRUCTIONS } = await import("../src/server.js");
+  assert.match(INSTRUCTIONS, /The user decides what is made; you decide how it looks/);
+  assert.match(INSTRUCTIONS, /Do not add sections, slides, pages, claims or content the user did not ask for/);
+  assert.match(INSTRUCTIONS, /you are the designer/);
+  assert.match(INSTRUCTIONS, /Hard rule: never edit or change the user's content/);
+  assert.match(INSTRUCTIONS, /Nothing may overflow the canvas padding or its card, box or zone/);
+  assert.match(INSTRUCTIONS, /never add a colour, font or value the system does not define/);
+  assert.match(INSTRUCTIONS, /guardrails/);
+});
+
+test("architecture spec uses only design-system styles and tokens", () => {
+  const { format_profile: p, rules } = getBrandGuidelines({ section: "rules", format_profile: "architecture" });
+  const t = getTokens().tokens;
+  assert.equal(rules.find((r) => r.id === "type.min-size").check.value, 12);
+  assert.deepEqual([p.safe_area.top, p.safe_area.right, p.safe_area.bottom, p.safe_area.left, p.safe_area.token], [48, 48, 48, 48, "spacing/48"]);
+  assert.deepEqual(p.canvas, { width: 1920, height: 1080, unit: "px", ratio: "16:9" });
+  assert.equal(p.logo.position, "top-right");
+  assert.deepEqual(p.export.file_types, ["html"]);
+  // Text styles: each element x density is a real style with that weight, never below 12px.
+  for (const [el, spec] of Object.entries(p.typography.styles)) {
+    for (const d of ["dense", "medium", "open"]) {
+      const s = t.typography.styles[spec[d].style];
+      assert.ok(s, `${el}.${d}: no text style ${spec[d].style}`);
+      assert.ok(s.weights[spec[d].weight], `${el}.${d}: ${spec[d].style} has no ${spec[d].weight} weight`);
+      assert.ok(s.desktop.size >= 12, `${el}.${d}: ${s.desktop.size}px is below 12px`);
+    }
+    assert.ok(p.typography.styles[el].dense && t.color.semantic.light[spec.colour.split("/")[0]][spec.colour.split("/")[1]], `${el}: colour ${spec.colour} is not a token`);
+  }
+  // Sizes never shrink from open to dense.
+  for (const spec of Object.values(p.typography.styles)) {
+    const size = (d) => t.typography.styles[spec[d].style].desktop.size;
+    assert.ok(size("open") >= size("medium") && size("medium") >= size("dense"));
+  }
+  // Every token name used anywhere in the spec exists.
+  const colour = (n) => { const [g, k] = n.split("/"); return t.color.semantic.light[g]?.[k]; };
+  const spacing = (n) => (n.startsWith("spacing/") ? t.spacing.scale.includes(Number(n.split("/")[1])) : n in t.spacing.roles.desktop);
+  const walk = (o, out = []) => { for (const v of Object.values(o)) typeof v === "string" ? out.push(v) : v && typeof v === "object" && walk(v, out); return out; };
+  for (const n of walk(p.spacing)) assert.ok(spacing(n), `spacing token ${n} does not exist`);
+  for (const shape of Object.values(p.shapes)) {
+    for (const k of ["fill", "border"]) if (shape[k]) assert.ok(colour(shape[k]), `colour token ${shape[k]} does not exist`);
+    if (shape.radius) assert.ok(shape.radius.split("/")[1] in t.radius, `radius ${shape.radius} does not exist`);
+    if (shape.border_width) assert.ok(shape.border_width.split("/")[1] in t.border.width, `${shape.border_width} does not exist`);
+    if (shape.elevation) assert.ok(shape.elevation.replace("Elevation/", "").toLowerCase().replace(/\s+/g, "-") in t.elevation);
+  }
+  for (const a of [p.arrows.default, p.arrows.data_flow]) {
+    assert.ok(colour(a.colour), `arrow colour ${a.colour} does not exist`);
+    assert.ok(a.width.split("/")[1] in t.border.width);
+  }
+  for (const c of p.arrows.status.colours) assert.ok(colour(c));
+});
+
+test("A4 document padding, header and footer use design-system styles and tokens", () => {
+  const p = getBrandGuidelines({ section: "rules", format_profile: "document" }).format_profile;
+  const t = getTokens().tokens;
+  assert.deepEqual([p.safe_area.top, p.safe_area.right, p.safe_area.bottom, p.safe_area.left, p.safe_area.token], [36, 36, 36, 36, "spacing/36"]);
+  assert.ok(t.spacing.scale.includes(36));
+  assert.equal(p.content_width, p.canvas.width - 2 * p.safe_area.left);
+  assert.equal(p.images.max_width, p.content_width);
+  assert.equal(p.logo.position, "top-right");
+  for (const s of [p.header.left_style, p.footer.style]) {
+    assert.ok(t.typography.styles[s.style]?.weights[s.weight], `${s.style} ${s.weight} is not a text style`);
+    const [g, k] = s.colour.split("/"); assert.ok(t.color.semantic.light[g]?.[k], `${s.colour} is not a token`);
+  }
+  assert.ok(p.header.gap_below in t.spacing.roles.desktop);
+  assert.match(p.footer.default.left, /© Faclon Labs \| All Rights Reserved/);
+});
+
+test("A4 document spec uses only design-system styles and tokens", () => {
+  const p = getBrandGuidelines({ section: "rules", format_profile: "document" }).format_profile;
+  const t = getTokens().tokens;
+  const colour = (n) => { const [g, k] = n.split("/"); return t.color.semantic.light[g]?.[k]; };
+  for (const [el, s] of Object.entries(p.typography.styles)) {
+    const style = t.typography.styles[s.style];
+    assert.ok(style?.weights[s.weight], `${el}: ${s.style} ${s.weight} is not a text style`);
+    assert.ok(style.desktop.size >= p.typography.min_size, `${el} is below the minimum`);
+    if (s.colour !== "per intent") assert.ok(colour(s.colour), `${el}: ${s.colour} is not a token`);
+  }
+  const spacing = (n) => (n.startsWith("spacing/") ? t.spacing.scale.includes(Number(n.split("/")[1])) : n in t.spacing.roles.desktop);
+  const walk = (o, out = []) => { for (const v of Object.values(o)) typeof v === "string" ? out.push(v) : walk(v, out); return out; };
+  for (const n of walk(p.spacing)) assert.ok(spacing(n), `spacing token ${n} does not exist`);
+  // Max cards per row really fits: n × 200 + (n − 1) × gap/grid <= content width.
+  const n = p.components.card.max_per_row, gap = t.spacing.roles.desktop["gap/grid"];
+  assert.ok(n * 200 + (n - 1) * gap <= p.content_width && (n + 1) * 200 + n * gap > p.content_width);
+});
+
+test("A4 page breaks: cards move whole, text may split, content clears the footer", () => {
+  const p = getBrandGuidelines({ section: "rules", format_profile: "document" }).format_profile;
+  const t = getTokens().tokens;
+  assert.ok(p.page_breaks.keep_together.some((s) => /UI card/.test(s)));
+  assert.deepEqual(p.page_breaks.may_split, ["paragraph", "list"]);
+  const footerH = t.typography.styles[p.page_breaks.footer_zone.text_style].desktop.lineHeight;
+  const gap = t.spacing.roles.desktop[p.page_breaks.content_to_footer];
+  assert.equal(p.page_breaks.footer_zone.height, footerH);
+  assert.equal(p.page_breaks.content_bottom_limit, p.canvas.height - p.safe_area.bottom - footerH - gap);
+});
+
+test("deck spec: styles between 14 and 72px, themes and chips use real tokens", () => {
+  const { format_profile: p, rules } = getBrandGuidelines({ section: "rules", format_profile: "deck" });
+  const t = getTokens().tokens;
+  assert.equal(rules.find((r) => r.id === "type.min-size").check.value, 14);
+  for (const [el, s] of Object.entries(p.typography.styles)) {
+    const style = t.typography.styles[s.style];
+    assert.ok(style?.weights[s.weight], `${el}: ${s.style} ${s.weight} is not a text style`);
+    assert.ok(style.desktop.size >= 14 && style.desktop.size <= p.typography.max_size, `${el}: ${style.desktop.size}px is outside 14–72`);
+  }
+  const colour = (n) => { const [g, k] = n.split("/"); return t.color.semantic.light[g]?.[k]; };
+  for (const [name, th] of Object.entries(p.themes)) {
+    assert.ok(colour(th.background), `${name}: ${th.background}`);
+    for (const v of Object.values(th.text)) assert.ok(colour(v.split(" ")[0]), `${name}: ${v}`);
+  }
+  assert.ok(p.ai_slides.ask_first);
+  assert.equal(p.safe_area.token, "spacing/52");
+});
+
+test("newsletter spec: 600/400 breakpoints, 24px padding, token styles, placeholders", () => {
+  const p = readData("formats/newsletter.json");
+  const { desktop, mobile } = p.canvas.breakpoints;
+  assert.deepEqual([desktop.width, mobile.width], [600, 400]);
+  for (const bp of [desktop, mobile]) assert.equal(bp.content_width, bp.width - 2 * p.spacing.side_padding.value);
+  assert.deepEqual(p.images.max_width, { desktop: desktop.content_width, mobile: mobile.content_width });
+  assert.equal(p.logo.position, "top-center");
+  assert.equal(p.typography.max_heading_chars, 60);
+  const t = getTokens({ category: "typography" }).tokens;
+  const min = getBrandGuidelines({ section: "rules", format_profile: "newsletter" }).rules.find((r) => r.id === "type.min-size").check.value;
+  for (const [name, s] of Object.entries(p.typography.styles)) {
+    for (const bp of ["desktop", "mobile"]) {
+      const size = s.style ? t.styles[s.style]?.[bp]?.size : t.roles[s.role]?.formats.newsletter[bp].size;
+      assert.ok(size >= min, `newsletter ${name} (${bp}) is ${size}px`);
+    }
+  }
+  assert.ok(t.styles[p.typography.step_down.hero_title]);
+  const sp = getTokens({ category: "spacing" }).tokens;
+  assert.ok(sp.scale.includes(24));
+  for (const k of ["between_sections", "between_blocks", "text_group", "inside_cards"]) {
+    const s = p.spacing[k];
+    assert.deepEqual([sp.roles.desktop[s.token], sp.roles.mobile[s.token]], [s.desktop, s.mobile], k);
+  }
+  const colours = getTokens({ category: "color", mode: "light" }).tokens.semantic;
+  const has = (name) => name.split("/").reduce((o, k) => o?.[k], colours)?.value !== undefined;
+  for (const c of [p.surfaces.outer, p.surfaces.content, p.hero.banner_fallback.background, p.hero.banner_fallback.text]) assert.ok(has(c), c);
+  assert.doesNotMatch(JSON.stringify(p.placeholders.image_src + p.placeholders.link_href), /\{\{/);
+});
+
+test("no content edits is a locked, error-level rule cited by every format", () => {
+  const r = readData("rules/rules.json").rules.find((x) => x.id === "content.no-edits");
+  assert.equal(r.severity, "error");
+  assert.equal(r.locked, true);
+  for (const format of ["document", "newsletter", "deck", "architecture"]) {
+    const g = getBrandGuidelines({ section: "rules", format_profile: format });
+    assert.ok(g.rules.some((x) => x.id === "content.no-edits"), format);
+    assert.ok(g.format_profile.guardrails.must_not.find((i) => i.id === "content-unchanged").basis.includes("rule:content.no-edits"), format);
+  }
+});
+
+test("opacity: Figma stores 0–100, tokens serve 0–1", () => {
+  const snap = readData("figma/snapshot.json").collections.find((c) => c.name === "Global Styles").variables;
+  for (const v of snap.filter((x) => /^global\/opacity\/\d+$/.test(x.name))) assert.equal(v.values.Default, Number(v.name.split("/").pop()), v.name);
+  assert.deepEqual(getTokens({ category: "opacity" }).tokens, { subtle: 0.32, overlay: 0.48, muted: 0.72, full: 1 });
+  assert.match(getTokens({ category: "opacity", as: "css" }).code, /--opacity-subtle: 0\.32;/);
 });

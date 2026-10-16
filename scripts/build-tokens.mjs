@@ -202,7 +202,8 @@ const fromSemantic = (prefix) => {
 };
 const radius = fromSemantic("radius");
 const border = { width: fromSemantic("border-width") };
-const opacity = fromSemantic("opacity");
+// Figma stores opacity variables as 0–100 (it reads them as percentages); CSS wants 0–1.
+const opacity = Object.fromEntries(Object.entries(fromSemantic("opacity")).map(([k, v]) => [k, round(v / 100)]));
 
 // ---------- elevation ----------
 const rgba = (hex, a) => {

@@ -156,6 +156,146 @@
       "id": "design-system-only",
       "decision": "The Figma design system (served by this MCP) is the only source for every format: newsletter, deck and A4 document. No other reference material is used.",
       "decided_on": "2026-10-14"
+    },
+    {
+      "id": "user-decides-what",
+      "decision": "The user decides what is made (deliverable, format, purpose, audience, content, facts and scope); Claude decides how it looks (layout, composition, hierarchy, components, visualisation) inside the design system. Claude adds nothing that was not asked for and asks when unclear.",
+      "decided_on": "2026-10-14"
+    },
+    {
+      "id": "architecture-spec",
+      "decision": "Architecture diagrams (16:9, HTML) approved: Dense / Medium / Open chosen by counting nodes, labels and zones then checking fit; each element uses a named text style per density (12px minimum, Body/2XS never used); spacing, radius, borders and colours are tokens; node = dashed box + brand title tag + icon; default arrow dashed text/secondary, data flow solid border/brand, status only when marked, other colours only when the user defines them. See data/formats/architecture.json.",
+      "decided_on": "2026-10-14"
+    },
+    {
+      "id": "architecture-icons",
+      "decision": "Architecture icons come from the Faclon architecture icon library provided by the user, not Lucide; until it is provided, ask the user. The Lucide rule still applies to every other format.",
+      "decided_on": "2026-10-14"
+    },
+    {
+      "id": "format-padding",
+      "decision": "Canvas padding: architecture 48px (spacing/48), decks 52px (spacing/52), A4 documents 36px (spacing/36) — the A4 value is the brand team's Figma page (26pt on 595 × 842 pt) converted to 794 × 1123 px. All on the spacing scale.",
+      "decided_on": "2026-10-14"
+    },
+    {
+      "id": "document-header-footer",
+      "decision": "A4 header and default footer follow the Figma page (Design MCP, frame '5'): context label left and logo top-right (logo size may vary); footer '© Faclon Labs | All Rights Reserved' left and a two-digit page number right, in Body/XS Medium text/brand, no divider. A user-specified footer replaces the default.",
+      "decided_on": "2026-10-14"
+    },
+    {
+      "id": "document-spec",
+      "decision": "A4 document spec approved: named text style per element (title Heading/H2 Semi Bold, section Heading/H4 Semi Bold, body Body/SM, caption Body/XS…), token spacing (sections padding/section, cards gap/grid, inside cards padding/container), component usage (Card default tone, max 3 per row, Metric/Icon/Highlight/Media/Profile/FAQ/Banner cards, Chip/Badge, Divider). See data/formats/document.json.",
+      "decided_on": "2026-10-14"
+    },
+    {
+      "id": "document-page-breaks",
+      "decision": "A4 page breaks: UI cards (and table rows, images with captions, a heading with its first paragraph) are never cut; if one does not fit, it moves whole to the next page. Paragraphs and lists may continue on the next page. Content always stops gap/grid above a reserved footer zone.",
+      "decided_on": "2026-10-14"
+    },
+    {
+      "id": "deck-min-size-14",
+      "decision": "Deck minimum text size is 14px (Body/SM), matching the designed slides; replaces the 24px draft.",
+      "decided_on": "2026-10-16"
+    },
+    {
+      "id": "deck-type-cap-72",
+      "decision": "No text above 72px in decks: hero titles, closing statements and big numbers use Display/XL (72/80) at most.",
+      "decided_on": "2026-10-16"
+    },
+    {
+      "id": "accent-2-token",
+      "decision": "Added accent-2 (#B4FF6B) and text/accent-on-brand for highlighted text on brand-blue slides (4.83:1). The existing accent (#68DD68) stays for dark surfaces.",
+      "decided_on": "2026-10-16"
+    },
+    {
+      "id": "accent-budget-shared",
+      "decision": "accent and accent-2 share one budget: together roughly 10–15% of any canvas (fills, borders and accent text).",
+      "decided_on": "2026-10-16"
+    },
+    {
+      "id": "deck-content-inset",
+      "decision": "Every deck slide, hero slides included, uses 52px (spacing/52) on all four sides; the Figma slides' 70px content guide and 134px hero inset are replaced because neither is on the spacing scale.",
+      "decided_on": "2026-10-16"
+    },
+    {
+      "id": "deck-reference-slides",
+      "decision": "Designed reference slides in Figma (product stack, team, page breakers, closing; more to come) keep their layout and decoration; only background colour, fonts, chips and logo placement are mapped to the design system. AI slides default to dark, asking the user first.",
+      "decided_on": "2026-10-16"
+    },
+    {
+      "id": "deck-output-html",
+      "decision": "Decks are delivered as HTML by default; PDF or PPTX only when the user asks.",
+      "decided_on": "2026-10-16"
+    },
+    {
+      "id": "content-fidelity",
+      "decision": "Claude never changes the user's content: no rewriting, shortening, cutting, reordering of meaning or adding. It only designs. If a change would help, it flags it, asks first and offers options for presenting the content better.",
+      "decided_on": "2026-10-16"
+    },
+    {
+      "id": "no-overflow",
+      "decision": "Nothing overflows: text stays inside the canvas padding on all four sides and inside its card, box, zone or node. There is no word or bullet limit; readability comes from each format's minimum font size. When content is too much for the space, Claude flags it and asks the user instead of squeezing or cutting.",
+      "decided_on": "2026-10-16"
+    },
+    {
+      "id": "deck-no-word-limit",
+      "decision": "The draft 40-words and 5-bullets-per-slide limits are removed; the brand team's slides are dense by design.",
+      "decided_on": "2026-10-16"
+    },
+    {
+      "id": "deck-page-breaker-approved",
+      "decision": "Page-breaker mapping approved by the brand team (Figma review frame 3069:2792 on Layouts): the Figma design stays; only background colour, fonts, chips and logo placement come from the design system, the same as the other reference slides.",
+      "decided_on": "2026-10-16"
+    },
+    {
+      "id": "newsletter-layout",
+      "decision": "Newsletter breakpoints are 600px (desktop) and 400px (mobile); side padding 24px at both; logo centred at the top.",
+      "decided_on": "2026-10-16"
+    },
+    {
+      "id": "newsletter-placeholders",
+      "decision": "Every image and link in a newsletter is a placeholder; the designers upload images and add links (including the logo) themselves.",
+      "decided_on": "2026-10-16"
+    },
+    {
+      "id": "newsletter-breathing-room",
+      "decision": "Newsletters must not look crowded: clear foreground/background separation and generous spacing between blocks, all from spacing tokens.",
+      "decided_on": "2026-10-16"
+    },
+    {
+      "id": "newsletter-long-headings",
+      "decision": "Avoid headings over 60 characters. Claude never shortens one itself: it highlights it, offers alternative presentations and says which it advises; if the user says no, the heading is used as given.",
+      "decided_on": "2026-10-16"
+    },
+    {
+      "id": "newsletter-hero",
+      "decision": "The top of a newsletter can be a banner with the heading on it; banner + title + subheader + CTA; or title + subheader + image. Only the elements the user gives are used.",
+      "decided_on": "2026-10-16"
+    },
+    {
+      "id": "newsletter-surfaces",
+      "decision": "Newsletter only: outer background background/secondary, content column background/primary. The separation stays subtle by choice; it is not to be made more prominent. This does not apply to other formats.",
+      "decided_on": "2026-10-16"
+    },
+    {
+      "id": "newsletter-hero-type",
+      "decision": "Approved: hero title heading/h2 (32px desktop, 26px mobile), subheader body/lg (18px, 16px), CTA Role/Button; a long heading the user keeps may step down to heading/h3.",
+      "decided_on": "2026-10-16"
+    },
+    {
+      "id": "newsletter-banner-fallback",
+      "decision": "Approved: a banner carrying a heading has a background/brand cell background with text/on-brand, shown when images don't load.",
+      "decided_on": "2026-10-16"
+    },
+    {
+      "id": "deck-spec",
+      "decision": "Deck spec and guardrails approved by the brand team.",
+      "decided_on": "2026-10-16"
+    },
+    {
+      "id": "opacity-scale",
+      "decision": "Opacity variables are stored in Figma as 0–100, because Figma reads opacity variables as percentages (0.32 rendered as 0.32%, making bound layers invisible). The build script divides by 100, so the MCP still serves 0–1.",
+      "decided_on": "2026-10-16"
     }
   ],
   "figma_updates_needed": [],

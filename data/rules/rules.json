@@ -2,6 +2,22 @@
   "about": "Global brand rules. Apply to every output. Format profiles in data/formats/ may tighten these but never loosen them; rules with locked=true cannot be overridden at all. 'source' says where in the Figma file 'Design MCP' each rule comes from.",
   "rules": [
     {
+      "id": "content.no-edits",
+      "category": "content",
+      "rule": "Hard rule: Claude never edits or changes the user's content: no rewriting, rewording, shortening, cutting, reordering, adding or correcting, in any format. Claude only designs. If a change seems needed (too long, unclear, does not fit), highlight it to the user, suggest how it could be shown better, and change nothing until the user approves; if the user says no, use the content exactly as given.",
+      "check": {
+        "type": "content-unchanged",
+        "on_need": [
+          "highlight the content to the user",
+          "suggest how it could be shown better",
+          "wait for approval; if refused, keep the content as given"
+        ]
+      },
+      "severity": "error",
+      "locked": true,
+      "source": "Brand team decision 2026-10-16 (content-fidelity)"
+    },
+    {
       "id": "logo.blue-on-light",
       "category": "logo",
       "rule": "Use the blue logo on white and light-themed backgrounds.",
@@ -516,16 +532,25 @@
     {
       "id": "color.accent-budget",
       "category": "color",
-      "rule": "Accent is a highlight, not a palette: keep it to roughly 10–15% of any asset, counting fills and accent text together, so it never competes with brand blue.",
+      "rule": "Accent colours are highlights, not a palette: accent (#68DD68) and accent-2 (#B4FF6B) together cover only roughly 10–15% of any canvas, counting fills, borders and accent text, so they never compete with brand blue.",
       "check": {
         "type": "color-area-share",
         "tokenGroup": "accent",
+        "tokens": [
+          "accent",
+          "accent-2",
+          "background/accent",
+          "container/accent",
+          "border/accent",
+          "text/accent",
+          "text/accent-on-brand"
+        ],
         "min": 0.1,
         "max": 0.15
       },
       "severity": "warning",
       "locked": false,
-      "source": "Variable description: background/accent, container/accent, text/on-accent, border/accent, text/accent"
+      "source": "Variable description: background/accent, container/accent, text/on-accent, border/accent, text/accent; accent-2 added to the shared budget, brand team decision 2026-10-16"
     },
     {
       "id": "color.text-on-accent",
@@ -568,6 +593,23 @@
       "severity": "error",
       "locked": true,
       "source": "Variable description: text/accent"
+    },
+    {
+      "id": "color.accent-on-brand",
+      "category": "color",
+      "rule": "Highlighted text on brand-blue surfaces uses text/accent-on-brand (lime #B4FF6B, 4.83:1). It is only for background/brand and container/brand; on light surfaces use text/link, on dark surfaces text/accent. It counts toward the accent budget.",
+      "check": {
+        "type": "allowed-surfaces",
+        "token": "text/accent-on-brand",
+        "surfaces": [
+          "background/brand",
+          "container/brand"
+        ],
+        "contrastMin": 4.5
+      },
+      "severity": "error",
+      "locked": false,
+      "source": "Brand team decision 2026-10-16; Figma variables accent-2 and text/accent-on-brand"
     },
     {
       "id": "color.placeholder-only",
