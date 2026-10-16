@@ -1,8 +1,8 @@
 {
   "id": "document",
   "name": "Document / 2-pager (A4)",
-  "status": "draft",
-  "note": "A4 portrait decided 2026-10-14. Margins, spacing and type come from the design system. Title/heading styles, header/footer content and logo size are proposals to confirm.",
+  "status": "approved",
+  "note": "Specification approved by the brand team on 2026-10-14. Padding, header and footer follow their Figma page (Design MCP, frame '5'): 26pt on 595 × 842 pt = 36px (spacing/36) at 794 × 1123 px. Every font is a named text style and every value a token. Logo size may vary; its position does not.",
   "audience": "external",
   "canvas": {
     "paper": "A4",
@@ -17,63 +17,470 @@
     }
   },
   "safe_area": {
-    "top": 56,
-    "right": 56,
-    "bottom": 56,
-    "left": 56,
-    "token": "padding/section"
+    "top": 36,
+    "right": 36,
+    "bottom": 36,
+    "left": 36,
+    "token": "spacing/36"
   },
-  "content_width": 682,
+  "content_width": 722,
   "grid": {
     "columns": 12,
-    "gutter": "gap/grid"
+    "gutter": "gap/grid",
+    "common_splits": [
+      "12",
+      "6 + 6",
+      "4 + 4 + 4",
+      "8 + 4"
+    ]
   },
   "spacing": {
+    "header_to_content": "padding/container",
     "between_sections": "padding/section",
-    "within_section": "gap/stack",
+    "heading_to_content": "gap/stack",
+    "between_paragraphs": "gap/stack",
+    "between_list_items": "gap/inline",
     "between_cards": "gap/grid",
-    "inline": "gap/inline",
-    "card_padding": "padding/container"
+    "inside_card": "padding/container",
+    "inside_card_gap": "gap/stack",
+    "inline_items": "gap/inline",
+    "content_to_footer": "gap/grid",
+    "table_cell_padding": {
+      "vertical": "spacing/8",
+      "horizontal": "spacing/12"
+    }
   },
   "typography": {
     "text_roles_mode": "Document",
     "breakpoint_mode": "desktop",
-    "title_style": "heading/h2",
-    "heading_style": "heading/h4",
-    "body_style": "role/body",
-    "min_size": 10
+    "min_size": 10,
+    "styles": {
+      "eyebrow": {
+        "style": "eyebrow",
+        "weight": 500,
+        "colour": "text/eyebrow",
+        "use": "kicker above the title"
+      },
+      "title": {
+        "style": "heading/h2",
+        "weight": 600,
+        "colour": "text/heading",
+        "use": "document title"
+      },
+      "intro": {
+        "style": "body/md",
+        "weight": 400,
+        "colour": "text/secondary",
+        "use": "standfirst under the title"
+      },
+      "section_heading": {
+        "style": "heading/h4",
+        "weight": 600,
+        "colour": "text/heading"
+      },
+      "sub_heading": {
+        "style": "heading/h6",
+        "weight": 500,
+        "colour": "text/heading"
+      },
+      "body": {
+        "style": "body/sm",
+        "weight": 400,
+        "colour": "text/body",
+        "use": "paragraphs and lists (Role/Body)"
+      },
+      "caption": {
+        "style": "body/xs",
+        "weight": 400,
+        "colour": "text/secondary",
+        "use": "captions, sources, meta (Role/Caption)"
+      },
+      "card_title": {
+        "style": "heading/h5",
+        "weight": 500,
+        "colour": "text/heading",
+        "use": "Role/Title"
+      },
+      "card_body": {
+        "style": "body/sm",
+        "weight": 400,
+        "colour": "text/body"
+      },
+      "metric": {
+        "style": "heading/h3",
+        "weight": 600,
+        "colour": "text/heading",
+        "use": "KPI numbers (Role/Metric)"
+      },
+      "metric_label": {
+        "style": "body/xs",
+        "weight": 400,
+        "colour": "text/secondary"
+      },
+      "table_header": {
+        "style": "body/xs",
+        "weight": 600,
+        "colour": "text/heading"
+      },
+      "table_cell": {
+        "style": "body/xs",
+        "weight": 400,
+        "colour": "text/body"
+      },
+      "chip_label": {
+        "style": "body/xs",
+        "weight": 500,
+        "colour": "per intent",
+        "use": "Role/Label"
+      },
+      "link": {
+        "style": "heading/h6",
+        "weight": 500,
+        "colour": "text/link",
+        "use": "links and CTAs (Role/Button)"
+      },
+      "header_label": {
+        "style": "body/xs",
+        "weight": 400,
+        "colour": "text/brand"
+      },
+      "footer": {
+        "style": "body/xs",
+        "weight": 500,
+        "colour": "text/brand"
+      }
+    }
   },
   "colour": {
     "canvas": "background/primary",
-    "theme": "light"
+    "theme": "light",
+    "text": {
+      "heading": "text/heading",
+      "body": "text/body",
+      "supporting": "text/secondary",
+      "link": "text/link",
+      "eyebrow": "text/eyebrow"
+    }
   },
   "header": {
-    "logo": "top-left, inside the safe area",
-    "logo_variant": "blue"
+    "layout": "One row across the top of the content area, items top-aligned",
+    "left": "Context label, e.g. '// Cement Manufacturing //' — optional, the user decides the text",
+    "left_style": {
+      "style": "body/xs",
+      "weight": 400,
+      "colour": "text/brand"
+    },
+    "right": "Faclon logo (blue), top-right",
+    "logo_size": "may vary per document; default height spacing/32",
+    "gap_below": "padding/container",
+    "source": "Figma Design MCP, frame '5'"
   },
   "footer": {
-    "content": [
-      "page number",
-      "contact details"
-    ],
-    "style": "role/caption"
+    "default": {
+      "left": "© Faclon Labs | All Rights Reserved",
+      "right": "Page number, two digits (01, 02…)"
+    },
+    "style": {
+      "style": "body/xs",
+      "weight": 500,
+      "colour": "text/brand"
+    },
+    "divider": null,
+    "when": "Used whenever the user does not specify a footer; a footer the user specifies replaces it.",
+    "source": "Figma Design MCP, frame '5'"
   },
   "logo": {
-    "position": "top-left",
+    "position": "top-right",
     "variant": "blue",
-    "min_width": null,
-    "min_width_note": "Logo minimum size and clear space are not defined in Figma yet."
+    "size": "may vary; default height spacing/32"
   },
   "page_breaks": {
     "keep_together": [
-      "card",
+      "any UI card (Card, Metric, Icon, Highlight, Media, Profile, FAQ, Banner)",
       "table row",
+      "image or figure with its caption",
       "heading with its first paragraph"
-    ]
+    ],
+    "keep_together_rule": "If it does not fit in the space left on the page, move the whole block to the next page; never cut it.",
+    "may_split": [
+      "paragraph",
+      "list"
+    ],
+    "may_split_rule": "Text may continue on the next page, breaking between lines.",
+    "footer_zone": {
+      "height": 18,
+      "text_style": "body/xs",
+      "position": "bottom of the content area, on the 36px bottom padding"
+    },
+    "content_to_footer": "gap/grid",
+    "content_bottom_limit": 1045,
+    "content_bottom_limit_note": "Nothing goes below 1045px from the top of the page: page height 1123 − bottom padding 36 − footer 18 − gap/grid 24."
   },
   "images": {
-    "max_width": 682,
+    "max_width": 722,
     "alt_text_required": true
+  },
+  "guardrails": {
+    "status": "approved",
+    "note": "Guidance for whoever designs in this format. user_decides = what is made (the user's call); fixed = do not change; must_not = hard limits; avoid = strong advice; design_direction = how to use the system; claude_decides = how it looks, where the designer has freedom. Every design item cites its basis in the design system.",
+    "user_decides": [
+      "What is being made, for whom and why: the deliverable, its format, purpose and audience.",
+      "The content and facts. The designer uses exactly what the user supplies or approves: never invents, adds, rewrites, shortens or cuts it, and asks before suggesting a change.",
+      "The scope: which sections, pages or slides. Nothing is added that was not asked for; when it is unclear, ask.",
+      "Whether it is a 2-pager or a longer document.",
+      "The header's context label, if any, and a footer if it should differ from the default."
+    ],
+    "fixed": [
+      {
+        "id": "canvas",
+        "text": "A4 portrait, 794 × 1123 px at 96 dpi. A 2-pager is exactly 2 pages; other documents can run longer.",
+        "basis": [
+          "profile:canvas"
+        ]
+      },
+      {
+        "id": "margins",
+        "text": "36px padding on all four sides (spacing/36); content is 722px wide.",
+        "basis": [
+          "profile:safe_area",
+          "profile:content_width"
+        ]
+      },
+      {
+        "id": "grid",
+        "text": "12-column grid with gap/grid gutters.",
+        "basis": [
+          "profile:grid"
+        ]
+      },
+      {
+        "id": "text-roles",
+        "text": "Text uses the text style set for its element (e.g. title Heading/H2 Semi Bold, body Body/SM, caption Body/XS), never a raw size.",
+        "basis": [
+          "profile:typography.styles",
+          "rule:type.styles-only"
+        ]
+      },
+      {
+        "id": "theme",
+        "text": "Light theme on background/primary.",
+        "basis": [
+          "profile:colour"
+        ]
+      },
+      {
+        "id": "logo",
+        "text": "Header row: optional context label at the left, the blue logo at the top-right (its size may vary).",
+        "basis": [
+          "profile:header",
+          "profile:logo",
+          "rule:logo.blue-on-light"
+        ]
+      },
+      {
+        "id": "footer",
+        "text": "Footer by default: '© Faclon Labs | All Rights Reserved' at the left and a two-digit page number at the right, in Body/XS Medium, text/brand, no divider. A footer the user specifies replaces it.",
+        "basis": [
+          "profile:footer"
+        ]
+      },
+      {
+        "id": "cards",
+        "text": "Cards follow the component spec; at most 3 cards in a row.",
+        "basis": [
+          "profile:components.card"
+        ]
+      }
+    ],
+    "must_not": [
+      {
+        "id": "content-unchanged",
+        "text": "Hard rule: never edit or change the user's content (no rewriting, shortening, cutting or adding). If a change seems needed, highlight it, suggest how it could be shown better, and change nothing unless the user approves.",
+        "basis": [
+          "rule:content.no-edits",
+          "decision:content-fidelity",
+          "decision:user-decides-what"
+        ]
+      },
+      {
+        "id": "no-overflow",
+        "text": "Never let text overflow the canvas padding on any side, or the card, box, zone or node it sits in.",
+        "basis": [
+          "decision:no-overflow",
+          "profile:safe_area"
+        ]
+      },
+      {
+        "id": "min-size",
+        "text": "Never set text below 10px.",
+        "basis": [
+          "rule:type.min-size"
+        ]
+      },
+      {
+        "id": "page-breaks",
+        "text": "Never cut a UI card, a table row, an image with its caption, or a heading from its first paragraph across a page break; if it does not fit, move it whole to the next page. Paragraphs and lists may continue on the next page.",
+        "basis": [
+          "profile:page_breaks.keep_together",
+          "profile:page_breaks.may_split"
+        ]
+      },
+      {
+        "id": "footer-clearance",
+        "text": "Never let content run into the footer: everything stops gap/grid (24px) above it, at most 1045px from the top of the page.",
+        "basis": [
+          "profile:page_breaks.content_to_footer",
+          "profile:page_breaks.content_bottom_limit"
+        ]
+      },
+      {
+        "id": "two-pager-length",
+        "text": "Never let a 2-pager run past two pages.",
+        "basis": [
+          "profile:canvas.pages",
+          "profile:severity.two_pager_max_pages"
+        ]
+      },
+      {
+        "id": "images",
+        "text": "Never make an image wider than the 722px content width, or leave it without alt text in HTML.",
+        "basis": [
+          "profile:images"
+        ]
+      },
+      {
+        "id": "tokens-only",
+        "text": "Never use a colour that is not a design-system token, and never sample or approximate one.",
+        "basis": [
+          "rule:color.tokens-only"
+        ]
+      },
+      {
+        "id": "two-fonts",
+        "text": "Never use a font other than TASA Orbiter (headings) and Inter (body).",
+        "basis": [
+          "rule:type.two-families-only"
+        ]
+      },
+      {
+        "id": "sizes-in-scale",
+        "text": "Never use in-between font sizes: text comes from Role/* or the defined text styles.",
+        "basis": [
+          "rule:type.styles-only",
+          "rule:type.text-roles"
+        ]
+      },
+      {
+        "id": "pill-radius",
+        "text": "Never put a pill radius on a card, panel, container, input or image.",
+        "basis": [
+          "rule:radius.pill-only-for-pills"
+        ]
+      },
+      {
+        "id": "eyebrow-surfaces",
+        "text": "Never place an eyebrow on container/secondary or container/tertiary (it fails contrast).",
+        "basis": [
+          "rule:color.eyebrow-placement"
+        ]
+      },
+      {
+        "id": "shadow-heavy-border",
+        "text": "Never combine a shadow with a border of 2px or more.",
+        "basis": [
+          "rule:elevation.no-shadow-with-heavy-border"
+        ]
+      }
+    ],
+    "avoid": [
+      {
+        "id": "accent-budget",
+        "text": "Avoid using the accent colours (accent and accent-2 together) on more than roughly 10–15% of the piece; it is a highlight, not a palette.",
+        "basis": [
+          "rule:color.accent-budget"
+        ]
+      },
+      {
+        "id": "tertiary-text",
+        "text": "Avoid text/tertiary for essential text; at 3.4:1 it is for large or non-essential text only.",
+        "basis": [
+          "decision:tertiary-text-contrast"
+        ]
+      }
+    ],
+    "design_direction": [
+      {
+        "id": "spacing-by-purpose",
+        "text": "Pick spacing by purpose: gap/inline between adjacent items, gap/stack inside a component, gap/grid between cards, padding/container inside cards, padding/section between sections.",
+        "basis": [
+          "rule:spacing.role-defaults"
+        ]
+      },
+      {
+        "id": "cards",
+        "text": "Cards and panels use the container default: container/primary, 1px border/container, radius/default, padding/container. Nest with container/secondary, then container/tertiary.",
+        "basis": [
+          "default:container",
+          "default:nested_container",
+          "rule:color.container-default"
+        ]
+      },
+      {
+        "id": "text-colours",
+        "text": "Headings use text/heading, body copy text/body, eyebrows text/eyebrow.",
+        "basis": [
+          "rule:color.text-defaults"
+        ]
+      },
+      {
+        "id": "status",
+        "text": "Show status with the five intents (Positive, Negative, Information, Neutral, Primary) and their fixed fill/text pairs; warnings use Negative.",
+        "basis": [
+          "rule:color.status-intents",
+          "rule:color.pairings"
+        ]
+      },
+      {
+        "id": "flat-surfaces",
+        "text": "Keep surfaces flat; use Low Raised only to lift a card off the canvas.",
+        "basis": [
+          "rule:elevation.flat-default"
+        ]
+      },
+      {
+        "id": "buttons",
+        "text": "Buttons have softened square corners (radius/default), never pill.",
+        "basis": [
+          "rule:radius.buttons"
+        ]
+      },
+      {
+        "id": "icons",
+        "text": "When an icon helps, use Lucide and colour it with a text token that suits the surface.",
+        "basis": [
+          "rule:icon.lucide-only"
+        ]
+      },
+      {
+        "id": "too-much-content",
+        "text": "If the content is too much for the space, do not squeeze it below the minimum size or cut it: tell the user, and offer options (split across slides or pages, a different layout, a table or chart).",
+        "basis": [
+          "decision:no-overflow",
+          "decision:content-fidelity"
+        ]
+      }
+    ],
+    "claude_decides": [
+      "Layout and composition within the grid: what goes where, how many columns, what leads.",
+      "Visual hierarchy: what is large, what is quiet, and how the eye moves.",
+      "Which components to use and how to combine them, including arrangements nobody has drawn before.",
+      "How to show each idea: a stat, a process, a comparison, a story.",
+      "How the content flows across the pages: where paragraphs break, and when a whole card moves to the next page."
+    ],
+    "to_define": [
+      "Widow and orphan rules (no single word on its own line).",
+      "Logo minimum size and clear space."
+    ]
   },
   "overrides": [],
   "export": {
@@ -85,5 +492,57 @@
   "severity": {
     "alt_text_required": "error",
     "two_pager_max_pages": "error"
+  },
+  "components": {
+    "card": {
+      "use": "any grouped content",
+      "spec": "Card default tone: container/primary, 1px border/container, radius/default, padding/container, flat",
+      "max_per_row": 3,
+      "why_max": "Card minimum width is 200px; 3 × 200 + 2 × gap/grid fits the 722px content width"
+    },
+    "nested": {
+      "use": "content inside a card",
+      "spec": "container/secondary, then container/tertiary"
+    },
+    "highlight": {
+      "use": "one emphasised card",
+      "spec": "Card Selected (container/selected + border/brand) or Brand (container/brand + text/on-brand)"
+    },
+    "status": {
+      "use": "good or bad outcome",
+      "spec": "Card Positive / Negative: container/success + border/success + text/success (or error)"
+    },
+    "metric": {
+      "use": "key numbers",
+      "spec": "Metric Card: metric + label, optional chip for trend"
+    },
+    "features": {
+      "use": "features and capabilities",
+      "spec": "Icon Card / Highlight Card: Lucide icon, title, body"
+    },
+    "media": {
+      "use": "image, chart, screenshot",
+      "spec": "Media Card: Image up to the content width, radius/default, alt text; placeholder until provided"
+    },
+    "quote": {
+      "use": "quote or testimonial",
+      "spec": "Profile Card: status chip, title, body, Divider, avatar + name/role"
+    },
+    "faq": {
+      "use": "questions and answers",
+      "spec": "FAQ Card: Accordion Items with Dividers"
+    },
+    "callout": {
+      "use": "callout band",
+      "spec": "Banner Card: background/brand-subtle band, padding/container"
+    },
+    "tags": {
+      "use": "tags and status",
+      "spec": "Chip / Badge in the five intents; Badge sizes S / M / L"
+    },
+    "separator": {
+      "use": "separate content",
+      "spec": "Divider: 1px border/strong"
+    }
   }
 }

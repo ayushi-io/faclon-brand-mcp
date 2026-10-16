@@ -29,12 +29,12 @@ npm run bump:version                       # data/version.json -> today's YYYY.M
 Token pipeline:
 1. `data/figma/snapshot.json` — raw Figma variables/styles export. Exported via the figma-console Desktop Bridge (Figma Variables REST API needs Enterprise). Never hand-edit tokens downstream of this.
 2. `data/overrides/semantic-colors.json` — temporary brand-team overrides applied on top of Figma by the build script; delete entries once Figma matches.
-3. `scripts/build-tokens.mjs` resolves every alias to a final value while keeping the reference (e.g. `value: "#1655F2", ref: "brand/500"`) and writes `data/tokens.json`.
+3. `scripts/build-tokens.mjs` resolves every alias to a final value while keeping the reference (e.g. `value: "#1655F2", ref: "brand/500"`) and writes `data/tokens.json`. Opacity variables are 0–100 in Figma (Figma reads them as percentages); the build divides by 100.
 4. `src/tools/tokens.js` serves `tokens.json` as json/css/tailwind/figma. Modes: `light`/`dark` apply only to `color`; `desktop`/`mobile` only to `typography` and `spacing` — mismatches are errors.
 5. **Text roles** (`typography.roles`): the Figma `Text Roles` collection (modes Document / Newsletter / Deck) aliases Semantic Typography sizes, which still follow Desktop/Mobile, so each role resolves to format × breakpoint. `Role/*` text styles supply family, weight and case; they are excluded from `typography.styles`. `get_tokens` takes `format` to narrow roles; CSS emits `--role-*` with document on `:root` and `[data-format="newsletter"|"deck"]` overrides. A test checks every role against each format profile's `type.min-size`.
 
 Guidelines (`src/tools/guidelines.js`):
-- `section: "rules"` merges `data/rules/rules.json` with an optional format profile from `data/formats/*.json` (deck, newsletter — both `status: "draft"`), plus `rules/defaults.json` and `rules/open-questions.json`.
+- `section: "rules"` merges `data/rules/rules.json` with an optional format profile from `data/formats/*.json` (document, newsletter, deck and architecture, all approved), plus `rules/defaults.json` and `rules/open-questions.json`.
 - **Profiles may only tighten rules.** `mergeRules` rejects overrides on `locked` rules and anything not provably tighter; the only tightenable check type today is `font-size-min` (via the `TIGHTER` map). Add new check types there.
 - `voice`, `illustration`, `architecture`, `imagery` are hard-coded in `NOT_WRITTEN` and return `status: "not_written"`. Do not invent content for them; to add one, write `data/guidelines/<section>.md` and remove it from `NOT_WRITTEN`.
 - Formats are auto-discovered from `data/formats/` (id must match `^[a-z0-9-]+$`).
