@@ -1,0 +1,1179 @@
+{
+  "about": "Faclon components, read from the Figma file Design MCP (pages: components, Badges) on 2026-10-16. Every value is a token name; resolve it with get_tokens (css_vars maps each one to its CSS custom property). Text uses text roles, so sizes follow the output format.",
+  "source": {
+    "file": "Design MCP",
+    "fileKey": "UDARPzxpNySOS2F3mxhgUs",
+    "pages": [
+      "components",
+      "Badges"
+    ],
+    "extracted_on": "2026-10-16",
+    "method": "Variable bindings on each component (not the description text)"
+  },
+  "usage": [
+    "Components are building blocks, not templates: combine them into any layout the content needs, inside the format's guardrails.",
+    "Keep each component's tokens as bound: fill, border, radius, padding, gap and text role. Never restyle one with a value the system does not define.",
+    "Themes come from the colour mode: the dark version of a component is the same component with Semantic Colors in Dark mode. Never pick dark colours by hand.",
+    "Text inside components uses text roles, so sizes follow the output format (Document, Newsletter, Deck) and breakpoint.",
+    "Cards fill their grid column; how many sit in a row comes from the format (for example at most 3 in an A4 document).",
+    "Chips, badges, buttons, tags and contact pills hug their content on a single line, with equal padding left and right; they never stretch or wrap. If a label is too long for the space, tell the user.",
+    "Content must fit its component: never let text overflow a card, chip, badge or button, and never shrink it below the format's minimum size. If it does not fit, tell the user and offer options.",
+    "Components are static: no hover, pressed or open states.",
+    "Image is a placeholder: replace it with the real image, or leave a placeholder for the designers. Icons come from Lucide, only when asked."
+  ],
+  "components": [
+    {
+      "id": "heading-content",
+      "name": "Heading content",
+      "kind": "atom",
+      "figma": {
+        "page": "components",
+        "node": "3024:1480"
+      },
+      "use": "The heading block inside cards: optional eyebrow, a title and optional sub-text.",
+      "props": {
+        "Eyebrow": "text",
+        "Title": "text",
+        "Subtext": "text",
+        "Show eyebrow": "boolean",
+        "Show subtext": "boolean"
+      },
+      "layout": {
+        "direction": "vertical",
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "gap": 0
+      },
+      "parts": [
+        {
+          "part": "eyebrow",
+          "role": "eyebrow",
+          "color": "text/eyebrow",
+          "optional": true
+        },
+        {
+          "part": "title",
+          "role": "title",
+          "color": "text/heading"
+        },
+        {
+          "part": "subtext",
+          "role": "subtitle",
+          "color": "text/secondary",
+          "optional": true
+        }
+      ]
+    },
+    {
+      "id": "body-text",
+      "name": "Body Text",
+      "kind": "atom",
+      "figma": {
+        "page": "components",
+        "node": "3024:1486"
+      },
+      "use": "A paragraph. Fills the width of its card.",
+      "props": {
+        "Text": "text"
+      },
+      "layout": {
+        "width": "fill"
+      },
+      "parts": [
+        {
+          "part": "text",
+          "role": "body",
+          "color": "text/body"
+        }
+      ]
+    },
+    {
+      "id": "divider",
+      "name": "Divider",
+      "kind": "atom",
+      "figma": {
+        "page": "components",
+        "node": "3024:1616"
+      },
+      "use": "Hairline separator that stretches to its container's width.",
+      "surface": {
+        "border": "border/strong",
+        "border_width": "border-width/default"
+      }
+    },
+    {
+      "id": "image",
+      "name": "Image",
+      "kind": "atom",
+      "figma": {
+        "page": "components",
+        "node": "3024:1484"
+      },
+      "use": "Placeholder for an image, icon, chart, logo or avatar. Resize freely and replace with the real image; icons come from Lucide, only when asked.",
+      "surface": {
+        "fill": "container/tertiary",
+        "radius": "radius/md"
+      },
+      "size": {
+        "default": [
+          30,
+          30
+        ],
+        "resizable": true
+      }
+    },
+    {
+      "id": "chip",
+      "name": "Chip",
+      "kind": "atom",
+      "figma": {
+        "page": "components",
+        "node": "3024:2135"
+      },
+      "use": "Small square-cornered label inside cards: tags, trend or status next to a metric. Neutral is the default tone.",
+      "props": {
+        "Label": "text",
+        "Tone": [
+          "Neutral",
+          "Primary",
+          "Positive",
+          "Negative"
+        ]
+      },
+      "layout": {
+        "direction": "horizontal",
+        "padding": {
+          "top": 0,
+          "right": "spacing/4",
+          "bottom": 0,
+          "left": "spacing/4"
+        },
+        "gap": "spacing/4"
+      },
+      "surface": {
+        "radius": "radius/default"
+      },
+      "parts": [
+        {
+          "part": "label",
+          "role": "label"
+        }
+      ],
+      "variants": {
+        "Tone": {
+          "Neutral": {
+            "fill": "container/primary",
+            "label": "text/secondary"
+          },
+          "Primary": {
+            "fill": "container/selected",
+            "label": "text/brand"
+          },
+          "Positive": {
+            "fill": "container/success",
+            "label": "text/success"
+          },
+          "Negative": {
+            "fill": "container/error",
+            "label": "text/error"
+          }
+        }
+      },
+      "width": "hug",
+      "wrap": "single line",
+      "default": {
+        "Tone": "Neutral"
+      }
+    },
+    {
+      "id": "accordion-item",
+      "name": "Accordion Item",
+      "kind": "atom",
+      "figma": {
+        "page": "components",
+        "node": "3024:2271"
+      },
+      "use": "One FAQ row: the question, a chevron, an optional answer and a divider underneath (turn the divider off on the last row). Static: no open or close interaction.",
+      "props": {
+        "Question": "text",
+        "Show answer": "boolean",
+        "Answer": "text",
+        "Show divider": "boolean"
+      },
+      "layout": {
+        "direction": "vertical",
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "gap": "spacing/8"
+      },
+      "parts": [
+        {
+          "part": "question",
+          "role": "body",
+          "color": "text/heading",
+          "layout": {
+            "direction": "horizontal",
+            "gap": "spacing/48"
+          }
+        },
+        {
+          "part": "answer",
+          "role": "body",
+          "color": "text/body",
+          "optional": true,
+          "note": "Shown when the asset needs answers; the answer text comes from the user."
+        },
+        {
+          "part": "chevron",
+          "stroke": "text/heading",
+          "border_width": "border-width/default"
+        },
+        {
+          "part": "divider",
+          "component": "divider",
+          "optional": true
+        }
+      ]
+    },
+    {
+      "id": "card-base",
+      "name": "Card base",
+      "kind": "card",
+      "figma": {
+        "page": "components",
+        "node": "3024:2150"
+      },
+      "use": "The card surface with an open slot: build any card layout inside it. Default on the page; Secondary then Tertiary when nesting; Featured makes one card stand out from its neighbours (for example a recommended option); Featured, Positive and Negative add a 1px border; Brand and Inverse need on-brand or inverse text inside.",
+      "props": {
+        "Slot": "slot",
+        "Tone": [
+          "Default",
+          "Secondary",
+          "Tertiary",
+          "Featured",
+          "Positive",
+          "Negative",
+          "Brand",
+          "Inverse"
+        ]
+      },
+      "layout": {
+        "direction": "vertical",
+        "padding": {
+          "top": "padding/container",
+          "right": "padding/container",
+          "bottom": "padding/container",
+          "left": "padding/container"
+        },
+        "gap": "gap/stack"
+      },
+      "surface": {
+        "fill": "container/primary",
+        "border": "border/container",
+        "border_width": "border-width/default",
+        "radius": "radius/default"
+      },
+      "width": "fills its grid column",
+      "variants": {
+        "Tone": {
+          "Default": {
+            "fill": "container/primary",
+            "border": "border/container"
+          },
+          "Secondary": {
+            "fill": "container/secondary",
+            "border": "border/container"
+          },
+          "Tertiary": {
+            "fill": "container/tertiary",
+            "border": "border/container"
+          },
+          "Featured": {
+            "fill": "container/selected",
+            "border": "border/brand"
+          },
+          "Positive": {
+            "fill": "container/success",
+            "border": "border/success"
+          },
+          "Negative": {
+            "fill": "container/error",
+            "border": "border/error"
+          },
+          "Brand": {
+            "fill": "container/brand",
+            "border": null,
+            "text": "text/on-brand"
+          },
+          "Inverse": {
+            "fill": "container/inverse",
+            "border": null,
+            "text": "text/inverse"
+          }
+        }
+      }
+    },
+    {
+      "id": "card",
+      "name": "Card",
+      "kind": "card",
+      "figma": {
+        "page": "components",
+        "node": "3024:2231"
+      },
+      "use": "Content card: heading (optional eyebrow and sub-text) with a thumbnail beside it, then body. Tone sets surface, border and text colours together.",
+      "props": {
+        "Show image": "boolean",
+        "Show body": "boolean",
+        "Tone": [
+          "Default",
+          "Secondary",
+          "Tertiary",
+          "Featured",
+          "Positive",
+          "Negative",
+          "Brand",
+          "Inverse"
+        ]
+      },
+      "layout": {
+        "direction": "vertical",
+        "padding": {
+          "top": "padding/container",
+          "right": "padding/container",
+          "bottom": "padding/container",
+          "left": "padding/container"
+        },
+        "gap": "gap/stack"
+      },
+      "surface": {
+        "fill": "container/primary",
+        "border": "border/container",
+        "border_width": "border-width/default",
+        "radius": "radius/default"
+      },
+      "width": "fills its grid column",
+      "parts": [
+        {
+          "part": "header",
+          "layout": {
+            "direction": "horizontal",
+            "gap": "spacing/12"
+          },
+          "contains": [
+            "heading-content",
+            "image"
+          ]
+        },
+        {
+          "part": "body",
+          "component": "body-text",
+          "optional": true
+        }
+      ],
+      "variants": {
+        "Tone": {
+          "Default": {
+            "fill": "container/primary",
+            "border": "border/container",
+            "title": "text/heading",
+            "subtext": "text/secondary",
+            "body": "text/body"
+          },
+          "Secondary": {
+            "fill": "container/secondary",
+            "border": "border/container",
+            "title": "text/heading",
+            "subtext": "text/secondary",
+            "body": "text/body"
+          },
+          "Tertiary": {
+            "fill": "container/tertiary",
+            "border": "border/container",
+            "title": "text/heading",
+            "subtext": "text/secondary",
+            "body": "text/body"
+          },
+          "Featured": {
+            "fill": "container/selected",
+            "border": "border/brand",
+            "title": "text/heading",
+            "subtext": "text/secondary",
+            "body": "text/body"
+          },
+          "Positive": {
+            "fill": "container/success",
+            "border": "border/success",
+            "title": "text/success",
+            "subtext": "text/success",
+            "body": "text/success"
+          },
+          "Negative": {
+            "fill": "container/error",
+            "border": "border/error",
+            "title": "text/error",
+            "subtext": "text/error",
+            "body": "text/error"
+          },
+          "Brand": {
+            "fill": "container/brand",
+            "border": null,
+            "title": "text/on-brand",
+            "subtext": "text/on-brand",
+            "body": "text/on-brand"
+          },
+          "Inverse": {
+            "fill": "container/inverse",
+            "border": null,
+            "title": "text/inverse",
+            "subtext": "text/inverse",
+            "body": "text/inverse"
+          }
+        }
+      }
+    },
+    {
+      "id": "icon-card",
+      "name": "Icon Card",
+      "kind": "card",
+      "figma": {
+        "page": "components",
+        "node": "3024:2288"
+      },
+      "use": "Icon on top, then heading and body. For features, capabilities, benefits.",
+      "layout": {
+        "direction": "vertical",
+        "padding": {
+          "top": "padding/container",
+          "right": "padding/container",
+          "bottom": "padding/container",
+          "left": "padding/container"
+        },
+        "gap": "gap/stack"
+      },
+      "surface": {
+        "fill": "container/primary",
+        "border": "border/container",
+        "border_width": "border-width/default",
+        "radius": "radius/default"
+      },
+      "width": "fills its grid column",
+      "parts": [
+        {
+          "part": "icon",
+          "component": "image"
+        },
+        {
+          "part": "heading",
+          "component": "heading-content"
+        },
+        {
+          "part": "body",
+          "component": "body-text"
+        }
+      ]
+    },
+    {
+      "id": "highlight-card",
+      "name": "Highlight Card",
+      "kind": "card",
+      "figma": {
+        "page": "components",
+        "node": "3024:2297"
+      },
+      "use": "Icon with a chip on the right, then heading and body. For a feature with a label or status.",
+      "layout": {
+        "direction": "vertical",
+        "padding": {
+          "top": "padding/container",
+          "right": "padding/container",
+          "bottom": "padding/container",
+          "left": "padding/container"
+        },
+        "gap": "gap/stack"
+      },
+      "surface": {
+        "fill": "container/primary",
+        "border": "border/container",
+        "border_width": "border-width/default",
+        "radius": "radius/default"
+      },
+      "width": "fills its grid column",
+      "parts": [
+        {
+          "part": "top row",
+          "layout": {
+            "direction": "horizontal",
+            "gap": "spacing/8",
+            "align": "space-between"
+          },
+          "contains": [
+            "image",
+            "chip"
+          ]
+        },
+        {
+          "part": "heading",
+          "component": "heading-content"
+        },
+        {
+          "part": "body",
+          "component": "body-text"
+        }
+      ]
+    },
+    {
+      "id": "list-item-card",
+      "name": "List Item Card",
+      "kind": "card",
+      "figma": {
+        "page": "components",
+        "node": "3024:2310"
+      },
+      "use": "Compact row: leading icon, title and sub-text, optional trailing icon. For lists of items, steps or links.",
+      "props": {
+        "Show trailing icon": "boolean"
+      },
+      "layout": {
+        "direction": "vertical",
+        "padding": {
+          "top": "padding/container",
+          "right": "padding/container",
+          "bottom": "padding/container",
+          "left": "padding/container"
+        },
+        "gap": "gap/stack"
+      },
+      "surface": {
+        "fill": "container/primary",
+        "border": "border/container",
+        "border_width": "border-width/default",
+        "radius": "radius/default"
+      },
+      "width": "fills its grid column",
+      "parts": [
+        {
+          "part": "row",
+          "layout": {
+            "direction": "horizontal",
+            "gap": "gap/inline",
+            "align": "center"
+          },
+          "contains": [
+            "image",
+            "heading-content",
+            "image (optional)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "metric-card",
+      "name": "Metric Card",
+      "kind": "card",
+      "figma": {
+        "page": "components",
+        "node": "3024:2322"
+      },
+      "use": "A single KPI: small label, the value, optional chip for trend or status.",
+      "props": {
+        "Label": "text",
+        "Value": "text",
+        "Show chip": "boolean"
+      },
+      "layout": {
+        "direction": "vertical",
+        "padding": {
+          "top": "padding/container",
+          "right": "padding/container",
+          "bottom": "padding/container",
+          "left": "padding/container"
+        },
+        "gap": "gap/stack"
+      },
+      "surface": {
+        "fill": "container/primary",
+        "border": "border/container",
+        "border_width": "border-width/default",
+        "radius": "radius/default"
+      },
+      "width": "fills its grid column",
+      "parts": [
+        {
+          "part": "row",
+          "layout": {
+            "direction": "horizontal",
+            "gap": "spacing/12",
+            "align": "space-between"
+          },
+          "contains": [
+            "metric",
+            "chip (optional)"
+          ]
+        },
+        {
+          "part": "label",
+          "role": "caption",
+          "color": "text/secondary",
+          "layout": {
+            "gap_below": "spacing/4"
+          }
+        },
+        {
+          "part": "value",
+          "role": "metric",
+          "color": "text/heading"
+        }
+      ]
+    },
+    {
+      "id": "banner-card",
+      "name": "Banner Card",
+      "kind": "card",
+      "figma": {
+        "page": "components",
+        "node": "3024:2330"
+      },
+      "use": "A tinted header band with icon and heading, then body. For a section intro or a key message.",
+      "layout": {
+        "direction": "vertical",
+        "padding": {
+          "top": "padding/container",
+          "right": "padding/container",
+          "bottom": "padding/container",
+          "left": "padding/container"
+        },
+        "gap": "gap/stack"
+      },
+      "surface": {
+        "fill": "container/primary",
+        "border": "border/container",
+        "border_width": "border-width/default",
+        "radius": "radius/default"
+      },
+      "width": "fills its grid column",
+      "parts": [
+        {
+          "part": "banner",
+          "fill": "background/brand-subtle",
+          "radius": "radius/default",
+          "layout": {
+            "direction": "horizontal",
+            "padding": {
+              "top": "padding/container",
+              "right": "padding/container",
+              "bottom": "padding/container",
+              "left": "padding/container"
+            },
+            "gap": "gap/inline",
+            "align": "center"
+          },
+          "contains": [
+            "image",
+            "heading-content"
+          ]
+        },
+        {
+          "part": "body",
+          "component": "body-text",
+          "layout": {
+            "padding": {
+              "top": 0,
+              "right": "padding/container",
+              "bottom": 0,
+              "left": "padding/container"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "media-card",
+      "name": "Media Card",
+      "kind": "card",
+      "figma": {
+        "page": "components",
+        "node": "3024:2368"
+      },
+      "use": "Card with an image, chart or screenshot filling its width. Title on top or media on top; body and tag row are optional.",
+      "props": {
+        "Layout": [
+          "Title top",
+          "Media top"
+        ],
+        "Show body": "boolean",
+        "Show tags": "boolean"
+      },
+      "layout": {
+        "direction": "vertical",
+        "padding": {
+          "top": "padding/container",
+          "right": "padding/container",
+          "bottom": "padding/container",
+          "left": "padding/container"
+        },
+        "gap": "gap/stack"
+      },
+      "surface": {
+        "fill": "container/primary",
+        "border": "border/container",
+        "border_width": "border-width/default",
+        "radius": "radius/default"
+      },
+      "width": "fills its grid column",
+      "parts": [
+        {
+          "part": "heading",
+          "component": "heading-content"
+        },
+        {
+          "part": "media",
+          "component": "image",
+          "width": "fill"
+        },
+        {
+          "part": "body",
+          "component": "body-text",
+          "optional": true
+        },
+        {
+          "part": "tags",
+          "layout": {
+            "direction": "horizontal",
+            "gap": "gap/inline"
+          },
+          "contains": [
+            "chip"
+          ],
+          "optional": true
+        }
+      ]
+    },
+    {
+      "id": "faq-card",
+      "name": "FAQ Card",
+      "kind": "card",
+      "figma": {
+        "page": "components",
+        "node": "3024:2369"
+      },
+      "use": "A title then a stack of Accordion Items separated by dividers. Responsive to the asset: show the answers when the asset needs them (the user supplies them), questions only otherwise.",
+      "layout": {
+        "direction": "vertical",
+        "padding": {
+          "top": "padding/container",
+          "right": "padding/container",
+          "bottom": "padding/container",
+          "left": "padding/container"
+        },
+        "gap": "gap/stack"
+      },
+      "surface": {
+        "fill": "container/primary",
+        "border": "border/container",
+        "border_width": "border-width/default",
+        "radius": "radius/default"
+      },
+      "width": "fills its grid column",
+      "parts": [
+        {
+          "part": "heading",
+          "component": "heading-content"
+        },
+        {
+          "part": "items",
+          "layout": {
+            "direction": "vertical",
+            "gap": "spacing/8"
+          },
+          "contains": [
+            "accordion-item"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "profile-card",
+      "name": "Profile Card",
+      "kind": "card",
+      "figma": {
+        "page": "components",
+        "node": "3024:2402"
+      },
+      "use": "Insight or testimonial: status chip and meta, title, body, tags, a divider, then avatar with name and role.",
+      "props": {
+        "Meta": "text"
+      },
+      "layout": {
+        "direction": "vertical",
+        "padding": {
+          "top": "padding/container",
+          "right": "padding/container",
+          "bottom": "padding/container",
+          "left": "padding/container"
+        },
+        "gap": "gap/stack"
+      },
+      "surface": {
+        "fill": "container/primary",
+        "border": "border/container",
+        "border_width": "border-width/default",
+        "radius": "radius/default"
+      },
+      "width": "fills its grid column",
+      "parts": [
+        {
+          "part": "meta row",
+          "layout": {
+            "direction": "horizontal",
+            "gap": "spacing/8",
+            "align": "space-between"
+          },
+          "contains": [
+            "chip"
+          ]
+        },
+        {
+          "part": "meta",
+          "role": "caption",
+          "color": "text/secondary"
+        },
+        {
+          "part": "heading",
+          "component": "heading-content"
+        },
+        {
+          "part": "body",
+          "component": "body-text"
+        },
+        {
+          "part": "tags",
+          "layout": {
+            "direction": "horizontal",
+            "gap": "gap/inline"
+          },
+          "contains": [
+            "chip"
+          ]
+        },
+        {
+          "part": "divider",
+          "component": "divider"
+        },
+        {
+          "part": "person",
+          "layout": {
+            "direction": "horizontal",
+            "gap": "gap/inline",
+            "align": "center"
+          },
+          "contains": [
+            "image",
+            "heading-content"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "badge",
+      "name": "Badge",
+      "kind": "control",
+      "figma": {
+        "page": "Badges",
+        "node": "3025:3802"
+      },
+      "use": "Colour-coded metadata label with a pill radius. Warnings use Negative.",
+      "props": {
+        "Label": "text",
+        "Intent": [
+          "Positive",
+          "Negative",
+          "Information",
+          "Neutral",
+          "Primary"
+        ],
+        "Emphasis": [
+          "Subtle",
+          "Intense"
+        ],
+        "Size": [
+          "Small",
+          "Medium",
+          "Large"
+        ]
+      },
+      "layout": {
+        "direction": "horizontal",
+        "gap": 0
+      },
+      "surface": {
+        "radius": "radius/pill"
+      },
+      "variants": {
+        "Size": {
+          "Small": {
+            "padding": {
+              "top": 0,
+              "right": "spacing/8",
+              "bottom": 0,
+              "left": "spacing/8"
+            },
+            "role": "label"
+          },
+          "Medium": {
+            "padding": {
+              "top": "spacing/4",
+              "right": "spacing/8",
+              "bottom": "spacing/4",
+              "left": "spacing/8"
+            },
+            "role": "label-md"
+          },
+          "Large": {
+            "padding": {
+              "top": "spacing/4",
+              "right": "spacing/12",
+              "bottom": "spacing/4",
+              "left": "spacing/12"
+            },
+            "role": "label-lg"
+          }
+        },
+        "Intent/Emphasis": {
+          "Positive/Subtle": {
+            "fill": "container/success",
+            "label": "text/success"
+          },
+          "Positive/Intense": {
+            "fill": "container/success-strong",
+            "label": "text/on-strong"
+          },
+          "Negative/Subtle": {
+            "fill": "container/error",
+            "label": "text/error"
+          },
+          "Negative/Intense": {
+            "fill": "container/error-strong",
+            "label": "text/on-strong"
+          },
+          "Information/Subtle": {
+            "fill": "container/info",
+            "label": "text/info"
+          },
+          "Information/Intense": {
+            "fill": "container/info-strong",
+            "label": "text/on-strong"
+          },
+          "Neutral/Subtle": {
+            "fill": "container/primary",
+            "label": "text/secondary"
+          },
+          "Neutral/Intense": {
+            "fill": "container/inverse",
+            "label": "text/inverse"
+          },
+          "Primary/Subtle": {
+            "fill": "container/selected",
+            "label": "text/brand"
+          },
+          "Primary/Intense": {
+            "fill": "container/brand",
+            "label": "text/on-brand"
+          }
+        }
+      },
+      "width": "hug",
+      "wrap": "single line"
+    },
+    {
+      "id": "button",
+      "name": "Button",
+      "kind": "control",
+      "figma": {
+        "page": "Badges",
+        "node": "3025:3891"
+      },
+      "use": "Call-to-action with softened square corners (never pill) and an optional trailing arrow. Static: no hover or pressed states.",
+      "props": {
+        "Label": "text",
+        "Show icon": "boolean",
+        "Style": [
+          "Neutral",
+          "Brand"
+        ],
+        "Elevation": [
+          "Flat",
+          "Raised"
+        ]
+      },
+      "layout": {
+        "direction": "horizontal",
+        "padding": {
+          "top": "spacing/12",
+          "right": "spacing/20",
+          "bottom": "spacing/12",
+          "left": "spacing/20"
+        },
+        "gap": "spacing/24"
+      },
+      "surface": {
+        "radius": "radius/default"
+      },
+      "parts": [
+        {
+          "part": "label",
+          "role": "button"
+        },
+        {
+          "part": "arrow",
+          "border_width": "border-width/thick",
+          "optional": true
+        }
+      ],
+      "variants": {
+        "Style": {
+          "Neutral": {
+            "fill": "container/inverse",
+            "label": "text/inverse",
+            "arrow": "text/inverse"
+          },
+          "Brand": {
+            "fill": "container/brand",
+            "label": "text/on-brand",
+            "arrow": "text/on-brand"
+          }
+        },
+        "Elevation": {
+          "Flat": {
+            "elevation": "Elevation/None"
+          },
+          "Raised": {
+            "elevation": "Elevation/Mid Raised"
+          }
+        }
+      },
+      "width": "hug",
+      "wrap": "single line"
+    },
+    {
+      "id": "tag",
+      "name": "Tag",
+      "kind": "control",
+      "figma": {
+        "page": "Badges",
+        "node": "3047:4302"
+      },
+      "use": "Uppercase statement tag.",
+      "props": {
+        "Label": "text",
+        "Style": [
+          "Neutral",
+          "Brand"
+        ]
+      },
+      "layout": {
+        "direction": "horizontal",
+        "padding": {
+          "top": "spacing/8",
+          "right": "spacing/12",
+          "bottom": "spacing/8",
+          "left": "spacing/12"
+        },
+        "gap": 0
+      },
+      "surface": {
+        "radius": "radius/md"
+      },
+      "parts": [
+        {
+          "part": "label",
+          "role": "tag"
+        }
+      ],
+      "variants": {
+        "Style": {
+          "Neutral": {
+            "fill": "container/inverse",
+            "label": "text/inverse"
+          },
+          "Brand": {
+            "fill": "container/brand",
+            "label": "text/on-brand"
+          }
+        }
+      },
+      "width": "hug",
+      "wrap": "single line"
+    },
+    {
+      "id": "contact-pill",
+      "name": "Contact Pill",
+      "kind": "control",
+      "figma": {
+        "page": "Badges",
+        "node": "3025:3882"
+      },
+      "use": "Contact or fact pill, for example an email and phone number.",
+      "props": {
+        "Label": "text",
+        "Style": [
+          "Neutral",
+          "Brand"
+        ],
+        "Elevation": [
+          "Flat",
+          "Raised"
+        ]
+      },
+      "layout": {
+        "direction": "horizontal",
+        "padding": {
+          "top": "spacing/8",
+          "right": "spacing/20",
+          "bottom": "spacing/8",
+          "left": "spacing/20"
+        },
+        "gap": 0
+      },
+      "surface": {
+        "radius": "radius/pill"
+      },
+      "parts": [
+        {
+          "part": "label",
+          "role": "label-lg"
+        }
+      ],
+      "variants": {
+        "Style": {
+          "Neutral": {
+            "fill": "container/inverse",
+            "label": "text/inverse"
+          },
+          "Brand": {
+            "fill": "container/brand",
+            "label": "text/on-brand"
+          }
+        },
+        "Elevation": {
+          "Flat": {
+            "elevation": "Elevation/None"
+          },
+          "Raised": {
+            "elevation": "Elevation/Mid Raised"
+          }
+        }
+      },
+      "width": "hug",
+      "wrap": "single line"
+    }
+  ]
+}

@@ -296,6 +296,21 @@
       "id": "opacity-scale",
       "decision": "Opacity variables are stored in Figma as 0–100, because Figma reads opacity variables as percentages (0.32 rendered as 0.32%, making bound layers invisible). The build script divides by 100, so the MCP still serves 0–1.",
       "decided_on": "2026-10-16"
+    },
+    {
+      "id": "card-tone-featured",
+      "decision": "The card tone 'Selected' is renamed 'Featured' (Card base and Card, in Figma and the MCP): marketing material has no selection state; Featured makes one card stand out. Same tokens: container/selected fill, border/brand border. Chip padding stays as designed.",
+      "decided_on": "2026-10-17"
+    },
+    {
+      "id": "neutral-chip-on-default-card",
+      "decision": "Keep as designed: Neutral chip and Neutral/Subtle badge use container/primary, and Neutral is the default chip tone.",
+      "decided_on": "2026-10-17"
+    },
+    {
+      "id": "faq-answers",
+      "decision": "FAQ is responsive to the asset: Accordion Item has an optional answer (Role/Body, text/body, 'Show answer'); show answers when the asset needs them, questions only otherwise. Added in Figma 2026-10-17.",
+      "decided_on": "2026-10-17"
     }
   ],
   "figma_updates_needed": [],
@@ -307,6 +322,8 @@
     "2026-10-14: added Text Roles collection (Document, Newsletter, Deck; 27 variables) and 11 Role/* text styles; added container/info, text/info, container/info-strong, container/success-strong, container/error-strong, text/on-strong; components moved to Role/* styles and the container default; Badge rebuilt (5 intents x Subtle/Intense x 3 sizes); Tag, Contact Pill and Button given Neutral/Brand styles, Button radius 2px; AI Export cards moved to Archive.",
     "2026-10-14: size/eyebrow and line-height/eyebrow repointed to 12/18; Eyebrow style descriptions and both Typography spec rows updated; 11 Risk Evaluation cards moved to Archive.",
     "2026-10-14: size/eyebrow and line-height/eyebrow back to 10/16 and Role/Eyebrow Document mode pointed at them; brand/500 changed to #1655F2 and the three Colours-page labels updated.",
-    "2026-10-14: snapshot re-synced from Figma (Text Roles collection, 6 semantic colours, eyebrow aliases, 11 Role/* styles) and verified variable-by-variable against Figma; tokens.json rebuilt with typography.roles."
+    "2026-10-14: snapshot re-synced from Figma (Text Roles collection, 6 semantic colours, eyebrow aliases, 11 Role/* styles) and verified variable-by-variable against Figma; tokens.json rebuilt with typography.roles.",
+    "2026-10-17: renamed the Card base and Card tone 'Selected' to 'Featured' (instances on the Dark theme section follow automatically); Card base description updated to match.",
+    "2026-10-17: updated component descriptions to match their bindings (Heading content, Body Text, Chip, Card base, Metric Card, Accordion Item, FAQ Card); added an optional Answer (Role/Body, text/body) with 'Show answer' and 'Answer' properties to Accordion Item."
   ]
 }
