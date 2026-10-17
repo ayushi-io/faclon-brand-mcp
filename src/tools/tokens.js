@@ -132,7 +132,7 @@ function toCss(cats, format) {
   const block = (sel, lines, indent = "") => (lines.length ? `${indent}${sel} {\n${lines.map((l) => `${indent}  ${l}`).join("\n")}\n${indent}}\n` : "");
   let css = `/* Faclon brand tokens — generated from Figma "${t.source.fileName}" */\n`;
   css += block(":root", root);
-  css += block(':root[data-theme="dark"]', dark);
+  css += block(':root[data-theme="dark"], [data-theme="dark"]', dark);
   for (const [sel, lines] of formatBlocks) css += block(sel, lines);
   const mobileBlocks = block(":root", mobile, "  ") + formatBlocks.map(([sel, , m]) => block(sel, m, "  ")).join("");
   if (mobileBlocks) css += `@media (max-width: ${t.typography.breakpoint.mobileMax}px) {\n${mobileBlocks}}\n`;

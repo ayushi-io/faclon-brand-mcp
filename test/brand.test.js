@@ -2,7 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readData } from "../src/lib/data.js";
 import { getTokens } from "../src/tools/tokens.js";
-import { getBrandGuidelines, mergeRules } from "../src/tools/guidelines.js";
+import { getBrandGuidelines, mergeRules, tokenCssVars, componentRefs } from "../src/tools/guidelines.js";
 
 const HEX = /^#[0-9A-F]{6}$/;
 const snap = readData("figma/snapshot.json");
@@ -48,7 +48,7 @@ test("spacing, radius, border and elevation come through", () => {
 test("CSS output has variables, dark theme and mobile overrides", () => {
   const { code } = getTokens({ as: "css" });
   assert.match(code, /--color-brand-500: #1655F2;/);
-  assert.match(code, /:root\[data-theme="dark"\]/);
+  assert.match(code, /:root\[data-theme="dark"\], \[data-theme="dark"\] \{/);
   assert.match(code, /@media \(max-width: 767px\)/);
   assert.match(code, /--text-display-xl-size: 72px;/);
   assert.doesNotMatch(code, /undefined|NaN/);
@@ -441,4 +441,46 @@ test("opacity: Figma stores 0–100, tokens serve 0–1", () => {
   for (const v of snap.filter((x) => /^global\/opacity\/\d+$/.test(x.name))) assert.equal(v.values.Default, Number(v.name.split("/").pop()), v.name);
   assert.deepEqual(getTokens({ category: "opacity" }).tokens, { subtle: 0.32, overlay: 0.48, muted: 0.72, full: 1 });
   assert.match(getTokens({ category: "opacity", as: "css" }).code, /--opacity-subtle: 0\.32;/);
+});
+
+test("components: every value is an existing token, role or component, with a CSS variable", () => {
+  const { components } = readData("components/components.json");
+  const vars = tokenCssVars();
+  const css = getTokens({ as: "css" }).code;
+  const roles = readData("tokens.json").typography.roles;
+  const ids = components.map((c) => c.id);
+  assert.equal(new Set(ids).size, ids.length, "component ids are unique");
+  assert.equal(components.length, 20);
+  const skip = new Set(["use", "name", "id", "width"]);
+  const walk = (v, key, where) => {
+    if (typeof v === "string") {
+      if (key === "role") assert.ok(roles[v], `${where}: role "${v}" does not exist`);
+      else if (key === "component") assert.ok(ids.includes(v), `${where}: component "${v}" does not exist`);
+      else if (key === "contains") assert.ok(ids.includes(v.replace(/ \(optional\)$/, "")) || v === "metric", `${where}: "${v}" is not a component`);
+      else if (v.includes("/") && !skip.has(key)) assert.ok(v in vars, `${where}: "${v}" is not a token`);
+      return;
+    }
+    if (v && typeof v === "object") for (const [k, x] of Object.entries(v)) walk(x, Array.isArray(v) ? key : k, where);
+  };
+  for (const c of components) {
+    assert.match(c.figma.node, /^\d+:\d+$/, c.id);
+    walk({ ...c, figma: undefined }, null, c.id);
+  }
+  for (const tok of componentRefs(components).tokens) assert.match(css, new RegExp(`${vars[tok]}:`), `${tok} -> ${vars[tok]} missing from CSS`);
+  for (const r of componentRefs(components).roles) assert.match(css, new RegExp(`--role-${r}-size:`), r);
+});
+
+test("components section: CSS variables, and role sizes for the requested format", () => {
+  const all = getBrandGuidelines({ section: "components" });
+  assert.equal(all.status, "written");
+  assert.equal(all.css_vars["container/primary"], "var(--color-container-primary)");
+  assert.equal(all.css_vars["padding/container"], "var(--padding-container)");
+  assert.equal(all.text_roles.body.desktop, undefined);
+  const deck = getBrandGuidelines({ section: "components", format_profile: "deck" });
+  assert.equal(deck.text_roles.body.desktop.size, 24);
+  const card = deck.components.find((c) => c.id === "card-base");
+  assert.deepEqual(card.surface, { fill: "container/primary", border: "border/container", border_width: "border-width/default", radius: "radius/default" });
+  assert.ok(card.variants.Tone.Featured && !card.variants.Tone.Selected, "the Selected tone is called Featured");
+  const answer = deck.components.find((c) => c.id === "accordion-item").parts.find((x) => x.part === "answer");
+  assert.deepEqual([answer.role, answer.color, answer.optional], ["body", "text/body", true]);
 });

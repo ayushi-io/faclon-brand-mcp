@@ -1,7 +1,7 @@
 import { readData, dataExists, listData } from "../lib/data.js";
 import { BrandError } from "../lib/envelope.js";
 
-export const SECTIONS = ["overview", "rules", "defaults", "logo", "typography", "color", "voice", "illustration", "architecture", "imagery"];
+export const SECTIONS = ["overview", "rules", "defaults", "components", "logo", "typography", "color", "voice", "illustration", "architecture", "imagery"];
 
 // Sections the Figma file does not cover yet. Returned as gaps, never invented.
 const NOT_WRITTEN = {
@@ -37,6 +37,8 @@ export function getBrandGuidelines({ section = "overview", format_profile } = {}
   if (section === "defaults") {
     return { section, status: "written", about: readData("rules/defaults.json").about, defaults: readData("rules/defaults.json").defaults, format_profile: profileInfo };
   }
+
+  if (section === "components") return { section, status: "written", ...components(profile), format_profile: profileInfo };
 
   if (NOT_WRITTEN[section]) {
     return {
@@ -94,4 +96,54 @@ export function mergeRules(profile) {
     rule.overridden_by = profile.id;
   }
   return { rules, applied, rejected };
+}
+
+// ---------- components ----------
+const ROLE_FORMATS = { document: "document", newsletter: "newsletter", deck: "deck" };
+
+// Every token name a component may use, mapped to its CSS custom property in get_tokens({ as: "css" }).
+export function tokenCssVars() {
+  const t = readData("tokens.json");
+  const map = {};
+  for (const [group, names] of Object.entries(t.color.semantic.light)) for (const name of Object.keys(names)) map[`${group}/${name}`] = `--color-${group}-${name}`;
+  for (const n of t.spacing.scale) map[`spacing/${n}`] = `--space-${n}`;
+  for (const name of Object.keys(t.spacing.roles.desktop)) map[name] = `--${name.replace("/", "-")}`;
+  for (const name of Object.keys(t.radius)) map[`radius/${name}`] = `--radius-${name}`;
+  for (const name of Object.keys(t.border.width)) map[`border-width/${name}`] = `--border-width-${name}`;
+  for (const name of Object.keys(t.elevation)) map[`Elevation/${name.replace(/(^|-)([a-z])/g, (_, d, c) => (d ? " " : "") + c.toUpperCase())}`] = `--shadow-${name}`;
+  return map;
+}
+
+// Token names and text roles a component spec refers to.
+export function componentRefs(spec) {
+  const vars = tokenCssVars();
+  const tokens = new Set();
+  const roles = new Set();
+  const walk = (v, key) => {
+    if (typeof v === "string") { if (key === "role") roles.add(v); else if (v in vars) tokens.add(v); return; }
+    if (v && typeof v === "object") for (const [k, x] of Object.entries(v)) walk(x, Array.isArray(v) ? key : k);
+  };
+  walk(spec);
+  return { tokens: [...tokens].sort(), roles: [...roles].sort() };
+}
+
+function components(profile) {
+  const data = readData("components/components.json");
+  const vars = tokenCssVars();
+  const { tokens, roles } = componentRefs(data.components);
+  const out = { about: data.about, source: data.source, usage: data.usage, components: data.components };
+  out.css_vars = Object.fromEntries(tokens.map((t) => [t, `var(${vars[t]})`]));
+  const allRoles = readData("tokens.json").typography.roles;
+  const format = profile && ROLE_FORMATS[profile.id];
+  out.text_roles = Object.fromEntries(roles.map((r) => {
+    const role = allRoles[r];
+    const base = { css: `--role-${r}-*`, family: role.family, weight: role.weight, textCase: role.textCase };
+    if (!format) return [r, base];
+    const f = role.formats[format];
+    return [r, { ...base, desktop: { size: f.desktop.size, lineHeight: f.desktop.lineHeight }, mobile: { size: f.mobile.size, lineHeight: f.mobile.lineHeight } }];
+  }));
+  out.text_roles_note = format
+    ? `Sizes for the ${profile.name} format (Text Roles mode ${format}).`
+    : "Pass format_profile (document, newsletter or deck) to get each role's size for that format, or call get_tokens with category typography and the format.";
+  return out;
 }
