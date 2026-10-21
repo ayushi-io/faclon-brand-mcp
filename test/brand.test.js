@@ -68,7 +68,11 @@ test("bad parameters give a clear error code", () => {
 test("guidelines: written sections, gaps and overview", () => {
   assert.match(getBrandGuidelines({ section: "logo" }).guidance, /white logo/i);
   const voice = getBrandGuidelines({ section: "voice" });
-  assert.equal(voice.status, "not_written");
+  assert.equal(voice.status, "written");
+  assert.match(voice.guidance, /Faclon Labs by name/);
+  // The voice bans en and em dashes, so its own text must not use them.
+  assert.doesNotMatch(voice.guidance, /[–—]/);
+  assert.equal(getBrandGuidelines({ section: "imagery" }).status, "not_written");
   const overview = getBrandGuidelines();
   assert.ok(overview.format_profiles.some((p) => p.id === "deck"));
   assert.equal(typeof overview.open_questions, "number");

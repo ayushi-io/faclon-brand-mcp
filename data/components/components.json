@@ -12,6 +12,8 @@
   },
   "usage": [
     "Components are building blocks, not templates: combine them into any layout the content needs, inside the format's guardrails.",
+    "The named cards (Card, Icon Card, Highlight Card, List Item Card, Metric Card, Banner Card, Media Card, FAQ Card, Profile Card) are starting points, not the full set. When none fits the content, design a new card: start from Card base and pick a tone (it brings the fill, border, radius and padding), then lay out its slot freely with the atoms, controls and text roles, spaced with spacing tokens. A new card never adds a surface style, colour, radius, shadow or font the system does not define.",
+    "Give each section the card design its content needs (for example a number-led, image-led, split, stat-row, step or comparison card) rather than the same card in every section. Cards in one row or grid are one set and share a design.",
     "Keep each component's tokens as bound: fill, border, radius, padding, gap and text role. Never restyle one with a value the system does not define.",
     "Themes come from the colour mode: the dark version of a component is the same component with Semantic Colors in Dark mode. Never pick dark colours by hand.",
     "Text inside components uses text roles, so sizes follow the output format (Document, Newsletter, Deck) and breakpoint.",

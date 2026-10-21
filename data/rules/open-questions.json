@@ -311,6 +311,21 @@
       "id": "faq-answers",
       "decision": "FAQ is responsive to the asset: Accordion Item has an optional answer (Role/Body, text/body, 'Show answer'); show answers when the asset needs them, questions only otherwise. Added in Figma 2026-10-17.",
       "decided_on": "2026-10-17"
+    },
+    {
+      "id": "newsletter-no-section-numbers",
+      "decision": "Newsletter section headings carry no numbers and no numbered badge or tile. Numbers in the content drafts ('🔹 1. The Real Problem') are draft structure, not shown in the newsletter. Numbered steps inside a section's body stay when their order matters.",
+      "decided_on": "2026-10-21"
+    },
+    {
+      "id": "new-card-designs",
+      "decision": "Claude may design new cards, not only the named ones: built on Card base (its tone brings fill, border, radius and padding), with atoms, controls and text roles arranged freely in the slot and spaced with spacing tokens. Each section gets the card design its content needs instead of the same card everywhere; cards in one row or grid share a design. A new card never adds a surface style, colour, radius, shadow or font.",
+      "decided_on": "2026-10-21"
+    },
+    {
+      "id": "newsletter-no-emoji",
+      "decision": "No emoji anywhere in a newsletter. Emoji in the content drafts (🔥 🔹 👉 ✔ ⏱) are draft markers, not shown; takeaways and results are shown with text roles and components.",
+      "decided_on": "2026-10-21"
     }
   ],
   "figma_updates_needed": [],
