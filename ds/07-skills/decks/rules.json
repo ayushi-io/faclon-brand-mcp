@@ -1,0 +1,203 @@
+{
+  "id": "deck",
+  "name": "Presentation (16:9)",
+  "status": "approved",
+  "note": "Two kinds of slides. (1) Reference slides designed by the brand team in Figma (Design MCP › Layouts): kept as designed; only background colour, fonts, chips and logo placement are mapped to the design system. (2) Slides Claude designs: follow every guardrail below. Approved 2026-10-16.",
+  "audience": "external",
+  "typography": {
+    "text_roles_mode": "Deck",
+    "breakpoint_mode": "desktop",
+    "min_size": 14,
+    "max_size": 72,
+    "max_style": "display/xl",
+    "styles": {
+      "hero_title": {
+        "style": "display/xl",
+        "weight": 700,
+        "use": "page breaker and closing statements, big numbers"
+      },
+      "slide_title": {
+        "style": "display/lg",
+        "weight": 700,
+        "use": "slide headline (designed slides use 62px)"
+      },
+      "eyebrow": {
+        "style": "body/24",
+        "weight": 500,
+        "use": "kicker above the headline, uppercase"
+      },
+      "section_heading": {
+        "style": "heading/h1",
+        "weight": 700
+      },
+      "card_title": {
+        "style": "heading/h3",
+        "weight": 700
+      },
+      "panel_heading": {
+        "style": "body/24",
+        "weight": 700,
+        "use": "uppercase panel heading"
+      },
+      "body": {
+        "style": "body/24",
+        "weight": 400
+      },
+      "small": {
+        "style": "body/lg",
+        "weight": 400,
+        "use": "supporting text, 18px"
+      },
+      "caption": {
+        "style": "body/sm",
+        "weight": 400,
+        "use": "chart labels and captions, 14px"
+      },
+      "chip": {
+        "style": "body/xl",
+        "weight": 600,
+        "use": "label chips, uppercase text"
+      },
+      "proof_strip": {
+        "style": "body/24",
+        "weight": 600
+      }
+    }
+  },
+  "guardrails": {
+    "status": "approved",
+    "note": "Guidance for whoever designs in this format. user_decides = what is made (the user's call); fixed = do not change; must_not = hard limits; avoid = strong advice; design_direction = how to use the system; claude_decides = how it looks, where the designer has freedom. Every design item cites its basis in the design system.",
+    "user_decides": [
+      "What is being made, for whom and why: the deck, its purpose and audience.",
+      "The content and facts. The designer uses exactly what the user supplies or approves: never invents, adds, rewrites, shortens or cuts it, and asks before suggesting a change.",
+      "The scope: which slides; nothing is added that was not asked for; when it is unclear, ask.",
+      "The number of slides, when the user sets it.",
+      "Whether an AI slide stays dark (Claude asks).",
+      "Which page-breaker or closing design to use, from the reference slides."
+    ],
+    "fixed": [
+      {
+        "id": "canvas",
+        "text": "16:9, 1920 × 1080 px.",
+        "basis": [
+          "profile:canvas"
+        ]
+      },
+      {
+        "id": "safe-area",
+        "text": "52px padding on all four sides (spacing/52) on every slide, hero slides included: logo, labels, titles and content all align to it; content area 1816 × 976 px.",
+        "basis": [
+          "profile:safe_area",
+          "profile:content_area"
+        ]
+      },
+      {
+        "id": "grid",
+        "text": "12-column grid.",
+        "basis": [
+          "profile:grid"
+        ]
+      },
+      {
+        "id": "text-roles",
+        "text": "Text uses the named text style for its element (e.g. headline Display/LG Bold, body Body/24), between 14px and 72px.",
+        "basis": [
+          "profile:typography.styles",
+          "rule:type.styles-only"
+        ]
+      },
+      {
+        "id": "logo",
+        "text": "Logo top-right on the 52px edge: white on dark and brand slides, blue on light; size may vary.",
+        "basis": [
+          "profile:reference_slides.mapping.logo",
+          "rule:logo.blue-on-light",
+          "rule:logo.white-on-dark-or-brand"
+        ]
+      },
+      {
+        "id": "export",
+        "text": "Delivered as an HTML file. HTML is the only export.",
+        "basis": [
+          "profile:export"
+        ]
+      },
+      {
+        "id": "themes",
+        "text": "Three themes: light (background/primary), dark (background/inverse) and brand (background/brand), each with its fixed text and logo colours.",
+        "basis": [
+          "profile:themes",
+          "rule:color.pairings"
+        ]
+      },
+      {
+        "id": "reference-slides",
+        "text": "Reference slides from Figma keep their design; only background colour, fonts, chips and logo placement are mapped to the design system.",
+        "basis": [
+          "profile:reference_slides"
+        ]
+      }
+    ],
+    "claude_decides": [
+      "Layout and composition within the grid: what goes where, how many columns, what leads.",
+      "Visual hierarchy: what is large, what is quiet, and how the eye moves.",
+      "Which components to use and how to combine them, and new card designs on Card base when the named cards don't fit the content.",
+      "How to show each idea: a stat, a process, a comparison, a story.",
+      "How the requested content is spread across slides (unless the user sets the number), and the single message of each slide."
+    ]
+  },
+  "overrides": [
+    {
+      "rule": "type.min-size",
+      "value": 14,
+      "reason": "Matches the brand team's designed slides (small text and chart labels at 14px and up); decided 2026-10-16."
+    }
+  ],
+  "logo": {
+    "position": "bottom-right",
+    "min_width": 120
+  },
+  "export": {
+    "file_types": [
+      "html"
+    ]
+  },
+  "severity": {},
+  "themes": {
+    "light": {
+      "background": "background/primary",
+      "text": {
+        "heading": "text/heading",
+        "body": "text/body",
+        "eyebrow": "text/eyebrow",
+        "highlight": "text/link"
+      },
+      "logo": "blue"
+    },
+    "dark": {
+      "background": "background/inverse",
+      "text": {
+        "heading": "text/inverse",
+        "body": "text/inverse",
+        "eyebrow": "text/inverse at opacity/muted",
+        "highlight": "text/accent"
+      },
+      "logo": "white",
+      "note": "Mapped from the designed slides' #132335 to the nearest token."
+    },
+    "brand": {
+      "background": "background/brand",
+      "text": {
+        "heading": "text/on-brand",
+        "body": "text/on-brand",
+        "highlight": "text/accent-on-brand"
+      },
+      "logo": "white"
+    }
+  },
+  "ai_slides": {
+    "default_theme": "dark",
+    "ask_first": true,
+    "rule": "Any slide about AI defaults to the dark theme, but ask the user whether to keep it dark before finishing."
+  }
+}

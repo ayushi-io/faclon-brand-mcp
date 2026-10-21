@@ -1,4 +1,4 @@
-// Builds data/tokens.json from data/figma/snapshot.json.
+// Builds ds/01-foundations/tokens.json from sources/figma/snapshot.json.
 // Run after every new Figma snapshot: `npm run build:tokens`.
 // Every alias is resolved to its final value, and the reference is kept
 // alongside it so tools can show both ("#1655F2" and "brand/500").
@@ -6,9 +6,10 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { P } from "../src/lib/paths.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const snapshot = JSON.parse(fs.readFileSync(path.join(ROOT, "data/figma/snapshot.json"), "utf8"));
+const snapshot = JSON.parse(fs.readFileSync(path.join(ROOT, P.snapshot), "utf8"));
 
 const collections = Object.fromEntries(snapshot.collections.map((c) => [c.name, c]));
 const find = (collection, name) => {
@@ -57,7 +58,7 @@ for (const v of collections["Semantic Colors"].variables) {
 
 // Brand-team overrides (until Figma is updated). Each one is checked so a
 // stale override can't silently point at a colour that doesn't exist.
-const overrides = JSON.parse(fs.readFileSync(path.join(ROOT, "data/overrides/semantic-colors.json"), "utf8"));
+const overrides = JSON.parse(fs.readFileSync(path.join(ROOT, P.overrides), "utf8"));
 const getPath = (obj, parts) => parts.reduce((o, p) => o?.[p], obj);
 for (const p of overrides.primitives) setPath(color.primitive, p.path.split("/"), p.value);
 color.overrides = [];
@@ -232,5 +233,5 @@ const tokens = {
   opacity,
 };
 
-fs.writeFileSync(path.join(ROOT, "data/tokens.json"), JSON.stringify(tokens, null, 2) + "\n");
-console.log("Wrote data/tokens.json");
+fs.writeFileSync(path.join(ROOT, P.tokens), JSON.stringify(tokens, null, 2) + "\n");
+console.log(`Wrote ${P.tokens}`);

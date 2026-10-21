@@ -1,0 +1,168 @@
+{
+  "must_not": [
+    {
+      "id": "content-unchanged",
+      "text": "Hard rule: never edit or change the user's content (no rewriting, shortening, cutting or adding). If a change seems needed, highlight it, suggest how it could be shown better, and change nothing unless the user approves.",
+      "basis": [
+        "rule:content.no-edits",
+        "decision:content-fidelity",
+        "decision:user-decides-what"
+      ]
+    },
+    {
+      "id": "no-overflow",
+      "text": "Never let text overflow the canvas padding on any side, or the card, box, zone or node it sits in.",
+      "basis": [
+        "decision:no-overflow",
+        "profile:safe_area"
+      ]
+    },
+    {
+      "id": "min-size",
+      "text": "Never set text below 12px, however dense the diagram.",
+      "basis": [
+        "rule:type.min-size",
+        "profile:overrides"
+      ]
+    },
+    {
+      "id": "invented-parts",
+      "text": "Never add a device, system, connection or protocol that the user did not supply.",
+      "basis": [
+        "decision:user-decides-what"
+      ]
+    },
+    {
+      "id": "icons",
+      "text": "Never pick, draw or substitute an icon: icons come from the Faclon architecture icon library; until it is provided, ask the user.",
+      "basis": [
+        "profile:icons"
+      ]
+    },
+    {
+      "id": "arrow-colours",
+      "text": "Never give an arrow a colour the user did not define; use the default, data-flow or status arrow.",
+      "basis": [
+        "profile:arrows"
+      ]
+    },
+    {
+      "id": "no-ai-slop",
+      "text": "Never make it look generic or machine-made: no gradients, glows, neon, glass or blur effects, decorative filler (blobs, orbs, sparkles, floating shapes), AI cliche imagery or icons (glowing brains, circuits, robot hands, sparkles or rockets for AI), text effects, or a coloured stripe down one side of a card.",
+      "basis": [
+        "rule:design.no-ai-slop"
+      ]
+    },
+    {
+      "id": "tokens-only",
+      "text": "Never use a colour that is not a design-system token, and never sample or approximate one.",
+      "basis": [
+        "rule:color.tokens-only"
+      ]
+    },
+    {
+      "id": "two-fonts",
+      "text": "Never use a font other than TASA Orbiter (headings) and Inter (body).",
+      "basis": [
+        "rule:type.two-families-only"
+      ]
+    },
+    {
+      "id": "pill-radius",
+      "text": "Never put a pill radius on a zone, node box, tag or panel.",
+      "basis": [
+        "rule:radius.pill-only-for-pills"
+      ]
+    },
+    {
+      "id": "shadow-heavy-border",
+      "text": "Never combine a shadow with a border of 2px or more.",
+      "basis": [
+        "rule:elevation.no-shadow-with-heavy-border"
+      ]
+    }
+  ],
+  "avoid": [
+    {
+      "id": "accent-budget",
+      "text": "Avoid using the accent colours (accent and accent-2 together) on more than roughly 10–15% of the diagram; it is a highlight, not a palette.",
+      "basis": [
+        "rule:color.accent-budget"
+      ]
+    },
+    {
+      "id": "tertiary-text",
+      "text": "Avoid text/tertiary for labels that matter; at 3.4:1 it is for large or non-essential text only.",
+      "basis": [
+        "decision:tertiary-text-contrast"
+      ]
+    },
+    {
+      "id": "crossings",
+      "text": "Avoid arrows crossing each other or running through a node.",
+      "basis": [
+        "profile:arrows"
+      ]
+    },
+    {
+      "id": "template-layouts",
+      "text": "Avoid template layouts: the same icon, title and text card in every section, an icon on every heading or card when it adds nothing, or every section centred. Every element carries content or structure; when in doubt, leave it out.",
+      "basis": [
+        "rule:design.no-ai-slop",
+        "decision:new-card-designs"
+      ]
+    }
+  ],
+  "design_direction": [
+    {
+      "id": "node-construction",
+      "text": "Build each device as a node box: dashed outline, the title tag on top (brand fill, white text) and the device icon below, with gap/inline between them.",
+      "basis": [
+        "profile:shapes.node_box",
+        "profile:shapes.node_tag",
+        "profile:spacing.tag_to_icon"
+      ]
+    },
+    {
+      "id": "zones",
+      "text": "Group devices into zones with a heading above each box; nest sub-zones inside with the brand border.",
+      "basis": [
+        "profile:shapes.zone",
+        "profile:shapes.sub_zone"
+      ]
+    },
+    {
+      "id": "platform",
+      "text": "Show the platform (e.g. I/O Sense) as the one lifted panel: container/elevated with Elevation/Low Raised.",
+      "basis": [
+        "profile:shapes.platform_panel",
+        "rule:elevation.flat-default"
+      ]
+    },
+    {
+      "id": "arrows",
+      "text": "Connections use the default dashed slate arrow; the main data flow uses the solid brand arrow; arrow labels sit spacing/4 from the line.",
+      "basis": [
+        "profile:arrows",
+        "profile:spacing.arrow_label_offset"
+      ]
+    },
+    {
+      "id": "status",
+      "text": "Show states (online, alarm, offline…) with the five intents and their fixed fill/text pairs, and status arrows only where the user marks them.",
+      "basis": [
+        "rule:color.status-intents",
+        "rule:color.pairings",
+        "profile:arrows.status"
+      ]
+    },
+    {
+      "id": "too-much-content",
+      "text": "If the content is too much for the space, do not squeeze it below the minimum size or cut it: tell the user, and offer options (split across slides or pages, a different layout, a table or chart).",
+      "basis": [
+        "decision:no-overflow",
+        "decision:content-fidelity"
+      ]
+    }
+  ]
+}

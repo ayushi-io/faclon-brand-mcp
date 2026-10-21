@@ -1,0 +1,24 @@
+{
+  "canvas": {
+    "width": 600,
+    "height": "auto",
+    "unit": "px",
+    "breakpoints": {
+      "desktop": {
+        "width": 600,
+        "content_width": 552,
+        "modes": "desktop"
+      },
+      "mobile": {
+        "width": 400,
+        "content_width": 352,
+        "modes": "mobile",
+        "applies_below": 600
+      }
+    }
+  },
+  "safe_area": {
+    "left": 24,
+    "right": 24
+  }
+}

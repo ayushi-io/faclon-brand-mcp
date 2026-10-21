@@ -1,15 +1,16 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readData } from "../src/lib/data.js";
+import { P } from "../src/lib/paths.js";
 import { buildComponents, formatReport } from "../scripts/build-components.mjs";
 
-const snapshot = readData("figma/components-snapshot.json");
-const file = readData("components/components.json");
+const snapshot = readData(P.componentsSnapshot);
+const file = readData(P.components);
 const find = (s, name) => s.components.find((c) => c.name === name);
 
 test("components.json matches the Figma components export", () => {
   const { data, report } = buildComponents(snapshot, file);
-  assert.deepEqual(data, file, `components.json is out of date with data/figma/components-snapshot.json. Run 'npm run build:components'.\n${formatReport(report)}`);
+  assert.deepEqual(data, file, `components.json is out of date with ${P.componentsSnapshot}. Run 'npm run build:components'.\n${formatReport(report)}`);
   assert.deepEqual(file.source.pages, snapshot.pages);
   assert.deepEqual(file.components.map((c) => c.figma.node).sort(), snapshot.components.map((c) => c.id).sort(), "one entry per Figma component");
 });

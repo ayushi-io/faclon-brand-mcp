@@ -1,0 +1,272 @@
+{
+  "id": "newsletter",
+  "name": "Email newsletter (Brevo)",
+  "status": "approved",
+  "note": "Built for Brevo. Brevo requirements are from Brevo's documentation (2026-10-14); layout, spacing, hero and type values were approved by the brand team on 2026-10-16. Colours and type come from the design system only.",
+  "audience": "external",
+  "spacing": {
+    "side_padding": {
+      "token": "spacing/24",
+      "value": 24,
+      "note": "Both breakpoints."
+    },
+    "between_sections": {
+      "token": "padding/section",
+      "desktop": 56,
+      "mobile": 32
+    },
+    "between_blocks": {
+      "token": "gap/grid",
+      "desktop": 24,
+      "mobile": 16
+    },
+    "text_group": {
+      "token": "gap/stack",
+      "desktop": 12,
+      "mobile": 12,
+      "note": "The least space between any two text elements."
+    },
+    "inside_cards": {
+      "token": "padding/container",
+      "desktop": 16,
+      "mobile": 12
+    },
+    "banner_text_inset": {
+      "token": "spacing/24",
+      "value": 24,
+      "note": "Least distance from a heading on a banner to the banner's edges."
+    }
+  },
+  "surfaces": {
+    "outer": "background/secondary",
+    "content": "background/primary",
+    "note": "Newsletter only. The email sits on background/secondary and the 600px content column on background/primary. The contrast is deliberately subtle: the content should read as a layer without standing out."
+  },
+  "hero": {
+    "compositions": {
+      "banner_heading": {
+        "elements": [
+          "banner image",
+          "heading"
+        ],
+        "note": "The heading sits on the banner."
+      },
+      "banner_title_subheader_cta": {
+        "elements": [
+          "banner image",
+          "title",
+          "subheader",
+          "CTA"
+        ]
+      },
+      "title_subheader_image": {
+        "elements": [
+          "title",
+          "subheader",
+          "image"
+        ]
+      }
+    },
+    "rule": "Use only the elements the user gives; order and placement are the designer's call.",
+    "live_text": "Headings, subheaders and CTAs are live HTML text, not part of an image, so they read with images off.",
+    "banner_fallback": {
+      "background": "background/brand",
+      "text": "text/on-brand",
+      "note": "The banner cell's background colour shows when images are off and in Outlook desktop."
+    },
+    "cta": {
+      "radius": "radius/default",
+      "build": "Bulletproof button: a table cell with a link and live text, not an image."
+    }
+  },
+  "typography": {
+    "text_roles_mode": "Newsletter",
+    "breakpoint_modes": [
+      "desktop",
+      "mobile"
+    ],
+    "breakpoint_note": "Desktop sizes at the 600px breakpoint, Mobile sizes at 400px.",
+    "styles": {
+      "hero_title": {
+        "style": "heading/h2",
+        "weight": 600,
+        "use": "The main heading of the email, on or near the banner"
+      },
+      "section_heading": {
+        "style": "heading/h3",
+        "weight": 600,
+        "use": "Section headings"
+      },
+      "subheader": {
+        "style": "body/lg",
+        "weight": 400,
+        "use": "The line under the hero title"
+      },
+      "card_title": {
+        "role": "title",
+        "use": "Card and block titles"
+      },
+      "body": {
+        "role": "body",
+        "use": "Paragraphs and list items"
+      },
+      "cta": {
+        "role": "button",
+        "use": "Button labels"
+      },
+      "caption": {
+        "role": "caption",
+        "use": "Meta text, footer, legal"
+      }
+    },
+    "step_down": {
+      "hero_title": "heading/h3",
+      "note": "If a long heading stays as the user wrote it, the hero title may step down one size to stay uncluttered; never below the minimum."
+    },
+    "max_heading_chars": 60,
+    "font_note": "Per the two-typefaces rule there is no third fallback: headings are TASA Orbiter falling back to Inter, body is Inter. Email clients that don't load web fonts will show their default font; this is accepted (brand team, 2026-10-14).",
+    "font_stack": {
+      "heading": [
+        "TASA Orbiter",
+        "Inter"
+      ],
+      "body": [
+        "Inter"
+      ]
+    }
+  },
+  "guardrails": {
+    "status": "approved",
+    "note": "Guidance for whoever designs in this format. user_decides = what is made (the user's call); fixed = do not change; must_not = hard limits; avoid = strong advice; design_direction = how to use the system; claude_decides = how it looks, where the designer has freedom. Every design item cites its basis in the design system.",
+    "user_decides": [
+      "What is being made, for whom and why: the deliverable, its format, purpose and audience.",
+      "The content and facts. The designer uses exactly what the user supplies or approves: never invents, adds, rewrites, shortens or cuts it, and asks before suggesting a change.",
+      "The scope: which sections, pages or slides. Nothing is added that was not asked for; when it is unclear, ask.",
+      "Link and call-to-action destinations, and which Brevo contact attributes to personalise with."
+    ],
+    "fixed": [
+      {
+        "id": "canvas",
+        "text": "Two breakpoints: 600px wide on desktop and 400px on mobile (used below 600px). Height follows the content.",
+        "basis": [
+          "profile:canvas.breakpoints"
+        ]
+      },
+      {
+        "id": "side-padding",
+        "text": "24px padding left and right at both breakpoints, so content is 552px wide on desktop and 352px on mobile.",
+        "basis": [
+          "profile:spacing.side_padding",
+          "profile:canvas.breakpoints"
+        ]
+      },
+      {
+        "id": "brevo-html",
+        "text": "Brevo custom HTML: table-based layout with inline styles.",
+        "basis": [
+          "profile:platform.html"
+        ]
+      },
+      {
+        "id": "text-roles",
+        "text": "Set text with Role/* styles in the Newsletter mode: Desktop sizes at 600px, Mobile sizes at 400px.",
+        "basis": [
+          "rule:type.text-roles",
+          "profile:typography.text_roles_mode",
+          "profile:typography.breakpoint_modes"
+        ]
+      },
+      {
+        "id": "fonts",
+        "text": "Headings TASA Orbiter falling back to Inter; body Inter. No other fallback.",
+        "basis": [
+          "profile:typography.font_stack",
+          "rule:type.two-families-only"
+        ]
+      },
+      {
+        "id": "logo",
+        "text": "Logo centred at the top, as a retina PNG. Its image and link are placeholders the designers fill in.",
+        "basis": [
+          "profile:logo",
+          "decision:newsletter-layout"
+        ]
+      },
+      {
+        "id": "placeholders",
+        "text": "Every image and link is a placeholder (IMAGE_URL_…, LINK_URL_…); the designers upload images and add links themselves. List every placeholder with its size at the end.",
+        "basis": [
+          "profile:placeholders",
+          "decision:newsletter-placeholders"
+        ]
+      }
+    ],
+    "claude_decides": [
+      "Layout and composition within the grid: what goes where, how many columns, what leads.",
+      "Visual hierarchy: what is large, what is quiet, and how the eye moves.",
+      "Which components to use and how to combine them, and new card designs on Card base when the named cards don't fit the content.",
+      "How to show each idea: a stat, a process, a comparison, a story.",
+      "How the requested content is grouped into sections, and in what order."
+    ]
+  },
+  "overrides": [
+    {
+      "rule": "type.min-size",
+      "value": 14,
+      "reason": "Email clients render small text poorly."
+    }
+  ],
+  "logo": {
+    "position": "top-center",
+    "format": "png",
+    "retina": true,
+    "placeholder": {
+      "src": "IMAGE_URL_LOGO",
+      "href": "LINK_URL_LOGO"
+    }
+  },
+  "images": {
+    "max_width": {
+      "desktop": 552,
+      "mobile": 352
+    },
+    "upload_scale": 2,
+    "alt_text_required": true
+  },
+  "export": {
+    "file_types": [
+      "html"
+    ]
+  },
+  "severity": {
+    "alt_text_required": "error"
+  },
+  "platform": {
+    "esp": "brevo",
+    "html": "Custom HTML: table-based layout, inline styles, 600px max width, a media query switching to the 400px mobile layout below 600px",
+    "merge_tags": {
+      "unsubscribe": {
+        "tag": "{{ unsubscribe }}",
+        "required": true,
+        "use": "href of an <a> link; mandatory in every campaign"
+      },
+      "mirror": {
+        "tag": "{{ mirror }}",
+        "required": false,
+        "use": "href of a 'View in browser' link"
+      },
+      "contact_attribute": {
+        "tag": "{{ contact.ATTRIBUTE }}",
+        "use": "personalisation; ATTRIBUTE must match the Brevo contact attribute name exactly (case-sensitive), e.g. {{ contact.FIRSTNAME }}"
+      }
+    },
+    "quotes_note": "Use straight double quotes around placeholders (href=\"{{ unsubscribe }}\"); typographic quotes break Brevo's template rendering."
+  },
+  "placeholders": {
+    "image_src": "IMAGE_URL_<NAME>",
+    "link_href": "LINK_URL_<NAME>",
+    "alt_text": "ALT_TEXT_<NAME>",
+    "rule": "Every image and link is a placeholder; designers upload the images and add the links themselves. Alt text comes from the user; when it has not been given, use ALT_TEXT_<NAME>. Placeholder images keep their final width and height and a container/secondary fill so the layout holds. List every placeholder, with its display size and upload size (2x), at the end.",
+    "syntax_note": "Placeholders are plain uppercase names, never Brevo {{ }} syntax: Brevo would treat them as variables. Only {{ unsubscribe }}, {{ mirror }} and {{ contact.ATTRIBUTE }} use it."
+  }
+}

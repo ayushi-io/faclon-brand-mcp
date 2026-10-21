@@ -50,8 +50,8 @@ const status = (text, kind = "") => { $("status").textContent = text; $("status"
 let pending = null;
 
 // ---------- GitHub (Git Data API: one commit, one branch, one pull request) ----------
-const SNAPSHOT_PATH = "data/figma/snapshot.json";
-const COMPONENTS_PATH = "data/figma/components-snapshot.json";
+const SNAPSHOT_PATH = "sources/figma/snapshot.json";
+const COMPONENTS_PATH = "sources/figma/components-snapshot.json";
 
 async function gh(settings, method, path, body, { optional = false } = {}) {
   const res = await fetch(`https://api.github.com/repos/${settings.repo}${path}`, {
@@ -120,7 +120,7 @@ async function openPullRequest(settings, snapshot, components, title, descriptio
       `**Figma version:** ${title}${snapshot.source.figmaVersion ? ` (id ${snapshot.source.figmaVersion.id})` : ""}`,
       description ? `**What changed:** ${description}` : "",
       "",
-      "The *Figma sync* workflow rebuilds `data/tokens.json` and `data/components/components.json`, bumps `brand_version` and runs the tests on this branch. Its run summary lists what changed in the components and any new component that still needs a `use` line. Merge when it is green; Vercel then deploys the MCP.",
+      "The *Figma sync* workflow rebuilds `ds/01-foundations/tokens.json` and `ds/03-components/components.json`, bumps `brand_version` and runs the tests on this branch. Its run summary lists what changed in the components and any new component that still needs a `use` line. Merge when it is green; Vercel then deploys the MCP.",
     ].filter((l) => l !== null).join("\n"),
   });
   return { url: pr.html_url, number: pr.number, branch };

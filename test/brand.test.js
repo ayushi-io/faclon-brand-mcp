@@ -1,11 +1,12 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readData } from "../src/lib/data.js";
+import { P } from "../src/lib/paths.js";
 import { getTokens } from "../src/tools/tokens.js";
-import { getBrandGuidelines, mergeRules, tokenCssVars, componentRefs } from "../src/tools/guidelines.js";
+import { getBrandGuidelines, mergeRules, tokenCssVars, componentRefs, formatProfiles, loadProfile } from "../src/tools/guidelines.js";
 
 const HEX = /^#[0-9A-F]{6}$/;
-const snap = readData("figma/snapshot.json");
+const snap = readData(P.snapshot);
 const varValue = (col, name, mode) => snap.collections.find((c) => c.name === col).variables.find((v) => v.name === name).values[mode];
 
 test("every semantic colour resolves to a hex value in both modes", () => {
@@ -134,7 +135,7 @@ test("body text has no letter spacing; headings keep theirs", () => {
 
 test("uploaded token files agree with the server on every primitive", async () => {
   const fs = await import("node:fs");
-  const up = JSON.parse(fs.readFileSync(new URL("../data/sources/uploaded-2026-10-09/colors.json", import.meta.url)));
+  const up = JSON.parse(fs.readFileSync(new URL("../sources/uploaded-2026-10-09/colors.json", import.meta.url)));
   const { primitive } = getTokens({ category: "color", mode: "light" }).tokens;
   for (const [k, v] of Object.entries(up.brand)) assert.equal(primitive.brand[k], v);
   for (const [k, v] of Object.entries(up.neutralLight)) assert.equal(primitive["neutral-light"][k], v);
@@ -255,9 +256,9 @@ test("defaults agree with the status-container border rule", () => {
 });
 
 test("format guardrails are complete and every item is grounded in the design system", () => {
-  const rules = readData("rules/rules.json").rules.map((r) => r.id);
-  const defaults = readData("rules/defaults.json").defaults;
-  const decisions = readData("rules/open-questions.json").resolved.map((r) => r.id);
+  const rules = readData(P.rules).rules.map((r) => r.id);
+  const defaults = readData(P.defaults).defaults;
+  const decisions = readData(P.openQuestions).resolved.map((r) => r.id);
   const at = (obj, path) => path.split(".").reduce((o, k) => (o == null ? undefined : o[k]), obj);
   for (const format of ["document", "newsletter", "deck", "architecture"]) {
     const profile = getBrandGuidelines({ section: "rules", format_profile: format }).format_profile;
@@ -271,7 +272,7 @@ test("format guardrails are complete and every item is grounded in the design sy
         assert.ok(item.text && item.basis.length, `${format}.${part}.${item.id} needs text and a basis`);
         for (const b of item.basis) {
           const [kind, ref] = [b.slice(0, b.indexOf(":")), b.slice(b.indexOf(":") + 1)];
-          const ok = { rule: () => rules.includes(ref), default: () => ref in defaults, decision: () => decisions.includes(ref), profile: () => at(readData(`formats/${format}.json`), ref) !== undefined }[kind];
+          const ok = { rule: () => rules.includes(ref), default: () => ref in defaults, decision: () => decisions.includes(ref), profile: () => at(loadProfile(format), ref) !== undefined }[kind];
           assert.ok(ok && ok(), `${format}.${part}.${item.id}: basis "${b}" does not exist`);
         }
       }
@@ -294,6 +295,17 @@ test("server instructions: the user decides what, Claude designs how, inside the
   assert.match(INSTRUCTIONS, /Nothing may overflow the canvas padding or its card, box or zone/);
   assert.match(INSTRUCTIONS, /never add a colour, font or value the system does not define/);
   assert.match(INSTRUCTIONS, /guardrails/);
+  assert.match(INSTRUCTIONS, /No AI slop/);
+});
+
+test("no AI slop: a locked global rule, carried by every format profile", () => {
+  const rule = readData(P.rules).rules.find((r) => r.id === "design.no-ai-slop");
+  assert.ok(rule && rule.locked && rule.severity === "error");
+  for (const format of formatProfiles()) {
+    const g = getBrandGuidelines({ section: "rules", format_profile: format }).format_profile.guardrails;
+    assert.ok(g.must_not.find((i) => i.id === "no-ai-slop").basis.includes("rule:design.no-ai-slop"), format);
+    assert.ok(g.avoid.find((i) => i.id === "template-layouts"), format);
+  }
 });
 
 test("architecture spec uses only design-system styles and tokens", () => {
@@ -401,7 +413,7 @@ test("deck spec: styles between 14 and 72px, themes and chips use real tokens", 
 });
 
 test("newsletter spec: 600/400 breakpoints, 24px padding, token styles, placeholders", () => {
-  const p = readData("formats/newsletter.json");
+  const p = loadProfile("newsletter");
   const { desktop, mobile } = p.canvas.breakpoints;
   assert.deepEqual([desktop.width, mobile.width], [600, 400]);
   for (const bp of [desktop, mobile]) assert.equal(bp.content_width, bp.width - 2 * p.spacing.side_padding.value);
@@ -430,7 +442,7 @@ test("newsletter spec: 600/400 breakpoints, 24px padding, token styles, placehol
 });
 
 test("no content edits is a locked, error-level rule cited by every format", () => {
-  const r = readData("rules/rules.json").rules.find((x) => x.id === "content.no-edits");
+  const r = readData(P.rules).rules.find((x) => x.id === "content.no-edits");
   assert.equal(r.severity, "error");
   assert.equal(r.locked, true);
   for (const format of ["document", "newsletter", "deck", "architecture"]) {
@@ -441,17 +453,17 @@ test("no content edits is a locked, error-level rule cited by every format", () 
 });
 
 test("opacity: Figma stores 0–100, tokens serve 0–1", () => {
-  const snap = readData("figma/snapshot.json").collections.find((c) => c.name === "Global Styles").variables;
+  const snap = readData(P.snapshot).collections.find((c) => c.name === "Global Styles").variables;
   for (const v of snap.filter((x) => /^global\/opacity\/\d+$/.test(x.name))) assert.equal(v.values.Default, Number(v.name.split("/").pop()), v.name);
   assert.deepEqual(getTokens({ category: "opacity" }).tokens, { subtle: 0.32, overlay: 0.48, muted: 0.72, full: 1 });
   assert.match(getTokens({ category: "opacity", as: "css" }).code, /--opacity-subtle: 0\.32;/);
 });
 
 test("components: every value is an existing token, role or component, with a CSS variable", () => {
-  const { components } = readData("components/components.json");
+  const { components } = readData(P.components);
   const vars = tokenCssVars();
   const css = getTokens({ as: "css" }).code;
-  const roles = readData("tokens.json").typography.roles;
+  const roles = readData(P.tokens).typography.roles;
   const ids = components.map((c) => c.id);
   assert.equal(new Set(ids).size, ids.length, "component ids are unique");
   assert.equal(components.length, 20);

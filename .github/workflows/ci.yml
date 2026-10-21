@@ -30,18 +30,18 @@ jobs:
       - name: tokens.json matches the Figma snapshot
         run: |
           npm run build:tokens
-          if ! git diff --quiet -- data/tokens.json; then
-            echo "::error file=data/tokens.json::data/tokens.json is out of date with data/figma/snapshot.json. Run 'npm run build:tokens' and commit the result."
-            git diff --stat -- data/tokens.json
+          if ! git diff --quiet -- ds/01-foundations/tokens.json; then
+            echo "::error file=ds/01-foundations/tokens.json::ds/01-foundations/tokens.json is out of date with sources/figma/snapshot.json. Run 'npm run build:tokens' and commit the result."
+            git diff --stat -- ds/01-foundations/tokens.json
             exit 1
           fi
 
       - name: components.json matches the Figma components export
         run: |
           npm run build:components
-          if ! git diff --quiet -- data/components/components.json; then
-            echo "::error file=data/components/components.json::data/components/components.json is out of date with data/figma/components-snapshot.json. Run 'npm run build:components' and commit the result (it keeps use lines, notes and usage)."
-            git diff -- data/components/components.json
+          if ! git diff --quiet -- ds/03-components/components.json; then
+            echo "::error file=ds/03-components/components.json::ds/03-components/components.json is out of date with sources/figma/components-snapshot.json. Run 'npm run build:components' and commit the result (it keeps use lines, notes and usage)."
+            git diff -- ds/03-components/components.json
             exit 1
           fi
 
@@ -49,8 +49,8 @@ jobs:
         if: github.event_name == 'pull_request'
         run: |
           changed=$(git diff --name-only "origin/${{ github.base_ref }}...HEAD")
-          if echo "$changed" | grep -q '^data/' && ! echo "$changed" | grep -qx 'data/version.json'; then
-            echo "::error file=data/version.json::This pull request changes files in data/ but not data/version.json. Run 'npm run bump:version' and commit it."
+          if echo "$changed" | grep -qE '^(ds|sources)/' && ! echo "$changed" | grep -qx 'ds/00-start-here/version.json'; then
+            echo "::error file=ds/00-start-here/version.json::This pull request changes files in ds/ or sources/ but not ds/00-start-here/version.json. Run 'npm run bump:version' and commit it."
             exit 1
           fi
 

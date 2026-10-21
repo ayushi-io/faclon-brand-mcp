@@ -41,14 +41,14 @@ jobs:
           npm run build:tokens
           node scripts/build-components.mjs | tee "$RUNNER_TEMP/components.md"
           { echo "## Components"; echo; cat "$RUNNER_TEMP/components.md"; } >> "$GITHUB_STEP_SUMMARY"
-          echo "needs_use=$(node -p 'require("./data/components/components.json").components.filter((c) => !c.use).length')" >> "$GITHUB_OUTPUT"
+          echo "needs_use=$(node -p 'require("./ds/03-components/components.json").components.filter((c) => !c.use).length')" >> "$GITHUB_OUTPUT"
           echo "version=$(node scripts/bump-version.mjs)" >> "$GITHUB_OUTPUT"
 
       - name: Commit to the sync branch
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/tokens.json data/components/components.json data/version.json
+          git add ds/01-foundations/tokens.json ds/03-components/components.json ds/00-start-here/version.json
           git commit -m "Build tokens and components, bump brand_version to ${{ steps.build.outputs.version }}"
           git push
           echo "SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
