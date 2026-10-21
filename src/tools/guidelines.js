@@ -5,7 +5,6 @@ export const SECTIONS = ["overview", "rules", "defaults", "components", "logo", 
 
 // Sections the Figma file does not cover yet. Returned as gaps, never invented.
 const NOT_WRITTEN = {
-  voice: "Brand voice: personality, do/don't words, banned phrases, tone by channel, example rewrites.",
   illustration: "Illustration style: line/flat/isometric, palette use, composition, do/don't examples.",
   architecture: "Architecture diagram conventions: shapes, connectors, icon set, colour coding, levels of detail.",
   imagery: "Photography and imagery: subjects, lighting, cropping, overlays, what to avoid.",

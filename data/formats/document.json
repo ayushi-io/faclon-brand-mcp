@@ -286,7 +286,7 @@
       },
       {
         "id": "cards",
-        "text": "Cards follow the component spec; at most 3 cards in a row.",
+        "text": "Cards are built on Card base, as a named card or a new design, and keep its tone's fill, border, radius and padding; at most 3 cards in a row.",
         "basis": [
           "profile:components.card"
         ]
@@ -406,6 +406,13 @@
         "basis": [
           "decision:tertiary-text-contrast"
         ]
+      },
+      {
+        "id": "same-card-everywhere",
+        "text": "Avoid giving every section the same card design. Repeat a design only where the content repeats, such as a set of like items in one row or grid.",
+        "basis": [
+          "decision:new-card-designs"
+        ]
       }
     ],
     "design_direction": [
@@ -423,6 +430,14 @@
           "default:container",
           "default:nested_container",
           "rule:color.container-default"
+        ]
+      },
+      {
+        "id": "card-variety",
+        "text": "Design each section's cards for its content. The named cards are starting points; when none fits, build a new card on Card base: pick a tone, then arrange atoms, controls and text roles in its slot with spacing tokens (for example number-led, image-led, split, stat row, steps or comparison). Cards in one row or grid share one design; vary the design between sections.",
+        "basis": [
+          "decision:new-card-designs",
+          "default:container"
         ]
       },
       {
@@ -473,7 +488,7 @@
     "claude_decides": [
       "Layout and composition within the grid: what goes where, how many columns, what leads.",
       "Visual hierarchy: what is large, what is quiet, and how the eye moves.",
-      "Which components to use and how to combine them, including arrangements nobody has drawn before.",
+      "Which components to use and how to combine them, and new card designs on Card base when the named cards don't fit the content.",
       "How to show each idea: a stat, a process, a comparison, a story.",
       "How the content flows across the pages: where paragraphs break, and when a whole card moves to the next page."
     ],
@@ -499,6 +514,10 @@
       "spec": "Card default tone: container/primary, 1px border/container, radius/default, padding/container, flat",
       "max_per_row": 3,
       "why_max": "Card minimum width is 200px; 3 × 200 + 2 × gap/grid fits the 722px content width"
+    },
+    "new_card": {
+      "use": "content none of the named cards fit",
+      "spec": "A new card on Card base: the tone's fill, border, radius and padding; atoms, controls and text roles arranged freely in the slot with spacing tokens"
     },
     "nested": {
       "use": "content inside a card",
