@@ -1,8 +1,10 @@
 # Runs when the Faclon Brand Sync Figma plugin pushes a figma-sync/* branch
-# (the plugin then opens the pull request). This workflow rebuilds tokens.json,
-# bumps brand_version, commits both to the branch and runs the tests.
-# The result is posted as the "Build and test" check on the final commit, so the
-# pull request shows a green tick (or a red cross) before you merge.
+# (the plugin then opens the pull request). This workflow rebuilds tokens.json
+# and components.json, bumps brand_version, commits them to the branch and runs
+# the tests. The result is posted as the "Build and test" check on the final
+# commit, so the pull request shows a green tick (or a red cross) before you
+# merge. What changed in the components (and any new component that still needs
+# a `use` line) is listed in the run's summary.
 name: Figma sync
 
 on:
@@ -33,18 +35,21 @@ jobs:
 
       - run: npm ci
 
-      - name: Build tokens and bump brand_version
+      - name: Build tokens and components, bump brand_version
         id: build
         run: |
           npm run build:tokens
+          node scripts/build-components.mjs | tee "$RUNNER_TEMP/components.md"
+          { echo "## Components"; echo; cat "$RUNNER_TEMP/components.md"; } >> "$GITHUB_STEP_SUMMARY"
+          echo "needs_use=$(node -p 'require("./data/components/components.json").components.filter((c) => !c.use).length')" >> "$GITHUB_OUTPUT"
           echo "version=$(node scripts/bump-version.mjs)" >> "$GITHUB_OUTPUT"
 
       - name: Commit to the sync branch
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/tokens.json data/version.json
-          git commit -m "Build tokens and bump brand_version to ${{ steps.build.outputs.version }}"
+          git add data/tokens.json data/components/components.json data/version.json
+          git commit -m "Build tokens and components, bump brand_version to ${{ steps.build.outputs.version }}"
           git push
           echo "SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
 
@@ -56,10 +61,12 @@ jobs:
       - name: Report the result on the pull request
         run: |
           if [ "${{ steps.test.outcome }}" = "success" ]; then
-            state=success; desc="brand_version ${{ steps.build.outputs.version }}: tokens built, all tests pass"
+            state=success; desc="brand_version ${{ steps.build.outputs.version }}: tokens and components built, all tests pass"
           else
             state=failure; desc="Tests failed: open the workflow run for details"
           fi
+          needs_use="${{ steps.build.outputs.needs_use }}"
+          if [ "$needs_use" != "0" ]; then desc="$desc. $needs_use component(s) need a use line (see run summary)"; fi
           gh api "repos/${{ github.repository }}/statuses/$SHA" \
             -f state="$state" \
             -f context="Build and test" \

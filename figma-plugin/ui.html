@@ -51,8 +51,9 @@ let pending = null;
 
 // ---------- GitHub (Git Data API: one commit, one branch, one pull request) ----------
 const SNAPSHOT_PATH = "data/figma/snapshot.json";
+const COMPONENTS_PATH = "data/figma/components-snapshot.json";
 
-async function gh(settings, method, path, body) {
+async function gh(settings, method, path, body, { optional = false } = {}) {
   const res = await fetch(`https://api.github.com/repos/${settings.repo}${path}`, {
     method,
     headers: {
@@ -63,6 +64,7 @@ async function gh(settings, method, path, body) {
     },
     body: body ? JSON.stringify(body) : undefined,
   });
+  if (optional && res.status === 404) return null;
   if (!res.ok) {
     const detail = await res.text();
     const hint = res.status === 401 ? " Check the token." : res.status === 403 || res.status === 404 ? " Check the repository name and that the token has Contents and Pull requests write access to it." : "";
@@ -74,21 +76,34 @@ async function gh(settings, method, path, body) {
 const decodeBase64Utf8 = (b64) => new TextDecoder().decode(Uint8Array.from(atob(b64.replace(/\n/g, "")), (c) => c.charCodeAt(0)));
 // Everything except `source` (export time, version id) decides whether anything changed.
 const designOf = (snapshot) => JSON.stringify({ collections: snapshot.collections, textStyles: snapshot.textStyles, effectStyles: snapshot.effectStyles });
+const componentsOf = (components) => JSON.stringify({ pages: components.pages, components: components.components });
 
-async function openPullRequest(settings, snapshot, title, description) {
+// The file on the base branch, parsed; null when it doesn't exist yet (or is too large for the contents API).
+async function currentFile(settings, path, base) {
+  const file = await gh(settings, "GET", `/contents/${path}?ref=${encodeURIComponent(base)}`, null, { optional: true });
+  return file && file.content ? JSON.parse(decodeBase64Utf8(file.content)) : null;
+}
+
+async function openPullRequest(settings, snapshot, components, title, description) {
   const base = settings.base || "main";
   const ref = await gh(settings, "GET", `/git/ref/heads/${encodeURIComponent(base)}`);
   const baseSha = ref.object.sha;
 
   // Skip when Figma matches what is already on the base branch.
-  const current = await gh(settings, "GET", `/contents/${SNAPSHOT_PATH}?ref=${encodeURIComponent(base)}`);
-  if (current.content && designOf(JSON.parse(decodeBase64Utf8(current.content))) === designOf(snapshot)) {
+  const current = await currentFile(settings, SNAPSHOT_PATH, base);
+  const currentComponents = await currentFile(settings, COMPONENTS_PATH, base);
+  if (current && designOf(current) === designOf(snapshot) && currentComponents && componentsOf(currentComponents) === componentsOf(components)) {
     return { unchanged: true };
   }
 
   const baseCommit = await gh(settings, "GET", `/git/commits/${baseSha}`);
-  const blob = await gh(settings, "POST", "/git/blobs", { content: JSON.stringify(snapshot, null, 2) + "\n", encoding: "utf-8" });
-  const tree = await gh(settings, "POST", "/git/trees", { base_tree: baseCommit.tree.sha, tree: [{ path: SNAPSHOT_PATH, mode: "100644", type: "blob", sha: blob.sha }] });
+  const files = [[SNAPSHOT_PATH, snapshot], [COMPONENTS_PATH, components]];
+  const entries = [];
+  for (const [path, json] of files) {
+    const blob = await gh(settings, "POST", "/git/blobs", { content: JSON.stringify(json, null, 2) + "\n", encoding: "utf-8" });
+    entries.push({ path, mode: "100644", type: "blob", sha: blob.sha });
+  }
+  const tree = await gh(settings, "POST", "/git/trees", { base_tree: baseCommit.tree.sha, tree: entries });
   const commit = await gh(settings, "POST", "/git/commits", { message: `Figma sync: ${title}\n\n${description || ""}`.trim(), tree: tree.sha, parents: [baseSha] });
 
   const stamp = new Date().toISOString().replace(/[-:]/g, "").replace(/\..+/, "").replace("T", "-");
@@ -105,7 +120,7 @@ async function openPullRequest(settings, snapshot, title, description) {
       `**Figma version:** ${title}${snapshot.source.figmaVersion ? ` (id ${snapshot.source.figmaVersion.id})` : ""}`,
       description ? `**What changed:** ${description}` : "",
       "",
-      "The *Figma sync* workflow rebuilds `data/tokens.json`, bumps `brand_version` and runs the tests on this branch. Merge when it is green; Vercel then deploys the MCP.",
+      "The *Figma sync* workflow rebuilds `data/tokens.json` and `data/components/components.json`, bumps `brand_version` and runs the tests on this branch. Its run summary lists what changed in the components and any new component that still needs a `use` line. Merge when it is green; Vercel then deploys the MCP.",
     ].filter((l) => l !== null).join("\n"),
   });
   return { url: pr.html_url, number: pr.number, branch };
@@ -142,7 +157,7 @@ onmessage = async (event) => {
     const settings = { repo: $("repo").value.trim(), base: $("base").value.trim() || "main", token: $("token").value.trim() };
     try {
       status("Version saved in Figma. Opening the pull request on GitHub…");
-      const result = await openPullRequest(settings, msg.snapshot, pending.title, pending.description);
+      const result = await openPullRequest(settings, msg.snapshot, msg.components, pending.title, pending.description);
       if (result.unchanged) {
         status("Version saved in Figma. No design-system changes since the last sync, so no pull request was needed.", "ok");
       } else {

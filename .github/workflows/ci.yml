@@ -36,6 +36,15 @@ jobs:
             exit 1
           fi
 
+      - name: components.json matches the Figma components export
+        run: |
+          npm run build:components
+          if ! git diff --quiet -- data/components/components.json; then
+            echo "::error file=data/components/components.json::data/components/components.json is out of date with data/figma/components-snapshot.json. Run 'npm run build:components' and commit the result (it keeps use lines, notes and usage)."
+            git diff -- data/components/components.json
+            exit 1
+          fi
+
       - name: brand_version bumped when brand data changes
         if: github.event_name == 'pull_request'
         run: |

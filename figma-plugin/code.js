@@ -2,6 +2,8 @@
 // 1. Saves a named version in the file's version history.
 // 2. Exports variables, text styles and effect styles in the format of
 //    data/figma/snapshot.json (the input of scripts/build-tokens.mjs).
+// 3. Exports the components on the components and Badges pages to
+//    data/figma/components-snapshot.json (the input of scripts/build-components.mjs).
 // The UI (ui.html) then opens the pull request on GitHub.
 
 figma.showUI(__html__, { width: 380, height: 520, themeColors: true });
@@ -73,6 +75,137 @@ async function buildSnapshot() {
   };
 }
 
+// ---------- components export (keep in sync with data/figma/components-snapshot.json) ----------
+// Every component and component set on these pages, per variant: property
+// definitions, auto-layout, sizing and every variable binding, down through
+// nested instances. Descriptions are not exported: the bindings are the spec.
+const COMPONENT_PAGES = ["components", "Badges"];
+const propName = (key) => key.replace(/#[^#]*$/, "");
+const round2 = (n) => Math.round(n * 100) / 100;
+
+async function buildComponentsSnapshot() {
+  const vars = {};
+  const varRef = async (alias) => {
+    if (!(alias.id in vars)) {
+      const v = await figma.variables.getVariableByIdAsync(alias.id);
+      const c = v && (await figma.variables.getVariableCollectionByIdAsync(v.variableCollectionId));
+      vars[alias.id] = v ? { collection: c.name, variable: v.name } : { missing: alias.id };
+    }
+    return vars[alias.id];
+  };
+  const styleName = async (id) => (typeof id === "string" && id ? ((await figma.getStyleByIdAsync(id)) || {}).name || null : null);
+  // A bound variable, or the raw value when nothing is bound.
+  const value = async (n, ...fields) => {
+    for (const f of fields) if (n.boundVariables && n.boundVariables[f]) return varRef(n.boundVariables[f]);
+    return n[fields[0]];
+  };
+  const paints = async (list) => {
+    const out = [];
+    for (const p of list) {
+      if (p.visible === false) continue;
+      if (p.boundVariables && p.boundVariables.color) out.push({ variable: await varRef(p.boundVariables.color) });
+      else if (p.type === "SOLID") out.push({ color: hexOf(p.color), opacity: round2(p.opacity ?? 1) });
+      else out.push({ type: p.type });
+    }
+    return out;
+  };
+
+  async function node(n, parent) {
+    const o = { name: n.name, type: n.type };
+    if (n.visible === false) o.hidden = true;
+    const refs = n.componentPropertyReferences;
+    if (refs && Object.keys(refs).length) o.properties = Object.fromEntries(Object.entries(refs).map(([k, v]) => [k, propName(v)]));
+    if (!parent || parent.type === "COMPONENT_SET") o.size = [round2(n.width), round2(n.height)];
+    if ("layoutSizingHorizontal" in n) o.sizing = { horizontal: n.layoutSizingHorizontal, vertical: n.layoutSizingVertical };
+    if (parent && parent.type !== "COMPONENT_SET" && "layoutMode" in parent && parent.layoutMode === "NONE" && "constraints" in n) o.constraints = n.constraints;
+    if ("layoutMode" in n && n.layoutMode !== "NONE") {
+      o.layout = {
+        direction: n.layoutMode,
+        padding: {
+          top: await value(n, "paddingTop"),
+          right: await value(n, "paddingRight"),
+          bottom: await value(n, "paddingBottom"),
+          left: await value(n, "paddingLeft"),
+        },
+        gap: await value(n, "itemSpacing"),
+        primaryAlign: n.primaryAxisAlignItems,
+        counterAlign: n.counterAxisAlignItems,
+      };
+      if (n.layoutWrap === "WRAP") o.layout.wrap = true;
+    }
+    if ("fills" in n && Array.isArray(n.fills) && n.fills.length) o.fills = await paints(n.fills);
+    if ("strokes" in n && n.strokes.length) {
+      o.strokes = await paints(n.strokes);
+      o.strokeWeight = await value(n, "strokeWeight", "strokeTopWeight");
+    }
+    if ("topLeftRadius" in n && n.type !== "TEXT") {
+      const radius = await value(n, "topLeftRadius");
+      if (typeof radius === "object" || radius) o.radius = radius;
+    }
+    if ("effects" in n && n.effects.length) {
+      const style = await styleName(n.effectStyleId);
+      o.effects = style ? { style } : n.effects.map((e) => ({ type: e.type }));
+    }
+    if (n.type === "TEXT") {
+      const size = n.boundVariables && n.boundVariables.fontSize;
+      o.text = {
+        style: await styleName(n.textStyleId),
+        fontSize: size ? await varRef(Array.isArray(size) ? size[0] : size) : n.fontSize,
+        autoResize: n.textAutoResize,
+      };
+    }
+    if (n.type === "INSTANCE") {
+      const main = await n.getMainComponentAsync();
+      const set = main && main.parent && main.parent.type === "COMPONENT_SET" ? main.parent : null;
+      o.instanceOf = main ? { id: (set || main).id, name: (set || main).name } : null;
+      if (set) o.instanceOf.variant = main.variantProperties;
+    }
+    if ("children" in n) {
+      o.children = [];
+      for (const child of n.children) o.children.push(await node(child, n));
+    }
+    return o;
+  }
+
+  const properties = (defs) =>
+    Object.fromEntries(
+      Object.entries(defs).map(([key, d]) => {
+        if (d.type === "VARIANT") return [propName(key), { type: d.type, options: d.variantOptions, default: d.defaultValue }];
+        if (d.type === "BOOLEAN") return [propName(key), { type: d.type, default: d.defaultValue }];
+        return [propName(key), { type: d.type }]; // text defaults are sample copy, not spec
+      })
+    );
+
+  const components = [];
+  for (const pageName of COMPONENT_PAGES) {
+    const page = figma.root.children.find((p) => p.name === pageName);
+    if (!page) throw new Error(`Page "${pageName}" not found: the components export reads ${COMPONENT_PAGES.join(" and ")}.`);
+    await page.loadAsync();
+    const found = page.findAllWithCriteria({ types: ["COMPONENT", "COMPONENT_SET"] }).filter((c) => c.type === "COMPONENT_SET" || c.parent.type !== "COMPONENT_SET");
+    for (const c of found) {
+      const entry = { page: pageName, id: c.id, name: c.name, type: c.type, properties: properties(c.componentPropertyDefinitions) };
+      if (c.type === "COMPONENT_SET") {
+        entry.variants = [];
+        for (const v of c.children) entry.variants.push({ id: v.id, variant: v.variantProperties, node: await node(v, c) });
+      } else {
+        entry.node = await node(c, null);
+      }
+      components.push(entry);
+    }
+  }
+
+  return {
+    source: {
+      fileName: figma.root.name,
+      fileKey: figma.fileKey,
+      extractedAt: new Date().toISOString(),
+      method: "Faclon Brand Sync plugin",
+    },
+    pages: COMPONENT_PAGES,
+    components,
+  };
+}
+
 // ---------- messages from the UI ----------
 const SETTINGS_KEY = "faclon-brand-sync/settings";
 
@@ -91,7 +224,9 @@ figma.ui.onmessage = async (msg) => {
       const version = await figma.saveVersionHistoryAsync(msg.title, msg.description || "");
       const snapshot = await buildSnapshot();
       snapshot.source.figmaVersion = { id: version.id, title: msg.title };
-      figma.ui.postMessage({ type: "snapshot", snapshot, versionId: version.id });
+      const components = await buildComponentsSnapshot();
+      components.source.figmaVersion = { id: version.id, title: msg.title };
+      figma.ui.postMessage({ type: "snapshot", snapshot, components, versionId: version.id });
     }
     if (msg.type === "open-url") figma.openExternal(msg.url);
     if (msg.type === "close") figma.closePlugin();
