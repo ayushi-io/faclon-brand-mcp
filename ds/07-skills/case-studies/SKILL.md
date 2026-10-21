@@ -1,0 +1,8 @@
+---
+status: not_written
+needed: the skill for this outcome: purpose, inputs, structure, rules, assets, checklist.
+---
+
+# Skill: case-studies
+
+Not written yet. Needed: the skill for this outcome: purpose, inputs, structure, rules, assets, checklist.

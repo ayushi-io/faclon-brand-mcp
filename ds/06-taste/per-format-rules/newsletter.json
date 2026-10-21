@@ -1,0 +1,310 @@
+{
+  "must_not": [
+    {
+      "id": "content-unchanged",
+      "text": "Hard rule: never edit or change the user's content (no rewriting, shortening, cutting or adding). If a change seems needed, highlight it, suggest how it could be shown better, and change nothing unless the user approves.",
+      "basis": [
+        "rule:content.no-edits",
+        "decision:content-fidelity",
+        "decision:user-decides-what"
+      ]
+    },
+    {
+      "id": "no-overflow",
+      "text": "Never let text overflow the canvas padding on any side, or the card, box, zone or node it sits in.",
+      "basis": [
+        "decision:no-overflow",
+        "profile:safe_area"
+      ]
+    },
+    {
+      "id": "min-size",
+      "text": "Never set text below 14px.",
+      "basis": [
+        "rule:type.min-size",
+        "profile:overrides"
+      ]
+    },
+    {
+      "id": "unsubscribe",
+      "text": "Never send without a {{ unsubscribe }} link.",
+      "basis": [
+        "profile:platform.merge_tags.unsubscribe"
+      ]
+    },
+    {
+      "id": "straight-quotes",
+      "text": "Never put typographic quotes around Brevo placeholders; use straight double quotes.",
+      "basis": [
+        "profile:platform.quotes_note"
+      ]
+    },
+    {
+      "id": "images",
+      "text": "Never make an image wider than the content (552px desktop, 352px mobile), or leave it without alt text; if the user has not given alt text, use an ALT_TEXT_… placeholder.",
+      "basis": [
+        "profile:images",
+        "profile:placeholders.alt_text"
+      ]
+    },
+    {
+      "id": "invent-urls",
+      "text": "Never invent an image URL or link, and never write placeholders in Brevo's {{ }} syntax.",
+      "basis": [
+        "profile:placeholders.syntax_note",
+        "decision:newsletter-placeholders"
+      ]
+    },
+    {
+      "id": "crowding",
+      "text": "Never put less than gap/stack (12px) between two text elements, or let text touch the edge of an image, banner or card.",
+      "basis": [
+        "profile:spacing.text_group",
+        "decision:newsletter-breathing-room"
+      ]
+    },
+    {
+      "id": "no-ai-slop",
+      "text": "Never make it look generic or machine-made: no gradients, glows, neon, glass or blur effects, decorative filler (blobs, orbs, sparkles, floating shapes), AI cliche imagery or icons (glowing brains, circuits, robot hands, sparkles or rockets for AI), text effects, or a coloured stripe down one side of a card.",
+      "basis": [
+        "rule:design.no-ai-slop"
+      ]
+    },
+    {
+      "id": "tokens-only",
+      "text": "Never use a colour that is not a design-system token, and never sample or approximate one.",
+      "basis": [
+        "rule:color.tokens-only"
+      ]
+    },
+    {
+      "id": "two-fonts",
+      "text": "Never use a font other than TASA Orbiter (headings) and Inter (body).",
+      "basis": [
+        "rule:type.two-families-only"
+      ]
+    },
+    {
+      "id": "sizes-in-scale",
+      "text": "Never use in-between font sizes: text comes from Role/* or the defined text styles.",
+      "basis": [
+        "rule:type.styles-only",
+        "rule:type.text-roles"
+      ]
+    },
+    {
+      "id": "pill-radius",
+      "text": "Never put a pill radius on a card, panel, container, input or image.",
+      "basis": [
+        "rule:radius.pill-only-for-pills"
+      ]
+    },
+    {
+      "id": "eyebrow-surfaces",
+      "text": "Never place an eyebrow on container/secondary or container/tertiary (it fails contrast).",
+      "basis": [
+        "rule:color.eyebrow-placement"
+      ]
+    },
+    {
+      "id": "section-numbers",
+      "text": "Never number section headings or put a number badge or tile beside them ('1.', '6.' and the like). Section numbers in the user's draft (for example '🔹 1. The Real Problem') mark the draft's structure and are not shown; separate sections with spacing and the heading itself. This covers section headings only: numbered steps inside a section's body stay when their order matters.",
+      "basis": [
+        "decision:newsletter-no-section-numbers"
+      ]
+    },
+    {
+      "id": "no-emoji",
+      "text": "Never use emoji anywhere in a newsletter: subject line, preview line, headings, body, takeaways or lists. Emoji in the user's draft (🔥 🔹 👉 ✔ ⏱) are draft markers and are not shown; show takeaways and results with text roles and components instead. Icons come from Lucide, only when asked.",
+      "basis": [
+        "decision:newsletter-no-emoji",
+        "rule:icon.lucide-only"
+      ]
+    },
+    {
+      "id": "shadow-heavy-border",
+      "text": "Never combine a shadow with a border of 2px or more.",
+      "basis": [
+        "rule:elevation.no-shadow-with-heavy-border"
+      ]
+    }
+  ],
+  "avoid": [
+    {
+      "id": "long-headings",
+      "text": "Avoid headings longer than 60 characters. If one is longer, do not change it: highlight it to the user, offer one or two other ways to present it (for example a shorter heading with the rest moved to the subheader) and say which you advise. If the user says no, use their heading exactly as given; if they approve, use the approved version.",
+      "basis": [
+        "profile:typography.max_heading_chars",
+        "decision:newsletter-long-headings",
+        "decision:content-fidelity"
+      ]
+    },
+    {
+      "id": "accent-budget",
+      "text": "Avoid using the accent colours (accent and accent-2 together) on more than roughly 10–15% of the piece; it is a highlight, not a palette.",
+      "basis": [
+        "rule:color.accent-budget"
+      ]
+    },
+    {
+      "id": "tertiary-text",
+      "text": "Avoid text/tertiary for essential text; at 3.4:1 it is for large or non-essential text only.",
+      "basis": [
+        "decision:tertiary-text-contrast"
+      ]
+    },
+    {
+      "id": "same-card-everywhere",
+      "text": "Avoid giving every section the same card design. Repeat a design only where the content repeats, such as a set of like items in one row or grid.",
+      "basis": [
+        "decision:new-card-designs"
+      ]
+    },
+    {
+      "id": "template-layouts",
+      "text": "Avoid template layouts: the same icon, title and text card in every section, an icon on every heading or card when it adds nothing, or every section centred. Every element carries content or structure; when in doubt, leave it out.",
+      "basis": [
+        "rule:design.no-ai-slop",
+        "decision:new-card-designs"
+      ]
+    }
+  ],
+  "design_direction": [
+    {
+      "id": "personalise",
+      "text": "Personalise with {{ contact.ATTRIBUTE }}, using the Brevo attribute name exactly; offer {{ mirror }} as a 'View in browser' link.",
+      "basis": [
+        "profile:platform.merge_tags.contact_attribute",
+        "profile:platform.merge_tags.mirror"
+      ]
+    },
+    {
+      "id": "breathing-room",
+      "text": "Give every block room so nothing looks crowded: padding/section (56px desktop, 32px mobile) between sections, gap/grid (24px, 16px) between blocks, gap/stack (12px) inside a text group, and padding/container inside cards. When in doubt, add space, not elements.",
+      "basis": [
+        "profile:spacing",
+        "rule:spacing.role-defaults",
+        "decision:newsletter-breathing-room"
+      ]
+    },
+    {
+      "id": "foreground-background",
+      "text": "Keep the foreground/background separation subtle: the email sits on background/secondary and the content column on background/primary. Do not add stronger contrast, borders or shadows to make the column stand out.",
+      "basis": [
+        "profile:surfaces",
+        "decision:newsletter-surfaces"
+      ]
+    },
+    {
+      "id": "hero",
+      "text": "The top of the email can be (a) a banner image with the heading on it, (b) a banner image with title, subheader and CTA, or (c) a title, subheader and image. Use only the elements the user gives; never add a CTA, subheader or image that was not asked for.",
+      "basis": [
+        "profile:hero.compositions",
+        "decision:newsletter-hero"
+      ]
+    },
+    {
+      "id": "hero-type",
+      "text": "Hero title heading/h2 (32px desktop, 26px mobile), subheader body/lg (18px, 16px), CTA Role/Button, on token line heights. A long heading the user keeps may step down to heading/h3 so it stays uncluttered.",
+      "basis": [
+        "profile:typography.styles",
+        "profile:typography.step_down",
+        "decision:newsletter-hero-type"
+      ]
+    },
+    {
+      "id": "heading-on-banner",
+      "text": "A heading on a banner is live text, at least 24px from the banner's edges. Set the banner cell's background to background/brand with text/on-brand, which shows when images are off. If the image would make the heading hard to read, flag it and offer a solid background/brand band instead.",
+      "basis": [
+        "profile:hero.live_text",
+        "profile:hero.banner_fallback",
+        "profile:spacing.banner_text_inset",
+        "rule:color.pairings",
+        "decision:newsletter-banner-fallback"
+      ]
+    },
+    {
+      "id": "cta",
+      "text": "A CTA is a bulletproof button: live text in a linked table cell, not an image, with radius/default, never pill.",
+      "basis": [
+        "profile:hero.cta",
+        "rule:radius.buttons"
+      ]
+    },
+    {
+      "id": "placeholder-boxes",
+      "text": "Placeholder images keep their final width and height and a container/secondary fill, so the layout holds before the real images are uploaded.",
+      "basis": [
+        "profile:placeholders.rule"
+      ]
+    },
+    {
+      "id": "spacing-by-purpose",
+      "text": "Pick spacing by purpose: gap/inline between adjacent items, gap/stack inside a component, gap/grid between cards, padding/container inside cards, padding/section between sections.",
+      "basis": [
+        "rule:spacing.role-defaults"
+      ]
+    },
+    {
+      "id": "cards",
+      "text": "Cards and panels use the container default: container/primary, 1px border/container, radius/default, padding/container. Nest with container/secondary, then container/tertiary.",
+      "basis": [
+        "default:container",
+        "default:nested_container",
+        "rule:color.container-default"
+      ]
+    },
+    {
+      "id": "card-variety",
+      "text": "Design each section's cards for its content. The named cards are starting points; when none fits, build a new card on Card base: pick a tone, then arrange atoms, controls and text roles in its slot with spacing tokens (for example number-led, image-led, split, stat row, steps or comparison). Cards in one row or grid share one design; vary the design between sections.",
+      "basis": [
+        "decision:new-card-designs",
+        "default:container"
+      ]
+    },
+    {
+      "id": "text-colours",
+      "text": "Headings use text/heading, body copy text/body, eyebrows text/eyebrow.",
+      "basis": [
+        "rule:color.text-defaults"
+      ]
+    },
+    {
+      "id": "status",
+      "text": "Show status with the five intents (Positive, Negative, Information, Neutral, Primary) and their fixed fill/text pairs; warnings use Negative.",
+      "basis": [
+        "rule:color.status-intents",
+        "rule:color.pairings"
+      ]
+    },
+    {
+      "id": "flat-surfaces",
+      "text": "Keep surfaces flat; use Low Raised only to lift a card off the canvas.",
+      "basis": [
+        "rule:elevation.flat-default"
+      ]
+    },
+    {
+      "id": "buttons",
+      "text": "Buttons have softened square corners (radius/default), never pill.",
+      "basis": [
+        "rule:radius.buttons"
+      ]
+    },
+    {
+      "id": "icons",
+      "text": "When an icon helps, use Lucide and colour it with a text token that suits the surface.",
+      "basis": [
+        "rule:icon.lucide-only"
+      ]
+    },
+    {
+      "id": "too-much-content",
+      "text": "If the content is too much for the space, do not squeeze it below the minimum size or cut it: tell the user, and offer options (split across slides or pages, a different layout, a table or chart).",
+      "basis": [
+        "decision:no-overflow",
+        "decision:content-fidelity"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "unit": "px",
+    "ratio": "16:9"
+  },
+  "safe_area": {
+    "top": 48,
+    "right": 48,
+    "bottom": 48,
+    "left": 48,
+    "token": "spacing/48"
+  },
+  "content_area": {
+    "width": 1824,
+    "height": 984
+  }
+}

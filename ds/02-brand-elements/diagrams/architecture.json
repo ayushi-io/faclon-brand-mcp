@@ -1,0 +1,86 @@
+{
+  "density": {
+    "how": "Count what the user's content needs, take the densest category any count points to, then check the fit: step down if a label needs more than 2 lines, overlaps a connector or forces a gap below the spacing spec; step up if the larger sizes still fit with every gap intact. Larger is preferred when it fits.",
+    "counts": {
+      "nodes": "device or system boxes (title tag + icon)",
+      "labels": "every text item except the title: tags, device labels, arrow labels, notes",
+      "zones": "top-level sections, e.g. 'Inside Panel', 'Inside Rack'"
+    },
+    "categories": {
+      "open": {
+        "nodes": "up to 12",
+        "labels": "up to 30",
+        "zones": "up to 2"
+      },
+      "medium": {
+        "nodes": "13–24",
+        "labels": "31–60",
+        "zones": "up to 4"
+      },
+      "dense": {
+        "nodes": "25 or more",
+        "labels": "61 or more",
+        "zones": "5 or more"
+      }
+    }
+  },
+  "shapes": {
+    "zone": {
+      "fill": "container/selected",
+      "border": "border/strong",
+      "border_width": "border-width/default",
+      "radius": "radius/default"
+    },
+    "sub_zone": {
+      "fill": "container/selected",
+      "border": "border/brand",
+      "border_width": "border-width/default",
+      "radius": "radius/default"
+    },
+    "node_box": {
+      "fill": null,
+      "border": "border/strong",
+      "border_style": "dashed",
+      "border_width": "border-width/default",
+      "radius": "radius/md"
+    },
+    "node_tag": {
+      "fill": "container/brand",
+      "border": null,
+      "radius": "radius/md"
+    },
+    "platform_panel": {
+      "fill": "container/elevated",
+      "elevation": "Elevation/Low Raised",
+      "border": "border/brand",
+      "border_width": "border-width/default",
+      "radius": "radius/xl"
+    }
+  },
+  "arrows": {
+    "default": {
+      "colour": "text/secondary",
+      "width": "border-width/thick",
+      "style": "dashed",
+      "head": "end"
+    },
+    "data_flow": {
+      "colour": "border/brand",
+      "width": "border-width/thick",
+      "style": "solid",
+      "head": "end"
+    },
+    "status": {
+      "colours": [
+        "border/success",
+        "border/error"
+      ],
+      "when": "only when the user marks a flow as a status"
+    },
+    "other": "Any other arrow colour is used only when the user defines it for that diagram; otherwise the default applies."
+  },
+  "icons": {
+    "source": "Faclon architecture icon library, provided by the user",
+    "until_provided": "Ask the user; do not pick, draw or substitute icons."
+  }
+}

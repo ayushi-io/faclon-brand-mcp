@@ -1,4 +1,5 @@
 import { readData } from "../lib/data.js";
+import { P } from "../lib/paths.js";
 import { BrandError } from "../lib/envelope.js";
 
 export const CATEGORIES = ["color", "typography", "spacing", "radius", "border", "elevation", "opacity"];
@@ -7,7 +8,7 @@ export const MODES = ["light", "dark", "desktop", "mobile"];
 export const FORMATS = ["document", "newsletter", "deck"];
 
 const MODE_CATEGORIES = { light: ["color"], dark: ["color"], desktop: ["typography", "spacing"], mobile: ["typography", "spacing"] };
-const tokens = () => readData("tokens.json");
+const tokens = () => readData(P.tokens);
 const slug = (s) => String(s).replace(/[\/\s.]+/g, "-").toLowerCase();
 
 export function getTokens({ category, as = "json", mode, format } = {}) {
@@ -177,7 +178,7 @@ function setIn(obj, parts, value) {
 
 // ---------- Figma (raw variables, aliases unresolved) ----------
 function toFigma(cats) {
-  const snap = readData("figma/snapshot.json");
+  const snap = readData(P.snapshot);
   const byName = Object.fromEntries(snap.collections.map((c) => [c.name, c]));
   const pick = (name, prefix) => {
     const c = byName[name];

@@ -1,14 +1,14 @@
 // Faclon Brand Sync — Figma side.
 // 1. Saves a named version in the file's version history.
 // 2. Exports variables, text styles and effect styles in the format of
-//    data/figma/snapshot.json (the input of scripts/build-tokens.mjs).
+//    sources/figma/snapshot.json (the input of scripts/build-tokens.mjs).
 // 3. Exports the components on the components and Badges pages to
-//    data/figma/components-snapshot.json (the input of scripts/build-components.mjs).
+//    sources/figma/components-snapshot.json (the input of scripts/build-components.mjs).
 // The UI (ui.html) then opens the pull request on GitHub.
 
 figma.showUI(__html__, { width: 380, height: 520, themeColors: true });
 
-// ---------- snapshot export (keep in sync with data/figma/snapshot.json) ----------
+// ---------- snapshot export (keep in sync with sources/figma/snapshot.json) ----------
 const hex2 = (n) => Math.round(n * 255).toString(16).padStart(2, "0").toUpperCase();
 const hexOf = (c) => "#" + hex2(c.r) + hex2(c.g) + hex2(c.b);
 
@@ -75,7 +75,7 @@ async function buildSnapshot() {
   };
 }
 
-// ---------- components export (keep in sync with data/figma/components-snapshot.json) ----------
+// ---------- components export (keep in sync with sources/figma/components-snapshot.json) ----------
 // Every component and component set on these pages, per variant: property
 // definitions, auto-layout, sizing and every variable binding, down through
 // nested instances. Descriptions are not exported: the bindings are the spec.

@@ -1,0 +1,250 @@
+{
+  "id": "architecture",
+  "name": "Architecture diagram (16:9)",
+  "status": "approved",
+  "note": "Specification approved by the brand team on 2026-10-14. Sizes are the design system's own text styles chosen per density (not the Text Roles modes); spacing, radius and colours are tokens. Icons come from the Faclon architecture icon library, which the user provides. Zone colour-coding and extra arrow colours are still to define.",
+  "audience": "external",
+  "header": {
+    "title": "optional, top-left; the user decides whether there is a title and what it says",
+    "logo": "top-right, opposite the title",
+    "gap_below": "gap/grid"
+  },
+  "typography": {
+    "breakpoint_mode": "desktop",
+    "min_size": 12,
+    "styles": {
+      "title": {
+        "dense": {
+          "style": "heading/h2",
+          "weight": 600
+        },
+        "medium": {
+          "style": "heading/h1",
+          "weight": 600
+        },
+        "open": {
+          "style": "display/md",
+          "weight": 600
+        },
+        "colour": "text/brand"
+      },
+      "zone_heading": {
+        "dense": {
+          "style": "heading/h5",
+          "weight": 500
+        },
+        "medium": {
+          "style": "heading/h4",
+          "weight": 500
+        },
+        "open": {
+          "style": "heading/h3",
+          "weight": 500
+        },
+        "colour": "text/secondary"
+      },
+      "sub_zone_heading": {
+        "dense": {
+          "style": "body/sm",
+          "weight": 600
+        },
+        "medium": {
+          "style": "body/lg",
+          "weight": 600
+        },
+        "open": {
+          "style": "body/xl",
+          "weight": 600
+        },
+        "colour": "text/secondary"
+      },
+      "node_tag": {
+        "dense": {
+          "style": "body/sm",
+          "weight": 600
+        },
+        "medium": {
+          "style": "body/md",
+          "weight": 600
+        },
+        "open": {
+          "style": "body/xl",
+          "weight": 600
+        },
+        "colour": "text/on-brand"
+      },
+      "device_label": {
+        "dense": {
+          "style": "body/xs",
+          "weight": 500
+        },
+        "medium": {
+          "style": "body/sm",
+          "weight": 500
+        },
+        "open": {
+          "style": "body/lg",
+          "weight": 500
+        },
+        "colour": "text/body"
+      },
+      "arrow_label": {
+        "dense": {
+          "style": "body/xs",
+          "weight": 600
+        },
+        "medium": {
+          "style": "body/sm",
+          "weight": 600
+        },
+        "open": {
+          "style": "body/lg",
+          "weight": 600
+        },
+        "colour": "text/secondary"
+      }
+    }
+  },
+  "spacing": {
+    "title_to_content": "gap/grid",
+    "zone_heading_to_box": "gap/inline",
+    "between_zones": "gap/grid",
+    "inside_zone": "padding/container",
+    "between_nodes": {
+      "dense": "gap/stack",
+      "medium": "gap/grid",
+      "open": "spacing/40"
+    },
+    "inside_node": "spacing/12",
+    "node_tag_padding": {
+      "vertical": "spacing/4",
+      "horizontal": "spacing/8"
+    },
+    "tag_to_icon": "gap/inline",
+    "icon_to_label": "gap/inline",
+    "arrow_label_offset": "spacing/4",
+    "icon_size": {
+      "dense": "spacing/32",
+      "medium": "spacing/48",
+      "open": "spacing/56"
+    }
+  },
+  "colour": {
+    "canvas": "background/primary",
+    "theme": "light"
+  },
+  "logo": {
+    "position": "top-right",
+    "variant": "blue"
+  },
+  "guardrails": {
+    "status": "approved",
+    "note": "Guidance for whoever designs in this format. user_decides = what is made (the user's call); fixed = do not change; must_not = hard limits; avoid = strong advice; design_direction = how to use the system; claude_decides = how it looks, where the designer has freedom. Every design item cites its basis in the design system.",
+    "user_decides": [
+      "What the architecture shows: the systems, devices, connections and protocols. Nothing is added that the user did not supply.",
+      "Whether there is a title, and what it says.",
+      "Which labels are shown and what they say; until then they stay placeholders.",
+      "The scope: how many sections or zones there are and what each contains; when it is unclear, ask.",
+      "Which icons are used, from the Faclon architecture icon library they provide.",
+      "Any arrow colour beyond the default, data-flow and status colours."
+    ],
+    "fixed": [
+      {
+        "id": "canvas",
+        "text": "16:9, 1920 × 1080 px.",
+        "basis": [
+          "profile:canvas"
+        ]
+      },
+      {
+        "id": "padding",
+        "text": "48px padding on all four sides (spacing/48); content area 1824 × 984 px, and nothing sits outside it.",
+        "basis": [
+          "profile:safe_area",
+          "profile:content_area"
+        ]
+      },
+      {
+        "id": "header",
+        "text": "Optional title at top-left, the blue logo at top-right, gap/grid between the header and the diagram.",
+        "basis": [
+          "profile:header",
+          "profile:logo",
+          "rule:logo.blue-on-light"
+        ]
+      },
+      {
+        "id": "density",
+        "text": "Every diagram is Dense, Medium or Open, chosen by counting nodes, labels and zones and then checking the fit.",
+        "basis": [
+          "profile:density"
+        ]
+      },
+      {
+        "id": "type",
+        "text": "Text uses the text style set for its element and density (e.g. node tag: Body/SM, Body/MD or Body/XL Semi Bold), never a raw size.",
+        "basis": [
+          "profile:typography.styles",
+          "rule:type.styles-only"
+        ]
+      },
+      {
+        "id": "spacing",
+        "text": "Spacing uses the tokens in the spacing spec: gap/grid between zones, padding/container inside zones, spacing/12 inside nodes, gaps between nodes by density.",
+        "basis": [
+          "profile:spacing",
+          "rule:spacing.scale-only"
+        ]
+      },
+      {
+        "id": "shapes",
+        "text": "Zones, sub-zones, node boxes, node tags and the platform panel follow the shapes spec (fills, borders, radius, elevation).",
+        "basis": [
+          "profile:shapes"
+        ]
+      },
+      {
+        "id": "theme",
+        "text": "Light theme on background/primary.",
+        "basis": [
+          "profile:colour"
+        ]
+      },
+      {
+        "id": "output",
+        "text": "Delivered as HTML.",
+        "basis": [
+          "profile:export"
+        ]
+      }
+    ],
+    "claude_decides": [
+      "How zones, sub-zones and nodes are arranged, and which way the flow reads.",
+      "The density category, within the counting and fit rules.",
+      "How connectors are routed so they stay clear.",
+      "Visual hierarchy: what is the focal point (e.g. the platform) and what stays quiet.",
+      "How repeated parts are shown, e.g. one device with 'up to 16' rather than sixteen copies, when the user's content allows it."
+    ],
+    "to_define": [
+      "Zone colour-coding (e.g. by network, area or protocol) beyond the zone and sub-zone styles.",
+      "Additional arrow colours and their meanings.",
+      "The Faclon architecture icon library (provided by the user).",
+      "Whether diagrams carry a legend, and where."
+    ]
+  },
+  "overrides": [
+    {
+      "rule": "type.min-size",
+      "value": 12,
+      "reason": "Architecture labels stay legible at any density."
+    }
+  ],
+  "export": {
+    "file_types": [
+      "html"
+    ]
+  },
+  "severity": {
+    "min_size": "error"
+  }
+}

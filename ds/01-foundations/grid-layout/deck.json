@@ -1,0 +1,23 @@
+{
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "unit": "px"
+  },
+  "safe_area": {
+    "top": 52,
+    "right": 52,
+    "bottom": 52,
+    "left": 52,
+    "token": "spacing/52",
+    "note": "Every slide, including hero slides (page breaker, closing), aligns logo, labels, titles and content to the 52px edge. The Figma slides' 70px content guide and 134px hero inset are replaced (neither is on the spacing scale)."
+  },
+  "grid": {
+    "columns": 12,
+    "gutter": "spacing.24"
+  },
+  "content_area": {
+    "width": 1816,
+    "height": 976
+  }
+}

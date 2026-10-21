@@ -1,4 +1,4 @@
-// Builds data/components/components.json from data/figma/components-snapshot.json
+// Builds ds/03-components/components.json from sources/figma/components-snapshot.json
 // (exported by the Faclon Brand Sync plugin). Run after every new export:
 // `npm run build:components` (add --verbose to list the details the file leaves out).
 //
@@ -14,10 +14,11 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import { P } from "../src/lib/paths.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-export const SNAPSHOT = "data/figma/components-snapshot.json";
-export const OUTPUT = "data/components/components.json";
+export const SNAPSHOT = P.componentsSnapshot;
+export const OUTPUT = P.components;
 
 const PROP_TYPES = { TEXT: "text", BOOLEAN: "boolean", SLOT: "slot", INSTANCE_SWAP: "instance" };
 const SHAPES = new Set(["RECTANGLE", "ELLIPSE", "LINE", "VECTOR", "POLYGON", "STAR", "BOOLEAN_OPERATION"]);
@@ -464,7 +465,7 @@ export function formatReport(report, { verbose = false } = {}) {
   const counts = [[report.changes, "value change(s)"], [report.added, "new component(s)"], [report.removed, "removed component(s)"]].filter(([l]) => l.length);
   lines.push(counts.length ? `components.json: ${counts.map(([l, what]) => `${l.length} ${what}`).join(", ")} from Figma.` : "components.json: up to date with Figma.");
   section("Changes:", report.changes);
-  section("New components (write a `use` line for each in data/components/components.json):", report.added);
+  section(`New components (write a \`use\` line for each in ${OUTPUT}):`, report.added);
   section("Removed from Figma, dropped from components.json:", report.removed);
   section("Components that still need a `use` line:", report.needsUse);
   section("Warnings (bindings to fix in Figma):", report.warnings);

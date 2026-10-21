@@ -1,6 +1,6 @@
 {
   "functions": {
-    "api/index.js": { "includeFiles": "data/**", "maxDuration": 30 }
+    "api/index.js": { "includeFiles": "{ds,sources}/**", "maxDuration": 30 }
   },
   "rewrites": [{ "source": "/(.*)", "destination": "/api" }]
 }

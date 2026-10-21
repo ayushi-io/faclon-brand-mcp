@@ -1,0 +1,37 @@
+{
+  "source": "Figma file Design MCP › Layouts page. The brand team keeps adding references: page breakers, closing slides, fixed slides (product stack, team) and content-slide layouts.",
+  "rule": "Keep each reference slide's layout and decoration as designed. Map only: background colour to the theme token, fonts to the nearest text style (14–72px), chips to the chip tokens, and the logo to its design-system placement. For content references, Claude may adapt the layout to the content, still mapping these four.",
+  "mapping": {
+    "background": "theme background token (background/brand, background/inverse or background/primary)",
+    "fonts": "nearest named text style, never below 14px or above 72px (Display/XL)",
+    "chips": "container/inverse + text/inverse, radius/md, padding spacing/8 × spacing/12, Body/XL Semi Bold, uppercase text",
+    "logo": "top-right on the 52px edge; white on dark and brand, blue on light; size may vary"
+  },
+  "slides": {
+    "product_stack": {
+      "figma": "13 · Harness — every capability exposed to agents",
+      "use": "Whenever the product stack is asked for, use this slide as designed (only the mapping above)."
+    },
+    "team": {
+      "figma": "04 · Team — already did it 400 times",
+      "use": "Default for about or team slides, unless the user gives feedback."
+    },
+    "page_breaker": {
+      "figma": "17806942 (Annexure · Reference Slides for QnA)",
+      "use": "One of the page-breaker designs; more will be added."
+    },
+    "closing": {
+      "figma": "29 · Close — every factory will run on AI",
+      "use": "One of the closing designs; more will be added."
+    },
+    "content": {
+      "figma": "content layouts on the Layouts page (e.g. 14 · knowledge flywheel, 20 · customer journey, 23/24 · GTM, 26 · plan)",
+      "use": "Starting points for normal content slides; more will be added."
+    }
+  },
+  "kinds": {
+    "fixed": "product stack, team — used as designed whenever asked for",
+    "hero": "page breakers and closing slides — pick one of the designs",
+    "content": "layouts for normal content slides — a starting point Claude adapts to the user's content"
+  }
+}

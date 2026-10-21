@@ -1,16 +1,22 @@
-import { readData, dataExists, listData } from "../lib/data.js";
+import { readData, dataExists, listDirs, readDoc } from "../lib/data.js";
+import { P, SECTION_FILES, profileParts, GUARDRAIL_ORDER } from "../lib/paths.js";
 import { BrandError } from "../lib/envelope.js";
 
 export const SECTIONS = ["overview", "rules", "defaults", "components", "logo", "typography", "color", "voice", "illustration", "architecture", "imagery"];
 
-// Sections the Figma file does not cover yet. Returned as gaps, never invented.
-const NOT_WRITTEN = {
-  illustration: "Illustration style: line/flat/isometric, palette use, composition, do/don't examples.",
-  architecture: "Architecture diagram conventions: shapes, connectors, icon set, colour coding, levels of detail.",
-  imagery: "Photography and imagery: subjects, lighting, cropping, overlays, what to avoid.",
-};
+// Outcomes in 07-skills that have rules, keyed by format id (deck, document…).
+function outcomes() {
+  const out = {};
+  for (const dir of listDirs(P.skills)) {
+    const file = `${P.skills}/${dir}/rules.json`;
+    if (dataExists(file)) out[readData(file).id] = dir;
+  }
+  return out;
+}
 
-export const formatProfiles = () => listData("formats", ".json");
+export const formatProfiles = () => Object.keys(outcomes()).sort();
+
+const isGap = (section) => SECTION_FILES[section] && readDoc(SECTION_FILES[section]).meta.status === "not_written";
 
 export function getBrandGuidelines({ section = "overview", format_profile } = {}) {
   if (!SECTIONS.includes(section)) {
@@ -25,47 +31,59 @@ export function getBrandGuidelines({ section = "overview", format_profile } = {}
       section,
       format_profile: profileInfo,
       rules,
-      defaults: readData("rules/defaults.json").defaults,
+      defaults: readData(P.defaults).defaults,
       overrides_applied: profile ? applied : undefined,
       overrides_rejected: profile && rejected.length ? rejected : undefined,
-      open_questions: readData("rules/open-questions.json").items,
-      figma_updates_needed: readData("rules/open-questions.json").figma_updates_needed,
+      open_questions: readData(P.openQuestions).items,
+      figma_updates_needed: readData(P.openQuestions).figma_updates_needed,
     };
   }
 
   if (section === "defaults") {
-    return { section, status: "written", about: readData("rules/defaults.json").about, defaults: readData("rules/defaults.json").defaults, format_profile: profileInfo };
+    return { section, status: "written", about: readData(P.defaults).about, defaults: readData(P.defaults).defaults, format_profile: profileInfo };
   }
 
   if (section === "components") return { section, status: "written", ...components(profile), format_profile: profileInfo };
 
-  if (NOT_WRITTEN[section]) {
+  const doc = readDoc(SECTION_FILES[section]);
+  if (doc.meta.status === "not_written") {
     return {
       section,
       status: "not_written",
       message: `The brand file has no ${section} guidance yet. Do not invent it; tell the user it is missing.`,
-      needed: NOT_WRITTEN[section],
+      needed: doc.meta.needed,
       format_profile: profileInfo,
     };
   }
 
-  const result = { section, status: "written", guidance: readData(`guidelines/${section}.md`, { json: false }), format_profile: profileInfo };
+  const result = { section, status: "written", guidance: doc.body, format_profile: profileInfo };
   if (section === "overview") {
-    result.sections = SECTIONS.map((s) => ({ section: s, status: NOT_WRITTEN[s] ? "not_written" : "written" }));
+    result.sections = SECTIONS.map((s) => ({ section: s, status: isGap(s) ? "not_written" : "written" }));
     result.format_profiles = formatProfiles().map((id) => {
-      const p = readData(`formats/${id}.json`);
+      const p = loadProfile(id);
       return { id, name: p.name, status: p.status };
     });
-    result.open_questions = readData("rules/open-questions.json").items.length;
+    result.open_questions = readData(P.openQuestions).items.length;
   }
   return result;
 }
 
-function loadProfile(id) {
-  if (!/^[a-z0-9-]+$/.test(id) || !dataExists(`formats/${id}.json`)) {
+export function loadProfile(id) {
+  const outcome = outcomes()[id];
+  if (!/^[a-z0-9-]+$/.test(id) || !outcome) {
     throw new BrandError("INVALID_PROFILE", `Unknown format profile "${id}".`, `Use one of: ${formatProfiles().join(", ")}.`);
   }
-  return readData(`formats/${id}.json`);
+  const parts = profileParts(id, outcome);
+  const { id: _id, name, status, note, audience, guardrails, ...rest } = readData(parts.skill);
+  const taste = readData(parts.taste);
+  const merged = { ...guardrails, ...taste };
+  const profile = { id, name, status, note, audience, ...readData(parts.grid), ...rest };
+  for (const [key, file] of Object.entries(parts.extra)) {
+    if (key) profile[key] = readData(file);
+    else Object.assign(profile, readData(file));
+  }
+  profile.guardrails = Object.fromEntries(GUARDRAIL_ORDER.filter((k) => k in merged).map((k) => [k, merged[k]]));
+  return profile;
 }
 
 function summarizeProfile(p) {
@@ -80,7 +98,7 @@ const TIGHTER = {
 };
 
 export function mergeRules(profile) {
-  const rules = readData("rules/rules.json").rules.map((r) => ({ ...r, check: { ...r.check } }));
+  const rules = readData(P.rules).rules.map((r) => ({ ...r, check: { ...r.check } }));
   const applied = [];
   const rejected = [];
   for (const o of profile?.overrides ?? []) {
@@ -102,7 +120,7 @@ const ROLE_FORMATS = { document: "document", newsletter: "newsletter", deck: "de
 
 // Every token name a component may use, mapped to its CSS custom property in get_tokens({ as: "css" }).
 export function tokenCssVars() {
-  const t = readData("tokens.json");
+  const t = readData(P.tokens);
   const map = {};
   for (const [group, names] of Object.entries(t.color.semantic.light)) for (const name of Object.keys(names)) map[`${group}/${name}`] = `--color-${group}-${name}`;
   for (const n of t.spacing.scale) map[`spacing/${n}`] = `--space-${n}`;
@@ -127,12 +145,12 @@ export function componentRefs(spec) {
 }
 
 function components(profile) {
-  const data = readData("components/components.json");
+  const data = readData(P.components);
   const vars = tokenCssVars();
   const { tokens, roles } = componentRefs(data.components);
   const out = { about: data.about, source: data.source, usage: data.usage, components: data.components };
   out.css_vars = Object.fromEntries(tokens.map((t) => [t, `var(${vars[t]})`]));
-  const allRoles = readData("tokens.json").typography.roles;
+  const allRoles = readData(P.tokens).typography.roles;
   const format = profile && ROLE_FORMATS[profile.id];
   out.text_roles = Object.fromEntries(roles.map((r) => {
     const role = allRoles[r];

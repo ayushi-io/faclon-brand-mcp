@@ -1,4 +1,4 @@
-// Bumps data/version.json brand_version to today's YYYY.MM.DD-n.
+// Bumps ds/00-start-here/version.json brand_version to today's YYYY.MM.DD-n.
 // Same day: n + 1. New day: n = 1. Dates use the TZ environment variable
 // (the sync workflow sets Asia/Kolkata).
 // Usage: node scripts/bump-version.mjs        -> prints the new version
@@ -7,7 +7,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-const file = path.join(path.dirname(fileURLToPath(import.meta.url)), "../data/version.json");
+const file = path.join(path.dirname(fileURLToPath(import.meta.url)), "../ds/00-start-here/version.json");
 const text = fs.readFileSync(file, "utf8");
 const { brand_version: current } = JSON.parse(text);
 

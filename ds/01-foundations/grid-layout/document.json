@@ -1,0 +1,32 @@
+{
+  "canvas": {
+    "paper": "A4",
+    "orientation": "portrait",
+    "width": 794,
+    "height": 1123,
+    "unit": "px",
+    "dpi": 96,
+    "pages": {
+      "two_pager": 2,
+      "document": "any"
+    }
+  },
+  "safe_area": {
+    "top": 36,
+    "right": 36,
+    "bottom": 36,
+    "left": 36,
+    "token": "spacing/36"
+  },
+  "content_width": 722,
+  "grid": {
+    "columns": 12,
+    "gutter": "gap/grid",
+    "common_splits": [
+      "12",
+      "6 + 6",
+      "4 + 4 + 4",
+      "8 + 4"
+    ]
+  }
+}

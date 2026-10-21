@@ -1,0 +1,210 @@
+{
+  "must_not": [
+    {
+      "id": "content-unchanged",
+      "text": "Hard rule: never edit or change the user's content (no rewriting, shortening, cutting or adding). If a change seems needed, highlight it, suggest how it could be shown better, and change nothing unless the user approves.",
+      "basis": [
+        "rule:content.no-edits",
+        "decision:content-fidelity",
+        "decision:user-decides-what"
+      ]
+    },
+    {
+      "id": "no-overflow",
+      "text": "Never let text overflow the canvas padding on any side, or the card, box, zone or node it sits in.",
+      "basis": [
+        "decision:no-overflow",
+        "profile:safe_area"
+      ]
+    },
+    {
+      "id": "min-size",
+      "text": "Never set text below 10px.",
+      "basis": [
+        "rule:type.min-size"
+      ]
+    },
+    {
+      "id": "page-breaks",
+      "text": "Never cut a UI card, a table row, an image with its caption, or a heading from its first paragraph across a page break; if it does not fit, move it whole to the next page. Paragraphs and lists may continue on the next page.",
+      "basis": [
+        "profile:page_breaks.keep_together",
+        "profile:page_breaks.may_split"
+      ]
+    },
+    {
+      "id": "footer-clearance",
+      "text": "Never let content run into the footer: everything stops gap/grid (24px) above it, at most 1045px from the top of the page.",
+      "basis": [
+        "profile:page_breaks.content_to_footer",
+        "profile:page_breaks.content_bottom_limit"
+      ]
+    },
+    {
+      "id": "two-pager-length",
+      "text": "Never let a 2-pager run past two pages.",
+      "basis": [
+        "profile:canvas.pages",
+        "profile:severity.two_pager_max_pages"
+      ]
+    },
+    {
+      "id": "images",
+      "text": "Never make an image wider than the 722px content width, or leave it without alt text in HTML.",
+      "basis": [
+        "profile:images"
+      ]
+    },
+    {
+      "id": "no-ai-slop",
+      "text": "Never make it look generic or machine-made: no gradients, glows, neon, glass or blur effects, decorative filler (blobs, orbs, sparkles, floating shapes), AI cliche imagery or icons (glowing brains, circuits, robot hands, sparkles or rockets for AI), text effects, or a coloured stripe down one side of a card.",
+      "basis": [
+        "rule:design.no-ai-slop"
+      ]
+    },
+    {
+      "id": "tokens-only",
+      "text": "Never use a colour that is not a design-system token, and never sample or approximate one.",
+      "basis": [
+        "rule:color.tokens-only"
+      ]
+    },
+    {
+      "id": "two-fonts",
+      "text": "Never use a font other than TASA Orbiter (headings) and Inter (body).",
+      "basis": [
+        "rule:type.two-families-only"
+      ]
+    },
+    {
+      "id": "sizes-in-scale",
+      "text": "Never use in-between font sizes: text comes from Role/* or the defined text styles.",
+      "basis": [
+        "rule:type.styles-only",
+        "rule:type.text-roles"
+      ]
+    },
+    {
+      "id": "pill-radius",
+      "text": "Never put a pill radius on a card, panel, container, input or image.",
+      "basis": [
+        "rule:radius.pill-only-for-pills"
+      ]
+    },
+    {
+      "id": "eyebrow-surfaces",
+      "text": "Never place an eyebrow on container/secondary or container/tertiary (it fails contrast).",
+      "basis": [
+        "rule:color.eyebrow-placement"
+      ]
+    },
+    {
+      "id": "shadow-heavy-border",
+      "text": "Never combine a shadow with a border of 2px or more.",
+      "basis": [
+        "rule:elevation.no-shadow-with-heavy-border"
+      ]
+    }
+  ],
+  "avoid": [
+    {
+      "id": "accent-budget",
+      "text": "Avoid using the accent colours (accent and accent-2 together) on more than roughly 10–15% of the piece; it is a highlight, not a palette.",
+      "basis": [
+        "rule:color.accent-budget"
+      ]
+    },
+    {
+      "id": "tertiary-text",
+      "text": "Avoid text/tertiary for essential text; at 3.4:1 it is for large or non-essential text only.",
+      "basis": [
+        "decision:tertiary-text-contrast"
+      ]
+    },
+    {
+      "id": "same-card-everywhere",
+      "text": "Avoid giving every section the same card design. Repeat a design only where the content repeats, such as a set of like items in one row or grid.",
+      "basis": [
+        "decision:new-card-designs"
+      ]
+    },
+    {
+      "id": "template-layouts",
+      "text": "Avoid template layouts: the same icon, title and text card in every section, an icon on every heading or card when it adds nothing, or every section centred. Every element carries content or structure; when in doubt, leave it out.",
+      "basis": [
+        "rule:design.no-ai-slop",
+        "decision:new-card-designs"
+      ]
+    }
+  ],
+  "design_direction": [
+    {
+      "id": "spacing-by-purpose",
+      "text": "Pick spacing by purpose: gap/inline between adjacent items, gap/stack inside a component, gap/grid between cards, padding/container inside cards, padding/section between sections.",
+      "basis": [
+        "rule:spacing.role-defaults"
+      ]
+    },
+    {
+      "id": "cards",
+      "text": "Cards and panels use the container default: container/primary, 1px border/container, radius/default, padding/container. Nest with container/secondary, then container/tertiary.",
+      "basis": [
+        "default:container",
+        "default:nested_container",
+        "rule:color.container-default"
+      ]
+    },
+    {
+      "id": "card-variety",
+      "text": "Design each section's cards for its content. The named cards are starting points; when none fits, build a new card on Card base: pick a tone, then arrange atoms, controls and text roles in its slot with spacing tokens (for example number-led, image-led, split, stat row, steps or comparison). Cards in one row or grid share one design; vary the design between sections.",
+      "basis": [
+        "decision:new-card-designs",
+        "default:container"
+      ]
+    },
+    {
+      "id": "text-colours",
+      "text": "Headings use text/heading, body copy text/body, eyebrows text/eyebrow.",
+      "basis": [
+        "rule:color.text-defaults"
+      ]
+    },
+    {
+      "id": "status",
+      "text": "Show status with the five intents (Positive, Negative, Information, Neutral, Primary) and their fixed fill/text pairs; warnings use Negative.",
+      "basis": [
+        "rule:color.status-intents",
+        "rule:color.pairings"
+      ]
+    },
+    {
+      "id": "flat-surfaces",
+      "text": "Keep surfaces flat; use Low Raised only to lift a card off the canvas.",
+      "basis": [
+        "rule:elevation.flat-default"
+      ]
+    },
+    {
+      "id": "buttons",
+      "text": "Buttons have softened square corners (radius/default), never pill.",
+      "basis": [
+        "rule:radius.buttons"
+      ]
+    },
+    {
+      "id": "icons",
+      "text": "When an icon helps, use Lucide and colour it with a text token that suits the surface.",
+      "basis": [
+        "rule:icon.lucide-only"
+      ]
+    },
+    {
+      "id": "too-much-content",
+      "text": "If the content is too much for the space, do not squeeze it below the minimum size or cut it: tell the user, and offer options (split across slides or pages, a different layout, a table or chart).",
+      "basis": [
+        "decision:no-overflow",
+        "decision:content-fidelity"
+      ]
+    }
+  ]
+}
