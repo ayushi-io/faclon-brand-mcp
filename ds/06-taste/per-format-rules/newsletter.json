@@ -19,7 +19,7 @@
     },
     {
       "id": "min-size",
-      "text": "Never set text below 14px.",
+      "text": "Never set text below 12px.",
       "basis": [
         "rule:type.min-size",
         "profile:overrides"
@@ -120,13 +120,6 @@
         "decision:newsletter-no-emoji",
         "rule:icon.lucide-only"
       ]
-    },
-    {
-      "id": "shadow-heavy-border",
-      "text": "Never combine a shadow with a border of 2px or more.",
-      "basis": [
-        "rule:elevation.no-shadow-with-heavy-border"
-      ]
     }
   ],
   "avoid": [
@@ -204,6 +197,13 @@
       ]
     },
     {
+      "id": "impact-section",
+      "text": "A business impact (or impact) section sits on the dark theme (background/inverse, text/inverse) or the brand theme (background/brand, text/on-brand) so it makes an impression.",
+      "basis": [
+        "decision:impact-section-theme"
+      ]
+    },
+    {
       "id": "hero-type",
       "text": "Hero title heading/h2 (32px desktop, 26px mobile), subheader body/lg (18px, 16px), CTA Role/Button, on token line heights. A long heading the user keeps may step down to heading/h3 so it stays uncluttered.",
       "basis": [
@@ -247,11 +247,12 @@
     },
     {
       "id": "cards",
-      "text": "Cards and panels use the container default: container/primary, 1px border/container, radius/default, padding/container. Nest with container/secondary, then container/tertiary.",
+      "text": "Cards and panels use the container default: container/primary, 1px border/container, padding/container, radius/default (2px); a card at least half the content width uses Size Large (radius/3xl, 12px). Nest with container/secondary, then container/tertiary.",
       "basis": [
         "default:container",
         "default:nested_container",
-        "rule:color.container-default"
+        "rule:color.container-default",
+        "rule:radius.scale-only"
       ]
     },
     {
@@ -260,6 +261,13 @@
       "basis": [
         "decision:new-card-designs",
         "default:container"
+      ]
+    },
+    {
+      "id": "infographic",
+      "text": "Make sections infographic-led: show numbers, steps, comparisons and relationships as charts, diagrams, flows, stat rows and big numbers built from the design system, rather than paragraphs of text.",
+      "basis": [
+        "decision:infographic-led"
       ]
     },
     {

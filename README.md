@@ -2,14 +2,14 @@
 
 MCP server for the Faclon marketing design system. Built from scratch on 2026-10-08 from the Figma file **Design MCP** (`UDARPzxpNySOS2F3mxhgUs`).
 
-Flow: Brand and Assets → Generation (components, templates, taste, skills) → graphics, images, decks, A4 documents, unique A4, case studies, newsletters, architectures → QA / AI → Brand Validator → Export (HTML). Brand is built, with rules for decks, A4 documents, newsletters and architectures; the rest comes next.
+Flow: Brand and Assets → Generation (components, templates, taste, skills) → social media, images, decks, A4 documents, unique A4, case studies, newsletters, architectures → QA / AI → Brand Validator → Export (HTML). Brand is built, with rules for decks, A4 documents, newsletters, architectures and social media; the rest comes next.
 
 ## Tools
 
 | Tool | What it does |
 |---|---|
-| `get_tokens(category?, mode?, format?, as?)` | Design tokens. `category`: color, typography, spacing, radius, border, elevation, opacity. `mode`: light/dark (color), desktop/mobile (typography, spacing). `format`: document, newsletter, deck (text roles; typography only). `as`: json, css, tailwind, figma. |
-| `get_brand_guidelines(section?, format_profile?)` | Guidance and rules. `section`: overview, rules, defaults, components, logo, typography, color, voice, illustration, architecture, imagery. `format_profile`: deck, document, newsletter, architecture. |
+| `get_tokens(category?, mode?, format?, as?)` | Design tokens. `category`: color, typography, spacing, radius, border, elevation, opacity, gradient. `mode`: light/dark (color), desktop/mobile (typography, spacing). `format`: document, newsletter, deck (text roles; typography only). `as`: json, css, tailwind, figma. |
+| `get_brand_guidelines(section?, format_profile?)` | Guidance and rules. `section`: overview, principles, rules, defaults, components, logo, typography, color, voice, design-elements, illustration, architecture, imagery. `format_profile`: deck, document, newsletter, architecture, social. |
 
 Every response is `{ ok, data | error, brand_version }`. Errors carry a `code` and a `fix`.
 

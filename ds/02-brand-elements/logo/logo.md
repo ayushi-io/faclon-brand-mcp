@@ -10,4 +10,6 @@ Source: Figma "Design MCP", Logo page.
 
 Always place the real logo file. Never typeset the company name in its place, and never redraw or recolour the logo.
 
+**Logomark.** The Faclon Labs logomark is the mark on its own, without the wordmark (blue and white versions in the Figma file). By default, always place the full logo. Use the logomark only in the specific places where the user explicitly asks for it; never swap it in for the full logo on your own. The same blue-on-light and white-on-dark rules apply.
+
 Not yet defined in Figma: clear space, minimum size, and misuse examples.

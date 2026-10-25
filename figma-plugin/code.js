@@ -11,6 +11,17 @@ figma.showUI(__html__, { width: 380, height: 520, themeColors: true });
 // ---------- snapshot export (keep in sync with sources/figma/snapshot.json) ----------
 const hex2 = (n) => Math.round(n * 255).toString(16).padStart(2, "0").toUpperCase();
 const hexOf = (c) => "#" + hex2(c.r) + hex2(c.g) + hex2(c.b);
+const round4 = (n) => Math.round(n * 10000) / 10000;
+// Figma's gradientTransform maps the node (0..1) into gradient space, where the gradient
+// runs along x. Invert it, take the direction from (0, 0.5) to (1, 0.5) and turn it into
+// a CSS angle (0deg = to top, 90deg = to right).
+function gradientAngle(t) {
+  const [[a, b, c], [d, e, f]] = t;
+  const det = a * e - b * d;
+  const inv = (gx, gy) => ({ x: (e * (gx - c) - b * (gy - f)) / det, y: (-d * (gx - c) + a * (gy - f)) / det });
+  const p0 = inv(0, 0.5), p1 = inv(1, 0.5);
+  return Math.round(((Math.atan2(p1.x - p0.x, -(p1.y - p0.y)) * 180) / Math.PI + 360) % 360);
+}
 
 async function buildSnapshot() {
   const collections = await figma.variables.getLocalVariableCollectionsAsync();
@@ -62,6 +73,21 @@ async function buildSnapshot() {
     })),
   }));
 
+  // Gradient paint styles (gradient/*). The angle is the CSS linear-gradient angle,
+  // read from the gradient transform on a square node.
+  const paintStyles = (await figma.getLocalPaintStylesAsync()).map((s) => ({
+    name: s.name,
+    description: s.description || "",
+    paints: s.paints.filter((p) => p.visible !== false).map((p) => {
+      if (!p.type.startsWith("GRADIENT")) return { type: p.type, color: p.color ? hexOf(p.color) : null, opacity: round4(p.opacity ?? 1) };
+      return {
+        type: p.type,
+        angle: gradientAngle(p.gradientTransform),
+        stops: p.gradientStops.map((g) => ({ position: round4(g.position), color: hexOf(g.color), opacity: round4(g.color.a) })),
+      };
+    }),
+  }));
+
   return {
     source: {
       fileName: figma.root.name,
@@ -72,6 +98,7 @@ async function buildSnapshot() {
     collections: outCollections,
     textStyles,
     effectStyles,
+    paintStyles,
   };
 }
 

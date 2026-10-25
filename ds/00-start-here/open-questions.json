@@ -24,7 +24,7 @@
     },
     {
       "id": "heavy-border",
-      "decision": "A heavy border is 2px or more; a shadow with the default 1px border is allowed.",
+      "decision": "A heavy border is 2px or more; a shadow with the default 1px border is allowed. Superseded 2026-10-23: the brand team removed the shadow and heavy-border rule.",
       "decided_on": "2026-10-09"
     },
     {
@@ -336,6 +336,91 @@
       "id": "html-only-export",
       "decision": "Every outcome exports HTML only: decks, A4 documents, newsletters, architectures and every outcome added later. PDF, PPTX and PNG exports are dropped (this replaces the earlier deck decision of HTML by default with PDF or PPTX on request).",
       "decided_on": "2026-10-21"
+    },
+    {
+      "id": "deck-card-radius",
+      "decision": "In decks, UI cards have a 12px corner radius (radius/3xl) by default.",
+      "decided_on": "2026-10-23"
+    },
+    {
+      "id": "infographic-led",
+      "decision": "Decks and newsletters lean towards an infographic approach: numbers, steps, comparisons and relationships shown visually with design-system parts rather than as paragraphs.",
+      "decided_on": "2026-10-23"
+    },
+    {
+      "id": "other-colours-on-request",
+      "decision": "Decks use the light, dark and brand themes; if the user asks for other colours they may be used, but only design-system tokens.",
+      "decided_on": "2026-10-23"
+    },
+    {
+      "id": "impact-section-theme",
+      "decision": "A newsletter business impact (or impact) section uses the dark or the brand theme so it makes an impression.",
+      "decided_on": "2026-10-23"
+    },
+    {
+      "id": "type-min-size-2026-10-23",
+      "decision": "Minimum text size: newsletter 12px (was 14px), architecture 10px (was 12px, now the system minimum).",
+      "decided_on": "2026-10-23"
+    },
+    {
+      "id": "two-pager-overflow",
+      "decision": "If a 2-pager's content flows past two pages, highlight it to the user and offer options; never cut or squeeze it.",
+      "decided_on": "2026-10-23"
+    },
+    {
+      "id": "social-media-rules",
+      "decision": "Social media posts are for LinkedIn, square 1:1 or portrait 4:5 (a set can mix both), designed at 540 px and exported at 2x. Safe area 24 px (spacing/24), 12-column grid with 30 px columns and 12 px gutters. Big numbers Display/XL Regular, never above 72; minimum 10 px. Export HTML only. One message per post; carousel slides share one grid and type scale. References show layout and feel only.",
+      "decided_on": "2026-10-23"
+    },
+    {
+      "id": "social-cover-image",
+      "decision": "The cover slide of a social post carries an image the user generates and supplies; Claude never picks or generates it.",
+      "decided_on": "2026-10-23"
+    },
+    {
+      "id": "social-theme-rhythm",
+      "decision": "Social posts: the cover is dark; following slides are light by default (dark if the user wants). With five or more slides between cover and closing, one dark slide follows every two light slides. The closing slide follows the cover's theme.",
+      "decided_on": "2026-10-23"
+    },
+    {
+      "id": "social-colour-mix",
+      "decision": "Every social post combines colours from the design system, never a single colour, and carries the full logo at the top, left or right.",
+      "decided_on": "2026-10-23"
+    },
+    {
+      "id": "gradients-where-allowed",
+      "decision": "Gradients are allowed only as the brand's gradient paint styles, where a rule allows them: gradient/bruce-ai on Bruce AI content. Glow effects are not approved.",
+      "decided_on": "2026-10-23"
+    },
+    {
+      "id": "design-elements",
+      "decision": "Design elements on the Graphic elements page are exempt from the no-AI-slop rule, each on its own background only: the dot-particle form on dark, the light streak on brand.",
+      "decided_on": "2026-10-23"
+    },
+    {
+      "id": "think-like-sales",
+      "decision": "Design principle 7: Claude, or any AI tool designing for Faclon Labs, works as a senior designer on the marketing team who thinks like sales first (buyer, pipeline stage, next step) and then designs. Sales thinking shapes the design, never the words.",
+      "decided_on": "2026-10-23"
+    },
+    {
+      "id": "role-button-inter",
+      "decision": "Role/Button uses Inter Medium (was TASA Orbiter Medium).",
+      "decided_on": "2026-10-23"
+    },
+    {
+      "id": "border-width-names",
+      "decision": "Border widths use t-shirt names like radius: default 1px, md 2px, lg 3px, xl 4px, 2xl 5px, 3xl 6px (the maximum).",
+      "decided_on": "2026-10-23"
+    },
+    {
+      "id": "radius-scale-and-card-size",
+      "decision": "Radius scale runs 2 to 24px in 2px steps. Cards have a Size: Default (radius/default 2px) and Large (radius/3xl 12px); Large for cards at least half the content width, and every deck card. Pill only for badges, contact pills, avatars and circular icon buttons; chips use radius/default, tags radius/md.",
+      "decided_on": "2026-10-21"
+    },
+    {
+      "id": "two-accents",
+      "decision": "Two accents: accent (#68DD68) for dark surfaces and accent-2 (#B4FF6B, text/accent-on-brand) for highlighted text on brand blue; together within the accent budget.",
+      "decided_on": "2026-10-16"
     }
   ],
   "figma_updates_needed": [],

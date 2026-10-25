@@ -222,6 +222,21 @@ for (const s of snapshot.effectStyles) {
   };
 }
 
+// ---------- gradients ----------
+// gradient/* paint styles. Only these gradients are allowed, and only where a rule allows them.
+const gradient = {};
+for (const s of snapshot.paintStyles ?? []) {
+  const g = s.paints.find((p) => p.type === "GRADIENT_LINEAR");
+  if (!s.name.startsWith("gradient/") || !g) continue;
+  gradient[s.name.slice("gradient/".length)] = {
+    description: s.description,
+    figmaStyle: s.name,
+    angle: g.angle,
+    stops: g.stops,
+    css: `linear-gradient(${g.angle}deg, ${g.stops.map((st) => `${st.opacity === 1 ? st.color : rgba(st.color, st.opacity)} ${round(st.position * 100)}%`).join(", ")})`,
+  };
+}
+
 const tokens = {
   source: snapshot.source,
   color,
@@ -231,6 +246,7 @@ const tokens = {
   border,
   elevation,
   opacity,
+  gradient,
 };
 
 fs.writeFileSync(path.join(ROOT, P.tokens), JSON.stringify(tokens, null, 2) + "\n");

@@ -19,7 +19,7 @@
     },
     {
       "id": "min-size",
-      "text": "Never set text below 12px, however dense the diagram.",
+      "text": "Never set text below 10px, however dense the diagram.",
       "basis": [
         "rule:type.min-size",
         "profile:overrides"
@@ -72,13 +72,6 @@
       "text": "Never put a pill radius on a zone, node box, tag or panel.",
       "basis": [
         "rule:radius.pill-only-for-pills"
-      ]
-    },
-    {
-      "id": "shadow-heavy-border",
-      "text": "Never combine a shadow with a border of 2px or more.",
-      "basis": [
-        "rule:elevation.no-shadow-with-heavy-border"
       ]
     }
   ],

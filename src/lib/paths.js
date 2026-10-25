@@ -17,10 +17,12 @@ export const P = {
 // matter says `status: not_written` is a gap: served as such, never invented.
 export const SECTION_FILES = {
   overview: "ds/00-start-here/README.md",
+  principles: "ds/00-start-here/principles.md",
   logo: "ds/02-brand-elements/logo/logo.md",
   typography: "ds/01-foundations/typography/typography.md",
   color: "ds/01-foundations/color/color.md",
   voice: "ds/01-foundations/voice/voice.md",
+  "design-elements": "ds/02-brand-elements/design-elements/README.md",
   illustration: "ds/02-brand-elements/illustration/README.md",
   architecture: "ds/02-brand-elements/diagrams/README.md",
   imagery: "ds/02-brand-elements/photography-imagery/README.md",

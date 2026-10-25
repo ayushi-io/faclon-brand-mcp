@@ -2,7 +2,7 @@ import { readData } from "../lib/data.js";
 import { P } from "../lib/paths.js";
 import { BrandError } from "../lib/envelope.js";
 
-export const CATEGORIES = ["color", "typography", "spacing", "radius", "border", "elevation", "opacity"];
+export const CATEGORIES = ["color", "typography", "spacing", "radius", "border", "elevation", "opacity", "gradient"];
 export const OUTPUTS = ["json", "css", "tailwind", "figma"];
 export const MODES = ["light", "dark", "desktop", "mobile"];
 export const FORMATS = ["document", "newsletter", "deck"];
@@ -129,6 +129,7 @@ function toCss(cats, format) {
   if (cats.includes("border")) for (const [k, v] of Object.entries(t.border.width)) root.push(`--border-width-${k}: ${px(v)};`);
   if (cats.includes("elevation")) for (const [k, v] of Object.entries(t.elevation)) root.push(`--shadow-${k}: ${v.css};`);
   if (cats.includes("opacity")) for (const [k, v] of Object.entries(t.opacity)) root.push(`--opacity-${k}: ${v};`);
+  if (cats.includes("gradient")) for (const [k, v] of Object.entries(t.gradient)) root.push(`--gradient-${k}: ${v.css};`);
 
   const block = (sel, lines, indent = "") => (lines.length ? `${indent}${sel} {\n${lines.map((l) => `${indent}  ${l}`).join("\n")}\n${indent}}\n` : "");
   let css = `/* Faclon brand tokens — generated from Figma "${t.source.fileName}" */\n`;
@@ -168,6 +169,7 @@ function toTailwind(cats) {
   if (cats.includes("border")) extend.borderWidth = Object.fromEntries(Object.entries(t.border.width).map(([k, v]) => [k === "default" ? "DEFAULT" : k, `${v}px`]));
   if (cats.includes("elevation")) extend.boxShadow = Object.fromEntries(Object.entries(t.elevation).map(([k, v]) => [k, v.css]));
   if (cats.includes("opacity")) extend.opacity = Object.fromEntries(Object.entries(t.opacity).map(([k, v]) => [k, String(v)]));
+  if (cats.includes("gradient")) extend.backgroundImage = Object.fromEntries(Object.keys(t.gradient).map((k) => [`gradient-${k}`, `var(--gradient-${k})`]));
   return `// Faclon brand tokens for Tailwind — generated from Figma "${t.source.fileName}"\nexport default {\n  theme: {\n    extend: ${JSON.stringify(extend, null, 2).replace(/\n/g, "\n    ")}\n  }\n};\n`;
 }
 function setIn(obj, parts, value) {
@@ -193,5 +195,6 @@ function toFigma(cats) {
   if (cats.includes("border")) out.border = [pick("Global Styles", "global/border-width"), pick("Semantic Styles", "border-width")];
   if (cats.includes("opacity")) out.opacity = [pick("Global Styles", "global/opacity"), pick("Semantic Styles", "opacity")];
   if (cats.includes("elevation")) out.elevation = snap.effectStyles;
+  if (cats.includes("gradient")) out.gradient = snap.paintStyles ?? [];
   return out;
 }

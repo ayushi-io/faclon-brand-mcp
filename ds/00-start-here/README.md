@@ -3,9 +3,9 @@
 Source: Figma file "Design MCP". Values come from its variables and styles.
 
 - **Typefaces:** TASA Orbiter for headings, Inter for body text.
-- **Colour:** brand blue scale (brand/050–1000, primary brand/500 #1655F2), green and red status scales, neutral-light and neutral-dark ramps, and a single accent (#68DD68). Use semantic tokens (background/*, container/*, text/*, border/*), which switch between Light and Dark.
+- **Colour:** brand blue scale (brand/050–1000, primary brand/500 #1655F2), green and red status scales, neutral-light and neutral-dark ramps, and two accents: accent (#68DD68, on dark surfaces) and accent-2 (#B4FF6B, text/accent-on-brand, highlighted text on brand blue). Use semantic tokens (background/*, container/*, text/*, border/*), which switch between Light and Dark.
 - **Spacing:** 4px steps from 4 to 56, with roles for inline gaps, stacks, grids, container padding and section padding. Roles tighten on mobile.
-- **Radius:** 2, 4, 6, 8, 10, 12 and pill.
+- **Radius:** 2 to 24px in 2px steps (radius/default to radius/9xl) and pill. Cards come in two sizes: Default (radius/default, 2px) and Large (radius/3xl, 12px).
 - **Elevation:** flat by default; Low Raised for cards, Mid Raised for modals, popovers and dropdowns.
 - **Responsive:** Desktop and Mobile modes; mobile applies below 768px.
 - **Logos:** Faclon Labs (blue and white) and Bruce AI (light and dark background versions).
@@ -14,7 +14,7 @@ Call get_tokens for exact values and get_brand_guidelines(section: "rules") for 
 
 ## What this is
 
-The Faclon marketing design system: everything needed to make on-brand graphics, images, decks, A4 documents, unique A4 forms, case studies, newsletters and architecture diagrams, written for people and for AI. The Faclon Brand MCP serves it to Claude.
+The Faclon marketing design system: everything needed to make on-brand social media posts, images, decks, A4 documents, unique A4 forms, case studies, newsletters and architecture diagrams, written for people and for AI. The Faclon Brand MCP serves it to Claude.
 
 Flow: Brand (foundations, brand elements) and Assets feed Generation (components, templates, taste, skills), which makes each outcome; QA / AI and the Brand Validator check it; Export delivers HTML.
 

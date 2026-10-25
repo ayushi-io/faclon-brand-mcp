@@ -47,6 +47,19 @@
       "source": "Logo page > Logo useage"
     },
     {
+      "id": "logo.logomark-on-request",
+      "category": "logo",
+      "rule": "Always place the full Faclon Labs logo. Use the logomark (the mark without the wordmark) only in the specific places where the user explicitly asks for it; never swap it in for the full logo on your own.",
+      "check": {
+        "type": "logo-variant",
+        "variant": "logomark",
+        "allowed_when": "the user explicitly asks for the logomark in that place"
+      },
+      "severity": "error",
+      "locked": true,
+      "source": "Brand team decision 2026-10-22"
+    },
+    {
       "id": "type.two-families-only",
       "category": "typography",
       "rule": "Only two typefaces exist: TASA Orbiter and Inter. No third typeface may be referenced anywhere, including as a fallback. If TASA Orbiter is unavailable, fall back to Inter and stop there.",
@@ -104,7 +117,7 @@
     {
       "id": "type.min-size",
       "category": "typography",
-      "rule": "Never set type below 10px, in any format or at any breakpoint. Format profiles may raise this (newsletter 14px, deck 24px).",
+      "rule": "Never set type below 10px, in any format or at any breakpoint. Format profiles may raise this (newsletter 12px, deck 14px).",
       "check": {
         "type": "font-size-min",
         "value": 10
@@ -261,7 +274,7 @@
           },
           "button": {
             "use": "button labels",
-            "font": "TASA Orbiter Medium",
+            "font": "Inter Medium",
             "document": "heading/h6",
             "newsletter": "heading/h5",
             "deck": "heading/h3"
@@ -274,8 +287,8 @@
             "deck": "display/md"
           },
           "tag": {
-            "use": "uppercase statement tag",
-            "font": "TASA Orbiter Semi Bold, uppercase",
+            "use": "statement tag",
+            "font": "Inter Medium, case as written",
             "document": "heading/h5",
             "newsletter": "heading/h4",
             "deck": "heading/h3"
@@ -284,7 +297,7 @@
       },
       "severity": "error",
       "locked": false,
-      "source": "Brand team decision 2026-10-14; Figma collection 'Text Roles' and Role/* text styles"
+      "source": "Brand team decision 2026-10-14; Figma collection 'Text Roles' and Role/* text styles; Role/Tag to Inter Medium, no forced uppercase (2026-10-22); Role/Button to Inter Medium (2026-10-23)"
     },
     {
       "id": "type.body-regular-no-tracking",
@@ -682,7 +695,7 @@
     {
       "id": "radius.scale-only",
       "category": "radius",
-      "rule": "Corners are softened, not rounded: surfaces use radius 2, 4, 6, 8, 10 or 12px. The default is 2px (radius/default); 12px is the largest radius on any surface. There is no 0: square corners mean no radius set.",
+      "rule": "Corners come from the radius scale: 2 to 24px in 2px steps (radius/default 2px to radius/9xl 24px). The default is 2px (radius/default); 24px is the largest radius on any surface. Cards come in two sizes: Default (radius/default) and Large (radius/3xl, 12px), Large for cards at least half the content width and for every deck card. There is no 0: square corners mean no radius set.",
       "check": {
         "type": "value-in-set",
         "token": "radius",
@@ -690,27 +703,28 @@
           "pill"
         ],
         "default": 2,
-        "max": 12
+        "max": 24
       },
       "severity": "error",
       "locked": false,
-      "source": "Variable description: radius/default, radius/3xl; Uploaded token files 2026-10-09 (radius.json)"
+      "source": "Variable description: radius/default, radius/3xl; Uploaded token files 2026-10-09 (radius.json); scale extended to 24px and card Size variant decided by the brand team 2026-10-21"
     },
     {
       "id": "radius.pill-only-for-pills",
       "category": "radius",
-      "rule": "Pill radius (9999px) is only for chips, tags, badges, avatars and circular icon buttons. Never on a card, panel, container, input or image.",
+      "rule": "Pill radius (9999px) is only for badges, contact pills, avatars and circular icon buttons. Never on a chip, tag, card, panel, container, input or image: chips use radius/default and tags radius/md.",
       "check": {
         "type": "restricted-use",
         "token": "radius.pill",
         "allowed": [
-          "chip",
-          "tag",
           "badge",
+          "contact pill",
           "avatar",
           "circular icon button"
         ],
         "forbidden": [
+          "chip",
+          "tag",
           "card",
           "panel",
           "container",
@@ -720,7 +734,7 @@
       },
       "severity": "error",
       "locked": true,
-      "source": "Variable description: radius/pill; Uploaded token files 2026-10-09 (radius.json)"
+      "source": "Variable description: radius/pill; Uploaded token files 2026-10-09 (radius.json); chips and tags follow the components (not pill), decided by the brand team 2026-10-21"
     },
     {
       "id": "radius.buttons",
@@ -738,16 +752,16 @@
     {
       "id": "border.width-scale-only",
       "category": "border",
-      "rule": "Every border is 1px (border-width/default) unless stated otherwise. Thicker steps are 2px (emphasis, selected), 3px (strong emphasis) and 4px (the maximum). There is no 0 and no fractional width: to remove a border, remove the stroke.",
+      "rule": "Every border is 1px (border-width/default) unless stated otherwise. Thicker steps are border-width/md 2px (emphasis, selected), lg 3px (strong emphasis), xl 4px (very strong emphasis), 2xl 5px (extra-strong emphasis) and 3xl 6px (the maximum). There is no 0 and no fractional width: to remove a border, remove the stroke.",
       "check": {
         "type": "value-in-set",
         "token": "border.width",
         "default": 1,
-        "max": 4
+        "max": 6
       },
       "severity": "error",
       "locked": false,
-      "source": "Variable description: border-width/*, global/border-width/*; Uploaded token files 2026-10-09 (borders-elevation.json)"
+      "source": "Variable description: border-width/*, global/border-width/*; Uploaded token files 2026-10-09 (borders-elevation.json); md..3xl names and the 5px and 6px steps added by the brand team 2026-10-23"
     },
     {
       "id": "elevation.flat-default",
@@ -761,21 +775,6 @@
       "severity": "error",
       "locked": false,
       "source": "Effect styles; Variable description: container/elevated; Uploaded token files 2026-10-09 (borders-elevation.json); Mid Raised scope per borders-elevation.json, decided by brand team 2026-10-09"
-    },
-    {
-      "id": "elevation.no-shadow-with-heavy-border",
-      "category": "elevation",
-      "rule": "Never combine a shadow with a heavy border (2px or more) on the same surface. Shadows are identical in Light and Dark.",
-      "check": {
-        "type": "exclusive",
-        "when": "shadow != none",
-        "forbid": {
-          "borderWidthMin": 2
-        }
-      },
-      "severity": "error",
-      "locked": false,
-      "source": "data/sources/uploaded-2026-10-09/borders-elevation.json; 'heavy' = 2px or more, decided by brand team 2026-10-09"
     },
     {
       "id": "opacity.default-full",
@@ -805,7 +804,7 @@
     {
       "id": "design.no-ai-slop",
       "category": "design",
-      "rule": "No AI slop: nothing may look generic or machine-made. Never use gradients of any kind (backgrounds, text, buttons or borders) or mesh, blob and aurora backgrounds; glows, neon, glassmorphism, backdrop blur or any shadow other than the Elevation tokens; decorative filler that carries no information (abstract blobs, orbs, sparkles, floating shapes, dot grids, squiggles, scattered background icons); AI cliches in imagery or icons (glowing brains, circuit boards, robot hands, holograms, glowing network meshes, a sparkle or rocket to signal AI or a launch); text effects (gradient, outlined, shadowed or glowing text); or a coloured stripe down one side of a card or callout. Avoid template layouts: the same icon, title and text card repeated section after section, an icon on every heading or card when it adds nothing, or every section centred. Every element carries content or structure; when in doubt, leave it out. For writing, follow the AI-sounding writing list in the voice guideline.",
+      "rule": "No AI slop: nothing may look generic or machine-made. Never use gradients of any kind (backgrounds, text, buttons or borders) or mesh, blob and aurora backgrounds; glows, neon, glassmorphism, backdrop blur or any shadow other than the Elevation tokens; decorative filler that carries no information (abstract blobs, orbs, sparkles, floating shapes, dot grids, squiggles, scattered background icons); AI cliches in imagery or icons (glowing brains, circuit boards, robot hands, holograms, glowing network meshes, a sparkle or rocket to signal AI or a launch); text effects (gradient, outlined, shadowed or glowing text); or a coloured stripe down one side of a card or callout. Avoid template layouts: the same icon, title and text card repeated section after section, an icon on every heading or card when it adds nothing, or every section centred. Every element carries content or structure; when in doubt, leave it out. For writing, follow the AI-sounding writing list in the voice guideline. Exceptions: the design elements in 02-brand-elements/design-elements, each only on its own background, and the gradient paint styles where a rule allows them (gradient/bruce-ai on Bruce AI content). Glow effects are never allowed.",
       "check": {
         "type": "pattern-ban",
         "never": [
@@ -824,11 +823,15 @@
           "an icon on every heading or card when it adds nothing",
           "every section centred"
         ],
-        "writing": "guidelines:voice (AI-sounding writing)"
+        "writing": "guidelines:voice (AI-sounding writing)",
+        "exceptions": [
+          "design elements (02-brand-elements/design-elements), each on its own background: dot-particle form on dark, light streak on brand",
+          "gradient/bruce-ai on Bruce AI content"
+        ]
       },
       "severity": "error",
       "locked": true,
-      "source": "Brand team decision 2026-10-21 (no-ai-slop)"
+      "source": "Brand team decision 2026-10-21 (no-ai-slop); exceptions approved by the brand team 2026-10-23 (design-elements, gradients-where-allowed)"
     }
   ]
 }

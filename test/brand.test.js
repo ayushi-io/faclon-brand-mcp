@@ -42,7 +42,8 @@ test("spacing, radius, border and elevation come through", () => {
   assert.deepEqual(getTokens({ category: "spacing" }).tokens.scale, [4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56]);
   assert.equal(getTokens({ category: "spacing", mode: "mobile" }).tokens.roles["padding/section"], 32);
   assert.equal(getTokens({ category: "radius" }).tokens.lg, 6);
-  assert.equal(getTokens({ category: "border" }).tokens.width.thick, 2);
+  assert.equal(getTokens({ category: "border" }).tokens.width.md, 2);
+  assert.equal(getTokens({ category: "border" }).tokens.width["3xl"], 6);
   assert.match(getTokens({ category: "elevation" }).tokens["mid-raised"].css, /8px 24px/);
 });
 
@@ -73,6 +74,15 @@ test("guidelines: written sections, gaps and overview", () => {
   assert.match(voice.guidance, /Faclon Labs by name/);
   // The voice bans en and em dashes, so its own text must not use them.
   assert.doesNotMatch(voice.guidance, /[–—]/);
+  const principles = getBrandGuidelines({ section: "principles" });
+  assert.equal(principles.status, "written");
+  assert.equal((principles.guidance.match(/^## \d+\. /gm) || []).length, 7);
+  assert.match(principles.guidance, /senior designer/);
+  assert.doesNotMatch(principles.guidance, /[–—]/);
+  const elements = getBrandGuidelines({ section: "design-elements" });
+  assert.equal(elements.status, "written");
+  assert.match(elements.guidance, /Dark only/);
+  assert.match(elements.guidance, /Brand only/);
   assert.equal(getBrandGuidelines({ section: "imagery" }).status, "not_written");
   const overview = getBrandGuidelines();
   assert.ok(overview.format_profiles.some((p) => p.id === "deck"));
@@ -260,7 +270,7 @@ test("format guardrails are complete and every item is grounded in the design sy
   const defaults = readData(P.defaults).defaults;
   const decisions = readData(P.openQuestions).resolved.map((r) => r.id);
   const at = (obj, path) => path.split(".").reduce((o, k) => (o == null ? undefined : o[k]), obj);
-  for (const format of ["document", "newsletter", "deck", "architecture"]) {
+  for (const format of ["document", "newsletter", "deck", "architecture", "social"]) {
     const profile = getBrandGuidelines({ section: "rules", format_profile: format }).format_profile;
     const g = profile.guardrails;
     assert.ok(g, `${format} has guardrails`);
@@ -311,7 +321,7 @@ test("no AI slop: a locked global rule, carried by every format profile", () => 
 test("architecture spec uses only design-system styles and tokens", () => {
   const { format_profile: p, rules } = getBrandGuidelines({ section: "rules", format_profile: "architecture" });
   const t = getTokens().tokens;
-  assert.equal(rules.find((r) => r.id === "type.min-size").check.value, 12);
+  assert.equal(rules.find((r) => r.id === "type.min-size").check.value, 10);
   assert.deepEqual([p.safe_area.top, p.safe_area.right, p.safe_area.bottom, p.safe_area.left, p.safe_area.token], [48, 48, 48, 48, "spacing/48"]);
   assert.deepEqual(p.canvas, { width: 1920, height: 1080, unit: "px", ratio: "16:9" });
   assert.equal(p.logo.position, "top-right");
@@ -445,7 +455,7 @@ test("no content edits is a locked, error-level rule cited by every format", () 
   const r = readData(P.rules).rules.find((x) => x.id === "content.no-edits");
   assert.equal(r.severity, "error");
   assert.equal(r.locked, true);
-  for (const format of ["document", "newsletter", "deck", "architecture"]) {
+  for (const format of ["document", "newsletter", "deck", "architecture", "social"]) {
     const g = getBrandGuidelines({ section: "rules", format_profile: format });
     assert.ok(g.rules.some((x) => x.id === "content.no-edits"), format);
     assert.ok(g.format_profile.guardrails.must_not.find((i) => i.id === "content-unchanged").basis.includes("rule:content.no-edits"), format);
@@ -499,4 +509,51 @@ test("components section: CSS variables, and role sizes for the requested format
   assert.ok(card.variants.Tone.Featured && !card.variants.Tone.Selected, "the Selected tone is called Featured");
   const answer = deck.components.find((c) => c.id === "accordion-item").parts.find((x) => x.part === "answer");
   assert.deepEqual([answer.role, answer.color, answer.optional], ["body", "text/body", true]);
+});
+
+test("social media spec: 540 px design size, tokens and styles only", () => {
+  const { format_profile: p, rules } = getBrandGuidelines({ section: "rules", format_profile: "social" });
+  const t = getTokens().tokens;
+  assert.equal(rules.find((r) => r.id === "type.min-size").check.value, 10);
+  assert.deepEqual([p.canvas.formats.square.export, p.canvas.formats.portrait.export], [[1080, 1080], [1080, 1350]]);
+  assert.equal(p.safe_area.token, "spacing/24");
+  assert.ok(t.spacing.scale.includes(p.safe_area.top));
+  assert.ok(t.spacing.scale.includes(Number(p.grid.gutter.split("/")[1])));
+  assert.equal(p.grid.columns * p.grid.column_width + (p.grid.columns - 1) * Number(p.grid.gutter.split("/")[1]), p.content_area.width);
+  assert.equal(p.content_area.width, p.canvas.width - p.safe_area.left - p.safe_area.right);
+  for (const [el, s] of Object.entries(p.typography.styles)) {
+    const style = t.typography.styles[s.style];
+    assert.ok(style, `${el}: no text style ${s.style}`);
+    assert.ok(style.weights[s.weight], `${el}: ${s.style} has no ${s.weight} weight`);
+    assert.ok(style.desktop.size >= 10 && style.desktop.size <= 72, `${el}: ${style.desktop.size}px is outside 10-72`);
+  }
+  assert.deepEqual(p.export.file_types, ["html"]);
+  assert.equal(p.carousel.cover.theme, "dark");
+  assert.equal(p.carousel.rhythm.applies_from, 5);
+});
+
+test("no-ai-slop names its only exceptions: design elements and the Bruce AI gradient", () => {
+  const rule = readData(P.rules).rules.find((r) => r.id === "design.no-ai-slop");
+  assert.equal(rule.check.exceptions.length, 2);
+  assert.match(rule.rule, /Glow effects are never allowed/);
+});
+
+test("gradients: only the gradient/* paint styles, served as CSS", () => {
+  const g = getTokens({ category: "gradient" }).tokens;
+  assert.deepEqual(Object.keys(g).sort(), ["brand", "bruce-ai"]);
+  assert.equal(g["bruce-ai"].css, "linear-gradient(90deg, #2436FB 0%, #F377F7 100%)");
+  assert.match(getTokens({ category: "gradient", as: "css" }).code, /--gradient-bruce-ai: linear-gradient/);
+  const snap = readData(P.snapshot).paintStyles;
+  for (const s of snap) assert.ok(s.name in Object.fromEntries(Object.values(g).map((x) => [x.figmaStyle, 1])), s.name);
+});
+
+test("every format with rules serves its written skill", () => {
+  for (const format of formatProfiles()) {
+    const p = getBrandGuidelines({ section: "rules", format_profile: format }).format_profile;
+    assert.ok(p.skill, `${format}: SKILL.md is not written`);
+    for (const part of ["## Your role", "## When to use it", "## What the user gives", "## Steps", "## Checklist before delivery"]) assert.ok(p.skill.includes(part), `${format}: skill has no "${part}"`);
+    assert.match(p.skill, new RegExp(`format_profile: "${format}"`), `${format}: skill loads its own rules`);
+    assert.doesNotMatch(p.skill, /[–—]/, `${format}: no en or em dashes`);
+    assert.match(p.skill, /acts as a senior designer/, `${format}: the skill sets the senior-designer role`);
+  }
 });

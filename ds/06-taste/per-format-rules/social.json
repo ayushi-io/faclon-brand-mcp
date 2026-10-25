@@ -1,0 +1,259 @@
+{
+  "must_not": [
+    {
+      "id": "content-unchanged",
+      "text": "Hard rule: never edit or change the user's content (no rewriting, shortening, cutting or adding). If a change seems needed, highlight it, suggest how it could be shown better, and change nothing unless the user approves.",
+      "basis": [
+        "rule:content.no-edits",
+        "decision:content-fidelity",
+        "decision:user-decides-what"
+      ]
+    },
+    {
+      "id": "no-overflow",
+      "text": "Never let text, the logo or content go outside the 24 px safe area, or overflow the card or box it sits in. Only images may bleed to the edge.",
+      "basis": [
+        "decision:no-overflow",
+        "profile:safe_area"
+      ]
+    },
+    {
+      "id": "min-size",
+      "text": "Never set text below 10px at the 540 px design size (20px at 1080); posts are mostly read on phones.",
+      "basis": [
+        "rule:type.min-size",
+        "profile:typography.min_size"
+      ]
+    },
+    {
+      "id": "max-size",
+      "text": "Never set text above 72px: big numbers use Display/XL (72), even where a reference goes bigger.",
+      "basis": [
+        "profile:typography.max_size"
+      ]
+    },
+    {
+      "id": "tokens-only",
+      "text": "Never use a colour that is not a design-system token, and never sample or approximate one.",
+      "basis": [
+        "rule:color.tokens-only"
+      ]
+    },
+    {
+      "id": "two-fonts",
+      "text": "Never use a font other than TASA Orbiter (headings) and Inter (body).",
+      "basis": [
+        "rule:type.two-families-only"
+      ]
+    },
+    {
+      "id": "sizes-in-scale",
+      "text": "Never use in-between font sizes: text comes from the defined text styles.",
+      "basis": [
+        "rule:type.styles-only",
+        "rule:type.text-roles"
+      ]
+    },
+    {
+      "id": "pill-radius",
+      "text": "Never put a pill radius on a card, panel, container, input or image.",
+      "basis": [
+        "rule:radius.pill-only-for-pills"
+      ]
+    },
+    {
+      "id": "logo",
+      "text": "Never leave the logo off a post or slide, and never use the logomark instead of the full Faclon Labs logo unless the user asks for it.",
+      "basis": [
+        "profile:logo",
+        "rule:logo.logomark-on-request"
+      ]
+    },
+    {
+      "id": "bruce-gradient",
+      "text": "Never use the Bruce AI gradient on anything other than Bruce AI content.",
+      "basis": [
+        "profile:bruce_ai",
+        "decision:gradients-where-allowed"
+      ]
+    },
+    {
+      "id": "invent",
+      "text": "Never invent a number, result, customer, quote, image or link, and never generate or pick the cover image: the user supplies it.",
+      "basis": [
+        "decision:user-decides-what",
+        "decision:social-cover-image"
+      ]
+    },
+    {
+      "id": "no-ai-slop",
+      "text": "Never make it look generic or machine-made: no gradients, glows, neon, glass or blur effects, decorative filler (blobs, orbs, sparkles, floating shapes), AI cliche imagery or icons (glowing brains, circuits, robot hands, sparkles or rockets for AI), text effects, or a coloured stripe down one side of a card. Exceptions: the design elements, each on its own background, and the Bruce AI gradient on Bruce AI content.",
+      "basis": [
+        "rule:design.no-ai-slop"
+      ]
+    }
+  ],
+  "avoid": [
+    {
+      "id": "text-heavy",
+      "text": "Avoid paragraphs on a post. A post is read in a few seconds, mostly on a phone; if the content is long, tell the user and offer options (a carousel, a shorter visual with the detail in the post text). Change nothing unless they approve.",
+      "basis": [
+        "decision:content-fidelity",
+        "decision:infographic-led"
+      ]
+    },
+    {
+      "id": "accent-budget",
+      "text": "Avoid using the accent colours (accent and accent-2 together) on more than roughly 10-15% of the post; it is a highlight, not a palette.",
+      "basis": [
+        "rule:color.accent-budget"
+      ]
+    },
+    {
+      "id": "tertiary-text",
+      "text": "Avoid text/tertiary for essential text; at 3.4:1 it is for large or non-essential text only.",
+      "basis": [
+        "decision:tertiary-text-contrast"
+      ]
+    },
+    {
+      "id": "template-layouts",
+      "text": "Avoid template layouts: the same layout on every post or slide, an icon on every heading when it adds nothing, or everything centred. Every element carries content or structure.",
+      "basis": [
+        "rule:design.no-ai-slop",
+        "decision:new-card-designs"
+      ]
+    }
+  ],
+  "design_direction": [
+    {
+      "id": "think-like-sales",
+      "text": "Before designing, ask who the buyer is, where they are in the sales pipeline and what they should do next; then design so the post moves them one step. Sales thinking shapes the design, never the words.",
+      "basis": [
+        "decision:think-like-sales"
+      ]
+    },
+    {
+      "id": "cover",
+      "text": "The cover (opening) slide is on the dark theme, with an image, the title and the subheader. The image comes from the user: ask them to generate it and share it.",
+      "basis": [
+        "profile:carousel.cover",
+        "decision:social-cover-image"
+      ]
+    },
+    {
+      "id": "light-first",
+      "text": "Slides after the cover default to the light theme. If the user wants them dark, use the dark theme; otherwise offer light first.",
+      "basis": [
+        "profile:carousel.content",
+        "decision:social-theme-rhythm"
+      ]
+    },
+    {
+      "id": "rhythm",
+      "text": "With five or more slides between the cover and the closing slide, add one dark slide after every two light slides (five slides: light, light, dark, light, light). With fewer, keep them light.",
+      "basis": [
+        "profile:carousel.rhythm",
+        "decision:social-theme-rhythm"
+      ]
+    },
+    {
+      "id": "closing",
+      "text": "The closing slide follows the cover's theme and colours.",
+      "basis": [
+        "profile:carousel.closing",
+        "decision:social-theme-rhythm"
+      ]
+    },
+    {
+      "id": "colour-mix",
+      "text": "Every post combines colours; never a single colour. Pair brand blue with the neutrals and an accent highlight, all from design-system tokens.",
+      "basis": [
+        "decision:social-colour-mix",
+        "rule:color.tokens-only"
+      ]
+    },
+    {
+      "id": "logo-position",
+      "text": "The logo sits at the top of every post and slide, left or right, whichever suits the slide best.",
+      "basis": [
+        "profile:logo"
+      ]
+    },
+    {
+      "id": "grid",
+      "text": "Common splits: 6 + 6 (halves), 4 + 4 + 4 (thirds), 3 + 3 + 3 + 3 (quarters) and 8 + 4 (text with an image beside it). Elements start and end on column edges.",
+      "basis": [
+        "profile:grid"
+      ]
+    },
+    {
+      "id": "big-numbers",
+      "text": "Big numbers use Display/XL (72) in Regular so they stay easy on the eye; Bold only when the user asks.",
+      "basis": [
+        "profile:typography.styles.metric"
+      ]
+    },
+    {
+      "id": "bruce-ai",
+      "text": "Bruce AI posts use the Bruce AI gradient (gradient/bruce-ai), for example on the headline or a highlight.",
+      "basis": [
+        "profile:bruce_ai",
+        "decision:gradients-where-allowed"
+      ]
+    },
+    {
+      "id": "design-elements",
+      "text": "Design elements may be used, each only on its own background: the dot-particle form on dark, the light streak on brand.",
+      "basis": [
+        "decision:design-elements"
+      ]
+    },
+    {
+      "id": "one-idea",
+      "text": "One message per post, or per carousel slide, with a clear hierarchy: the headline or the big number first.",
+      "basis": [
+        "decision:social-media-rules"
+      ]
+    },
+    {
+      "id": "infographic",
+      "text": "Show numbers, steps, comparisons and relationships as charts, diagrams, flows, stat rows and big numbers built from the design system, rather than paragraphs of text.",
+      "basis": [
+        "decision:infographic-led"
+      ]
+    },
+    {
+      "id": "highlight",
+      "text": "Highlight key words with text/link on light, text/accent on dark and text/accent-on-brand on brand, within the accent budget.",
+      "basis": [
+        "profile:themes",
+        "rule:color.accent-on-brand",
+        "rule:color.accent-budget"
+      ]
+    },
+    {
+      "id": "carousel",
+      "text": "Carousel slides share one grid and one type scale, so the set reads as one piece; vary the layout with the content.",
+      "basis": [
+        "profile:grid",
+        "decision:social-media-rules"
+      ]
+    },
+    {
+      "id": "cards",
+      "text": "Cards are reference designs; build new ones on Card base with design-system tokens, text roles and spacing.",
+      "basis": [
+        "decision:new-card-designs",
+        "default:container"
+      ]
+    },
+    {
+      "id": "icons",
+      "text": "When an icon helps, use Lucide and colour it with a text token that suits the surface.",
+      "basis": [
+        "rule:icon.lucide-only"
+      ]
+    }
+  ]
+}

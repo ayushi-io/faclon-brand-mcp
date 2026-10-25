@@ -2,7 +2,7 @@ import { readData, dataExists, listDirs, readDoc } from "../lib/data.js";
 import { P, SECTION_FILES, profileParts, GUARDRAIL_ORDER } from "../lib/paths.js";
 import { BrandError } from "../lib/envelope.js";
 
-export const SECTIONS = ["overview", "rules", "defaults", "components", "logo", "typography", "color", "voice", "illustration", "architecture", "imagery"];
+export const SECTIONS = ["overview", "principles", "rules", "defaults", "components", "logo", "typography", "color", "voice", "design-elements", "illustration", "architecture", "imagery"];
 
 // Outcomes in 07-skills that have rules, keyed by format id (deck, document…).
 function outcomes() {
@@ -83,6 +83,9 @@ export function loadProfile(id) {
     else Object.assign(profile, readData(file));
   }
   profile.guardrails = Object.fromEntries(GUARDRAIL_ORDER.filter((k) => k in merged).map((k) => [k, merged[k]]));
+  // The outcome's step-by-step skill, when it is written.
+  const skill = `${P.skills}/${outcome}/SKILL.md`;
+  if (dataExists(skill) && readDoc(skill).meta.status !== "not_written") profile.skill = readDoc(skill).body;
   return profile;
 }
 

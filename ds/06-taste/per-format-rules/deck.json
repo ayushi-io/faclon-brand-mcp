@@ -74,13 +74,6 @@
       "basis": [
         "rule:color.eyebrow-placement"
       ]
-    },
-    {
-      "id": "shadow-heavy-border",
-      "text": "Never combine a shadow with a border of 2px or more.",
-      "basis": [
-        "rule:elevation.no-shadow-with-heavy-border"
-      ]
     }
   ],
   "avoid": [
@@ -116,6 +109,14 @@
   ],
   "design_direction": [
     {
+      "id": "other-colours",
+      "text": "Slides use the three themes (light, dark, brand). If the user asks for other colours, use them, but only design-system colour tokens.",
+      "basis": [
+        "decision:other-colours-on-request",
+        "rule:color.tokens-only"
+      ]
+    },
+    {
       "id": "ai-dark",
       "text": "Slides about AI default to the dark theme; ask the user whether to keep it dark.",
       "basis": [
@@ -147,11 +148,12 @@
     },
     {
       "id": "cards",
-      "text": "Cards and panels use the container default: container/primary, 1px border/container, radius/default, padding/container. Nest with container/secondary, then container/tertiary.",
+      "text": "Cards and panels use the container default with a 12px corner: container/primary, 1px border/container, radius/3xl (12px), padding/container. Nest with container/secondary, then container/tertiary.",
       "basis": [
         "default:container",
         "default:nested_container",
-        "rule:color.container-default"
+        "rule:color.container-default",
+        "decision:deck-card-radius"
       ]
     },
     {
@@ -160,6 +162,13 @@
       "basis": [
         "decision:new-card-designs",
         "default:container"
+      ]
+    },
+    {
+      "id": "infographic",
+      "text": "Make slides infographic-led: show numbers, steps, comparisons and relationships as charts, diagrams, flows, stat rows and big numbers built from the design system, rather than paragraphs of text.",
+      "basis": [
+        "decision:infographic-led"
       ]
     },
     {

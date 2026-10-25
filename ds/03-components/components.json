@@ -7,7 +7,7 @@
       "components",
       "Badges"
     ],
-    "extracted_on": "2026-10-16",
+    "extracted_on": "2026-10-23",
     "method": "Variable bindings on each component (not the description text)"
   },
   "usage": [
@@ -265,6 +265,10 @@
           "Negative",
           "Brand",
           "Inverse"
+        ],
+        "Size": [
+          "Default",
+          "Large"
         ]
       },
       "layout": {
@@ -320,6 +324,14 @@
             "border": null,
             "text": "text/inverse"
           }
+        },
+        "Size": {
+          "Default": {
+            "radius": "radius/default"
+          },
+          "Large": {
+            "radius": "radius/3xl"
+          }
         }
       }
     },
@@ -344,6 +356,10 @@
           "Negative",
           "Brand",
           "Inverse"
+        ],
+        "Size": [
+          "Default",
+          "Large"
         ]
       },
       "layout": {
@@ -439,6 +455,14 @@
             "subtext": "text/inverse",
             "body": "text/inverse"
           }
+        },
+        "Size": {
+          "Default": {
+            "radius": "radius/default"
+          },
+          "Large": {
+            "radius": "radius/3xl"
+          }
         }
       }
     },
@@ -448,7 +472,7 @@
       "kind": "card",
       "figma": {
         "page": "components",
-        "node": "3024:2288"
+        "node": "3129:3286"
       },
       "use": "Icon on top, then heading and body. For features, capabilities, benefits.",
       "layout": {
@@ -481,7 +505,23 @@
           "part": "body",
           "component": "body-text"
         }
-      ]
+      ],
+      "props": {
+        "Size": [
+          "Default",
+          "Large"
+        ]
+      },
+      "variants": {
+        "Size": {
+          "Default": {
+            "radius": "radius/default"
+          },
+          "Large": {
+            "radius": "radius/3xl"
+          }
+        }
+      }
     },
     {
       "id": "highlight-card",
@@ -489,7 +529,7 @@
       "kind": "card",
       "figma": {
         "page": "components",
-        "node": "3024:2297"
+        "node": "3129:3293"
       },
       "use": "Icon with a chip on the right, then heading and body. For a feature with a label or status.",
       "layout": {
@@ -530,7 +570,23 @@
           "part": "body",
           "component": "body-text"
         }
-      ]
+      ],
+      "props": {
+        "Size": [
+          "Default",
+          "Large"
+        ]
+      },
+      "variants": {
+        "Size": {
+          "Default": {
+            "radius": "radius/default"
+          },
+          "Large": {
+            "radius": "radius/3xl"
+          }
+        }
+      }
     },
     {
       "id": "list-item-card",
@@ -538,11 +594,15 @@
       "kind": "card",
       "figma": {
         "page": "components",
-        "node": "3024:2310"
+        "node": "3129:3299"
       },
       "use": "Compact row: leading icon, title and sub-text, optional trailing icon. For lists of items, steps or links.",
       "props": {
-        "Show trailing icon": "boolean"
+        "Show trailing icon": "boolean",
+        "Size": [
+          "Default",
+          "Large"
+        ]
       },
       "layout": {
         "direction": "vertical",
@@ -575,7 +635,17 @@
             "image (optional)"
           ]
         }
-      ]
+      ],
+      "variants": {
+        "Size": {
+          "Default": {
+            "radius": "radius/default"
+          },
+          "Large": {
+            "radius": "radius/3xl"
+          }
+        }
+      }
     },
     {
       "id": "metric-card",
@@ -583,13 +653,17 @@
       "kind": "card",
       "figma": {
         "page": "components",
-        "node": "3024:2322"
+        "node": "3129:3306"
       },
       "use": "A single KPI: small label, the value, optional chip for trend or status.",
       "props": {
         "Label": "text",
         "Value": "text",
-        "Show chip": "boolean"
+        "Show chip": "boolean",
+        "Size": [
+          "Default",
+          "Large"
+        ]
       },
       "layout": {
         "direction": "vertical",
@@ -634,7 +708,17 @@
           "role": "metric",
           "color": "text/heading"
         }
-      ]
+      ],
+      "variants": {
+        "Size": {
+          "Default": {
+            "radius": "radius/default"
+          },
+          "Large": {
+            "radius": "radius/3xl"
+          }
+        }
+      }
     },
     {
       "id": "banner-card",
@@ -642,7 +726,7 @@
       "kind": "card",
       "figma": {
         "page": "components",
-        "node": "3024:2330"
+        "node": "3129:3312"
       },
       "use": "A tinted header band with icon and heading, then body. For a section intro or a key message.",
       "layout": {
@@ -695,7 +779,23 @@
             }
           }
         }
-      ]
+      ],
+      "props": {
+        "Size": [
+          "Default",
+          "Large"
+        ]
+      },
+      "variants": {
+        "Size": {
+          "Default": {
+            "radius": "radius/default"
+          },
+          "Large": {
+            "radius": "radius/3xl"
+          }
+        }
+      }
     },
     {
       "id": "media-card",
@@ -712,7 +812,11 @@
           "Media top"
         ],
         "Show body": "boolean",
-        "Show tags": "boolean"
+        "Show tags": "boolean",
+        "Size": [
+          "Default",
+          "Large"
+        ]
       },
       "layout": {
         "direction": "vertical",
@@ -757,7 +861,17 @@
           ],
           "optional": true
         }
-      ]
+      ],
+      "variants": {
+        "Size": {
+          "Default": {
+            "radius": "radius/default"
+          },
+          "Large": {
+            "radius": "radius/3xl"
+          }
+        }
+      }
     },
     {
       "id": "faq-card",
@@ -765,7 +879,7 @@
       "kind": "card",
       "figma": {
         "page": "components",
-        "node": "3024:2369"
+        "node": "3129:3319"
       },
       "use": "A title then a stack of Accordion Items separated by dividers. Responsive to the asset: show the answers when the asset needs them (the user supplies them), questions only otherwise.",
       "layout": {
@@ -800,7 +914,23 @@
             "accordion-item"
           ]
         }
-      ]
+      ],
+      "props": {
+        "Size": [
+          "Default",
+          "Large"
+        ]
+      },
+      "variants": {
+        "Size": {
+          "Default": {
+            "radius": "radius/default"
+          },
+          "Large": {
+            "radius": "radius/3xl"
+          }
+        }
+      }
     },
     {
       "id": "profile-card",
@@ -808,11 +938,15 @@
       "kind": "card",
       "figma": {
         "page": "components",
-        "node": "3024:2402"
+        "node": "3129:3332"
       },
       "use": "Insight or testimonial: status chip and meta, title, body, tags, a divider, then avatar with name and role.",
       "props": {
-        "Meta": "text"
+        "Meta": "text",
+        "Size": [
+          "Default",
+          "Large"
+        ]
       },
       "layout": {
         "direction": "vertical",
@@ -882,7 +1016,17 @@
             "heading-content"
           ]
         }
-      ]
+      ],
+      "variants": {
+        "Size": {
+          "Default": {
+            "radius": "radius/default"
+          },
+          "Large": {
+            "radius": "radius/3xl"
+          }
+        }
+      }
     },
     {
       "id": "badge",
@@ -1036,7 +1180,7 @@
         },
         {
           "part": "arrow",
-          "border_width": "border-width/thick",
+          "border_width": "border-width/md",
           "optional": true
         }
       ],
@@ -1073,7 +1217,7 @@
         "page": "Badges",
         "node": "3047:4302"
       },
-      "use": "Uppercase statement tag.",
+      "use": "Statement tag.",
       "props": {
         "Label": "text",
         "Style": [

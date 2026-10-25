@@ -232,13 +232,7 @@
       "Whether diagrams carry a legend, and where."
     ]
   },
-  "overrides": [
-    {
-      "rule": "type.min-size",
-      "value": 12,
-      "reason": "Architecture labels stay legible at any density."
-    }
-  ],
+  "overrides": [],
   "export": {
     "file_types": [
       "html"
