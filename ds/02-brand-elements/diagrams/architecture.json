@@ -60,13 +60,13 @@
   "arrows": {
     "default": {
       "colour": "text/secondary",
-      "width": "border-width/thick",
+      "width": "border-width/md",
       "style": "dashed",
       "head": "end"
     },
     "data_flow": {
       "colour": "border/brand",
-      "width": "border-width/thick",
+      "width": "border-width/md",
       "style": "solid",
       "head": "end"
     },

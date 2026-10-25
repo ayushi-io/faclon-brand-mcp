@@ -2,11 +2,11 @@
   "source": {
     "fileName": "Design MCP",
     "fileKey": "UDARPzxpNySOS2F3mxhgUs",
-    "extractedAt": "2026-10-16T02:59:16.305Z",
-    "method": "figma-console Desktop Bridge (verified against Figma fingerprints)",
+    "extractedAt": "2026-10-23T12:00:56.447Z",
+    "method": "Faclon Brand Sync plugin (buildSnapshot, run through the figma-console Desktop Bridge)",
     "figmaVersion": {
-      "id": "2410168722638087800",
-      "title": "Status container borders"
+      "id": "2413521379467502797",
+      "title": "Brand sync 2026-10-23"
     }
   },
   "collections": [
@@ -3049,7 +3049,7 @@
           "values": {
             "Default": 1
           },
-          "description": "1px stroke. The scale runs 1-4px in whole pixels — there is no 0 and no fractional step. To remove a border, remove the stroke, do not set it to zero."
+          "description": "1px stroke. The scale runs 1-6px in whole pixels — there is no 0 and no fractional step. To remove a border, remove the stroke, do not set it to zero."
         },
         {
           "name": "global/border-width/2",
@@ -3057,7 +3057,7 @@
           "values": {
             "Default": 2
           },
-          "description": "2px stroke. The scale runs 1-4px in whole pixels — there is no 0 and no fractional step. To remove a border, remove the stroke, do not set it to zero."
+          "description": "2px stroke. The scale runs 1-6px in whole pixels — there is no 0 and no fractional step. To remove a border, remove the stroke, do not set it to zero."
         },
         {
           "name": "global/border-width/3",
@@ -3065,7 +3065,7 @@
           "values": {
             "Default": 3
           },
-          "description": "3px stroke. The scale runs 1-4px in whole pixels — there is no 0 and no fractional step. To remove a border, remove the stroke, do not set it to zero."
+          "description": "3px stroke. The scale runs 1-6px in whole pixels — there is no 0 and no fractional step. To remove a border, remove the stroke, do not set it to zero."
         },
         {
           "name": "global/border-width/4",
@@ -3073,7 +3073,7 @@
           "values": {
             "Default": 4
           },
-          "description": "4px stroke. The scale runs 1-4px in whole pixels — there is no 0 and no fractional step. To remove a border, remove the stroke, do not set it to zero."
+          "description": "4px stroke. The scale runs 1-6px in whole pixels — there is no 0 and no fractional step. To remove a border, remove the stroke, do not set it to zero."
         },
         {
           "name": "global/radius/2",
@@ -3081,7 +3081,7 @@
           "values": {
             "Default": 2
           },
-          "description": "2px corner radius. The scale runs 2-12px in 2px steps. There is no 0 (square corners = no radius set). Pill (9999px) is a separate shape for chips, tags, badges and avatars only."
+          "description": "2px corner radius. The scale runs 2-24px in 2px steps. There is no 0 (square corners = no radius set). Pill (9999px) is a separate shape for badges, contact pills, avatars and circular icon buttons only. Chips and tags are not pills."
         },
         {
           "name": "global/radius/4",
@@ -3089,7 +3089,7 @@
           "values": {
             "Default": 4
           },
-          "description": "4px corner radius. The scale runs 2-12px in 2px steps. There is no 0 (square corners = no radius set). Pill (9999px) is a separate shape for chips, tags, badges and avatars only."
+          "description": "4px corner radius. The scale runs 2-24px in 2px steps. There is no 0 (square corners = no radius set). Pill (9999px) is a separate shape for badges, contact pills, avatars and circular icon buttons only. Chips and tags are not pills."
         },
         {
           "name": "global/radius/6",
@@ -3097,7 +3097,7 @@
           "values": {
             "Default": 6
           },
-          "description": "6px corner radius. The scale runs 2-12px in 2px steps. There is no 0 (square corners = no radius set). Pill (9999px) is a separate shape for chips, tags, badges and avatars only."
+          "description": "6px corner radius. The scale runs 2-24px in 2px steps. There is no 0 (square corners = no radius set). Pill (9999px) is a separate shape for badges, contact pills, avatars and circular icon buttons only. Chips and tags are not pills."
         },
         {
           "name": "global/radius/8",
@@ -3105,7 +3105,7 @@
           "values": {
             "Default": 8
           },
-          "description": "8px corner radius. The scale runs 2-12px in 2px steps. There is no 0 (square corners = no radius set). Pill (9999px) is a separate shape for chips, tags, badges and avatars only."
+          "description": "8px corner radius. The scale runs 2-24px in 2px steps. There is no 0 (square corners = no radius set). Pill (9999px) is a separate shape for badges, contact pills, avatars and circular icon buttons only. Chips and tags are not pills."
         },
         {
           "name": "global/radius/pill",
@@ -3113,7 +3113,7 @@
           "values": {
             "Default": 9999
           },
-          "description": "9999px — fully round. NOT a step on the 2-12px scale: it is a shape declaration, and the only value permitted outside that scale."
+          "description": "9999px — fully round. NOT a step on the 2-24px scale: it is a shape declaration, and the only value permitted outside that scale."
         },
         {
           "name": "global/radius/10",
@@ -3121,7 +3121,7 @@
           "values": {
             "Default": 10
           },
-          "description": "10px corner radius. Part of the 2-12px scale, 2px steps."
+          "description": "10px corner radius. The scale runs 2-24px in 2px steps. There is no 0 (square corners = no radius set). Pill (9999px) is a separate shape for badges, contact pills, avatars and circular icon buttons only. Chips and tags are not pills."
         },
         {
           "name": "global/radius/12",
@@ -3129,7 +3129,71 @@
           "values": {
             "Default": 12
           },
-          "description": "12px corner radius. Part of the 2-12px scale, 2px steps."
+          "description": "12px corner radius. The scale runs 2-24px in 2px steps. There is no 0 (square corners = no radius set). Pill (9999px) is a separate shape for badges, contact pills, avatars and circular icon buttons only. Chips and tags are not pills."
+        },
+        {
+          "name": "global/radius/14",
+          "type": "FLOAT",
+          "values": {
+            "Default": 14
+          },
+          "description": "14px corner radius. The scale runs 2-24px in 2px steps. There is no 0 (square corners = no radius set). Pill (9999px) is a separate shape for badges, contact pills, avatars and circular icon buttons only. Chips and tags are not pills."
+        },
+        {
+          "name": "global/radius/16",
+          "type": "FLOAT",
+          "values": {
+            "Default": 16
+          },
+          "description": "16px corner radius. The scale runs 2-24px in 2px steps. There is no 0 (square corners = no radius set). Pill (9999px) is a separate shape for badges, contact pills, avatars and circular icon buttons only. Chips and tags are not pills."
+        },
+        {
+          "name": "global/radius/18",
+          "type": "FLOAT",
+          "values": {
+            "Default": 18
+          },
+          "description": "18px corner radius. The scale runs 2-24px in 2px steps. There is no 0 (square corners = no radius set). Pill (9999px) is a separate shape for badges, contact pills, avatars and circular icon buttons only. Chips and tags are not pills."
+        },
+        {
+          "name": "global/radius/20",
+          "type": "FLOAT",
+          "values": {
+            "Default": 20
+          },
+          "description": "20px corner radius. The scale runs 2-24px in 2px steps. There is no 0 (square corners = no radius set). Pill (9999px) is a separate shape for badges, contact pills, avatars and circular icon buttons only. Chips and tags are not pills."
+        },
+        {
+          "name": "global/radius/22",
+          "type": "FLOAT",
+          "values": {
+            "Default": 22
+          },
+          "description": "22px corner radius. The scale runs 2-24px in 2px steps. There is no 0 (square corners = no radius set). Pill (9999px) is a separate shape for badges, contact pills, avatars and circular icon buttons only. Chips and tags are not pills."
+        },
+        {
+          "name": "global/radius/24",
+          "type": "FLOAT",
+          "values": {
+            "Default": 24
+          },
+          "description": "24px corner radius. The scale runs 2-24px in 2px steps. There is no 0 (square corners = no radius set). Pill (9999px) is a separate shape for badges, contact pills, avatars and circular icon buttons only. Chips and tags are not pills."
+        },
+        {
+          "name": "global/border-width/5",
+          "type": "FLOAT",
+          "values": {
+            "Default": 5
+          },
+          "description": "5px stroke. The scale runs 1-6px in whole pixels — there is no 0 and no fractional step. To remove a border, remove the stroke, do not set it to zero."
+        },
+        {
+          "name": "global/border-width/6",
+          "type": "FLOAT",
+          "values": {
+            "Default": 6
+          },
+          "description": "6px stroke. The scale runs 1-6px in whole pixels — there is no 0 and no fractional step. To remove a border, remove the stroke, do not set it to zero."
         }
       ]
     },
@@ -3195,7 +3259,7 @@
           "description": "DEFAULT border width — 1px. Every border is this unless stated otherwise."
         },
         {
-          "name": "border-width/thick",
+          "name": "border-width/md",
           "type": "FLOAT",
           "values": {
             "Default": {
@@ -3206,7 +3270,7 @@
           "description": "2px — emphasis, selected states."
         },
         {
-          "name": "border-width/thicker",
+          "name": "border-width/lg",
           "type": "FLOAT",
           "values": {
             "Default": {
@@ -3217,7 +3281,7 @@
           "description": "3px — strong emphasis."
         },
         {
-          "name": "border-width/thickest",
+          "name": "border-width/xl",
           "type": "FLOAT",
           "values": {
             "Default": {
@@ -3225,7 +3289,7 @@
               "collection": "Global Styles"
             }
           },
-          "description": "4px — the heaviest stroke permitted. Nothing goes above this."
+          "description": "4px — very strong emphasis."
         },
         {
           "name": "radius/default",
@@ -3236,7 +3300,7 @@
               "collection": "Global Styles"
             }
           },
-          "description": "DEFAULT corner radius — 2px. Every rounded corner is this unless stated otherwise.  Scale: 2/4/6/8/10/12px for all surfaces. radius/full (pill) is the only exception, pills only."
+          "description": "DEFAULT corner radius — 2px. Every rounded corner is this unless stated otherwise.  Scale: 2/4/6/8/10/12/14/16/18/20/22/24px for all surfaces. radius/full (pill) is the only exception, pills only."
         },
         {
           "name": "radius/md",
@@ -3247,7 +3311,7 @@
               "collection": "Global Styles"
             }
           },
-          "description": "4px.  Scale: 2/4/6/8/10/12px for all surfaces. radius/full (pill) is the only exception, pills only."
+          "description": "4px.  Scale: 2/4/6/8/10/12/14/16/18/20/22/24px for all surfaces. radius/full (pill) is the only exception, pills only."
         },
         {
           "name": "radius/lg",
@@ -3258,7 +3322,7 @@
               "collection": "Global Styles"
             }
           },
-          "description": "6px.  Scale: 2/4/6/8/10/12px for all surfaces. radius/full (pill) is the only exception, pills only."
+          "description": "6px.  Scale: 2/4/6/8/10/12/14/16/18/20/22/24px for all surfaces. radius/full (pill) is the only exception, pills only."
         },
         {
           "name": "radius/xl",
@@ -3269,7 +3333,7 @@
               "collection": "Global Styles"
             }
           },
-          "description": "8px.  Scale: 2/4/6/8/10/12px for all surfaces. radius/full (pill) is the only exception, pills only."
+          "description": "8px.  Scale: 2/4/6/8/10/12/14/16/18/20/22/24px for all surfaces. radius/full (pill) is the only exception, pills only."
         },
         {
           "name": "radius/pill",
@@ -3280,7 +3344,7 @@
               "collection": "Global Styles"
             }
           },
-          "description": "PILL — the default fully-round radius, 9999px. For chips, tags, badges, avatars and circular icon buttons. A shape declaration, not a step on the scale, which is why it skips from 12px to fully round. Never use on a card, panel, container, input or image: those take 2-12px from radius/default..radius/3xl. This is the single documented exception to the 12px ceiling."
+          "description": "PILL — the default fully-round radius, 9999px. For badges, contact pills, avatars and circular icon buttons. Not for chips (radius/default) or tags (radius/md). A shape declaration, not a step on the scale, which is why it skips from 24px to fully round. Never use on a card, panel, container, input or image: those take 2-24px from radius/default..radius/9xl. This is the single documented exception to the 24px ceiling."
         },
         {
           "name": "radius/2xl",
@@ -3291,7 +3355,7 @@
               "collection": "Global Styles"
             }
           },
-          "description": "10px.  Scale: 2/4/6/8/10/12px for all surfaces. radius/full (pill) is the only exception, pills only."
+          "description": "10px.  Scale: 2/4/6/8/10/12/14/16/18/20/22/24px for all surfaces. radius/full (pill) is the only exception, pills only."
         },
         {
           "name": "radius/3xl",
@@ -3302,7 +3366,95 @@
               "collection": "Global Styles"
             }
           },
-          "description": "12px — the largest radius permitted on a surface.  Scale: 2/4/6/8/10/12px for all surfaces. radius/full (pill) is the only exception, pills only."
+          "description": "12px. Large card radius (cards with Size=Large).  Scale: 2/4/6/8/10/12/14/16/18/20/22/24px for all surfaces. radius/full (pill) is the only exception, pills only."
+        },
+        {
+          "name": "radius/4xl",
+          "type": "FLOAT",
+          "values": {
+            "Default": {
+              "alias": "global/radius/14",
+              "collection": "Global Styles"
+            }
+          },
+          "description": "14px.  Scale: 2/4/6/8/10/12/14/16/18/20/22/24px for all surfaces. radius/full (pill) is the only exception, pills only."
+        },
+        {
+          "name": "radius/5xl",
+          "type": "FLOAT",
+          "values": {
+            "Default": {
+              "alias": "global/radius/16",
+              "collection": "Global Styles"
+            }
+          },
+          "description": "16px.  Scale: 2/4/6/8/10/12/14/16/18/20/22/24px for all surfaces. radius/full (pill) is the only exception, pills only."
+        },
+        {
+          "name": "radius/6xl",
+          "type": "FLOAT",
+          "values": {
+            "Default": {
+              "alias": "global/radius/18",
+              "collection": "Global Styles"
+            }
+          },
+          "description": "18px.  Scale: 2/4/6/8/10/12/14/16/18/20/22/24px for all surfaces. radius/full (pill) is the only exception, pills only."
+        },
+        {
+          "name": "radius/7xl",
+          "type": "FLOAT",
+          "values": {
+            "Default": {
+              "alias": "global/radius/20",
+              "collection": "Global Styles"
+            }
+          },
+          "description": "20px.  Scale: 2/4/6/8/10/12/14/16/18/20/22/24px for all surfaces. radius/full (pill) is the only exception, pills only."
+        },
+        {
+          "name": "radius/8xl",
+          "type": "FLOAT",
+          "values": {
+            "Default": {
+              "alias": "global/radius/22",
+              "collection": "Global Styles"
+            }
+          },
+          "description": "22px.  Scale: 2/4/6/8/10/12/14/16/18/20/22/24px for all surfaces. radius/full (pill) is the only exception, pills only."
+        },
+        {
+          "name": "radius/9xl",
+          "type": "FLOAT",
+          "values": {
+            "Default": {
+              "alias": "global/radius/24",
+              "collection": "Global Styles"
+            }
+          },
+          "description": "24px — the largest radius permitted on a surface.  Scale: 2/4/6/8/10/12/14/16/18/20/22/24px for all surfaces. radius/full (pill) is the only exception, pills only."
+        },
+        {
+          "name": "border-width/2xl",
+          "type": "FLOAT",
+          "values": {
+            "Default": {
+              "alias": "global/border-width/5",
+              "collection": "Global Styles"
+            }
+          },
+          "description": "5px — extra-strong emphasis."
+        },
+        {
+          "name": "border-width/3xl",
+          "type": "FLOAT",
+          "values": {
+            "Default": {
+              "alias": "global/border-width/6",
+              "collection": "Global Styles"
+            }
+          },
+          "description": "6px — the heaviest stroke permitted. Nothing goes above this."
         }
       ]
     },
@@ -6268,8 +6420,8 @@
     },
     {
       "name": "Role/Button",
-      "description": "Button labels. Document heading/h6 · Newsletter heading/h5 · Deck heading/h3. Switch the Text Roles mode on a frame to change format.",
-      "fontFamily": "TASA Orbiter",
+      "description": "Button labels. Inter Medium. Document heading/h6 · Newsletter heading/h5 · Deck heading/h3. Switch the Text Roles mode on a frame to change format.",
+      "fontFamily": "Inter",
       "fontStyle": "Medium",
       "fontSize": 16,
       "lineHeight": {
@@ -6300,9 +6452,9 @@
     },
     {
       "name": "Role/Tag",
-      "description": "Uppercase statement tag. Document heading/h5 · Newsletter heading/h4 · Deck heading/h3. Switch the Text Roles mode on a frame to change format.",
-      "fontFamily": "TASA Orbiter",
-      "fontStyle": "SemiBold",
+      "description": "Statement tag. Inter Medium, sentence case as written (no forced uppercase). Document heading/h5 · Newsletter heading/h4 · Deck heading/h3. Switch the Text Roles mode on a frame to change format.",
+      "fontFamily": "Inter",
+      "fontStyle": "Medium",
       "fontSize": 18,
       "lineHeight": {
         "unit": "PIXELS",
@@ -6312,7 +6464,7 @@
         "unit": "PIXELS",
         "value": -0.18000000715255737
       },
-      "textCase": "UPPER"
+      "textCase": "ORIGINAL"
     }
   ],
   "effectStyles": [
@@ -6348,6 +6500,67 @@
           "spread": 0,
           "color": "#19283924",
           "opacity": 0.14
+        }
+      ]
+    }
+  ],
+  "paintStyles": [
+    {
+      "name": "gradient/brand",
+      "description": "Faclon brand gradient (green to lime). One of the two brand gradients; the only gradients permitted are the gradient/* styles.",
+      "paints": [
+        {
+          "type": "GRADIENT_LINEAR",
+          "angle": 144,
+          "stops": [
+            {
+              "position": 0,
+              "color": "#007541",
+              "opacity": 1
+            },
+            {
+              "position": 0.2305,
+              "color": "#3AA346",
+              "opacity": 1
+            },
+            {
+              "position": 0.5612,
+              "color": "#6FCB3E",
+              "opacity": 1
+            },
+            {
+              "position": 0.5901,
+              "color": "#78D23D",
+              "opacity": 1
+            },
+            {
+              "position": 1,
+              "color": "#C1FF1C",
+              "opacity": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "gradient/bruce-ai",
+      "description": "Bruce AI gradient (blue to pink). Use only when the content is about Bruce AI; never for Faclon or any other product.",
+      "paints": [
+        {
+          "type": "GRADIENT_LINEAR",
+          "angle": 90,
+          "stops": [
+            {
+              "position": 0,
+              "color": "#2436FB",
+              "opacity": 1
+            },
+            {
+              "position": 1,
+              "color": "#F377F7",
+              "opacity": 1
+            }
+          ]
         }
       ]
     }

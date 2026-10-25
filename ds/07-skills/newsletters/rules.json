@@ -212,7 +212,7 @@
   "overrides": [
     {
       "rule": "type.min-size",
-      "value": 14,
+      "value": 12,
       "reason": "Email clients render small text poorly."
     }
   ],

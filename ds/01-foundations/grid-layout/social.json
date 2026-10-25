@@ -1,0 +1,55 @@
+{
+  "canvas": {
+    "width": 540,
+    "height": 540,
+    "unit": "px",
+    "ratio": "1:1",
+    "export_scale": 2,
+    "formats": {
+      "square": {
+        "width": 540,
+        "height": 540,
+        "ratio": "1:1",
+        "export": [
+          1080,
+          1080
+        ]
+      },
+      "portrait": {
+        "width": 540,
+        "height": 675,
+        "ratio": "4:5",
+        "export": [
+          1080,
+          1350
+        ]
+      }
+    }
+  },
+  "safe_area": {
+    "top": 24,
+    "right": 24,
+    "bottom": 24,
+    "left": 24,
+    "token": "spacing/24",
+    "note": "From the brand team's example post (45 px at 1080, nearest token 48). Only images may bleed past it."
+  },
+  "grid": {
+    "columns": 12,
+    "column_width": 30,
+    "gutter": "spacing/12",
+    "splits": [
+      "6+6",
+      "4+4+4",
+      "3+3+3+3",
+      "8+4"
+    ]
+  },
+  "content_area": {
+    "width": 492,
+    "height": {
+      "square": 492,
+      "portrait": 627
+    }
+  }
+}

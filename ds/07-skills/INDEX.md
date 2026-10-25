@@ -4,14 +4,14 @@ One skill per outcome. Pick the outcome from the request; its folder holds `rule
 
 | Outcome | Folder | Format id | Rules | SKILL.md |
 |---|---|---|---|---|
-| Graphics | graphics | none | not written | not written |
+| Social media | social-media | social | approved | written |
 | Images | images | none | not written | not written |
-| Decks | decks | deck | approved | not written |
-| A4 documents | a4-documents | document | approved | not written |
+| Decks | decks | deck | approved | written |
+| A4 documents | a4-documents | document | approved | written |
 | Unique A4 (forms) | unique-a4 | none | not written | not written |
 | Case studies | case-studies | none | not written | not written |
-| Newsletters | newsletters | newsletter | approved | not written |
-| Architectures | architectures | architecture | approved | not written |
+| Newsletters | newsletters | newsletter | approved | written |
+| Architectures | architectures | architecture | approved | written |
 
 When a request matches no outcome with rules, tell the user the outcome is not set up yet; do not borrow another outcome's rules.
 

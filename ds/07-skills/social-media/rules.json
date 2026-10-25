@@ -1,0 +1,218 @@
+{
+  "id": "social",
+  "name": "Social media post (LinkedIn, 1:1 and 4:5)",
+  "status": "approved",
+  "note": "Rules set by the brand team on 2026-10-23 (Figma page Social media). Posts are designed at 540 px wide and exported at 2x (1080 px), so every size and space is a design-system style or token. The reference posts in Figma show layout and feel only; they need not match the design system.",
+  "audience": "external",
+  "typography": {
+    "breakpoint_mode": "desktop",
+    "text_roles_mode": "Document",
+    "min_size": 10,
+    "max_size": 72,
+    "max_style": "display/xl",
+    "note": "Sizes are at the 540 px design size; double them at 1080.",
+    "styles": {
+      "headline": {
+        "style": "heading/h1",
+        "weight": 700,
+        "use": "the main message of the post"
+      },
+      "cover_headline": {
+        "style": "display/md",
+        "weight": 700,
+        "use": "the headline on a cover slide"
+      },
+      "subheadline": {
+        "style": "heading/h2",
+        "weight": 700,
+        "use": "the line beside a big number"
+      },
+      "subheader": {
+        "style": "body/xl",
+        "weight": 400,
+        "use": "the line under a title"
+      },
+      "metric": {
+        "style": "display/xl",
+        "weight": 400,
+        "use": "big numbers and results; Bold only when the user asks, never larger"
+      },
+      "metric_in_grid": {
+        "style": "display/lg",
+        "weight": 400,
+        "use": "big numbers in a stat grid"
+      },
+      "body": {
+        "style": "body/lg",
+        "weight": 400,
+        "use": "short supporting text"
+      },
+      "footnote": {
+        "style": "body/2xs",
+        "weight": 400,
+        "use": "footnotes, never smaller"
+      }
+    },
+    "roles": {
+      "label": "Role/Label: tags, chart labels and the series label",
+      "cta": "Role/Button: the call to action",
+      "caption": "Role/Caption: source or legal line"
+    }
+  },
+  "themes": {
+    "light": {
+      "background": "background/primary",
+      "text": {
+        "heading": "text/heading",
+        "body": "text/body",
+        "eyebrow": "text/eyebrow",
+        "highlight": "text/link"
+      },
+      "logo": "blue"
+    },
+    "dark": {
+      "background": "background/inverse",
+      "text": {
+        "heading": "text/inverse",
+        "body": "text/inverse",
+        "eyebrow": "text/inverse at opacity/muted",
+        "highlight": "text/accent"
+      },
+      "logo": "white",
+      "note": "Mapped from the designed slides' #132335 to the nearest token."
+    },
+    "brand": {
+      "background": "background/brand",
+      "text": {
+        "heading": "text/on-brand",
+        "body": "text/on-brand",
+        "highlight": "text/accent-on-brand"
+      },
+      "logo": "white"
+    }
+  },
+  "carousel": {
+    "cover": {
+      "theme": "dark",
+      "contains": [
+        "image supplied by the user",
+        "title",
+        "subheader"
+      ]
+    },
+    "content": {
+      "theme": "light",
+      "dark_on_request": true
+    },
+    "rhythm": {
+      "applies_from": 5,
+      "pattern": "after every two light slides, one dark slide",
+      "example_5": [
+        "light",
+        "light",
+        "dark",
+        "light",
+        "light"
+      ]
+    },
+    "closing": {
+      "theme": "same as the cover"
+    }
+  },
+  "logo": {
+    "position": "top-left or top-right, as suits the slide",
+    "width": 132,
+    "width_at_export": 264,
+    "every_slide": true
+  },
+  "bruce_ai": {
+    "gradient": "gradient/bruce-ai",
+    "note": "Figma paint style (blue to pink). Used only on Bruce AI content, for example the headline or a highlight."
+  },
+  "guardrails": {
+    "status": "approved",
+    "note": "Guidance for whoever designs in this format. user_decides = what is made (the user's call); fixed = do not change; must_not = hard limits; avoid = strong advice; design_direction = how to use the system; claude_decides = how it looks, where the designer has freedom. Every design item cites its basis in the design system.",
+    "user_decides": [
+      "What is being made, for whom and why: the post, its purpose and audience.",
+      "The content and facts. The designer uses exactly what the user supplies or approves: never invents, adds, rewrites, shortens or cuts it, and asks before suggesting a change.",
+      "The scope: a single post or a carousel, and how many slides. Nothing is added that was not asked for; when it is unclear, ask.",
+      "Square or portrait (the designer can suggest), and the call to action and link, if any.",
+      "The cover image: the user generates it and shares it.",
+      "Whether the slides after the cover are dark instead of light."
+    ],
+    "fixed": [
+      {
+        "id": "canvas",
+        "text": "Square 1:1 (540 × 540 px) or portrait 4:5 (540 × 675 px), designed at 540 px wide and exported at 2x (1080 × 1080 or 1080 × 1350). A set of posts can mix both.",
+        "basis": [
+          "profile:canvas"
+        ]
+      },
+      {
+        "id": "safe-area",
+        "text": "24 px safe area on all sides (spacing/24); content 492 px wide. Text, the logo and content stay inside it; only images may bleed to the edge.",
+        "basis": [
+          "profile:safe_area",
+          "profile:content_area"
+        ]
+      },
+      {
+        "id": "grid",
+        "text": "12 columns inside the safe area: 30 px columns with 12 px gutters (spacing/12).",
+        "basis": [
+          "profile:grid"
+        ]
+      },
+      {
+        "id": "type",
+        "text": "Text uses the style set for its element (headline Heading/H1 Bold, body Body/LG, big numbers Display/XL Regular), between 10px and 72px.",
+        "basis": [
+          "profile:typography.styles",
+          "rule:type.styles-only"
+        ]
+      },
+      {
+        "id": "logo",
+        "text": "The full Faclon Labs logo on every post and slide, at the top, left or right, about 132 px wide: blue on light, white on dark and brand.",
+        "basis": [
+          "profile:logo",
+          "rule:logo.blue-on-light",
+          "rule:logo.white-on-dark-or-brand",
+          "rule:logo.logomark-on-request"
+        ]
+      },
+      {
+        "id": "themes",
+        "text": "Three themes: light (background/primary), dark (background/inverse) and brand (background/brand), each with its fixed text and logo colours.",
+        "basis": [
+          "profile:themes",
+          "rule:color.pairings"
+        ]
+      },
+      {
+        "id": "export",
+        "text": "Delivered as HTML. The user converts it to PNG, JPG or PDF if they need to.",
+        "basis": [
+          "profile:export"
+        ]
+      }
+    ],
+    "claude_decides": [
+      "Layout and composition within the grid: what goes where and what leads.",
+      "Visual hierarchy: what is large, what is quiet, and how the eye moves.",
+      "Which components to use and how to combine them, and new card designs on Card base when the named cards don't fit.",
+      "How to show each idea: a stat, a process, a comparison, a story.",
+      "Whether the logo sits top-left or top-right on each slide.",
+      "How a carousel story is split across slides (as a suggestion when it changes the user's order)."
+    ]
+  },
+  "overrides": [],
+  "export": {
+    "file_types": [
+      "html"
+    ]
+  },
+  "severity": {
+    "min_size": "error"
+  }
+}
