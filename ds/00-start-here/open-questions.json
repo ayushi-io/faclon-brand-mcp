@@ -466,6 +466,11 @@
       "id": "headshots-no-background",
       "decision": "Team headshots are exported without background. Designs fill the shape behind them with background/primary in the dark theme and never crop a headshot from the top (rule assets.headshots).",
       "decided_on": "2026-10-27"
+    },
+    {
+      "id": "bruce-ai-glow",
+      "decision": "Glow is approved for Bruce AI content only (as on the Bruce AI carousel cover: glowing product visual, gradient headline). This replaces 'glow effects are not approved'. Glow stays banned on all other content; glass and backdrop blur stay banned everywhere.",
+      "decided_on": "2026-10-27"
     }
   ],
   "figma_updates_needed": [],

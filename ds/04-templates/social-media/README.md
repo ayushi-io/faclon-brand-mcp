@@ -1,8 +1,5 @@
----
-status: not_written
-needed: LinkedIn post and carousel templates (square 1:1 and portrait 4:5). The brand team's reference posts are on the Figma Social media page (layout and feel only).
----
+# Templates: social-media
 
-# Templates: social media
+8 social templates: six posts (case study cover, three step posts with a big stat, results tiles, step with gauge) and two carousel slides (Bruce AI cover, quote with headshot). Each entry in `templates.json` has its section and purpose, theme, layout notes, Figma node and a thumbnail in `thumbnails/`. Served by `get_brand_guidelines(section: "templates", format_profile: "social")`, thumbnails at `/templates/social-media/thumbnails/<file>`.
 
-Not written yet. Needed: LinkedIn post and carousel templates (square 1:1 and portrait 4:5). The brand team's reference posts are on the Figma Social media page (layout and feel only).
+Templates show layout, composition, hierarchy and rhythm only. Never copy their text, numbers, claims, client names or logos, and build every value from the design system.

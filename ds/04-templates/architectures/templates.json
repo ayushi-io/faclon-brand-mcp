@@ -1,0 +1,75 @@
+{
+  "outcome": "architectures",
+  "format_profile": "architecture",
+  "use": "Templates show layout, composition, hierarchy and rhythm only. Never copy their text, numbers, claims, client names or logos: content comes from the user. Their colours, fonts and sizes need not match the design system; build every output with design-system tokens, text roles, components and assets. Pick the template whose structure fits the user's content, then adapt it.",
+  "source": "Figma Design MCP, the Template frame on the outcome's page",
+  "updated": "2026-10-27",
+  "sections": [
+    {
+      "name": "Design-language references",
+      "use": "Architecture references for the overall design language: how devices, zones, connections and the platform are drawn.",
+      "templates": [
+        {
+          "id": "architectures/machine-monitoring-sensors-to-platform",
+          "name": "Machine monitoring · sensors to platform",
+          "theme": "light",
+          "layout": "Machines in a left column (icon and label); a sensor beside each; dashed connectors to Wi-Fi routers, then 4G uplinks to the platform panel on the right: a dashed-outline panel with the platform logo tile, a stack of feature buttons and a row of small capability tiles.",
+          "thumbnail": "thumbnails/machine-monitoring-sensors-to-platform.png",
+          "thumbnail_size": [
+            768,
+            432
+          ],
+          "figma_node": "3158:44249"
+        },
+        {
+          "id": "architectures/process-diagram-heat-exchanger",
+          "name": "Process diagram · heat exchanger",
+          "theme": "light",
+          "layout": "The process drawn as a line diagram (pipes, heat exchanger, steam trap, valves) with sensors placed on it and short labels; wireless links to a LoRa gateway, then cloud, then the platform panel on the right with feature buttons and dashboard screenshots; DCS and industrial PC boxes along the top.",
+          "thumbnail": "thumbnails/process-diagram-heat-exchanger.png",
+          "thumbnail_size": [
+            768,
+            382
+          ],
+          "figma_node": "3158:44535"
+        },
+        {
+          "id": "architectures/repeated-units-steam-traps",
+          "name": "Repeated units · steam traps",
+          "theme": "light",
+          "layout": "Three identical device rows (steam trap with its node) on the left, labelled once with 'up to N per gateway'; wireless links to a central gateway; cloud, then the platform panel on the right; a small box of key process parameters.",
+          "thumbnail": "thumbnails/repeated-units-steam-traps.png",
+          "thumbnail_size": [
+            768,
+            432
+          ],
+          "figma_node": "3158:44762"
+        },
+        {
+          "id": "architectures/cloud-architecture-substations",
+          "name": "Cloud architecture · substations",
+          "theme": "light",
+          "layout": "Title top-left with the logo top-right; three stacked zones (one per substation), each a grid of energy meters feeding gateways; network links to a cloud node, then the platform panel on the right with screenshots.",
+          "thumbnail": "thumbnails/cloud-architecture-substations.png",
+          "thumbnail_size": [
+            768,
+            432
+          ],
+          "figma_node": "3158:45113"
+        },
+        {
+          "id": "architectures/camera-based-vision-system",
+          "name": "Camera-based vision system",
+          "theme": "light",
+          "layout": "The physical process on the left as a 3D scene (conveyor with cameras and lights placed where they sit); tinted zones with a header tag (junction box, control room, IT network), devices as image plus name tag inside them; labelled links (OFC, Ethernet) between zones; end devices top-right; the platform as one large panel bottom-right with its outputs as a branched list of buttons and dashboard screenshots.",
+          "thumbnail": "thumbnails/camera-based-vision-system.png",
+          "thumbnail_size": [
+            768,
+            432
+          ],
+          "figma_node": "3264:10498"
+        }
+      ]
+    }
+  ]
+}

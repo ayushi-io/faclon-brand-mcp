@@ -53,3 +53,11 @@ test("voice issues in the user's words are warnings, never errors", () => {
   assert.equal(r.verdict, "pass");
   assert.deepEqual(rules(r).sort(), ["voice.dashes:warning", "voice.exclamation:warning"]);
 });
+
+test("check_design allows glow only on Bruce AI content, and glass never", () => {
+  const glow = (text) => `<style>h1{font-family:Inter;font-size:40px;text-shadow:0 0 24px #B4FF6B} .chip{box-shadow:0 0 40px #1655F2;filter:drop-shadow(0 0 12px #1655F2)}</style><h1>${text}</h1><div class="chip"></div>`;
+  assert.ok(rules(checkDesign({ html: glow("Faclon Labs") })).includes("design.no-ai-slop:error"));
+  assert.deepEqual(rules(checkDesign({ html: glow("Expertise should scale with Bruce AI, Faclon Labs") })), []);
+  const glass = `<style>.card{backdrop-filter:blur(12px)}</style><h1 style="font-family:Inter;font-size:40px">Bruce AI by Faclon Labs</h1><div class="card"></div>`;
+  assert.ok(rules(checkDesign({ html: glass })).includes("design.no-ai-slop:error"));
+});

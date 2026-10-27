@@ -64,4 +64,4 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 - [ ] Text is Role/* in the Newsletter mode, never below 12px; colours are tokens.
 - [ ] Desktop 600px and mobile 400px both hold; nothing touches an edge; gap/stack at least between text elements.
 - [ ] Headings and CTAs are live text; banner cells have the brand fallback colour.
-- [ ] No gradients, glows, AI cliches or repeated template layouts.
+- [ ] No gradients or glows (except the Bruce AI gradient and glow on Bruce AI content), AI cliches or repeated template layouts.

@@ -43,11 +43,11 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 
 - Every post combines colours; never a single colour. Brand blue with the neutrals and an accent highlight, all from tokens.
 - Big numbers in Regular so they stay easy on the eye; Bold only when the user asks.
-- **Bruce AI posts** use the Bruce AI gradient (`--gradient-bruce-ai`), for example on the headline or a highlight. No other post uses it. Glow effects are never allowed.
+- **Bruce AI posts** use the Bruce AI gradient (`--gradient-bruce-ai`), for example on the headline or a highlight. No other post uses it. Bruce AI posts may also use glow (for example on the product visual); no other post does.
 - **Design elements:** the dot-particle form only on dark, the light streak only on brand. They are exempt from the no-AI-slop rule; nothing else is.
 - Show numbers, steps and comparisons as charts, flows, stat rows and big numbers, not paragraphs. Avoid text-heavy posts: if the content is long, tell the user and offer options (a carousel, a shorter visual with detail in the post text).
 - Carousel slides share one grid and one type scale; vary the layout with the content.
-- Never edit the user's content. The reference posts in Figma show layout and feel only; the design system sets every value.
+- Never edit the user's content. The templates (`get_brand_guidelines(section: "templates", format_profile: "social")`: case study cover, step posts with a big stat, results tiles, Bruce AI cover, quote with headshot) show layout and feel only; the design system sets every value.
 
 ## Assets
 
@@ -67,5 +67,5 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 - [ ] Text between 10px and 72px, in the set styles; colours are tokens; the post is not a single colour.
 - [ ] Bruce AI gradient only on Bruce AI content; design elements only on their backgrounds.
 - [ ] The user's text is unchanged; nothing was added.
-- [ ] No glows, AI cliches or repeated template layouts.
+- [ ] No glows (except on Bruce AI posts), AI cliches or repeated template layouts.
 - [ ] HTML at 540px, ready for 2x export.

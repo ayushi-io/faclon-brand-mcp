@@ -22,4 +22,4 @@ Gradients are allowed only as the brand's gradient styles (get_tokens category "
 
 - **gradient/bruce-ai** (`--gradient-bruce-ai`, blue #2436FB to pink #F377F7, left to right): Bruce AI content only, for example the headline or a highlight on a Bruce AI post.
 
-Glow effects are not approved. The green gradient/brand style (`--gradient-brand`) is a brand gradient with no use defined yet; ask before using it. No other gradient is allowed.
+Glow is approved for Bruce AI content only, for example the glowing product visual on the Bruce AI carousel cover; never on other content. The green gradient/brand style (`--gradient-brand`) is a brand gradient with no use defined yet; ask before using it. No other gradient is allowed.

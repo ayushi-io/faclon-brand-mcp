@@ -2,8 +2,9 @@ import { readData, dataExists, listDirs, readDoc } from "../lib/data.js";
 import { P, SECTION_FILES, profileParts, GUARDRAIL_ORDER } from "../lib/paths.js";
 import { BrandError } from "../lib/envelope.js";
 import { getAssets } from "./assets.js";
+import { getTemplates } from "./templates.js";
 
-export const SECTIONS = ["overview", "principles", "rules", "defaults", "components", "logo", "typography", "color", "voice", "design-elements", "illustration", "architecture", "imagery", "assets"];
+export const SECTIONS = ["overview", "principles", "rules", "defaults", "components", "logo", "typography", "color", "voice", "design-elements", "illustration", "architecture", "imagery", "assets", "templates"];
 
 // Outcomes in 07-skills that have rules, keyed by format id (deck, document…).
 function outcomes() {
@@ -43,6 +44,8 @@ export function getBrandGuidelines({ section = "overview", format_profile, asset
   if (section === "defaults") {
     return { section, status: "written", about: readData(P.defaults).about, defaults: readData(P.defaults).defaults, format_profile: profileInfo };
   }
+
+  if (section === "templates") return { section, status: "written", ...getTemplates({ format_profile }), format_profile: profileInfo };
 
   if (section === "assets") return { section, status: "written", ...getAssets({ asset_category, asset_query }), format_profile: profileInfo };
 

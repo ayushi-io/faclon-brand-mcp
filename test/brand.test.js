@@ -544,7 +544,8 @@ test("social media spec: 540 px design size, tokens and styles only", () => {
 test("no-ai-slop names its only exceptions: design elements, illustration styles and the Bruce AI gradient", () => {
   const rule = readData(P.rules).rules.find((r) => r.id === "design.no-ai-slop");
   assert.equal(rule.check.exceptions.length, 3);
-  assert.match(rule.rule, /Glow effects are never allowed/);
+  assert.match(rule.rule, /Glow is allowed only on Bruce AI content/);
+  assert.match(rule.check.exceptions[2], /glow on Bruce AI content only/);
 });
 
 test("gradients: only the gradient/* paint styles, served as CSS", () => {

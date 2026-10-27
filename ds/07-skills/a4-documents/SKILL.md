@@ -60,5 +60,5 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 - [ ] No card, table row, captioned image or heading is split across pages; nothing below 1045px.
 - [ ] Every value is a token or a named text style; nothing below 10px.
 - [ ] At most 3 cards in a row; images at most 722px wide, with alt text.
-- [ ] No gradients, glows, AI cliches or repeated template layouts.
+- [ ] No gradients or glows (except the Bruce AI gradient and glow on Bruce AI content), AI cliches or repeated template layouts.
 - [ ] HTML delivered.

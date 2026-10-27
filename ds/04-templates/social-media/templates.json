@@ -1,0 +1,117 @@
+{
+  "outcome": "social-media",
+  "format_profile": "social",
+  "use": "Templates show layout, composition, hierarchy and rhythm only. Never copy their text, numbers, claims, client names or logos: content comes from the user. Their colours, fonts and sizes need not match the design system; build every output with design-system tokens, text roles, components and assets. Pick the template whose structure fits the user's content, then adapt it.",
+  "source": "Figma Design MCP, the Template frame on the outcome's page",
+  "updated": "2026-10-27",
+  "sections": [
+    {
+      "name": "Posts",
+      "use": "Single posts, square and portrait together. For layout and feel only; every post uses the design system.",
+      "templates": [
+        {
+          "id": "social-media/case-study-cover-photo",
+          "name": "Case study cover · photo",
+          "theme": "dark",
+          "layout": "Portrait 4:5. A plant photo full bleed under a dark overlay; an eyebrow tag and logo at the top; a large headline with the second part in the accent colour; a translucent box with a one-line summary; a 'swipe' CTA pill bottom-right.",
+          "thumbnail": "thumbnails/case-study-cover-photo.png",
+          "thumbnail_size": [
+            768,
+            936
+          ],
+          "figma_node": "3210:11253"
+        },
+        {
+          "id": "social-media/step-big-stat-with-icon-flow",
+          "name": "Step · big stat with icon flow",
+          "theme": "brand",
+          "layout": "Portrait 4:5. Step eyebrow and logo at the top; a giant stat with a two-line label; a row of icons converging into one pill (the flow); a dark caption box at the bottom.",
+          "thumbnail": "thumbnails/step-big-stat-with-icon-flow.png",
+          "thumbnail_size": [
+            768,
+            936
+          ],
+          "figma_node": "3210:11281"
+        },
+        {
+          "id": "social-media/step-before-and-after-bars",
+          "name": "Step · before and after bars",
+          "theme": "brand",
+          "layout": "Portrait 4:5. Step eyebrow; a big stat with label; a before and after comparison as two labelled bars; a dark caption box at the bottom.",
+          "thumbnail": "thumbnails/step-before-and-after-bars.png",
+          "thumbnail_size": [
+            768,
+            936
+          ],
+          "figma_node": "3210:11436"
+        },
+        {
+          "id": "social-media/step-before-and-after-chart",
+          "name": "Step · before and after chart",
+          "theme": "brand",
+          "layout": "Portrait 4:5. Step eyebrow; a big stat with label; a before and after line chart (a wild line settling into a steady band); a caption box and a footnote.",
+          "thumbnail": "thumbnails/step-before-and-after-chart.png",
+          "thumbnail_size": [
+            768,
+            936
+          ],
+          "figma_node": "3210:11488"
+        },
+        {
+          "id": "social-media/results-stat-tiles",
+          "name": "Results · stat tiles",
+          "theme": "dark",
+          "layout": "Portrait 4:5. Logo and a results tag at the top; a 2x2 grid of stat tiles (one highlighted in brand blue); a closing line and a website pill at the bottom.",
+          "thumbnail": "thumbnails/results-stat-tiles.png",
+          "thumbnail_size": [
+            768,
+            936
+          ],
+          "figma_node": "3210:11604"
+        },
+        {
+          "id": "social-media/step-stat-with-gauge",
+          "name": "Step · stat with gauge",
+          "theme": "brand",
+          "layout": "Portrait 4:5. Logo; step eyebrow; a big stat with label and a short paragraph; a gauge dial chart showing the change; a footnote.",
+          "thumbnail": "thumbnails/step-stat-with-gauge.png",
+          "thumbnail_size": [
+            768,
+            960
+          ],
+          "figma_node": "3210:11798"
+        }
+      ]
+    },
+    {
+      "name": "Carousel (1:1)",
+      "use": "A square multi-slide post: cover slide, content slides and a closing slide.",
+      "templates": [
+        {
+          "id": "social-media/cover-bruce-ai-product-post",
+          "name": "Cover · Bruce AI product post",
+          "theme": "dark",
+          "layout": "Square 1:1. Bruce AI posts only: the headline uses gradient/bruce-ai; a short subline; an outlined CTA; a product visual at the bottom right; website bottom-left. Glow is approved on Bruce AI posts: keep the glowing product visual.",
+          "thumbnail": "thumbnails/cover-bruce-ai-product-post.png",
+          "thumbnail_size": [
+            768,
+            768
+          ],
+          "figma_node": "3210:12061"
+        },
+        {
+          "id": "social-media/content-quote-with-headshot",
+          "name": "Content · quote with headshot",
+          "theme": "light",
+          "layout": "Square 1:1. A plant photo background; a dark quote card with one highlighted phrase, the speaker's name and role, and a button; the speaker's round headshot overlapping the card bottom-right; logo top-left, website top-right.",
+          "thumbnail": "thumbnails/content-quote-with-headshot.png",
+          "thumbnail_size": [
+            768,
+            768
+          ],
+          "figma_node": "3210:12086"
+        }
+      ]
+    }
+  ]
+}
