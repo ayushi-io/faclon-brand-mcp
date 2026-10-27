@@ -1,8 +1,3 @@
----
-status: not_written
-needed: approved client logos files, each listed in _index.json.
----
+# Client logos
 
-# Assets: client-logos
-
-Not written yet. Needed: approved client logos files, each listed in _index.json.
+83 client logos, one file per company, tagged by industry, approved for external marketing. See `../_index.json`.

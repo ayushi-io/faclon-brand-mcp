@@ -1,8 +1,9 @@
 import { readData, dataExists, listDirs, readDoc } from "../lib/data.js";
 import { P, SECTION_FILES, profileParts, GUARDRAIL_ORDER } from "../lib/paths.js";
 import { BrandError } from "../lib/envelope.js";
+import { getAssets } from "./assets.js";
 
-export const SECTIONS = ["overview", "principles", "rules", "defaults", "components", "logo", "typography", "color", "voice", "design-elements", "illustration", "architecture", "imagery"];
+export const SECTIONS = ["overview", "principles", "rules", "defaults", "components", "logo", "typography", "color", "voice", "design-elements", "illustration", "architecture", "imagery", "assets"];
 
 // Outcomes in 07-skills that have rules, keyed by format id (deck, document…).
 function outcomes() {
@@ -16,9 +17,9 @@ function outcomes() {
 
 export const formatProfiles = () => Object.keys(outcomes()).sort();
 
-const isGap = (section) => SECTION_FILES[section] && readDoc(SECTION_FILES[section]).meta.status === "not_written";
+const isGap = (section) => Boolean(SECTION_FILES[section]) && readDoc(SECTION_FILES[section]).meta.status === "not_written";
 
-export function getBrandGuidelines({ section = "overview", format_profile } = {}) {
+export function getBrandGuidelines({ section = "overview", format_profile, asset_category, asset_query } = {}) {
   if (!SECTIONS.includes(section)) {
     throw new BrandError("INVALID_PARAM", `Unknown section "${section}".`, `Use one of: ${SECTIONS.join(", ")}.`);
   }
@@ -42,6 +43,8 @@ export function getBrandGuidelines({ section = "overview", format_profile } = {}
   if (section === "defaults") {
     return { section, status: "written", about: readData(P.defaults).about, defaults: readData(P.defaults).defaults, format_profile: profileInfo };
   }
+
+  if (section === "assets") return { section, status: "written", ...getAssets({ asset_category, asset_query }), format_profile: profileInfo };
 
   if (section === "components") return { section, status: "written", ...components(profile), format_profile: profileInfo };
 

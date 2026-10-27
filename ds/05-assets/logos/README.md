@@ -1,8 +1,3 @@
----
-status: not_written
-needed: the Faclon Labs and product logo files (blue, white; Bruce AI light and dark). Usage rules are in 02-brand-elements/logo.
----
+# Logos
 
-# Assets: logos
-
-Not written yet. Needed: the Faclon Labs and product logo files (blue, white; Bruce AI light and dark). Usage rules are in 02-brand-elements/logo.
+Faclon Labs, Bruce AI and DeepSense logos and product marks. See `../README.md` and `_index.json`; usage rules are in `02-brand-elements/logo`.

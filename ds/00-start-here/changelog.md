@@ -4,6 +4,13 @@ Each change to the system bumps `brand_version` in `version.json` (format `YYYY.
 
 ## 2026-10-27
 
+- Neutral-dark removed from the design system (it was almost the same as neutral-light). The dark theme now uses neutral-light, with its layers kept apart: page #192839 (background/primary), cards #243547, nested cards and borders #2F4256, stronger borders #40566D and #58728D. Light-theme border/container is neutral-light/200.
+- Team headshots are cut-outs with no background (rule assets.headshots: fill with background/primary in the dark theme, never crop from the top); the Figma headshot components now use that fill.
+- Partner logos updated from Figma: Accenture, AWS (and its version for dark backgrounds), Microsoft Azure and HPE; Idex and KSB removed with the OEM tie-ups section.
+- Design element "Dot wave" (dark, light and brand backgrounds; full width in the lower half of a layout, as the brand team's three examples show). The three design elements are in the asset library (`design-elements`).
+- Co-branding examples in Figma: Faclon Labs and HPE on light, white Faclon Labs and AWS (dark-background version) on dark.
+- Asset library (05-assets): 319 files exported from Figma and listed in `_index.json`: 14 logos (Faclon Labs, logomark on request, Bruce AI, DeepSense, product marks I/O Connect, Deepsense, Forge, Foundry, I/O Sense, UNS Dark, UNS Light), 6 partner logos (with HPE and the Faclon Labs and HPE co-branding lockup), 83 client logos by industry, 14 team headshots with roles and the 199-icon Faclon architecture icon library. Served by `get_brand_guidelines(section: "assets")` with `asset_category` and `asset_query`, files at `/assets/<file>`. Client and partner logos approved for external marketing; two headshot roles and owners are 'to add'.
+- Co-branding rule `logo.co-branding` (locked) from the brand team's Faclon Labs and HPE example: Faclon Labs logo, vertical divider (border/strong, 1px), partner logo, centred; about 3/4 of the Faclon Labs logo height for the gaps, the divider and the partner logo. Architecture icons now come from the library (no longer 'until provided'). Product screenshots and photography are not supplied yet.
 - New tool `check_design`: checks finished HTML against the brand rules (colours, fonts, sizes, weights, radius, borders, shadows, gradients, effects, alt text, logo, voice; Brevo rules for newsletters) and returns pass or fail with fixes. Every skill runs it before delivery.
 
 ## 2026-10-26

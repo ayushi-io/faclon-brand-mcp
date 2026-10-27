@@ -441,6 +441,31 @@
       "id": "qna-brand-theme",
       "decision": "Q&A slides follow the brand rules: the brand-theme page breaker \"Reference Slides for QnA\", as designed.",
       "decided_on": "2026-10-26"
+    },
+    {
+      "id": "architecture-icon-library",
+      "decision": "The 199 icons on the Figma icons_architecture page are the approved Faclon architecture icon library, served from the asset library (section assets, category icons). This closes the 'until it is provided, ask' gap of decision architecture-icons; if a device has no icon there, ask.",
+      "decided_on": "2026-10-27"
+    },
+    {
+      "id": "asset-rights",
+      "decision": "Every client and partner logo in the asset library is approved for external marketing. Team headshot roles and product mark names come from the Figma file (People & product images, Logo pages); two roles (Rajveer Singh, Sarang Vakharia), headshot rights and asset owners are not recorded yet and stay 'to add'.",
+      "decided_on": "2026-10-27"
+    },
+    {
+      "id": "logo-co-branding",
+      "decision": "Co-branding lockup from the brand team's Faclon Labs and HPE example: Faclon Labs logo, vertical divider, partner logo, centred in one row; about 3/4 of the Faclon Labs logo height on each side of the divider and as the divider length and partner logo height; divider in border/strong at border-width/default (the example's #898888 0.77px mapped to tokens). Rule logo.co-branding, locked. HPE added to the partner logos.",
+      "decided_on": "2026-10-27"
+    },
+    {
+      "id": "neutral-dark-removed",
+      "decision": "The neutral-dark scale is removed from the design system: it was almost the same as neutral-light. Both themes use neutral-light. Dark theme, keeping its layers apart: background/primary neutral-light/1200, background/secondary 1300 (unchanged), background/tertiary 1000, container/primary 1100, container/secondary 1000, container/tertiary 900, container/elevated 1000, border/container 1000, border/secondary 1000, border/primary 900, border/strong 800, text/secondary 300, text/tertiary 400, text/placeholder 500, text/inverse and border/inverse 1200, background/inverse and container/inverse base/white. Light theme: border/container neutral-light/200.",
+      "decided_on": "2026-10-27"
+    },
+    {
+      "id": "headshots-no-background",
+      "decision": "Team headshots are exported without background. Designs fill the shape behind them with background/primary in the dark theme and never crop a headshot from the top (rule assets.headshots).",
+      "decided_on": "2026-10-27"
     }
   ],
   "figma_updates_needed": [],

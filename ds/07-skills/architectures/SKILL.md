@@ -15,7 +15,7 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 
 - **Needed:** the systems, devices, connections and protocols to show. Nothing is added that the user did not supply.
 - **Optional:** a title; labels; which flows are the main data flow or a status; arrow colours beyond the defaults.
-- **Icons:** from the Faclon architecture icon library, which the user provides. Until then, ask; never pick, draw or substitute an icon.
+- **Icons:** from the Faclon architecture icon library (`get_brand_guidelines(section: "assets", asset_category: "icons")`). If a device has no icon there, ask; never draw or substitute an icon.
 - If what to show is unclear, ask before designing.
 
 ## Steps
@@ -54,7 +54,7 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 
 - Image and illustration styles: `get_brand_guidelines(section: "imagery")` and `(section: "illustration")`. Images and illustrations come from the user, in those styles.
 - The blue Faclon Labs logo.
-- Icons: only from the Faclon architecture icon library the user provides.
+- Icons: only from the Faclon architecture icon library (`get_brand_guidelines(section: "assets", asset_category: "icons")`).
 
 ## Checklist before delivery
 
