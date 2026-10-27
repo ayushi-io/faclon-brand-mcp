@@ -16,7 +16,7 @@ const body = (r) => JSON.parse(r.content[0].text);
 test("server lists exactly the Brand tools and sends instructions", async () => {
   const client = await connect();
   const { tools } = await client.listTools();
-  assert.deepEqual(tools.map((t) => t.name).sort(), ["get_brand_guidelines", "get_tokens"]);
+  assert.deepEqual(tools.map((t) => t.name).sort(), ["check_design", "get_brand_guidelines", "get_tokens"]);
   assert.match(client.getInstructions(), /get_brand_guidelines/);
 });
 
@@ -49,4 +49,12 @@ test("get_tokens accepts a format over the protocol", async () => {
   assert.equal(r.ok, true);
   assert.equal(r.data.format, "newsletter");
   assert.equal(r.data.tokens.roles.body.desktop.size, 16);
+});
+
+test("check_design runs over the protocol", async () => {
+  const client = await connect();
+  const r = body(await client.callTool({ name: "check_design", arguments: { html: "<p style=\"font-family:Arial\">Faclon Labs</p>", format_profile: "social" } }));
+  assert.equal(r.ok, true);
+  assert.equal(r.data.verdict, "fail");
+  assert.equal(r.data.findings[0].rule, "type.two-families-only");
 });

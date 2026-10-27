@@ -24,7 +24,7 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 2. **Load the rules.** `get_brand_guidelines(section: "rules", format_profile: "architecture")`, then `get_tokens()` and `get_brand_guidelines(section: "components", format_profile: "architecture")`.
 3. **Count and pick the density.** Count nodes, labels and zones; take the densest category any count points to (Open, Medium or Dense), then check the fit: step down if a label needs more than 2 lines, overlaps a connector or forces a gap below the spacing spec; step up if the larger sizes still fit. Larger is preferred when it fits.
 4. **Lay out** zones, sub-zones and nodes; route connectors so they stay clear.
-5. **Check** against the checklist.
+5. **Check.** Run `check_design(html, format_profile: "architecture")` on the finished HTML, fix every error and run it again; flag warnings about the user's words to the user instead of changing them. Then go through the checklist at the end, which covers what the tool cannot see (layout, spacing, hierarchy, overflow).
 6. **Deliver** the HTML.
 
 ## Structure
@@ -58,6 +58,7 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 
 ## Checklist before delivery
 
+- [ ] `check_design` returns "pass" (no errors).
 - [ ] Only the parts the user supplied; nothing invented.
 - [ ] Density chosen by counting, then checked for fit.
 - [ ] Every label at or above 10px and at most 2 lines; no label overlaps a connector.

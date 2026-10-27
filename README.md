@@ -10,6 +10,7 @@ Flow: Brand and Assets → Generation (components, templates, taste, skills) →
 |---|---|
 | `get_tokens(category?, mode?, format?, as?)` | Design tokens. `category`: color, typography, spacing, radius, border, elevation, opacity, gradient. `mode`: light/dark (color), desktop/mobile (typography, spacing). `format`: document, newsletter, deck (text roles; typography only). `as`: json, css, tailwind, figma. |
 | `get_brand_guidelines(section?, format_profile?)` | Guidance and rules. `section`: overview, principles, rules, defaults, components, logo, typography, color, voice, design-elements, illustration, architecture, imagery. `format_profile`: deck, document, newsletter, architecture, social. |
+| `check_design(html, format_profile?)` | Checks finished HTML against the brand rules before delivery: off-token colours, fonts, text sizes and weights, radius, borders, shadows, gradients and effects, alt text, the logo, voice, and Brevo rules for newsletters. Returns pass or fail with findings (rule, severity, evidence, fix). It does not judge layout or spacing. |
 
 Every response is `{ ok, data | error, brand_version }`. Errors carry a `code` and a `fix`.
 

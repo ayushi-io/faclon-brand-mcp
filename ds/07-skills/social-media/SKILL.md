@@ -24,7 +24,7 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 2. **Load the rules.** `get_brand_guidelines(section: "rules", format_profile: "social")`, then `get_tokens()` (including category "gradient" for Bruce AI posts) and `get_brand_guidelines(section: "components")`. For design elements: `get_brand_guidelines(section: "design-elements")`.
 3. **Plan.** One message per post or slide. For a carousel, plan the cover, the content slides and the closing slide, and their themes (see Structure).
 4. **Design** at 540px wide on the 12-column grid.
-5. **Check** against the checklist.
+5. **Check.** Run `check_design(html, format_profile: "social")` on the finished HTML, fix every error and run it again; flag warnings about the user's words to the user instead of changing them. Then go through the checklist at the end, which covers what the tool cannot see (layout, spacing, hierarchy, overflow).
 6. **Deliver** HTML at the 540px design size, ready to export at 2x (1080px). The user converts it to PNG, JPG or PDF if needed.
 
 ## Structure
@@ -59,6 +59,7 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 
 ## Checklist before delivery
 
+- [ ] `check_design` returns "pass" (no errors).
 - [ ] The cover image came from the user.
 - [ ] Cover dark; content slides light (or dark on request); the dark break every two slides when there are five or more; closing like the cover.
 - [ ] Logo at the top of every post and slide, the right colour for the theme.

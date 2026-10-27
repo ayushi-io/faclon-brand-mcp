@@ -23,7 +23,7 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 2. **Load the rules.** `get_brand_guidelines(section: "rules", format_profile: "deck")`, then `get_tokens(format: "deck")` and `get_brand_guidelines(section: "components", format_profile: "deck")`.
 3. **Plan the slides.** One message per slide. Spread the content across slides (unless the user set the number). Mark which slides use a reference slide and which you design.
 4. **Design.** Build each slide on the grid with the components and text styles below. Use the reference slides where they apply.
-5. **Check** every slide against the checklist at the end.
+5. **Check.** Run `check_design(html, format_profile: "deck")` on the finished HTML, fix every error and run it again; flag warnings about the user's words to the user instead of changing them. Then go through the checklist at the end, which covers what the tool cannot see (layout, spacing, hierarchy, overflow).
 6. **Deliver** one HTML file, plus a short note of anything you flagged (content that did not fit, a suggestion waiting for approval).
 
 ## Structure
@@ -56,6 +56,7 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 
 ## Checklist before delivery
 
+- [ ] `check_design` returns "pass" (no errors).
 - [ ] Every slide has one message, and nothing was added that the user did not ask for.
 - [ ] The user's text is unchanged; any suggested change is flagged, not applied.
 - [ ] Every colour, size, space and radius is a token or a named text style; text is between 14px and 72px.
