@@ -9,6 +9,7 @@ Real files exported from the Figma file Design MCP, listed one per entry in `_in
 | client-logos | Client logos, one file per company, tagged with every industry it appears under | 83 |
 | team-headshots | Leadership and SMEs with their roles (two left empty), cut out with no background (rule assets.headshots) | 14 |
 | design-elements | Dot-particle form (dark only), light streak (brand only), dot wave (dark, light or brand) | 3 |
+| architecture-outcomes | The I/O Sense outcomes every architecture diagram ends in, placed unchanged: Faclon scope (default), Faclon scope with funnel, steam trap (steam-trap diagrams only) | 3 |
 | icons/architecture | The Faclon architecture icon library, one folder per group | 199 |
 | product-screenshots, photography | Not supplied yet | 0 |
 

@@ -471,6 +471,21 @@
       "id": "bruce-ai-glow",
       "decision": "Glow is approved for Bruce AI content only (as on the Bruce AI carousel cover: glowing product visual, gradient headline). This replaces 'glow effects are not approved'. Glow stays banned on all other content; glass and backdrop blur stay banned everywhere.",
       "decided_on": "2026-10-27"
+    },
+    {
+      "id": "architecture-brand-on-outcome",
+      "decision": "In architecture diagrams brand blue is kept for the final outcome. Everything else uses neutrals and light blue tints (brand/050 to brand/400), nothing darker: device name tags container/info with text/heading, sub-zone border brand/300, data-flow arrow brand/400, title text/heading.",
+      "decided_on": "2026-10-27"
+    },
+    {
+      "id": "architecture-final-outcome",
+      "decision": "Every architecture diagram ends in one of the I/O Sense outcomes from the Figma Architectures page (asset category architecture-outcomes), placed exactly as designed: Faclon scope by default, Faclon scope with funnel when the diagram feeds into it from the left, steam trap only for steam-trap diagrams. It is changed only when the user asks. The brand team replaced the first four outcomes with these three on 2026-10-27.",
+      "decided_on": "2026-10-27"
+    },
+    {
+      "id": "architecture-device-styles",
+      "decision": "With one of the four icon + content styles on the Figma Architectures page (Template › Icon + Content design): boxed tag, tag, label and caption. Claude picks the style by the device's role and keeps it the same for the same kind of device. The tags stay light blue (container/info, text/heading) instead of the reference's solid brand blue, Outfit becomes Inter, the reference's greys become text/secondary and text/body, and the 7px camera caption is set at the 10px minimum or above.",
+      "decided_on": "2026-10-27"
     }
   ],
   "figma_updates_needed": [],

@@ -7,7 +7,7 @@
       "components",
       "Badges"
     ],
-    "extracted_on": "2026-10-23",
+    "extracted_on": "2026-10-27",
     "method": "Variable bindings on each component (not the description text)"
   },
   "usage": [
@@ -244,6 +244,738 @@
           "optional": true
         }
       ]
+    },
+    {
+      "id": "stat-tile",
+      "name": "Stat tile",
+      "kind": "atom",
+      "figma": {
+        "page": "components",
+        "node": "3264:17856"
+      },
+      "use": "One big number with a short label, for a single headline figure (e.g. factories live, assets connected). Default tone on the page; Brand or Inverse to make one figure stand out. Optional trend chip. In a row of figures, use the same tone and size for each.",
+      "props": {
+        "Value": "text",
+        "Label": "text",
+        "Show trend": "boolean",
+        "Tone": [
+          "Default",
+          "Brand",
+          "Inverse"
+        ],
+        "Size": [
+          "Default",
+          "Large"
+        ]
+      },
+      "layout": {
+        "direction": "vertical",
+        "padding": {
+          "top": "padding/container",
+          "right": "padding/container",
+          "bottom": "padding/container",
+          "left": "padding/container"
+        },
+        "gap": "gap/inline"
+      },
+      "surface": {
+        "border_width": "border-width/default"
+      },
+      "parts": [
+        {
+          "part": "value",
+          "role": "metric"
+        },
+        {
+          "part": "label",
+          "role": "caption"
+        },
+        {
+          "part": "trend",
+          "component": "chip",
+          "optional": true
+        }
+      ],
+      "variants": {
+        "Tone": {
+          "Default": {
+            "fill": "container/primary",
+            "border": "border/container",
+            "value": "text/heading",
+            "label": "text/secondary",
+            "trend": "text/brand"
+          },
+          "Brand": {
+            "fill": "container/brand",
+            "border": null,
+            "value": "text/on-brand",
+            "label": "text/on-brand",
+            "trend": "text/secondary"
+          },
+          "Inverse": {
+            "fill": "container/inverse",
+            "border": null,
+            "value": "text/inverse",
+            "label": "text/inverse",
+            "trend": "text/secondary"
+          }
+        },
+        "Size": {
+          "Default": {
+            "radius": "radius/default"
+          },
+          "Large": {
+            "radius": "radius/3xl"
+          }
+        }
+      },
+      "default": {
+        "Tone": "Default",
+        "Size": "Default"
+      }
+    },
+    {
+      "id": "logo-wall",
+      "name": "Logo wall",
+      "kind": "atom",
+      "figma": {
+        "page": "components",
+        "node": "3265:17948"
+      },
+      "use": "A grid of client or partner logos at one even size, as proof (\"Trusted by\"). Each slot takes a real logo file from the asset library, unchanged; 4 or 6 across, as many rows as needed; optional eyebrow caption.",
+      "props": {
+        "Caption": "text",
+        "Show caption": "boolean",
+        "Columns": [
+          "4",
+          "6"
+        ]
+      },
+      "layout": {
+        "direction": "vertical",
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "gap": "gap/stack"
+      },
+      "parts": [
+        {
+          "part": "caption",
+          "role": "eyebrow",
+          "color": "text/eyebrow",
+          "optional": true
+        },
+        {
+          "part": "logos",
+          "layout": {
+            "direction": "vertical",
+            "gap": "gap/grid"
+          },
+          "contains": [
+            "row",
+            "logo"
+          ]
+        },
+        {
+          "part": "logo label",
+          "role": "caption",
+          "color": "text/placeholder"
+        },
+        {
+          "part": "logo label",
+          "role": "caption",
+          "color": "text/placeholder"
+        },
+        {
+          "part": "logo label",
+          "role": "caption",
+          "color": "text/placeholder"
+        },
+        {
+          "part": "logo label",
+          "role": "caption",
+          "color": "text/placeholder"
+        },
+        {
+          "part": "logo label",
+          "role": "caption",
+          "color": "text/placeholder"
+        },
+        {
+          "part": "logo label",
+          "role": "caption",
+          "color": "text/placeholder"
+        },
+        {
+          "part": "logo label",
+          "role": "caption",
+          "color": "text/placeholder"
+        },
+        {
+          "part": "logo label",
+          "role": "caption",
+          "color": "text/placeholder"
+        }
+      ],
+      "default": {
+        "Columns": "4"
+      }
+    },
+    {
+      "id": "feature-grid",
+      "name": "Feature grid",
+      "kind": "atom",
+      "figma": {
+        "page": "components",
+        "node": "3265:17986"
+      },
+      "use": "Three or four features side by side on the page: icon, feature name and one or two lines. No card surface; use Icon Card when each feature needs its own card. Icons only when the user wants them (Lucide, coloured with a text token).",
+      "props": {
+        "Columns": [
+          "3",
+          "4"
+        ]
+      },
+      "layout": {
+        "direction": "horizontal",
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "gap": "gap/grid"
+      },
+      "parts": [
+        {
+          "part": "feature",
+          "layout": {
+            "direction": "vertical",
+            "gap": "gap/inline"
+          },
+          "contains": [
+            "image"
+          ]
+        },
+        {
+          "part": "title",
+          "role": "label-lg",
+          "color": "text/heading"
+        },
+        {
+          "part": "body",
+          "role": "body",
+          "color": "text/body"
+        },
+        {
+          "part": "feature",
+          "layout": {
+            "direction": "vertical",
+            "gap": "gap/inline"
+          },
+          "contains": [
+            "image"
+          ]
+        },
+        {
+          "part": "title",
+          "role": "label-lg",
+          "color": "text/heading"
+        },
+        {
+          "part": "body",
+          "role": "body",
+          "color": "text/body"
+        },
+        {
+          "part": "feature",
+          "layout": {
+            "direction": "vertical",
+            "gap": "gap/inline"
+          },
+          "contains": [
+            "image"
+          ]
+        },
+        {
+          "part": "title",
+          "role": "label-lg",
+          "color": "text/heading"
+        },
+        {
+          "part": "body",
+          "role": "body",
+          "color": "text/body"
+        }
+      ],
+      "default": {
+        "Columns": "3"
+      }
+    },
+    {
+      "id": "process-flow",
+      "name": "Process flow",
+      "kind": "atom",
+      "figma": {
+        "page": "components",
+        "node": "3265:18074"
+      },
+      "use": "Numbered steps left to right joined by a connector, each with a step name and one line: for a sequence or a method (e.g. connect, decide, optimise). 3, 4 or 5 steps.",
+      "props": {
+        "Steps": [
+          "3",
+          "4",
+          "5"
+        ]
+      },
+      "layout": {
+        "direction": "horizontal",
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "gap": "gap/grid"
+      },
+      "parts": [
+        {
+          "part": "step 1",
+          "layout": {
+            "direction": "vertical",
+            "gap": "gap/inline"
+          },
+          "contains": [
+            "marker row",
+            "number"
+          ]
+        },
+        {
+          "part": "number label",
+          "role": "label-md",
+          "color": "text/on-brand"
+        },
+        {
+          "part": "connector",
+          "fill": "border/strong"
+        },
+        {
+          "part": "title",
+          "role": "label-lg",
+          "color": "text/heading"
+        },
+        {
+          "part": "body",
+          "role": "body",
+          "color": "text/body"
+        },
+        {
+          "part": "step 2",
+          "layout": {
+            "direction": "vertical",
+            "gap": "gap/inline"
+          },
+          "contains": [
+            "marker row",
+            "number"
+          ]
+        },
+        {
+          "part": "number label",
+          "role": "label-md",
+          "color": "text/on-brand"
+        },
+        {
+          "part": "connector",
+          "fill": "border/strong"
+        },
+        {
+          "part": "title",
+          "role": "label-lg",
+          "color": "text/heading"
+        },
+        {
+          "part": "body",
+          "role": "body",
+          "color": "text/body"
+        },
+        {
+          "part": "step 3",
+          "layout": {
+            "direction": "vertical",
+            "gap": "gap/inline"
+          },
+          "contains": [
+            "marker row",
+            "number"
+          ]
+        },
+        {
+          "part": "number label",
+          "role": "label-md",
+          "color": "text/on-brand"
+        },
+        {
+          "part": "connector",
+          "fill": "border/strong"
+        },
+        {
+          "part": "title",
+          "role": "label-lg",
+          "color": "text/heading"
+        },
+        {
+          "part": "body",
+          "role": "body",
+          "color": "text/body"
+        }
+      ],
+      "default": {
+        "Steps": "3"
+      }
+    },
+    {
+      "id": "comparison-table",
+      "name": "Comparison table",
+      "kind": "atom",
+      "figma": {
+        "page": "components",
+        "node": "3265:18075"
+      },
+      "use": "A side-by-side comparison: a criterion column and two compared columns (without and with Faclon Labs, build and buy, before and after), the Faclon Labs column highlighted. Rows and headers come from the user.",
+      "layout": {
+        "direction": "vertical",
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "gap": 0
+      },
+      "surface": {
+        "fill": "container/primary",
+        "border": "border/container",
+        "border_width": "border-width/default",
+        "radius": "radius/default"
+      },
+      "parts": [
+        {
+          "part": "header",
+          "layout": {
+            "direction": "horizontal",
+            "gap": 0
+          },
+          "contains": [
+            "label",
+            "column a",
+            "column b"
+          ]
+        },
+        {
+          "part": "label text",
+          "role": "label-md",
+          "color": "text/secondary"
+        },
+        {
+          "part": "column a text",
+          "role": "label-md",
+          "color": "text/secondary"
+        },
+        {
+          "part": "column b text",
+          "role": "label-md",
+          "color": "text/brand"
+        },
+        {
+          "part": "row 1",
+          "layout": {
+            "direction": "horizontal",
+            "gap": 0
+          },
+          "contains": [
+            "label",
+            "column a",
+            "column b"
+          ]
+        },
+        {
+          "part": "label text",
+          "role": "label-md",
+          "color": "text/secondary"
+        },
+        {
+          "part": "column a text",
+          "role": "label-md",
+          "color": "text/secondary"
+        },
+        {
+          "part": "column b text",
+          "role": "label-md",
+          "color": "text/brand"
+        },
+        {
+          "part": "row 2",
+          "layout": {
+            "direction": "horizontal",
+            "gap": 0
+          },
+          "contains": [
+            "label",
+            "column a",
+            "column b"
+          ]
+        },
+        {
+          "part": "label text",
+          "role": "label-md",
+          "color": "text/secondary"
+        },
+        {
+          "part": "column a text",
+          "role": "label-md",
+          "color": "text/secondary"
+        },
+        {
+          "part": "column b text",
+          "role": "label-md",
+          "color": "text/brand"
+        },
+        {
+          "part": "row 3",
+          "layout": {
+            "direction": "horizontal",
+            "gap": 0
+          },
+          "contains": [
+            "label",
+            "column a",
+            "column b"
+          ]
+        },
+        {
+          "part": "label text",
+          "role": "label-md",
+          "color": "text/secondary"
+        },
+        {
+          "part": "column a text",
+          "role": "label-md",
+          "color": "text/secondary"
+        },
+        {
+          "part": "column b text",
+          "role": "label-md",
+          "color": "text/brand"
+        },
+        {
+          "part": "row 4",
+          "layout": {
+            "direction": "horizontal",
+            "gap": 0
+          },
+          "contains": [
+            "label",
+            "column a",
+            "column b"
+          ]
+        },
+        {
+          "part": "label text",
+          "role": "label-md",
+          "color": "text/secondary"
+        },
+        {
+          "part": "column a text",
+          "role": "label-md",
+          "color": "text/secondary"
+        },
+        {
+          "part": "column b text",
+          "role": "label-md",
+          "color": "text/brand"
+        }
+      ]
+    },
+    {
+      "id": "cta-band",
+      "name": "CTA band",
+      "kind": "atom",
+      "figma": {
+        "page": "components",
+        "node": "3265:18159"
+      },
+      "use": "A full-width strip with one message and one button: the single next step at the end of a section, page, newsletter or deck. Brand, Inverse or Default tone; one button only.",
+      "props": {
+        "Title": "text",
+        "Body": "text",
+        "Show body": "boolean",
+        "Tone": [
+          "Brand",
+          "Inverse",
+          "Default"
+        ],
+        "Size": [
+          "Default",
+          "Large"
+        ]
+      },
+      "layout": {
+        "direction": "horizontal",
+        "padding": {
+          "top": "spacing/40",
+          "right": "spacing/40",
+          "bottom": "spacing/40",
+          "left": "spacing/40"
+        },
+        "gap": "gap/grid"
+      },
+      "parts": [
+        {
+          "part": "message",
+          "layout": {
+            "direction": "vertical",
+            "gap": "gap/inline"
+          }
+        },
+        {
+          "part": "title",
+          "role": "title"
+        },
+        {
+          "part": "body",
+          "role": "body",
+          "optional": true
+        },
+        {
+          "part": "button",
+          "component": "button"
+        }
+      ],
+      "variants": {
+        "Tone": {
+          "Brand": {
+            "fill": "container/brand",
+            "border": null,
+            "title": "text/on-brand",
+            "body": "text/on-brand",
+            "button": "text/inverse"
+          },
+          "Inverse": {
+            "fill": "container/inverse",
+            "border": null,
+            "title": "text/inverse",
+            "body": "text/inverse",
+            "button": "text/on-brand"
+          },
+          "Default": {
+            "fill": "container/primary",
+            "border": "border/container",
+            "title": "text/heading",
+            "body": "text/body",
+            "button": "text/on-brand"
+          }
+        },
+        "Size": {
+          "Default": {
+            "radius": "radius/default"
+          },
+          "Large": {
+            "radius": "radius/3xl"
+          }
+        }
+      },
+      "default": {
+        "Tone": "Brand",
+        "Size": "Default"
+      }
+    },
+    {
+      "id": "cover-block",
+      "name": "Cover block",
+      "kind": "atom",
+      "figma": {
+        "page": "components",
+        "node": "3265:18217"
+      },
+      "use": "The opening of an A4 document or a deck cover: eyebrow (document type), the full Faclon Labs logo top-right, title in Heading/H1, subtitle and a meta line. Light, Dark or Brand; each tone keeps its colours on any page, so the logo matches its background.",
+      "props": {
+        "Eyebrow": "text",
+        "Title": "text",
+        "Subtitle": "text",
+        "Meta": "text",
+        "Tone": [
+          "Light",
+          "Dark",
+          "Brand"
+        ]
+      },
+      "layout": {
+        "direction": "vertical",
+        "padding": {
+          "top": "spacing/40",
+          "right": "spacing/40",
+          "bottom": "spacing/40",
+          "left": "spacing/40"
+        },
+        "gap": "gap/stack"
+      },
+      "parts": [
+        {
+          "part": "top row",
+          "layout": {
+            "direction": "horizontal",
+            "gap": 0,
+            "align": "space-between"
+          },
+          "contains": [
+            "logo-blue"
+          ]
+        },
+        {
+          "part": "eyebrow",
+          "role": "eyebrow"
+        },
+        {
+          "part": "subtitle",
+          "role": "body"
+        },
+        {
+          "part": "meta",
+          "role": "caption"
+        }
+      ],
+      "variants": {
+        "Tone": {
+          "Light": {
+            "fill": "background/primary",
+            "eyebrow": "text/eyebrow",
+            "title": "text/heading",
+            "subtitle": "text/body",
+            "meta": "text/secondary"
+          },
+          "Dark": {
+            "fill": "background/primary",
+            "eyebrow": "text/eyebrow",
+            "title": "text/heading",
+            "subtitle": "text/body",
+            "meta": "text/secondary"
+          },
+          "Brand": {
+            "fill": "background/brand",
+            "eyebrow": "text/on-brand",
+            "title": "text/on-brand",
+            "subtitle": "text/on-brand",
+            "meta": "text/on-brand"
+          }
+        }
+      },
+      "default": {
+        "Tone": "Light"
+      }
     },
     {
       "id": "card-base",
@@ -1026,6 +1758,108 @@
             "radius": "radius/3xl"
           }
         }
+      }
+    },
+    {
+      "id": "quote-card",
+      "name": "Quote card",
+      "kind": "card",
+      "figma": {
+        "page": "components",
+        "node": "3264:17897"
+      },
+      "use": "A customer or leader quote with the speaker: the quote, a divider, then avatar (a headshot from the asset library, or the client logo), name and role. The quote and the speaker come from the user, word for word; never invent either.",
+      "props": {
+        "Quote": "text",
+        "Name": "text",
+        "Role": "text",
+        "Show avatar": "boolean",
+        "Tone": [
+          "Default",
+          "Inverse"
+        ],
+        "Size": [
+          "Default",
+          "Large"
+        ]
+      },
+      "layout": {
+        "direction": "vertical",
+        "padding": {
+          "top": "padding/container",
+          "right": "padding/container",
+          "bottom": "padding/container",
+          "left": "padding/container"
+        },
+        "gap": "gap/stack"
+      },
+      "surface": {
+        "fill": "container/primary",
+        "border": "border/container",
+        "border_width": "border-width/default",
+        "radius": "radius/default"
+      },
+      "parts": [
+        {
+          "part": "quote",
+          "role": "title"
+        },
+        {
+          "part": "divider",
+          "component": "divider"
+        },
+        {
+          "part": "author",
+          "layout": {
+            "direction": "horizontal",
+            "gap": "gap/inline",
+            "align": "center"
+          },
+          "contains": [
+            "name and role"
+          ]
+        },
+        {
+          "part": "name",
+          "role": "label-md",
+          "layout": {
+            "gap_below": "spacing/4"
+          }
+        },
+        {
+          "part": "role",
+          "role": "caption",
+          "color": "text/secondary"
+        }
+      ],
+      "variants": {
+        "Tone": {
+          "Default": {
+            "fill": "container/primary",
+            "border": "border/container",
+            "quote": "text/heading",
+            "name": "text/heading"
+          },
+          "Inverse": {
+            "fill": "container/inverse",
+            "border": null,
+            "quote": "text/inverse",
+            "name": "text/inverse"
+          }
+        },
+        "Size": {
+          "Default": {
+            "radius": "radius/default"
+          },
+          "Large": {
+            "radius": "radius/3xl"
+          }
+        }
+      },
+      "width": "fills its grid column",
+      "default": {
+        "Tone": "Default",
+        "Size": "Default"
       }
     },
     {

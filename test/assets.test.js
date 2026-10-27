@@ -105,7 +105,7 @@ test("templates: deck, architecture and social, each with real thumbnails and la
   const overview = getTemplates();
   assert.deepEqual(overview.outcomes.map((o) => o.format_profile).sort(), ["architecture", "deck", "social"]);
   const counts = Object.fromEntries(overview.outcomes.map((o) => [o.format_profile, o.count]));
-  assert.deepEqual(counts, { deck: 21, architecture: 5, social: 8 });
+  assert.deepEqual(counts, { deck: 21, architecture: 6, social: 8 });
   for (const { format_profile, outcome } of overview.outcomes) {
     const t = getTemplates({ format_profile });
     assert.match(t.use, /Never copy their text, numbers/);
@@ -142,4 +142,38 @@ test("export and qa sections: HTML specs, naming topic_outcometype_faclon_date, 
   for (const f of ["decks", "a4-documents", "newsletters", "architectures", "social-media"]) {
     assert.match(fs.readFileSync(path.join(ROOT, "ds/07-skills", f, "SKILL.md"), "utf8"), /_faclon_<YYYY-MM-DD>\.html` \(see section "export"\), in the chat only/, f);
   }
+});
+
+test("architecture: ends in an I/O Sense outcome placed unchanged; brand blue only there", () => {
+  const p = getBrandGuidelines({ section: "rules", format_profile: "architecture" }).format_profile;
+  assert.equal(p.final_outcome.default, "architecture-outcomes/faclon-scope");
+  for (const id of p.final_outcome.options) assert.ok(index.assets.find((e) => e.id === id && e.category === "architecture-outcomes"), id);
+  assert.equal(p.shapes.platform_panel, undefined);
+  assert.equal(p.shapes.node_tag.fill, "container/info");
+  assert.equal(p.arrows.data_flow.colour, "brand/400");
+  assert.equal(p.typography.styles.title.colour, "text/heading");
+  assert.ok(p.guardrails.must_not.some((i) => i.id === "brand-blue-outside-outcome"));
+  assert.ok(p.guardrails.design_direction.some((i) => i.id === "final-outcome"));
+  assert.match(p.skill, /end the diagram in one I\/O Sense outcome/);
+});
+
+test("architecture: three Figma outcomes and four icon + content device styles", () => {
+  const p = getBrandGuidelines({ section: "rules", format_profile: "architecture" }).format_profile;
+  assert.deepEqual(index.assets.filter((e) => e.category === "architecture-outcomes").map((e) => e.id).sort(), [...p.final_outcome.options].sort());
+  assert.match(p.final_outcome.choose, /steam trap only for steam-trap diagrams/);
+  assert.deepEqual(Object.keys(p.node_styles.styles), ["boxed_tag", "tag", "label", "caption"]);
+  const roles = p.typography.styles;
+  for (const [id, s] of Object.entries(p.node_styles.styles)) {
+    for (const ref of [s.box, s.tag, s.text].filter(Boolean)) {
+      const [root, ...rest] = ref.split(".");
+      const target = root === "shapes" ? p.shapes[rest[0]] : roles[rest.at(-1)];
+      assert.ok(target, `${id}: ${ref} does not resolve`);
+    }
+  }
+  assert.equal(roles.device_label.colour, "text/secondary");
+  assert.ok(roles.device_caption.dense.style === "body/xs", "caption stays at body/xs (12px) or larger");
+  const t = getTemplates({ format_profile: "architecture" }).sections.find((s) => s.name === "Icon + content design");
+  assert.equal(t.templates[0].figma_node, "3271:31036");
+  assert.match(t.use, /light blue/);
+  assert.match(p.skill, /four icon \+ content styles/);
 });

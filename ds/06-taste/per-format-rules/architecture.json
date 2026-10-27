@@ -1,6 +1,22 @@
 {
   "must_not": [
     {
+      "id": "brand-blue-outside-outcome",
+      "text": "Never use brand blue (brand/500) or a darker blue outside the final outcome: tags, zones, arrows, titles and labels use neutrals and light blue tints (brand/050 to brand/400) only.",
+      "basis": [
+        "decision:architecture-brand-on-outcome",
+        "profile:colour"
+      ]
+    },
+    {
+      "id": "outcome-unchanged",
+      "text": "Never redraw, restyle or reword the I/O Sense outcome, or leave it out, unless the user asks.",
+      "basis": [
+        "decision:architecture-final-outcome",
+        "profile:final_outcome"
+      ]
+    },
+    {
       "id": "content-unchanged",
       "text": "Hard rule: never edit or change the user's content (no rewriting, shortening, cutting or adding). If a change seems needed, highlight it, suggest how it could be shown better, and change nothing unless the user approves.",
       "basis": [
@@ -109,32 +125,32 @@
   "design_direction": [
     {
       "id": "node-construction",
-      "text": "Build each device as a node box: dashed outline, the title tag on top (brand fill, white text) and the device icon below, with gap/inline between them.",
+      "text": "Show each device with one of the four icon + content styles from Figma, chosen by its role: boxed tag (icon in a dashed node box, light blue name tag below) for main systems and servers; tag (icon, light blue name tag directly below) for systems drawn as a picture; label (icon, plain text/secondary name below) for network gear and secondary devices; caption (icon, small text/body caption) for repeated small devices. The same kind of device keeps the same style.",
       "basis": [
+        "profile:node_styles",
         "profile:shapes.node_box",
-        "profile:shapes.node_tag",
-        "profile:spacing.tag_to_icon"
+        "profile:shapes.node_tag"
       ]
     },
     {
       "id": "zones",
-      "text": "Group devices into zones with a heading above each box; nest sub-zones inside with the brand border.",
+      "text": "Group devices into zones with a heading above each box; nest sub-zones inside with a light blue border (brand/300).",
       "basis": [
         "profile:shapes.zone",
         "profile:shapes.sub_zone"
       ]
     },
     {
-      "id": "platform",
-      "text": "Show the platform (e.g. I/O Sense) as the one lifted panel: container/elevated with Elevation/Low Raised.",
+      "id": "final-outcome",
+      "text": "End the diagram in one I/O Sense outcome from the asset library (architecture-outcomes), placed unchanged where the main data flow arrives: Faclon scope by default; Faclon scope with funnel when the diagram feeds into it from the left; steam trap only for steam-trap diagrams. Change or rebuild it only when the user asks.",
       "basis": [
-        "profile:shapes.platform_panel",
-        "rule:elevation.flat-default"
+        "decision:architecture-final-outcome",
+        "profile:final_outcome"
       ]
     },
     {
       "id": "arrows",
-      "text": "Connections use the default dashed slate arrow; the main data flow uses the solid brand arrow; arrow labels sit spacing/4 from the line.",
+      "text": "Connections use the default dashed slate arrow; the main data flow uses the solid light blue arrow (brand/400); arrow labels sit spacing/4 from the line.",
       "basis": [
         "profile:arrows",
         "profile:spacing.arrow_label_offset"

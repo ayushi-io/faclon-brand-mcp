@@ -70,6 +70,24 @@
           "figma_node": "3264:10498"
         }
       ]
+    },
+    {
+      "name": "Icon + content design",
+      "use": "How a single device is drawn: four icon + content styles, chosen by the device's role (node_styles in the architecture rules). The reference's solid blue tags become light blue (container/info, text/heading) and its Outfit text becomes Inter, because brand blue stays on the I/O Sense outcome and only TASA Orbiter and Inter are used.",
+      "templates": [
+        {
+          "id": "architectures/icon-and-content-device-styles",
+          "name": "Icon + content · four device styles",
+          "theme": "light",
+          "layout": "Four devices in a row: an analytics server icon in a dashed box with its name tag below; a cloud server picture with its name tag directly below; a managed switch icon with a plain two-line name below; a camera with a light cone and a small caption.",
+          "thumbnail": "thumbnails/icon-and-content-device-styles.png",
+          "thumbnail_size": [
+            1235,
+            295
+          ],
+          "figma_node": "3271:31036"
+        }
+      ]
     }
   ]
 }

@@ -26,7 +26,7 @@
           "style": "display/md",
           "weight": 600
         },
-        "colour": "text/brand"
+        "colour": "text/heading"
       },
       "zone_heading": {
         "dense": {
@@ -71,7 +71,7 @@
           "style": "body/xl",
           "weight": 600
         },
-        "colour": "text/on-brand"
+        "colour": "text/heading"
       },
       "device_label": {
         "dense": {
@@ -84,6 +84,21 @@
         },
         "open": {
           "style": "body/lg",
+          "weight": 500
+        },
+        "colour": "text/secondary"
+      },
+      "device_caption": {
+        "dense": {
+          "style": "body/xs",
+          "weight": 500
+        },
+        "medium": {
+          "style": "body/xs",
+          "weight": 500
+        },
+        "open": {
+          "style": "body/sm",
           "weight": 500
         },
         "colour": "text/body"
@@ -198,9 +213,10 @@
       },
       {
         "id": "shapes",
-        "text": "Zones, sub-zones, node boxes, node tags and the platform panel follow the shapes spec (fills, borders, radius, elevation).",
+        "text": "Zones, sub-zones, node boxes and node tags follow the shapes spec (fills, borders, radius); each device uses one of the four icon + content styles (node_styles).",
         "basis": [
-          "profile:shapes"
+          "profile:shapes",
+          "profile:node_styles"
         ]
       },
       {
@@ -220,9 +236,10 @@
     ],
     "claude_decides": [
       "How zones, sub-zones and nodes are arranged, and which way the flow reads.",
+      "Which icon + content style each device gets, by its role, keeping the same style for the same kind of device.",
       "The density category, within the counting and fit rules.",
       "How connectors are routed so they stay clear.",
-      "Visual hierarchy: what is the focal point (e.g. the platform) and what stays quiet.",
+      "Visual hierarchy: what is the focal point (the I/O Sense outcome and the main data flow) and what stays quiet.",
       "How repeated parts are shown, e.g. one device with 'up to 16' rather than sixteen copies, when the user's content allows it."
     ],
     "to_define": [

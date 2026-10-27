@@ -1,8 +1,3 @@
----
-status: not_written
-needed: a quote-card component designed in Figma (purpose, anatomy, variants, do/don't per _component-template.md).
----
-
 # quote-card
 
-Not written yet. Needed: a quote-card component designed in Figma (purpose, anatomy, variants, do/don't per _component-template.md).
+Built on 2026-10-27: see `../components.json` (id `quote-card`) and `../README.md`. Figma: components page, section Blocks.

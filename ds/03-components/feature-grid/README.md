@@ -1,10 +1,3 @@
----
-status: not_written
-needed: a feature-grid component designed in Figma (purpose, anatomy, variants, do/don't per _component-template.md).
----
-
 # feature-grid
 
-Not written yet. Needed: a feature-grid component designed in Figma (purpose, anatomy, variants, do/don't per _component-template.md).
-
-Closest existing component: Icon Card in a grid.
+Built on 2026-10-27: see `../components.json` (id `feature-grid`) and `../README.md`. Figma: components page, section Blocks.

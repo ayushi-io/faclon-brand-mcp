@@ -61,3 +61,14 @@ test("check_design allows glow only on Bruce AI content, and glass never", () =>
   const glass = `<style>.card{backdrop-filter:blur(12px)}</style><h1 style="font-family:Inter;font-size:40px">Bruce AI by Faclon Labs</h1><div class="card"></div>`;
   assert.ok(rules(checkDesign({ html: glass })).includes("design.no-ai-slop:error"));
 });
+
+test("check_design for architecture: brand blue only in the placed outcome, light blues elsewhere", () => {
+  const base = (css) => `<style>body{font-family:Inter} .tag{font-size:14px;${css}}</style><div class="tag">Hart Gateway</div><img src="https://faclon-brand-mcp.vercel.app/assets/architecture-outcomes/faclon-scope.png" alt="I/O Sense outcome, Faclon Labs">`;
+  const ok = checkDesign({ html: base("background:#DCE8FE;color:#0C1927;border-color:#8AB1FB"), format_profile: "architecture" });
+  assert.ok(!rules(ok).includes("architecture.brand-on-outcome:error"), JSON.stringify(ok.findings));
+  for (const bad of ["background:#1655F2;color:#FFFFFF", "background:var(--color-container-brand)", "color:var(--color-text-brand)", "border-color:#0E3FAA"]) {
+    assert.ok(rules(checkDesign({ html: base(bad), format_profile: "architecture" })).includes("architecture.brand-on-outcome:error"), bad);
+  }
+  // Other formats may use brand blue freely.
+  assert.ok(!rules(checkDesign({ html: base("background:#1655F2;color:#FFFFFF"), format_profile: "deck" })).includes("architecture.brand-on-outcome:error"));
+});

@@ -4,7 +4,7 @@ import { BrandError } from "../lib/envelope.js";
 
 // The Assets layer: real files exported from Figma, listed in ds/05-assets/_index.json
 // and served by the HTTP app at /assets/<file>.
-export const ASSET_CATEGORIES = ["logos", "partner-logos", "client-logos", "team-headshots", "design-elements", "icons"];
+export const ASSET_CATEGORIES = ["logos", "partner-logos", "client-logos", "team-headshots", "design-elements", "architecture-outcomes", "icons"];
 export const ASSET_BASE_URL = (process.env.ASSET_BASE_URL || "https://faclon-brand-mcp.vercel.app").replace(/\/$/, "");
 const MAX = 80;
 
@@ -14,6 +14,7 @@ const USE = {
   "client-logos": "Client logos, tagged by industry, approved for external marketing. Use as supplied, at a consistent height in a logo wall; never recolour.",
   "team-headshots": "Faclon leadership and SME headshots with their roles, with no background: fill the shape behind each with background/primary in the dark theme, and never crop from the top (rule assets.headshots). Where role is empty, show no role and never invent one.",
   "design-elements": "The brand design elements (dot-particle form: dark only; light streak: brand only; dot wave: dark, light or brand), the only exceptions to the no-AI-slop rule with the illustration styles. Use only on the backgrounds listed; place the file as it is.",
+  "architecture-outcomes": "The I/O Sense outcomes (Faclon scope, Faclon scope with funnel, steam trap). Every architecture diagram ends in one of them, placed unchanged; Faclon scope by default, steam trap only for steam-trap diagrams. Change or rebuild only when the user asks.",
   icons: "The Faclon architecture icon library, for architecture diagrams only. Web and UI icons come from Lucide (rule icon.lucide-only).",
 };
 

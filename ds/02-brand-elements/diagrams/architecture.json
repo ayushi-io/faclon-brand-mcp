@@ -33,7 +33,7 @@
     },
     "sub_zone": {
       "fill": "container/selected",
-      "border": "border/brand",
+      "border": "brand/300",
       "border_width": "border-width/default",
       "radius": "radius/default"
     },
@@ -45,17 +45,47 @@
       "radius": "radius/md"
     },
     "node_tag": {
-      "fill": "container/brand",
+      "fill": "container/info",
+      "text": "text/heading",
       "border": null,
       "radius": "radius/md"
-    },
-    "platform_panel": {
-      "fill": "container/elevated",
-      "elevation": "Elevation/Low Raised",
-      "border": "border/brand",
-      "border_width": "border-width/default",
-      "radius": "radius/xl"
     }
+  },
+  "node_styles": {
+    "source": "Figma ❑ Architectures › Template › Icon + Content design (frame 3271:31036); reference image in the architecture templates (section \"templates\", Icon + content design). Figma's Outfit font and untokened greys are replaced by the tokens below; the device tag stays light blue (decision architecture-brand-on-outcome).",
+    "choose": "Pick by the device's role and keep the same style for the same kind of device across the diagram: boxed_tag for the main systems and servers, tag for systems drawn as a picture (cloud, server, PC), label for network gear and secondary devices, caption for repeated small devices such as cameras, sensors and lights.",
+    "styles": {
+      "boxed_tag": {
+        "use": "Main systems and servers.",
+        "layout": "Icon centred inside a node box, the name tag below it; vertical stack, centred.",
+        "box": "shapes.node_box",
+        "box_padding": {
+          "vertical": "spacing/8",
+          "horizontal": "spacing/16"
+        },
+        "tag": "shapes.node_tag",
+        "icon_to_tag": "spacing/12"
+      },
+      "tag": {
+        "use": "Systems drawn as a picture, such as a cloud server, server rack or industrial PC.",
+        "layout": "Icon with no box, the name tag directly below; vertical stack, centred.",
+        "tag": "shapes.node_tag",
+        "icon_to_tag": "spacing/4"
+      },
+      "label": {
+        "use": "Network gear and secondary devices: switches, LIUs, routers, gateways.",
+        "layout": "Icon with no box or tag, the name below as plain text, centred, at most 2 lines.",
+        "text": "typography.styles.device_label",
+        "icon_to_label": "gap/inline"
+      },
+      "caption": {
+        "use": "Repeated small devices: cameras, sensors, lights, meters.",
+        "layout": "Icon with a short caption beside or below it, left-aligned to the icon.",
+        "text": "typography.styles.device_caption",
+        "icon_to_caption": "spacing/4"
+      }
+    },
+    "icons": "Every style uses an icon from the Faclon architecture icon library; none is drawn or substituted."
   },
   "arrows": {
     "default": {
@@ -65,7 +95,7 @@
       "head": "end"
     },
     "data_flow": {
-      "colour": "border/brand",
+      "colour": "brand/400",
       "width": "border-width/md",
       "style": "solid",
       "head": "end"
@@ -82,5 +112,21 @@
   "icons": {
     "source": "Faclon architecture icon library: get_brand_guidelines(section: \"assets\", asset_category: \"icons\"). 199 icons in 14 groups (energy meters, gateways and nodes, sensors, PLCs, switches and LIUs, enclosures, machines, I/O Sense platform and more), exported from the Figma icons_architecture page.",
     "missing": "If a device the user names has no icon in the library, ask the user; do not pick, draw or substitute icons."
+  },
+  "final_outcome": {
+    "asset_category": "architecture-outcomes",
+    "default": "architecture-outcomes/faclon-scope",
+    "options": [
+      "architecture-outcomes/faclon-scope",
+      "architecture-outcomes/faclon-scope-with-funnel",
+      "architecture-outcomes/steam-trap"
+    ],
+    "choose": "Faclon scope by default; Faclon scope with funnel when the diagram feeds into it from the left; steam trap only for steam-trap diagrams, because its text is steam-trap specific.",
+    "placement": "The end of the diagram, where the main data flow arrives (usually the right-hand side).",
+    "rule": "Place one outcome file unchanged. Change, restyle, reword or rebuild it only when the user asks."
+  },
+  "colour": {
+    "brand_blue": "Only inside the final outcome. Nothing else in the diagram uses brand/500 or a darker blue: no container/brand, background/brand, border/brand, text/brand, text/link, text/info, text/eyebrow or brand/500 to brand/1000.",
+    "rest": "Neutrals (background/primary canvas, container/primary, border/strong, text/heading, text/body, text/secondary) and light blue tints only: container/selected and background/brand-subtle (brand/050), container/info (brand/100), brand/200, brand/300, brand/400."
   }
 }
