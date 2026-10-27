@@ -175,9 +175,10 @@
     },
     {
       "id": "logo-position",
-      "text": "The logo sits at the top of every post and slide, left or right, whichever suits the slide best.",
+      "text": "The logo sits top-right on every post and slide by default; move it to the top-left only when the slide design needs it.",
       "basis": [
-        "profile:logo"
+        "profile:logo",
+        "decision:logo-default-top-right"
       ]
     },
     {

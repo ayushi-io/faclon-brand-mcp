@@ -33,7 +33,7 @@ test("typography sizes follow Desktop and Mobile modes", () => {
   assert.equal(xl.desktop.size, 72);
   assert.equal(xl.mobile.size, 40);
   assert.equal(tokens.styles["body/md"].family, "Inter");
-  assert.equal(tokens.styles.eyebrow.textCase, "uppercase");
+  assert.equal(tokens.styles.eyebrow.textCase, "none"); // uppercase is optional (2026-10-26)
   const mobile = getTokens({ category: "typography", mode: "mobile" }).tokens;
   assert.equal(mobile.styles["heading/h1"].size, 30);
 });
@@ -83,7 +83,13 @@ test("guidelines: written sections, gaps and overview", () => {
   assert.equal(elements.status, "written");
   assert.match(elements.guidance, /Dark only/);
   assert.match(elements.guidance, /Brand only/);
-  assert.equal(getBrandGuidelines({ section: "imagery" }).status, "not_written");
+  for (const section of ["illustration", "imagery"]) {
+    const g = getBrandGuidelines({ section });
+    assert.equal(g.status, "written", section);
+    assert.equal((g.guidance.match(/^## (?!Rules)/gm) || []).length, 2, `${section}: two styles`);
+    assert.match(g.guidance, /\*\*Theme:\*\*/, `${section}: each style has a theme`);
+    assert.doesNotMatch(g.guidance, /[–—]/, `${section}: no en or em dashes`);
+  }
   const overview = getBrandGuidelines();
   assert.ok(overview.format_profiles.some((p) => p.id === "deck"));
   assert.equal(typeof overview.open_questions, "number");
@@ -207,7 +213,7 @@ test("text roles resolve per format and breakpoint from the Text Roles collectio
   const { roles, formats } = getTokens({ category: "typography" }).tokens;
   assert.deepEqual(formats, ["document", "newsletter", "deck"]);
   assert.equal(Object.keys(roles).length, 11);
-  assert.equal(roles.eyebrow.textCase, "uppercase");
+  assert.equal(roles.eyebrow.textCase, "none");
   assert.deepEqual([roles.eyebrow.formats.document.desktop.size, roles.eyebrow.formats.document.desktop.lineHeight], [10, 16]);
   assert.deepEqual([roles.body.formats.document.desktop.size, roles.body.formats.newsletter.desktop.size, roles.body.formats.deck.desktop.size], [14, 16, 24]);
   assert.equal(roles.title.family, "TASA Orbiter");
@@ -240,7 +246,7 @@ test("format narrows text roles and switches them in CSS", () => {
   const css = getTokens({ category: "typography", as: "css" }).code;
   assert.match(css, /--role-body-size: 14px;/);
   assert.match(css, /\[data-format="deck"\] \{[^}]*--role-body-size: 24px;/);
-  assert.match(css, /--role-eyebrow-text-transform: uppercase;/);
+  assert.match(css, /--role-eyebrow-text-transform: none;/);
   const nl = getTokens({ category: "typography", as: "css", format: "newsletter" }).code;
   assert.match(nl, /:root \{[^}]*--role-body-size: 16px;/);
   assert.doesNotMatch(nl, /data-format/);
@@ -532,9 +538,9 @@ test("social media spec: 540 px design size, tokens and styles only", () => {
   assert.equal(p.carousel.rhythm.applies_from, 5);
 });
 
-test("no-ai-slop names its only exceptions: design elements and the Bruce AI gradient", () => {
+test("no-ai-slop names its only exceptions: design elements, illustration styles and the Bruce AI gradient", () => {
   const rule = readData(P.rules).rules.find((r) => r.id === "design.no-ai-slop");
-  assert.equal(rule.check.exceptions.length, 2);
+  assert.equal(rule.check.exceptions.length, 3);
   assert.match(rule.rule, /Glow effects are never allowed/);
 });
 

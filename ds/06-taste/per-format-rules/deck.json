@@ -140,6 +140,15 @@
       ]
     },
     {
+      "id": "qna",
+      "text": "Q&A slides follow the brand rules: use the brand-theme page breaker (\"Reference Slides for QnA\") as designed, on background/brand with text/on-brand and the white logo top-right.",
+      "basis": [
+        "profile:reference_slides.slides.page_breaker",
+        "profile:themes",
+        "decision:qna-brand-theme"
+      ]
+    },
+    {
       "id": "spacing-by-purpose",
       "text": "Pick spacing by purpose: gap/inline between adjacent items, gap/stack inside a component, gap/grid between cards, padding/container inside cards, padding/section between sections.",
       "basis": [

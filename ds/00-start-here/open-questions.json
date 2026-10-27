@@ -421,6 +421,26 @@
       "id": "two-accents",
       "decision": "Two accents: accent (#68DD68) for dark surfaces and accent-2 (#B4FF6B, text/accent-on-brand) for highlighted text on brand blue; together within the accent budget.",
       "decided_on": "2026-10-16"
+    },
+    {
+      "id": "illustration-and-image-styles",
+      "decision": "Two illustration styles (dot-matrix forms on brand blue; pixel dissolve on light with a dark headline block) and two image styles (monochrome 3D renders with one brand-blue highlight; dark industrial photos with a thin accent data overlay), from the brand team references. Illustrations and images come from the user; the illustration styles are exempt from the no-AI-slop rule.",
+      "decided_on": "2026-10-26"
+    },
+    {
+      "id": "uppercase-optional",
+      "decision": "Uppercase is not a hard rule anywhere: eyebrows, chips, labels and footers keep the case they are written in. The Eyebrow, Eyebrow/Semi Bold and Role/Eyebrow text styles no longer force uppercase.",
+      "decided_on": "2026-10-26"
+    },
+    {
+      "id": "logo-default-top-right",
+      "decision": "The logo sits in the top-right corner by default, in every format. A design or format may place it elsewhere when the layout needs it (for example the newsletter header centred, or a slide where the top right is taken).",
+      "decided_on": "2026-10-26"
+    },
+    {
+      "id": "qna-brand-theme",
+      "decision": "Q&A slides follow the brand rules: the brand-theme page breaker \"Reference Slides for QnA\", as designed.",
+      "decided_on": "2026-10-26"
     }
   ],
   "figma_updates_needed": [],

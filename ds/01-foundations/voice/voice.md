@@ -18,7 +18,7 @@ Source: brand-team decisions of 2026-10-21, drawn from the buyer's guide (Build 
 ## Style rules
 
 - **Headings and titles** in sentence case in every format, decks included. Where possible a statement or question rather than a label ("Which option fits which company", "Why this matters now").
-- **Eyebrows and footers** in short uppercase, separated with a middle dot: "BUYER'S GUIDE", "FACLON LABS · BUILD OR BUY INDUSTRIAL AI 01 / 02".
+- **Eyebrows and footers** are short, with parts separated by a middle dot. Uppercase is optional, not a rule: "Buyer's guide" or "BUYER'S GUIDE", "Faclon Labs · Build or buy industrial AI 01 / 02".
 - **Lists:** no serial (Oxford) comma ("fit, economics, expertise and risk").
 - **Spelling:** US (optimize, organization, customize, analyze, color, behavior, molding, ton).
 - **Dashes:** the hyphen only, never an en dash or an em dash. Ranges are "6-10%"; a break in a sentence or title is a spaced hyphen ("topic - claim") or a colon.
@@ -32,7 +32,7 @@ Source: brand-team decisions of 2026-10-21, drawn from the buyer's guide (Build 
 
 ## Names
 
-- **Company:** Faclon Labs in running text; FACLON LABS in uppercase eyebrows and footers. Never "Faclon" on its own, never "Falcon". Product names that include "Faclon" keep their own spelling (Faclon harness).
+- **Company:** Faclon Labs in running text; FACLON LABS when an eyebrow or footer is set in uppercase. Never "Faclon" on its own, never "Falcon". Product names that include "Faclon" keep their own spelling (Faclon harness).
 - **Product:** the Faclon harness (lowercase "harness"). Its layers, as named on the product slide, are below; across the stack sit AI Agents | Builder + Claw, and Marketplace.
 
 | Layer | Role |

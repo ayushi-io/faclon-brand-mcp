@@ -2,6 +2,13 @@
 
 Each change to the system bumps `brand_version` in `version.json` (format `YYYY.MM.DD-n`). Newest first.
 
+## 2026-10-26
+
+- Uppercase is optional, not a rule: the Eyebrow, Eyebrow/Semi Bold and Role/Eyebrow styles no longer force uppercase (Figma and tokens), and the voice, typography, deck and validator text say case as written.
+- Logo position: top-right corner by default in every format (new rule logo.default-position); another place only when the layout needs it. Deck default corrected from bottom-right; social posts top-right by default.
+- Q&A slides use the brand-theme page breaker as designed.
+- Illustration and image style written from the brand team's references: illustration styles dot-matrix forms (brand theme) and pixel dissolve (light theme); image styles monochrome 3D renders (light theme) and industrial photos with data overlay (dark theme). The illustration styles join the no-AI-slop exceptions. Every skill points to both sections.
+
 ## 2026-10-25
 
 - Every skill opens with the role: Claude, or any AI tool or platform, acts as a senior designer on the Faclon Labs marketing team first, then designs.

@@ -55,7 +55,7 @@ Guidelines (`src/tools/guidelines.js`):
 - `section: "rules"` merges `ds/09-brand-validator/validator-rules.json` with an optional format profile, plus `ds/01-foundations/defaults.json` and `ds/00-start-here/open-questions.json`.
 - **Profiles may only tighten rules.** `mergeRules` rejects overrides on `locked` rules and anything not provably tighter; the only tightenable check type today is `font-size-min` (via the `TIGHTER` map). Add new check types there.
 - `voice` was written from the brand team's answers in `review/voice-draft.html` (2026-10-21); it also holds the approved facts list (there is no separate Content layer), and its newsletter tone is provisional. A test keeps en and em dashes out of it, since the voice bans them.
-- `illustration`, `architecture` (diagram conventions, separate from the `architecture` format profile) and `imagery` are `not_written` files in `ds/02-brand-elements/`.
+- `illustration` (two styles: dot-matrix forms, pixel dissolve) and `imagery` (`ds/02-brand-elements/photography-imagery/README.md`, two styles: monochrome 3D renders, industrial photos with data overlay) were written on 2026-10-26 from brand-team references on the Figma Illustration and Image style pages; each style names its theme. `architecture` (diagram conventions, separate from the `architecture` format profile) is still `not_written`.
 
 Response envelope (`src/lib/envelope.js`): every tool is wrapped with `run()`, returning `{ ok, data | error, brand_version }`. Throw `BrandError(code, message, fix)` for user-facing errors — `fix` tells the calling model what to do next.
 

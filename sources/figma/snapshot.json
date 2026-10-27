@@ -4580,7 +4580,7 @@
   "textStyles": [
     {
       "name": "Eyebrow",
-      "description": "Eyebrow / kicker / overline. Inter Medium, ALL CAPS, 10px / 16px, +8% tracking (0.96px). Semi Bold is the only permitted alternative weight. Size is always 10px.",
+      "description": "Eyebrow / kicker / overline. Inter Medium, 10px / 16px, +8% tracking (0.96px). Semi Bold is the only permitted alternative weight. Size is always 10px. Case as written: uppercase is optional, not a rule.",
       "fontFamily": "Inter",
       "fontStyle": "Medium",
       "fontSize": 10,
@@ -4592,7 +4592,7 @@
         "unit": "PIXELS",
         "value": 0.9599999785423279
       },
-      "textCase": "UPPER"
+      "textCase": "ORIGINAL"
     },
     {
       "name": "Display/XL",
@@ -6276,7 +6276,7 @@
     },
     {
       "name": "Eyebrow/Semi Bold",
-      "description": "Eyebrow in Semi Bold, the only permitted alternative weight, for an eyebrow that needs more presence. 10px, ALL CAPS, +8% tracking.",
+      "description": "Eyebrow in Semi Bold, the only permitted alternative weight, for an eyebrow that needs more presence. 10px, +8% tracking. Case as written: uppercase is optional, not a rule.",
       "fontFamily": "Inter",
       "fontStyle": "Semi Bold",
       "fontSize": 10,
@@ -6288,11 +6288,11 @@
         "unit": "PIXELS",
         "value": 0.9599999785423279
       },
-      "textCase": "UPPER"
+      "textCase": "ORIGINAL"
     },
     {
       "name": "Role/Eyebrow",
-      "description": "Small uppercase kicker above a title. Document eyebrow (10/16) · Newsletter body/sm · Deck body/24. Switch the Text Roles mode on a frame to change format.",
+      "description": "Small kicker above a title. Document eyebrow (10/16) · Newsletter body/sm · Deck body/24. Switch the Text Roles mode on a frame to change format. Case as written: uppercase is optional, not a rule.",
       "fontFamily": "Inter",
       "fontStyle": "Medium",
       "fontSize": 10,
@@ -6304,7 +6304,7 @@
         "unit": "PIXELS",
         "value": 0.9599999785423279
       },
-      "textCase": "UPPER"
+      "textCase": "ORIGINAL"
     },
     {
       "name": "Role/Title",

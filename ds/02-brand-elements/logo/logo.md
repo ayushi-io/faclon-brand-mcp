@@ -13,3 +13,5 @@ Always place the real logo file. Never typeset the company name in its place, an
 **Logomark.** The Faclon Labs logomark is the mark on its own, without the wordmark (blue and white versions in the Figma file). By default, always place the full logo. Use the logomark only in the specific places where the user explicitly asks for it; never swap it in for the full logo on your own. The same blue-on-light and white-on-dark rules apply.
 
 Not yet defined in Figma: clear space, minimum size, and misuse examples.
+
+**Position.** By default the logo sits in the top-right corner, in every format. A design may place it elsewhere when the layout needs it, for example a centred newsletter header, or a slide whose top right is taken by a tab row or image.
