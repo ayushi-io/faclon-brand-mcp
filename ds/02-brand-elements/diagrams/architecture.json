@@ -80,7 +80,7 @@
     "other": "Any other arrow colour is used only when the user defines it for that diagram; otherwise the default applies."
   },
   "icons": {
-    "source": "Faclon architecture icon library, provided by the user",
-    "until_provided": "Ask the user; do not pick, draw or substitute icons."
+    "source": "Faclon architecture icon library: get_brand_guidelines(section: \"assets\", asset_category: \"icons\"). 199 icons in 14 groups (energy meters, gateways and nodes, sensors, PLCs, switches and LIUs, enclosures, machines, I/O Sense platform and more), exported from the Figma icons_architecture page.",
+    "missing": "If a device the user names has no icon in the library, ask the user; do not pick, draw or substitute icons."
   }
 }

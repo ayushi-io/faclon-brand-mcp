@@ -2,7 +2,7 @@
   "id": "architecture",
   "name": "Architecture diagram (16:9)",
   "status": "approved",
-  "note": "Specification approved by the brand team on 2026-10-14. Sizes are the design system's own text styles chosen per density (not the Text Roles modes); spacing, radius and colours are tokens. Icons come from the Faclon architecture icon library, which the user provides. Zone colour-coding and extra arrow colours are still to define.",
+  "note": "Specification approved by the brand team on 2026-10-14. Sizes are the design system's own text styles chosen per density (not the Text Roles modes); spacing, radius and colours are tokens. Icons come from the Faclon architecture icon library (get_brand_guidelines(section: \"assets\", asset_category: \"icons\")). Zone colour-coding and extra arrow colours are still to define.",
   "audience": "external",
   "header": {
     "title": "optional, top-left; the user decides whether there is a title and what it says",
@@ -145,7 +145,7 @@
       "Whether there is a title, and what it says.",
       "Which labels are shown and what they say; until then they stay placeholders.",
       "The scope: how many sections or zones there are and what each contains; when it is unclear, ask.",
-      "Which icons are used, from the Faclon architecture icon library they provide.",
+      "Which devices are shown; their icons come from the Faclon architecture icon library (get_brand_guidelines(section: \"assets\", asset_category: \"icons\")).",
       "Any arrow colour beyond the default, data-flow and status colours."
     ],
     "fixed": [
@@ -228,7 +228,6 @@
     "to_define": [
       "Zone colour-coding (e.g. by network, area or protocol) beyond the zone and sub-zone styles.",
       "Additional arrow colours and their meanings.",
-      "The Faclon architecture icon library (provided by the user).",
       "Whether diagrams carry a legend, and where."
     ]
   },

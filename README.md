@@ -2,14 +2,14 @@
 
 MCP server for the Faclon marketing design system. Built from scratch on 2026-10-08 from the Figma file **Design MCP** (`UDARPzxpNySOS2F3mxhgUs`).
 
-Flow: Brand and Assets → Generation (components, templates, taste, skills) → social media, images, decks, A4 documents, unique A4, case studies, newsletters, architectures → QA / AI → Brand Validator → Export (HTML). Brand is built, with rules for decks, A4 documents, newsletters, architectures and social media; the rest comes next.
+Flow: Brand and Assets → Generation (components, templates, taste, skills) → social media, images, decks, A4 documents, unique A4, case studies, newsletters, architectures → QA / AI → Brand Validator → Export (HTML). Brand and Assets are built, with rules for decks, A4 documents, newsletters, architectures and social media; the rest comes next.
 
 ## Tools
 
 | Tool | What it does |
 |---|---|
 | `get_tokens(category?, mode?, format?, as?)` | Design tokens. `category`: color, typography, spacing, radius, border, elevation, opacity, gradient. `mode`: light/dark (color), desktop/mobile (typography, spacing). `format`: document, newsletter, deck (text roles; typography only). `as`: json, css, tailwind, figma. |
-| `get_brand_guidelines(section?, format_profile?)` | Guidance and rules. `section`: overview, principles, rules, defaults, components, logo, typography, color, voice, design-elements, illustration, architecture, imagery. `format_profile`: deck, document, newsletter, architecture, social. |
+| `get_brand_guidelines(section?, format_profile?, asset_category?, asset_query?)` | Guidance and rules. `section`: overview, principles, rules, defaults, components, logo, typography, color, voice, design-elements, illustration, architecture, imagery, assets. `format_profile`: deck, document, newsletter, architecture, social. `section: "assets"` returns the asset library (logos, partner and client logos, team headshots, architecture icons) with file URLs; filter with `asset_category` and `asset_query`. Files are served at `/assets/<file>`. |
 | `check_design(html, format_profile?)` | Checks finished HTML against the brand rules before delivery: off-token colours, fonts, text sizes and weights, radius, borders, shadows, gradients and effects, alt text, the logo, voice, and Brevo rules for newsletters. Returns pass or fail with findings (rule, severity, evidence, fix). It does not judge layout or spacing. |
 
 Every response is `{ ok, data | error, brand_version }`. Errors carry a `code` and a `fix`.
@@ -23,7 +23,7 @@ ds/                      The design system (start with ds/00-start-here/README.m
   02-brand-elements/     Logo rules, sub-brands, illustration, iconography, imagery, data-viz, diagrams
   03-components/         components.json (from Figma) and components still to design
   04-templates/          One folder per outcome; deck reference slides
-  05-assets/             Approved files and _index.json
+  05-assets/             Asset library: logos, partner and client logos, headshots, architecture icons; _index.json lists every file
   06-taste/              Per-format rules (must not, avoid, design direction), hierarchy, examples
   07-skills/             One folder per outcome: rules.json and SKILL.md
   08-qa-ai/              Checklists, AI review

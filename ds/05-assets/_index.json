@@ -1,4 +1,6644 @@
 {
-  "about": "Approved asset files: one entry per file with tags, owner, last_updated and rights.",
-  "assets": []
+  "about": "Approved asset files, exported from the Figma file Design MCP (the source). One entry per file: name, tags, file (relative to ds/05-assets), size, rights, owner, Figma source node and last update. Fields marked 'to add' are not recorded yet; never invent them.",
+  "updated": "2026-10-27",
+  "counts": {
+    "logos": 14,
+    "partner-logos": 6,
+    "client-logos": 83,
+    "team-headshots": 14,
+    "design-elements": 3,
+    "icons": 199
+  },
+  "web_icons": {
+    "source": "Lucide (lucide.dev), rule icon.lucide-only",
+    "note": "Web and UI icons are not stored here: use the official Lucide SVG, coloured with a text token, only when the user asks for an icon."
+  },
+  "not_yet_supplied": [
+    "product-screenshots",
+    "photography"
+  ],
+  "assets": [
+    {
+      "id": "logos/bruce-ai-logo-for-dark-backgrounds",
+      "category": "logos",
+      "name": "Bruce AI logo for dark backgrounds",
+      "tags": [
+        "Bruce AI"
+      ],
+      "file": "logos/bruce-ai-logo-for-dark-backgrounds.svg",
+      "format": "svg",
+      "width": 306,
+      "height": 67,
+      "bytes": 7347,
+      "background": "dark background",
+      "rights": "Faclon Labs brand asset.",
+      "owner": "Faclon Labs brand team",
+      "source": {
+        "figma_node": "3136:5560",
+        "page": "Company logo / Doc building blocks"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "logos/bruce-ai-logo-for-light-backgrounds",
+      "category": "logos",
+      "name": "Bruce AI logo for light backgrounds",
+      "tags": [
+        "Bruce AI"
+      ],
+      "file": "logos/bruce-ai-logo-for-light-backgrounds.svg",
+      "format": "svg",
+      "width": 314,
+      "height": 69,
+      "bytes": 7171,
+      "background": "light background",
+      "rights": "Faclon Labs brand asset.",
+      "owner": "Faclon Labs brand team",
+      "source": {
+        "figma_node": "3136:5561",
+        "page": "Company logo / Doc building blocks"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "logos/deepsense-logo",
+      "category": "logos",
+      "name": "DeepSense logo",
+      "tags": [
+        "DeepSense"
+      ],
+      "file": "logos/deepsense-logo.svg",
+      "format": "svg",
+      "width": 260,
+      "height": 48,
+      "bytes": 13228,
+      "rights": "Faclon Labs brand asset.",
+      "owner": "Faclon Labs brand team",
+      "source": {
+        "figma_node": "3136:5562",
+        "page": "Company logo / Doc building blocks"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "logos/deepsense-product-mark",
+      "category": "logos",
+      "name": "Deepsense product mark",
+      "tags": [
+        "Product marks"
+      ],
+      "file": "logos/deepsense-product-mark.png",
+      "format": "png",
+      "width": 420,
+      "height": 420,
+      "bytes": 8582,
+      "rights": "Faclon Labs brand asset.",
+      "owner": "Faclon Labs brand team",
+      "source": {
+        "figma_node": "3161:183",
+        "page": "Company logo / Doc building blocks"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "logos/faclon-labs-logo-blue",
+      "category": "logos",
+      "name": "Faclon Labs logo blue",
+      "tags": [
+        "Faclon Labs"
+      ],
+      "file": "logos/faclon-labs-logo-blue.svg",
+      "format": "svg",
+      "width": 254,
+      "height": 53,
+      "bytes": 6974,
+      "background": "light background",
+      "rights": "Faclon Labs brand asset.",
+      "owner": "Faclon Labs brand team",
+      "source": {
+        "figma_node": "3136:5479",
+        "page": "Company logo / Doc building blocks"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "logos/faclon-labs-logo-white",
+      "category": "logos",
+      "name": "Faclon Labs logo white",
+      "tags": [
+        "Faclon Labs"
+      ],
+      "file": "logos/faclon-labs-logo-white.svg",
+      "format": "svg",
+      "width": 254,
+      "height": 53,
+      "bytes": 6955,
+      "background": "dark or brand background",
+      "rights": "Faclon Labs brand asset.",
+      "owner": "Faclon Labs brand team",
+      "source": {
+        "figma_node": "3136:5481",
+        "page": "Company logo / Doc building blocks"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "logos/faclon-labs-logomark-blue",
+      "category": "logos",
+      "name": "Faclon Labs logomark blue",
+      "tags": [
+        "Faclon Labs logomark"
+      ],
+      "file": "logos/faclon-labs-logomark-blue.svg",
+      "format": "svg",
+      "width": 42,
+      "height": 48,
+      "bytes": 360,
+      "background": "light background",
+      "use": "Only where the user explicitly asks for the logomark; otherwise place the full Faclon Labs logo.",
+      "rights": "Faclon Labs brand asset.",
+      "owner": "Faclon Labs brand team",
+      "source": {
+        "figma_node": "3158:21035",
+        "page": "Company logo / Doc building blocks"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "logos/faclon-labs-logomark-white",
+      "category": "logos",
+      "name": "Faclon Labs logomark white",
+      "tags": [
+        "Faclon Labs logomark"
+      ],
+      "file": "logos/faclon-labs-logomark-white.svg",
+      "format": "svg",
+      "width": 42,
+      "height": 48,
+      "bytes": 358,
+      "background": "dark or brand background",
+      "use": "Only where the user explicitly asks for the logomark; otherwise place the full Faclon Labs logo.",
+      "rights": "Faclon Labs brand asset.",
+      "owner": "Faclon Labs brand team",
+      "source": {
+        "figma_node": "3158:21037",
+        "page": "Company logo / Doc building blocks"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "logos/forge-product-mark",
+      "category": "logos",
+      "name": "Forge product mark",
+      "tags": [
+        "Product marks"
+      ],
+      "file": "logos/forge-product-mark.png",
+      "format": "png",
+      "width": 420,
+      "height": 428,
+      "bytes": 6293,
+      "rights": "Faclon Labs brand asset.",
+      "owner": "Faclon Labs brand team",
+      "source": {
+        "figma_node": "3161:185",
+        "page": "Company logo / Doc building blocks"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "logos/foundry-product-mark",
+      "category": "logos",
+      "name": "Foundry product mark",
+      "tags": [
+        "Product marks"
+      ],
+      "file": "logos/foundry-product-mark.png",
+      "format": "png",
+      "width": 420,
+      "height": 420,
+      "bytes": 6372,
+      "rights": "Faclon Labs brand asset.",
+      "owner": "Faclon Labs brand team",
+      "source": {
+        "figma_node": "3161:187",
+        "page": "Company logo / Doc building blocks"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "logos/i-o-connect-product-mark",
+      "category": "logos",
+      "name": "I/O Connect product mark",
+      "tags": [
+        "Product marks"
+      ],
+      "file": "logos/i-o-connect-product-mark.png",
+      "format": "png",
+      "width": 420,
+      "height": 420,
+      "bytes": 4583,
+      "rights": "Faclon Labs brand asset.",
+      "owner": "Faclon Labs brand team",
+      "source": {
+        "figma_node": "3161:181",
+        "page": "Company logo / Doc building blocks"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "logos/i-o-sense-product-mark",
+      "category": "logos",
+      "name": "I/O Sense product mark",
+      "tags": [
+        "Product marks"
+      ],
+      "file": "logos/i-o-sense-product-mark.svg",
+      "format": "svg",
+      "width": 420,
+      "height": 420,
+      "bytes": 417,
+      "rights": "Faclon Labs brand asset.",
+      "owner": "Faclon Labs brand team",
+      "source": {
+        "figma_node": "3161:189",
+        "page": "Company logo / Doc building blocks"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "logos/uns-dark-product-mark",
+      "category": "logos",
+      "name": "UNS Dark product mark",
+      "tags": [
+        "Product marks"
+      ],
+      "file": "logos/uns-dark-product-mark.png",
+      "format": "png",
+      "width": 420,
+      "height": 420,
+      "bytes": 7330,
+      "rights": "Faclon Labs brand asset.",
+      "owner": "Faclon Labs brand team",
+      "source": {
+        "figma_node": "3161:191",
+        "page": "Company logo / Doc building blocks"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "logos/uns-light-product-mark",
+      "category": "logos",
+      "name": "UNS Light product mark",
+      "tags": [
+        "Product marks"
+      ],
+      "file": "logos/uns-light-product-mark.png",
+      "format": "png",
+      "width": 420,
+      "height": 420,
+      "bytes": 7356,
+      "rights": "Faclon Labs brand asset.",
+      "owner": "Faclon Labs brand team",
+      "source": {
+        "figma_node": "3161:193",
+        "page": "Company logo / Doc building blocks"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "partner-logos/accenture",
+      "category": "partner-logos",
+      "name": "Accenture",
+      "tags": [
+        "Partnerships"
+      ],
+      "file": "partner-logos/accenture.svg",
+      "format": "svg",
+      "width": 225,
+      "height": 62,
+      "bytes": 3607,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3252:8190",
+        "page": "❑ Logo › Partner logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "partner-logos/aws",
+      "category": "partner-logos",
+      "name": "AWS",
+      "tags": [
+        "Partnerships"
+      ],
+      "file": "partner-logos/aws.svg",
+      "format": "svg",
+      "width": 92,
+      "height": 56,
+      "bytes": 5945,
+      "background": "light background",
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3252:8199",
+        "page": "❑ Logo › Partner logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "partner-logos/aws-for-dark-backgrounds",
+      "category": "partner-logos",
+      "name": "AWS for dark backgrounds",
+      "tags": [
+        "Partnerships"
+      ],
+      "file": "partner-logos/aws-for-dark-backgrounds.svg",
+      "format": "svg",
+      "width": 111,
+      "height": 75,
+      "bytes": 5861,
+      "background": "dark background",
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3252:8205",
+        "page": "❑ Logo › Partner logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "partner-logos/faclon-labs-and-hpe-co-branding-lockup",
+      "category": "partner-logos",
+      "name": "Faclon Labs and HPE co-branding lockup",
+      "tags": [
+        "Co-branding"
+      ],
+      "file": "partner-logos/faclon-labs-and-hpe-co-branding-lockup.svg",
+      "format": "svg",
+      "width": 607,
+      "height": 69,
+      "bytes": 7858,
+      "background": "light background",
+      "use": "Reference example of the co-branding lockup (rule logo.co-branding): Faclon Labs logo, divider, partner logo. Build other lockups from the separate logo files by the same rule.",
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3250:3849",
+        "page": "❑ Logo › Partner logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "partner-logos/hpe",
+      "category": "partner-logos",
+      "name": "HPE",
+      "tags": [
+        "Partnerships"
+      ],
+      "file": "partner-logos/hpe.svg",
+      "format": "svg",
+      "width": 166,
+      "height": 48,
+      "bytes": 893,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3252:8194",
+        "page": "❑ Logo › Partner logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "partner-logos/microsoft-azure",
+      "category": "partner-logos",
+      "name": "Microsoft Azure",
+      "tags": [
+        "Partnerships"
+      ],
+      "file": "partner-logos/microsoft-azure.svg",
+      "format": "svg",
+      "width": 200,
+      "height": 58,
+      "bytes": 4903,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3253:8217",
+        "page": "❑ Logo › Partner logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/aby",
+      "category": "client-logos",
+      "name": "ABY",
+      "tags": [
+        "Textile"
+      ],
+      "file": "client-logos/aby.png",
+      "format": "png",
+      "width": 510,
+      "height": 193,
+      "bytes": 73466,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:24135",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/adani",
+      "category": "client-logos",
+      "name": "Adani",
+      "tags": [
+        "Commercial infra"
+      ],
+      "file": "client-logos/adani.svg",
+      "format": "svg",
+      "width": 85,
+      "height": 64,
+      "bytes": 32312,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:23603",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/adani-ports-and-logistics",
+      "category": "client-logos",
+      "name": "Adani Ports and Logistics",
+      "tags": [
+        "Airports, buildings & commercial"
+      ],
+      "file": "client-logos/adani-ports-and-logistics.png",
+      "format": "png",
+      "width": 509,
+      "height": 193,
+      "bytes": 38947,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:24153",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/aditya-birla-grasim",
+      "category": "client-logos",
+      "name": "Aditya Birla Grasim",
+      "tags": [
+        "Consumer durables",
+        "Pulp and paper",
+        "Textile"
+      ],
+      "file": "client-logos/aditya-birla-grasim.svg",
+      "format": "svg",
+      "width": 66,
+      "height": 64,
+      "bytes": 7829,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:22207",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/amrit-bottlers",
+      "category": "client-logos",
+      "name": "Amrit Bottlers",
+      "tags": [
+        "Food & FMCG"
+      ],
+      "file": "client-logos/amrit-bottlers.png",
+      "format": "png",
+      "width": 192,
+      "height": 192,
+      "bytes": 47855,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:24112",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/apar",
+      "category": "client-logos",
+      "name": "APAR",
+      "tags": [
+        "Chemicals",
+        "Plastics"
+      ],
+      "file": "client-logos/apar.png",
+      "format": "png",
+      "width": 545,
+      "height": 193,
+      "bytes": 42824,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:23937",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/apcotex",
+      "category": "client-logos",
+      "name": "Apcotex",
+      "tags": [
+        "Chemicals"
+      ],
+      "file": "client-logos/apcotex.png",
+      "format": "png",
+      "width": 840,
+      "height": 183,
+      "bytes": 55207,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:23938",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/ashirvad",
+      "category": "client-logos",
+      "name": "Ashirvad",
+      "tags": [
+        "Consumer durables",
+        "Plastics"
+      ],
+      "file": "client-logos/ashirvad.png",
+      "format": "png",
+      "width": 745,
+      "height": 192,
+      "bytes": 12961,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:22257",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/basf",
+      "category": "client-logos",
+      "name": "BASF",
+      "tags": [
+        "Chemicals"
+      ],
+      "file": "client-logos/basf.svg",
+      "format": "svg",
+      "width": 178,
+      "height": 64,
+      "bytes": 18751,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:23902",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/bengaluru-international-airport",
+      "category": "client-logos",
+      "name": "Bengaluru International Airport",
+      "tags": [
+        "Commercial infra",
+        "Airports, buildings & commercial"
+      ],
+      "file": "client-logos/bengaluru-international-airport.svg",
+      "format": "svg",
+      "width": 79,
+      "height": 64,
+      "bytes": 25814,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:23758",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/bira-91",
+      "category": "client-logos",
+      "name": "Bira 91",
+      "tags": [
+        "Food & FMCG"
+      ],
+      "file": "client-logos/bira-91.png",
+      "format": "png",
+      "width": 203,
+      "height": 192,
+      "bytes": 21084,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:24110",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/bmm",
+      "category": "client-logos",
+      "name": "BMM",
+      "tags": [
+        "Metals"
+      ],
+      "file": "client-logos/bmm.png",
+      "format": "png",
+      "width": 322,
+      "height": 192,
+      "bytes": 26954,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:21954",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/bridgestone",
+      "category": "client-logos",
+      "name": "Bridgestone",
+      "tags": [
+        "Automobile & ancillary"
+      ],
+      "file": "client-logos/bridgestone.svg",
+      "format": "svg",
+      "width": 263,
+      "height": 64,
+      "bytes": 33134,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:21886",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/bunge",
+      "category": "client-logos",
+      "name": "Bunge",
+      "tags": [
+        "Food & FMCG"
+      ],
+      "file": "client-logos/bunge.svg",
+      "format": "svg",
+      "width": 276,
+      "height": 64,
+      "bytes": 2385,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:24116",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/cairn",
+      "category": "client-logos",
+      "name": "Cairn",
+      "tags": [
+        "Energy, oil & gas"
+      ],
+      "file": "client-logos/cairn.svg",
+      "format": "svg",
+      "width": 88,
+      "height": 64,
+      "bytes": 8317,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:23785",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/chhatrapati-shivaji-maharaj-international-airport",
+      "category": "client-logos",
+      "name": "Chhatrapati Shivaji Maharaj International Airport",
+      "tags": [
+        "Commercial infra",
+        "Airports, buildings & commercial"
+      ],
+      "file": "client-logos/chhatrapati-shivaji-maharaj-international-airport.svg",
+      "format": "svg",
+      "width": 280,
+      "height": 64,
+      "bytes": 35082,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:23653",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/cmr-an-amphenol-company",
+      "category": "client-logos",
+      "name": "CMR (an Amphenol company)",
+      "tags": [
+        "Metals"
+      ],
+      "file": "client-logos/cmr-an-amphenol-company.png",
+      "format": "png",
+      "width": 527,
+      "height": 192,
+      "bytes": 25278,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:21952",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/cmr-green-technologies",
+      "category": "client-logos",
+      "name": "CMR Green Technologies",
+      "tags": [
+        "Metals"
+      ],
+      "file": "client-logos/cmr-green-technologies.png",
+      "format": "png",
+      "width": 357,
+      "height": 192,
+      "bytes": 44970,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:21953",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/coca-cola",
+      "category": "client-logos",
+      "name": "Coca-Cola",
+      "tags": [
+        "Food & FMCG"
+      ],
+      "file": "client-logos/coca-cola.svg",
+      "format": "svg",
+      "width": 205,
+      "height": 64,
+      "bytes": 9044,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:24076",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/coromandel",
+      "category": "client-logos",
+      "name": "Coromandel",
+      "tags": [
+        "Chemicals"
+      ],
+      "file": "client-logos/coromandel.png",
+      "format": "png",
+      "width": 543,
+      "height": 192,
+      "bytes": 25003,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:23940",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/dabur",
+      "category": "client-logos",
+      "name": "Dabur",
+      "tags": [
+        "Food & FMCG"
+      ],
+      "file": "client-logos/dabur.svg",
+      "format": "svg",
+      "width": 73,
+      "height": 64,
+      "bytes": 20972,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:23991",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/dalmia-bharat",
+      "category": "client-logos",
+      "name": "Dalmia Bharat",
+      "tags": [
+        "Cement"
+      ],
+      "file": "client-logos/dalmia-bharat.svg",
+      "format": "svg",
+      "width": 135,
+      "height": 64,
+      "bytes": 17909,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:22050",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/dlf",
+      "category": "client-logos",
+      "name": "DLF",
+      "tags": [
+        "Commercial infra",
+        "Airports, buildings & commercial"
+      ],
+      "file": "client-logos/dlf.svg",
+      "format": "svg",
+      "width": 148,
+      "height": 64,
+      "bytes": 2429,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:23626",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/eicher",
+      "category": "client-logos",
+      "name": "Eicher",
+      "tags": [
+        "Automobile & ancillary"
+      ],
+      "file": "client-logos/eicher.svg",
+      "format": "svg",
+      "width": 280,
+      "height": 48,
+      "bytes": 8340,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:21768",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/eveready",
+      "category": "client-logos",
+      "name": "Eveready",
+      "tags": [
+        "Chemicals"
+      ],
+      "file": "client-logos/eveready.png",
+      "format": "png",
+      "width": 398,
+      "height": 192,
+      "bytes": 84200,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:23943",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/flipkart",
+      "category": "client-logos",
+      "name": "Flipkart",
+      "tags": [
+        "Commercial infra"
+      ],
+      "file": "client-logos/flipkart.svg",
+      "format": "svg",
+      "width": 65,
+      "height": 64,
+      "bytes": 127762,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:22414",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/gmr",
+      "category": "client-logos",
+      "name": "GMR",
+      "tags": [
+        "Commercial infra",
+        "Airports, buildings & commercial"
+      ],
+      "file": "client-logos/gmr.svg",
+      "format": "svg",
+      "width": 174,
+      "height": 64,
+      "bytes": 3666,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:24156",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/godrej-agrovet",
+      "category": "client-logos",
+      "name": "Godrej Agrovet",
+      "tags": [
+        "Chemicals"
+      ],
+      "file": "client-logos/godrej-agrovet.png",
+      "format": "png",
+      "width": 192,
+      "height": 192,
+      "bytes": 14494,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:23936",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/haldia-petrochemicals",
+      "category": "client-logos",
+      "name": "Haldia Petrochemicals",
+      "tags": [
+        "Energy, oil & gas",
+        "Plastics"
+      ],
+      "file": "client-logos/haldia-petrochemicals.svg",
+      "format": "svg",
+      "width": 137,
+      "height": 64,
+      "bytes": 10763,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:23825",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/hamilton",
+      "category": "client-logos",
+      "name": "Hamilton",
+      "tags": [
+        "Plastics"
+      ],
+      "file": "client-logos/hamilton.png",
+      "format": "png",
+      "width": 702,
+      "height": 192,
+      "bytes": 70744,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:23957",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/havells",
+      "category": "client-logos",
+      "name": "Havells",
+      "tags": [
+        "Consumer durables"
+      ],
+      "file": "client-logos/havells.svg",
+      "format": "svg",
+      "width": 97,
+      "height": 64,
+      "bytes": 5861,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:22134",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/hindalco",
+      "category": "client-logos",
+      "name": "Hindalco",
+      "tags": [
+        "Metals"
+      ],
+      "file": "client-logos/hindalco.png",
+      "format": "png",
+      "width": 256,
+      "height": 192,
+      "bytes": 53653,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:21950",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/hindustan-zinc",
+      "category": "client-logos",
+      "name": "Hindustan Zinc",
+      "tags": [
+        "Metals"
+      ],
+      "file": "client-logos/hindustan-zinc.png",
+      "format": "png",
+      "width": 247,
+      "height": 192,
+      "bytes": 27789,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:21951",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/hmel",
+      "category": "client-logos",
+      "name": "HMEL",
+      "tags": [
+        "Automobile & ancillary",
+        "Energy, oil & gas"
+      ],
+      "file": "client-logos/hmel.svg",
+      "format": "svg",
+      "width": 108,
+      "height": 64,
+      "bytes": 16935,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:21888",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/icici",
+      "category": "client-logos",
+      "name": "ICICI",
+      "tags": [
+        "Commercial infra"
+      ],
+      "file": "client-logos/icici.svg",
+      "format": "svg",
+      "width": 208,
+      "height": 64,
+      "bytes": 14294,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:23670",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/idemia",
+      "category": "client-logos",
+      "name": "IDEMIA",
+      "tags": [
+        "Commercial infra"
+      ],
+      "file": "client-logos/idemia.svg",
+      "format": "svg",
+      "width": 246,
+      "height": 64,
+      "bytes": 1600,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:23754",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/iit-bombay",
+      "category": "client-logos",
+      "name": "IIT Bombay",
+      "tags": [
+        "Commercial infra"
+      ],
+      "file": "client-logos/iit-bombay.svg",
+      "format": "svg",
+      "width": 66,
+      "height": 64,
+      "bytes": 101696,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:22265",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/indianoil",
+      "category": "client-logos",
+      "name": "IndianOil",
+      "tags": [
+        "Energy, oil & gas"
+      ],
+      "file": "client-logos/indianoil.svg",
+      "format": "svg",
+      "width": 53,
+      "height": 64,
+      "bytes": 8420,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:23776",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/iol-chemicals-and-pharmaceuticals",
+      "category": "client-logos",
+      "name": "IOL Chemicals and Pharmaceuticals",
+      "tags": [
+        "Chemicals"
+      ],
+      "file": "client-logos/iol-chemicals-and-pharmaceuticals.png",
+      "format": "png",
+      "width": 604,
+      "height": 193,
+      "bytes": 30147,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:23941",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/itc",
+      "category": "client-logos",
+      "name": "ITC",
+      "tags": [
+        "Food & FMCG"
+      ],
+      "file": "client-logos/itc.svg",
+      "format": "svg",
+      "width": 76,
+      "height": 64,
+      "bytes": 15250,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:23965",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/jindal-steel",
+      "category": "client-logos",
+      "name": "Jindal Steel",
+      "tags": [
+        "Metals"
+      ],
+      "file": "client-logos/jindal-steel.png",
+      "format": "png",
+      "width": 409,
+      "height": 192,
+      "bytes": 15257,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:21949",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/jk-lakshmi-cement",
+      "category": "client-logos",
+      "name": "JK Lakshmi Cement",
+      "tags": [
+        "Cement"
+      ],
+      "file": "client-logos/jk-lakshmi-cement.png",
+      "format": "png",
+      "width": 840,
+      "height": 168,
+      "bytes": 93468,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:22049",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/joy",
+      "category": "client-logos",
+      "name": "JOY",
+      "tags": [
+        "Pharma"
+      ],
+      "file": "client-logos/joy.png",
+      "format": "png",
+      "width": 434,
+      "height": 192,
+      "bytes": 32816,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:22124",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/jsw",
+      "category": "client-logos",
+      "name": "JSW",
+      "tags": [
+        "Metals"
+      ],
+      "file": "client-logos/jsw.svg",
+      "format": "svg",
+      "width": 135,
+      "height": 64,
+      "bytes": 2026,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:21943",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/jsw-cement",
+      "category": "client-logos",
+      "name": "JSW Cement",
+      "tags": [
+        "Cement"
+      ],
+      "file": "client-logos/jsw-cement.png",
+      "format": "png",
+      "width": 722,
+      "height": 192,
+      "bytes": 47635,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:22048",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/jsw-energy",
+      "category": "client-logos",
+      "name": "JSW Energy",
+      "tags": [
+        "Energy, oil & gas"
+      ],
+      "file": "client-logos/jsw-energy.svg",
+      "format": "svg",
+      "width": 228,
+      "height": 64,
+      "bytes": 6802,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:23836",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/jsw-steel",
+      "category": "client-logos",
+      "name": "JSW Steel",
+      "tags": [
+        "Metals"
+      ],
+      "file": "client-logos/jsw-steel.png",
+      "format": "png",
+      "width": 558,
+      "height": 192,
+      "bytes": 50820,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:21948",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/jubilant-ingrevia",
+      "category": "client-logos",
+      "name": "Jubilant Ingrevia",
+      "tags": [
+        "Food & FMCG"
+      ],
+      "file": "client-logos/jubilant-ingrevia.png",
+      "format": "png",
+      "width": 238,
+      "height": 193,
+      "bytes": 37512,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:24114",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/kansai-paint",
+      "category": "client-logos",
+      "name": "Kansai Paint",
+      "tags": [
+        "Chemicals"
+      ],
+      "file": "client-logos/kansai-paint.png",
+      "format": "png",
+      "width": 647,
+      "height": 192,
+      "bytes": 22798,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:23942",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/kec",
+      "category": "client-logos",
+      "name": "KEC",
+      "tags": [
+        "Pharma"
+      ],
+      "file": "client-logos/kec.png",
+      "format": "png",
+      "width": 347,
+      "height": 192,
+      "bytes": 18344,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:22122",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/kingfa",
+      "category": "client-logos",
+      "name": "Kingfa",
+      "tags": [
+        "Pharma"
+      ],
+      "file": "client-logos/kingfa.png",
+      "format": "png",
+      "width": 604,
+      "height": 193,
+      "bytes": 67541,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:22123",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/kubota",
+      "category": "client-logos",
+      "name": "Kubota",
+      "tags": [
+        "Automobile & ancillary"
+      ],
+      "file": "client-logos/kubota.svg",
+      "format": "svg",
+      "width": 199,
+      "height": 64,
+      "bytes": 2272,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:21766",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/luminous",
+      "category": "client-logos",
+      "name": "Luminous",
+      "tags": [
+        "Textile"
+      ],
+      "file": "client-logos/luminous.svg",
+      "format": "svg",
+      "width": 280,
+      "height": 61,
+      "bytes": 8447,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:24136",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/mahindra",
+      "category": "client-logos",
+      "name": "Mahindra",
+      "tags": [
+        "Automobile & ancillary"
+      ],
+      "file": "client-logos/mahindra.svg",
+      "format": "svg",
+      "width": 280,
+      "height": 42,
+      "bytes": 9581,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:21853",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/mankind",
+      "category": "client-logos",
+      "name": "Mankind",
+      "tags": [
+        "Pharma"
+      ],
+      "file": "client-logos/mankind.svg",
+      "format": "svg",
+      "width": 107,
+      "height": 64,
+      "bytes": 24323,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:22097",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/marico",
+      "category": "client-logos",
+      "name": "Marico",
+      "tags": [
+        "Food & FMCG"
+      ],
+      "file": "client-logos/marico.svg",
+      "format": "svg",
+      "width": 76,
+      "height": 64,
+      "bytes": 21287,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:23969",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/maruti-suzuki",
+      "category": "client-logos",
+      "name": "Maruti Suzuki",
+      "tags": [
+        "Automobile & ancillary"
+      ],
+      "file": "client-logos/maruti-suzuki.svg",
+      "format": "svg",
+      "width": 280,
+      "height": 32,
+      "bytes": 15712,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:21849",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/mondelez-international",
+      "category": "client-logos",
+      "name": "Mondelez International",
+      "tags": [
+        "Food & FMCG"
+      ],
+      "file": "client-logos/mondelez-international.svg",
+      "format": "svg",
+      "width": 228,
+      "height": 64,
+      "bytes": 15111,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:24080",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/ncc",
+      "category": "client-logos",
+      "name": "NCC",
+      "tags": [
+        "Airports, buildings & commercial"
+      ],
+      "file": "client-logos/ncc.png",
+      "format": "png",
+      "width": 510,
+      "height": 193,
+      "bytes": 16721,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:24152",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/nerolac",
+      "category": "client-logos",
+      "name": "Nerolac",
+      "tags": [
+        "Consumer durables"
+      ],
+      "file": "client-logos/nerolac.svg",
+      "format": "svg",
+      "width": 198,
+      "height": 64,
+      "bytes": 16015,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:22141",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/pernod-ricard",
+      "category": "client-logos",
+      "name": "Pernod Ricard",
+      "tags": [
+        "Food & FMCG"
+      ],
+      "file": "client-logos/pernod-ricard.png",
+      "format": "png",
+      "width": 524,
+      "height": 192,
+      "bytes": 54466,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:24111",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/polyhose",
+      "category": "client-logos",
+      "name": "Polyhose",
+      "tags": [
+        "Pulp and paper"
+      ],
+      "file": "client-logos/polyhose.png",
+      "format": "png",
+      "width": 714,
+      "height": 192,
+      "bytes": 31422,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:24126",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/posco",
+      "category": "client-logos",
+      "name": "POSCO",
+      "tags": [
+        "Metals"
+      ],
+      "file": "client-logos/posco.svg",
+      "format": "svg",
+      "width": 237,
+      "height": 64,
+      "bytes": 3215,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:21955",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/ppap-automotive",
+      "category": "client-logos",
+      "name": "PPAP Automotive",
+      "tags": [
+        "Automobile & ancillary"
+      ],
+      "file": "client-logos/ppap-automotive.png",
+      "format": "png",
+      "width": 192,
+      "height": 192,
+      "bytes": 25430,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:21851",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/savita",
+      "category": "client-logos",
+      "name": "Savita",
+      "tags": [
+        "Energy, oil & gas"
+      ],
+      "file": "client-logos/savita.png",
+      "format": "png",
+      "width": 454,
+      "height": 193,
+      "bytes": 35680,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:23858",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/seshasayee-paper-and-boards",
+      "category": "client-logos",
+      "name": "Seshasayee Paper and Boards",
+      "tags": [
+        "Pulp and paper"
+      ],
+      "file": "client-logos/seshasayee-paper-and-boards.png",
+      "format": "png",
+      "width": 840,
+      "height": 135,
+      "bytes": 85045,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:24125",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/slmg-beverages",
+      "category": "client-logos",
+      "name": "SLMG Beverages",
+      "tags": [
+        "Food & FMCG"
+      ],
+      "file": "client-logos/slmg-beverages.png",
+      "format": "png",
+      "width": 339,
+      "height": 192,
+      "bytes": 37684,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:24113",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/sood-poly",
+      "category": "client-logos",
+      "name": "Sood Poly",
+      "tags": [
+        "Plastics"
+      ],
+      "file": "client-logos/sood-poly.svg",
+      "format": "svg",
+      "width": 64,
+      "height": 64,
+      "bytes": 1964,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:23955",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/srf",
+      "category": "client-logos",
+      "name": "SRF",
+      "tags": [
+        "Chemicals"
+      ],
+      "file": "client-logos/srf.svg",
+      "format": "svg",
+      "width": 122,
+      "height": 64,
+      "bytes": 9645,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:23928",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/super-shakti",
+      "category": "client-logos",
+      "name": "Super Shakti",
+      "tags": [
+        "Metals"
+      ],
+      "file": "client-logos/super-shakti.svg",
+      "format": "svg",
+      "width": 178,
+      "height": 64,
+      "bytes": 9906,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:21957",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/supreme",
+      "category": "client-logos",
+      "name": "Supreme",
+      "tags": [
+        "Consumer durables",
+        "Plastics"
+      ],
+      "file": "client-logos/supreme.svg",
+      "format": "svg",
+      "width": 199,
+      "height": 64,
+      "bytes": 16453,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:22200",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/tata",
+      "category": "client-logos",
+      "name": "Tata",
+      "tags": [
+        "Metals"
+      ],
+      "file": "client-logos/tata.svg",
+      "format": "svg",
+      "width": 74,
+      "height": 64,
+      "bytes": 2154,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:21897",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/tata-hitachi",
+      "category": "client-logos",
+      "name": "Tata Hitachi",
+      "tags": [
+        "Automobile & ancillary"
+      ],
+      "file": "client-logos/tata-hitachi.svg",
+      "format": "svg",
+      "width": 277,
+      "height": 64,
+      "bytes": 3034,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:21845",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/tata-power",
+      "category": "client-logos",
+      "name": "Tata Power",
+      "tags": [
+        "Energy, oil & gas"
+      ],
+      "file": "client-logos/tata-power.svg",
+      "format": "svg",
+      "width": 105,
+      "height": 64,
+      "bytes": 5462,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:23844",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/tata-steel",
+      "category": "client-logos",
+      "name": "Tata Steel",
+      "tags": [
+        "Metals"
+      ],
+      "file": "client-logos/tata-steel.png",
+      "format": "png",
+      "width": 840,
+      "height": 158,
+      "bytes": 19521,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:21947",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/toyoda-gosei",
+      "category": "client-logos",
+      "name": "Toyoda Gosei",
+      "tags": [
+        "Automobile & ancillary"
+      ],
+      "file": "client-logos/toyoda-gosei.svg",
+      "format": "svg",
+      "width": 150,
+      "height": 64,
+      "bytes": 4236,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:21761",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/ultratech",
+      "category": "client-logos",
+      "name": "UltraTech",
+      "tags": [
+        "Cement"
+      ],
+      "file": "client-logos/ultratech.svg",
+      "format": "svg",
+      "width": 116,
+      "height": 64,
+      "bytes": 21826,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:21983",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/uno-minda",
+      "category": "client-logos",
+      "name": "Uno Minda",
+      "tags": [
+        "Automobile & ancillary"
+      ],
+      "file": "client-logos/uno-minda.svg",
+      "format": "svg",
+      "width": 150,
+      "height": 64,
+      "bytes": 5088,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:21836",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/v-guard",
+      "category": "client-logos",
+      "name": "V-Guard",
+      "tags": [
+        "Food & FMCG"
+      ],
+      "file": "client-logos/v-guard.png",
+      "format": "png",
+      "width": 398,
+      "height": 193,
+      "bytes": 24735,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:24115",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/ve-commercial-vehicles",
+      "category": "client-logos",
+      "name": "VE Commercial Vehicles",
+      "tags": [
+        "Automobile & ancillary"
+      ],
+      "file": "client-logos/ve-commercial-vehicles.png",
+      "format": "png",
+      "width": 768,
+      "height": 192,
+      "bytes": 45997,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:21852",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/vedanta",
+      "category": "client-logos",
+      "name": "Vedanta",
+      "tags": [
+        "Metals"
+      ],
+      "file": "client-logos/vedanta.svg",
+      "format": "svg",
+      "width": 280,
+      "height": 57,
+      "bytes": 34795,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:21906",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/welspun-world",
+      "category": "client-logos",
+      "name": "Welspun World",
+      "tags": [
+        "Metals"
+      ],
+      "file": "client-logos/welspun-world.png",
+      "format": "png",
+      "width": 840,
+      "height": 137,
+      "bytes": 17764,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:21975",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "client-logos/zydus",
+      "category": "client-logos",
+      "name": "Zydus",
+      "tags": [
+        "Pharma"
+      ],
+      "file": "client-logos/zydus.svg",
+      "format": "svg",
+      "width": 118,
+      "height": 64,
+      "bytes": 23373,
+      "rights": "Approved for external marketing (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3158:22093",
+        "page": "❑ Logo › Client logos"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "team-headshots/archit-naraniwal",
+      "category": "team-headshots",
+      "name": "Archit Naraniwal",
+      "role": "Chief Sales Officer",
+      "tags": [
+        "Leadership"
+      ],
+      "file": "team-headshots/archit-naraniwal.png",
+      "format": "png",
+      "width": 344,
+      "height": 466,
+      "bytes": 96951,
+      "rights": "not recorded",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3136:2529",
+        "page": "People ( leadership roles and SMEs)"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "team-headshots/dr-ram",
+      "category": "team-headshots",
+      "name": "Dr. Ram",
+      "role": "Advisor",
+      "tags": [
+        "SMEs"
+      ],
+      "file": "team-headshots/dr-ram.png",
+      "format": "png",
+      "width": 344,
+      "height": 466,
+      "bytes": 189410,
+      "rights": "not recorded",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3136:2555",
+        "page": "People ( leadership roles and SMEs)"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "team-headshots/mukesh-kumar",
+      "category": "team-headshots",
+      "name": "Mukesh Kumar",
+      "role": "Chief Operations Officer",
+      "tags": [
+        "Leadership"
+      ],
+      "file": "team-headshots/mukesh-kumar.png",
+      "format": "png",
+      "width": 344,
+      "height": 466,
+      "bytes": 222426,
+      "rights": "not recorded",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3136:2550",
+        "page": "People ( leadership roles and SMEs)"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "team-headshots/parag-patil",
+      "category": "team-headshots",
+      "name": "Parag Patil",
+      "role": "Chief of Strategic Relations",
+      "tags": [
+        "Leadership"
+      ],
+      "file": "team-headshots/parag-patil.png",
+      "format": "png",
+      "width": 344,
+      "height": 466,
+      "bytes": 203737,
+      "rights": "not recorded",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3136:2546",
+        "page": "People ( leadership roles and SMEs)"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "team-headshots/parth-choudhary",
+      "category": "team-headshots",
+      "name": "Parth Choudhary",
+      "role": "Director of US GTM",
+      "tags": [
+        "Leadership"
+      ],
+      "file": "team-headshots/parth-choudhary.png",
+      "format": "png",
+      "width": 344,
+      "height": 466,
+      "bytes": 129584,
+      "rights": "not recorded",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3136:2541",
+        "page": "People ( leadership roles and SMEs)"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "team-headshots/rajeev-shukla",
+      "category": "team-headshots",
+      "name": "Rajeev Shukla",
+      "role": "Advisor",
+      "tags": [
+        "SMEs"
+      ],
+      "file": "team-headshots/rajeev-shukla.png",
+      "format": "png",
+      "width": 344,
+      "height": 466,
+      "bytes": 206436,
+      "rights": "not recorded",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3136:2553",
+        "page": "People ( leadership roles and SMEs)"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "team-headshots/rajveer-singh",
+      "category": "team-headshots",
+      "name": "Rajveer Singh",
+      "role": "",
+      "tags": [
+        "Leadership"
+      ],
+      "file": "team-headshots/rajveer-singh.png",
+      "format": "png",
+      "width": 344,
+      "height": 466,
+      "bytes": 194442,
+      "rights": "not recorded",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3136:2543",
+        "page": "People ( leadership roles and SMEs)"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "team-headshots/rishi-sharma",
+      "category": "team-headshots",
+      "name": "Rishi Sharma",
+      "role": "CEO, Co-Founder",
+      "tags": [
+        "Leadership"
+      ],
+      "file": "team-headshots/rishi-sharma.png",
+      "format": "png",
+      "width": 344,
+      "height": 466,
+      "bytes": 105586,
+      "rights": "not recorded",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3136:2533",
+        "page": "People ( leadership roles and SMEs)"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "team-headshots/sanvar-oberoi",
+      "category": "team-headshots",
+      "name": "Sanvar Oberoi",
+      "role": "US GTM",
+      "tags": [
+        "Leadership"
+      ],
+      "file": "team-headshots/sanvar-oberoi.png",
+      "format": "png",
+      "width": 344,
+      "height": 466,
+      "bytes": 103813,
+      "rights": "not recorded",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3136:2537",
+        "page": "People ( leadership roles and SMEs)"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "team-headshots/sarang-vakharia",
+      "category": "team-headshots",
+      "name": "Sarang Vakharia",
+      "role": "",
+      "tags": [
+        "Leadership"
+      ],
+      "file": "team-headshots/sarang-vakharia.png",
+      "format": "png",
+      "width": 344,
+      "height": 466,
+      "bytes": 210051,
+      "rights": "not recorded",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3136:2548",
+        "page": "People ( leadership roles and SMEs)"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "team-headshots/sarjan-shah",
+      "category": "team-headshots",
+      "name": "Sarjan Shah",
+      "role": "Strategic Initiatives",
+      "tags": [
+        "Leadership"
+      ],
+      "file": "team-headshots/sarjan-shah.png",
+      "format": "png",
+      "width": 344,
+      "height": 466,
+      "bytes": 212933,
+      "rights": "not recorded",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3136:2535",
+        "page": "People ( leadership roles and SMEs)"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "team-headshots/siddharth-jha",
+      "category": "team-headshots",
+      "name": "Siddharth Jha",
+      "role": "Director of Product",
+      "tags": [
+        "Leadership"
+      ],
+      "file": "team-headshots/siddharth-jha.png",
+      "format": "png",
+      "width": 344,
+      "height": 466,
+      "bytes": 187369,
+      "rights": "not recorded",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3136:2527",
+        "page": "People ( leadership roles and SMEs)"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "team-headshots/utkarsh-narain",
+      "category": "team-headshots",
+      "name": "Utkarsh Narain",
+      "role": "Chief Technology Officer",
+      "tags": [
+        "Leadership"
+      ],
+      "file": "team-headshots/utkarsh-narain.png",
+      "format": "png",
+      "width": 344,
+      "height": 466,
+      "bytes": 91763,
+      "rights": "not recorded",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3136:2531",
+        "page": "People ( leadership roles and SMEs)"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "team-headshots/vivek-singh",
+      "category": "team-headshots",
+      "name": "Vivek Singh",
+      "role": "Chief Data Science Officer",
+      "tags": [
+        "Leadership"
+      ],
+      "file": "team-headshots/vivek-singh.png",
+      "format": "png",
+      "width": 344,
+      "height": 466,
+      "bytes": 111531,
+      "rights": "not recorded",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3136:2539",
+        "page": "People ( leadership roles and SMEs)"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "design-elements/dot-particle-form",
+      "category": "design-elements",
+      "name": "Dot-particle form",
+      "tags": [
+        "Design elements"
+      ],
+      "background": "dark background only",
+      "file": "design-elements/dot-particle-form.png",
+      "format": "png",
+      "width": 720,
+      "height": 558,
+      "bytes": 482959,
+      "use": "Brand design element, used only on the backgrounds listed (02-brand-elements/design-elements). Place the file as it is; never redraw, recolour or imitate it.",
+      "rights": "Faclon Labs brand asset.",
+      "owner": "Faclon Labs brand team",
+      "source": {
+        "figma_node": "3210:12154",
+        "page": "❑ Graphic elements"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "design-elements/dot-wave",
+      "category": "design-elements",
+      "name": "Dot wave",
+      "tags": [
+        "Design elements"
+      ],
+      "background": "dark, light or brand background",
+      "file": "design-elements/dot-wave.png",
+      "format": "png",
+      "width": 849,
+      "height": 639,
+      "bytes": 328705,
+      "use": "Brand design element, used only on the backgrounds listed (02-brand-elements/design-elements). Place the file as it is; never redraw, recolour or imitate it.",
+      "rights": "Faclon Labs brand asset.",
+      "owner": "Faclon Labs brand team",
+      "source": {
+        "figma_node": "3253:14269",
+        "page": "❑ Graphic elements"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "design-elements/light-streak",
+      "category": "design-elements",
+      "name": "Light streak",
+      "tags": [
+        "Design elements"
+      ],
+      "background": "brand background only",
+      "file": "design-elements/light-streak.png",
+      "format": "png",
+      "width": 770,
+      "height": 785,
+      "bytes": 224646,
+      "use": "Brand design element, used only on the backgrounds listed (02-brand-elements/design-elements). Place the file as it is; never redraw, recolour or imitate it.",
+      "rights": "Faclon Labs brand asset.",
+      "owner": "Faclon Labs brand team",
+      "source": {
+        "figma_node": "3210:12234",
+        "page": "❑ Graphic elements"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/connectors-and-transformers/25a-contactor",
+      "category": "icons",
+      "set": "architecture",
+      "name": "25A Contactor",
+      "tags": [
+        "Connectors and transformers"
+      ],
+      "file": "icons/architecture/connectors-and-transformers/25a-contactor.png",
+      "format": "png",
+      "width": 130,
+      "height": 179,
+      "bytes": 29690,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3095:7046",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/connectors-and-transformers/auto-mode-stop-signal",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Auto Mode Stop Signal",
+      "tags": [
+        "Connectors and transformers"
+      ],
+      "file": "icons/architecture/connectors-and-transformers/auto-mode-stop-signal.png",
+      "format": "png",
+      "width": 155,
+      "height": 212,
+      "bytes": 35929,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3095:7037",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/connectors-and-transformers/controllers",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Controllers",
+      "tags": [
+        "Connectors and transformers"
+      ],
+      "file": "icons/architecture/connectors-and-transformers/controllers.png",
+      "format": "png",
+      "width": 226,
+      "height": 226,
+      "bytes": 55149,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3096:424",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/connectors-and-transformers/modbus-tcp-ip-convertor",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Modbus TCP IP convertor",
+      "tags": [
+        "Connectors and transformers"
+      ],
+      "file": "icons/architecture/connectors-and-transformers/modbus-tcp-ip-convertor.png",
+      "format": "png",
+      "width": 191,
+      "height": 191,
+      "bytes": 35871,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3079:1991",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/connectors-and-transformers/transformer",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Transformer",
+      "tags": [
+        "Connectors and transformers"
+      ],
+      "file": "icons/architecture/connectors-and-transformers/transformer.png",
+      "format": "png",
+      "width": 185,
+      "height": 165,
+      "bytes": 39939,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3079:1916",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/conveyor/conveyor",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Conveyor",
+      "tags": [
+        "Conveyor"
+      ],
+      "file": "icons/architecture/conveyor/conveyor.png",
+      "format": "png",
+      "width": 526,
+      "height": 98,
+      "bytes": 13798,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3087:3590",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/conveyor/conveyor-2",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Conveyor",
+      "tags": [
+        "Conveyor"
+      ],
+      "file": "icons/architecture/conveyor/conveyor-2.png",
+      "format": "png",
+      "width": 1076,
+      "height": 113,
+      "bytes": 7229,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3090:4843",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/conveyor/conveyor-3",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Conveyor",
+      "tags": [
+        "Conveyor"
+      ],
+      "file": "icons/architecture/conveyor/conveyor-3.png",
+      "format": "png",
+      "width": 535,
+      "height": 126,
+      "bytes": 23181,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3087:3593",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/conveyor/conveyor-4",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Conveyor",
+      "tags": [
+        "Conveyor"
+      ],
+      "file": "icons/architecture/conveyor/conveyor-4.png",
+      "format": "png",
+      "width": 439,
+      "height": 284,
+      "bytes": 17154,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3093:6577",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/enclosure-box/12v-7amps-battery",
+      "category": "icons",
+      "set": "architecture",
+      "name": "12V 7amps Battery",
+      "tags": [
+        "Enclosure box"
+      ],
+      "file": "icons/architecture/enclosure-box/12v-7amps-battery.png",
+      "format": "png",
+      "width": 203,
+      "height": 159,
+      "bytes": 41263,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3093:5861",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/enclosure-box/acb-breakers",
+      "category": "icons",
+      "set": "architecture",
+      "name": "ACB Breakers",
+      "tags": [
+        "Enclosure box"
+      ],
+      "file": "icons/architecture/enclosure-box/acb-breakers.png",
+      "format": "png",
+      "width": 220,
+      "height": 219,
+      "bytes": 52775,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3079:1985",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/enclosure-box/busbar-panel",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Busbar Panel",
+      "tags": [
+        "Enclosure box"
+      ],
+      "file": "icons/architecture/enclosure-box/busbar-panel.png",
+      "format": "png",
+      "width": 204,
+      "height": 239,
+      "bytes": 69060,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3096:418",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/enclosure-box/busbar-receiver",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Busbar Receiver",
+      "tags": [
+        "Enclosure box"
+      ],
+      "file": "icons/architecture/enclosure-box/busbar-receiver.png",
+      "format": "png",
+      "width": 194,
+      "height": 280,
+      "bytes": 48361,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:3567",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/enclosure-box/egx-converter",
+      "category": "icons",
+      "set": "architecture",
+      "name": "EGX Converter",
+      "tags": [
+        "Enclosure box"
+      ],
+      "file": "icons/architecture/enclosure-box/egx-converter.png",
+      "format": "png",
+      "width": 268,
+      "height": 268,
+      "bytes": 44393,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3092:5852",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/enclosure-box/industrial-pc",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Industrial PC",
+      "tags": [
+        "Enclosure box"
+      ],
+      "file": "icons/architecture/enclosure-box/industrial-pc.png",
+      "format": "png",
+      "width": 217,
+      "height": 94,
+      "bytes": 33622,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3131:1654",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/enclosure-box/ip65-abs-plastic-enclosure-box",
+      "category": "icons",
+      "set": "architecture",
+      "name": "IP65 ABS Plastic enclosure box",
+      "tags": [
+        "Enclosure box"
+      ],
+      "file": "icons/architecture/enclosure-box/ip65-abs-plastic-enclosure-box.png",
+      "format": "png",
+      "width": 143,
+      "height": 177,
+      "bytes": 23002,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3131:1655",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/enclosure-box/ip65-flameproof-enclosure-box",
+      "category": "icons",
+      "set": "architecture",
+      "name": "IP65 Flameproof enclosure box",
+      "tags": [
+        "Enclosure box"
+      ],
+      "file": "icons/architecture/enclosure-box/ip65-flameproof-enclosure-box.png",
+      "format": "png",
+      "width": 184,
+      "height": 162,
+      "bytes": 24640,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3131:1657",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/enclosure-box/ip65-frp-fibre-reinforced-plastic",
+      "category": "icons",
+      "set": "architecture",
+      "name": "IP65 FRP Fibre reinforced Plastic",
+      "tags": [
+        "Enclosure box"
+      ],
+      "file": "icons/architecture/enclosure-box/ip65-frp-fibre-reinforced-plastic.png",
+      "format": "png",
+      "width": 157,
+      "height": 187,
+      "bytes": 10938,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3131:1659",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/enclosure-box/ip65-metal-enclosure-box",
+      "category": "icons",
+      "set": "architecture",
+      "name": "IP65 Metal enclosure box",
+      "tags": [
+        "Enclosure box"
+      ],
+      "file": "icons/architecture/enclosure-box/ip65-metal-enclosure-box.png",
+      "format": "png",
+      "width": 123,
+      "height": 177,
+      "bytes": 11981,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3131:1658",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/enclosure-box/solar-charger",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Solar Charger",
+      "tags": [
+        "Enclosure box"
+      ],
+      "file": "icons/architecture/enclosure-box/solar-charger.png",
+      "format": "png",
+      "width": 204,
+      "height": 152,
+      "bytes": 32681,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3093:5864",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/enclosure-box/trane-cpm",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Trane CPM",
+      "tags": [
+        "Enclosure box"
+      ],
+      "file": "icons/architecture/enclosure-box/trane-cpm.png",
+      "format": "png",
+      "width": 216,
+      "height": 179,
+      "bytes": 29291,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3096:426",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/enclosure-box/vcb-breakers",
+      "category": "icons",
+      "set": "architecture",
+      "name": "VCB Breakers",
+      "tags": [
+        "Enclosure box"
+      ],
+      "file": "icons/architecture/enclosure-box/vcb-breakers.png",
+      "format": "png",
+      "width": 211,
+      "height": 211,
+      "bytes": 38962,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3079:1988",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/enclosure-box/vfd",
+      "category": "icons",
+      "set": "architecture",
+      "name": "VFD",
+      "tags": [
+        "Enclosure box"
+      ],
+      "file": "icons/architecture/enclosure-box/vfd.png",
+      "format": "png",
+      "width": 150,
+      "height": 204,
+      "bytes": 37406,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3096:423",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/enclosure-box/vfd-2",
+      "category": "icons",
+      "set": "architecture",
+      "name": "VFD",
+      "tags": [
+        "Enclosure box"
+      ],
+      "file": "icons/architecture/enclosure-box/vfd-2.png",
+      "format": "png",
+      "width": 232,
+      "height": 252,
+      "bytes": 57029,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3079:2040",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/enclosure-box/vrf",
+      "category": "icons",
+      "set": "architecture",
+      "name": "VRF",
+      "tags": [
+        "Enclosure box"
+      ],
+      "file": "icons/architecture/enclosure-box/vrf.png",
+      "format": "png",
+      "width": 266,
+      "height": 178,
+      "bytes": 58659,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3131:1660",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/enclosure-box/vrv",
+      "category": "icons",
+      "set": "architecture",
+      "name": "VRV",
+      "tags": [
+        "Enclosure box"
+      ],
+      "file": "icons/architecture/enclosure-box/vrv.png",
+      "format": "png",
+      "width": 248,
+      "height": 154,
+      "bytes": 39817,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3131:1661",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/advanced-gateway",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Advanced Gateway",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/advanced-gateway.png",
+      "format": "png",
+      "width": 254,
+      "height": 142,
+      "bytes": 30411,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:3498",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/advanced-iot-gateway",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Advanced IOT Gateway",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/advanced-iot-gateway.png",
+      "format": "png",
+      "width": 194,
+      "height": 194,
+      "bytes": 15077,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3079:2055",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/advantech-gateway",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Advantech Gateway",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/advantech-gateway.png",
+      "format": "png",
+      "width": 225,
+      "height": 162,
+      "bytes": 37607,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3096:425",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/air-flow-meter",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Air flow meter",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/air-flow-meter.png",
+      "format": "png",
+      "width": 284,
+      "height": 214,
+      "bytes": 37973,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:3449",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/elmeasure-lg6400",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Elmeasure LG6400",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/elmeasure-lg6400.png",
+      "format": "png",
+      "width": 145,
+      "height": 156,
+      "bytes": 29915,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3131:1618",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/energy-meter",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Energy meter",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/energy-meter.png",
+      "format": "png",
+      "width": 147,
+      "height": 147,
+      "bytes": 17809,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3079:1976",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/ethernet-gateway",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Ethernet gateway",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/ethernet-gateway.png",
+      "format": "png",
+      "width": 153,
+      "height": 192,
+      "bytes": 32174,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:1693",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/ethernet-gateway-2",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Ethernet Gateway",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/ethernet-gateway-2.png",
+      "format": "png",
+      "width": 240,
+      "height": 240,
+      "bytes": 53808,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:3554",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/gateway-installation",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Gateway Installation",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/gateway-installation.png",
+      "format": "png",
+      "width": 158,
+      "height": 250,
+      "bytes": 55746,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3087:3581",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/gt-10-gateway",
+      "category": "icons",
+      "set": "architecture",
+      "name": "GT 10 Gateway",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/gt-10-gateway.png",
+      "format": "png",
+      "width": 159,
+      "height": 200,
+      "bytes": 35966,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3095:7236",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/iot-4g-lan-gateway",
+      "category": "icons",
+      "set": "architecture",
+      "name": "IoT 4G + Lan Gateway",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/iot-4g-lan-gateway.png",
+      "format": "png",
+      "width": 338,
+      "height": 226,
+      "bytes": 55241,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3093:5870",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/ipc-gateway",
+      "category": "icons",
+      "set": "architecture",
+      "name": "IPC Gateway",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/ipc-gateway.png",
+      "format": "png",
+      "width": 165,
+      "height": 219,
+      "bytes": 32816,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:1689",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/ipc-gateways",
+      "category": "icons",
+      "set": "architecture",
+      "name": "IPC Gateways",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/ipc-gateways.png",
+      "format": "png",
+      "width": 232,
+      "height": 101,
+      "bytes": 35825,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:3508",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/lnt-wl4410",
+      "category": "icons",
+      "set": "architecture",
+      "name": "LNT WL4410",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/lnt-wl4410.png",
+      "format": "png",
+      "width": 155,
+      "height": 155,
+      "bytes": 42245,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3131:1609",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/lora-gateway",
+      "category": "icons",
+      "set": "architecture",
+      "name": "LoRa Gateway",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/lora-gateway.png",
+      "format": "png",
+      "width": 139,
+      "height": 125,
+      "bytes": 13832,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:1719",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/lora-node",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Lora Node",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/lora-node.png",
+      "format": "png",
+      "width": 128,
+      "height": 194,
+      "bytes": 31285,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3119:534",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/relay",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Relay",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/relay.png",
+      "format": "png",
+      "width": 238,
+      "height": 206,
+      "bytes": 21464,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3131:1619",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/relay-2",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Relay 2",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/relay-2.png",
+      "format": "png",
+      "width": 216,
+      "height": 282,
+      "bytes": 71129,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3079:1994",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/relay-3",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Relay",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/relay-3.png",
+      "format": "png",
+      "width": 200,
+      "height": 194,
+      "bytes": 52957,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3087:3596",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/relay-4",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Relay",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/relay-4.png",
+      "format": "png",
+      "width": 198,
+      "height": 236,
+      "bytes": 67399,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3096:414",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/rish-lm-1380",
+      "category": "icons",
+      "set": "architecture",
+      "name": "RISH LM 1380",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/rish-lm-1380.png",
+      "format": "png",
+      "width": 159,
+      "height": 155,
+      "bytes": 28901,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3131:1612",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/schneider-6400ng",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Schneider 6400NG",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/schneider-6400ng.png",
+      "format": "png",
+      "width": 162,
+      "height": 155,
+      "bytes": 34901,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3131:1611",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/schneider-pm7290",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Schneider PM7290",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/schneider-pm7290.png",
+      "format": "png",
+      "width": 155,
+      "height": 155,
+      "bytes": 33830,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3131:1613",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/secure-energy-meter-103",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Secure Energy Meter 103",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/secure-energy-meter-103.png",
+      "format": "png",
+      "width": 165,
+      "height": 155,
+      "bytes": 32894,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3131:1616",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/secure-energy-meter-443",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Secure Energy Meter 443",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/secure-energy-meter-443.png",
+      "format": "png",
+      "width": 144,
+      "height": 146,
+      "bytes": 29992,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3131:1617",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/selec-em2m",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Selec EM2M",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/selec-em2m.png",
+      "format": "png",
+      "width": 87,
+      "height": 163,
+      "bytes": 17750,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3131:1615",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/selec-em4m",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Selec EM4M",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/selec-em4m.png",
+      "format": "png",
+      "width": 143,
+      "height": 155,
+      "bytes": 31045,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3131:1614",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/selec-mfm376",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Selec MFM376",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/selec-mfm376.png",
+      "format": "png",
+      "width": 162,
+      "height": 155,
+      "bytes": 23637,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3131:1610",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/st-110",
+      "category": "icons",
+      "set": "architecture",
+      "name": "ST-110",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/st-110.png",
+      "format": "png",
+      "width": 124,
+      "height": 193,
+      "bytes": 39408,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3119:532",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/st-30n",
+      "category": "icons",
+      "set": "architecture",
+      "name": "ST-30N",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/st-30n.png",
+      "format": "png",
+      "width": 134,
+      "height": 218,
+      "bytes": 53357,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3119:538",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/st-50",
+      "category": "icons",
+      "set": "architecture",
+      "name": "ST-50",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/st-50.png",
+      "format": "png",
+      "width": 150,
+      "height": 186,
+      "bytes": 43176,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3119:537",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/st-52-l",
+      "category": "icons",
+      "set": "architecture",
+      "name": "ST-52 L",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/st-52-l.png",
+      "format": "png",
+      "width": 166,
+      "height": 210,
+      "bytes": 34383,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3119:536",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/st-53",
+      "category": "icons",
+      "set": "architecture",
+      "name": "ST-53",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/st-53.png",
+      "format": "png",
+      "width": 156,
+      "height": 196,
+      "bytes": 47930,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3119:535",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/st100-gateway",
+      "category": "icons",
+      "set": "architecture",
+      "name": "ST100 Gateway",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/st100-gateway.png",
+      "format": "png",
+      "width": 218,
+      "height": 290,
+      "bytes": 31049,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3092:5847",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/steam-trap-monitoring-node",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Steam Trap Monitoring node",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/steam-trap-monitoring-node.png",
+      "format": "png",
+      "width": 160,
+      "height": 186,
+      "bytes": 51383,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3087:3573",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/energy-meters/thermal-overload-protection-relay",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Thermal Overload Protection Relay",
+      "tags": [
+        "Energy meters"
+      ],
+      "file": "icons/architecture/energy-meters/thermal-overload-protection-relay.png",
+      "format": "png",
+      "width": 163,
+      "height": 166,
+      "bytes": 39395,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3095:7049",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/faclon-iosense-platform/faclon-cloud-server",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Faclon Cloud server",
+      "tags": [
+        "Faclon iosense platform"
+      ],
+      "file": "icons/architecture/faclon-iosense-platform/faclon-cloud-server.png",
+      "format": "png",
+      "width": 145,
+      "height": 145,
+      "bytes": 6584,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3079:4",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/faclon-iosense-platform/faclon-iosense",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Faclon Iosense",
+      "tags": [
+        "Faclon iosense platform"
+      ],
+      "file": "icons/architecture/faclon-iosense-platform/faclon-iosense.png",
+      "format": "png",
+      "width": 105,
+      "height": 124,
+      "bytes": 8616,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3079:1913",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/faclon-iosense-platform/iosense-platform",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Iosense platform",
+      "tags": [
+        "Faclon iosense platform"
+      ],
+      "file": "icons/architecture/faclon-iosense-platform/iosense-platform.png",
+      "format": "png",
+      "width": 363,
+      "height": 742,
+      "bytes": 107553,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3090:3711",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/faclon-iosense-platform/iosense-platform-2",
+      "category": "icons",
+      "set": "architecture",
+      "name": "IOSENSE Platform",
+      "tags": [
+        "Faclon iosense platform"
+      ],
+      "file": "icons/architecture/faclon-iosense-platform/iosense-platform-2.png",
+      "format": "png",
+      "width": 476,
+      "height": 967,
+      "bytes": 116828,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:3436",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/faclon-iosense-platform/iosense-platform-3",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Iosense Platform",
+      "tags": [
+        "Faclon iosense platform"
+      ],
+      "file": "icons/architecture/faclon-iosense-platform/iosense-platform-3.png",
+      "format": "png",
+      "width": 511,
+      "height": 623,
+      "bytes": 104618,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:1674",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/air-flow-sensor",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Air Flow Sensor",
+      "tags": [
+        "Lan Switch with POE & Fiber Patch Cord"
+      ],
+      "file": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/air-flow-sensor.png",
+      "format": "png",
+      "width": 174,
+      "height": 119,
+      "bytes": 12345,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3079:2034",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/camera",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Camera",
+      "tags": [
+        "Lan Switch with POE & Fiber Patch Cord"
+      ],
+      "file": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/camera.png",
+      "format": "png",
+      "width": 271,
+      "height": 215,
+      "bytes": 26867,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:12",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/existing-ethernet-switch",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Existing Ethernet Switch",
+      "tags": [
+        "Lan Switch with POE & Fiber Patch Cord"
+      ],
+      "file": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/existing-ethernet-switch.png",
+      "format": "png",
+      "width": 238,
+      "height": 134,
+      "bytes": 25540,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3090:3740",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/fiber-patch-cord-lc-lc",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Fiber Patch Cord LC - LC",
+      "tags": [
+        "Lan Switch with POE & Fiber Patch Cord"
+      ],
+      "file": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/fiber-patch-cord-lc-lc.png",
+      "format": "png",
+      "width": 142,
+      "height": 182,
+      "bytes": 23874,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3119:496",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/fiber-patch-cord-sc-lc",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Fiber Patch Cord SC - LC",
+      "tags": [
+        "Lan Switch with POE & Fiber Patch Cord"
+      ],
+      "file": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/fiber-patch-cord-sc-lc.png",
+      "format": "png",
+      "width": 169,
+      "height": 182,
+      "bytes": 34841,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3119:497",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/fiber-patch-cord-sc-sc",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Fiber Patch Cord SC - SC",
+      "tags": [
+        "Lan Switch with POE & Fiber Patch Cord"
+      ],
+      "file": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/fiber-patch-cord-sc-sc.png",
+      "format": "png",
+      "width": 169,
+      "height": 178,
+      "bytes": 28685,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3119:498",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/historian-server",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Historian Server",
+      "tags": [
+        "Lan Switch with POE & Fiber Patch Cord"
+      ],
+      "file": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/historian-server.png",
+      "format": "png",
+      "width": 147,
+      "height": 147,
+      "bytes": 12258,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3079:2006",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/industrial-pc",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Industrial PC",
+      "tags": [
+        "Lan Switch with POE & Fiber Patch Cord"
+      ],
+      "file": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/industrial-pc.png",
+      "format": "png",
+      "width": 179,
+      "height": 58,
+      "bytes": 2411,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:1686",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/it-switch",
+      "category": "icons",
+      "set": "architecture",
+      "name": "IT Switch",
+      "tags": [
+        "Lan Switch with POE & Fiber Patch Cord"
+      ],
+      "file": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/it-switch.png",
+      "format": "png",
+      "width": 200,
+      "height": 200,
+      "bytes": 16280,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:3505",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/lan-switch-with-poe-16-port",
+      "category": "icons",
+      "set": "architecture",
+      "name": "LAN Switch with POE 16 port",
+      "tags": [
+        "Lan Switch with POE & Fiber Patch Cord"
+      ],
+      "file": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/lan-switch-with-poe-16-port.png",
+      "format": "png",
+      "width": 259,
+      "height": 64,
+      "bytes": 21339,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3119:501",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/lan-switch-with-poe-24-port",
+      "category": "icons",
+      "set": "architecture",
+      "name": "LAN Switch with POE 24 port",
+      "tags": [
+        "Lan Switch with POE & Fiber Patch Cord"
+      ],
+      "file": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/lan-switch-with-poe-24-port.png",
+      "format": "png",
+      "width": 311,
+      "height": 55,
+      "bytes": 21917,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3119:502",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/lan-switch-with-poe-5-port",
+      "category": "icons",
+      "set": "architecture",
+      "name": "LAN Switch with POE 5 port",
+      "tags": [
+        "Lan Switch with POE & Fiber Patch Cord"
+      ],
+      "file": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/lan-switch-with-poe-5-port.png",
+      "format": "png",
+      "width": 166,
+      "height": 73,
+      "bytes": 19898,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3119:499",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/lan-switch-with-poe-8-port",
+      "category": "icons",
+      "set": "architecture",
+      "name": "LAN Switch with POE 8 port",
+      "tags": [
+        "Lan Switch with POE & Fiber Patch Cord"
+      ],
+      "file": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/lan-switch-with-poe-8-port.png",
+      "format": "png",
+      "width": 239,
+      "height": 70,
+      "bytes": 23774,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3119:500",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/light",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Light",
+      "tags": [
+        "Lan Switch with POE & Fiber Patch Cord"
+      ],
+      "file": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/light.png",
+      "format": "png",
+      "width": 245,
+      "height": 320,
+      "bytes": 42783,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3079:89",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/liu-switch",
+      "category": "icons",
+      "set": "architecture",
+      "name": "LIU Switch",
+      "tags": [
+        "Lan Switch with POE & Fiber Patch Cord"
+      ],
+      "file": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/liu-switch.png",
+      "format": "png",
+      "width": 159,
+      "height": 159,
+      "bytes": 2942,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3079:228",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/network-switch",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Network Switch",
+      "tags": [
+        "Lan Switch with POE & Fiber Patch Cord"
+      ],
+      "file": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/network-switch.png",
+      "format": "png",
+      "width": 182,
+      "height": 63,
+      "bytes": 3340,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3079:1997",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/network-video-recorder",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Network Video Recorder",
+      "tags": [
+        "Lan Switch with POE & Fiber Patch Cord"
+      ],
+      "file": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/network-video-recorder.svg",
+      "format": "svg",
+      "width": 85,
+      "height": 28,
+      "bytes": 4195,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3079:12",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/plc",
+      "category": "icons",
+      "set": "architecture",
+      "name": "PLC",
+      "tags": [
+        "Lan Switch with POE & Fiber Patch Cord"
+      ],
+      "file": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/plc.png",
+      "format": "png",
+      "width": 147,
+      "height": 135,
+      "bytes": 2773,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3079:2052",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/poe-switch",
+      "category": "icons",
+      "set": "architecture",
+      "name": "POE Switch",
+      "tags": [
+        "Lan Switch with POE & Fiber Patch Cord"
+      ],
+      "file": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/poe-switch.png",
+      "format": "png",
+      "width": 182,
+      "height": 64,
+      "bytes": 3397,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3079:24",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/server-network-switch",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Server network switch",
+      "tags": [
+        "Lan Switch with POE & Fiber Patch Cord"
+      ],
+      "file": "icons/architecture/lan-switch-with-poe-and-fiber-patch-cord/server-network-switch.png",
+      "format": "png",
+      "width": 165,
+      "height": 116,
+      "bytes": 11728,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3079:1892",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/liu/12-port-2-port-sfp-switch-at-tankfarm",
+      "category": "icons",
+      "set": "architecture",
+      "name": "12 Port + 2 port SFP Switch at Tankfarm",
+      "tags": [
+        "LIU"
+      ],
+      "file": "icons/architecture/liu/12-port-2-port-sfp-switch-at-tankfarm.png",
+      "format": "png",
+      "width": 228,
+      "height": 57,
+      "bytes": 15723,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3090:4488",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/liu/12-port-liu",
+      "category": "icons",
+      "set": "architecture",
+      "name": "12 Port LIU",
+      "tags": [
+        "LIU"
+      ],
+      "file": "icons/architecture/liu/12-port-liu.png",
+      "format": "png",
+      "width": 200,
+      "height": 77,
+      "bytes": 20682,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3090:4485",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/liu/24-port-4-port-sfp-switch",
+      "category": "icons",
+      "set": "architecture",
+      "name": "24 Port + 4 port SFP Switch",
+      "tags": [
+        "LIU"
+      ],
+      "file": "icons/architecture/liu/24-port-4-port-sfp-switch.png",
+      "format": "png",
+      "width": 248,
+      "height": 46,
+      "bytes": 16870,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3090:4497",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/liu/24-port-liu",
+      "category": "icons",
+      "set": "architecture",
+      "name": "24 Port LIU",
+      "tags": [
+        "LIU"
+      ],
+      "file": "icons/architecture/liu/24-port-liu.png",
+      "format": "png",
+      "width": 152,
+      "height": 77,
+      "bytes": 17728,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3090:4500",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/liu/6-port-liu",
+      "category": "icons",
+      "set": "architecture",
+      "name": "6 Port LIU",
+      "tags": [
+        "LIU"
+      ],
+      "file": "icons/architecture/liu/6-port-liu.png",
+      "format": "png",
+      "width": 198,
+      "height": 110,
+      "bytes": 21747,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3096:427",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/liu/data-polling-ipc-at-tankfarm",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Data Polling IPC at Tankfarm",
+      "tags": [
+        "LIU"
+      ],
+      "file": "icons/architecture/liu/data-polling-ipc-at-tankfarm.png",
+      "format": "png",
+      "width": 184,
+      "height": 102,
+      "bytes": 19364,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3090:4494",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/liu/ethernet-switch",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Ethernet Switch",
+      "tags": [
+        "LIU"
+      ],
+      "file": "icons/architecture/liu/ethernet-switch.png",
+      "format": "png",
+      "width": 298,
+      "height": 92,
+      "bytes": 21339,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3094:6624",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/liu/industrial-edge-pc",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Industrial Edge PC",
+      "tags": [
+        "LIU"
+      ],
+      "file": "icons/architecture/liu/industrial-edge-pc.png",
+      "format": "png",
+      "width": 191,
+      "height": 83,
+      "bytes": 25695,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3090:3722",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/liu/lan-sfp-switch-16-2",
+      "category": "icons",
+      "set": "architecture",
+      "name": "LAN + SFP Switch 16+2",
+      "tags": [
+        "LIU"
+      ],
+      "file": "icons/architecture/liu/lan-sfp-switch-16-2.png",
+      "format": "png",
+      "width": 292,
+      "height": 48,
+      "bytes": 20104,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3119:457",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/liu/lan-sfp-switch-24-4",
+      "category": "icons",
+      "set": "architecture",
+      "name": "LAN + SFP Switch 24+4",
+      "tags": [
+        "LIU"
+      ],
+      "file": "icons/architecture/liu/lan-sfp-switch-24-4.png",
+      "format": "png",
+      "width": 263,
+      "height": 48,
+      "bytes": 18941,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3119:462",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/liu/lan-sfp-switch-4-1",
+      "category": "icons",
+      "set": "architecture",
+      "name": "LAN + SFP Switch 4+1",
+      "tags": [
+        "LIU"
+      ],
+      "file": "icons/architecture/liu/lan-sfp-switch-4-1.png",
+      "format": "png",
+      "width": 264,
+      "height": 65,
+      "bytes": 19641,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3119:456",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/liu/lan-sfp-switch-8-2",
+      "category": "icons",
+      "set": "architecture",
+      "name": "LAN + SFP Switch 8+2",
+      "tags": [
+        "LIU"
+      ],
+      "file": "icons/architecture/liu/lan-sfp-switch-8-2.png",
+      "format": "png",
+      "width": 244,
+      "height": 65,
+      "bytes": 21565,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3119:463",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/liu/liu-12-port",
+      "category": "icons",
+      "set": "architecture",
+      "name": "LIU 12 Port",
+      "tags": [
+        "LIU"
+      ],
+      "file": "icons/architecture/liu/liu-12-port.png",
+      "format": "png",
+      "width": 198,
+      "height": 110,
+      "bytes": 21747,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3096:428",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/liu/liu-6-port",
+      "category": "icons",
+      "set": "architecture",
+      "name": "LIU 6 port",
+      "tags": [
+        "LIU"
+      ],
+      "file": "icons/architecture/liu/liu-6-port.png",
+      "format": "png",
+      "width": 222,
+      "height": 85,
+      "bytes": 25860,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3119:461",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/liu/sfp-module",
+      "category": "icons",
+      "set": "architecture",
+      "name": "SFP Module",
+      "tags": [
+        "LIU"
+      ],
+      "file": "icons/architecture/liu/sfp-module.png",
+      "format": "png",
+      "width": 147,
+      "height": 124,
+      "bytes": 22388,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3119:459",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/logos/oracle-fusion",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Oracle fusion",
+      "tags": [
+        "Logos"
+      ],
+      "file": "icons/architecture/logos/oracle-fusion.png",
+      "format": "png",
+      "width": 204,
+      "height": 72,
+      "bytes": 8964,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3079:1926",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/logos/sap",
+      "category": "icons",
+      "set": "architecture",
+      "name": "SAP",
+      "tags": [
+        "Logos"
+      ],
+      "file": "icons/architecture/logos/sap.png",
+      "format": "png",
+      "width": 243,
+      "height": 120,
+      "bytes": 6248,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3093:6621",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/5hp-pump",
+      "category": "icons",
+      "set": "architecture",
+      "name": "5HP Pump",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/5hp-pump.png",
+      "format": "png",
+      "width": 221,
+      "height": 116,
+      "bytes": 2541,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3095:7074",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/ahu",
+      "category": "icons",
+      "set": "architecture",
+      "name": "AHU",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/ahu.png",
+      "format": "png",
+      "width": 288,
+      "height": 144,
+      "bytes": 42225,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3117:422",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/air-compressor",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Air Compressor",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/air-compressor.png",
+      "format": "png",
+      "width": 252,
+      "height": 252,
+      "bytes": 40780,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:3440",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/bch",
+      "category": "icons",
+      "set": "architecture",
+      "name": "BCH",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/bch.png",
+      "format": "png",
+      "width": 350,
+      "height": 224,
+      "bytes": 126897,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3087:3605",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/chiller-air-cooled",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Chiller (air cooled)",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/chiller-air-cooled.png",
+      "format": "png",
+      "width": 296,
+      "height": 168,
+      "bytes": 74954,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3119:423",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/chiller-original",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Chiller Original",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/chiller-original.png",
+      "format": "png",
+      "width": 350,
+      "height": 228,
+      "bytes": 86500,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3090:4962",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/chiller-water-cooled",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Chiller(water cooled)",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/chiller-water-cooled.png",
+      "format": "png",
+      "width": 278,
+      "height": 194,
+      "bytes": 72345,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3092:4966",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/chillers",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Chillers",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/chillers.png",
+      "format": "png",
+      "width": 454,
+      "height": 362,
+      "bytes": 88669,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3090:3725",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/closing",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Closing",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/closing.png",
+      "format": "png",
+      "width": 192,
+      "height": 96,
+      "bytes": 24255,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:3480",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/compressors",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Compressors",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/compressors.png",
+      "format": "png",
+      "width": 308,
+      "height": 298,
+      "bytes": 74973,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3090:3734",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/cooling-tower",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Cooling tower",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/cooling-tower.png",
+      "format": "png",
+      "width": 250,
+      "height": 190,
+      "bytes": 67753,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3119:425",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/fcu",
+      "category": "icons",
+      "set": "architecture",
+      "name": "FCU",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/fcu.png",
+      "format": "png",
+      "width": 284,
+      "height": 140,
+      "bytes": 62807,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3119:426",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/furnace",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Furnace",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/furnace.png",
+      "format": "png",
+      "width": 240,
+      "height": 152,
+      "bytes": 33539,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:3489",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/hwg",
+      "category": "icons",
+      "set": "architecture",
+      "name": "HWG",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/hwg.png",
+      "format": "png",
+      "width": 172,
+      "height": 196,
+      "bytes": 45056,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3093:5876",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/ibc-machine",
+      "category": "icons",
+      "set": "architecture",
+      "name": "IBC Machine",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/ibc-machine.png",
+      "format": "png",
+      "width": 147,
+      "height": 231,
+      "bytes": 23521,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3087:3587",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/idu-cassette",
+      "category": "icons",
+      "set": "architecture",
+      "name": "IDU Cassette",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/idu-cassette.png",
+      "format": "png",
+      "width": 370,
+      "height": 226,
+      "bytes": 89771,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3119:429",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/idu-ducting",
+      "category": "icons",
+      "set": "architecture",
+      "name": "IDU Ducting",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/idu-ducting.png",
+      "format": "png",
+      "width": 252,
+      "height": 188,
+      "bytes": 50203,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3119:427",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/idu-split",
+      "category": "icons",
+      "set": "architecture",
+      "name": "IDU Split",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/idu-split.png",
+      "format": "png",
+      "width": 272,
+      "height": 108,
+      "bytes": 14555,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3119:428",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/machine",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Machine",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/machine.png",
+      "format": "png",
+      "width": 222,
+      "height": 222,
+      "bytes": 49964,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3079:1982",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/machine-2",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Machine",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/machine-2.png",
+      "format": "png",
+      "width": 233,
+      "height": 159,
+      "bytes": 37384,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3079:1929",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/machine-3",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Machine",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/machine-3.png",
+      "format": "png",
+      "width": 278,
+      "height": 194,
+      "bytes": 50622,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3087:3602",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/machine-nichrome",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Machine Nichrome",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/machine-nichrome.png",
+      "format": "png",
+      "width": 171,
+      "height": 200,
+      "bytes": 51276,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3096:430",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/machine-wraptech",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Machine Wraptech",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/machine-wraptech.png",
+      "format": "png",
+      "width": 142,
+      "height": 200,
+      "bytes": 39187,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3096:432",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/machine-xprt",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Machine XPRT",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/machine-xprt.png",
+      "format": "png",
+      "width": 249,
+      "height": 175,
+      "bytes": 50886,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3096:431",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/manual-mode-start-push-button",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Manual Mode Start Push Button",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/manual-mode-start-push-button.png",
+      "format": "png",
+      "width": 195,
+      "height": 154,
+      "bytes": 35882,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3095:7043",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/manual-mode-stop-push-button",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Manual Mode Stop Push Button",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/manual-mode-stop-push-button.png",
+      "format": "png",
+      "width": 190,
+      "height": 166,
+      "bytes": 28303,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3095:7042",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/nitrogen-plant",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Nitrogen Plant",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/nitrogen-plant.png",
+      "format": "png",
+      "width": 308,
+      "height": 186,
+      "bytes": 100344,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3096:411",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/pickling-machine",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Pickling Machine",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/pickling-machine.png",
+      "format": "png",
+      "width": 246,
+      "height": 122,
+      "bytes": 42670,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:3495",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/plasticizing-sheathing",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Plasticizing/Sheathing",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/plasticizing-sheathing.png",
+      "format": "png",
+      "width": 200,
+      "height": 158,
+      "bytes": 32665,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:3477",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/roughing-machine",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Roughing Machine",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/roughing-machine.png",
+      "format": "png",
+      "width": 262,
+      "height": 170,
+      "bytes": 18305,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:3492",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/siemens-electromagnetic-flowmeter-mag-800-battery-powered",
+      "category": "icons",
+      "set": "architecture",
+      "name": "SIEMEN’S Electromagnetic flowmeter MAG 800 - Battery Powered",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/siemens-electromagnetic-flowmeter-mag-800-battery-powered.png",
+      "format": "png",
+      "width": 292,
+      "height": 274,
+      "bytes": 82236,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3093:5855",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/solar-panel",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Solar Panel",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/solar-panel.png",
+      "format": "png",
+      "width": 324,
+      "height": 324,
+      "bytes": 48278,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3093:5858",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/stranding",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Stranding",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/stranding.png",
+      "format": "png",
+      "width": 254,
+      "height": 152,
+      "bytes": 39655,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:3483",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/tfh",
+      "category": "icons",
+      "set": "architecture",
+      "name": "TFH",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/tfh.png",
+      "format": "png",
+      "width": 290,
+      "height": 254,
+      "bytes": 66830,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3093:5875",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/machines/wire-drawing",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Wire Drawing",
+      "tags": [
+        "Machines"
+      ],
+      "file": "icons/architecture/machines/wire-drawing.png",
+      "format": "png",
+      "width": 250,
+      "height": 166,
+      "bytes": 34479,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:3486",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/main-icons/analytical-server",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Analytical Server",
+      "tags": [
+        "Main icons"
+      ],
+      "file": "icons/architecture/main-icons/analytical-server.png",
+      "format": "png",
+      "width": 139,
+      "height": 139,
+      "bytes": 4653,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3079:225",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/main-icons/boiler",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Boiler",
+      "tags": [
+        "Main icons"
+      ],
+      "file": "icons/architecture/main-icons/boiler.png",
+      "format": "png",
+      "width": 110,
+      "height": 110,
+      "bytes": 4962,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:3518",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/main-icons/btu-meter",
+      "category": "icons",
+      "set": "architecture",
+      "name": "BTU meter",
+      "tags": [
+        "Main icons"
+      ],
+      "file": "icons/architecture/main-icons/btu-meter.png",
+      "format": "png",
+      "width": 108,
+      "height": 108,
+      "bytes": 4489,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:3530",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/main-icons/chillers",
+      "category": "icons",
+      "set": "architecture",
+      "name": "chillers",
+      "tags": [
+        "Main icons"
+      ],
+      "file": "icons/architecture/main-icons/chillers.png",
+      "format": "png",
+      "width": 142,
+      "height": 142,
+      "bytes": 2904,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3131:1587",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/main-icons/dg-sets",
+      "category": "icons",
+      "set": "architecture",
+      "name": "DG Sets",
+      "tags": [
+        "Main icons"
+      ],
+      "file": "icons/architecture/main-icons/dg-sets.png",
+      "format": "png",
+      "width": 92,
+      "height": 92,
+      "bytes": 3528,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:3519",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/main-icons/digital-logbook",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Digital Logbook",
+      "tags": [
+        "Main icons"
+      ],
+      "file": "icons/architecture/main-icons/digital-logbook.png",
+      "format": "png",
+      "width": 126,
+      "height": 126,
+      "bytes": 2550,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:3536",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/main-icons/firewall",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Firewall",
+      "tags": [
+        "Main icons"
+      ],
+      "file": "icons/architecture/main-icons/firewall.png",
+      "format": "png",
+      "width": 147,
+      "height": 147,
+      "bytes": 8135,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3079:1887",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/main-icons/flow-meter",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Flow meter",
+      "tags": [
+        "Main icons"
+      ],
+      "file": "icons/architecture/main-icons/flow-meter.png",
+      "format": "png",
+      "width": 93,
+      "height": 102,
+      "bytes": 3459,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3092:4983",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/main-icons/motor",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Motor",
+      "tags": [
+        "Main icons"
+      ],
+      "file": "icons/architecture/main-icons/motor.png",
+      "format": "png",
+      "width": 122,
+      "height": 122,
+      "bytes": 3752,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3136:2524",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/main-icons/pipe",
+      "category": "icons",
+      "set": "architecture",
+      "name": "pipe",
+      "tags": [
+        "Main icons"
+      ],
+      "file": "icons/architecture/main-icons/pipe.png",
+      "format": "png",
+      "width": 108,
+      "height": 108,
+      "bytes": 3854,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3136:2523",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/main-icons/sensor",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Sensor",
+      "tags": [
+        "Main icons"
+      ],
+      "file": "icons/architecture/main-icons/sensor.png",
+      "format": "png",
+      "width": 104,
+      "height": 104,
+      "bytes": 6272,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3136:2516",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/main-icons/steam-flow-meter",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Steam flow meter",
+      "tags": [
+        "Main icons"
+      ],
+      "file": "icons/architecture/main-icons/steam-flow-meter.png",
+      "format": "png",
+      "width": 104,
+      "height": 104,
+      "bytes": 4786,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:3529",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/main-icons/wifi-router",
+      "category": "icons",
+      "set": "architecture",
+      "name": "WiFi Router",
+      "tags": [
+        "Main icons"
+      ],
+      "file": "icons/architecture/main-icons/wifi-router.png",
+      "format": "png",
+      "width": 110,
+      "height": 110,
+      "bytes": 3413,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3079:2031",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/pc/iosense-dashboard",
+      "category": "icons",
+      "set": "architecture",
+      "name": "IOSENSE Dashboard",
+      "tags": [
+        "PC"
+      ],
+      "file": "icons/architecture/pc/iosense-dashboard.png",
+      "format": "png",
+      "width": 493,
+      "height": 263,
+      "bytes": 21761,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3090:4482",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/pc/pc-dashboard",
+      "category": "icons",
+      "set": "architecture",
+      "name": "PC Dashboard",
+      "tags": [
+        "PC"
+      ],
+      "file": "icons/architecture/pc/pc-dashboard.png",
+      "format": "png",
+      "width": 202,
+      "height": 188,
+      "bytes": 28942,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3087:3570",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/plc/24-vdc-plc",
+      "category": "icons",
+      "set": "architecture",
+      "name": "24 VDC PLC",
+      "tags": [
+        "PLC"
+      ],
+      "file": "icons/architecture/plc/24-vdc-plc.png",
+      "format": "png",
+      "width": 178,
+      "height": 258,
+      "bytes": 47023,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3087:3675",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/plc/existing-plc-entrib",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Existing PLC Entrib",
+      "tags": [
+        "PLC"
+      ],
+      "file": "icons/architecture/plc/existing-plc-entrib.png",
+      "format": "png",
+      "width": 258,
+      "height": 174,
+      "bytes": 35190,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3087:3599",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/plc/main-plc",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Main PLC",
+      "tags": [
+        "PLC"
+      ],
+      "file": "icons/architecture/plc/main-plc.png",
+      "format": "png",
+      "width": 196,
+      "height": 90,
+      "bytes": 30273,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:3542",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/plc/plc",
+      "category": "icons",
+      "set": "architecture",
+      "name": "PLC",
+      "tags": [
+        "PLC"
+      ],
+      "file": "icons/architecture/plc/plc.png",
+      "format": "png",
+      "width": 240,
+      "height": 196,
+      "bytes": 49434,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3095:7034",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/plc/plc-allen-bradley",
+      "category": "icons",
+      "set": "architecture",
+      "name": "PLC Allen Bradley",
+      "tags": [
+        "PLC"
+      ],
+      "file": "icons/architecture/plc/plc-allen-bradley.png",
+      "format": "png",
+      "width": 260,
+      "height": 172,
+      "bytes": 67359,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3131:1764",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/plc/plc-mitsubishi",
+      "category": "icons",
+      "set": "architecture",
+      "name": "PLC Mitsubishi",
+      "tags": [
+        "PLC"
+      ],
+      "file": "icons/architecture/plc/plc-mitsubishi.png",
+      "format": "png",
+      "width": 202,
+      "height": 198,
+      "bytes": 61297,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3131:1765",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/plc/plc-selec",
+      "category": "icons",
+      "set": "architecture",
+      "name": "PLC Selec",
+      "tags": [
+        "PLC"
+      ],
+      "file": "icons/architecture/plc/plc-selec.png",
+      "format": "png",
+      "width": 204,
+      "height": 198,
+      "bytes": 69355,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3131:1762",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/plc/plc-siemens",
+      "category": "icons",
+      "set": "architecture",
+      "name": "PLC Siemens",
+      "tags": [
+        "PLC"
+      ],
+      "file": "icons/architecture/plc/plc-siemens.png",
+      "format": "png",
+      "width": 184,
+      "height": 198,
+      "bytes": 50580,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3131:1763",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/plc/siemens-s7-1200-plc-s7-protocol",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Siemens (S7 1200 PLC S7 Protocol)",
+      "tags": [
+        "PLC"
+      ],
+      "file": "icons/architecture/plc/siemens-s7-1200-plc-s7-protocol.png",
+      "format": "png",
+      "width": 192,
+      "height": 114,
+      "bytes": 26912,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:3539",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/sensors/differential-pressure-sensor",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Differential Pressure Sensor",
+      "tags": [
+        "sensors"
+      ],
+      "file": "icons/architecture/sensors/differential-pressure-sensor.png",
+      "format": "png",
+      "width": 152,
+      "height": 156,
+      "bytes": 13406,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3079:2037",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/sensors/door-sensor",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Door Sensor",
+      "tags": [
+        "sensors"
+      ],
+      "file": "icons/architecture/sensors/door-sensor.png",
+      "format": "png",
+      "width": 198,
+      "height": 132,
+      "bytes": 23954,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3096:421",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/sensors/humidity",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Humidity",
+      "tags": [
+        "sensors"
+      ],
+      "file": "icons/architecture/sensors/humidity.png",
+      "format": "png",
+      "width": 132,
+      "height": 100,
+      "bytes": 12706,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3096:420",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/sensors/level-sensor",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Level sensor",
+      "tags": [
+        "sensors"
+      ],
+      "file": "icons/architecture/sensors/level-sensor.png",
+      "format": "png",
+      "width": 158,
+      "height": 158,
+      "bytes": 17961,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3094:7028",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/sensors/level-sensor-2",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Level sensor",
+      "tags": [
+        "sensors"
+      ],
+      "file": "icons/architecture/sensors/level-sensor-2.png",
+      "format": "png",
+      "width": 200,
+      "height": 200,
+      "bytes": 5832,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3095:7077",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/sensors/motor-vibration-sensor",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Motor Vibration Sensor",
+      "tags": [
+        "sensors"
+      ],
+      "file": "icons/architecture/sensors/motor-vibration-sensor.png",
+      "format": "png",
+      "width": 149,
+      "height": 146,
+      "bytes": 36225,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3079:1923",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/sensors/photo-electric-sensor",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Photo Electric Sensor",
+      "tags": [
+        "sensors"
+      ],
+      "file": "icons/architecture/sensors/photo-electric-sensor.png",
+      "format": "png",
+      "width": 142,
+      "height": 196,
+      "bytes": 27190,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:3471",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/sensors/photoelectric-sensor",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Photoelectric Sensor",
+      "tags": [
+        "sensors"
+      ],
+      "file": "icons/architecture/sensors/photoelectric-sensor.png",
+      "format": "png",
+      "width": 112,
+      "height": 176,
+      "bytes": 22768,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3096:413",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/sensors/pressure-sensor",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Pressure sensor",
+      "tags": [
+        "sensors"
+      ],
+      "file": "icons/architecture/sensors/pressure-sensor.png",
+      "format": "png",
+      "width": 128,
+      "height": 128,
+      "bytes": 7404,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:3452",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/sensors/rotatory-encoder",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Rotatory encoder",
+      "tags": [
+        "sensors"
+      ],
+      "file": "icons/architecture/sensors/rotatory-encoder.png",
+      "format": "png",
+      "width": 150,
+      "height": 162,
+      "bytes": 35540,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:3474",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/sensors/rpm-sensor",
+      "category": "icons",
+      "set": "architecture",
+      "name": "RPM Sensor",
+      "tags": [
+        "sensors"
+      ],
+      "file": "icons/architecture/sensors/rpm-sensor.png",
+      "format": "png",
+      "width": 144,
+      "height": 100,
+      "bytes": 6919,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3096:407",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/sensors/sensor-installation",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Sensor Installation",
+      "tags": [
+        "sensors"
+      ],
+      "file": "icons/architecture/sensors/sensor-installation.png",
+      "format": "png",
+      "width": 122,
+      "height": 168,
+      "bytes": 7438,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3087:3578",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/sensors/speed-sensor",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Speed Sensor",
+      "tags": [
+        "sensors"
+      ],
+      "file": "icons/architecture/sensors/speed-sensor.png",
+      "format": "png",
+      "width": 120,
+      "height": 100,
+      "bytes": 15914,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3096:406",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/sensors/temp-and-humidity-sensor",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Temp & Humidity Sensor",
+      "tags": [
+        "sensors"
+      ],
+      "file": "icons/architecture/sensors/temp-and-humidity-sensor.png",
+      "format": "png",
+      "width": 124,
+      "height": 124,
+      "bytes": 13538,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3096:405",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/sensors/temperature",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Temperature",
+      "tags": [
+        "sensors"
+      ],
+      "file": "icons/architecture/sensors/temperature.png",
+      "format": "png",
+      "width": 162,
+      "height": 162,
+      "bytes": 8946,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3096:419",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/sensors/temperature-sensor",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Temperature Sensor",
+      "tags": [
+        "sensors"
+      ],
+      "file": "icons/architecture/sensors/temperature-sensor.png",
+      "format": "png",
+      "width": 121,
+      "height": 121,
+      "bytes": 9004,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3079:2058",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/sensors/vibration-sensor",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Vibration Sensor",
+      "tags": [
+        "sensors"
+      ],
+      "file": "icons/architecture/sensors/vibration-sensor.png",
+      "format": "png",
+      "width": 200,
+      "height": 200,
+      "bytes": 11804,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3096:408",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/sensors/vibration-sensor-4-1-12",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Vibration Sensor (4) (1) 12",
+      "tags": [
+        "sensors"
+      ],
+      "file": "icons/architecture/sensors/vibration-sensor-4-1-12.png",
+      "format": "png",
+      "width": 128,
+      "height": 124,
+      "bytes": 15499,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3092:4986",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/wifi-router-lan-switch-and-nodes/4g-sim-based-router",
+      "category": "icons",
+      "set": "architecture",
+      "name": "4G Sim Based Router",
+      "tags": [
+        "WIFI Router, LAN Switch and nodes"
+      ],
+      "file": "icons/architecture/wifi-router-lan-switch-and-nodes/4g-sim-based-router.png",
+      "format": "png",
+      "width": 238,
+      "height": 184,
+      "bytes": 32899,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3090:3743",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/wifi-router-lan-switch-and-nodes/carbide-plant-operator-station-opc-ua-server",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Carbide Plant Operator Station OPC UA Server",
+      "tags": [
+        "WIFI Router, LAN Switch and nodes"
+      ],
+      "file": "icons/architecture/wifi-router-lan-switch-and-nodes/carbide-plant-operator-station-opc-ua-server.png",
+      "format": "png",
+      "width": 153,
+      "height": 153,
+      "bytes": 21221,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3079:2009",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/wifi-router-lan-switch-and-nodes/ct-short-link-connector",
+      "category": "icons",
+      "set": "architecture",
+      "name": "CT short link connector",
+      "tags": [
+        "WIFI Router, LAN Switch and nodes"
+      ],
+      "file": "icons/architecture/wifi-router-lan-switch-and-nodes/ct-short-link-connector.png",
+      "format": "png",
+      "width": 188,
+      "height": 125,
+      "bytes": 39180,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3131:1689",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/wifi-router-lan-switch-and-nodes/current-transformer",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Current Transformer",
+      "tags": [
+        "WIFI Router, LAN Switch and nodes"
+      ],
+      "file": "icons/architecture/wifi-router-lan-switch-and-nodes/current-transformer.png",
+      "format": "png",
+      "width": 133,
+      "height": 145,
+      "bytes": 28910,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3131:1690",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/wifi-router-lan-switch-and-nodes/data-polling-ipc",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Data Polling IPC",
+      "tags": [
+        "WIFI Router, LAN Switch and nodes"
+      ],
+      "file": "icons/architecture/wifi-router-lan-switch-and-nodes/data-polling-ipc.png",
+      "format": "png",
+      "width": 133,
+      "height": 133,
+      "bytes": 21849,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3079:2012",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/wifi-router-lan-switch-and-nodes/iot-node",
+      "category": "icons",
+      "set": "architecture",
+      "name": "IoT Node",
+      "tags": [
+        "WIFI Router, LAN Switch and nodes"
+      ],
+      "file": "icons/architecture/wifi-router-lan-switch-and-nodes/iot-node.png",
+      "format": "png",
+      "width": 100,
+      "height": 145,
+      "bytes": 13165,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:1722",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/wifi-router-lan-switch-and-nodes/lan-switch-16-port",
+      "category": "icons",
+      "set": "architecture",
+      "name": "LAN Switch 16 port",
+      "tags": [
+        "WIFI Router, LAN Switch and nodes"
+      ],
+      "file": "icons/architecture/wifi-router-lan-switch-and-nodes/lan-switch-16-port.png",
+      "format": "png",
+      "width": 311,
+      "height": 59,
+      "bytes": 22432,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3131:1693",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/wifi-router-lan-switch-and-nodes/lan-switch-24-port",
+      "category": "icons",
+      "set": "architecture",
+      "name": "LAN Switch 24 port",
+      "tags": [
+        "WIFI Router, LAN Switch and nodes"
+      ],
+      "file": "icons/architecture/wifi-router-lan-switch-and-nodes/lan-switch-24-port.png",
+      "format": "png",
+      "width": 323,
+      "height": 80,
+      "bytes": 29956,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3131:1694",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/wifi-router-lan-switch-and-nodes/lan-switch-5-port",
+      "category": "icons",
+      "set": "architecture",
+      "name": "LAN Switch 5 port",
+      "tags": [
+        "WIFI Router, LAN Switch and nodes"
+      ],
+      "file": "icons/architecture/wifi-router-lan-switch-and-nodes/lan-switch-5-port.png",
+      "format": "png",
+      "width": 166,
+      "height": 74,
+      "bytes": 20177,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3131:1695",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/wifi-router-lan-switch-and-nodes/lan-switch-8-port",
+      "category": "icons",
+      "set": "architecture",
+      "name": "LAN Switch 8 port",
+      "tags": [
+        "WIFI Router, LAN Switch and nodes"
+      ],
+      "file": "icons/architecture/wifi-router-lan-switch-and-nodes/lan-switch-8-port.png",
+      "format": "png",
+      "width": 226,
+      "height": 64,
+      "bytes": 21639,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3131:1692",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/wifi-router-lan-switch-and-nodes/lora-node",
+      "category": "icons",
+      "set": "architecture",
+      "name": "LoRa Node",
+      "tags": [
+        "WIFI Router, LAN Switch and nodes"
+      ],
+      "file": "icons/architecture/wifi-router-lan-switch-and-nodes/lora-node.png",
+      "format": "png",
+      "width": 139,
+      "height": 128,
+      "bytes": 15266,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:1712",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/wifi-router-lan-switch-and-nodes/mcb",
+      "category": "icons",
+      "set": "architecture",
+      "name": "MCB",
+      "tags": [
+        "WIFI Router, LAN Switch and nodes"
+      ],
+      "file": "icons/architecture/wifi-router-lan-switch-and-nodes/mcb.png",
+      "format": "png",
+      "width": 121,
+      "height": 151,
+      "bytes": 18684,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3131:1696",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/wifi-router-lan-switch-and-nodes/panels",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Panels",
+      "tags": [
+        "WIFI Router, LAN Switch and nodes"
+      ],
+      "file": "icons/architecture/wifi-router-lan-switch-and-nodes/panels.png",
+      "format": "png",
+      "width": 110,
+      "height": 198,
+      "bytes": 17307,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:3551",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/wifi-router-lan-switch-and-nodes/steam-trap-monitoring-node",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Steam Trap monitoring node",
+      "tags": [
+        "WIFI Router, LAN Switch and nodes"
+      ],
+      "file": "icons/architecture/wifi-router-lan-switch-and-nodes/steam-trap-monitoring-node.png",
+      "format": "png",
+      "width": 172,
+      "height": 170,
+      "bytes": 23062,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3087:3584",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/wifi-router-lan-switch-and-nodes/switch-welspun-scope",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Switch (Welspun Scope)",
+      "tags": [
+        "WIFI Router, LAN Switch and nodes"
+      ],
+      "file": "icons/architecture/wifi-router-lan-switch-and-nodes/switch-welspun-scope.png",
+      "format": "png",
+      "width": 256,
+      "height": 98,
+      "bytes": 27076,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3084:3533",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/wifi-router-lan-switch-and-nodes/tplink-mr200",
+      "category": "icons",
+      "set": "architecture",
+      "name": "TPLINK MR200",
+      "tags": [
+        "WIFI Router, LAN Switch and nodes"
+      ],
+      "file": "icons/architecture/wifi-router-lan-switch-and-nodes/tplink-mr200.png",
+      "format": "png",
+      "width": 128,
+      "height": 138,
+      "bytes": 9325,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3131:1697",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/wifi-router-lan-switch-and-nodes/wifi-router-teltonika-rut-200",
+      "category": "icons",
+      "set": "architecture",
+      "name": "WiFi Router - Teltonika rut 200",
+      "tags": [
+        "WIFI Router, LAN Switch and nodes"
+      ],
+      "file": "icons/architecture/wifi-router-lan-switch-and-nodes/wifi-router-teltonika-rut-200.png",
+      "format": "png",
+      "width": 128,
+      "height": 133,
+      "bytes": 12320,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3131:1691",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "icons/architecture/wifi-router-lan-switch-and-nodes/wireless-receiver",
+      "category": "icons",
+      "set": "architecture",
+      "name": "Wireless Receiver",
+      "tags": [
+        "WIFI Router, LAN Switch and nodes"
+      ],
+      "file": "icons/architecture/wifi-router-lan-switch-and-nodes/wireless-receiver.png",
+      "format": "png",
+      "width": 145,
+      "height": 145,
+      "bytes": 18038,
+      "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
+      "owner": "to add",
+      "source": {
+        "figma_node": "3079:8",
+        "page": "icons_architecture"
+      },
+      "last_updated": "2026-10-27"
+    }
+  ]
 }

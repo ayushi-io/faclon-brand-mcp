@@ -8,6 +8,8 @@ export const P = {
   components: "ds/03-components/components.json",
   rules: "ds/09-brand-validator/validator-rules.json",
   skills: "ds/07-skills",
+  assets: "ds/05-assets",
+  assetIndex: "ds/05-assets/_index.json",
   snapshot: "sources/figma/snapshot.json",
   componentsSnapshot: "sources/figma/components-snapshot.json",
   overrides: "sources/overrides/semantic-colors.json",

@@ -73,6 +73,52 @@
       "source": "Brand team decision 2026-10-26"
     },
     {
+      "id": "logo.co-branding",
+      "category": "logo",
+      "rule": "When Faclon Labs appears with a partner, use one horizontal lockup: the Faclon Labs logo first, a vertical divider, then the partner logo, all centred on one line. With H the height of the Faclon Labs logo: about 3/4 H of space on each side of the divider; the divider is a border-width/default (1px) line in border/strong, about 3/4 H long; the partner logo is about 3/4 H tall and never taller than the Faclon Labs logo. Both logos are the real files from the asset library, unchanged. On dark or brand backgrounds use the white Faclon Labs logo and the partner's version for dark backgrounds; if the library has none, ask the user. Reference: the Faclon Labs and HPE lockup (asset partner-logos/faclon-labs-and-hpe-co-branding-lockup).",
+      "check": {
+        "type": "logo-lockup",
+        "order": [
+          "faclon-labs-logo",
+          "divider",
+          "partner-logo"
+        ],
+        "direction": "horizontal",
+        "align": "center",
+        "gap": "0.75 x Faclon Labs logo height, each side of the divider",
+        "divider": {
+          "orientation": "vertical",
+          "width": "border-width/default",
+          "colour": "border/strong",
+          "length": "0.75 x Faclon Labs logo height"
+        },
+        "partner_logo_height": "about 0.75 x Faclon Labs logo height, never taller",
+        "reference": "partner-logos/faclon-labs-and-hpe-co-branding-lockup"
+      },
+      "severity": "error",
+      "locked": true,
+      "source": "Figma ❑ Logo page: Faclon Labs and HPE example (brand team, 2026-10-27). The example's divider (#898888, 0.77px) is mapped to border/strong and border-width/default, since every colour and width comes from tokens."
+    },
+    {
+      "id": "assets.headshots",
+      "category": "assets",
+      "rule": "Team headshots come from the asset library with no background. Place each on a fill of background/primary in the dark theme, whatever the shape of the frame. Never crop a headshot from the top: the whole head stays in the frame, and any crop is at the bottom or the sides.",
+      "check": {
+        "type": "headshot-placement",
+        "background": "background/primary (dark theme)",
+        "crop": {
+          "top": "never",
+          "allowed": [
+            "bottom",
+            "sides"
+          ]
+        }
+      },
+      "severity": "error",
+      "locked": true,
+      "source": "Brand team decision 2026-10-27 (headshots exported without background)"
+    },
+    {
       "id": "type.two-families-only",
       "category": "typography",
       "rule": "Only two typefaces exist: TASA Orbiter and Inter. No third typeface may be referenced anywhere, including as a fallback. If TASA Orbiter is unavailable, fall back to Inter and stop there.",

@@ -2,11 +2,11 @@
   "source": {
     "fileName": "Design MCP",
     "fileKey": "UDARPzxpNySOS2F3mxhgUs",
-    "extractedAt": "2026-10-23T12:00:56.447Z",
+    "extractedAt": "2026-10-27T07:15:57.720Z",
     "method": "Faclon Brand Sync plugin (buildSnapshot, run through the figma-console Desktop Bridge)",
     "figmaVersion": {
-      "id": "2413521379467502797",
-      "title": "Brand sync 2026-10-23"
+      "id": "2414932825467107014",
+      "title": "Brand sync 2026-10-27"
     }
   },
   "collections": [
@@ -377,110 +377,6 @@
           "description": ""
         },
         {
-          "name": "neutral-dark/000",
-          "type": "COLOR",
-          "values": {
-            "Default": "#FCFCFD"
-          },
-          "description": ""
-        },
-        {
-          "name": "neutral-dark/050",
-          "type": "COLOR",
-          "values": {
-            "Default": "#E7E9EE"
-          },
-          "description": ""
-        },
-        {
-          "name": "neutral-dark/100",
-          "type": "COLOR",
-          "values": {
-            "Default": "#D0D4DD"
-          },
-          "description": ""
-        },
-        {
-          "name": "neutral-dark/200",
-          "type": "COLOR",
-          "values": {
-            "Default": "#B8C0CC"
-          },
-          "description": ""
-        },
-        {
-          "name": "neutral-dark/300",
-          "type": "COLOR",
-          "values": {
-            "Default": "#8A98AD"
-          },
-          "description": ""
-        },
-        {
-          "name": "neutral-dark/400",
-          "type": "COLOR",
-          "values": {
-            "Default": "#5A6B87"
-          },
-          "description": ""
-        },
-        {
-          "name": "neutral-dark/500",
-          "type": "COLOR",
-          "values": {
-            "Default": "#485770"
-          },
-          "description": ""
-        },
-        {
-          "name": "neutral-dark/600",
-          "type": "COLOR",
-          "values": {
-            "Default": "#3A495F"
-          },
-          "description": ""
-        },
-        {
-          "name": "neutral-dark/700",
-          "type": "COLOR",
-          "values": {
-            "Default": "#2D3A4D"
-          },
-          "description": ""
-        },
-        {
-          "name": "neutral-dark/800",
-          "type": "COLOR",
-          "values": {
-            "Default": "#273244"
-          },
-          "description": ""
-        },
-        {
-          "name": "neutral-dark/900",
-          "type": "COLOR",
-          "values": {
-            "Default": "#232E3E"
-          },
-          "description": ""
-        },
-        {
-          "name": "neutral-dark/1000",
-          "type": "COLOR",
-          "values": {
-            "Default": "#1D2635"
-          },
-          "description": ""
-        },
-        {
-          "name": "neutral-dark/1100",
-          "type": "COLOR",
-          "values": {
-            "Default": "#171F2B"
-          },
-          "description": ""
-        },
-        {
           "name": "base/black",
           "type": "COLOR",
           "values": {
@@ -538,7 +434,7 @@
               "collection": "Global Colors"
             },
             "Dark": {
-              "alias": "neutral-dark/1100",
+              "alias": "neutral-light/1200",
               "collection": "Global Colors"
             }
           },
@@ -568,7 +464,7 @@
               "collection": "Global Colors"
             },
             "Dark": {
-              "alias": "neutral-dark/900",
+              "alias": "neutral-light/1000",
               "collection": "Global Colors"
             }
           },
@@ -583,7 +479,7 @@
               "collection": "Global Colors"
             },
             "Dark": {
-              "alias": "neutral-dark/000",
+              "alias": "base/white",
               "collection": "Global Colors"
             }
           },
@@ -658,7 +554,7 @@
               "collection": "Global Colors"
             },
             "Dark": {
-              "alias": "neutral-dark/1000",
+              "alias": "neutral-light/1100",
               "collection": "Global Colors"
             }
           },
@@ -673,7 +569,7 @@
               "collection": "Global Colors"
             },
             "Dark": {
-              "alias": "neutral-dark/900",
+              "alias": "neutral-light/1000",
               "collection": "Global Colors"
             }
           },
@@ -688,7 +584,7 @@
               "collection": "Global Colors"
             },
             "Dark": {
-              "alias": "neutral-dark/800",
+              "alias": "neutral-light/900",
               "collection": "Global Colors"
             }
           },
@@ -763,7 +659,7 @@
               "collection": "Global Colors"
             },
             "Dark": {
-              "alias": "neutral-dark/000",
+              "alias": "base/white",
               "collection": "Global Colors"
             }
           },
@@ -793,7 +689,7 @@
               "collection": "Global Colors"
             },
             "Dark": {
-              "alias": "neutral-dark/100",
+              "alias": "neutral-light/300",
               "collection": "Global Colors"
             }
           },
@@ -808,7 +704,7 @@
               "collection": "Global Colors"
             },
             "Dark": {
-              "alias": "neutral-dark/200",
+              "alias": "neutral-light/400",
               "collection": "Global Colors"
             }
           },
@@ -823,7 +719,7 @@
               "collection": "Global Colors"
             },
             "Dark": {
-              "alias": "neutral-dark/300",
+              "alias": "neutral-light/500",
               "collection": "Global Colors"
             }
           },
@@ -838,7 +734,7 @@
               "collection": "Global Colors"
             },
             "Dark": {
-              "alias": "neutral-dark/1100",
+              "alias": "neutral-light/1200",
               "collection": "Global Colors"
             }
           },
@@ -928,7 +824,7 @@
               "collection": "Global Colors"
             },
             "Dark": {
-              "alias": "neutral-dark/700",
+              "alias": "neutral-light/900",
               "collection": "Global Colors"
             }
           },
@@ -943,7 +839,7 @@
               "collection": "Global Colors"
             },
             "Dark": {
-              "alias": "neutral-dark/800",
+              "alias": "neutral-light/1000",
               "collection": "Global Colors"
             }
           },
@@ -958,7 +854,7 @@
               "collection": "Global Colors"
             },
             "Dark": {
-              "alias": "neutral-dark/500",
+              "alias": "neutral-light/800",
               "collection": "Global Colors"
             }
           },
@@ -1033,7 +929,7 @@
               "collection": "Global Colors"
             },
             "Dark": {
-              "alias": "neutral-dark/1100",
+              "alias": "neutral-light/1200",
               "collection": "Global Colors"
             }
           },
@@ -1048,7 +944,7 @@
               "collection": "Global Colors"
             },
             "Dark": {
-              "alias": "neutral-dark/800",
+              "alias": "neutral-light/1000",
               "collection": "Global Colors"
             }
           },
@@ -1104,15 +1000,15 @@
           "type": "COLOR",
           "values": {
             "Light": {
-              "alias": "neutral-dark/050",
+              "alias": "neutral-light/200",
               "collection": "Global Colors"
             },
             "Dark": {
-              "alias": "neutral-dark/800",
+              "alias": "neutral-light/1000",
               "collection": "Global Colors"
             }
           },
-          "description": "DEFAULT border for container/primary. Light: neutral-dark/050, paired with the neutral-light/100 fill. Very low contrast by design — see the ratios in semantic.css."
+          "description": "DEFAULT border for container/primary. Light: neutral-light/200. Very low contrast by design — see the ratios in semantic.css."
         },
         {
           "name": "background/accent",

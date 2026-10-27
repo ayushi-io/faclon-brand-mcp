@@ -23,7 +23,10 @@ test("colour tokens match the Figma snapshot exactly", () => {
   assert.equal(tokens.semantic.background.primary.value, "#FFFFFF");
   assert.equal(tokens.semantic.background.primary.ref, "base/white");
   const dark = getTokens({ category: "color", mode: "dark" }).tokens;
-  assert.equal(dark.semantic.background.primary.ref, "neutral-dark/1100");
+  assert.equal(dark.semantic.background.primary.ref, "neutral-light/1200");
+  // Neutral-dark was removed on 2026-10-27: both themes use the neutral-light scale.
+  assert.equal(tokens.primitive["neutral-dark"], undefined);
+  for (const group of Object.values(dark.semantic)) for (const t of Object.values(group)) assert.ok(!String(t.ref).startsWith("neutral-dark"), t.ref);
 });
 
 test("typography sizes follow Desktop and Mobile modes", () => {
@@ -155,7 +158,7 @@ test("uploaded token files agree with the server on every primitive", async () =
   const { primitive } = getTokens({ category: "color", mode: "light" }).tokens;
   for (const [k, v] of Object.entries(up.brand)) assert.equal(primitive.brand[k], v);
   for (const [k, v] of Object.entries(up.neutralLight)) assert.equal(primitive["neutral-light"][k], v);
-  for (const [k, v] of Object.entries(up.neutralDark)) assert.equal(primitive["neutral-dark"][k], v);
+  // neutralDark in the uploaded file is retired: the neutral-dark scale was removed on 2026-10-27.
 });
 
 test("brand decisions 2026-10-09 are now in Figma itself: colours and weights 400–700", () => {

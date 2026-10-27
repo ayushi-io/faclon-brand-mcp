@@ -34,7 +34,7 @@
     },
     {
       "id": "icons",
-      "text": "Never pick, draw or substitute an icon: icons come from the Faclon architecture icon library; until it is provided, ask the user.",
+      "text": "Never draw, substitute or take an icon from outside the Faclon architecture icon library (get_brand_guidelines(section: \"assets\", asset_category: \"icons\")); if a device has no icon there, ask the user.",
       "basis": [
         "profile:icons"
       ]
