@@ -4,6 +4,8 @@ Each change to the system bumps `brand_version` in `version.json` (format `YYYY.
 
 ## 2026-10-27
 
+- Glow is approved for Bruce AI content only (as on the Bruce AI carousel cover), with the Bruce AI gradient; it stays banned everywhere else, and glass never. `check_design` allows glow when the content is about Bruce AI.
+- Templates (04-templates): 34 templates from the Figma Template frames, 21 for decks, 5 for architectures (including the camera-based vision system) and 8 for social media, each with section, purpose, theme, layout notes and a thumbnail. Served by `get_brand_guidelines(section: "templates", format_profile)`, thumbnails at `/templates/...`. Templates give layout only, never content. The deck, architecture and social skills start from them. A4 documents and newsletters have no templates yet.
 - Neutral-dark removed from the design system (it was almost the same as neutral-light). The dark theme now uses neutral-light, with its layers kept apart: page #192839 (background/primary), cards #243547, nested cards and borders #2F4256, stronger borders #40566D and #58728D. Light-theme border/container is neutral-light/200.
 - Team headshots are cut-outs with no background (rule assets.headshots: fill with background/primary in the dark theme, never crop from the top); the Figma headshot components now use that fill.
 - Partner logos updated from Figma: Accenture, AWS (and its version for dark backgrounds), Microsoft Azure and HPE; Idex and KSB removed with the OEM tie-ups section.

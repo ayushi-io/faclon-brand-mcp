@@ -22,7 +22,7 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 1. **Think like sales.** Who is the buyer, where are they in the pipeline (first hearing of Faclon Labs, comparing options, ready to decide) and what should they do after the deck? Let that set the order of emphasis and the one message of each slide. It never changes the user's words.
 2. **Load the rules.** `get_brand_guidelines(section: "rules", format_profile: "deck")`, then `get_tokens(format: "deck")` and `get_brand_guidelines(section: "components", format_profile: "deck")`.
 3. **Plan the slides.** One message per slide. Spread the content across slides (unless the user set the number). Mark which slides use a reference slide and which you design.
-4. **Design.** Build each slide on the grid with the components and text styles below. Use the reference slides where they apply.
+4. **Design.** Build each slide on the grid with the components and text styles below. Use the reference slides where they apply, and start other slides from the deck templates (`get_brand_guidelines(section: "templates", format_profile: "deck")`: cover, page breaker, content, product stack, dashboard and product, team, closing). Take a template's layout only, never its content.
 5. **Check.** Run `check_design(html, format_profile: "deck")` on the finished HTML, fix every error and run it again; flag warnings about the user's words to the user instead of changing them. Then go through the checklist at the end, which covers what the tool cannot see (layout, spacing, hierarchy, overflow).
 6. **Deliver** one HTML file, plus a short note of anything you flagged (content that did not fit, a suggestion waiting for approval).
 
@@ -64,5 +64,5 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 - [ ] Logo on the 52px edge, the right colour for the theme.
 - [ ] Reference slides keep their design; only the four mappings changed.
 - [ ] AI slides: the user was asked about the dark theme.
-- [ ] No gradients, glows, AI cliches or repeated template layouts.
+- [ ] No gradients or glows (except the Bruce AI gradient and glow on Bruce AI content), AI cliches or repeated template layouts.
 - [ ] One HTML file.

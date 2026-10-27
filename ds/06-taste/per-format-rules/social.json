@@ -87,7 +87,7 @@
     },
     {
       "id": "no-ai-slop",
-      "text": "Never make it look generic or machine-made: no gradients, glows, neon, glass or blur effects, decorative filler (blobs, orbs, sparkles, floating shapes), AI cliche imagery or icons (glowing brains, circuits, robot hands, sparkles or rockets for AI), text effects, or a coloured stripe down one side of a card. Exceptions: the design elements, each on its own background, and the Bruce AI gradient on Bruce AI content.",
+      "text": "Never make it look generic or machine-made: no gradients, glows, neon, glass or blur effects, decorative filler (blobs, orbs, sparkles, floating shapes), AI cliche imagery or icons (glowing brains, circuits, robot hands, sparkles or rockets for AI), text effects, or a coloured stripe down one side of a card. Exceptions: the design elements, each on its own background, and the Bruce AI gradient and glow on Bruce AI content.",
       "basis": [
         "rule:design.no-ai-slop"
       ]

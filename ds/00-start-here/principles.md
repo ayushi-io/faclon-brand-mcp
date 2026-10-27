@@ -26,7 +26,7 @@ Faclon Labs work is about measurable outcomes, so the design should make them vi
 
 If an element carries no content or structure, it goes. When in doubt, leave it out.
 
-- No decoration for its own sake: no gradients, glows, blobs, sparkles, glass effects, or a colored stripe down a card. The only exceptions are the brand's design elements and gradient styles, where the rules allow them.
+- No decoration for its own sake: no gradients, glows, blobs, sparkles, glass effects, or a colored stripe down a card. The only exceptions are the brand's design elements and gradient styles where the rules allow them, and glow on Bruce AI content.
 - No AI clichés: glowing brains, circuits, robot hands, rockets.
 - No template look: the same icon, title and text card in every section, or an icon on every heading.
 - Surfaces are flat by default. A shadow only lifts a card when it needs lifting.

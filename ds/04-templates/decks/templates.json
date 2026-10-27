@@ -1,0 +1,303 @@
+{
+  "outcome": "decks",
+  "format_profile": "deck",
+  "use": "Templates show layout, composition, hierarchy and rhythm only. Never copy their text, numbers, claims, client names or logos: content comes from the user. Their colours, fonts and sizes need not match the design system; build every output with design-system tokens, text roles, components and assets. Pick the template whose structure fits the user's content, then adapt it.",
+  "source": "Figma Design MCP, the Template frame on the outcome's page",
+  "updated": "2026-10-27",
+  "sections": [
+    {
+      "name": "Cover page",
+      "use": "The opening slide of a deck.",
+      "templates": [
+        {
+          "id": "decks/cover-headline-stats-and-contact",
+          "name": "Cover · headline, stats and contact",
+          "theme": "dark",
+          "layout": "Logo top-right; small eyebrow tag above a two-line headline (one line in the accent colour); one-line subline; two small stats side by side; a contact box bottom-left; footer line bottom-right; the dot-particle design element across the right half.",
+          "thumbnail": "thumbnails/cover-headline-stats-and-contact.png",
+          "thumbnail_size": [
+            768,
+            432
+          ],
+          "figma_node": "3209:5232"
+        }
+      ]
+    },
+    {
+      "name": "Page breaker",
+      "use": "Section dividers between parts of a deck. Pick one of the designs. Q&A slides use this brand-theme breaker.",
+      "templates": [
+        {
+          "id": "decks/page-breaker-section-title",
+          "name": "Page breaker · section title",
+          "theme": "brand",
+          "layout": "Full-bleed brand blue; logo (or co-branding lockup) top-right; small dark tag above a large one-line section title, left and centred vertically; a single row of proof points along the bottom.",
+          "thumbnail": "thumbnails/page-breaker-section-title.png",
+          "thumbnail_size": [
+            768,
+            432
+          ],
+          "figma_node": "3158:26791"
+        }
+      ]
+    },
+    {
+      "name": "Content slides",
+      "use": "Layouts for normal content slides: a starting point adapted to the user's content.",
+      "templates": [
+        {
+          "id": "decks/concept-chart-with-layer-row",
+          "name": "Concept chart with layer row",
+          "theme": "light",
+          "layout": "Eyebrow, then a two-line title with the key phrase in brand blue; one large annotated line chart filling the middle (two curves crossing, callouts on the curves); a full-width brand bar with a grid of six labels beneath it as a layer diagram.",
+          "thumbnail": "thumbnails/concept-chart-with-layer-row.png",
+          "thumbnail_size": [
+            768,
+            432
+          ],
+          "figma_node": "3158:26865"
+        },
+        {
+          "id": "decks/journey-table",
+          "name": "Journey table",
+          "theme": "light",
+          "layout": "Title with a highlighted phrase and a subtitle; a full-width table: a dark header row of stages across the top, rows for a growth chart, application chips and customer logos, with row labels in a coloured left column.",
+          "thumbnail": "thumbnails/journey-table.png",
+          "thumbnail_size": [
+            768,
+            432
+          ],
+          "figma_node": "3158:26941"
+        },
+        {
+          "id": "decks/two-maps-with-headline-stat",
+          "name": "Two maps with headline stat",
+          "theme": "light",
+          "layout": "Title with a highlighted figure; two map panels side by side, each with bubble markers sized by value and a short caption; a large stat chip on a dark tile bottom-left with a one-line explanation; footnote.",
+          "thumbnail": "thumbnails/two-maps-with-headline-stat.png",
+          "thumbnail_size": [
+            768,
+            432
+          ],
+          "figma_node": "3158:27117"
+        },
+        {
+          "id": "decks/three-phases-growing",
+          "name": "Three phases, growing",
+          "theme": "light",
+          "layout": "Two-line title with highlights; three phase cards left to right (done, now, next), each larger than the last, the last on brand blue with an arrow shape; each card has a phase tag, name, one-line goal, bullets and logos.",
+          "thumbnail": "thumbnails/three-phases-growing.png",
+          "thumbnail_size": [
+            768,
+            432
+          ],
+          "figma_node": "3158:27362"
+        },
+        {
+          "id": "decks/bar-chart-with-summary-card",
+          "name": "Bar chart with summary card",
+          "theme": "light",
+          "layout": "One-line title; stacked bar chart on the left two thirds with a legend and labelled values; a summary card on the right listing segments with ranges.",
+          "thumbnail": "thumbnails/bar-chart-with-summary-card.png",
+          "thumbnail_size": [
+            768,
+            432
+          ],
+          "figma_node": "3158:27516"
+        },
+        {
+          "id": "decks/three-numbered-steps-with-metrics",
+          "name": "Three numbered steps with metrics",
+          "theme": "dark",
+          "layout": "Two-line title with the key words in the accent colour; three numbered circles on a connector line; three cards below, each with a label, short description, an icon, a large metric in the accent colour and a caption.",
+          "thumbnail": "thumbnails/three-numbered-steps-with-metrics.png",
+          "thumbnail_size": [
+            768,
+            432
+          ],
+          "figma_node": "3209:6063"
+        },
+        {
+          "id": "decks/build-or-buy-comparison-cards",
+          "name": "Build or buy comparison cards",
+          "theme": "light",
+          "layout": "Title with a highlighted phrase; two labelled groups side by side, each with a neutral card and a brand-filled card (the Faclon option); a full-width dark statement bar along the bottom.",
+          "thumbnail": "thumbnails/build-or-buy-comparison-cards.png",
+          "thumbnail_size": [
+            768,
+            432
+          ],
+          "figma_node": "3209:10280"
+        },
+        {
+          "id": "decks/statement-with-three-stat-cards",
+          "name": "Statement with three stat cards",
+          "theme": "brand",
+          "layout": "Brand background; a large two-line statement with an accent phrase and a one-line subline; three stat cards in a row (two darker blue, one white), each with an icon tile, label, large number and description.",
+          "thumbnail": "thumbnails/statement-with-three-stat-cards.png",
+          "thumbnail_size": [
+            768,
+            432
+          ],
+          "figma_node": "3243:7097"
+        }
+      ]
+    },
+    {
+      "name": "Product stack",
+      "use": "Used as designed whenever the product stack is asked for.",
+      "templates": [
+        {
+          "id": "decks/product-stack-layers",
+          "name": "Product stack · layers",
+          "theme": "dark",
+          "layout": "Eyebrow and two-line title with accent words; an isometric stack illustration on the left; a column of product layers, each a row with name, category tag and one-line description; an outlined panel on the right with four short statements.",
+          "thumbnail": "thumbnails/product-stack-layers.png",
+          "thumbnail_size": [
+            768,
+            432
+          ],
+          "figma_node": "3158:27606"
+        },
+        {
+          "id": "decks/architecture-on-top-of-existing-systems",
+          "name": "Architecture · on top of existing systems",
+          "theme": "light",
+          "layout": "Title with a highlighted second clause; columns flowing left to right (sources, single source of truth, activated with AI), then a brand arrow bar and a grid of partner and system logos.",
+          "thumbnail": "thumbnails/architecture-on-top-of-existing-systems.png",
+          "thumbnail_size": [
+            768,
+            432
+          ],
+          "figma_node": "3209:9159"
+        },
+        {
+          "id": "decks/one-foundation-many-uses",
+          "name": "One foundation, many uses",
+          "theme": "light",
+          "layout": "Title with a highlighted phrase; a full-width brand bar naming the foundation, with connectors down to five use-case cards (example label, use case, large metric); a full-width dark statement bar at the bottom.",
+          "thumbnail": "thumbnails/one-foundation-many-uses.png",
+          "thumbnail_size": [
+            768,
+            432
+          ],
+          "figma_node": "3209:10136"
+        }
+      ]
+    },
+    {
+      "name": "Dashboard and product slides",
+      "use": "Product, demo and dashboard slides: a demo photo, a product screenshot, or phone and desktop views, with a statement, steps or points. Rebuilt in the Faclon design system; swap the screenshots for Faclon Labs product views.",
+      "templates": [
+        {
+          "id": "decks/demo-with-title",
+          "name": "Demo with title",
+          "theme": "dark",
+          "layout": "A large demo photo or image on the left two thirds with a small label tag on it; a short title on the right; logo top-right.",
+          "thumbnail": "thumbnails/demo-with-title.png",
+          "thumbnail_size": [
+            768,
+            432
+          ],
+          "figma_node": "3241:6631"
+        },
+        {
+          "id": "decks/steps-statement-and-screenshot",
+          "name": "Steps, statement and screenshot",
+          "theme": "dark",
+          "layout": "A row of step tabs across the top with the current step highlighted; a two-line statement; one large desktop screenshot below.",
+          "thumbnail": "thumbnails/steps-statement-and-screenshot.png",
+          "thumbnail_size": [
+            768,
+            432
+          ],
+          "figma_node": "3241:6667"
+        },
+        {
+          "id": "decks/steps-points-and-screenshots",
+          "name": "Steps, points and screenshots",
+          "theme": "dark",
+          "layout": "Step tabs across the top; a statement on the left with two arrow-led points; overlapping desktop and phone screenshots on the right.",
+          "thumbnail": "thumbnails/steps-points-and-screenshots.png",
+          "thumbnail_size": [
+            768,
+            432
+          ],
+          "figma_node": "3241:6744"
+        },
+        {
+          "id": "decks/steps-title-list-card-and-phone",
+          "name": "Steps, title, list card and phone",
+          "theme": "dark",
+          "layout": "Step tabs across the top; a large three-line title on the left with a small list card of requisites below it; a phone screenshot on the right.",
+          "thumbnail": "thumbnails/steps-title-list-card-and-phone.png",
+          "thumbnail_size": [
+            768,
+            432
+          ],
+          "figma_node": "3241:6892"
+        }
+      ]
+    },
+    {
+      "name": "Team slide",
+      "use": "Default for about or team slides, unless the user gives feedback.",
+      "templates": [
+        {
+          "id": "decks/team-grid-with-stats-and-map",
+          "name": "Team grid with stats and map",
+          "theme": "light",
+          "layout": "Title with a highlighted number; a grid of headshots (four across, two rows), each with name in brand blue, role and credential logos; four stat tiles bottom-left; a world map with office pins bottom-right.",
+          "thumbnail": "thumbnails/team-grid-with-stats-and-map.png",
+          "thumbnail_size": [
+            768,
+            432
+          ],
+          "figma_node": "3158:27833"
+        },
+        {
+          "id": "decks/about-company-stats-and-client-logos",
+          "name": "About company · stats and client logos",
+          "theme": "light",
+          "layout": "Title with a highlighted figure; a left column of four large stats with captions; a right-hand grid of client logos with a caption above it; a one-line note bottom-left.",
+          "thumbnail": "thumbnails/about-company-stats-and-client-logos.png",
+          "thumbnail_size": [
+            768,
+            432
+          ],
+          "figma_node": "3209:5426"
+        }
+      ]
+    },
+    {
+      "name": "Closing slide",
+      "use": "The last slide of a deck. Pick one of the designs.",
+      "templates": [
+        {
+          "id": "decks/closing-statement",
+          "name": "Closing statement",
+          "theme": "brand",
+          "layout": "Brand blue; logo top-right; a small dark tag (website) above a large three-line closing statement with accent words; the dot-particle design element on the right.",
+          "thumbnail": "thumbnails/closing-statement.png",
+          "thumbnail_size": [
+            768,
+            432
+          ],
+          "figma_node": "3158:35580"
+        },
+        {
+          "id": "decks/closing-statement-and-stats-bento",
+          "name": "Closing · statement and stats bento",
+          "theme": "brand",
+          "layout": "A dark rounded panel inset on brand blue: logo, two-line statement, one-line description and a CTA button on the left; a bento grid of stat tiles with brand-blue squares on the right.",
+          "thumbnail": "thumbnails/closing-statement-and-stats-bento.png",
+          "thumbnail_size": [
+            768,
+            432
+          ],
+          "figma_node": "3243:7160"
+        }
+      ]
+    }
+  ]
+}

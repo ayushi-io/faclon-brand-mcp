@@ -7,6 +7,7 @@ import { P } from "../src/lib/paths.js";
 import { getBrandGuidelines } from "../src/tools/guidelines.js";
 import { ASSET_CATEGORIES, ASSET_BASE_URL } from "../src/tools/assets.js";
 import { app } from "../src/app.js";
+import { getTemplates } from "../src/tools/templates.js";
 
 const index = readData(P.assetIndex);
 const file = (rel) => path.join(ROOT, P.assets, rel);
@@ -98,4 +99,30 @@ test("HTTP: /assets serves listed files and nothing outside the asset folder", a
   } finally {
     server.close();
   }
+});
+
+test("templates: deck, architecture and social, each with real thumbnails and layout notes", async () => {
+  const overview = getTemplates();
+  assert.deepEqual(overview.outcomes.map((o) => o.format_profile).sort(), ["architecture", "deck", "social"]);
+  const counts = Object.fromEntries(overview.outcomes.map((o) => [o.format_profile, o.count]));
+  assert.deepEqual(counts, { deck: 21, architecture: 5, social: 8 });
+  for (const { format_profile, outcome } of overview.outcomes) {
+    const t = getTemplates({ format_profile });
+    assert.match(t.use, /Never copy their text, numbers/);
+    for (const s of t.sections) for (const x of s.templates) {
+      assert.ok(x.layout.length > 40 && ["dark", "light", "brand"].includes(x.theme), x.id);
+      assert.match(x.figma_node, /^\d+:\d+$/);
+      assert.ok(fs.existsSync(path.join(ROOT, P.templates, outcome, x.thumbnail)), x.thumbnail);
+      assert.equal(x.thumbnail_url, `${ASSET_BASE_URL}/templates/${outcome}/${x.thumbnail}`);
+    }
+  }
+  assert.throws(() => getTemplates({ format_profile: "document" }), { code: "NO_TEMPLATES" });
+  assert.equal(getBrandGuidelines({ section: "templates", format_profile: "architecture" }).sections[0].templates.at(-1).name, "Camera-based vision system");
+  const server = app.listen(0);
+  try {
+    const x = getTemplates({ format_profile: "deck" }).sections[0].templates[0];
+    const r = await fetch(`http://127.0.0.1:${server.address().port}/templates/decks/${x.thumbnail}`);
+    assert.equal(r.status, 200);
+    assert.match(r.headers.get("content-type"), /image\/png/);
+  } finally { server.close(); }
 });

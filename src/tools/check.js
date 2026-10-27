@@ -181,16 +181,19 @@ export function checkDesign({ html, format_profile } = {}) {
   add("radius.scale-only", "error", "Corner radius not on the radius scale (2 to 24px, or pill).", offRadius, 'Use a radius token from get_tokens(category: "radius").');
   add("border.width-scale-only", "error", "Border width not on the border scale (1 to 6px).", offBorder, 'Use a border-width token from get_tokens(category: "border").');
 
-  // No AI slop: effects, shadows, gradients.
+  // No AI slop: effects, shadows, gradients. Glow (text-shadow, drop-shadow or blur
+  // filters, centred box-shadows) is allowed on Bruce AI content only; glass never is.
+  const bruceContent = /bruce/i.test(doc.text);
+  const centred = (v) => /^\s*(inset\s+)?0(px)?\s+0(px)?\s/.test(v);
   const effects = [], shadows = [], gradients = [];
   for (const d of doc.decls) {
-    if (d.prop === "text-shadow" && d.value !== "none") effects.push(`text-shadow: ${d.value}`);
+    if (d.prop === "text-shadow" && d.value !== "none" && !bruceContent) effects.push(`text-shadow: ${d.value}`);
     if (d.prop === "backdrop-filter" || d.prop === "-webkit-backdrop-filter") effects.push(`${d.prop}: ${d.value}`);
-    if (d.prop === "filter" && /blur|drop-shadow|glow/i.test(d.value)) effects.push(`filter: ${d.value}`);
-    if (d.prop === "box-shadow" && d.value !== "none" && !/var\(--shadow-/.test(d.value) && !A.shadows.has(norm(d.value))) shadows.push(d.value);
+    if (d.prop === "filter" && /blur|drop-shadow|glow/i.test(d.value) && !bruceContent) effects.push(`filter: ${d.value}`);
+    if (d.prop === "box-shadow" && d.value !== "none" && !/var\(--shadow-/.test(d.value) && !A.shadows.has(norm(d.value)) && !(bruceContent && d.value.split(/,(?![^(]*\))/).every(centred))) shadows.push(d.value);
     for (const g of d.value.matchAll(/(?:linear|radial|conic)-gradient\((?:[^()]|\([^()]*\))*\)/gi)) if (!(norm(g[0]) in A.gradients)) gradients.push(g[0].slice(0, 80));
   }
-  add("design.no-ai-slop", "error", "Blur, glass, glow or text effects are not allowed.", effects, "Remove the effect; keep surfaces flat and text plain.");
+  add("design.no-ai-slop", "error", "Blur, glass, glow or text effects are not allowed (glow only on Bruce AI content; glass never).", effects, "Remove the effect; keep surfaces flat and text plain.");
   add("design.no-ai-slop", "error", "Shadows other than the Elevation tokens.", shadows, 'Use var(--shadow-low-raised) or another Elevation token, or no shadow.');
   add("design.no-ai-slop", "error", "Gradients other than the brand gradient styles.", gradients, 'Remove the gradient. Only the gradient tokens are allowed, where a rule allows them (get_tokens(category: "gradient")).');
   const usesBruce = tokenGradients.includes("bruce-ai") || doc.decls.some((d) => /var\(--gradient-bruce-ai\)/.test(d.value));

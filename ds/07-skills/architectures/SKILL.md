@@ -38,7 +38,7 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
   - Platform panel (for example I/O Sense): the one lifted panel, container/elevated with Elevation/Low Raised.
 - **Arrows:** connections use the default dashed text/secondary arrow (border-width/md); the main data flow uses the solid border/brand arrow; status arrows (border/success, border/error) only where the user marks them. Arrow labels sit spacing/4 from the line.
 - **Text:** each element has its text style per density (for example node tag Body/SM, Body/MD or Body/XL Semi Bold). Never below 10px.
-- **Reference:** the Heat Exchanger Architecture example (Figma deck slide 07_04 and the icons_architecture page) shows the design language.
+- **Reference:** the architecture templates (`get_brand_guidelines(section: "templates", format_profile: "architecture")`) show the design language: machine monitoring, heat exchanger process diagram, repeated steam traps, substation cloud architecture and the camera-based vision system. Start from the one whose structure fits; take layout only.
 
 ## Rules that matter most
 

@@ -9,6 +9,7 @@ export const P = {
   rules: "ds/09-brand-validator/validator-rules.json",
   skills: "ds/07-skills",
   assets: "ds/05-assets",
+  templates: "ds/04-templates",
   assetIndex: "ds/05-assets/_index.json",
   snapshot: "sources/figma/snapshot.json",
   componentsSnapshot: "sources/figma/components-snapshot.json",

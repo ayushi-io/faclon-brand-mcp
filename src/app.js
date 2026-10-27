@@ -16,6 +16,10 @@ app.get("/", (_req, res) => res.json({ name: "faclon-brand-mcp", status: "ok", b
 app.use("/assets", express.static(path.join(ROOT, P.assets), { index: false, dotfiles: "deny", maxAge: "1d", fallthrough: false }));
 app.use("/assets", (err, _req, res, _next) => res.status(err.status || 500).json({ error: err.status === 404 ? "Asset not found. List assets with get_brand_guidelines(section: \"assets\")." : "Not allowed." }));
 
+// Template thumbnails: /templates/<outcome>/thumbnails/<file>.png.
+app.use("/templates", express.static(path.join(ROOT, P.templates), { index: false, dotfiles: "deny", maxAge: "1d", fallthrough: false, extensions: false }));
+app.use("/templates", (err, _req, res, _next) => res.status(err.status || 500).json({ error: err.status === 404 ? "Template not found. List templates with get_brand_guidelines(section: \"templates\")." : "Not allowed." }));
+
 app.post("/mcp", async (req, res) => {
   const server = createServer();
   const transport = new StreamableHTTPServerTransport({ sessionIdGenerator: undefined, enableJsonResponse: true });
