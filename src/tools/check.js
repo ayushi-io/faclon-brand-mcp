@@ -123,6 +123,23 @@ export function checkDesign({ html, format_profile } = {}) {
   add("color.tokens-only", "error", "These colours are not design-system tokens.", offColours,
     'Use a colour token from get_tokens(category: "color"); never sample or approximate one.');
 
+  // Architecture: brand blue only in the final outcome, which is placed as an image file,
+  // so the diagram's own code uses no brand/500 or darker blue.
+  if (profile?.id === "architecture") {
+    const t = readData(P.tokens);
+    const prim = t.color.primitive.brand;
+    const dark = new Set(["500", "600", "700", "800", "900", "1000"].map((k) => (prim[k].value ?? prim[k]).toUpperCase()));
+    const darkVars = /var\(\s*--color-(brand-(500|600|700|800|900|1000)|container-brand|background-brand|border-brand|text-brand|text-link|text-info|text-eyebrow|container-info-strong)\b/i;
+    const hits = [];
+    for (const d of doc.decls) {
+      if (darkVars.test(d.value)) hits.push(`${d.prop}: ${d.value}`.slice(0, 80));
+      for (const m of d.value.matchAll(/#[0-9a-f]{3,8}\b/gi)) if (dark.has(hex(m[0]))) hits.push(`${d.prop}: ${m[0]}`);
+    }
+    for (const a of doc.attrColours) if (dark.has(hex(a))) hits.push(a);
+    add("architecture.brand-on-outcome", "error", "Brand blue (brand/500) or a darker blue is used outside the final outcome.", hits,
+      "Use neutrals and light blue tints (brand/050 to brand/400) for tags, zones, arrows and text; brand blue lives only in the placed I/O Sense outcome (asset category architecture-outcomes).");
+  }
+
   // Fonts.
   const offFonts = [];
   const genericFonts = [];

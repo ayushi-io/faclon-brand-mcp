@@ -7,6 +7,7 @@
     "client-logos": 83,
     "team-headshots": 14,
     "design-elements": 3,
+    "architecture-outcomes": 3,
     "icons": 199
   },
   "web_icons": {
@@ -2458,6 +2459,72 @@
       "source": {
         "figma_node": "3210:12234",
         "page": "❑ Graphic elements"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "architecture-outcomes/faclon-scope",
+      "category": "architecture-outcomes",
+      "name": "I/O Sense outcome · Faclon scope",
+      "tags": [
+        "I/O Sense outcomes"
+      ],
+      "contents": "'Faclon Infrastructure (Faclon Scope)' header, I/O Sense, Decision Support System with three points, six outputs (Co-Pilot, Reports, Analytics, KPI Dashboard, Alerts, MIS Reporting) and dashboards on desktop, laptop and tablet. The default.",
+      "file": "architecture-outcomes/faclon-scope.png",
+      "format": "png",
+      "width": 552,
+      "height": 1001,
+      "bytes": 70562,
+      "use": "The final outcome of an architecture diagram: place one of these files unchanged, as the last block the flow ends in. It is the only place brand blue appears in the diagram. Change or rebuild it only when the user asks.",
+      "rights": "Faclon Labs brand asset.",
+      "owner": "Faclon Labs brand team",
+      "source": {
+        "figma_node": "3271:28080",
+        "page": "❑ Architectures › Template › I/O sense outcomes"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "architecture-outcomes/faclon-scope-with-funnel",
+      "category": "architecture-outcomes",
+      "name": "I/O Sense outcome · Faclon scope with funnel",
+      "tags": [
+        "I/O Sense outcomes"
+      ],
+      "contents": "The Faclon scope outcome with a grey funnel on its left side, for when the diagram feeds into it from the left.",
+      "file": "architecture-outcomes/faclon-scope-with-funnel.png",
+      "format": "png",
+      "width": 752,
+      "height": 1001,
+      "bytes": 120089,
+      "use": "The final outcome of an architecture diagram: place one of these files unchanged, as the last block the flow ends in. It is the only place brand blue appears in the diagram. Change or rebuild it only when the user asks.",
+      "rights": "Faclon Labs brand asset.",
+      "owner": "Faclon Labs brand team",
+      "source": {
+        "figma_node": "3271:26563",
+        "page": "❑ Architectures › Template › I/O sense outcomes"
+      },
+      "last_updated": "2026-10-27"
+    },
+    {
+      "id": "architecture-outcomes/steam-trap",
+      "category": "architecture-outcomes",
+      "name": "I/O Sense outcome · steam trap",
+      "tags": [
+        "I/O Sense outcomes"
+      ],
+      "contents": "I/O Sense with four outputs (Failure diagnostics and status, Steam loss and saving, SMS and email alerts, Excel report and maintenance log) and three dashboard screenshots. Only for steam-trap diagrams: its text is steam-trap specific.",
+      "file": "architecture-outcomes/steam-trap.png",
+      "format": "png",
+      "width": 551,
+      "height": 1205,
+      "bytes": 103416,
+      "use": "The final outcome of an architecture diagram: place one of these files unchanged, as the last block the flow ends in. It is the only place brand blue appears in the diagram. Change or rebuild it only when the user asks.",
+      "rights": "Faclon Labs brand asset.",
+      "owner": "Faclon Labs brand team",
+      "source": {
+        "figma_node": "3271:31011",
+        "page": "❑ Architectures › Template › I/O sense outcomes"
       },
       "last_updated": "2026-10-27"
     },

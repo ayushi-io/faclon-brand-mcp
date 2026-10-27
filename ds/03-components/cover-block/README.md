@@ -1,8 +1,3 @@
----
-status: not_written
-needed: a cover-block component designed in Figma (purpose, anatomy, variants, do/don't per _component-template.md).
----
-
 # cover-block
 
-Not written yet. Needed: a cover-block component designed in Figma (purpose, anatomy, variants, do/don't per _component-template.md).
+Built on 2026-10-27: see `../components.json` (id `cover-block`) and `../README.md`. Figma: components page, section Blocks.

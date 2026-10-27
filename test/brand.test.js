@@ -351,7 +351,8 @@ test("architecture spec uses only design-system styles and tokens", () => {
     assert.ok(size("open") >= size("medium") && size("medium") >= size("dense"));
   }
   // Every token name used anywhere in the spec exists.
-  const colour = (n) => { const [g, k] = n.split("/"); return t.color.semantic.light[g]?.[k]; };
+  // Semantic tokens, or a primitive (the light brand tints brand/300, brand/400), which also has a CSS variable.
+  const colour = (n) => { const [g, k] = n.split("/"); return t.color.semantic.light[g]?.[k] ?? t.color.primitive[g]?.[k]; };
   const spacing = (n) => (n.startsWith("spacing/") ? t.spacing.scale.includes(Number(n.split("/")[1])) : n in t.spacing.roles.desktop);
   const walk = (o, out = []) => { for (const v of Object.values(o)) typeof v === "string" ? out.push(v) : v && typeof v === "object" && walk(v, out); return out; };
   for (const n of walk(p.spacing)) assert.ok(spacing(n), `spacing token ${n} does not exist`);
@@ -483,20 +484,29 @@ test("components: every value is an existing token, role or component, with a CS
   const vars = tokenCssVars();
   const css = getTokens({ as: "css" }).code;
   const roles = readData(P.tokens).typography.roles;
+  // A `contains` entry is a component, or a group frame inside the same component in the
+  // Figma export (as the build names it), or a Faclon Labs logo file from the asset library.
+  const snapComps = readData(P.componentsSnapshot).components;
+  const groups = {};
+  const collect = (n, set) => { if (!n) return; if (n.type === "FRAME" || n.type === "GROUP") set.add(n.name.toLowerCase()); for (const ch of n.children || []) collect(ch, set); };
+  for (const c of snapComps) { const set = new Set(); for (const v of c.variants || [{ node: c.node }]) collect(v.node, set); groups[c.id] = set; }
+  const logoFiles = new Set(readData(P.assetIndex).assets.filter((a) => a.category === "logos").map((a) => a.id.replace(/^logos\/faclon-labs-/, "")));
   const ids = components.map((c) => c.id);
   assert.equal(new Set(ids).size, ids.length, "component ids are unique");
-  assert.equal(components.length, 20);
+  assert.equal(components.length, 28);
+  for (const id of ["stat-tile", "quote-card", "logo-wall", "feature-grid", "process-flow", "comparison-table", "cta-band", "cover-block"]) assert.ok(components.find((c) => c.id === id)?.use, `${id} needs a use line`);
   const skip = new Set(["use", "name", "id", "width"]);
   const walk = (v, key, where) => {
     if (typeof v === "string") {
       if (key === "role") assert.ok(roles[v], `${where}: role "${v}" does not exist`);
       else if (key === "component") assert.ok(ids.includes(v), `${where}: component "${v}" does not exist`);
-      else if (key === "contains") assert.ok(ids.includes(v.replace(/ \(optional\)$/, "")) || v === "metric", `${where}: "${v}" is not a component`);
+      else if (key === "contains") { const name = v.replace(/ \(optional\)$/, ""); assert.ok(ids.includes(name) || groups[figmaOf[where]]?.has(name) || logoFiles.has(name), `${where}: "${v}" is not a component, a group in it, or a logo file`); }
       else if (v.includes("/") && !skip.has(key)) assert.ok(v in vars, `${where}: "${v}" is not a token`);
       return;
     }
     if (v && typeof v === "object") for (const [k, x] of Object.entries(v)) walk(x, Array.isArray(v) ? key : k, where);
   };
+  const figmaOf = Object.fromEntries(components.map((c) => [c.id, c.figma.node]));
   for (const c of components) {
     assert.match(c.figma.node, /^\d+:\d+$/, c.id);
     walk({ ...c, figma: undefined }, null, c.id);
