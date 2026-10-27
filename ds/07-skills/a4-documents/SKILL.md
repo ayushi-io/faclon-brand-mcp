@@ -23,7 +23,7 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 2. **Load the rules.** `get_brand_guidelines(section: "rules", format_profile: "document")`, then `get_tokens(format: "document")` and `get_brand_guidelines(section: "components", format_profile: "document")`.
 3. **Plan the pages.** Sections, what leads, which content becomes cards, stats, tables or images.
 4. **Design** on the grid with the components and text styles below. Flow the content across pages with the page-break rules.
-5. **Check** every page against the checklist.
+5. **Check.** Run `check_design(html, format_profile: "document")` on the finished HTML, fix every error and run it again; flag warnings about the user's words to the user instead of changing them. Then go through the checklist at the end, which covers what the tool cannot see (layout, spacing, hierarchy, overflow).
 6. **Deliver** the HTML, plus a note of anything flagged.
 
 ## Structure
@@ -53,6 +53,7 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 
 ## Checklist before delivery
 
+- [ ] `check_design` returns "pass" (no errors).
 - [ ] A 2-pager is exactly two pages, or the overflow is flagged to the user.
 - [ ] The user's text is unchanged; nothing was added.
 - [ ] Header and footer as specified; logo blue, top-right.

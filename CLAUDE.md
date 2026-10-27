@@ -8,7 +8,7 @@ An MCP server that serves the Faclon marketing design system (tokens, brand guid
 
 Figma stays the source of truth for every value (decided 2026-10-21, replacing a short-lived plan to make `tokens.json` the source): `tokens.json` is always generated from the Figma export, never edited by hand.
 
-Two tools only: `get_tokens(category?, mode?, format?, as?)` and `get_brand_guidelines(section?, format_profile?)`. `test/mcp.test.js` asserts the tool list is exactly these two — update it when adding tools.
+Three tools: `get_tokens(category?, mode?, format?, as?)`, `get_brand_guidelines(section?, format_profile?)` and `check_design(html, format_profile?)` (added 2026-10-27: a static check of finished HTML against the rules, in `src/tools/check.js`; allowed values come from tokens.json and the merged rules, findings carry rule, severity, evidence and fix; voice issues are warnings because they are the user's words). `test/mcp.test.js` asserts the tool list is exactly these three — update it when adding tools.
 
 ## Commands
 

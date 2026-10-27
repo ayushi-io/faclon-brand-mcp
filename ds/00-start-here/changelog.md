@@ -2,6 +2,10 @@
 
 Each change to the system bumps `brand_version` in `version.json` (format `YYYY.MM.DD-n`). Newest first.
 
+## 2026-10-27
+
+- New tool `check_design`: checks finished HTML against the brand rules (colours, fonts, sizes, weights, radius, borders, shadows, gradients, effects, alt text, logo, voice; Brevo rules for newsletters) and returns pass or fail with fixes. Every skill runs it before delivery.
+
 ## 2026-10-26
 
 - Uppercase is optional, not a rule: the Eyebrow, Eyebrow/Semi Bold and Role/Eyebrow styles no longer force uppercase (Figma and tokens), and the voice, typography, deck and validator text say case as written.
