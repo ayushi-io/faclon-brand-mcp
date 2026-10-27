@@ -25,7 +25,7 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 3. **Plan.** One message per post or slide. For a carousel, plan the cover, the content slides and the closing slide, and their themes (see Structure).
 4. **Design** at 540px wide on the 12-column grid.
 5. **Check.** Run `check_design(html, format_profile: "social")` on the finished HTML, fix every error and run it again; flag warnings about the user's words to the user instead of changing them. Then go through the checklist at the end, which covers what the tool cannot see (layout, spacing, hierarchy, overflow).
-6. **Deliver** HTML at the 540px design size, ready to export at 2x (1080px). The user converts it to PNG, JPG or PDF if needed.
+6. **Deliver** one HTML file, named `<topic>_social_faclon_<YYYY-MM-DD>.html` (see section "export"), in the chat only, at the 540px design size, ready to export at 2x (1080px). The user converts it to PNG, JPG or PDF if needed.
 
 ## Structure
 

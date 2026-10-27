@@ -24,7 +24,7 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 3. **Plan the email.** Pick the hero composition from the elements the user gave, group the content into sections and decide what each shows (stat, steps, comparison, story).
 4. **Design** the desktop (600px) and mobile (400px) layouts.
 5. **Check.** Run `check_design(html, format_profile: "newsletter")` on the finished HTML, fix every error and run it again; flag warnings about the user's words to the user instead of changing them. Then go through the checklist at the end, which covers what the tool cannot see (layout, spacing, hierarchy, overflow).
-6. **Deliver** the HTML, then the list of every placeholder with its display size and upload size (2x).
+6. **Deliver** one HTML file, named `<topic>_newsletter_faclon_<YYYY-MM-DD>.html` (see section "export"), in the chat only, then the list of every placeholder with its display size and upload size (2x).
 
 ## Structure
 

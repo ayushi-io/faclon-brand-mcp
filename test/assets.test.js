@@ -126,3 +126,20 @@ test("templates: deck, architecture and social, each with real thumbnails and la
     assert.match(r.headers.get("content-type"), /image\/png/);
   } finally { server.close(); }
 });
+
+test("export and qa sections: HTML specs, naming topic_outcometype_faclon_date, delivery in chat", async () => {
+  const ex = getBrandGuidelines({ section: "export" });
+  assert.equal(ex.status, "written");
+  assert.match(ex.guidance, /<topic>_<outcometype>_faclon_<date>\.html/);
+  assert.match(ex.guidance, /delivered in the chat only/);
+  assert.match(ex.guidance, /fonts\.googleapis\.com\/css2\?family=Inter:wght@400;500;600;700&family=TASA\+Orbiter/);
+  for (const [format, size] of [["deck", "1920 x 1080"], ["document", "794 x 1123"], ["social", "540 x 540"]]) assert.ok(ex.guidance.includes(size), format);
+  const qa = getBrandGuidelines({ section: "qa" });
+  assert.match(qa.guidance, /check_design/);
+  assert.match(qa.guidance, /Checklist before delivery/);
+  const { INSTRUCTIONS } = await import("../src/server.js");
+  assert.match(INSTRUCTIONS, /in the chat only, named <topic>_<outcometype>_faclon_<YYYY-MM-DD>\.html/);
+  for (const f of ["decks", "a4-documents", "newsletters", "architectures", "social-media"]) {
+    assert.match(fs.readFileSync(path.join(ROOT, "ds/07-skills", f, "SKILL.md"), "utf8"), /_faclon_<YYYY-MM-DD>\.html` \(see section "export"\), in the chat only/, f);
+  }
+});

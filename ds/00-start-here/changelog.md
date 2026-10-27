@@ -4,6 +4,7 @@ Each change to the system bumps `brand_version` in `version.json` (format `YYYY.
 
 ## 2026-10-27
 
+- QA and export written: `10-export` (HTML page sizes per format, fonts from Google Fonts, assets by URL; file naming `<topic>_<outcometype>_faclon_<YYYY-MM-DD>.html`; delivery in the chat only) and `08-qa-ai` (the AI review before delivery; checklists point to each skill). Served as sections `export` and `qa`; the server instructions and every skill's Deliver step name the file and say chat only.
 - Glow is approved for Bruce AI content only (as on the Bruce AI carousel cover), with the Bruce AI gradient; it stays banned everywhere else, and glass never. `check_design` allows glow when the content is about Bruce AI.
 - Templates (04-templates): 34 templates from the Figma Template frames, 21 for decks, 5 for architectures (including the camera-based vision system) and 8 for social media, each with section, purpose, theme, layout notes and a thumbnail. Served by `get_brand_guidelines(section: "templates", format_profile)`, thumbnails at `/templates/...`. Templates give layout only, never content. The deck, architecture and social skills start from them. A4 documents and newsletters have no templates yet.
 - Neutral-dark removed from the design system (it was almost the same as neutral-light). The dark theme now uses neutral-light, with its layers kept apart: page #192839 (background/primary), cards #243547, nested cards and borders #2F4256, stronger borders #40566D and #58728D. Light-theme border/container is neutral-light/200.
