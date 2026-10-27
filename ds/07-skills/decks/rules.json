@@ -24,7 +24,7 @@
       "eyebrow": {
         "style": "body/24",
         "weight": 500,
-        "use": "kicker above the headline, uppercase"
+        "use": "kicker above the headline, case as written (uppercase optional)"
       },
       "section_heading": {
         "style": "heading/h1",
@@ -37,7 +37,7 @@
       "panel_heading": {
         "style": "body/24",
         "weight": 700,
-        "use": "uppercase panel heading"
+        "use": "panel heading, case as written (uppercase optional)"
       },
       "body": {
         "style": "body/24",
@@ -56,7 +56,7 @@
       "chip": {
         "style": "body/xl",
         "weight": 600,
-        "use": "label chips, uppercase text"
+        "use": "label chips, case as written (uppercase optional)"
       },
       "proof_strip": {
         "style": "body/24",
@@ -154,8 +154,9 @@
     }
   ],
   "logo": {
-    "position": "bottom-right",
-    "min_width": 120
+    "position": "top-right",
+    "min_width": 120,
+    "note": "Top-right on the 52px edge by default; another corner only when the slide design needs it (for example a tab row across the top)."
   },
   "export": {
     "file_types": [

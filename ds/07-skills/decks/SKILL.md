@@ -31,12 +31,12 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 - **Canvas:** 1920 × 1080 px, 52px safe area on every side (spacing/52), content area 1816 × 976, 12-column grid.
 - **Reference slides** (Figma Design MCP › Layouts, listed in `04-templates/decks/reference-slides.json`):
   - Fixed: the product stack and team slides, used as designed whenever asked for.
-  - Hero: page breakers and closing slides; pick one of the designs.
+  - Hero: page breakers and closing slides; pick one of the designs. Q&A slides use the brand-theme page breaker "Reference Slides for QnA".
   - Content: starting points for normal slides; adapt the layout to the content.
   - On every reference slide, map only four things to the design system: background colour to the theme token, fonts to the nearest text style (14 to 72px), chips to the chip tokens, and the logo to its placement.
 - **Themes:** light (background/primary), dark (background/inverse) and brand (background/brand), each with its fixed text and logo colours. Other colours only when the user asks, and only design-system tokens.
 - **AI slides** default to the dark theme; ask the user whether to keep them dark.
-- **Logo:** top-right on the 52px edge; white on dark and brand, blue on light.
+- **Logo:** top-right on the 52px edge by default; another corner only when the slide design needs it (for example a tab row across the top). White on dark and brand, blue on light.
 
 ## Rules that matter most
 
@@ -49,6 +49,7 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 
 ## Assets
 
+- Image and illustration styles: `get_brand_guidelines(section: "imagery")` and `(section: "illustration")`. Images and illustrations come from the user, in those styles.
 - Logos: the full Faclon Labs logo (blue or white); the logomark only where the user asks for it.
 - Icons: Lucide, coloured with a text token, only when an icon helps.
 - Images, screenshots and photos: only what the user supplies.

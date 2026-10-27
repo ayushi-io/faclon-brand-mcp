@@ -120,7 +120,7 @@
     }
   },
   "logo": {
-    "position": "top-left or top-right, as suits the slide",
+    "position": "top-right by default; top-left when the slide design needs it",
     "width": 132,
     "width_at_export": 264,
     "every_slide": true
@@ -173,12 +173,13 @@
       },
       {
         "id": "logo",
-        "text": "The full Faclon Labs logo on every post and slide, at the top, left or right, about 132 px wide: blue on light, white on dark and brand.",
+        "text": "The full Faclon Labs logo on every post and slide, top-right by default (top-left when the design needs it), about 132 px wide: blue on light, white on dark and brand.",
         "basis": [
           "profile:logo",
           "rule:logo.blue-on-light",
           "rule:logo.white-on-dark-or-brand",
-          "rule:logo.logomark-on-request"
+          "rule:logo.logomark-on-request",
+          "decision:logo-default-top-right"
         ]
       },
       {
@@ -202,7 +203,7 @@
       "Visual hierarchy: what is large, what is quiet, and how the eye moves.",
       "Which components to use and how to combine them, and new card designs on Card base when the named cards don't fit.",
       "How to show each idea: a stat, a process, a comparison, a story.",
-      "Whether the logo sits top-left or top-right on each slide.",
+      "Whether a slide needs the logo top-left instead of the default top-right.",
       "How a carousel story is split across slides (as a suggestion when it changes the user's order)."
     ]
   },

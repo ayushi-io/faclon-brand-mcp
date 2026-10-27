@@ -31,7 +31,7 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 
 - **Canvas:** square 540 × 540 (exports 1080 × 1080) or portrait 540 × 675 (exports 1080 × 1350). A set of posts can mix both.
 - **Safe area and grid:** 24px on all sides (spacing/24); content 492px wide; 12 columns of 30px with 12px gutters (spacing/12). Common splits: 6 + 6, 4 + 4 + 4, 3 + 3 + 3 + 3, 8 + 4. Elements start and end on column edges. Only images may bleed to the edge.
-- **Logo:** the full Faclon Labs logo on every post and slide, at the top, left or right as suits the slide, about 132px wide. Blue on light, white on dark and brand.
+- **Logo:** the full Faclon Labs logo on every post and slide, top-right by default (top-left when the slide design needs it), about 132px wide. Blue on light, white on dark and brand.
 - **Carousel themes:**
   - Cover: dark theme, with the user's image, the title and the subheader.
   - Content slides: light by default; dark only if the user wants it.
@@ -51,6 +51,7 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 
 ## Assets
 
+- Image and illustration styles: `get_brand_guidelines(section: "imagery")` and `(section: "illustration")`. Images and illustrations come from the user, in those styles.
 - The full Faclon Labs logo (blue or white); the logomark only where the user asks.
 - The cover image: from the user.
 - Design elements: the files on the Figma Graphic elements page, used as they are.

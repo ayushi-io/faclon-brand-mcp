@@ -60,6 +60,19 @@
       "source": "Brand team decision 2026-10-22"
     },
     {
+      "id": "logo.default-position",
+      "category": "logo",
+      "rule": "The logo sits in the top-right corner by default. Place it elsewhere only when the layout needs it (a format spec such as the centred newsletter header, or a design whose top right is taken).",
+      "check": {
+        "type": "logo-position",
+        "default": "top-right",
+        "other": "only when the layout needs it"
+      },
+      "severity": "warning",
+      "locked": false,
+      "source": "Brand team decision 2026-10-26"
+    },
+    {
       "id": "type.two-families-only",
       "category": "typography",
       "rule": "Only two typefaces exist: TASA Orbiter and Inter. No third typeface may be referenced anywhere, including as a fallback. If TASA Orbiter is unavailable, fall back to Inter and stop there.",
@@ -183,7 +196,7 @@
     {
       "id": "type.eyebrow",
       "category": "typography",
-      "rule": "Eyebrows are Inter, 10px / 16px, ALL CAPS, 0.96px tracking, colour text/eyebrow. In components use Role/Eyebrow, which is 10/16 in Document, 14/22 in Newsletter and 24/32 in Deck. Weight is Medium (500) by default; Semi Bold (600) is the only alternative.",
+      "rule": "Eyebrows are Inter, 10px / 16px, 0.96px tracking, case as written (uppercase is optional, not a rule), colour text/eyebrow. In components use Role/Eyebrow, which is 10/16 in Document, 14/22 in Newsletter and 24/32 in Deck. Weight is Medium (500) by default; Semi Bold (600) is the only alternative.",
       "check": {
         "type": "text-style",
         "style": "eyebrow",
@@ -198,11 +211,11 @@
           500,
           600
         ],
-        "case": "uppercase"
+        "case": "as written (uppercase optional)"
       },
       "severity": "error",
       "locked": false,
-      "source": "Brand team decision 2026-10-14; Text styles 'Eyebrow' and 'Role/Eyebrow'"
+      "source": "Brand team decision 2026-10-14; Text styles 'Eyebrow' and 'Role/Eyebrow'; uppercase made optional by the brand team 2026-10-26"
     },
     {
       "id": "type.text-roles",
@@ -218,7 +231,7 @@
         "roles": {
           "eyebrow": {
             "use": "kicker above a title",
-            "font": "Inter Medium, uppercase",
+            "font": "Inter Medium, case as written",
             "document": "eyebrow",
             "newsletter": "body/sm",
             "deck": "body/24"
@@ -804,7 +817,7 @@
     {
       "id": "design.no-ai-slop",
       "category": "design",
-      "rule": "No AI slop: nothing may look generic or machine-made. Never use gradients of any kind (backgrounds, text, buttons or borders) or mesh, blob and aurora backgrounds; glows, neon, glassmorphism, backdrop blur or any shadow other than the Elevation tokens; decorative filler that carries no information (abstract blobs, orbs, sparkles, floating shapes, dot grids, squiggles, scattered background icons); AI cliches in imagery or icons (glowing brains, circuit boards, robot hands, holograms, glowing network meshes, a sparkle or rocket to signal AI or a launch); text effects (gradient, outlined, shadowed or glowing text); or a coloured stripe down one side of a card or callout. Avoid template layouts: the same icon, title and text card repeated section after section, an icon on every heading or card when it adds nothing, or every section centred. Every element carries content or structure; when in doubt, leave it out. For writing, follow the AI-sounding writing list in the voice guideline. Exceptions: the design elements in 02-brand-elements/design-elements, each only on its own background, and the gradient paint styles where a rule allows them (gradient/bruce-ai on Bruce AI content). Glow effects are never allowed.",
+      "rule": "No AI slop: nothing may look generic or machine-made. Never use gradients of any kind (backgrounds, text, buttons or borders) or mesh, blob and aurora backgrounds; glows, neon, glassmorphism, backdrop blur or any shadow other than the Elevation tokens; decorative filler that carries no information (abstract blobs, orbs, sparkles, floating shapes, dot grids, squiggles, scattered background icons); AI cliches in imagery or icons (glowing brains, circuit boards, robot hands, holograms, glowing network meshes, a sparkle or rocket to signal AI or a launch); text effects (gradient, outlined, shadowed or glowing text); or a coloured stripe down one side of a card or callout. Avoid template layouts: the same icon, title and text card repeated section after section, an icon on every heading or card when it adds nothing, or every section centred. Every element carries content or structure; when in doubt, leave it out. For writing, follow the AI-sounding writing list in the voice guideline. Exceptions: the design elements in 02-brand-elements/design-elements, each only on its own background; the two illustration styles in 02-brand-elements/illustration (dot-matrix forms, pixel dissolve); and the gradient paint styles where a rule allows them (gradient/bruce-ai on Bruce AI content). Glow effects are never allowed.",
       "check": {
         "type": "pattern-ban",
         "never": [
@@ -826,12 +839,13 @@
         "writing": "guidelines:voice (AI-sounding writing)",
         "exceptions": [
           "design elements (02-brand-elements/design-elements), each on its own background: dot-particle form on dark, light streak on brand",
+          "illustration styles (02-brand-elements/illustration): dot-matrix forms on brand, pixel dissolve on light",
           "gradient/bruce-ai on Bruce AI content"
         ]
       },
       "severity": "error",
       "locked": true,
-      "source": "Brand team decision 2026-10-21 (no-ai-slop); exceptions approved by the brand team 2026-10-23 (design-elements, gradients-where-allowed)"
+      "source": "Brand team decision 2026-10-21 (no-ai-slop); exceptions approved by the brand team 2026-10-23 (design-elements, gradients-where-allowed); illustration styles added 2026-10-26"
     }
   ]
 }

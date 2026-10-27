@@ -52,6 +52,7 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 
 ## Assets
 
+- Image and illustration styles: `get_brand_guidelines(section: "imagery")` and `(section: "illustration")`. Images and illustrations come from the user, in those styles.
 - The blue Faclon Labs logo.
 - Icons: only from the Faclon architecture icon library the user provides.
 

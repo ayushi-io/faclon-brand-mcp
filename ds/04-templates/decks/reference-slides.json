@@ -4,7 +4,7 @@
   "mapping": {
     "background": "theme background token (background/brand, background/inverse or background/primary)",
     "fonts": "nearest named text style, never below 14px or above 72px (Display/XL)",
-    "chips": "container/inverse + text/inverse, radius/md, padding spacing/8 × spacing/12, Body/XL Semi Bold, uppercase text",
+    "chips": "container/inverse + text/inverse, radius/md, padding spacing/8 × spacing/12, Body/XL Semi Bold, case as written (uppercase optional)",
     "logo": "top-right on the 52px edge; white on dark and brand, blue on light; size may vary"
   },
   "slides": {
