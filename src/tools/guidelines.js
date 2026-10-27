@@ -1,10 +1,10 @@
 import { readData, dataExists, listDirs, readDoc } from "../lib/data.js";
-import { P, SECTION_FILES, profileParts, GUARDRAIL_ORDER } from "../lib/paths.js";
+import { P, SECTION_FILES, SECTION_GROUPS, profileParts, GUARDRAIL_ORDER } from "../lib/paths.js";
 import { BrandError } from "../lib/envelope.js";
 import { getAssets } from "./assets.js";
 import { getTemplates } from "./templates.js";
 
-export const SECTIONS = ["overview", "principles", "rules", "defaults", "components", "logo", "typography", "color", "voice", "design-elements", "illustration", "architecture", "imagery", "assets", "templates"];
+export const SECTIONS = ["overview", "principles", "rules", "defaults", "components", "logo", "typography", "color", "voice", "design-elements", "illustration", "architecture", "imagery", "assets", "templates", "export", "qa"];
 
 // Outcomes in 07-skills that have rules, keyed by format id (deck, document…).
 function outcomes() {
@@ -43,6 +43,12 @@ export function getBrandGuidelines({ section = "overview", format_profile, asset
 
   if (section === "defaults") {
     return { section, status: "written", about: readData(P.defaults).about, defaults: readData(P.defaults).defaults, format_profile: profileInfo };
+  }
+
+  if (SECTION_GROUPS[section]) {
+    const docs = SECTION_GROUPS[section].map((f) => readDoc(f));
+    if (docs.some((d) => d.meta.status === "not_written")) throw new BrandError("NOT_WRITTEN", `Part of section "${section}" is not written.`, "Report the gap to the user.");
+    return { section, status: "written", guidance: docs.map((d) => d.body.trim()).join("\n\n---\n\n"), format_profile: profileInfo };
   }
 
   if (section === "templates") return { section, status: "written", ...getTemplates({ format_profile }), format_profile: profileInfo };

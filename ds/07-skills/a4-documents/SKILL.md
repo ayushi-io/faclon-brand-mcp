@@ -24,7 +24,7 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 3. **Plan the pages.** Sections, what leads, which content becomes cards, stats, tables or images.
 4. **Design** on the grid with the components and text styles below. Flow the content across pages with the page-break rules.
 5. **Check.** Run `check_design(html, format_profile: "document")` on the finished HTML, fix every error and run it again; flag warnings about the user's words to the user instead of changing them. Then go through the checklist at the end, which covers what the tool cannot see (layout, spacing, hierarchy, overflow).
-6. **Deliver** the HTML, plus a note of anything flagged.
+6. **Deliver** one HTML file, named `<topic>_document_faclon_<YYYY-MM-DD>.html` (see section "export"), in the chat only, plus a note of anything flagged.
 
 ## Structure
 

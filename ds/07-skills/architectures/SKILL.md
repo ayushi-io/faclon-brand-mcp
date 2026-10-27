@@ -25,7 +25,7 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 3. **Count and pick the density.** Count nodes, labels and zones; take the densest category any count points to (Open, Medium or Dense), then check the fit: step down if a label needs more than 2 lines, overlaps a connector or forces a gap below the spacing spec; step up if the larger sizes still fit. Larger is preferred when it fits.
 4. **Lay out** zones, sub-zones and nodes; route connectors so they stay clear.
 5. **Check.** Run `check_design(html, format_profile: "architecture")` on the finished HTML, fix every error and run it again; flag warnings about the user's words to the user instead of changing them. Then go through the checklist at the end, which covers what the tool cannot see (layout, spacing, hierarchy, overflow).
-6. **Deliver** the HTML.
+6. **Deliver** one HTML file, named `<topic>_architecture_faclon_<YYYY-MM-DD>.html` (see section "export"), in the chat only.
 
 ## Structure
 

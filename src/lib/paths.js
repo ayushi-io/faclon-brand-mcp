@@ -31,6 +31,12 @@ export const SECTION_FILES = {
   imagery: "ds/02-brand-elements/photography-imagery/README.md",
 };
 
+// Sections served from several Markdown files, joined in order.
+export const SECTION_GROUPS = {
+  export: ["ds/10-export/html-specs.md", "ds/10-export/naming.md", "ds/10-export/delivery.md"],
+  qa: ["ds/08-qa-ai/ai-review.md", "ds/08-qa-ai/checklists/README.md"],
+};
+
 // A format profile is assembled from the files that own each part of it:
 // the outcome's rules in 07-skills, its canvas in 01-foundations/grid-layout,
 // its taste (must_not, avoid, design_direction) in 06-taste, plus format-specific
