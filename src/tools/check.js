@@ -138,6 +138,19 @@ export function checkDesign({ html, format_profile } = {}) {
     for (const a of doc.attrColours) if (dark.has(hex(a))) hits.push(a);
     add("architecture.brand-on-outcome", "error", "Brand blue (brand/500) or a darker blue is used outside the final outcome.", hits,
       "Use neutrals and light blue tints (brand/050 to brand/400) for tags, zones, arrows and text; brand blue lives only in the placed I/O Sense outcome (asset category architecture-outcomes).");
+
+    // Balance: the outcome stays within a quarter of the content width; text keeps one diagram size.
+    const maxW = Math.floor(profile.content_area.width / 4);
+    const wide = [];
+    for (const img of doc.imgs.filter((i) => /architecture-outcomes\//.test(i))) {
+      const w = px(img.match(/\swidth\s*=\s*["']?([\d.]+)/i)?.[1] ?? img.match(/style\s*=\s*["'][^"']*\bwidth\s*:\s*([\d.]+px)/i)?.[1] ?? "");
+      if (w > maxW) wide.push(`${w}px`);
+    }
+    add("architecture.outcome-balance", "error", `The I/O Sense outcome is wider than a quarter of the content width (${maxW}px).`, wide,
+      "Scale the outcome uniformly so its body text matches the diagram text size (final_outcome.size), at most a quarter of the content width; never stretch it to fill the canvas.");
+    const sizes = [...new Set(doc.decls.filter((d) => d.prop === "font-size").map((d) => d.value.trim().toLowerCase()))];
+    add("architecture.one-text-size", "error", `Text uses ${sizes.length} sizes; an architecture diagram uses at most 4 (title, zone heading, sub-zone heading, one diagram text size).`, sizes.length > 4 ? sizes : [],
+      "Set node tags, device labels, captions and arrow labels in the density's one diagram text style (typography.one_text_size); vary only the weight.");
   }
 
   // Fonts.

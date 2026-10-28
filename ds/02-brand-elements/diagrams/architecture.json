@@ -123,6 +123,29 @@
     ],
     "choose": "Faclon scope by default; Faclon scope with funnel when the diagram feeds into it from the left; steam trap only for steam-trap diagrams, because its text is steam-trap specific.",
     "placement": "The end of the diagram, where the main data flow arrives (usually the right-hand side).",
+    "native": {
+      "architecture-outcomes/faclon-scope": {
+        "width": 276,
+        "height": 500,
+        "body_text": 10
+      },
+      "architecture-outcomes/faclon-scope-with-funnel": {
+        "width": 376,
+        "height": 500,
+        "body_text": 10
+      },
+      "architecture-outcomes/steam-trap": {
+        "width": 275,
+        "height": 602,
+        "body_text": 12.2
+      }
+    },
+    "size": {
+      "scale": "Scale the outcome image uniformly (never crop, stretch or redraw it) so its body text matches the diagram text: scale = the density's diagram text size (12, 14 or 16px) ÷ the outcome's native body_text. At Medium, Faclon scope is 386 × 700.",
+      "max_width": "At most a quarter of the content width (456px), the funnel included. If the funnel version would be wider, use the plain Faclon scope.",
+      "max_height": "No taller than the input side of the diagram it closes; centre it on the main data flow.",
+      "balance": "The input side is the larger part of the diagram: devices, zones and connections fill at least the remaining three quarters of the content width. If the outcome would still dominate, step the whole diagram's text down one density (the outcome scales down with it); never enlarge the outcome to fill space."
+    },
     "rule": "Place one outcome file unchanged. Change, restyle, reword or rebuild it only when the user asks."
   },
   "colour": {

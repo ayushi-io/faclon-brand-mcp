@@ -62,6 +62,15 @@ test("check_design allows glow only on Bruce AI content, and glass never", () =>
   assert.ok(rules(checkDesign({ html: glass })).includes("design.no-ai-slop:error"));
 });
 
+test("check_design for architecture: the outcome stays a quarter of the width and text keeps one size", () => {
+  const html = (w, sizes) => `<style>body{font-family:Inter}${sizes.map((z, i) => `.t${i}{font-size:${z}px}`).join("")}</style><img src="https://faclon-brand-mcp.vercel.app/assets/architecture-outcomes/faclon-scope.png" width="${w}" alt="I/O Sense outcome, Faclon Labs">`;
+  const ok = rules(checkDesign({ html: html(386, [32, 20, 16, 14]), format_profile: "architecture" }));
+  assert.ok(!ok.includes("architecture.outcome-balance:error") && !ok.includes("architecture.one-text-size:error"), ok.join());
+  const bad = rules(checkDesign({ html: html(560, [32, 20, 18, 16, 14, 12]), format_profile: "architecture" }));
+  assert.ok(bad.includes("architecture.outcome-balance:error") && bad.includes("architecture.one-text-size:error"), bad.join());
+  assert.ok(!rules(checkDesign({ html: html(560, [32, 20, 18, 16, 14, 12]), format_profile: "deck" })).includes("architecture.one-text-size:error"));
+});
+
 test("check_design for architecture: brand blue only in the placed outcome, light blues elsewhere", () => {
   const base = (css) => `<style>body{font-family:Inter} .tag{font-size:14px;${css}}</style><div class="tag">Hart Gateway</div><img src="https://faclon-brand-mcp.vercel.app/assets/architecture-outcomes/faclon-scope.png" alt="I/O Sense outcome, Faclon Labs">`;
   const ok = checkDesign({ html: base("background:#DCE8FE;color:#0C1927;border-color:#8AB1FB"), format_profile: "architecture" });

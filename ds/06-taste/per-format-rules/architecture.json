@@ -17,6 +17,14 @@
       ]
     },
     {
+      "id": "outcome-dominates",
+      "text": "Never let the I/O Sense outcome overpower the diagram: no wider than a quarter of the content width (456px, the funnel included), no taller than the input side, its body text scaled to the diagram text size, never stretched to fill the canvas height.",
+      "basis": [
+        "decision:architecture-balance",
+        "profile:final_outcome.size"
+      ]
+    },
+    {
       "id": "content-unchanged",
       "text": "Hard rule: never edit or change the user's content (no rewriting, shortening, cutting or adding). If a change seems needed, highlight it, suggest how it could be shown better, and change nothing unless the user approves.",
       "basis": [
@@ -60,6 +68,21 @@
       "text": "Never give an arrow a colour the user did not define; use the default, data-flow or status arrow.",
       "basis": [
         "profile:arrows"
+      ]
+    },
+    {
+      "id": "zone-colours",
+      "text": "Never colour-code zones unless the user asks for it; without that, every zone uses the standard zone and sub-zone styles.",
+      "basis": [
+        "decision:architecture-zones-legend",
+        "profile:shapes.zone"
+      ]
+    },
+    {
+      "id": "legend-unasked",
+      "text": "Never add or leave out a legend without asking: ask the user whether they want one before designing.",
+      "basis": [
+        "decision:architecture-zones-legend"
       ]
     },
     {
@@ -146,6 +169,15 @@
       "basis": [
         "decision:architecture-final-outcome",
         "profile:final_outcome"
+      ]
+    },
+    {
+      "id": "one-text-size",
+      "text": "Keep one text size across the artboard: node tags, device labels, captions and arrow labels share the density's diagram text style, and the outcome is scaled so its body text matches it. Hierarchy comes from the title, the zone headings, the outcome and the light blue main data flow, not from mixing label sizes.",
+      "basis": [
+        "decision:architecture-balance",
+        "profile:typography.one_text_size",
+        "profile:final_outcome.size"
       ]
     },
     {
