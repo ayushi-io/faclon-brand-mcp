@@ -14,7 +14,8 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 ## What the user gives
 
 - **Needed:** the systems, devices, connections and protocols to show. Nothing is added that the user did not supply.
-- **Optional:** a title; labels; which flows are the main data flow or a status; arrow colours beyond the defaults.
+- **Optional:** a title; labels; which flows are the main data flow or a status; arrow colours beyond the defaults; zone colour-coding (only when they ask for it).
+- **Always ask:** whether they want a legend. Add one only if they say yes.
 - **Icons:** from the Faclon architecture icon library (`get_brand_guidelines(section: "assets", asset_category: "icons")`). If a device has no icon there, ask; never draw or substitute an icon.
 - If what to show is unclear, ask before designing.
 
@@ -39,17 +40,19 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
     - Boxed tag: the icon inside a node box, the name tag below (spacing/12). For main systems and servers.
     - Tag: the icon with no box, the name tag directly below (spacing/4). For systems drawn as a picture (cloud, server rack, PC).
     - Label: the icon, the name below as plain text (device label, text/secondary), at most 2 lines. For network gear and secondary devices.
-    - Caption: the icon with a short caption (device caption, text/body, never below 10px). For repeated small devices such as cameras, sensors and lights.
+    - Caption: the icon with a short caption (device caption, text/body, the same size as the other device names). For repeated small devices such as cameras, sensors and lights.
   - **Final outcome:** end the diagram in one I/O Sense outcome from the asset library (`get_brand_guidelines(section: "assets", asset_category: "architecture-outcomes")`), placed unchanged where the main data flow arrives. Faclon scope by default; Faclon scope with funnel when the diagram feeds into it from the left; steam trap only for steam-trap diagrams. Change or rebuild it only when the user asks.
+  - **Outcome size:** scale the outcome image uniformly so its body text matches the diagram text (scale = diagram text size ÷ the outcome's native body text, in `final_outcome.native`; Medium gives Faclon scope 386 × 700). At most a quarter of the content width (456px, funnel included; use plain Faclon scope if the funnel would be wider), no taller than the input side, centred on the main data flow. The input side is the larger part of the diagram. Never stretch the outcome to fill the canvas.
 - **Colour:** brand blue lives only in the final outcome. Everything else uses neutrals and light blue tints (brand/050 to brand/400); nothing in brand/500 or darker.
 - **Arrows:** connections use the default dashed text/secondary arrow (border-width/md); the main data flow uses the solid light blue arrow (brand/400); status arrows (border/success, border/error) only where the user marks them. Arrow labels sit spacing/4 from the line.
-- **Text:** each element has its text style per density (for example node tag Body/SM, Body/MD or Body/XL Semi Bold). Never below 10px.
+- **Text:** one diagram text size across the artboard. Node tags, device labels, captions and arrow labels all use the density's diagram text style (Dense Body/XS 12px, Medium Body/SM 14px, Open Body/MD 16px); only the weight differs (tags Semi Bold, the rest Medium). Only the title and the zone and sub-zone headings are larger.
 - **Reference:** the architecture templates (`get_brand_guidelines(section: "templates", format_profile: "architecture")`) show the design language: machine monitoring, heat exchanger process diagram, repeated steam traps, substation cloud architecture and the camera-based vision system; the Icon + content section shows the four device styles. Start from the one whose structure fits; take layout only.
 
 ## Rules that matter most
 
 - Never add a device, system, connection or protocol the user did not supply.
 - Never give an arrow a colour the user did not define.
+- Never colour-code zones unless the user asks; ask whether they want a legend before designing.
 - Avoid arrows crossing each other or running through a node.
 - Show states (online, alarm, offline) with the five intents and their fixed fill and text pairs.
 - Accent colours on at most about 10-15% of the diagram.
@@ -70,7 +73,10 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 - [ ] Every label at or above 10px and at most 2 lines; no label overlaps a connector.
 - [ ] Each device uses one icon + content style by its role, the same kind of device the same style.
 - [ ] Shapes and arrows follow the spec; the diagram ends in one I/O Sense outcome, placed unchanged.
+- [ ] The outcome is scaled to the diagram text size, at most 456px wide and no taller than the input side; the input side reads as the larger part.
+- [ ] One diagram text size for tags, labels, captions and arrow labels; `check_design` finds at most 4 font sizes.
 - [ ] Brand blue only in the outcome; everything else neutral or light blue.
+- [ ] Zones colour-coded only if the user asked; a legend only if the user said yes when asked.
 - [ ] No crossing arrows or arrows through nodes.
 - [ ] Nothing outside the 48px padding; title top-left, logo top-right.
 - [ ] Icons from the user's library, or the user was asked.

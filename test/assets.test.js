@@ -177,3 +177,29 @@ test("architecture: three Figma outcomes and four icon + content device styles",
   assert.match(t.use, /light blue/);
   assert.match(p.skill, /four icon \+ content styles/);
 });
+
+test("architecture: balanced outcome and one diagram text size", () => {
+  const p = getBrandGuidelines({ section: "rules", format_profile: "architecture" }).format_profile;
+  for (const id of p.final_outcome.options) {
+    const n = p.final_outcome.native[id], e = index.assets.find((x) => x.id === id);
+    assert.ok(n && Math.abs(e.width / 2 - n.width) <= 1 && Math.abs(e.height / 2 - n.height) <= 1, `${id}: native size matches the @2x file`);
+  }
+  assert.match(p.final_outcome.size.max_width, /456px/);
+  const s = p.typography.styles;
+  for (const d of ["dense", "medium", "open"]) {
+    const sizes = new Set(["node_tag", "device_label", "device_caption", "arrow_label"].map((k) => s[k][d].style));
+    assert.equal(sizes.size, 1, `${d}: device text uses one style`);
+  }
+  // At Medium (14px) Faclon scope scales to 386px wide: inside the quarter-width cap.
+  assert.ok((14 / p.final_outcome.native["architecture-outcomes/faclon-scope"].body_text) * 276 <= 456);
+  assert.ok(p.guardrails.must_not.some((i) => i.id === "outcome-dominates"));
+});
+
+test("architecture: zone colours only on request, legend always asked", () => {
+  const p = getBrandGuidelines({ section: "rules", format_profile: "architecture" }).format_profile;
+  assert.ok(p.guardrails.user_decides.some((x) => /colour-coding.*only when the user asks/.test(x)));
+  assert.ok(p.guardrails.user_decides.some((x) => /legend: always ask/.test(x)));
+  assert.ok(!(p.guardrails.to_define ?? []).some((x) => /legend|Zone colour/.test(x)));
+  for (const id of ["zone-colours", "legend-unasked"]) assert.ok(p.guardrails.must_not.some((i) => i.id === id), id);
+  assert.match(p.skill, /\*\*Always ask:\*\* whether they want a legend/);
+});

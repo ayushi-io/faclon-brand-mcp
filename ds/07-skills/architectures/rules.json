@@ -12,6 +12,7 @@
   "typography": {
     "breakpoint_mode": "desktop",
     "min_size": 12,
+    "one_text_size": "Every text in the diagram except the title and the zone and sub-zone headings (node tags, device labels, captions, arrow labels, notes) uses one size: the density's diagram text style (Dense Body/XS 12px, Medium Body/SM 14px, Open Body/MD 16px). Only the weight differs: Semi Bold (600) for node tags, Medium (500) for the rest. No other size or weight is mixed in.",
     "styles": {
       "title": {
         "dense": {
@@ -60,15 +61,15 @@
       },
       "node_tag": {
         "dense": {
-          "style": "body/sm",
+          "style": "body/xs",
           "weight": 600
         },
         "medium": {
-          "style": "body/md",
+          "style": "body/sm",
           "weight": 600
         },
         "open": {
-          "style": "body/xl",
+          "style": "body/md",
           "weight": 600
         },
         "colour": "text/heading"
@@ -83,7 +84,7 @@
           "weight": 500
         },
         "open": {
-          "style": "body/lg",
+          "style": "body/md",
           "weight": 500
         },
         "colour": "text/secondary"
@@ -94,11 +95,11 @@
           "weight": 500
         },
         "medium": {
-          "style": "body/xs",
+          "style": "body/sm",
           "weight": 500
         },
         "open": {
-          "style": "body/sm",
+          "style": "body/md",
           "weight": 500
         },
         "colour": "text/body"
@@ -106,15 +107,15 @@
       "arrow_label": {
         "dense": {
           "style": "body/xs",
-          "weight": 600
+          "weight": 500
         },
         "medium": {
           "style": "body/sm",
-          "weight": 600
+          "weight": 500
         },
         "open": {
-          "style": "body/lg",
-          "weight": 600
+          "style": "body/md",
+          "weight": 500
         },
         "colour": "text/secondary"
       }
@@ -161,7 +162,9 @@
       "Which labels are shown and what they say; until then they stay placeholders.",
       "The scope: how many sections or zones there are and what each contains; when it is unclear, ask.",
       "Which devices are shown; their icons come from the Faclon architecture icon library (get_brand_guidelines(section: \"assets\", asset_category: \"icons\")).",
-      "Any arrow colour beyond the default, data-flow and status colours."
+      "Any arrow colour beyond the default, data-flow and status colours.",
+      "Zone colour-coding (e.g. by network, area or protocol): only when the user asks for it; otherwise every zone uses the standard zone and sub-zone styles.",
+      "Whether the diagram has a legend: always ask the user before designing; add one only if they say yes."
     ],
     "fixed": [
       {
@@ -197,9 +200,10 @@
       },
       {
         "id": "type",
-        "text": "Text uses the text style set for its element and density (e.g. node tag: Body/SM, Body/MD or Body/XL Semi Bold), never a raw size.",
+        "text": "Text uses the text style set for its element and density, never a raw size. Node tags, device labels, captions and arrow labels all share one size per diagram (Body/XS, Body/SM or Body/MD by density); only the title and zone headings are larger.",
         "basis": [
           "profile:typography.styles",
+          "profile:typography.one_text_size",
           "rule:type.styles-only"
         ]
       },
@@ -243,9 +247,7 @@
       "How repeated parts are shown, e.g. one device with 'up to 16' rather than sixteen copies, when the user's content allows it."
     ],
     "to_define": [
-      "Zone colour-coding (e.g. by network, area or protocol) beyond the zone and sub-zone styles.",
-      "Additional arrow colours and their meanings.",
-      "Whether diagrams carry a legend, and where."
+      "Additional arrow colours and their meanings."
     ]
   },
   "overrides": [],

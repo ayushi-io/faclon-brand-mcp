@@ -484,7 +484,17 @@
     },
     {
       "id": "architecture-device-styles",
-      "decision": "With one of the four icon + content styles on the Figma Architectures page (Template › Icon + Content design): boxed tag, tag, label and caption. Claude picks the style by the device's role and keeps it the same for the same kind of device. The tags stay light blue (container/info, text/heading) instead of the reference's solid brand blue, Outfit becomes Inter, the reference's greys become text/secondary and text/body, and the 7px camera caption is set at the 10px minimum or above.",
+      "decision": "With one of the four icon + content styles on the Figma Architectures page (Template › Icon + Content design): boxed tag, tag, label and caption. Claude picks the style by the device's role and keeps it the same for the same kind of device. The tags stay light blue (container/info, text/heading) instead of the reference's solid brand blue, Outfit becomes Inter, the reference's greys become text/secondary and text/body, and every device name, caption and arrow label shares one size per density (decision architecture-balance).",
+      "decided_on": "2026-10-27"
+    },
+    {
+      "id": "architecture-balance",
+      "decision": "The I/O Sense outcome must not overpower the input side, and text must look consistent across the artboard. The outcome is scaled uniformly so its body text matches the diagram text (Body/XS, Body/SM or Body/MD by density), takes at most a quarter of the content width (456px, funnel included) and is no taller than the input side. Node tags, device labels, captions and arrow labels share one size; only the weight differs (tags Semi Bold, the rest Medium). From brand-team feedback on a generated diagram where the outcome filled the canvas height and labels mixed four sizes.",
+      "decided_on": "2026-10-27"
+    },
+    {
+      "id": "architecture-zones-legend",
+      "decision": "Zone colour-coding is used only when the user asks for it; otherwise zones use the standard zone and sub-zone styles. Claude always asks the user whether they want a legend, and adds one only if they say yes.",
       "decided_on": "2026-10-27"
     }
   ],
