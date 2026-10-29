@@ -18,6 +18,19 @@ const withUrls = (dir, data) => ({
   sections: data.sections.map((s) => ({ ...s, templates: s.templates.map((t) => ({ ...t, thumbnail_url: `${ASSET_BASE_URL}/templates/${dir}/${t.thumbnail}` })) })),
 });
 
+// Deck reference slides that ship as ready HTML (ds/04-templates/decks/reference/): the snippet
+// with its backdrop and logo URLs filled in, so the slide is placed as designed, not redrawn.
+export function withReferenceHtml(refs) {
+  const slides = Object.fromEntries(Object.entries(refs.slides).map(([key, s]) => {
+    if (!s.html) return [key, s];
+    const html = readData(`${P.templates}/decks/${s.html}`, { json: false })
+      .replaceAll("%TEMPLATES_URL%", `${ASSET_BASE_URL}/templates`)
+      .replaceAll("%ASSETS_URL%", `${ASSET_BASE_URL}/assets`);
+    return [key, { ...s, html, html_url: `${ASSET_BASE_URL}/templates/decks/${s.html}` }];
+  }));
+  return { ...refs, slides };
+}
+
 export function getTemplates({ format_profile } = {}) {
   const byFormat = all();
   if (!format_profile) {

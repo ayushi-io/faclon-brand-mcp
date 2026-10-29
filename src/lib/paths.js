@@ -10,6 +10,7 @@ export const P = {
   skills: "ds/07-skills",
   assets: "ds/05-assets",
   templates: "ds/04-templates",
+  examples: "ds/06-taste/good-vs-bad-examples",
   assetIndex: "ds/05-assets/_index.json",
   snapshot: "sources/figma/snapshot.json",
   componentsSnapshot: "sources/figma/components-snapshot.json",
@@ -29,6 +30,7 @@ export const SECTION_FILES = {
   illustration: "ds/02-brand-elements/illustration/README.md",
   architecture: "ds/02-brand-elements/diagrams/README.md",
   imagery: "ds/02-brand-elements/photography-imagery/README.md",
+  examples: "ds/06-taste/good-vs-bad-examples/README.md",
 };
 
 // Sections served from several Markdown files, joined in order.

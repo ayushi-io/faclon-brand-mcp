@@ -536,7 +536,7 @@
     {
       "id": "color.status-intents",
       "category": "color",
-      "rule": "Status uses five intents: Positive, Negative, Information, Neutral, Primary. Warnings use Negative; there is no separate warning or notice colour. Information uses the brand blue family (container/info, text/info, container/info-strong).",
+      "rule": "Status uses five intents: Positive, Negative, Information, Neutral, Primary. Warnings use Negative; there is no separate warning or notice colour. Information uses the brand blue family (container/info, text/info, container/info-strong). Colour follows meaning: problems, risks and pain points use the Negative intent (red container tint, red heading or icon), not only a red chip; objectives, outcomes and solutions use brand or Positive.",
       "check": {
         "type": "allowed-values",
         "field": "intent",
@@ -556,7 +556,7 @@
       },
       "severity": "error",
       "locked": false,
-      "source": "Brand team decision 2026-10-14"
+      "source": "Brand team decision 2026-10-14; colour by meaning 2026-10-28"
     },
     {
       "id": "color.border-primary-opt-in",
@@ -851,14 +851,14 @@
     {
       "id": "icon.lucide-only",
       "category": "icon",
-      "rule": "When an icon is needed, use Lucide (lucide.dev) and no other icon set. Keep Lucide's stroke style; colour icons with a text token that matches the surface.",
+      "rule": "Icons come from Lucide (lucide.dev) and no other icon set; architecture diagrams use the Faclon architecture icon library. Keep Lucide's stroke style; colour icons with a text token that matches the surface. Give each item in a list or grid of tools, capabilities, features, steps or outcomes an icon that names it; never a decorative icon, an AI cliche icon or an icon on a heading that adds nothing.",
       "check": {
         "type": "icon-source",
         "value": "lucide"
       },
       "severity": "error",
       "locked": false,
-      "source": "Brand team decision 2026-10-14"
+      "source": "Brand team decision 2026-10-14; icons on lists 2026-10-28"
     },
     {
       "id": "design.no-ai-slop",
@@ -884,14 +884,14 @@
         ],
         "writing": "guidelines:voice (AI-sounding writing)",
         "exceptions": [
-          "design elements (02-brand-elements/design-elements), each only on its backgrounds: dot-particle form on dark, light streak on brand, dot wave on dark, light or brand",
+          "design elements (02-brand-elements/design-elements), each only on its backgrounds: dot-particle form on dark or brand, light streak on brand, dot wave on dark, light or brand",
           "illustration styles (02-brand-elements/illustration): dot-matrix forms on brand, pixel dissolve on light",
           "gradient/bruce-ai and glow on Bruce AI content only"
         ]
       },
       "severity": "error",
       "locked": true,
-      "source": "Brand team decision 2026-10-21 (no-ai-slop); exceptions approved by the brand team 2026-10-23 (design-elements, gradients-where-allowed); illustration styles added 2026-10-26"
+      "source": "Brand team decision 2026-10-21 (no-ai-slop); exceptions approved by the brand team 2026-10-23 (design-elements, gradients-where-allowed); illustration styles added 2026-10-26; dot-particle form on brand 2026-10-28"
     }
   ]
 }

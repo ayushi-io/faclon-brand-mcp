@@ -1,0 +1,24 @@
+<!-- Faclon deck reference slide: closing (Figma Design MCP › Layouts › "29 · Close", node 3058:22750).
+     Use as it is. Fill only the two data-slot elements with the user's words; keep the backdrop, positions and sizes.
+     Mapped to the design system: background/brand, the chip tokens for the tag, Display/XL for the statement
+     (the reference's 120px is above the 72px maximum), the white logo top-right on the 52px edge. Text keeps the reference's 134px left edge.
+     The page needs the token CSS from get_tokens(as: "css"). -->
+<section class="slide ref-closing" aria-label="Closing">
+  <img class="ref-closing__backdrop" src="%TEMPLATES_URL%/decks/reference/closing-backdrop.jpg" alt="Faclon dot-particle form and light streaks on brand blue">
+  <img class="ref-closing__logo" src="%ASSETS_URL%/logos/faclon-labs-logo-white.svg" alt="Faclon Labs">
+  <div class="ref-closing__text">
+    <span class="ref-closing__tag" data-slot="tag">www.faclon.com</span>
+    <p class="ref-closing__statement" data-slot="statement">The user's closing statement, with <span class="ref-closing__accent">the words they highlight</span> in the accent colour.</p>
+  </div>
+</section>
+<style>
+  .ref-closing { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: var(--color-background-brand); }
+  .ref-closing__backdrop { position: absolute; top: 0; left: 0; width: 1920px; height: 1080px; }
+  .ref-closing__logo { position: absolute; top: 52px; right: 52px; width: 253px; height: auto; }
+  /* Text group: the reference's 134px left edge (as in the brand team's mapped page breaker), centred vertically
+     where the reference has it; the dot form keeps the right. */
+  .ref-closing__text { position: absolute; left: 134px; top: 540px; transform: translateY(-50%); width: 1080px; display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-32); }
+  .ref-closing__tag { background: var(--color-container-inverse); color: var(--color-text-inverse); border-radius: var(--radius-md); padding: var(--space-8) var(--space-12); font-family: var(--font-body); font-size: 20px; line-height: 32px; font-weight: 600; }
+  .ref-closing__statement { margin: 0; color: var(--color-text-on-brand); font-family: var(--font-heading); font-size: 72px; line-height: 80px; letter-spacing: -1.44px; font-weight: 700; }
+  .ref-closing__accent { color: var(--color-text-accent-on-brand); }
+</style>

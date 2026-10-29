@@ -12,7 +12,7 @@
   },
   "web_icons": {
     "source": "Lucide (lucide.dev), rule icon.lucide-only",
-    "note": "Web and UI icons are not stored here: use the official Lucide SVG, coloured with a text token, only when the user asks for an icon."
+    "note": "Web and UI icons are not stored here: use the official Lucide SVG, coloured with a text token: one per item in a list or grid of tools, capabilities, features, steps or outcomes, never decorative."
   },
   "not_yet_supplied": [
     "product-screenshots",
@@ -320,7 +320,7 @@
       "height": 62,
       "bytes": 3607,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3252:8190",
         "page": "❑ Logo › Partner logos"
@@ -341,7 +341,7 @@
       "bytes": 5945,
       "background": "light background",
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3252:8199",
         "page": "❑ Logo › Partner logos"
@@ -362,7 +362,7 @@
       "bytes": 5861,
       "background": "dark background",
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3252:8205",
         "page": "❑ Logo › Partner logos"
@@ -384,7 +384,7 @@
       "background": "light background",
       "use": "Reference example of the co-branding lockup (rule logo.co-branding): Faclon Labs logo, divider, partner logo. Build other lockups from the separate logo files by the same rule.",
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3250:3849",
         "page": "❑ Logo › Partner logos"
@@ -404,7 +404,7 @@
       "height": 48,
       "bytes": 893,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3252:8194",
         "page": "❑ Logo › Partner logos"
@@ -424,7 +424,7 @@
       "height": 58,
       "bytes": 4903,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3253:8217",
         "page": "❑ Logo › Partner logos"
@@ -444,7 +444,7 @@
       "height": 193,
       "bytes": 73466,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:24135",
         "page": "❑ Logo › Client logos"
@@ -464,7 +464,7 @@
       "height": 64,
       "bytes": 32312,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:23603",
         "page": "❑ Logo › Client logos"
@@ -484,7 +484,7 @@
       "height": 193,
       "bytes": 38947,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:24153",
         "page": "❑ Logo › Client logos"
@@ -506,7 +506,7 @@
       "height": 64,
       "bytes": 7829,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:22207",
         "page": "❑ Logo › Client logos"
@@ -526,7 +526,7 @@
       "height": 192,
       "bytes": 47855,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:24112",
         "page": "❑ Logo › Client logos"
@@ -547,7 +547,7 @@
       "height": 193,
       "bytes": 42824,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:23937",
         "page": "❑ Logo › Client logos"
@@ -567,7 +567,7 @@
       "height": 183,
       "bytes": 55207,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:23938",
         "page": "❑ Logo › Client logos"
@@ -588,7 +588,7 @@
       "height": 192,
       "bytes": 12961,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:22257",
         "page": "❑ Logo › Client logos"
@@ -608,7 +608,7 @@
       "height": 64,
       "bytes": 18751,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:23902",
         "page": "❑ Logo › Client logos"
@@ -629,7 +629,7 @@
       "height": 64,
       "bytes": 25814,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:23758",
         "page": "❑ Logo › Client logos"
@@ -649,7 +649,7 @@
       "height": 192,
       "bytes": 21084,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:24110",
         "page": "❑ Logo › Client logos"
@@ -669,7 +669,7 @@
       "height": 192,
       "bytes": 26954,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:21954",
         "page": "❑ Logo › Client logos"
@@ -689,7 +689,7 @@
       "height": 64,
       "bytes": 33134,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:21886",
         "page": "❑ Logo › Client logos"
@@ -709,7 +709,7 @@
       "height": 64,
       "bytes": 2385,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:24116",
         "page": "❑ Logo › Client logos"
@@ -729,7 +729,7 @@
       "height": 64,
       "bytes": 8317,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:23785",
         "page": "❑ Logo › Client logos"
@@ -750,7 +750,7 @@
       "height": 64,
       "bytes": 35082,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:23653",
         "page": "❑ Logo › Client logos"
@@ -770,7 +770,7 @@
       "height": 192,
       "bytes": 25278,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:21952",
         "page": "❑ Logo › Client logos"
@@ -790,7 +790,7 @@
       "height": 192,
       "bytes": 44970,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:21953",
         "page": "❑ Logo › Client logos"
@@ -810,7 +810,7 @@
       "height": 64,
       "bytes": 9044,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:24076",
         "page": "❑ Logo › Client logos"
@@ -830,7 +830,7 @@
       "height": 192,
       "bytes": 25003,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:23940",
         "page": "❑ Logo › Client logos"
@@ -850,7 +850,7 @@
       "height": 64,
       "bytes": 20972,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:23991",
         "page": "❑ Logo › Client logos"
@@ -870,7 +870,7 @@
       "height": 64,
       "bytes": 17909,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:22050",
         "page": "❑ Logo › Client logos"
@@ -891,7 +891,7 @@
       "height": 64,
       "bytes": 2429,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:23626",
         "page": "❑ Logo › Client logos"
@@ -911,7 +911,7 @@
       "height": 48,
       "bytes": 8340,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:21768",
         "page": "❑ Logo › Client logos"
@@ -931,7 +931,7 @@
       "height": 192,
       "bytes": 84200,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:23943",
         "page": "❑ Logo › Client logos"
@@ -951,7 +951,7 @@
       "height": 64,
       "bytes": 127762,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:22414",
         "page": "❑ Logo › Client logos"
@@ -972,7 +972,7 @@
       "height": 64,
       "bytes": 3666,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:24156",
         "page": "❑ Logo › Client logos"
@@ -992,7 +992,7 @@
       "height": 192,
       "bytes": 14494,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:23936",
         "page": "❑ Logo › Client logos"
@@ -1013,7 +1013,7 @@
       "height": 64,
       "bytes": 10763,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:23825",
         "page": "❑ Logo › Client logos"
@@ -1033,7 +1033,7 @@
       "height": 192,
       "bytes": 70744,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:23957",
         "page": "❑ Logo › Client logos"
@@ -1053,7 +1053,7 @@
       "height": 64,
       "bytes": 5861,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:22134",
         "page": "❑ Logo › Client logos"
@@ -1073,7 +1073,7 @@
       "height": 192,
       "bytes": 53653,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:21950",
         "page": "❑ Logo › Client logos"
@@ -1093,7 +1093,7 @@
       "height": 192,
       "bytes": 27789,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:21951",
         "page": "❑ Logo › Client logos"
@@ -1114,7 +1114,7 @@
       "height": 64,
       "bytes": 16935,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:21888",
         "page": "❑ Logo › Client logos"
@@ -1134,7 +1134,7 @@
       "height": 64,
       "bytes": 14294,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:23670",
         "page": "❑ Logo › Client logos"
@@ -1154,7 +1154,7 @@
       "height": 64,
       "bytes": 1600,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:23754",
         "page": "❑ Logo › Client logos"
@@ -1174,7 +1174,7 @@
       "height": 64,
       "bytes": 101696,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:22265",
         "page": "❑ Logo › Client logos"
@@ -1194,7 +1194,7 @@
       "height": 64,
       "bytes": 8420,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:23776",
         "page": "❑ Logo › Client logos"
@@ -1214,7 +1214,7 @@
       "height": 193,
       "bytes": 30147,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:23941",
         "page": "❑ Logo › Client logos"
@@ -1234,7 +1234,7 @@
       "height": 64,
       "bytes": 15250,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:23965",
         "page": "❑ Logo › Client logos"
@@ -1254,7 +1254,7 @@
       "height": 192,
       "bytes": 15257,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:21949",
         "page": "❑ Logo › Client logos"
@@ -1274,7 +1274,7 @@
       "height": 168,
       "bytes": 93468,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:22049",
         "page": "❑ Logo › Client logos"
@@ -1294,7 +1294,7 @@
       "height": 192,
       "bytes": 32816,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:22124",
         "page": "❑ Logo › Client logos"
@@ -1314,7 +1314,7 @@
       "height": 64,
       "bytes": 2026,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:21943",
         "page": "❑ Logo › Client logos"
@@ -1334,7 +1334,7 @@
       "height": 192,
       "bytes": 47635,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:22048",
         "page": "❑ Logo › Client logos"
@@ -1354,7 +1354,7 @@
       "height": 64,
       "bytes": 6802,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:23836",
         "page": "❑ Logo › Client logos"
@@ -1374,7 +1374,7 @@
       "height": 192,
       "bytes": 50820,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:21948",
         "page": "❑ Logo › Client logos"
@@ -1394,7 +1394,7 @@
       "height": 193,
       "bytes": 37512,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:24114",
         "page": "❑ Logo › Client logos"
@@ -1414,7 +1414,7 @@
       "height": 192,
       "bytes": 22798,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:23942",
         "page": "❑ Logo › Client logos"
@@ -1434,7 +1434,7 @@
       "height": 192,
       "bytes": 18344,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:22122",
         "page": "❑ Logo › Client logos"
@@ -1454,7 +1454,7 @@
       "height": 193,
       "bytes": 67541,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:22123",
         "page": "❑ Logo › Client logos"
@@ -1474,7 +1474,7 @@
       "height": 64,
       "bytes": 2272,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:21766",
         "page": "❑ Logo › Client logos"
@@ -1494,7 +1494,7 @@
       "height": 61,
       "bytes": 8447,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:24136",
         "page": "❑ Logo › Client logos"
@@ -1514,7 +1514,7 @@
       "height": 42,
       "bytes": 9581,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:21853",
         "page": "❑ Logo › Client logos"
@@ -1534,7 +1534,7 @@
       "height": 64,
       "bytes": 24323,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:22097",
         "page": "❑ Logo › Client logos"
@@ -1554,7 +1554,7 @@
       "height": 64,
       "bytes": 21287,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:23969",
         "page": "❑ Logo › Client logos"
@@ -1574,7 +1574,7 @@
       "height": 32,
       "bytes": 15712,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:21849",
         "page": "❑ Logo › Client logos"
@@ -1594,7 +1594,7 @@
       "height": 64,
       "bytes": 15111,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:24080",
         "page": "❑ Logo › Client logos"
@@ -1614,7 +1614,7 @@
       "height": 193,
       "bytes": 16721,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:24152",
         "page": "❑ Logo › Client logos"
@@ -1634,7 +1634,7 @@
       "height": 64,
       "bytes": 16015,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:22141",
         "page": "❑ Logo › Client logos"
@@ -1654,7 +1654,7 @@
       "height": 192,
       "bytes": 54466,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:24111",
         "page": "❑ Logo › Client logos"
@@ -1674,7 +1674,7 @@
       "height": 192,
       "bytes": 31422,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:24126",
         "page": "❑ Logo › Client logos"
@@ -1694,7 +1694,7 @@
       "height": 64,
       "bytes": 3215,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:21955",
         "page": "❑ Logo › Client logos"
@@ -1714,7 +1714,7 @@
       "height": 192,
       "bytes": 25430,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:21851",
         "page": "❑ Logo › Client logos"
@@ -1734,7 +1734,7 @@
       "height": 193,
       "bytes": 35680,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:23858",
         "page": "❑ Logo › Client logos"
@@ -1754,7 +1754,7 @@
       "height": 135,
       "bytes": 85045,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:24125",
         "page": "❑ Logo › Client logos"
@@ -1774,7 +1774,7 @@
       "height": 192,
       "bytes": 37684,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:24113",
         "page": "❑ Logo › Client logos"
@@ -1794,7 +1794,7 @@
       "height": 64,
       "bytes": 1964,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:23955",
         "page": "❑ Logo › Client logos"
@@ -1814,7 +1814,7 @@
       "height": 64,
       "bytes": 9645,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:23928",
         "page": "❑ Logo › Client logos"
@@ -1834,7 +1834,7 @@
       "height": 64,
       "bytes": 9906,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:21957",
         "page": "❑ Logo › Client logos"
@@ -1855,7 +1855,7 @@
       "height": 64,
       "bytes": 16453,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:22200",
         "page": "❑ Logo › Client logos"
@@ -1875,7 +1875,7 @@
       "height": 64,
       "bytes": 2154,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:21897",
         "page": "❑ Logo › Client logos"
@@ -1895,7 +1895,7 @@
       "height": 64,
       "bytes": 3034,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:21845",
         "page": "❑ Logo › Client logos"
@@ -1915,7 +1915,7 @@
       "height": 64,
       "bytes": 5462,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:23844",
         "page": "❑ Logo › Client logos"
@@ -1935,7 +1935,7 @@
       "height": 158,
       "bytes": 19521,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:21947",
         "page": "❑ Logo › Client logos"
@@ -1955,7 +1955,7 @@
       "height": 64,
       "bytes": 4236,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:21761",
         "page": "❑ Logo › Client logos"
@@ -1975,7 +1975,7 @@
       "height": 64,
       "bytes": 21826,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:21983",
         "page": "❑ Logo › Client logos"
@@ -1995,7 +1995,7 @@
       "height": 64,
       "bytes": 5088,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:21836",
         "page": "❑ Logo › Client logos"
@@ -2015,7 +2015,7 @@
       "height": 193,
       "bytes": 24735,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:24115",
         "page": "❑ Logo › Client logos"
@@ -2035,7 +2035,7 @@
       "height": 192,
       "bytes": 45997,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:21852",
         "page": "❑ Logo › Client logos"
@@ -2055,7 +2055,7 @@
       "height": 57,
       "bytes": 34795,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:21906",
         "page": "❑ Logo › Client logos"
@@ -2075,7 +2075,7 @@
       "height": 137,
       "bytes": 17764,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:21975",
         "page": "❑ Logo › Client logos"
@@ -2095,7 +2095,7 @@
       "height": 64,
       "bytes": 23373,
       "rights": "Approved for external marketing (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3158:22093",
         "page": "❑ Logo › Client logos"
@@ -2115,8 +2115,8 @@
       "width": 344,
       "height": 466,
       "bytes": 96951,
-      "rights": "not recorded",
-      "owner": "to add",
+      "rights": "Approved for marketing use whenever required (decided 2026-10-28).",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3136:2529",
         "page": "People ( leadership roles and SMEs)"
@@ -2136,8 +2136,8 @@
       "width": 344,
       "height": 466,
       "bytes": 189410,
-      "rights": "not recorded",
-      "owner": "to add",
+      "rights": "Approved for marketing use whenever required (decided 2026-10-28).",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3136:2555",
         "page": "People ( leadership roles and SMEs)"
@@ -2157,8 +2157,8 @@
       "width": 344,
       "height": 466,
       "bytes": 222426,
-      "rights": "not recorded",
-      "owner": "to add",
+      "rights": "Approved for marketing use whenever required (decided 2026-10-28).",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3136:2550",
         "page": "People ( leadership roles and SMEs)"
@@ -2178,8 +2178,8 @@
       "width": 344,
       "height": 466,
       "bytes": 203737,
-      "rights": "not recorded",
-      "owner": "to add",
+      "rights": "Approved for marketing use whenever required (decided 2026-10-28).",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3136:2546",
         "page": "People ( leadership roles and SMEs)"
@@ -2199,8 +2199,8 @@
       "width": 344,
       "height": 466,
       "bytes": 129584,
-      "rights": "not recorded",
-      "owner": "to add",
+      "rights": "Approved for marketing use whenever required (decided 2026-10-28).",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3136:2541",
         "page": "People ( leadership roles and SMEs)"
@@ -2220,8 +2220,8 @@
       "width": 344,
       "height": 466,
       "bytes": 206436,
-      "rights": "not recorded",
-      "owner": "to add",
+      "rights": "Approved for marketing use whenever required (decided 2026-10-28).",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3136:2553",
         "page": "People ( leadership roles and SMEs)"
@@ -2241,8 +2241,8 @@
       "width": 344,
       "height": 466,
       "bytes": 194442,
-      "rights": "not recorded",
-      "owner": "to add",
+      "rights": "Approved for marketing use whenever required (decided 2026-10-28).",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3136:2543",
         "page": "People ( leadership roles and SMEs)"
@@ -2262,8 +2262,8 @@
       "width": 344,
       "height": 466,
       "bytes": 105586,
-      "rights": "not recorded",
-      "owner": "to add",
+      "rights": "Approved for marketing use whenever required (decided 2026-10-28).",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3136:2533",
         "page": "People ( leadership roles and SMEs)"
@@ -2283,8 +2283,8 @@
       "width": 344,
       "height": 466,
       "bytes": 103813,
-      "rights": "not recorded",
-      "owner": "to add",
+      "rights": "Approved for marketing use whenever required (decided 2026-10-28).",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3136:2537",
         "page": "People ( leadership roles and SMEs)"
@@ -2304,8 +2304,8 @@
       "width": 344,
       "height": 466,
       "bytes": 210051,
-      "rights": "not recorded",
-      "owner": "to add",
+      "rights": "Approved for marketing use whenever required (decided 2026-10-28).",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3136:2548",
         "page": "People ( leadership roles and SMEs)"
@@ -2325,8 +2325,8 @@
       "width": 344,
       "height": 466,
       "bytes": 212933,
-      "rights": "not recorded",
-      "owner": "to add",
+      "rights": "Approved for marketing use whenever required (decided 2026-10-28).",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3136:2535",
         "page": "People ( leadership roles and SMEs)"
@@ -2346,8 +2346,8 @@
       "width": 344,
       "height": 466,
       "bytes": 187369,
-      "rights": "not recorded",
-      "owner": "to add",
+      "rights": "Approved for marketing use whenever required (decided 2026-10-28).",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3136:2527",
         "page": "People ( leadership roles and SMEs)"
@@ -2355,25 +2355,25 @@
       "last_updated": "2026-10-27"
     },
     {
-      "id": "team-headshots/utkarsh-narain",
+      "id": "team-headshots/utkarsh-srivastava",
       "category": "team-headshots",
-      "name": "Utkarsh Narain",
+      "name": "Utkarsh Srivastava",
       "role": "Chief Technology Officer",
       "tags": [
         "Leadership"
       ],
-      "file": "team-headshots/utkarsh-narain.png",
+      "file": "team-headshots/utkarsh-srivastava.png",
       "format": "png",
       "width": 344,
       "height": 466,
       "bytes": 91763,
-      "rights": "not recorded",
-      "owner": "to add",
+      "rights": "Approved for marketing use whenever required (decided 2026-10-28).",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3136:2531",
         "page": "People ( leadership roles and SMEs)"
       },
-      "last_updated": "2026-10-27"
+      "last_updated": "2026-10-29"
     },
     {
       "id": "team-headshots/vivek-singh",
@@ -2388,8 +2388,8 @@
       "width": 344,
       "height": 466,
       "bytes": 111531,
-      "rights": "not recorded",
-      "owner": "to add",
+      "rights": "Approved for marketing use whenever required (decided 2026-10-28).",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3136:2539",
         "page": "People ( leadership roles and SMEs)"
@@ -2403,7 +2403,7 @@
       "tags": [
         "Design elements"
       ],
-      "background": "dark background only",
+      "background": "dark or brand background",
       "file": "design-elements/dot-particle-form.png",
       "format": "png",
       "width": 720,
@@ -2542,7 +2542,7 @@
       "height": 179,
       "bytes": 29690,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3095:7046",
         "page": "icons_architecture"
@@ -2563,7 +2563,7 @@
       "height": 212,
       "bytes": 35929,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3095:7037",
         "page": "icons_architecture"
@@ -2584,7 +2584,7 @@
       "height": 226,
       "bytes": 55149,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3096:424",
         "page": "icons_architecture"
@@ -2605,7 +2605,7 @@
       "height": 191,
       "bytes": 35871,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3079:1991",
         "page": "icons_architecture"
@@ -2626,7 +2626,7 @@
       "height": 165,
       "bytes": 39939,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3079:1916",
         "page": "icons_architecture"
@@ -2647,7 +2647,7 @@
       "height": 98,
       "bytes": 13798,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3087:3590",
         "page": "icons_architecture"
@@ -2668,7 +2668,7 @@
       "height": 113,
       "bytes": 7229,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3090:4843",
         "page": "icons_architecture"
@@ -2689,7 +2689,7 @@
       "height": 126,
       "bytes": 23181,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3087:3593",
         "page": "icons_architecture"
@@ -2710,7 +2710,7 @@
       "height": 284,
       "bytes": 17154,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3093:6577",
         "page": "icons_architecture"
@@ -2731,7 +2731,7 @@
       "height": 159,
       "bytes": 41263,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3093:5861",
         "page": "icons_architecture"
@@ -2752,7 +2752,7 @@
       "height": 219,
       "bytes": 52775,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3079:1985",
         "page": "icons_architecture"
@@ -2773,7 +2773,7 @@
       "height": 239,
       "bytes": 69060,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3096:418",
         "page": "icons_architecture"
@@ -2794,7 +2794,7 @@
       "height": 280,
       "bytes": 48361,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:3567",
         "page": "icons_architecture"
@@ -2815,7 +2815,7 @@
       "height": 268,
       "bytes": 44393,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3092:5852",
         "page": "icons_architecture"
@@ -2836,7 +2836,7 @@
       "height": 94,
       "bytes": 33622,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3131:1654",
         "page": "icons_architecture"
@@ -2857,7 +2857,7 @@
       "height": 177,
       "bytes": 23002,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3131:1655",
         "page": "icons_architecture"
@@ -2878,7 +2878,7 @@
       "height": 162,
       "bytes": 24640,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3131:1657",
         "page": "icons_architecture"
@@ -2899,7 +2899,7 @@
       "height": 187,
       "bytes": 10938,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3131:1659",
         "page": "icons_architecture"
@@ -2920,7 +2920,7 @@
       "height": 177,
       "bytes": 11981,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3131:1658",
         "page": "icons_architecture"
@@ -2941,7 +2941,7 @@
       "height": 152,
       "bytes": 32681,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3093:5864",
         "page": "icons_architecture"
@@ -2962,7 +2962,7 @@
       "height": 179,
       "bytes": 29291,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3096:426",
         "page": "icons_architecture"
@@ -2983,7 +2983,7 @@
       "height": 211,
       "bytes": 38962,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3079:1988",
         "page": "icons_architecture"
@@ -3004,7 +3004,7 @@
       "height": 204,
       "bytes": 37406,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3096:423",
         "page": "icons_architecture"
@@ -3025,7 +3025,7 @@
       "height": 252,
       "bytes": 57029,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3079:2040",
         "page": "icons_architecture"
@@ -3046,7 +3046,7 @@
       "height": 178,
       "bytes": 58659,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3131:1660",
         "page": "icons_architecture"
@@ -3067,7 +3067,7 @@
       "height": 154,
       "bytes": 39817,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3131:1661",
         "page": "icons_architecture"
@@ -3088,7 +3088,7 @@
       "height": 142,
       "bytes": 30411,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:3498",
         "page": "icons_architecture"
@@ -3109,7 +3109,7 @@
       "height": 194,
       "bytes": 15077,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3079:2055",
         "page": "icons_architecture"
@@ -3130,7 +3130,7 @@
       "height": 162,
       "bytes": 37607,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3096:425",
         "page": "icons_architecture"
@@ -3151,7 +3151,7 @@
       "height": 214,
       "bytes": 37973,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:3449",
         "page": "icons_architecture"
@@ -3172,7 +3172,7 @@
       "height": 156,
       "bytes": 29915,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3131:1618",
         "page": "icons_architecture"
@@ -3193,7 +3193,7 @@
       "height": 147,
       "bytes": 17809,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3079:1976",
         "page": "icons_architecture"
@@ -3214,7 +3214,7 @@
       "height": 192,
       "bytes": 32174,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:1693",
         "page": "icons_architecture"
@@ -3235,7 +3235,7 @@
       "height": 240,
       "bytes": 53808,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:3554",
         "page": "icons_architecture"
@@ -3256,7 +3256,7 @@
       "height": 250,
       "bytes": 55746,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3087:3581",
         "page": "icons_architecture"
@@ -3277,7 +3277,7 @@
       "height": 200,
       "bytes": 35966,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3095:7236",
         "page": "icons_architecture"
@@ -3298,7 +3298,7 @@
       "height": 226,
       "bytes": 55241,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3093:5870",
         "page": "icons_architecture"
@@ -3319,7 +3319,7 @@
       "height": 219,
       "bytes": 32816,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:1689",
         "page": "icons_architecture"
@@ -3340,7 +3340,7 @@
       "height": 101,
       "bytes": 35825,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:3508",
         "page": "icons_architecture"
@@ -3361,7 +3361,7 @@
       "height": 155,
       "bytes": 42245,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3131:1609",
         "page": "icons_architecture"
@@ -3382,7 +3382,7 @@
       "height": 125,
       "bytes": 13832,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:1719",
         "page": "icons_architecture"
@@ -3403,7 +3403,7 @@
       "height": 194,
       "bytes": 31285,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3119:534",
         "page": "icons_architecture"
@@ -3424,7 +3424,7 @@
       "height": 206,
       "bytes": 21464,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3131:1619",
         "page": "icons_architecture"
@@ -3445,7 +3445,7 @@
       "height": 282,
       "bytes": 71129,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3079:1994",
         "page": "icons_architecture"
@@ -3466,7 +3466,7 @@
       "height": 194,
       "bytes": 52957,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3087:3596",
         "page": "icons_architecture"
@@ -3487,7 +3487,7 @@
       "height": 236,
       "bytes": 67399,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3096:414",
         "page": "icons_architecture"
@@ -3508,7 +3508,7 @@
       "height": 155,
       "bytes": 28901,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3131:1612",
         "page": "icons_architecture"
@@ -3529,7 +3529,7 @@
       "height": 155,
       "bytes": 34901,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3131:1611",
         "page": "icons_architecture"
@@ -3550,7 +3550,7 @@
       "height": 155,
       "bytes": 33830,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3131:1613",
         "page": "icons_architecture"
@@ -3571,7 +3571,7 @@
       "height": 155,
       "bytes": 32894,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3131:1616",
         "page": "icons_architecture"
@@ -3592,7 +3592,7 @@
       "height": 146,
       "bytes": 29992,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3131:1617",
         "page": "icons_architecture"
@@ -3613,7 +3613,7 @@
       "height": 163,
       "bytes": 17750,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3131:1615",
         "page": "icons_architecture"
@@ -3634,7 +3634,7 @@
       "height": 155,
       "bytes": 31045,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3131:1614",
         "page": "icons_architecture"
@@ -3655,7 +3655,7 @@
       "height": 155,
       "bytes": 23637,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3131:1610",
         "page": "icons_architecture"
@@ -3676,7 +3676,7 @@
       "height": 193,
       "bytes": 39408,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3119:532",
         "page": "icons_architecture"
@@ -3697,7 +3697,7 @@
       "height": 218,
       "bytes": 53357,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3119:538",
         "page": "icons_architecture"
@@ -3718,7 +3718,7 @@
       "height": 186,
       "bytes": 43176,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3119:537",
         "page": "icons_architecture"
@@ -3739,7 +3739,7 @@
       "height": 210,
       "bytes": 34383,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3119:536",
         "page": "icons_architecture"
@@ -3760,7 +3760,7 @@
       "height": 196,
       "bytes": 47930,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3119:535",
         "page": "icons_architecture"
@@ -3781,7 +3781,7 @@
       "height": 290,
       "bytes": 31049,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3092:5847",
         "page": "icons_architecture"
@@ -3802,7 +3802,7 @@
       "height": 186,
       "bytes": 51383,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3087:3573",
         "page": "icons_architecture"
@@ -3823,7 +3823,7 @@
       "height": 166,
       "bytes": 39395,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3095:7049",
         "page": "icons_architecture"
@@ -3844,7 +3844,7 @@
       "height": 145,
       "bytes": 6584,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3079:4",
         "page": "icons_architecture"
@@ -3865,7 +3865,7 @@
       "height": 124,
       "bytes": 8616,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3079:1913",
         "page": "icons_architecture"
@@ -3886,7 +3886,7 @@
       "height": 742,
       "bytes": 107553,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3090:3711",
         "page": "icons_architecture"
@@ -3907,7 +3907,7 @@
       "height": 967,
       "bytes": 116828,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:3436",
         "page": "icons_architecture"
@@ -3928,7 +3928,7 @@
       "height": 623,
       "bytes": 104618,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:1674",
         "page": "icons_architecture"
@@ -3949,7 +3949,7 @@
       "height": 119,
       "bytes": 12345,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3079:2034",
         "page": "icons_architecture"
@@ -3970,7 +3970,7 @@
       "height": 215,
       "bytes": 26867,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:12",
         "page": "icons_architecture"
@@ -3991,7 +3991,7 @@
       "height": 134,
       "bytes": 25540,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3090:3740",
         "page": "icons_architecture"
@@ -4012,7 +4012,7 @@
       "height": 182,
       "bytes": 23874,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3119:496",
         "page": "icons_architecture"
@@ -4033,7 +4033,7 @@
       "height": 182,
       "bytes": 34841,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3119:497",
         "page": "icons_architecture"
@@ -4054,7 +4054,7 @@
       "height": 178,
       "bytes": 28685,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3119:498",
         "page": "icons_architecture"
@@ -4075,7 +4075,7 @@
       "height": 147,
       "bytes": 12258,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3079:2006",
         "page": "icons_architecture"
@@ -4096,7 +4096,7 @@
       "height": 58,
       "bytes": 2411,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:1686",
         "page": "icons_architecture"
@@ -4117,7 +4117,7 @@
       "height": 200,
       "bytes": 16280,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:3505",
         "page": "icons_architecture"
@@ -4138,7 +4138,7 @@
       "height": 64,
       "bytes": 21339,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3119:501",
         "page": "icons_architecture"
@@ -4159,7 +4159,7 @@
       "height": 55,
       "bytes": 21917,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3119:502",
         "page": "icons_architecture"
@@ -4180,7 +4180,7 @@
       "height": 73,
       "bytes": 19898,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3119:499",
         "page": "icons_architecture"
@@ -4201,7 +4201,7 @@
       "height": 70,
       "bytes": 23774,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3119:500",
         "page": "icons_architecture"
@@ -4222,7 +4222,7 @@
       "height": 320,
       "bytes": 42783,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3079:89",
         "page": "icons_architecture"
@@ -4243,7 +4243,7 @@
       "height": 159,
       "bytes": 2942,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3079:228",
         "page": "icons_architecture"
@@ -4264,7 +4264,7 @@
       "height": 63,
       "bytes": 3340,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3079:1997",
         "page": "icons_architecture"
@@ -4285,7 +4285,7 @@
       "height": 28,
       "bytes": 4195,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3079:12",
         "page": "icons_architecture"
@@ -4306,7 +4306,7 @@
       "height": 135,
       "bytes": 2773,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3079:2052",
         "page": "icons_architecture"
@@ -4327,7 +4327,7 @@
       "height": 64,
       "bytes": 3397,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3079:24",
         "page": "icons_architecture"
@@ -4348,7 +4348,7 @@
       "height": 116,
       "bytes": 11728,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3079:1892",
         "page": "icons_architecture"
@@ -4369,7 +4369,7 @@
       "height": 57,
       "bytes": 15723,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3090:4488",
         "page": "icons_architecture"
@@ -4390,7 +4390,7 @@
       "height": 77,
       "bytes": 20682,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3090:4485",
         "page": "icons_architecture"
@@ -4411,7 +4411,7 @@
       "height": 46,
       "bytes": 16870,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3090:4497",
         "page": "icons_architecture"
@@ -4432,7 +4432,7 @@
       "height": 77,
       "bytes": 17728,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3090:4500",
         "page": "icons_architecture"
@@ -4453,7 +4453,7 @@
       "height": 110,
       "bytes": 21747,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3096:427",
         "page": "icons_architecture"
@@ -4474,7 +4474,7 @@
       "height": 102,
       "bytes": 19364,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3090:4494",
         "page": "icons_architecture"
@@ -4495,7 +4495,7 @@
       "height": 92,
       "bytes": 21339,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3094:6624",
         "page": "icons_architecture"
@@ -4516,7 +4516,7 @@
       "height": 83,
       "bytes": 25695,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3090:3722",
         "page": "icons_architecture"
@@ -4537,7 +4537,7 @@
       "height": 48,
       "bytes": 20104,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3119:457",
         "page": "icons_architecture"
@@ -4558,7 +4558,7 @@
       "height": 48,
       "bytes": 18941,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3119:462",
         "page": "icons_architecture"
@@ -4579,7 +4579,7 @@
       "height": 65,
       "bytes": 19641,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3119:456",
         "page": "icons_architecture"
@@ -4600,7 +4600,7 @@
       "height": 65,
       "bytes": 21565,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3119:463",
         "page": "icons_architecture"
@@ -4621,7 +4621,7 @@
       "height": 110,
       "bytes": 21747,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3096:428",
         "page": "icons_architecture"
@@ -4642,7 +4642,7 @@
       "height": 85,
       "bytes": 25860,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3119:461",
         "page": "icons_architecture"
@@ -4663,7 +4663,7 @@
       "height": 124,
       "bytes": 22388,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3119:459",
         "page": "icons_architecture"
@@ -4684,7 +4684,7 @@
       "height": 72,
       "bytes": 8964,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3079:1926",
         "page": "icons_architecture"
@@ -4705,7 +4705,7 @@
       "height": 120,
       "bytes": 6248,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3093:6621",
         "page": "icons_architecture"
@@ -4726,7 +4726,7 @@
       "height": 116,
       "bytes": 2541,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3095:7074",
         "page": "icons_architecture"
@@ -4747,7 +4747,7 @@
       "height": 144,
       "bytes": 42225,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3117:422",
         "page": "icons_architecture"
@@ -4768,7 +4768,7 @@
       "height": 252,
       "bytes": 40780,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:3440",
         "page": "icons_architecture"
@@ -4789,7 +4789,7 @@
       "height": 224,
       "bytes": 126897,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3087:3605",
         "page": "icons_architecture"
@@ -4810,7 +4810,7 @@
       "height": 168,
       "bytes": 74954,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3119:423",
         "page": "icons_architecture"
@@ -4831,7 +4831,7 @@
       "height": 228,
       "bytes": 86500,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3090:4962",
         "page": "icons_architecture"
@@ -4852,7 +4852,7 @@
       "height": 194,
       "bytes": 72345,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3092:4966",
         "page": "icons_architecture"
@@ -4873,7 +4873,7 @@
       "height": 362,
       "bytes": 88669,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3090:3725",
         "page": "icons_architecture"
@@ -4894,7 +4894,7 @@
       "height": 96,
       "bytes": 24255,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:3480",
         "page": "icons_architecture"
@@ -4915,7 +4915,7 @@
       "height": 298,
       "bytes": 74973,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3090:3734",
         "page": "icons_architecture"
@@ -4936,7 +4936,7 @@
       "height": 190,
       "bytes": 67753,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3119:425",
         "page": "icons_architecture"
@@ -4957,7 +4957,7 @@
       "height": 140,
       "bytes": 62807,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3119:426",
         "page": "icons_architecture"
@@ -4978,7 +4978,7 @@
       "height": 152,
       "bytes": 33539,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:3489",
         "page": "icons_architecture"
@@ -4999,7 +4999,7 @@
       "height": 196,
       "bytes": 45056,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3093:5876",
         "page": "icons_architecture"
@@ -5020,7 +5020,7 @@
       "height": 231,
       "bytes": 23521,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3087:3587",
         "page": "icons_architecture"
@@ -5041,7 +5041,7 @@
       "height": 226,
       "bytes": 89771,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3119:429",
         "page": "icons_architecture"
@@ -5062,7 +5062,7 @@
       "height": 188,
       "bytes": 50203,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3119:427",
         "page": "icons_architecture"
@@ -5083,7 +5083,7 @@
       "height": 108,
       "bytes": 14555,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3119:428",
         "page": "icons_architecture"
@@ -5104,7 +5104,7 @@
       "height": 222,
       "bytes": 49964,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3079:1982",
         "page": "icons_architecture"
@@ -5125,7 +5125,7 @@
       "height": 159,
       "bytes": 37384,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3079:1929",
         "page": "icons_architecture"
@@ -5146,7 +5146,7 @@
       "height": 194,
       "bytes": 50622,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3087:3602",
         "page": "icons_architecture"
@@ -5167,7 +5167,7 @@
       "height": 200,
       "bytes": 51276,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3096:430",
         "page": "icons_architecture"
@@ -5188,7 +5188,7 @@
       "height": 200,
       "bytes": 39187,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3096:432",
         "page": "icons_architecture"
@@ -5209,7 +5209,7 @@
       "height": 175,
       "bytes": 50886,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3096:431",
         "page": "icons_architecture"
@@ -5230,7 +5230,7 @@
       "height": 154,
       "bytes": 35882,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3095:7043",
         "page": "icons_architecture"
@@ -5251,7 +5251,7 @@
       "height": 166,
       "bytes": 28303,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3095:7042",
         "page": "icons_architecture"
@@ -5272,7 +5272,7 @@
       "height": 186,
       "bytes": 100344,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3096:411",
         "page": "icons_architecture"
@@ -5293,7 +5293,7 @@
       "height": 122,
       "bytes": 42670,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:3495",
         "page": "icons_architecture"
@@ -5314,7 +5314,7 @@
       "height": 158,
       "bytes": 32665,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:3477",
         "page": "icons_architecture"
@@ -5335,7 +5335,7 @@
       "height": 170,
       "bytes": 18305,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:3492",
         "page": "icons_architecture"
@@ -5356,7 +5356,7 @@
       "height": 274,
       "bytes": 82236,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3093:5855",
         "page": "icons_architecture"
@@ -5377,7 +5377,7 @@
       "height": 324,
       "bytes": 48278,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3093:5858",
         "page": "icons_architecture"
@@ -5398,7 +5398,7 @@
       "height": 152,
       "bytes": 39655,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:3483",
         "page": "icons_architecture"
@@ -5419,7 +5419,7 @@
       "height": 254,
       "bytes": 66830,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3093:5875",
         "page": "icons_architecture"
@@ -5440,7 +5440,7 @@
       "height": 166,
       "bytes": 34479,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:3486",
         "page": "icons_architecture"
@@ -5461,7 +5461,7 @@
       "height": 139,
       "bytes": 4653,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3079:225",
         "page": "icons_architecture"
@@ -5482,7 +5482,7 @@
       "height": 110,
       "bytes": 4962,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:3518",
         "page": "icons_architecture"
@@ -5503,7 +5503,7 @@
       "height": 108,
       "bytes": 4489,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:3530",
         "page": "icons_architecture"
@@ -5524,7 +5524,7 @@
       "height": 142,
       "bytes": 2904,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3131:1587",
         "page": "icons_architecture"
@@ -5545,7 +5545,7 @@
       "height": 92,
       "bytes": 3528,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:3519",
         "page": "icons_architecture"
@@ -5566,7 +5566,7 @@
       "height": 126,
       "bytes": 2550,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:3536",
         "page": "icons_architecture"
@@ -5587,7 +5587,7 @@
       "height": 147,
       "bytes": 8135,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3079:1887",
         "page": "icons_architecture"
@@ -5608,7 +5608,7 @@
       "height": 102,
       "bytes": 3459,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3092:4983",
         "page": "icons_architecture"
@@ -5629,7 +5629,7 @@
       "height": 122,
       "bytes": 3752,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3136:2524",
         "page": "icons_architecture"
@@ -5650,7 +5650,7 @@
       "height": 108,
       "bytes": 3854,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3136:2523",
         "page": "icons_architecture"
@@ -5671,7 +5671,7 @@
       "height": 104,
       "bytes": 6272,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3136:2516",
         "page": "icons_architecture"
@@ -5692,7 +5692,7 @@
       "height": 104,
       "bytes": 4786,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:3529",
         "page": "icons_architecture"
@@ -5713,7 +5713,7 @@
       "height": 110,
       "bytes": 3413,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3079:2031",
         "page": "icons_architecture"
@@ -5734,7 +5734,7 @@
       "height": 263,
       "bytes": 21761,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3090:4482",
         "page": "icons_architecture"
@@ -5755,7 +5755,7 @@
       "height": 188,
       "bytes": 28942,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3087:3570",
         "page": "icons_architecture"
@@ -5776,7 +5776,7 @@
       "height": 258,
       "bytes": 47023,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3087:3675",
         "page": "icons_architecture"
@@ -5797,7 +5797,7 @@
       "height": 174,
       "bytes": 35190,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3087:3599",
         "page": "icons_architecture"
@@ -5818,7 +5818,7 @@
       "height": 90,
       "bytes": 30273,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:3542",
         "page": "icons_architecture"
@@ -5839,7 +5839,7 @@
       "height": 196,
       "bytes": 49434,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3095:7034",
         "page": "icons_architecture"
@@ -5860,7 +5860,7 @@
       "height": 172,
       "bytes": 67359,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3131:1764",
         "page": "icons_architecture"
@@ -5881,7 +5881,7 @@
       "height": 198,
       "bytes": 61297,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3131:1765",
         "page": "icons_architecture"
@@ -5902,7 +5902,7 @@
       "height": 198,
       "bytes": 69355,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3131:1762",
         "page": "icons_architecture"
@@ -5923,7 +5923,7 @@
       "height": 198,
       "bytes": 50580,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3131:1763",
         "page": "icons_architecture"
@@ -5944,7 +5944,7 @@
       "height": 114,
       "bytes": 26912,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:3539",
         "page": "icons_architecture"
@@ -5965,7 +5965,7 @@
       "height": 156,
       "bytes": 13406,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3079:2037",
         "page": "icons_architecture"
@@ -5986,7 +5986,7 @@
       "height": 132,
       "bytes": 23954,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3096:421",
         "page": "icons_architecture"
@@ -6007,7 +6007,7 @@
       "height": 100,
       "bytes": 12706,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3096:420",
         "page": "icons_architecture"
@@ -6028,7 +6028,7 @@
       "height": 158,
       "bytes": 17961,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3094:7028",
         "page": "icons_architecture"
@@ -6049,7 +6049,7 @@
       "height": 200,
       "bytes": 5832,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3095:7077",
         "page": "icons_architecture"
@@ -6070,7 +6070,7 @@
       "height": 146,
       "bytes": 36225,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3079:1923",
         "page": "icons_architecture"
@@ -6091,7 +6091,7 @@
       "height": 196,
       "bytes": 27190,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:3471",
         "page": "icons_architecture"
@@ -6112,7 +6112,7 @@
       "height": 176,
       "bytes": 22768,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3096:413",
         "page": "icons_architecture"
@@ -6133,7 +6133,7 @@
       "height": 128,
       "bytes": 7404,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:3452",
         "page": "icons_architecture"
@@ -6154,7 +6154,7 @@
       "height": 162,
       "bytes": 35540,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:3474",
         "page": "icons_architecture"
@@ -6175,7 +6175,7 @@
       "height": 100,
       "bytes": 6919,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3096:407",
         "page": "icons_architecture"
@@ -6196,7 +6196,7 @@
       "height": 168,
       "bytes": 7438,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3087:3578",
         "page": "icons_architecture"
@@ -6217,7 +6217,7 @@
       "height": 100,
       "bytes": 15914,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3096:406",
         "page": "icons_architecture"
@@ -6238,7 +6238,7 @@
       "height": 124,
       "bytes": 13538,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3096:405",
         "page": "icons_architecture"
@@ -6259,7 +6259,7 @@
       "height": 162,
       "bytes": 8946,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3096:419",
         "page": "icons_architecture"
@@ -6280,7 +6280,7 @@
       "height": 121,
       "bytes": 9004,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3079:2058",
         "page": "icons_architecture"
@@ -6301,7 +6301,7 @@
       "height": 200,
       "bytes": 11804,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3096:408",
         "page": "icons_architecture"
@@ -6322,7 +6322,7 @@
       "height": 124,
       "bytes": 15499,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3092:4986",
         "page": "icons_architecture"
@@ -6343,7 +6343,7 @@
       "height": 184,
       "bytes": 32899,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3090:3743",
         "page": "icons_architecture"
@@ -6364,7 +6364,7 @@
       "height": 153,
       "bytes": 21221,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3079:2009",
         "page": "icons_architecture"
@@ -6385,7 +6385,7 @@
       "height": 125,
       "bytes": 39180,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3131:1689",
         "page": "icons_architecture"
@@ -6406,7 +6406,7 @@
       "height": 145,
       "bytes": 28910,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3131:1690",
         "page": "icons_architecture"
@@ -6427,7 +6427,7 @@
       "height": 133,
       "bytes": 21849,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3079:2012",
         "page": "icons_architecture"
@@ -6448,7 +6448,7 @@
       "height": 145,
       "bytes": 13165,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:1722",
         "page": "icons_architecture"
@@ -6469,7 +6469,7 @@
       "height": 59,
       "bytes": 22432,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3131:1693",
         "page": "icons_architecture"
@@ -6490,7 +6490,7 @@
       "height": 80,
       "bytes": 29956,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3131:1694",
         "page": "icons_architecture"
@@ -6511,7 +6511,7 @@
       "height": 74,
       "bytes": 20177,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3131:1695",
         "page": "icons_architecture"
@@ -6532,7 +6532,7 @@
       "height": 64,
       "bytes": 21639,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3131:1692",
         "page": "icons_architecture"
@@ -6553,7 +6553,7 @@
       "height": 128,
       "bytes": 15266,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:1712",
         "page": "icons_architecture"
@@ -6574,7 +6574,7 @@
       "height": 151,
       "bytes": 18684,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3131:1696",
         "page": "icons_architecture"
@@ -6595,7 +6595,7 @@
       "height": 198,
       "bytes": 17307,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:3551",
         "page": "icons_architecture"
@@ -6616,7 +6616,7 @@
       "height": 170,
       "bytes": 23062,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3087:3584",
         "page": "icons_architecture"
@@ -6637,7 +6637,7 @@
       "height": 98,
       "bytes": 27076,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3084:3533",
         "page": "icons_architecture"
@@ -6658,7 +6658,7 @@
       "height": 138,
       "bytes": 9325,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3131:1697",
         "page": "icons_architecture"
@@ -6679,7 +6679,7 @@
       "height": 133,
       "bytes": 12320,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3131:1691",
         "page": "icons_architecture"
@@ -6700,7 +6700,7 @@
       "height": 145,
       "bytes": 18038,
       "rights": "Approved Faclon architecture icon library (decided 2026-10-27).",
-      "owner": "to add",
+      "owner": "Faclon Labs brand team",
       "source": {
         "figma_node": "3079:8",
         "page": "icons_architecture"

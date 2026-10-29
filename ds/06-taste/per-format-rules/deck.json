@@ -74,6 +74,37 @@
       "basis": [
         "rule:color.eyebrow-placement"
       ]
+    },
+    {
+      "id": "text-card-grids",
+      "text": "Never show a process, workflow, lifecycle, timeline, architecture or set of numbers as a grid or row of text cards: draw it in its content form (a flow, loop, timeline, diagram, stat row or chart).",
+      "basis": [
+        "decision:infographic-required",
+        "profile:content_forms"
+      ]
+    },
+    {
+      "id": "stretched-cards",
+      "text": "Never stretch a card or panel to fill a row or the slide when its content is short, leaving empty boxes. Size it to its content; if the slide looks empty, raise the type a role or grow the visual.",
+      "basis": [
+        "decision:deck-density"
+      ]
+    },
+    {
+      "id": "dark-highlight",
+      "text": "Never highlight a card on a dark slide with a dark blue fill (brand/800 to brand/1000): it disappears into background/inverse. Use container/brand with text/on-brand.",
+      "basis": [
+        "decision:highlight-contrast-on-dark",
+        "rule:color.pairings"
+      ]
+    },
+    {
+      "id": "fake-product-ui",
+      "text": "Never draw a fake product screen or dashboard. Place the DASHBOARD_MOCKUP_<NAME> placeholder and tell the user.",
+      "basis": [
+        "decision:product-slides-light-with-mockup",
+        "profile:product_slides.mockup_placeholder"
+      ]
     }
   ],
   "avoid": [
@@ -117,10 +148,11 @@
       ]
     },
     {
-      "id": "ai-dark",
-      "text": "Slides about AI default to the dark theme; ask the user whether to keep it dark.",
+      "id": "ai-theme",
+      "text": "AI slides have no default theme: ask the user whether they want them dark; otherwise pick the theme for the slide like any other.",
       "basis": [
-        "profile:ai_slides"
+        "profile:ai_slides",
+        "decision:ai-slides-theme-optional"
       ]
     },
     {
@@ -134,14 +166,14 @@
     },
     {
       "id": "use-reference-slides",
-      "text": "Start from the reference slides: product stack and team as designed; page breakers and closing slides from the hero designs; normal content from the content-slide references, adapted to the user's content.",
+      "text": "Start from the reference slides: the page breaker, closing, team and product stack ship as ready HTML (fill only the page breaker and closing slots; team and product stack are used as they are); normal content starts from the content-slide references, adapted to the user's content. The team slide is the leadership team; a project team is designed from the user's content.",
       "basis": [
         "profile:reference_slides.slides"
       ]
     },
     {
       "id": "qna",
-      "text": "Q&A slides follow the brand rules: use the brand-theme page breaker (\"Reference Slides for QnA\") as designed, on background/brand with text/on-brand and the white logo top-right.",
+      "text": "Q&A slides use the page breaker reference slide (the brand team's mapping of \"Reference Slides for QnA\"): its ready HTML on background/brand with text/on-brand and the white logo top-right.",
       "basis": [
         "profile:reference_slides.slides.page_breaker",
         "profile:themes",
@@ -175,9 +207,11 @@
     },
     {
       "id": "infographic",
-      "text": "Make slides infographic-led: show numbers, steps, comparisons and relationships as charts, diagrams, flows, stat rows and big numbers built from the design system, rather than paragraphs of text.",
+      "text": "Make slides infographic-led. Before designing a slide, name the shape of its content (sequence, lifecycle, phases, problem and solution, numbers, comparison, architecture, like items, people) and draw it in the matching form from content_forms: flows and timelines with connectors, loops for lifecycles, splits for contrasts, stat rows and charts for numbers. Cards are for like items side by side.",
       "basis": [
-        "decision:infographic-led"
+        "decision:infographic-led",
+        "decision:infographic-required",
+        "profile:content_forms"
       ]
     },
     {
@@ -196,6 +230,14 @@
       ]
     },
     {
+      "id": "colour-by-meaning",
+      "text": "Colour follows meaning: problems, risks and pain points use the Negative intent (red container tint, red heading or icon), not only a red chip; objectives, outcomes and solutions use brand or Positive.",
+      "basis": [
+        "decision:problem-negative",
+        "rule:color.status-intents"
+      ]
+    },
+    {
       "id": "flat-surfaces",
       "text": "Keep surfaces flat; use Low Raised only to lift a card off the canvas.",
       "basis": [
@@ -211,9 +253,10 @@
     },
     {
       "id": "icons",
-      "text": "When an icon helps, use Lucide and colour it with a text token that suits the surface.",
+      "text": "Give each item in a list or grid of tools, capabilities, features, steps or outcomes a Lucide icon that names it, coloured with a text token that suits the surface. No decorative or AI cliche icons, and no icon on a heading when it adds nothing.",
       "basis": [
-        "rule:icon.lucide-only"
+        "rule:icon.lucide-only",
+        "decision:icons-on-lists"
       ]
     },
     {
@@ -222,6 +265,38 @@
       "basis": [
         "decision:no-overflow",
         "decision:content-fidelity"
+      ]
+    },
+    {
+      "id": "density",
+      "text": "Fill the content area with content, not empty boxes: size cards to their content, give every block of text a container with padding/container or the same breathing room on the grid, and when a slide has little content raise the type a role and grow the visual. On covers and hero slides the title, subline and details form one group.",
+      "basis": [
+        "decision:deck-density",
+        "profile:safe_area"
+      ]
+    },
+    {
+      "id": "alignment",
+      "text": "A label and its text sit on one line or share a first baseline, labels never wrap, and left edges line up across a slide.",
+      "basis": [
+        "decision:deck-density",
+        "profile:grid"
+      ]
+    },
+    {
+      "id": "architecture-slides",
+      "text": "Architecture, data-flow and integration slides use the architecture diagram language: zones, the four device styles with icons from the architecture icon library, arrows, colours and the I/O Sense outcome when the diagram ends in I/O Sense, scaled into the slide with text at 14px or more.",
+      "basis": [
+        "decision:architecture-in-decks",
+        "profile:architecture_slides"
+      ]
+    },
+    {
+      "id": "product-slides",
+      "text": "Slides about what a product shows (an I/O Sense screen, a dashboard, an operator view) use the light theme with a dashboard mockup placeholder beside the user's points.",
+      "basis": [
+        "decision:product-slides-light-with-mockup",
+        "profile:product_slides"
       ]
     }
   ]

@@ -72,7 +72,7 @@
       "The content and facts. The designer uses exactly what the user supplies or approves: never invents, adds, rewrites, shortens or cuts it, and asks before suggesting a change.",
       "The scope: which slides; nothing is added that was not asked for; when it is unclear, ask.",
       "The number of slides, when the user sets it.",
-      "Whether an AI slide stays dark (Claude asks).",
+      "Whether AI slides are dark (Claude asks; there is no default).",
       "Which page-breaker or closing design to use, from the reference slides."
     ],
     "fixed": [
@@ -197,8 +197,30 @@
     }
   },
   "ai_slides": {
-    "default_theme": "dark",
+    "default_theme": null,
     "ask_first": true,
-    "rule": "Any slide about AI defaults to the dark theme, but ask the user whether to keep it dark before finishing."
+    "rule": "AI slides have no default theme. Ask the user whether they want them dark; otherwise pick the theme for the slide like any other (decision ai-slides-theme-optional, 2026-10-28)."
+  },
+  "content_forms": {
+    "rule": "Before designing a slide, name the shape of its content and draw it in the matching form, built from design-system parts and the blocks (Process flow, Stat tile, Comparison table, Feature grid). A grid or row of text cards is only for like items that sit side by side (decision infographic-required).",
+    "forms": {
+      "sequence": "Steps, a workflow or a ticket flow in order: a flow or timeline with numbered nodes and connectors (Process flow), short text under each node.",
+      "lifecycle": "A cycle that repeats (MLOps, closed loop, detect-act-verify-learn): a loop diagram, the stages placed around a circle or closed path with arrows back to the start.",
+      "phases": "Phases or a roadmap over time: a timeline or growing phase blocks along one axis.",
+      "problem_solution": "A problem and its answer, or before and after: a split contrast, the problem side in the Negative intent and the answer in brand or Positive.",
+      "numbers": "Numbers, results and KPIs: big numbers, stat rows (Stat tile) or a chart.",
+      "comparison": "Options or features compared: a comparison table or matrix (Comparison table).",
+      "architecture": "Systems, data flow or integration: an architecture diagram in the architecture format's language (see architecture_slides).",
+      "like_items": "Parallel items of the same kind (capabilities, tools, objectives): a grid with a Lucide icon per item (Feature grid), cards sized to their content.",
+      "people": "A team: the team reference slide or template, with headshots from the asset library where they exist."
+    }
+  },
+  "architecture_slides": {
+    "rule": "Any slide showing a system architecture, data flow or integration follows the architecture format: call get_brand_guidelines(section: \"rules\", format_profile: \"architecture\") and use its zones, node styles (boxed tag, tag, label, caption), icons from the architecture icon library, arrows and colours, and the I/O Sense outcome when the diagram ends in I/O Sense. Start from the architecture templates. Scale it into the slide's content area; deck text stays at 14px or more (decision architecture-in-decks)."
+  },
+  "product_slides": {
+    "theme": "light",
+    "rule": "Slides about what a product shows (an I/O Sense screen, a dashboard, an operator view) use the light theme and show the product as a dashboard mockup next to the user's points (decision product-slides-light-with-mockup).",
+    "mockup_placeholder": "Until product screenshots are in the asset library, place a placeholder frame where the mockup goes, at the size and position the design needs: container/secondary, 1px dashed border/strong, radius/3xl, with the label DASHBOARD_MOCKUP_<NAME> centred in Body/24 text/secondary. Never draw a fake product UI. List every placeholder in the delivery note so the user can drop in the screenshot."
   }
 }
