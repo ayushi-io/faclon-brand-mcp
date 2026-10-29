@@ -40,6 +40,8 @@ test("asset index: unknown facts stay 'to add', logomark is on request only", ()
   assert.equal(role("Rishi Sharma"), "CEO, Co-Founder");
   assert.equal(role("Rajveer Singh"), "");
   assert.equal(role("Sarang Vakharia"), "");
+  for (const e of index.assets) assert.equal(e.owner, "Faclon Labs brand team", `${e.id}: owner`);
+  for (const e of index.assets.filter((x) => x.category === "team-headshots")) assert.match(e.rights, /^Approved for marketing use whenever required/, e.id);
   assert.deepEqual(index.assets.filter((e) => e.category === "design-elements").map((e) => e.name).sort(), ["Dot wave", "Dot-particle form", "Light streak"]);
   assert.ok(index.assets.some((e) => e.name === "I/O Sense product mark") && !index.assets.some((e) => /product mark \d/i.test(e.name)));
   for (const e of index.assets.filter((x) => x.id.includes("logomark"))) assert.match(e.use, /explicitly asks/, e.id);

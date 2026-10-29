@@ -205,9 +205,10 @@
     },
     {
       "id": "design-elements",
-      "text": "Design elements may be used, each only on its own background: the dot-particle form on dark, the light streak on brand.",
+      "text": "Design elements may be used, each only on its own backgrounds: the dot-particle form on dark or brand, the light streak on brand.",
       "basis": [
-        "decision:design-elements"
+        "decision:design-elements",
+        "decision:dot-particle-on-brand"
       ]
     },
     {
@@ -251,9 +252,10 @@
     },
     {
       "id": "icons",
-      "text": "When an icon helps, use Lucide and colour it with a text token that suits the surface.",
+      "text": "Give each item in a list or grid of tools, capabilities, features, steps or outcomes a Lucide icon that names it, coloured with a text token that suits the surface. No decorative or AI cliche icons, and no icon on a heading when it adds nothing.",
       "basis": [
-        "rule:icon.lucide-only"
+        "rule:icon.lucide-only",
+        "decision:icons-on-lists"
       ]
     }
   ]

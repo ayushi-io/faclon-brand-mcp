@@ -18,7 +18,7 @@ Web and UI icons are not stored here: they come from Lucide (rule `icon.lucide-o
 ## Rules
 
 - Client and partner logos are approved for external marketing (decided 2026-10-27).
-- Fields marked "to add" (owners, headshot rights) are not recorded, and two headshot roles are left empty on purpose: never invent them.
+- Every asset is owned by the Faclon Labs brand team. Client and partner logos are approved for external marketing, and team headshots for marketing use whenever required (decided 2026-10-28). Two headshot roles are left empty on purpose: never invent them.
 - Next to the Faclon Labs logo, partner logos follow the co-branding lockup (rule `logo.co-branding`, `02-brand-elements/logo`).
 - Logos are placed as supplied: never redrawn, recoloured or typeset. Logo usage rules are in `02-brand-elements/logo`.
 

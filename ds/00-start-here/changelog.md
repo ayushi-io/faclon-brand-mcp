@@ -2,6 +2,29 @@
 
 Each change to the system bumps `brand_version` in `version.json` (format `YYYY.MM.DD-n`). Newest first.
 
+## 2026-10-29
+
+- The "content design language" comment on the closed-loop slide is dropped at the brand team's request: open question `content-design-language` and its example removed.
+- Deck guardrails `use-reference-slides` and `qna` now point to the ready HTML reference slides (brand 2026.10.29-5). Figma doc pages refreshed: Decks rules synced with the deck profile (new rows and a "Content forms" section), icon rule on the Decks, A4, Newsletters, Social media, Iconography and Brand Guidelines pages, dot-particle form on dark and brand on Graphic elements and Social media, Utkarsh Srivastava on Brand Assets and the Decks template, version tag, and Changelog entries for 25 to 29 October.
+- All four Layouts reference slides now ship as ready HTML in `ds/04-templates/decks/reference/`: page breaker (also Q&A; the brand team's mapped frame 3069:2792, slots for label, title and an optional proof strip) and closing with decoration-only backdrops; team (3058:13948) and product stack (3058:21738) as fixed 2x renders of the Figma slide with every word in the alt text. The closing slide's text now keeps the reference's 134px left edge, as the brand team's mapped page breaker does. The fixed team slide is the leadership team only; project teams are designed from the user's content. On the Figma team slide, "Utkarsh Narain" was updated to "Utkarsh Srivastava". The cover stays a layout template (its backdrop is a stack of scaled images and blend modes, not a fixed design).
+- Good vs bad examples written (`ds/06-taste/good-vs-bad-examples`, new section `examples`): the eleven commented slides of the Cyclone Jam deck, each with the brand team's comment as written, what went wrong and the deck rule that now prevents it; images served at `/examples/`.
+- Deck reference slides can ship as ready HTML: the closing slide (Figma Layouts › 29 · Close, 3058:22750) is `ds/04-templates/decks/reference/closing.html` with a decoration-only backdrop (`closing-backdrop.jpg`, composited from the slide's own Figma layers, text and logo left out). The deck profile serves it inline as `reference_slides.slides.closing.html`; Claude fills only its `data-slot` elements (tag, statement). Mapped as for every reference slide: background/brand, chip tokens, Display/XL, the white logo on the 52px edge.
+- Team headshots: Utkarsh Narain is now Utkarsh Srivastava, as renamed on the Figma People headshots page (asset id `team-headshots/utkarsh-srivastava`, file renamed; Figma component 3136:2531 renamed to match).
+
+## 2026-10-28
+
+- Deck feedback from the brand team on a generated deck (Cyclone Jam prediction), brand 2026.10.28-2:
+  - Infographics required: the deck profile gains `content_forms` (sequence, lifecycle, phases, problem and solution, numbers, comparison, architecture, like items, people), the skill names each slide's form before designing, and a grid of text cards is banned for processes, lifecycles, architectures and numbers (decision `infographic-required`).
+  - Density and alignment: cards sized to their content, no empty boxes, padding on every block, the cover's title and details as one group, labels aligned and never wrapping (decision `deck-density`).
+  - Colour by meaning: problems and risks in the Negative intent, outcomes in brand or Positive (decision `problem-negative`, added to rule `color.status-intents`).
+  - Architecture slides in a deck use the architecture diagram language (`architecture_slides`, decision `architecture-in-decks`).
+  - Product and dashboard slides are light with a `DASHBOARD_MOCKUP_<NAME>` placeholder; no fake product UI (`product_slides`, decision `product-slides-light-with-mockup`).
+  - Highlighted cards on dark slides use container/brand, never brand/800 to brand/1000 (decision `highlight-contrast-on-dark`).
+  - AI slides have no default theme; Claude asks whether they should be dark (decision `ai-slides-theme-optional`).
+- Icons on lists, all formats: each item in a list or grid of tools, capabilities, features, steps or outcomes gets a Lucide icon; still never decorative (rule `icon.lucide-only`, decision `icons-on-lists`).
+- The dot-particle form may be used on brand backgrounds as well as dark, as on the closing reference slide (decision `dot-particle-on-brand`).
+- Asset owners and headshot rights: every asset (partner and client logos, architecture icons and team headshots included) is owned by the Faclon Labs brand team. Team headshots are approved for marketing use whenever required. No asset field is "to add" any more; Rajveer Singh's and Sarang Vakharia's roles stay empty on purpose. Decision `asset-owners-and-headshot-rights`.
+
 ## 2026-10-27
 
 - Architecture zones and legends: zones are colour-coded only when the user asks. Claude asks whether the user wants a legend before designing, and adds one only on a yes. Both moved from "to define" to what the user decides (decision `architecture-zones-legend`).

@@ -1,0 +1,32 @@
+<!-- Faclon deck reference slide: page breaker on brand (Figma Design MCP › Layouts, "Page breaker · reference slide, mapped",
+     node 3069:2792, the brand team's mapping of "17806942 · Reference Slides for QnA"). Also the Q&A slide.
+     Use as it is. Fill only the data-slot elements with the user's words; keep the backdrop, positions and sizes.
+     The proof strip is optional: drop it when the user gives no proof points, and give it as many items as the user gives;
+     mark the item the user wants highlighted with the --accent modifier. The logo is the white Faclon Labs logo; use the
+     co-branding lockup (rule logo.co-branding) only when the user asks for it.
+     The page needs the token CSS from get_tokens(as: "css"). -->
+<section class="slide ref-breaker" aria-label="Page breaker">
+  <img class="ref-breaker__backdrop" src="%TEMPLATES_URL%/decks/reference/page-breaker-backdrop.jpg" alt="Faclon light streaks on brand blue">
+  <img class="ref-breaker__logo" src="%ASSETS_URL%/logos/faclon-labs-logo-white.svg" alt="Faclon Labs">
+  <div class="ref-breaker__text">
+    <span class="ref-breaker__label" data-slot="label">Section label</span>
+    <h2 class="ref-breaker__title" data-slot="title">The user's section title</h2>
+  </div>
+  <ul class="ref-breaker__proof" data-slot="proof">
+    <li>First proof point</li>
+    <li>Second proof point</li>
+    <li class="ref-breaker__proof--accent">The point the user highlights</li>
+  </ul>
+</section>
+<style>
+  .ref-breaker { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: var(--color-background-brand); }
+  .ref-breaker__backdrop { position: absolute; top: 0; left: 0; width: 1920px; height: 1080px; }
+  .ref-breaker__logo { position: absolute; top: 52px; right: 52px; width: 196px; height: auto; }
+  .ref-breaker__text { position: absolute; left: 134px; top: 489px; width: 1400px; display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-24); }
+  .ref-breaker__label { background: var(--color-container-inverse); color: var(--color-text-inverse); border-radius: var(--radius-md); padding: var(--space-8) var(--space-12); font-family: var(--font-body); font-size: 20px; line-height: 32px; font-weight: 600; }
+  .ref-breaker__title { margin: 0; color: var(--color-text-on-brand); font-family: var(--font-heading); font-size: 72px; line-height: 80px; letter-spacing: -1.44px; font-weight: 700; }
+  .ref-breaker__proof { position: absolute; left: 134px; top: 937px; margin: 0; padding: 0; list-style: none; display: flex; align-items: center; gap: var(--space-20); color: var(--color-text-on-brand); font-family: var(--font-body); font-size: 24px; line-height: 32px; font-weight: 600; }
+  .ref-breaker__proof li { display: flex; align-items: center; gap: var(--space-20); }
+  .ref-breaker__proof li + li::before { content: ""; width: var(--border-width-md); height: 28px; background: var(--color-text-on-brand); opacity: var(--opacity-overlay); }
+  .ref-breaker__proof--accent { color: var(--color-text-accent-on-brand); }
+</style>

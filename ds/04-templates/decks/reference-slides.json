@@ -1,6 +1,6 @@
 {
   "source": "Figma file Design MCP › Layouts page. The brand team keeps adding references: page breakers, closing slides, fixed slides (product stack, team) and content-slide layouts.",
-  "rule": "Keep each reference slide's layout and decoration as designed. Map only: background colour to the theme token, fonts to the nearest text style (14–72px), chips to the chip tokens, and the logo to its design-system placement. For content references, Claude may adapt the layout to the content, still mapping these four.",
+  "rule": "Keep each reference slide's layout and decoration as designed. A slide with an html field ships as ready HTML: the hero slides (page breaker, closing) as a decoration-only backdrop from Figma with the text in data-slot elements to fill with the user's words; the fixed slides (team, product stack) as the Figma render of the whole slide, with nothing to fill. Use the snippet as it is. For the others, map only: background colour to the theme token, fonts to the nearest text style (14–72px), chips to the chip tokens, and the logo to its design-system placement. For content references, Claude may adapt the layout to the content, still mapping these four.",
   "mapping": {
     "background": "theme background token (background/brand, background/inverse or background/primary)",
     "fonts": "nearest named text style, never below 14px or above 72px (Display/XL)",
@@ -10,19 +10,27 @@
   "slides": {
     "product_stack": {
       "figma": "13 · Harness — every capability exposed to agents",
-      "use": "Whenever the product stack is asked for, use this slide as designed (only the mapping above)."
+      "use": "Whenever the product stack or platform slide is asked for, place its ready HTML (html) as it is: the Figma render of the slide, with nothing to fill or change.",
+      "figma_node": "3058:21738",
+      "html": "reference/product-stack.html"
     },
     "team": {
       "figma": "04 · Team — already did it 400 times",
-      "use": "Default for about or team slides, unless the user gives feedback."
+      "use": "The Faclon Labs leadership team: whenever the user asks for the team or about-Faclon slide, place its ready HTML (html) as it is, with nothing to fill or change. Not for a project team (the people on one proposal): design that from the user content (content form people), with headshots from the asset library where they exist.",
+      "figma_node": "3058:13948",
+      "html": "reference/team.html"
     },
     "page_breaker": {
       "figma": "17806942 (Annexure · Reference Slides for QnA)",
-      "use": "One of the page-breaker designs; more will be added."
+      "use": "Page breakers and Q&A slides: place the ready HTML (html), the brand team mapping of 17806942 (Reference Slides for QnA), and fill only its data-slot elements (label, title, optional proof strip). More designs will be added.",
+      "figma_node": "3069:2792",
+      "html": "reference/page-breaker.html"
     },
     "closing": {
       "figma": "29 · Close — every factory will run on AI",
-      "use": "One of the closing designs; more will be added."
+      "figma_node": "3058:22750",
+      "use": "One of the closing designs; more will be added. Ships as ready HTML (html): place it as it is and fill only its data-slot elements (tag, statement) with the user's words; never redraw the backdrop or move the text.",
+      "html": "reference/closing.html"
     },
     "content": {
       "figma": "content layouts on the Layouts page (e.g. 14 · knowledge flywheel, 20 · customer journey, 23/24 · GTM, 26 · plan)",

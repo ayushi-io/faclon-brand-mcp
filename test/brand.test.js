@@ -1,5 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
+import fs from "node:fs";
+import { checkDesign } from "../src/tools/check.js";
 import { readData } from "../src/lib/data.js";
 import { P } from "../src/lib/paths.js";
 import { getTokens } from "../src/tools/tokens.js";
@@ -84,7 +86,7 @@ test("guidelines: written sections, gaps and overview", () => {
   assert.doesNotMatch(principles.guidance, /[–—]/);
   const elements = getBrandGuidelines({ section: "design-elements" });
   assert.equal(elements.status, "written");
-  assert.match(elements.guidance, /Dark only/);
+  assert.match(elements.guidance, /Dark and brand/);
   assert.match(elements.guidance, /Brand only/);
   for (const section of ["illustration", "imagery"]) {
     const g = getBrandGuidelines({ section });
@@ -428,8 +430,51 @@ test("deck spec: styles between 14 and 72px, themes and chips use real tokens", 
     assert.ok(colour(th.background), `${name}: ${th.background}`);
     for (const v of Object.values(th.text)) assert.ok(colour(v.split(" ")[0]), `${name}: ${v}`);
   }
+  // AI slides have no default theme: Claude asks (2026-10-28).
   assert.ok(p.ai_slides.ask_first);
+  assert.equal(p.ai_slides.default_theme, null);
+  // Every designed slide is drawn in the form that fits its content; product slides are light with a mockup placeholder.
+  for (const form of ["sequence", "lifecycle", "problem_solution", "numbers", "architecture", "like_items"]) assert.ok(p.content_forms.forms[form], form);
+  assert.equal(p.product_slides.theme, "light");
+  assert.match(p.product_slides.mockup_placeholder, /DASHBOARD_MOCKUP_<NAME>/);
   assert.equal(p.safe_area.token, "spacing/52");
+});
+
+test("examples: every image is on disk and every rule, form or decision named exists", () => {
+  const g = getBrandGuidelines({ section: "examples" });
+  assert.equal(g.status, "written");
+  assert.doesNotMatch(g.guidance, /%[A-Z_]+%/, "unresolved URL placeholder");
+  for (const m of g.guidance.matchAll(/\/(examples|templates)\/([^)\s]+\.(?:png|jpg))/g)) {
+    const dir = m[1] === "examples" ? P.examples : P.templates;
+    assert.ok(fs.existsSync(`${dir}/${m[2]}`), `${m[2]} is missing`);
+  }
+  const deck = loadProfile("deck");
+  const q = readData(P.openQuestions);
+  const known = new Set([
+    ...Object.values(deck.guardrails).flatMap((v) => (Array.isArray(v) ? v.map((i) => i.id) : [])).filter(Boolean),
+    ...Object.keys(deck.content_forms.forms),
+    ...q.resolved.map((r) => r.id),
+    ...q.items.map((i) => i.id),
+  ]);
+  for (const m of g.guidance.matchAll(/(?:Rules?|decision|content form|open question):? ([^.\n]*)/g)) {
+    for (const id of m[1].matchAll(/`([a-z0-9_-]+)`/g)) assert.ok(known.has(id[1]), `examples name "${id[1]}", which is not a deck guardrail, content form or decision`);
+  }
+});
+
+test("deck reference slides with html ship a ready snippet: backdrop on disk, slots, URLs filled, check_design passes", () => {
+  const css = getTokens({ as: "css" }).code;
+  const slides = Object.entries(loadProfile("deck").reference_slides.slides).filter(([, s]) => s.html);
+  assert.deepEqual(slides.map(([k]) => k).sort(), ["closing", "page_breaker", "product_stack", "team"]);
+  for (const [key, s] of slides) {
+    assert.doesNotMatch(s.html, /%[A-Z_]+%/, `${key}: unresolved URL placeholder`);
+    // Hero slides have slots for the user's words; fixed slides (team, product stack) are used as they are.
+    if (!/data-fixed="true"/.test(s.html)) assert.match(s.html, /data-slot="/, `${key}: no slots to fill`);
+    for (const m of s.html.matchAll(/\/templates\/(decks\/reference\/[^"]+\.(?:png|jpg))/g)) {
+      assert.ok(fs.existsSync(`${P.templates}/${m[1]}`), `${key}: ${m[1]} is missing`);
+    }
+    const r = checkDesign({ html: `<style>${css}</style>${s.html}`, format_profile: "deck" });
+    assert.equal(r.verdict, "pass", `${key}: ${JSON.stringify(r.findings)}`);
+  }
 });
 
 test("newsletter spec: 600/400 breakpoints, 24px padding, token styles, placeholders", () => {

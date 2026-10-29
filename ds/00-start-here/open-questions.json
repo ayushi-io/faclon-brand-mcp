@@ -496,6 +496,56 @@
       "id": "architecture-zones-legend",
       "decision": "Zone colour-coding is used only when the user asks for it; otherwise zones use the standard zone and sub-zone styles. Claude always asks the user whether they want a legend, and adds one only if they say yes.",
       "decided_on": "2026-10-27"
+    },
+    {
+      "id": "asset-owners-and-headshot-rights",
+      "decision": "Every asset in the library is owned by the Faclon Labs brand team (partner logos, client logos, architecture icons and team headshots included). Team headshots are open to use in marketing whenever required.",
+      "decided_on": "2026-10-28"
+    },
+    {
+      "id": "infographic-required",
+      "decision": "Slides, posts and pages show processes, workflows, lifecycles, timelines, relationships and numbers as infographics drawn with design-system parts (flows, loops, timelines, splits, stat rows, charts), picked by the shape of the content. A grid or row of text cards is not an infographic; cards are for like items that sit side by side. From brand-team feedback on a generated deck (Cyclone Jam prediction), 2026-10-28.",
+      "decided_on": "2026-10-28"
+    },
+    {
+      "id": "deck-density",
+      "decision": "Slides fill their content area with content, not empty boxes. Cards and panels are sized to their content and never stretched to fill a row or the slide; when a slide has little content, the type goes up a role and the visual grows instead. Every block of text sits in a container with its padding, or aligns to the grid with the same breathing room. A label and its text sit on one line or one baseline, labels never wrap, and left edges line up. On covers and hero slides the title, subline and details form one group. From brand-team feedback on a generated deck (Cyclone Jam prediction), 2026-10-28.",
+      "decided_on": "2026-10-28"
+    },
+    {
+      "id": "problem-negative",
+      "decision": "Colour follows meaning: problems, risks and pain points use the Negative intent (red container tint, red heading or icon), not only a red chip; objectives, outcomes and solutions use brand or Positive. A problem and its solution side by side read as a contrast. From brand-team feedback on a generated deck (Cyclone Jam prediction), 2026-10-28.",
+      "decided_on": "2026-10-28"
+    },
+    {
+      "id": "architecture-in-decks",
+      "decision": "A system architecture, data flow or integration slide in a deck (or any other format) uses the architecture diagram language: zones, the four device styles with icons from the architecture icon library, arrows and colours from the architecture format, and an I/O Sense outcome when the diagram ends in I/O Sense; scaled into the slide, keeping the host format's minimum text size. From brand-team feedback on a generated deck (Cyclone Jam prediction), 2026-10-28.",
+      "decided_on": "2026-10-28"
+    },
+    {
+      "id": "product-slides-light-with-mockup",
+      "decision": "Product and dashboard slides (what an operator or user sees in I/O Sense or another Faclon product) use the light theme and show the product as a dashboard mockup. Until real product screenshots are in the asset library, the mockup is a labelled placeholder frame (DASHBOARD_MOCKUP_<NAME>) that the user replaces; Claude never draws a fake product UI. From brand-team feedback on a generated deck (Cyclone Jam prediction), 2026-10-28.",
+      "decided_on": "2026-10-28"
+    },
+    {
+      "id": "highlight-contrast-on-dark",
+      "decision": "On dark slides a highlighted card stands out with container/brand (brand/500) and text/on-brand; never a dark blue fill (brand/800 to brand/1000), which disappears into background/inverse. From brand-team feedback on a generated deck (Cyclone Jam prediction), 2026-10-28.",
+      "decided_on": "2026-10-28"
+    },
+    {
+      "id": "icons-on-lists",
+      "decision": "Icons are part of the infographic language: give each item in a list or grid of tools, capabilities, features, steps or outcomes a Lucide icon that names it, coloured with a text token. Still no decorative icons, AI cliche icons or an icon on a heading that adds nothing. Replaces the earlier icons-only-when-they-help practice. From brand-team feedback on a generated deck (Cyclone Jam prediction), 2026-10-28.",
+      "decided_on": "2026-10-28"
+    },
+    {
+      "id": "ai-slides-theme-optional",
+      "decision": "AI slides have no default theme. Claude asks the user whether they want them dark, and otherwise picks the theme for the slide like any other. Replaces the 2026-10-16 default of dark for AI slides. Brand team, 2026-10-28.",
+      "decided_on": "2026-10-28"
+    },
+    {
+      "id": "dot-particle-on-brand",
+      "decision": "The dot-particle form may be used on brand backgrounds as well as dark, as on the closing reference slide (29 · Close); the light streak stays brand only. Extends the design-elements decision. Brand team, 2026-10-28.",
+      "decided_on": "2026-10-28"
     }
   ],
   "figma_updates_needed": [],

@@ -432,7 +432,7 @@
         "page": "components",
         "node": "3265:17986"
       },
-      "use": "Three or four features side by side on the page: icon, feature name and one or two lines. No card surface; use Icon Card when each feature needs its own card. Icons only when the user wants them (Lucide, coloured with a text token).",
+      "use": "Three or four features side by side on the page: icon, feature name and one or two lines. No card surface; use Icon Card when each feature needs its own card. Each feature gets a Lucide icon that names it, coloured with a text token.",
       "props": {
         "Columns": [
           "3",

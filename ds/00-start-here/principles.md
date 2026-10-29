@@ -31,7 +31,7 @@ If an element carries no content or structure, it goes. When in doubt, leave it 
 - No template look: the same icon, title and text card in every section, or an icon on every heading.
 - Surfaces are flat by default. A shadow only lifts a card when it needs lifting.
 
-*Built from:* design.no-ai-slop (locked), template-layouts, flat-surfaces, icons only when they help.
+*Built from:* design.no-ai-slop (locked), template-layouts, flat-surfaces, icons on lists of like items only (2026-10-28).
 
 ## 4. Restraint creates impact
 
@@ -39,9 +39,9 @@ Bold color and strong contrast work because they are rare.
 
 - Brand blue is the one primary color.
 - The accents are highlights, used on roughly 10-15% of a piece at most, not as a palette.
-- Dark and brand themes are kept for the moments that matter: impact sections, AI topics, page breakers and closings.
+- Dark and brand themes are kept for the moments that matter: impact sections, page breakers and closings, and AI slides when the user wants them dark.
 
-*Built from:* primary color is brand blue only (2026-10-22), accent budget, impact section on dark or brand (2026-10-23), AI slides default to dark.
+*Built from:* primary color is brand blue only (2026-10-22), accent budget, impact section on dark or brand (2026-10-23), AI slide theme asked, not defaulted (2026-10-28).
 
 ## 5. Legible everywhere
 

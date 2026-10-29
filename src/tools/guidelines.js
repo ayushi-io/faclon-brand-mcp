@@ -1,10 +1,10 @@
 import { readData, dataExists, listDirs, readDoc } from "../lib/data.js";
 import { P, SECTION_FILES, SECTION_GROUPS, profileParts, GUARDRAIL_ORDER } from "../lib/paths.js";
 import { BrandError } from "../lib/envelope.js";
-import { getAssets } from "./assets.js";
-import { getTemplates } from "./templates.js";
+import { getAssets, ASSET_BASE_URL } from "./assets.js";
+import { getTemplates, withReferenceHtml } from "./templates.js";
 
-export const SECTIONS = ["overview", "principles", "rules", "defaults", "components", "logo", "typography", "color", "voice", "design-elements", "illustration", "architecture", "imagery", "assets", "templates", "export", "qa"];
+export const SECTIONS = ["overview", "principles", "rules", "defaults", "components", "logo", "typography", "color", "voice", "design-elements", "illustration", "architecture", "imagery", "assets", "templates", "examples", "export", "qa"];
 
 // Outcomes in 07-skills that have rules, keyed by format id (deck, document…).
 function outcomes() {
@@ -68,7 +68,9 @@ export function getBrandGuidelines({ section = "overview", format_profile, asset
     };
   }
 
-  const result = { section, status: "written", guidance: doc.body, format_profile: profileInfo };
+  // Markdown may point at served files (example images, template thumbnails) through URL placeholders.
+  const guidance = doc.body.replaceAll("%EXAMPLES_URL%", `${ASSET_BASE_URL}/examples`).replaceAll("%TEMPLATES_URL%", `${ASSET_BASE_URL}/templates`);
+  const result = { section, status: "written", guidance, format_profile: profileInfo };
   if (section === "overview") {
     result.sections = SECTIONS.map((s) => ({ section: s, status: isGap(s) ? "not_written" : "written" }));
     result.format_profiles = formatProfiles().map((id) => {
@@ -94,6 +96,7 @@ export function loadProfile(id) {
     if (key) profile[key] = readData(file);
     else Object.assign(profile, readData(file));
   }
+  if (profile.reference_slides) profile.reference_slides = withReferenceHtml(profile.reference_slides);
   profile.guardrails = Object.fromEntries(GUARDRAIL_ORDER.filter((k) => k in merged).map((k) => [k, merged[k]]));
   // The outcome's step-by-step skill, when it is written.
   const skill = `${P.skills}/${outcome}/SKILL.md`;
