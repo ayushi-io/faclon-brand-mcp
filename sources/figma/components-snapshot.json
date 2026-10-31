@@ -2,11 +2,11 @@
   "source": {
     "fileName": "Design MCP",
     "fileKey": "UDARPzxpNySOS2F3mxhgUs",
-    "extractedAt": "2026-10-27T09:43:53.033Z",
-    "method": "Faclon Brand Sync plugin (buildComponentsSnapshot, run through the figma-console Desktop Bridge)",
+    "extractedAt": "2026-10-31T06:27:57.686Z",
+    "method": "Faclon Brand Sync plugin",
     "figmaVersion": {
-      "id": "2414976724828325935",
-      "title": "Brand sync 2026-10-27 (8 new components)"
+      "id": "2416388480603806718",
+      "title": "iconography"
     }
   },
   "pages": [
@@ -7165,7 +7165,7 @@
             "type": "COMPONENT",
             "size": [
               261,
-              196
+              206
             ],
             "sizing": {
               "horizontal": "FIXED",
@@ -7224,40 +7224,149 @@
             },
             "children": [
               {
-                "name": "Icon",
+                "name": "Icon square",
                 "type": "INSTANCE",
                 "sizing": {
-                  "horizontal": "FIXED",
-                  "vertical": "FIXED"
+                  "horizontal": "HUG",
+                  "vertical": "HUG"
+                },
+                "layout": {
+                  "direction": "HORIZONTAL",
+                  "padding": {
+                    "top": {
+                      "collection": "Semantic Spacing",
+                      "variable": "gap/inline"
+                    },
+                    "right": {
+                      "collection": "Semantic Spacing",
+                      "variable": "gap/inline"
+                    },
+                    "bottom": {
+                      "collection": "Semantic Spacing",
+                      "variable": "gap/inline"
+                    },
+                    "left": {
+                      "collection": "Semantic Spacing",
+                      "variable": "gap/inline"
+                    }
+                  },
+                  "gap": 0,
+                  "primaryAlign": "CENTER",
+                  "counterAlign": "CENTER"
+                },
+                "fills": [
+                  {
+                    "variable": {
+                      "collection": "Semantic Colors",
+                      "variable": "container/secondary"
+                    }
+                  }
+                ],
+                "radius": {
+                  "collection": "Semantic Styles",
+                  "variable": "radius/xl"
                 },
                 "instanceOf": {
-                  "id": "3024:1484",
-                  "name": "Image"
+                  "id": "3327:12365",
+                  "name": "Icon square",
+                  "variant": {
+                    "Size": "24"
+                  }
                 },
                 "children": [
                   {
-                    "name": "Placeholder",
-                    "type": "RECTANGLE",
+                    "name": "Icon",
+                    "type": "FRAME",
                     "sizing": {
                       "horizontal": "FIXED",
                       "vertical": "FIXED"
                     },
-                    "constraints": {
-                      "horizontal": "STRETCH",
-                      "vertical": "STRETCH"
-                    },
-                    "fills": [
+                    "children": [
                       {
-                        "variable": {
-                          "collection": "Semantic Colors",
-                          "variable": "container/tertiary"
-                        }
+                        "name": "Vector",
+                        "type": "VECTOR",
+                        "sizing": {
+                          "horizontal": "FIXED",
+                          "vertical": "FIXED"
+                        },
+                        "constraints": {
+                          "horizontal": "SCALE",
+                          "vertical": "SCALE"
+                        },
+                        "strokes": [
+                          {
+                            "variable": {
+                              "collection": "Semantic Colors",
+                              "variable": "text/brand"
+                            }
+                          }
+                        ],
+                        "strokeWeight": 2
+                      },
+                      {
+                        "name": "Vector",
+                        "type": "VECTOR",
+                        "sizing": {
+                          "horizontal": "FIXED",
+                          "vertical": "FIXED"
+                        },
+                        "constraints": {
+                          "horizontal": "SCALE",
+                          "vertical": "SCALE"
+                        },
+                        "strokes": [
+                          {
+                            "variable": {
+                              "collection": "Semantic Colors",
+                              "variable": "text/brand"
+                            }
+                          }
+                        ],
+                        "strokeWeight": 2
+                      },
+                      {
+                        "name": "Vector",
+                        "type": "VECTOR",
+                        "sizing": {
+                          "horizontal": "FIXED",
+                          "vertical": "FIXED"
+                        },
+                        "constraints": {
+                          "horizontal": "SCALE",
+                          "vertical": "SCALE"
+                        },
+                        "strokes": [
+                          {
+                            "variable": {
+                              "collection": "Semantic Colors",
+                              "variable": "text/brand"
+                            }
+                          }
+                        ],
+                        "strokeWeight": 2
+                      },
+                      {
+                        "name": "Vector",
+                        "type": "VECTOR",
+                        "sizing": {
+                          "horizontal": "FIXED",
+                          "vertical": "FIXED"
+                        },
+                        "constraints": {
+                          "horizontal": "SCALE",
+                          "vertical": "SCALE"
+                        },
+                        "strokes": [
+                          {
+                            "variable": {
+                              "collection": "Semantic Colors",
+                              "variable": "text/brand"
+                            }
+                          }
+                        ],
+                        "strokeWeight": 2
                       }
-                    ],
-                    "radius": {
-                      "collection": "Semantic Styles",
-                      "variable": "radius/md"
-                    }
+                    ]
                   }
                 ]
               },
@@ -7440,7 +7549,7 @@
             "type": "COMPONENT",
             "size": [
               261,
-              196
+              206
             ],
             "sizing": {
               "horizontal": "FIXED",
@@ -7499,40 +7608,149 @@
             },
             "children": [
               {
-                "name": "Icon",
+                "name": "Icon square",
                 "type": "INSTANCE",
                 "sizing": {
-                  "horizontal": "FIXED",
-                  "vertical": "FIXED"
+                  "horizontal": "HUG",
+                  "vertical": "HUG"
+                },
+                "layout": {
+                  "direction": "HORIZONTAL",
+                  "padding": {
+                    "top": {
+                      "collection": "Semantic Spacing",
+                      "variable": "gap/inline"
+                    },
+                    "right": {
+                      "collection": "Semantic Spacing",
+                      "variable": "gap/inline"
+                    },
+                    "bottom": {
+                      "collection": "Semantic Spacing",
+                      "variable": "gap/inline"
+                    },
+                    "left": {
+                      "collection": "Semantic Spacing",
+                      "variable": "gap/inline"
+                    }
+                  },
+                  "gap": 0,
+                  "primaryAlign": "CENTER",
+                  "counterAlign": "CENTER"
+                },
+                "fills": [
+                  {
+                    "variable": {
+                      "collection": "Semantic Colors",
+                      "variable": "container/secondary"
+                    }
+                  }
+                ],
+                "radius": {
+                  "collection": "Semantic Styles",
+                  "variable": "radius/xl"
                 },
                 "instanceOf": {
-                  "id": "3024:1484",
-                  "name": "Image"
+                  "id": "3327:12365",
+                  "name": "Icon square",
+                  "variant": {
+                    "Size": "24"
+                  }
                 },
                 "children": [
                   {
-                    "name": "Placeholder",
-                    "type": "RECTANGLE",
+                    "name": "Icon",
+                    "type": "FRAME",
                     "sizing": {
                       "horizontal": "FIXED",
                       "vertical": "FIXED"
                     },
-                    "constraints": {
-                      "horizontal": "STRETCH",
-                      "vertical": "STRETCH"
-                    },
-                    "fills": [
+                    "children": [
                       {
-                        "variable": {
-                          "collection": "Semantic Colors",
-                          "variable": "container/tertiary"
-                        }
+                        "name": "Vector",
+                        "type": "VECTOR",
+                        "sizing": {
+                          "horizontal": "FIXED",
+                          "vertical": "FIXED"
+                        },
+                        "constraints": {
+                          "horizontal": "SCALE",
+                          "vertical": "SCALE"
+                        },
+                        "strokes": [
+                          {
+                            "variable": {
+                              "collection": "Semantic Colors",
+                              "variable": "text/brand"
+                            }
+                          }
+                        ],
+                        "strokeWeight": 2
+                      },
+                      {
+                        "name": "Vector",
+                        "type": "VECTOR",
+                        "sizing": {
+                          "horizontal": "FIXED",
+                          "vertical": "FIXED"
+                        },
+                        "constraints": {
+                          "horizontal": "SCALE",
+                          "vertical": "SCALE"
+                        },
+                        "strokes": [
+                          {
+                            "variable": {
+                              "collection": "Semantic Colors",
+                              "variable": "text/brand"
+                            }
+                          }
+                        ],
+                        "strokeWeight": 2
+                      },
+                      {
+                        "name": "Vector",
+                        "type": "VECTOR",
+                        "sizing": {
+                          "horizontal": "FIXED",
+                          "vertical": "FIXED"
+                        },
+                        "constraints": {
+                          "horizontal": "SCALE",
+                          "vertical": "SCALE"
+                        },
+                        "strokes": [
+                          {
+                            "variable": {
+                              "collection": "Semantic Colors",
+                              "variable": "text/brand"
+                            }
+                          }
+                        ],
+                        "strokeWeight": 2
+                      },
+                      {
+                        "name": "Vector",
+                        "type": "VECTOR",
+                        "sizing": {
+                          "horizontal": "FIXED",
+                          "vertical": "FIXED"
+                        },
+                        "constraints": {
+                          "horizontal": "SCALE",
+                          "vertical": "SCALE"
+                        },
+                        "strokes": [
+                          {
+                            "variable": {
+                              "collection": "Semantic Colors",
+                              "variable": "text/brand"
+                            }
+                          }
+                        ],
+                        "strokeWeight": 2
                       }
-                    ],
-                    "radius": {
-                      "collection": "Semantic Styles",
-                      "variable": "radius/md"
-                    }
+                    ]
                   }
                 ]
               },
@@ -8639,40 +8857,149 @@
                 },
                 "children": [
                   {
-                    "name": "Leading icon",
+                    "name": "Icon square",
                     "type": "INSTANCE",
                     "sizing": {
-                      "horizontal": "FIXED",
-                      "vertical": "FIXED"
+                      "horizontal": "HUG",
+                      "vertical": "HUG"
+                    },
+                    "layout": {
+                      "direction": "HORIZONTAL",
+                      "padding": {
+                        "top": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        },
+                        "right": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        },
+                        "bottom": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        },
+                        "left": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        }
+                      },
+                      "gap": 0,
+                      "primaryAlign": "CENTER",
+                      "counterAlign": "CENTER"
+                    },
+                    "fills": [
+                      {
+                        "variable": {
+                          "collection": "Semantic Colors",
+                          "variable": "container/secondary"
+                        }
+                      }
+                    ],
+                    "radius": {
+                      "collection": "Semantic Styles",
+                      "variable": "radius/xl"
                     },
                     "instanceOf": {
-                      "id": "3024:1484",
-                      "name": "Image"
+                      "id": "3327:12365",
+                      "name": "Icon square",
+                      "variant": {
+                        "Size": "24"
+                      }
                     },
                     "children": [
                       {
-                        "name": "Placeholder",
-                        "type": "RECTANGLE",
+                        "name": "Icon",
+                        "type": "FRAME",
                         "sizing": {
                           "horizontal": "FIXED",
                           "vertical": "FIXED"
                         },
-                        "constraints": {
-                          "horizontal": "STRETCH",
-                          "vertical": "STRETCH"
-                        },
-                        "fills": [
+                        "children": [
                           {
-                            "variable": {
-                              "collection": "Semantic Colors",
-                              "variable": "container/tertiary"
-                            }
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
+                          },
+                          {
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
+                          },
+                          {
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
+                          },
+                          {
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
                           }
-                        ],
-                        "radius": {
-                          "collection": "Semantic Styles",
-                          "variable": "radius/md"
-                        }
+                        ]
                       }
                     ]
                   },
@@ -8924,40 +9251,149 @@
                 },
                 "children": [
                   {
-                    "name": "Leading icon",
+                    "name": "Icon square",
                     "type": "INSTANCE",
                     "sizing": {
-                      "horizontal": "FIXED",
-                      "vertical": "FIXED"
+                      "horizontal": "HUG",
+                      "vertical": "HUG"
+                    },
+                    "layout": {
+                      "direction": "HORIZONTAL",
+                      "padding": {
+                        "top": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        },
+                        "right": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        },
+                        "bottom": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        },
+                        "left": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        }
+                      },
+                      "gap": 0,
+                      "primaryAlign": "CENTER",
+                      "counterAlign": "CENTER"
+                    },
+                    "fills": [
+                      {
+                        "variable": {
+                          "collection": "Semantic Colors",
+                          "variable": "container/secondary"
+                        }
+                      }
+                    ],
+                    "radius": {
+                      "collection": "Semantic Styles",
+                      "variable": "radius/xl"
                     },
                     "instanceOf": {
-                      "id": "3024:1484",
-                      "name": "Image"
+                      "id": "3327:12365",
+                      "name": "Icon square",
+                      "variant": {
+                        "Size": "24"
+                      }
                     },
                     "children": [
                       {
-                        "name": "Placeholder",
-                        "type": "RECTANGLE",
+                        "name": "Icon",
+                        "type": "FRAME",
                         "sizing": {
                           "horizontal": "FIXED",
                           "vertical": "FIXED"
                         },
-                        "constraints": {
-                          "horizontal": "STRETCH",
-                          "vertical": "STRETCH"
-                        },
-                        "fills": [
+                        "children": [
                           {
-                            "variable": {
-                              "collection": "Semantic Colors",
-                              "variable": "container/tertiary"
-                            }
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
+                          },
+                          {
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
+                          },
+                          {
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
+                          },
+                          {
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
                           }
-                        ],
-                        "radius": {
-                          "collection": "Semantic Styles",
-                          "variable": "radius/md"
-                        }
+                        ]
                       }
                     ]
                   },
@@ -19472,7 +19908,7 @@
             "type": "COMPONENT",
             "size": [
               960,
-              114
+              124
             ],
             "sizing": {
               "horizontal": "FIXED",
@@ -19518,40 +19954,149 @@
                 },
                 "children": [
                   {
-                    "name": "Icon",
+                    "name": "Icon square",
                     "type": "INSTANCE",
                     "sizing": {
-                      "horizontal": "FIXED",
-                      "vertical": "FIXED"
+                      "horizontal": "HUG",
+                      "vertical": "HUG"
+                    },
+                    "layout": {
+                      "direction": "HORIZONTAL",
+                      "padding": {
+                        "top": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        },
+                        "right": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        },
+                        "bottom": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        },
+                        "left": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        }
+                      },
+                      "gap": 0,
+                      "primaryAlign": "CENTER",
+                      "counterAlign": "CENTER"
+                    },
+                    "fills": [
+                      {
+                        "variable": {
+                          "collection": "Semantic Colors",
+                          "variable": "container/secondary"
+                        }
+                      }
+                    ],
+                    "radius": {
+                      "collection": "Semantic Styles",
+                      "variable": "radius/xl"
                     },
                     "instanceOf": {
-                      "id": "3024:1484",
-                      "name": "Image"
+                      "id": "3327:12365",
+                      "name": "Icon square",
+                      "variant": {
+                        "Size": "24"
+                      }
                     },
                     "children": [
                       {
-                        "name": "Placeholder",
-                        "type": "RECTANGLE",
+                        "name": "Icon",
+                        "type": "FRAME",
                         "sizing": {
                           "horizontal": "FIXED",
                           "vertical": "FIXED"
                         },
-                        "constraints": {
-                          "horizontal": "STRETCH",
-                          "vertical": "STRETCH"
-                        },
-                        "fills": [
+                        "children": [
                           {
-                            "variable": {
-                              "collection": "Semantic Colors",
-                              "variable": "container/tertiary"
-                            }
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
+                          },
+                          {
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
+                          },
+                          {
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
+                          },
+                          {
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
                           }
-                        ],
-                        "radius": {
-                          "collection": "Semantic Styles",
-                          "variable": "radius/md"
-                        }
+                        ]
                       }
                     ]
                   },
@@ -19629,40 +20174,149 @@
                 },
                 "children": [
                   {
-                    "name": "Icon",
+                    "name": "Icon square",
                     "type": "INSTANCE",
                     "sizing": {
-                      "horizontal": "FIXED",
-                      "vertical": "FIXED"
+                      "horizontal": "HUG",
+                      "vertical": "HUG"
+                    },
+                    "layout": {
+                      "direction": "HORIZONTAL",
+                      "padding": {
+                        "top": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        },
+                        "right": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        },
+                        "bottom": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        },
+                        "left": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        }
+                      },
+                      "gap": 0,
+                      "primaryAlign": "CENTER",
+                      "counterAlign": "CENTER"
+                    },
+                    "fills": [
+                      {
+                        "variable": {
+                          "collection": "Semantic Colors",
+                          "variable": "container/secondary"
+                        }
+                      }
+                    ],
+                    "radius": {
+                      "collection": "Semantic Styles",
+                      "variable": "radius/xl"
                     },
                     "instanceOf": {
-                      "id": "3024:1484",
-                      "name": "Image"
+                      "id": "3327:12365",
+                      "name": "Icon square",
+                      "variant": {
+                        "Size": "24"
+                      }
                     },
                     "children": [
                       {
-                        "name": "Placeholder",
-                        "type": "RECTANGLE",
+                        "name": "Icon",
+                        "type": "FRAME",
                         "sizing": {
                           "horizontal": "FIXED",
                           "vertical": "FIXED"
                         },
-                        "constraints": {
-                          "horizontal": "STRETCH",
-                          "vertical": "STRETCH"
-                        },
-                        "fills": [
+                        "children": [
                           {
-                            "variable": {
-                              "collection": "Semantic Colors",
-                              "variable": "container/tertiary"
-                            }
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
+                          },
+                          {
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
+                          },
+                          {
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
+                          },
+                          {
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
                           }
-                        ],
-                        "radius": {
-                          "collection": "Semantic Styles",
-                          "variable": "radius/md"
-                        }
+                        ]
                       }
                     ]
                   },
@@ -19740,40 +20394,149 @@
                 },
                 "children": [
                   {
-                    "name": "Icon",
+                    "name": "Icon square",
                     "type": "INSTANCE",
                     "sizing": {
-                      "horizontal": "FIXED",
-                      "vertical": "FIXED"
+                      "horizontal": "HUG",
+                      "vertical": "HUG"
+                    },
+                    "layout": {
+                      "direction": "HORIZONTAL",
+                      "padding": {
+                        "top": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        },
+                        "right": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        },
+                        "bottom": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        },
+                        "left": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        }
+                      },
+                      "gap": 0,
+                      "primaryAlign": "CENTER",
+                      "counterAlign": "CENTER"
+                    },
+                    "fills": [
+                      {
+                        "variable": {
+                          "collection": "Semantic Colors",
+                          "variable": "container/secondary"
+                        }
+                      }
+                    ],
+                    "radius": {
+                      "collection": "Semantic Styles",
+                      "variable": "radius/xl"
                     },
                     "instanceOf": {
-                      "id": "3024:1484",
-                      "name": "Image"
+                      "id": "3327:12365",
+                      "name": "Icon square",
+                      "variant": {
+                        "Size": "24"
+                      }
                     },
                     "children": [
                       {
-                        "name": "Placeholder",
-                        "type": "RECTANGLE",
+                        "name": "Icon",
+                        "type": "FRAME",
                         "sizing": {
                           "horizontal": "FIXED",
                           "vertical": "FIXED"
                         },
-                        "constraints": {
-                          "horizontal": "STRETCH",
-                          "vertical": "STRETCH"
-                        },
-                        "fills": [
+                        "children": [
                           {
-                            "variable": {
-                              "collection": "Semantic Colors",
-                              "variable": "container/tertiary"
-                            }
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
+                          },
+                          {
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
+                          },
+                          {
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
+                          },
+                          {
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
                           }
-                        ],
-                        "radius": {
-                          "collection": "Semantic Styles",
-                          "variable": "radius/md"
-                        }
+                        ]
                       }
                     ]
                   },
@@ -19840,7 +20603,7 @@
             "type": "COMPONENT",
             "size": [
               960,
-              114
+              124
             ],
             "sizing": {
               "horizontal": "FIXED",
@@ -19886,40 +20649,149 @@
                 },
                 "children": [
                   {
-                    "name": "Icon",
+                    "name": "Icon square",
                     "type": "INSTANCE",
                     "sizing": {
-                      "horizontal": "FIXED",
-                      "vertical": "FIXED"
+                      "horizontal": "HUG",
+                      "vertical": "HUG"
+                    },
+                    "layout": {
+                      "direction": "HORIZONTAL",
+                      "padding": {
+                        "top": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        },
+                        "right": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        },
+                        "bottom": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        },
+                        "left": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        }
+                      },
+                      "gap": 0,
+                      "primaryAlign": "CENTER",
+                      "counterAlign": "CENTER"
+                    },
+                    "fills": [
+                      {
+                        "variable": {
+                          "collection": "Semantic Colors",
+                          "variable": "container/secondary"
+                        }
+                      }
+                    ],
+                    "radius": {
+                      "collection": "Semantic Styles",
+                      "variable": "radius/xl"
                     },
                     "instanceOf": {
-                      "id": "3024:1484",
-                      "name": "Image"
+                      "id": "3327:12365",
+                      "name": "Icon square",
+                      "variant": {
+                        "Size": "24"
+                      }
                     },
                     "children": [
                       {
-                        "name": "Placeholder",
-                        "type": "RECTANGLE",
+                        "name": "Icon",
+                        "type": "FRAME",
                         "sizing": {
                           "horizontal": "FIXED",
                           "vertical": "FIXED"
                         },
-                        "constraints": {
-                          "horizontal": "STRETCH",
-                          "vertical": "STRETCH"
-                        },
-                        "fills": [
+                        "children": [
                           {
-                            "variable": {
-                              "collection": "Semantic Colors",
-                              "variable": "container/tertiary"
-                            }
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
+                          },
+                          {
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
+                          },
+                          {
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
+                          },
+                          {
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
                           }
-                        ],
-                        "radius": {
-                          "collection": "Semantic Styles",
-                          "variable": "radius/md"
-                        }
+                        ]
                       }
                     ]
                   },
@@ -19997,40 +20869,149 @@
                 },
                 "children": [
                   {
-                    "name": "Icon",
+                    "name": "Icon square",
                     "type": "INSTANCE",
                     "sizing": {
-                      "horizontal": "FIXED",
-                      "vertical": "FIXED"
+                      "horizontal": "HUG",
+                      "vertical": "HUG"
+                    },
+                    "layout": {
+                      "direction": "HORIZONTAL",
+                      "padding": {
+                        "top": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        },
+                        "right": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        },
+                        "bottom": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        },
+                        "left": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        }
+                      },
+                      "gap": 0,
+                      "primaryAlign": "CENTER",
+                      "counterAlign": "CENTER"
+                    },
+                    "fills": [
+                      {
+                        "variable": {
+                          "collection": "Semantic Colors",
+                          "variable": "container/secondary"
+                        }
+                      }
+                    ],
+                    "radius": {
+                      "collection": "Semantic Styles",
+                      "variable": "radius/xl"
                     },
                     "instanceOf": {
-                      "id": "3024:1484",
-                      "name": "Image"
+                      "id": "3327:12365",
+                      "name": "Icon square",
+                      "variant": {
+                        "Size": "24"
+                      }
                     },
                     "children": [
                       {
-                        "name": "Placeholder",
-                        "type": "RECTANGLE",
+                        "name": "Icon",
+                        "type": "FRAME",
                         "sizing": {
                           "horizontal": "FIXED",
                           "vertical": "FIXED"
                         },
-                        "constraints": {
-                          "horizontal": "STRETCH",
-                          "vertical": "STRETCH"
-                        },
-                        "fills": [
+                        "children": [
                           {
-                            "variable": {
-                              "collection": "Semantic Colors",
-                              "variable": "container/tertiary"
-                            }
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
+                          },
+                          {
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
+                          },
+                          {
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
+                          },
+                          {
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
                           }
-                        ],
-                        "radius": {
-                          "collection": "Semantic Styles",
-                          "variable": "radius/md"
-                        }
+                        ]
                       }
                     ]
                   },
@@ -20108,40 +21089,149 @@
                 },
                 "children": [
                   {
-                    "name": "Icon",
+                    "name": "Icon square",
                     "type": "INSTANCE",
                     "sizing": {
-                      "horizontal": "FIXED",
-                      "vertical": "FIXED"
+                      "horizontal": "HUG",
+                      "vertical": "HUG"
+                    },
+                    "layout": {
+                      "direction": "HORIZONTAL",
+                      "padding": {
+                        "top": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        },
+                        "right": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        },
+                        "bottom": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        },
+                        "left": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        }
+                      },
+                      "gap": 0,
+                      "primaryAlign": "CENTER",
+                      "counterAlign": "CENTER"
+                    },
+                    "fills": [
+                      {
+                        "variable": {
+                          "collection": "Semantic Colors",
+                          "variable": "container/secondary"
+                        }
+                      }
+                    ],
+                    "radius": {
+                      "collection": "Semantic Styles",
+                      "variable": "radius/xl"
                     },
                     "instanceOf": {
-                      "id": "3024:1484",
-                      "name": "Image"
+                      "id": "3327:12365",
+                      "name": "Icon square",
+                      "variant": {
+                        "Size": "24"
+                      }
                     },
                     "children": [
                       {
-                        "name": "Placeholder",
-                        "type": "RECTANGLE",
+                        "name": "Icon",
+                        "type": "FRAME",
                         "sizing": {
                           "horizontal": "FIXED",
                           "vertical": "FIXED"
                         },
-                        "constraints": {
-                          "horizontal": "STRETCH",
-                          "vertical": "STRETCH"
-                        },
-                        "fills": [
+                        "children": [
                           {
-                            "variable": {
-                              "collection": "Semantic Colors",
-                              "variable": "container/tertiary"
-                            }
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
+                          },
+                          {
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
+                          },
+                          {
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
+                          },
+                          {
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
                           }
-                        ],
-                        "radius": {
-                          "collection": "Semantic Styles",
-                          "variable": "radius/md"
-                        }
+                        ]
                       }
                     ]
                   },
@@ -20219,40 +21309,149 @@
                 },
                 "children": [
                   {
-                    "name": "Icon",
+                    "name": "Icon square",
                     "type": "INSTANCE",
                     "sizing": {
-                      "horizontal": "FIXED",
-                      "vertical": "FIXED"
+                      "horizontal": "HUG",
+                      "vertical": "HUG"
+                    },
+                    "layout": {
+                      "direction": "HORIZONTAL",
+                      "padding": {
+                        "top": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        },
+                        "right": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        },
+                        "bottom": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        },
+                        "left": {
+                          "collection": "Semantic Spacing",
+                          "variable": "gap/inline"
+                        }
+                      },
+                      "gap": 0,
+                      "primaryAlign": "CENTER",
+                      "counterAlign": "CENTER"
+                    },
+                    "fills": [
+                      {
+                        "variable": {
+                          "collection": "Semantic Colors",
+                          "variable": "container/secondary"
+                        }
+                      }
+                    ],
+                    "radius": {
+                      "collection": "Semantic Styles",
+                      "variable": "radius/xl"
                     },
                     "instanceOf": {
-                      "id": "3024:1484",
-                      "name": "Image"
+                      "id": "3327:12365",
+                      "name": "Icon square",
+                      "variant": {
+                        "Size": "24"
+                      }
                     },
                     "children": [
                       {
-                        "name": "Placeholder",
-                        "type": "RECTANGLE",
+                        "name": "Icon",
+                        "type": "FRAME",
                         "sizing": {
                           "horizontal": "FIXED",
                           "vertical": "FIXED"
                         },
-                        "constraints": {
-                          "horizontal": "STRETCH",
-                          "vertical": "STRETCH"
-                        },
-                        "fills": [
+                        "children": [
                           {
-                            "variable": {
-                              "collection": "Semantic Colors",
-                              "variable": "container/tertiary"
-                            }
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
+                          },
+                          {
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
+                          },
+                          {
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
+                          },
+                          {
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "sizing": {
+                              "horizontal": "FIXED",
+                              "vertical": "FIXED"
+                            },
+                            "constraints": {
+                              "horizontal": "SCALE",
+                              "vertical": "SCALE"
+                            },
+                            "strokes": [
+                              {
+                                "variable": {
+                                  "collection": "Semantic Colors",
+                                  "variable": "text/brand"
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
                           }
-                        ],
-                        "radius": {
-                          "collection": "Semantic Styles",
-                          "variable": "radius/md"
-                        }
+                        ]
                       }
                     ]
                   },
@@ -22583,6 +23782,7 @@
                 }
               }
             ],
+            "strokeWeight": "mixed",
             "children": [
               {
                 "name": "Label",
@@ -22795,6 +23995,7 @@
                 }
               }
             ],
+            "strokeWeight": "mixed",
             "children": [
               {
                 "name": "Label",
@@ -23007,6 +24208,7 @@
                 }
               }
             ],
+            "strokeWeight": "mixed",
             "children": [
               {
                 "name": "Label",
@@ -23219,6 +24421,7 @@
                 }
               }
             ],
+            "strokeWeight": "mixed",
             "children": [
               {
                 "name": "Label",
@@ -26398,6 +27601,626 @@
                   },
                   "autoResize": "HEIGHT"
                 }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "page": "components",
+      "id": "3327:12365",
+      "name": "Icon square",
+      "type": "COMPONENT_SET",
+      "properties": {
+        "Size": {
+          "type": "VARIANT",
+          "options": [
+            "16",
+            "24",
+            "32",
+            "40"
+          ],
+          "default": "16"
+        }
+      },
+      "variants": [
+        {
+          "id": "3327:12341",
+          "variant": {
+            "Size": "16"
+          },
+          "node": {
+            "name": "Size=16",
+            "type": "COMPONENT",
+            "size": [
+              32,
+              32
+            ],
+            "sizing": {
+              "horizontal": "HUG",
+              "vertical": "HUG"
+            },
+            "layout": {
+              "direction": "HORIZONTAL",
+              "padding": {
+                "top": {
+                  "collection": "Semantic Spacing",
+                  "variable": "gap/inline"
+                },
+                "right": {
+                  "collection": "Semantic Spacing",
+                  "variable": "gap/inline"
+                },
+                "bottom": {
+                  "collection": "Semantic Spacing",
+                  "variable": "gap/inline"
+                },
+                "left": {
+                  "collection": "Semantic Spacing",
+                  "variable": "gap/inline"
+                }
+              },
+              "gap": 0,
+              "primaryAlign": "CENTER",
+              "counterAlign": "CENTER"
+            },
+            "fills": [
+              {
+                "variable": {
+                  "collection": "Semantic Colors",
+                  "variable": "container/secondary"
+                }
+              }
+            ],
+            "radius": {
+              "collection": "Semantic Styles",
+              "variable": "radius/md"
+            },
+            "children": [
+              {
+                "name": "Icon",
+                "type": "FRAME",
+                "sizing": {
+                  "horizontal": "FIXED",
+                  "vertical": "FIXED"
+                },
+                "children": [
+                  {
+                    "name": "Vector",
+                    "type": "VECTOR",
+                    "sizing": {
+                      "horizontal": "FIXED",
+                      "vertical": "FIXED"
+                    },
+                    "constraints": {
+                      "horizontal": "SCALE",
+                      "vertical": "SCALE"
+                    },
+                    "strokes": [
+                      {
+                        "variable": {
+                          "collection": "Semantic Colors",
+                          "variable": "text/brand"
+                        }
+                      }
+                    ],
+                    "strokeWeight": 2
+                  },
+                  {
+                    "name": "Vector",
+                    "type": "VECTOR",
+                    "sizing": {
+                      "horizontal": "FIXED",
+                      "vertical": "FIXED"
+                    },
+                    "constraints": {
+                      "horizontal": "SCALE",
+                      "vertical": "SCALE"
+                    },
+                    "strokes": [
+                      {
+                        "variable": {
+                          "collection": "Semantic Colors",
+                          "variable": "text/brand"
+                        }
+                      }
+                    ],
+                    "strokeWeight": 2
+                  },
+                  {
+                    "name": "Vector",
+                    "type": "VECTOR",
+                    "sizing": {
+                      "horizontal": "FIXED",
+                      "vertical": "FIXED"
+                    },
+                    "constraints": {
+                      "horizontal": "SCALE",
+                      "vertical": "SCALE"
+                    },
+                    "strokes": [
+                      {
+                        "variable": {
+                          "collection": "Semantic Colors",
+                          "variable": "text/brand"
+                        }
+                      }
+                    ],
+                    "strokeWeight": 2
+                  },
+                  {
+                    "name": "Vector",
+                    "type": "VECTOR",
+                    "sizing": {
+                      "horizontal": "FIXED",
+                      "vertical": "FIXED"
+                    },
+                    "constraints": {
+                      "horizontal": "SCALE",
+                      "vertical": "SCALE"
+                    },
+                    "strokes": [
+                      {
+                        "variable": {
+                          "collection": "Semantic Colors",
+                          "variable": "text/brand"
+                        }
+                      }
+                    ],
+                    "strokeWeight": 2
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "3327:12347",
+          "variant": {
+            "Size": "24"
+          },
+          "node": {
+            "name": "Size=24",
+            "type": "COMPONENT",
+            "size": [
+              40,
+              40
+            ],
+            "sizing": {
+              "horizontal": "HUG",
+              "vertical": "HUG"
+            },
+            "layout": {
+              "direction": "HORIZONTAL",
+              "padding": {
+                "top": {
+                  "collection": "Semantic Spacing",
+                  "variable": "gap/inline"
+                },
+                "right": {
+                  "collection": "Semantic Spacing",
+                  "variable": "gap/inline"
+                },
+                "bottom": {
+                  "collection": "Semantic Spacing",
+                  "variable": "gap/inline"
+                },
+                "left": {
+                  "collection": "Semantic Spacing",
+                  "variable": "gap/inline"
+                }
+              },
+              "gap": 0,
+              "primaryAlign": "CENTER",
+              "counterAlign": "CENTER"
+            },
+            "fills": [
+              {
+                "variable": {
+                  "collection": "Semantic Colors",
+                  "variable": "container/secondary"
+                }
+              }
+            ],
+            "radius": {
+              "collection": "Semantic Styles",
+              "variable": "radius/xl"
+            },
+            "children": [
+              {
+                "name": "Icon",
+                "type": "FRAME",
+                "sizing": {
+                  "horizontal": "FIXED",
+                  "vertical": "FIXED"
+                },
+                "children": [
+                  {
+                    "name": "Vector",
+                    "type": "VECTOR",
+                    "sizing": {
+                      "horizontal": "FIXED",
+                      "vertical": "FIXED"
+                    },
+                    "constraints": {
+                      "horizontal": "SCALE",
+                      "vertical": "SCALE"
+                    },
+                    "strokes": [
+                      {
+                        "variable": {
+                          "collection": "Semantic Colors",
+                          "variable": "text/brand"
+                        }
+                      }
+                    ],
+                    "strokeWeight": 2
+                  },
+                  {
+                    "name": "Vector",
+                    "type": "VECTOR",
+                    "sizing": {
+                      "horizontal": "FIXED",
+                      "vertical": "FIXED"
+                    },
+                    "constraints": {
+                      "horizontal": "SCALE",
+                      "vertical": "SCALE"
+                    },
+                    "strokes": [
+                      {
+                        "variable": {
+                          "collection": "Semantic Colors",
+                          "variable": "text/brand"
+                        }
+                      }
+                    ],
+                    "strokeWeight": 2
+                  },
+                  {
+                    "name": "Vector",
+                    "type": "VECTOR",
+                    "sizing": {
+                      "horizontal": "FIXED",
+                      "vertical": "FIXED"
+                    },
+                    "constraints": {
+                      "horizontal": "SCALE",
+                      "vertical": "SCALE"
+                    },
+                    "strokes": [
+                      {
+                        "variable": {
+                          "collection": "Semantic Colors",
+                          "variable": "text/brand"
+                        }
+                      }
+                    ],
+                    "strokeWeight": 2
+                  },
+                  {
+                    "name": "Vector",
+                    "type": "VECTOR",
+                    "sizing": {
+                      "horizontal": "FIXED",
+                      "vertical": "FIXED"
+                    },
+                    "constraints": {
+                      "horizontal": "SCALE",
+                      "vertical": "SCALE"
+                    },
+                    "strokes": [
+                      {
+                        "variable": {
+                          "collection": "Semantic Colors",
+                          "variable": "text/brand"
+                        }
+                      }
+                    ],
+                    "strokeWeight": 2
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "3327:12353",
+          "variant": {
+            "Size": "32"
+          },
+          "node": {
+            "name": "Size=32",
+            "type": "COMPONENT",
+            "size": [
+              48,
+              48
+            ],
+            "sizing": {
+              "horizontal": "HUG",
+              "vertical": "HUG"
+            },
+            "layout": {
+              "direction": "HORIZONTAL",
+              "padding": {
+                "top": {
+                  "collection": "Semantic Spacing",
+                  "variable": "gap/inline"
+                },
+                "right": {
+                  "collection": "Semantic Spacing",
+                  "variable": "gap/inline"
+                },
+                "bottom": {
+                  "collection": "Semantic Spacing",
+                  "variable": "gap/inline"
+                },
+                "left": {
+                  "collection": "Semantic Spacing",
+                  "variable": "gap/inline"
+                }
+              },
+              "gap": 0,
+              "primaryAlign": "CENTER",
+              "counterAlign": "CENTER"
+            },
+            "fills": [
+              {
+                "variable": {
+                  "collection": "Semantic Colors",
+                  "variable": "container/secondary"
+                }
+              }
+            ],
+            "radius": {
+              "collection": "Semantic Styles",
+              "variable": "radius/xl"
+            },
+            "children": [
+              {
+                "name": "Icon",
+                "type": "FRAME",
+                "sizing": {
+                  "horizontal": "FIXED",
+                  "vertical": "FIXED"
+                },
+                "children": [
+                  {
+                    "name": "Vector",
+                    "type": "VECTOR",
+                    "sizing": {
+                      "horizontal": "FIXED",
+                      "vertical": "FIXED"
+                    },
+                    "constraints": {
+                      "horizontal": "SCALE",
+                      "vertical": "SCALE"
+                    },
+                    "strokes": [
+                      {
+                        "variable": {
+                          "collection": "Semantic Colors",
+                          "variable": "text/brand"
+                        }
+                      }
+                    ],
+                    "strokeWeight": 2
+                  },
+                  {
+                    "name": "Vector",
+                    "type": "VECTOR",
+                    "sizing": {
+                      "horizontal": "FIXED",
+                      "vertical": "FIXED"
+                    },
+                    "constraints": {
+                      "horizontal": "SCALE",
+                      "vertical": "SCALE"
+                    },
+                    "strokes": [
+                      {
+                        "variable": {
+                          "collection": "Semantic Colors",
+                          "variable": "text/brand"
+                        }
+                      }
+                    ],
+                    "strokeWeight": 2
+                  },
+                  {
+                    "name": "Vector",
+                    "type": "VECTOR",
+                    "sizing": {
+                      "horizontal": "FIXED",
+                      "vertical": "FIXED"
+                    },
+                    "constraints": {
+                      "horizontal": "SCALE",
+                      "vertical": "SCALE"
+                    },
+                    "strokes": [
+                      {
+                        "variable": {
+                          "collection": "Semantic Colors",
+                          "variable": "text/brand"
+                        }
+                      }
+                    ],
+                    "strokeWeight": 2
+                  },
+                  {
+                    "name": "Vector",
+                    "type": "VECTOR",
+                    "sizing": {
+                      "horizontal": "FIXED",
+                      "vertical": "FIXED"
+                    },
+                    "constraints": {
+                      "horizontal": "SCALE",
+                      "vertical": "SCALE"
+                    },
+                    "strokes": [
+                      {
+                        "variable": {
+                          "collection": "Semantic Colors",
+                          "variable": "text/brand"
+                        }
+                      }
+                    ],
+                    "strokeWeight": 2
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "3327:12359",
+          "variant": {
+            "Size": "40"
+          },
+          "node": {
+            "name": "Size=40",
+            "type": "COMPONENT",
+            "size": [
+              56,
+              56
+            ],
+            "sizing": {
+              "horizontal": "HUG",
+              "vertical": "HUG"
+            },
+            "layout": {
+              "direction": "HORIZONTAL",
+              "padding": {
+                "top": {
+                  "collection": "Semantic Spacing",
+                  "variable": "gap/inline"
+                },
+                "right": {
+                  "collection": "Semantic Spacing",
+                  "variable": "gap/inline"
+                },
+                "bottom": {
+                  "collection": "Semantic Spacing",
+                  "variable": "gap/inline"
+                },
+                "left": {
+                  "collection": "Semantic Spacing",
+                  "variable": "gap/inline"
+                }
+              },
+              "gap": 0,
+              "primaryAlign": "CENTER",
+              "counterAlign": "CENTER"
+            },
+            "fills": [
+              {
+                "variable": {
+                  "collection": "Semantic Colors",
+                  "variable": "container/secondary"
+                }
+              }
+            ],
+            "radius": {
+              "collection": "Semantic Styles",
+              "variable": "radius/xl"
+            },
+            "children": [
+              {
+                "name": "Icon",
+                "type": "FRAME",
+                "sizing": {
+                  "horizontal": "FIXED",
+                  "vertical": "FIXED"
+                },
+                "children": [
+                  {
+                    "name": "Vector",
+                    "type": "VECTOR",
+                    "sizing": {
+                      "horizontal": "FIXED",
+                      "vertical": "FIXED"
+                    },
+                    "constraints": {
+                      "horizontal": "SCALE",
+                      "vertical": "SCALE"
+                    },
+                    "strokes": [
+                      {
+                        "variable": {
+                          "collection": "Semantic Colors",
+                          "variable": "text/brand"
+                        }
+                      }
+                    ],
+                    "strokeWeight": 2
+                  },
+                  {
+                    "name": "Vector",
+                    "type": "VECTOR",
+                    "sizing": {
+                      "horizontal": "FIXED",
+                      "vertical": "FIXED"
+                    },
+                    "constraints": {
+                      "horizontal": "SCALE",
+                      "vertical": "SCALE"
+                    },
+                    "strokes": [
+                      {
+                        "variable": {
+                          "collection": "Semantic Colors",
+                          "variable": "text/brand"
+                        }
+                      }
+                    ],
+                    "strokeWeight": 2
+                  },
+                  {
+                    "name": "Vector",
+                    "type": "VECTOR",
+                    "sizing": {
+                      "horizontal": "FIXED",
+                      "vertical": "FIXED"
+                    },
+                    "constraints": {
+                      "horizontal": "SCALE",
+                      "vertical": "SCALE"
+                    },
+                    "strokes": [
+                      {
+                        "variable": {
+                          "collection": "Semantic Colors",
+                          "variable": "text/brand"
+                        }
+                      }
+                    ],
+                    "strokeWeight": 2
+                  },
+                  {
+                    "name": "Vector",
+                    "type": "VECTOR",
+                    "sizing": {
+                      "horizontal": "FIXED",
+                      "vertical": "FIXED"
+                    },
+                    "constraints": {
+                      "horizontal": "SCALE",
+                      "vertical": "SCALE"
+                    },
+                    "strokes": [
+                      {
+                        "variable": {
+                          "collection": "Semantic Colors",
+                          "variable": "text/brand"
+                        }
+                      }
+                    ],
+                    "strokeWeight": 2
+                  }
+                ]
               }
             ]
           }
