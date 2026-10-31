@@ -1011,22 +1011,22 @@
         {
           "part": "vector",
           "stroke": "text/brand",
-          "border_width": 2
+          "border_width": "border-width/md"
         },
         {
           "part": "vector",
           "stroke": "text/brand",
-          "border_width": 2
+          "border_width": "border-width/md"
         },
         {
           "part": "vector",
           "stroke": "text/brand",
-          "border_width": 2
+          "border_width": "border-width/md"
         },
         {
           "part": "vector",
           "stroke": "text/brand",
-          "border_width": 2
+          "border_width": "border-width/md"
         }
       ],
       "variants": {
@@ -1047,7 +1047,7 @@
       },
       "width": "hug",
       "default": {
-        "Size": "16"
+        "Size": "24"
       }
     },
     {
