@@ -2,11 +2,11 @@
   "source": {
     "fileName": "Design MCP",
     "fileKey": "UDARPzxpNySOS2F3mxhgUs",
-    "extractedAt": "2026-10-31T06:27:57.686Z",
+    "extractedAt": "2026-10-31T06:45:30.505Z",
     "method": "Faclon Brand Sync plugin",
     "figmaVersion": {
-      "id": "2416388480603806718",
-      "title": "iconography"
+      "id": "2416348829462261633",
+      "title": "Icon square default 24"
     }
   },
   "pages": [
@@ -7301,7 +7301,10 @@
                             }
                           }
                         ],
-                        "strokeWeight": 2
+                        "strokeWeight": {
+                          "collection": "Semantic Styles",
+                          "variable": "border-width/md"
+                        }
                       },
                       {
                         "name": "Vector",
@@ -7322,7 +7325,10 @@
                             }
                           }
                         ],
-                        "strokeWeight": 2
+                        "strokeWeight": {
+                          "collection": "Semantic Styles",
+                          "variable": "border-width/md"
+                        }
                       },
                       {
                         "name": "Vector",
@@ -7343,7 +7349,10 @@
                             }
                           }
                         ],
-                        "strokeWeight": 2
+                        "strokeWeight": {
+                          "collection": "Semantic Styles",
+                          "variable": "border-width/md"
+                        }
                       },
                       {
                         "name": "Vector",
@@ -7364,7 +7373,10 @@
                             }
                           }
                         ],
-                        "strokeWeight": 2
+                        "strokeWeight": {
+                          "collection": "Semantic Styles",
+                          "variable": "border-width/md"
+                        }
                       }
                     ]
                   }
@@ -7685,7 +7697,10 @@
                             }
                           }
                         ],
-                        "strokeWeight": 2
+                        "strokeWeight": {
+                          "collection": "Semantic Styles",
+                          "variable": "border-width/md"
+                        }
                       },
                       {
                         "name": "Vector",
@@ -7706,7 +7721,10 @@
                             }
                           }
                         ],
-                        "strokeWeight": 2
+                        "strokeWeight": {
+                          "collection": "Semantic Styles",
+                          "variable": "border-width/md"
+                        }
                       },
                       {
                         "name": "Vector",
@@ -7727,7 +7745,10 @@
                             }
                           }
                         ],
-                        "strokeWeight": 2
+                        "strokeWeight": {
+                          "collection": "Semantic Styles",
+                          "variable": "border-width/md"
+                        }
                       },
                       {
                         "name": "Vector",
@@ -7748,7 +7769,10 @@
                             }
                           }
                         ],
-                        "strokeWeight": 2
+                        "strokeWeight": {
+                          "collection": "Semantic Styles",
+                          "variable": "border-width/md"
+                        }
                       }
                     ]
                   }
@@ -8934,7 +8958,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           },
                           {
                             "name": "Vector",
@@ -8955,7 +8982,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           },
                           {
                             "name": "Vector",
@@ -8976,7 +9006,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           },
                           {
                             "name": "Vector",
@@ -8997,7 +9030,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           }
                         ]
                       }
@@ -9328,7 +9364,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           },
                           {
                             "name": "Vector",
@@ -9349,7 +9388,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           },
                           {
                             "name": "Vector",
@@ -9370,7 +9412,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           },
                           {
                             "name": "Vector",
@@ -9391,7 +9436,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           }
                         ]
                       }
@@ -20031,7 +20079,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           },
                           {
                             "name": "Vector",
@@ -20052,7 +20103,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           },
                           {
                             "name": "Vector",
@@ -20073,7 +20127,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           },
                           {
                             "name": "Vector",
@@ -20094,7 +20151,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           }
                         ]
                       }
@@ -20251,7 +20311,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           },
                           {
                             "name": "Vector",
@@ -20272,7 +20335,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           },
                           {
                             "name": "Vector",
@@ -20293,7 +20359,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           },
                           {
                             "name": "Vector",
@@ -20314,7 +20383,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           }
                         ]
                       }
@@ -20471,7 +20543,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           },
                           {
                             "name": "Vector",
@@ -20492,7 +20567,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           },
                           {
                             "name": "Vector",
@@ -20513,7 +20591,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           },
                           {
                             "name": "Vector",
@@ -20534,7 +20615,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           }
                         ]
                       }
@@ -20726,7 +20810,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           },
                           {
                             "name": "Vector",
@@ -20747,7 +20834,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           },
                           {
                             "name": "Vector",
@@ -20768,7 +20858,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           },
                           {
                             "name": "Vector",
@@ -20789,7 +20882,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           }
                         ]
                       }
@@ -20946,7 +21042,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           },
                           {
                             "name": "Vector",
@@ -20967,7 +21066,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           },
                           {
                             "name": "Vector",
@@ -20988,7 +21090,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           },
                           {
                             "name": "Vector",
@@ -21009,7 +21114,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           }
                         ]
                       }
@@ -21166,7 +21274,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           },
                           {
                             "name": "Vector",
@@ -21187,7 +21298,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           },
                           {
                             "name": "Vector",
@@ -21208,7 +21322,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           },
                           {
                             "name": "Vector",
@@ -21229,7 +21346,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           }
                         ]
                       }
@@ -21386,7 +21506,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           },
                           {
                             "name": "Vector",
@@ -21407,7 +21530,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           },
                           {
                             "name": "Vector",
@@ -21428,7 +21554,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           },
                           {
                             "name": "Vector",
@@ -21449,7 +21578,10 @@
                                 }
                               }
                             ],
-                            "strokeWeight": 2
+                            "strokeWeight": {
+                              "collection": "Semantic Styles",
+                              "variable": "border-width/md"
+                            }
                           }
                         ]
                       }
@@ -27621,160 +27753,10 @@
             "32",
             "40"
           ],
-          "default": "16"
+          "default": "24"
         }
       },
       "variants": [
-        {
-          "id": "3327:12341",
-          "variant": {
-            "Size": "16"
-          },
-          "node": {
-            "name": "Size=16",
-            "type": "COMPONENT",
-            "size": [
-              32,
-              32
-            ],
-            "sizing": {
-              "horizontal": "HUG",
-              "vertical": "HUG"
-            },
-            "layout": {
-              "direction": "HORIZONTAL",
-              "padding": {
-                "top": {
-                  "collection": "Semantic Spacing",
-                  "variable": "gap/inline"
-                },
-                "right": {
-                  "collection": "Semantic Spacing",
-                  "variable": "gap/inline"
-                },
-                "bottom": {
-                  "collection": "Semantic Spacing",
-                  "variable": "gap/inline"
-                },
-                "left": {
-                  "collection": "Semantic Spacing",
-                  "variable": "gap/inline"
-                }
-              },
-              "gap": 0,
-              "primaryAlign": "CENTER",
-              "counterAlign": "CENTER"
-            },
-            "fills": [
-              {
-                "variable": {
-                  "collection": "Semantic Colors",
-                  "variable": "container/secondary"
-                }
-              }
-            ],
-            "radius": {
-              "collection": "Semantic Styles",
-              "variable": "radius/md"
-            },
-            "children": [
-              {
-                "name": "Icon",
-                "type": "FRAME",
-                "sizing": {
-                  "horizontal": "FIXED",
-                  "vertical": "FIXED"
-                },
-                "children": [
-                  {
-                    "name": "Vector",
-                    "type": "VECTOR",
-                    "sizing": {
-                      "horizontal": "FIXED",
-                      "vertical": "FIXED"
-                    },
-                    "constraints": {
-                      "horizontal": "SCALE",
-                      "vertical": "SCALE"
-                    },
-                    "strokes": [
-                      {
-                        "variable": {
-                          "collection": "Semantic Colors",
-                          "variable": "text/brand"
-                        }
-                      }
-                    ],
-                    "strokeWeight": 2
-                  },
-                  {
-                    "name": "Vector",
-                    "type": "VECTOR",
-                    "sizing": {
-                      "horizontal": "FIXED",
-                      "vertical": "FIXED"
-                    },
-                    "constraints": {
-                      "horizontal": "SCALE",
-                      "vertical": "SCALE"
-                    },
-                    "strokes": [
-                      {
-                        "variable": {
-                          "collection": "Semantic Colors",
-                          "variable": "text/brand"
-                        }
-                      }
-                    ],
-                    "strokeWeight": 2
-                  },
-                  {
-                    "name": "Vector",
-                    "type": "VECTOR",
-                    "sizing": {
-                      "horizontal": "FIXED",
-                      "vertical": "FIXED"
-                    },
-                    "constraints": {
-                      "horizontal": "SCALE",
-                      "vertical": "SCALE"
-                    },
-                    "strokes": [
-                      {
-                        "variable": {
-                          "collection": "Semantic Colors",
-                          "variable": "text/brand"
-                        }
-                      }
-                    ],
-                    "strokeWeight": 2
-                  },
-                  {
-                    "name": "Vector",
-                    "type": "VECTOR",
-                    "sizing": {
-                      "horizontal": "FIXED",
-                      "vertical": "FIXED"
-                    },
-                    "constraints": {
-                      "horizontal": "SCALE",
-                      "vertical": "SCALE"
-                    },
-                    "strokes": [
-                      {
-                        "variable": {
-                          "collection": "Semantic Colors",
-                          "variable": "text/brand"
-                        }
-                      }
-                    ],
-                    "strokeWeight": 2
-                  }
-                ]
-              }
-            ]
-          }
-        },
         {
           "id": "3327:12347",
           "variant": {
@@ -27855,7 +27837,10 @@
                         }
                       }
                     ],
-                    "strokeWeight": 2
+                    "strokeWeight": {
+                      "collection": "Semantic Styles",
+                      "variable": "border-width/md"
+                    }
                   },
                   {
                     "name": "Vector",
@@ -27876,7 +27861,10 @@
                         }
                       }
                     ],
-                    "strokeWeight": 2
+                    "strokeWeight": {
+                      "collection": "Semantic Styles",
+                      "variable": "border-width/md"
+                    }
                   },
                   {
                     "name": "Vector",
@@ -27897,7 +27885,10 @@
                         }
                       }
                     ],
-                    "strokeWeight": 2
+                    "strokeWeight": {
+                      "collection": "Semantic Styles",
+                      "variable": "border-width/md"
+                    }
                   },
                   {
                     "name": "Vector",
@@ -27918,7 +27909,172 @@
                         }
                       }
                     ],
-                    "strokeWeight": 2
+                    "strokeWeight": {
+                      "collection": "Semantic Styles",
+                      "variable": "border-width/md"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "3327:12341",
+          "variant": {
+            "Size": "16"
+          },
+          "node": {
+            "name": "Size=16",
+            "type": "COMPONENT",
+            "size": [
+              32,
+              32
+            ],
+            "sizing": {
+              "horizontal": "HUG",
+              "vertical": "HUG"
+            },
+            "layout": {
+              "direction": "HORIZONTAL",
+              "padding": {
+                "top": {
+                  "collection": "Semantic Spacing",
+                  "variable": "gap/inline"
+                },
+                "right": {
+                  "collection": "Semantic Spacing",
+                  "variable": "gap/inline"
+                },
+                "bottom": {
+                  "collection": "Semantic Spacing",
+                  "variable": "gap/inline"
+                },
+                "left": {
+                  "collection": "Semantic Spacing",
+                  "variable": "gap/inline"
+                }
+              },
+              "gap": 0,
+              "primaryAlign": "CENTER",
+              "counterAlign": "CENTER"
+            },
+            "fills": [
+              {
+                "variable": {
+                  "collection": "Semantic Colors",
+                  "variable": "container/secondary"
+                }
+              }
+            ],
+            "radius": {
+              "collection": "Semantic Styles",
+              "variable": "radius/md"
+            },
+            "children": [
+              {
+                "name": "Icon",
+                "type": "FRAME",
+                "sizing": {
+                  "horizontal": "FIXED",
+                  "vertical": "FIXED"
+                },
+                "children": [
+                  {
+                    "name": "Vector",
+                    "type": "VECTOR",
+                    "sizing": {
+                      "horizontal": "FIXED",
+                      "vertical": "FIXED"
+                    },
+                    "constraints": {
+                      "horizontal": "SCALE",
+                      "vertical": "SCALE"
+                    },
+                    "strokes": [
+                      {
+                        "variable": {
+                          "collection": "Semantic Colors",
+                          "variable": "text/brand"
+                        }
+                      }
+                    ],
+                    "strokeWeight": {
+                      "collection": "Semantic Styles",
+                      "variable": "border-width/md"
+                    }
+                  },
+                  {
+                    "name": "Vector",
+                    "type": "VECTOR",
+                    "sizing": {
+                      "horizontal": "FIXED",
+                      "vertical": "FIXED"
+                    },
+                    "constraints": {
+                      "horizontal": "SCALE",
+                      "vertical": "SCALE"
+                    },
+                    "strokes": [
+                      {
+                        "variable": {
+                          "collection": "Semantic Colors",
+                          "variable": "text/brand"
+                        }
+                      }
+                    ],
+                    "strokeWeight": {
+                      "collection": "Semantic Styles",
+                      "variable": "border-width/md"
+                    }
+                  },
+                  {
+                    "name": "Vector",
+                    "type": "VECTOR",
+                    "sizing": {
+                      "horizontal": "FIXED",
+                      "vertical": "FIXED"
+                    },
+                    "constraints": {
+                      "horizontal": "SCALE",
+                      "vertical": "SCALE"
+                    },
+                    "strokes": [
+                      {
+                        "variable": {
+                          "collection": "Semantic Colors",
+                          "variable": "text/brand"
+                        }
+                      }
+                    ],
+                    "strokeWeight": {
+                      "collection": "Semantic Styles",
+                      "variable": "border-width/md"
+                    }
+                  },
+                  {
+                    "name": "Vector",
+                    "type": "VECTOR",
+                    "sizing": {
+                      "horizontal": "FIXED",
+                      "vertical": "FIXED"
+                    },
+                    "constraints": {
+                      "horizontal": "SCALE",
+                      "vertical": "SCALE"
+                    },
+                    "strokes": [
+                      {
+                        "variable": {
+                          "collection": "Semantic Colors",
+                          "variable": "text/brand"
+                        }
+                      }
+                    ],
+                    "strokeWeight": {
+                      "collection": "Semantic Styles",
+                      "variable": "border-width/md"
+                    }
                   }
                 ]
               }
@@ -28005,7 +28161,10 @@
                         }
                       }
                     ],
-                    "strokeWeight": 2
+                    "strokeWeight": {
+                      "collection": "Semantic Styles",
+                      "variable": "border-width/md"
+                    }
                   },
                   {
                     "name": "Vector",
@@ -28026,7 +28185,10 @@
                         }
                       }
                     ],
-                    "strokeWeight": 2
+                    "strokeWeight": {
+                      "collection": "Semantic Styles",
+                      "variable": "border-width/md"
+                    }
                   },
                   {
                     "name": "Vector",
@@ -28047,7 +28209,10 @@
                         }
                       }
                     ],
-                    "strokeWeight": 2
+                    "strokeWeight": {
+                      "collection": "Semantic Styles",
+                      "variable": "border-width/md"
+                    }
                   },
                   {
                     "name": "Vector",
@@ -28068,7 +28233,10 @@
                         }
                       }
                     ],
-                    "strokeWeight": 2
+                    "strokeWeight": {
+                      "collection": "Semantic Styles",
+                      "variable": "border-width/md"
+                    }
                   }
                 ]
               }
@@ -28155,7 +28323,10 @@
                         }
                       }
                     ],
-                    "strokeWeight": 2
+                    "strokeWeight": {
+                      "collection": "Semantic Styles",
+                      "variable": "border-width/md"
+                    }
                   },
                   {
                     "name": "Vector",
@@ -28176,7 +28347,10 @@
                         }
                       }
                     ],
-                    "strokeWeight": 2
+                    "strokeWeight": {
+                      "collection": "Semantic Styles",
+                      "variable": "border-width/md"
+                    }
                   },
                   {
                     "name": "Vector",
@@ -28197,7 +28371,10 @@
                         }
                       }
                     ],
-                    "strokeWeight": 2
+                    "strokeWeight": {
+                      "collection": "Semantic Styles",
+                      "variable": "border-width/md"
+                    }
                   },
                   {
                     "name": "Vector",
@@ -28218,7 +28395,10 @@
                         }
                       }
                     ],
-                    "strokeWeight": 2
+                    "strokeWeight": {
+                      "collection": "Semantic Styles",
+                      "variable": "border-width/md"
+                    }
                   }
                 ]
               }
