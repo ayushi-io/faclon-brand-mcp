@@ -24,6 +24,10 @@ app.use("/templates", (err, _req, res, _next) => res.status(err.status || 500).j
 app.use("/examples", express.static(path.join(ROOT, P.examples), { index: false, dotfiles: "deny", maxAge: "1d", fallthrough: false, extensions: false }));
 app.use("/examples", (err, _req, res, _next) => res.status(err.status || 500).json({ error: err.status === 404 ? "Example not found. Read get_brand_guidelines(section: \"examples\")." : "Not allowed." }));
 
+// Data-viz reference images: /data-viz/<file>.png.
+app.use("/data-viz", express.static(path.join(ROOT, P.dataViz, "references"), { index: false, dotfiles: "deny", maxAge: "1d", fallthrough: false, extensions: false }));
+app.use("/data-viz", (err, _req, res, _next) => res.status(err.status || 500).json({ error: err.status === 404 ? "Reference not found. Read get_brand_guidelines(section: \"data-viz\")." : "Not allowed." }));
+
 app.post("/mcp", async (req, res) => {
   const server = createServer();
   const transport = new StreamableHTTPServerTransport({ sessionIdGenerator: undefined, enableJsonResponse: true });

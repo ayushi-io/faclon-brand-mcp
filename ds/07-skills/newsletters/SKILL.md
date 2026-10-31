@@ -21,7 +21,7 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 
 1. **Think like sales.** Who opens this email, where are they in the pipeline and what should they do next? Lead with what matters to them and keep one clear call to action. The user's words stay as they are.
 2. **Load the rules.** `get_brand_guidelines(section: "rules", format_profile: "newsletter")`, then `get_tokens(format: "newsletter")` and `get_brand_guidelines(section: "components", format_profile: "newsletter")`.
-3. **Plan the email.** Pick the hero composition from the elements the user gave, group the content into sections and decide what each shows (stat, steps, comparison, story).
+3. **Plan the email.** Pick the hero composition from the elements the user gave, group the content into sections and decide what each shows (stat, steps, comparison, story). For numbers, steps, stages, cycles and systems, look at `get_brand_guidelines(section: "data-viz")`: reference layouts (stat layouts, charts, a funnel, a flywheel, a staircase of steps, plant drawings) that show the kinds of design you can build and how to place the number, caption, labels and source. They are references, not fixed layouts: build designs like them, adapted to the content and the space.
 4. **Design** the desktop (600px) and mobile (400px) layouts.
 5. **Check.** Run `check_design(html, format_profile: "newsletter")` on the finished HTML, fix every error and run it again; flag warnings about the user's words to the user instead of changing them. Then go through the checklist at the end, which covers what the tool cannot see (layout, spacing, hierarchy, overflow).
 6. **Deliver** one HTML file, named `<topic>_newsletter_faclon_<YYYY-MM-DD>.html` (see section "export"), in the chat only, then the list of every placeholder with its display size and upload size (2x).
@@ -51,7 +51,7 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 
 - Image and illustration styles: `get_brand_guidelines(section: "imagery")` and `(section: "illustration")`. Images and illustrations come from the user, in those styles.
 - The Faclon Labs logo as a placeholder image.
-- Icons: Lucide, coloured with a text token: one per item in a list or grid of tools, capabilities, features, steps or outcomes; never decorative.
+- Icons: Lucide, anywhere the content needs them (headers, inline, lists, cards, flows), and one per item in a list or grid of tools, capabilities, features, steps or outcomes. 20px beside text, 32px on its own, in a UI card an icon square that grows with the card (the step for the card's width in `icons.in_card`, set with container queries); square only, a solid fill with no border, at least 4.5:1 contrast (section "iconography").
 - Images: placeholders only; the designers upload them.
 
 ## Checklist before delivery

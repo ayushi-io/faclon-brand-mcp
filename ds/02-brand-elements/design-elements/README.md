@@ -10,6 +10,7 @@ Graphic elements that carry the brand in layouts, beyond shapes. They are on the
 
 ## Rules
 
+- Use the elements on any slide, post or page whose background allows them, not only covers and closing slides; they are what makes a piece read as Faclon Labs (decision design-elements-anywhere).
 - Use an element only on the backgrounds listed above: the dot-particle form on dark or brand (as on the reference cover and closing slides), the light streak only on brand, the dot wave on dark, light or brand.
 - The dot wave, as the brand team's three examples show (Figma Graphic elements page: Dark, Blue and White designs): it runs the full width of the layout, bleeding off both sides, in the lower half, below the main message and above the contact or footer line. On dark it fades into the background at the bottom. Text never sits on the dots; the message goes above the wave and the footer below it.
 - The no-AI-slop rule (gradients, glows, decorative filler, dot meshes) does not apply to these elements. It still applies to everything else in the layout.

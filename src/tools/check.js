@@ -6,6 +6,7 @@ import { P } from "../lib/paths.js";
 import { BrandError } from "../lib/envelope.js";
 import { loadProfile, mergeRules } from "./guidelines.js";
 import { getTokens } from "./tokens.js";
+import { checkIcons } from "./check-icons.js";
 
 const MAX_HTML = 2_000_000;
 const ALLOWED_FAMILIES = ["tasa orbiter", "inter"];
@@ -121,7 +122,7 @@ export function checkDesign({ html, format_profile } = {}) {
   }
   for (const c of doc.attrColours) if (!A.colours.has(hex(c))) offColours.push(c);
   add("color.tokens-only", "error", "These colours are not design-system tokens.", offColours,
-    'Use a colour token from get_tokens(category: "color"); never sample or approximate one.');
+    'Use a colour token from get_tokens(category: "color"); never sample or approximate one. Only if the user specifically asked for this colour (for example a product mark colour, decision product-colours), keep it and name it in the delivery note.');
 
   // Architecture: brand blue only in the final outcome, which is placed as an image file,
   // so the diagram's own code uses no brand/500 or darker blue.
@@ -231,13 +232,21 @@ export function checkDesign({ html, format_profile } = {}) {
     add("design.no-ai-slop", "warning", "The Bruce AI gradient is used, but the content does not mention Bruce AI.", ["--gradient-bruce-ai"], "Use the Bruce AI gradient only on Bruce AI content.");
   }
 
+  // Icons: stroke, size, square, border, corners and contrast (check-icons.js).
+  const iconCount = checkIcons(html, profile, add);
+
   // Images and logo.
   const noAlt = doc.imgs.filter((i) => !/\salt\s*=\s*["'][^"']+["']/i.test(i)).map((i) => i.slice(0, 80));
   const altSeverity = ["document", "newsletter"].includes(profile?.id) ? "error" : "warning";
   add(profile?.id === "newsletter" ? "newsletter.images" : "images.alt-text", altSeverity, "Images without alt text.", noAlt,
     profile?.id === "newsletter" ? "Add the user's alt text, or an ALT_TEXT_<NAME> placeholder." : "Add alt text that describes the image.");
-  if (!/faclon/i.test(html)) {
-    add("logo.default-position", "warning", "No Faclon Labs logo found.", ["no element mentions Faclon"], "Place the full Faclon Labs logo, top-right by default.");
+  const logoImg = doc.imgs.some((i) => /faclon-labs-(logo|logomark)|IMAGE_URL_LOGO/i.test(i) || /\salt\s*=\s*["'][^"']*faclon/i.test(i))
+    || /<svg\b[^>]*(aria-label|title)\s*=\s*["'][^"']*faclon/i.test(html);
+  // Formats that place the logo file need an image; newsletters use IMAGE_URL_LOGO, and with no format a mention is enough.
+  const needsLogoFile = ["social", "deck", "document", "architecture"].includes(profile?.id);
+  if (needsLogoFile ? !logoImg : !/faclon/i.test(html)) {
+    add("logo.default-position", profile?.id === "social" ? "error" : "warning", "No Faclon Labs logo file found.", [/faclon/i.test(html) ? "Faclon is mentioned, but no logo image is placed (a placeholder or text label is not the logo)" : "no element mentions Faclon"],
+      'Place the logo file from get_brand_guidelines(section: "assets", asset_category: "logos") as an <img> by its url (faclon-labs-logo-blue on light, faclon-labs-logo-white on dark and brand), top-right by default.');
   }
 
   // Newsletter (Brevo).
@@ -265,7 +274,7 @@ export function checkDesign({ html, format_profile } = {}) {
     verdict: errors ? "fail" : "pass",
     summary: { errors, warnings },
     findings,
-    checked: "Colours, fonts, text sizes and weights, radius, borders, shadows, gradients and effects, image alt text, the logo, voice (dashes, exclamation marks)" + (profile?.id === "newsletter" ? ", and Brevo tags, quotes and emoji" : "") + ".",
-    not_checked: "Layout, spacing, hierarchy, overflow, content changes and the format's design direction. Review those against the format's skill checklist.",
+    checked: "Colours, fonts, text sizes and weights, radius, borders, shadows, gradients and effects, image alt text, the logo, " + (iconCount ? `${iconCount} icon${iconCount > 1 ? "s" : ""} (stroke, size, square, border, corners, contrast), ` : "icons (none found), ") + "voice (dashes, exclamation marks)" + (profile?.id === "newsletter" ? ", and Brevo tags, quotes and emoji" : "") + ".",
+    not_checked: "Layout, spacing, hierarchy, overflow, content changes and the format's design direction; whether each card icon is at the step for its card's width, and whether an icon names its item. Review those against the format's skill checklist.",
   };
 }

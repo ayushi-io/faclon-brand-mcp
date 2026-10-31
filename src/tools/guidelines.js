@@ -4,7 +4,7 @@ import { BrandError } from "../lib/envelope.js";
 import { getAssets, ASSET_BASE_URL } from "./assets.js";
 import { getTemplates, withReferenceHtml } from "./templates.js";
 
-export const SECTIONS = ["overview", "principles", "rules", "defaults", "components", "logo", "typography", "color", "voice", "design-elements", "illustration", "architecture", "imagery", "assets", "templates", "examples", "export", "qa"];
+export const SECTIONS = ["overview", "principles", "rules", "defaults", "components", "logo", "typography", "color", "voice", "design-elements", "illustration", "iconography", "data-viz", "architecture", "imagery", "assets", "templates", "examples", "export", "qa"];
 
 // Outcomes in 07-skills that have rules, keyed by format id (deck, document…).
 function outcomes() {
@@ -68,8 +68,11 @@ export function getBrandGuidelines({ section = "overview", format_profile, asset
     };
   }
 
-  // Markdown may point at served files (example images, template thumbnails) through URL placeholders.
-  const guidance = doc.body.replaceAll("%EXAMPLES_URL%", `${ASSET_BASE_URL}/examples`).replaceAll("%TEMPLATES_URL%", `${ASSET_BASE_URL}/templates`);
+  // Markdown may point at served files (example images, template thumbnails, data-viz references) through URL placeholders.
+  const guidance = doc.body
+    .replaceAll("%EXAMPLES_URL%", `${ASSET_BASE_URL}/examples`)
+    .replaceAll("%TEMPLATES_URL%", `${ASSET_BASE_URL}/templates`)
+    .replaceAll("%DATAVIZ_URL%", `${ASSET_BASE_URL}/data-viz`);
   const result = { section, status: "written", guidance, format_profile: profileInfo };
   if (section === "overview") {
     result.sections = SECTIONS.map((s) => ({ section: s, status: isGap(s) ? "not_written" : "written" }));

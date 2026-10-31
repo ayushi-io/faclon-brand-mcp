@@ -448,16 +448,64 @@ test("examples: every image is on disk and every rule, form or decision named ex
     const dir = m[1] === "examples" ? P.examples : P.templates;
     assert.ok(fs.existsSync(`${dir}/${m[2]}`), `${m[2]} is missing`);
   }
-  const deck = loadProfile("deck");
+  const profiles = ["deck", "social"].map(loadProfile);
   const q = readData(P.openQuestions);
   const known = new Set([
-    ...Object.values(deck.guardrails).flatMap((v) => (Array.isArray(v) ? v.map((i) => i.id) : [])).filter(Boolean),
-    ...Object.keys(deck.content_forms.forms),
+    ...profiles.flatMap((p) => Object.values(p.guardrails).flatMap((v) => (Array.isArray(v) ? v.map((i) => i.id) : []))).filter(Boolean),
+    ...profiles.flatMap((p) => Object.keys(p.content_forms.forms)),
     ...q.resolved.map((r) => r.id),
     ...q.items.map((i) => i.id),
   ]);
   for (const m of g.guidance.matchAll(/(?:Rules?|decision|content form|open question):? ([^.\n]*)/g)) {
-    for (const id of m[1].matchAll(/`([a-z0-9_-]+)`/g)) assert.ok(known.has(id[1]), `examples name "${id[1]}", which is not a deck guardrail, content form or decision`);
+    for (const id of m[1].matchAll(/`([a-z0-9_-]+)`/g)) assert.ok(known.has(id[1]), `examples name "${id[1]}", which is not a deck or social guardrail, content form or decision`);
+  }
+});
+
+test("data-viz: references on disk and all used, framed as references, pointed to by every skill that designs content", () => {
+  const g = getBrandGuidelines({ section: "data-viz" });
+  assert.equal(g.status, "written");
+  assert.doesNotMatch(g.guidance, /%[A-Z_]+%/, "unresolved URL placeholder");
+  assert.match(g.guidance, /references, not fixed layouts/);
+  assert.doesNotMatch(g.guidance, /[–—]/);
+  const used = [...g.guidance.matchAll(/\/data-viz\/([^)\s]+\.png)/g)].map((m) => m[1]);
+  const onDisk = fs.readdirSync(`${P.dataViz}/references`);
+  assert.deepEqual([...new Set(used)].sort(), onDisk.sort());
+  for (const id of ["deck", "document", "newsletter", "social"]) {
+    assert.match(loadProfile(id).skill, /section: "data-viz"/, `${id} skill points to data-viz`);
+  }
+});
+
+test("iconography: sizes per format on the spacing scale and matching the section, every listed pair at 4.5:1 or more", () => {
+  const g = getBrandGuidelines({ section: "iconography" });
+  assert.equal(g.status, "written");
+  assert.doesNotMatch(g.guidance, /[–—]/);
+  const scale = readData(P.tokens).spacing.scale;
+  const labels = { deck: "Deck", document: "A4 document", newsletter: "Newsletter", social: "Social post" };
+  for (const [id, label] of Object.entries(labels)) {
+    const { icons } = loadProfile(id);
+    for (const v of [icons.beside_text, icons.on_its_own, ...icons.in_card.flatMap((s) => [s.icon, s.square])]) assert.ok(scale.includes(v), `${id}: ${v} is on the spacing scale`);
+    const rows = g.guidance.split("\n").filter((l) => l.startsWith(`| ${label} `));
+    assert.match(rows[0], new RegExp(`^\\| ${label} \\(.*\\) \\| ${icons.beside_text}px \\| ${icons.on_its_own}px \\|$`), `${id}: size row matches the profile`);
+    // In a card the square is the icon plus 8px a side, and both grow with the card, step after step with no gaps.
+    assert.equal(rows.length - 1, icons.in_card.length, `${id}: one card row per step`);
+    icons.in_card.forEach((s, i) => {
+      assert.equal(s.square, s.icon + 16, `${id}: square is the icon plus 8px a side`);
+      if (i) assert.ok(s.card_width_min === icons.in_card[i - 1].card_width_max + 1 && s.icon > icons.in_card[i - 1].icon, `${id}: steps grow with the card`);
+      const width = s.card_width_max == null ? `${s.card_width_min}px and wider` : s.card_width_min ? `${s.card_width_min} to ${s.card_width_max}px` : `under ${s.card_width_max + 1}px`;
+      assert.equal(rows[i + 1], `| ${label} | ${width} | ${s.icon}px | ${s.square}px |`, `${id}: card step ${i} matches the profile`);
+    });
+    assert.equal(icons.in_card.at(-1).card_width_max, undefined, `${id}: the last step has no upper limit`);
+    assert.match(loadProfile(id).skill, /section "iconography"/, `${id}: skill points to iconography`);
+  }
+  const sem = readData(P.tokens).color.semantic;
+  const lum = (h) => { const c = [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16) / 255).map((v) => (v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4)); return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2]; };
+  const ratio = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p); return (x + 0.05) / (y + 0.05); };
+  const tok = (mode, path) => { const [grp, key] = path.split("/"); return sem[mode][grp][key].value; };
+  for (const row of g.guidance.split("\n").filter((l) => /^\| .* \| (container\/[a-z-]+)( \(light\))? \| text\//.test(l))) {
+    const [surface, square, icon] = row.split("|").slice(1, 4).map((c) => c.trim());
+    const mode = /^Dark/.test(surface) ? "dark" : "light";
+    const r = ratio(tok(mode, square.replace(" (light)", "")), tok(mode, icon));
+    assert.ok(r >= 4.5, `${surface}: ${square} with ${icon} is ${r.toFixed(2)}:1`);
   }
 });
 
@@ -593,7 +641,12 @@ test("social media spec: 540 px design size, tokens and styles only", () => {
   }
   assert.deepEqual(p.export.file_types, ["html"]);
   assert.equal(p.carousel.cover.theme, "dark");
-  assert.equal(p.carousel.rhythm.applies_from, 5);
+  assert.equal(p.carousel.rhythm, undefined, "content slide themes follow the templates (social-themes-from-templates)");
+  assert.equal(p.spacing.mode, "desktop");
+  for (const [role, s] of Object.entries(p.spacing.roles)) assert.equal(t.spacing.roles.desktop[role], s.value, role);
+  assert.ok(["numbers", "sequence", "problem_solution", "like_items"].every((f) => f in p.content_forms.forms));
+  const logos = getBrandGuidelines({ section: "assets", asset_category: "logos" }).assets.map((a) => a.id);
+  for (const id of Object.values(p.logo.files)) assert.ok(logos.includes(id), id);
 });
 
 test("no-ai-slop names its only exceptions: design elements, illustration styles and the Bruce AI gradient", () => {

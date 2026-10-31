@@ -81,3 +81,49 @@ test("check_design for architecture: brand blue only in the placed outcome, ligh
   // Other formats may use brand blue freely.
   assert.ok(!rules(checkDesign({ html: base("background:#1655F2;color:#FFFFFF"), format_profile: "deck" })).includes("architecture.brand-on-outcome:error"));
 });
+
+test("check_design wants the logo file, not a placeholder, where the format places one", () => {
+  const post = (logo) => `<style>h1{font-family:"TASA Orbiter";font-size:40px}</style>${logo}<h1>Results</h1>`;
+  const placeholder = post(`<div>Faclon Labs logo (white)</div>`);
+  assert.ok(rules(checkDesign({ html: placeholder, format_profile: "social" })).includes("logo.default-position:error"));
+  assert.ok(rules(checkDesign({ html: placeholder, format_profile: "deck" })).includes("logo.default-position:warning"));
+  const real = post(`<img alt="Faclon Labs" src="https://example.com/assets/logos/faclon-labs-logo-white.svg">`);
+  assert.equal(checkDesign({ html: real, format_profile: "social" }).findings.filter((f) => f.rule === "logo.default-position").length, 0);
+});
+
+test("check_design checks icons: a token square that follows the card passes", () => {
+  const icon = (size) => `<svg class="lucide" viewBox="0 0 24 24" width="${size}" height="${size}" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 20h20"/></svg>`;
+  const html = `<style>.card{container-type:inline-size}
+.sq{width:40px;height:40px;padding:8px;background:var(--color-container-secondary);color:var(--color-text-brand);border-radius:var(--radius-xl)}
+.sq svg{width:24px;height:24px}
+@container (min-width:360px){.sq{width:48px;height:48px}.sq svg{width:32px;height:32px}}
+h3{font-family:Inter;font-size:18px}</style>
+<img alt="Faclon Labs" src="faclon-labs-logo-blue.svg"><div class="card"><div class="sq">${icon(24)}</div><h3>Energy</h3></div>
+<p style="color:var(--color-text-brand)">${icon(24)} Beside text</p>`;
+  const r = checkDesign({ html, format_profile: "social" });
+  assert.deepEqual(r.findings.filter((f) => f.rule.startsWith("icon.")), []);
+  assert.match(r.checked, /2 icons/);
+});
+
+test("check_design flags icons off the iconography rules", () => {
+  const svg = (attrs = "") => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" ${attrs}><path d="M2 20h20"/></svg>`;
+  const found = (html, format = "social") => checkDesign({ html: `<img alt="Faclon Labs" src="faclon-labs-logo-blue.svg">${html}`, format_profile: format }).findings.filter((f) => f.rule === "icon.style").map((f) => f.message);
+  const has = (html, re, format) => assert.ok(found(html, format).some((m) => re.test(m)), `${re} not found in ${JSON.stringify(found(html, format))}`);
+  has(svg('width="24" height="24" stroke-width="1.5"').replace('stroke-width="2" ', ""), /stroke/i);
+  has(svg('width="24" height="24"').replace('fill="none"', 'fill="currentColor"'), /Filled/);
+  has(svg('width="30" height="30"'), /not icon sizes for Social/);
+  has(`<div style="width:40px;height:40px;background:var(--color-container-secondary);border-radius:50%">${svg('width="24" height="24"')}</div>`, /circle/);
+  has(`<div style="width:40px;height:40px;border:1px solid var(--color-border-primary);border-radius:8px">${svg('width="24" height="24"')}</div>`, /border/);
+  has(`<div style="width:44px;height:44px;background:var(--color-container-secondary);border-radius:8px">${svg('width="24" height="24"')}</div>`, /not square sizes/);
+  has(`<div style="width:40px;height:40px;background:var(--color-container-secondary);border-radius:12px">${svg('width="24" height="24"')}</div>`, /corners/);
+  // Dark container/tertiary with text/brand is 3.5:1.
+  has(`<div data-theme="dark"><div style="width:40px;height:40px;background:var(--color-container-tertiary);color:var(--color-text-brand);border-radius:8px">${svg('width="24" height="24"')}</div></div>`, /contrast/);
+  // Sizes follow the format: 32px beside text is a deck size, not a document size.
+  assert.equal(found(svg('width="32" height="32"'), "deck").length, 0);
+  has(svg('width="32" height="32"'), /not icon sizes for Document/, "document");
+});
+
+test("check_design: Lucide icons in an architecture diagram are not from the icon library", () => {
+  const html = `<img alt="Faclon Labs" src="faclon-labs-logo-blue.svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M2 20h20"/></svg>`;
+  assert.ok(rules(checkDesign({ html, format_profile: "architecture" })).includes("icon.lucide-only:error"));
+});

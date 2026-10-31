@@ -339,5 +339,26 @@
       "use": "separate content",
       "spec": "Divider: 1px border/strong"
     }
+  },
+  "icons": {
+    "source": "Lucide; see get_brand_guidelines(section: \"iconography\")",
+    "beside_text": 16,
+    "on_its_own": 24,
+    "in_card": [
+      {
+        "card_width_min": 0,
+        "card_width_max": 299,
+        "icon": 16,
+        "square": 32,
+        "radius": "radius/md"
+      },
+      {
+        "card_width_min": 300,
+        "icon": 24,
+        "square": 40,
+        "radius": "radius/xl"
+      }
+    ],
+    "note": "Sizes in px at the design size. In a UI card the icon square follows the card: pick the step for the card's width, so a bigger card gets a bigger icon and square (CSS container queries on the card). The square is the icon plus 8px (gap/inline) on every side, a solid fill with no border; square only. Figma: the Icon square component (Size = icon size)."
   }
 }

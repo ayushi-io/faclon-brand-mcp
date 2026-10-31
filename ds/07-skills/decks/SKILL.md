@@ -26,12 +26,13 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
    - lifecycle or closed loop: a loop diagram with arrows back to the start;
    - phases or roadmap: a timeline or growing phase blocks;
    - problem and solution: a split contrast, the problem in the Negative intent;
-   - numbers: big numbers, stat rows or a chart;
+   - numbers: big numbers, a stat layout, stat rows or a chart;
    - comparison: a comparison table or matrix;
    - architecture or data flow: an architecture diagram (see below);
    - like items: a grid with an icon per item, cards sized to their content;
    - people: the team reference slide or template.
    A grid of text cards is never the form for a process, lifecycle, architecture or set of numbers.
+   For numbers, steps, stages, cycles and systems, look at `get_brand_guidelines(section: "data-viz")`: reference layouts (stat layouts, charts, a funnel, a flywheel, a staircase of steps, plant drawings) that show the kinds of design you can build and how to place the number, caption, labels and source. They are references, not fixed layouts: build designs like them, adapted to the content and the space.
 4. **Design.** Build each slide on the grid with the components and text styles below. Use the reference slides where they apply, and start other slides from the deck templates (`get_brand_guidelines(section: "templates", format_profile: "deck")`: cover, page breaker, content, product stack, dashboard and product, team, closing). Take a template's layout only, never its content.
    - **Architecture, data-flow and integration slides** follow the architecture format: call `get_brand_guidelines(section: "rules", format_profile: "architecture")` and use its zones, device styles, icons from the architecture icon library, arrows, colours and the I/O Sense outcome when the diagram ends in I/O Sense; start from the architecture templates; keep deck text at 14px or more.
    - **Product and dashboard slides** (what an operator or user sees in I/O Sense or another product) use the light theme and show a dashboard mockup. Until product screenshots are in the asset library, place a placeholder frame where the mockup goes (container/secondary, 1px dashed border/strong, radius/3xl, the label `DASHBOARD_MOCKUP_<NAME>` centred in Body/24 text/secondary). Never draw a fake product UI.
@@ -50,7 +51,7 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
   - On every reference slide, map only four things to the design system: background colour to the theme token, fonts to the nearest text style (14 to 72px), chips to the chip tokens, and the logo to its placement.
 - **Themes:** light (background/primary), dark (background/inverse) and brand (background/brand), each with its fixed text and logo colours. Other colours only when the user asks, and only design-system tokens.
 - **AI slides** have no default theme: ask the user whether they want them dark; otherwise pick the theme for the slide like any other.
-- **Design elements:** the dot-particle form on dark or brand, the light streak on brand only, as on the reference cover and closing slides. On a reference slide, place each element where the reference has it.
+- **Design elements:** the dot-particle form on dark or brand, the light streak on brand only, the dot wave on dark, light or brand, from the asset library (asset_category "design-elements"). Use them on any slide whose background allows them, not only covers and closings. On a reference slide, place each element where the reference has it.
 - **Logo:** top-right on the 52px edge by default; another corner only when the slide design needs it (for example a tab row across the top). White on dark and brand, blue on light.
 
 ## Rules that matter most
@@ -69,8 +70,8 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 ## Assets
 
 - Image and illustration styles: `get_brand_guidelines(section: "imagery")` and `(section: "illustration")`. Images and illustrations come from the user, in those styles.
-- Logos: the full Faclon Labs logo (blue or white); the logomark only where the user asks for it.
-- Icons: Lucide, coloured with a text token. Give each item in a list or grid of tools, capabilities, features, steps or outcomes an icon that names it; no decorative icons and no icon on a heading that adds nothing. Architecture slides take their icons from the architecture icon library.
+- Logos: the full Faclon Labs logo, `logos/faclon-labs-logo-blue` on light or `logos/faclon-labs-logo-white` on dark and brand: the file from the asset library (`get_brand_guidelines(section: "assets", asset_category: "logos")`), placed as an `<img>` by its `url`, never a placeholder box, a text label or a redrawn logo. The logomark only where the user asks for it.
+- Icons: Lucide, anywhere the content needs them (headers, inline, lists, cards, flows), and one per item in a list or grid of tools, capabilities, features, steps or outcomes. 32px beside text, 48px on its own, in a UI card an icon square that grows with the card (the step for the card's width in `icons.in_card`, set with container queries); square only, a solid fill with no border, at least 4.5:1 contrast (section "iconography"). Architecture slides take their icons from the architecture icon library.
 - Images, screenshots and photos: only what the user supplies. Product screens without a supplied screenshot get the `DASHBOARD_MOCKUP_<NAME>` placeholder.
 
 ## Checklist before delivery
@@ -86,7 +87,7 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 - [ ] No empty boxes: cards are sized to their content, every block of text has padding, and the slide's type and visuals fill the content area.
 - [ ] Labels and their text are aligned, labels do not wrap, left edges line up.
 - [ ] Problems and risks are in the Negative intent; highlighted cards on dark slides use container/brand.
-- [ ] Lists of tools, capabilities, steps or outcomes have an icon per item.
+- [ ] Lists of tools, capabilities, steps or outcomes have an icon per item; icons at the deck sizes and card icons at the step for their card's width, in squares with no border, with clear contrast; check_design reports no icon findings.
 - [ ] Architecture slides use the architecture diagram language; product slides are light with a mockup placeholder, listed in the delivery note.
 - [ ] AI slides: the user was asked whether they want them dark.
 - [ ] No gradients or glows (except the Bruce AI gradient and glow on Bruce AI content), AI cliches or repeated template layouts.

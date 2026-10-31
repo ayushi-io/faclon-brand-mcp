@@ -851,19 +851,35 @@
     {
       "id": "icon.lucide-only",
       "category": "icon",
-      "rule": "Icons come from Lucide (lucide.dev) and no other icon set; architecture diagrams use the Faclon architecture icon library. Keep Lucide's stroke style; colour icons with a text token that matches the surface. Give each item in a list or grid of tools, capabilities, features, steps or outcomes an icon that names it; never a decorative icon, an AI cliche icon or an icon on a heading that adds nothing.",
+      "rule": "Icons come from Lucide (lucide.dev) and no other icon set; architecture diagrams use the Faclon architecture icon library. Keep Lucide's stroke style. Icons can be used anywhere the content needs them (beside a header or title, inline, in lists, cards and flows, beside a number, on their own); give each item in a list or grid of tools, capabilities, features, steps or outcomes an icon that names it. Never an AI cliche icon.",
       "check": {
         "type": "icon-source",
         "value": "lucide"
       },
       "severity": "error",
       "locked": false,
-      "source": "Brand team decision 2026-10-14; icons on lists 2026-10-28"
+      "source": "Brand team decision 2026-10-14; icons on lists 2026-10-28; icons anywhere 2026-10-30"
+    },
+    {
+      "id": "icon.style",
+      "category": "icon",
+      "rule": "Icons follow the iconography section: a 2px stroke at every size; the format's sizes (profile icons: beside text, on its own, and in a UI card the step for the card's width, so the icon grows with the card); square only, never a circle, pill or polygon unless the user asks; the square is a solid fill with the icon centred and 8px on every side, never an outlined or bordered box; the icon at least 4.5:1 against its square or background, using the listed token pairs.",
+      "check": {
+        "type": "icon-style",
+        "stroke": 2,
+        "container": "square",
+        "border": false,
+        "padding": 8,
+        "min_contrast": 4.5
+      },
+      "severity": "error",
+      "locked": false,
+      "source": "Brand team decision 2026-10-30 (Figma Iconography page)"
     },
     {
       "id": "design.no-ai-slop",
       "category": "design",
-      "rule": "No AI slop: nothing may look generic or machine-made. Never use gradients of any kind (backgrounds, text, buttons or borders) or mesh, blob and aurora backgrounds; glows, neon, glassmorphism, backdrop blur or any shadow other than the Elevation tokens; decorative filler that carries no information (abstract blobs, orbs, sparkles, floating shapes, dot grids, squiggles, scattered background icons); AI cliches in imagery or icons (glowing brains, circuit boards, robot hands, holograms, glowing network meshes, a sparkle or rocket to signal AI or a launch); text effects (gradient, outlined, shadowed or glowing text); or a coloured stripe down one side of a card or callout. Avoid template layouts: the same icon, title and text card repeated section after section, an icon on every heading or card when it adds nothing, or every section centred. Every element carries content or structure; when in doubt, leave it out. For writing, follow the AI-sounding writing list in the voice guideline. Exceptions: the design elements in 02-brand-elements/design-elements, each only on its own background; the two illustration styles in 02-brand-elements/illustration (dot-matrix forms, pixel dissolve); and, on Bruce AI content only, the gradient/bruce-ai style and glow. Glow is allowed only on Bruce AI content (for example a glowing Bruce AI product visual or headline, with the Bruce AI gradient); never on any other content.",
+      "rule": "No AI slop: nothing may look generic or machine-made. Never use gradients of any kind (backgrounds, text, buttons or borders) or mesh, blob and aurora backgrounds; glows, neon, glassmorphism, backdrop blur or any shadow other than the Elevation tokens; decorative filler that carries no information (abstract blobs, orbs, sparkles, floating shapes, dot grids, squiggles, scattered background icons); AI cliches in imagery or icons (glowing brains, circuit boards, robot hands, holograms, glowing network meshes, a sparkle or rocket to signal AI or a launch); text effects (gradient, outlined, shadowed or glowing text); or a coloured stripe down one side of a card or callout. Avoid template layouts: the same icon, title and text card repeated section after section, or every section centred. Every element carries content or structure; when in doubt, leave it out. For writing, follow the AI-sounding writing list in the voice guideline. Exceptions: the design elements in 02-brand-elements/design-elements, each only on its own background; the two illustration styles in 02-brand-elements/illustration (dot-matrix forms, pixel dissolve); and, on Bruce AI content only, the gradient/bruce-ai style and glow. Glow is allowed only on Bruce AI content (for example a glowing Bruce AI product visual or headline, with the Bruce AI gradient); never on any other content.",
       "check": {
         "type": "pattern-ban",
         "never": [
@@ -879,7 +895,6 @@
         ],
         "avoid": [
           "the same icon, title and text card repeated section after section",
-          "an icon on every heading or card when it adds nothing",
           "every section centred"
         ],
         "writing": "guidelines:voice (AI-sounding writing)",

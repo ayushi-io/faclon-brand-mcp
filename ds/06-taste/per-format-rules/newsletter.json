@@ -155,7 +155,7 @@
     },
     {
       "id": "template-layouts",
-      "text": "Avoid template layouts: the same icon, title and text card in every section, an icon on every heading or card when it adds nothing, or every section centred. Every element carries content or structure; when in doubt, leave it out.",
+      "text": "Avoid template layouts: the same icon, title and text card in every section, or every section centred. Every element carries content or structure; when in doubt, leave it out.",
       "basis": [
         "rule:design.no-ai-slop",
         "decision:new-card-designs"
@@ -301,10 +301,13 @@
     },
     {
       "id": "icons",
-      "text": "Give each item in a list or grid of tools, capabilities, features, steps or outcomes a Lucide icon that names it, coloured with a text token that suits the surface. No decorative or AI cliche icons, and no icon on a heading when it adds nothing.",
+      "text": "Use Lucide icons anywhere the content needs them: beside a header or title, inline, in lists, cards and flows, beside a number, or on their own; give each item in a list or grid of tools, capabilities, features, steps or outcomes an icon that names it. Use the format's sizes (icons), one size and square style per set; square only (no circle or polygon unless the user asks), a solid fill with no border, and the icon at least 4.5:1 against its square or background. No AI cliche icons.",
       "basis": [
         "rule:icon.lucide-only",
-        "decision:icons-on-lists"
+        "decision:icons-on-lists",
+        "decision:icons-anywhere",
+        "rule:icon.style",
+        "profile:icons"
       ]
     },
     {
