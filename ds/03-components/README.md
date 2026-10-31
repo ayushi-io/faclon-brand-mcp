@@ -2,9 +2,9 @@
 
 Built components are designed in Figma (Design MCP, `components` and `Badges` pages) and derived into `components.json` by `npm run build:components`. Figma owns every value; `components.json` owns the `use` lines, `about` and `usage`. Each follows `_component-template.md`.
 
-## Built (28)
+## Built (29)
 
-- **Atoms:** Heading content, Body Text, Divider, Image, Chip, Accordion Item
+- **Atoms:** Heading content, Body Text, Divider, Image, Chip, Accordion Item, Icon square (added 2026-10-31: the square behind a card icon, Size = icon size, used by Icon Card, Feature grid and List Item Card)
 - **Cards:** Card base, Card, Icon Card, Highlight Card, List Item Card, Metric Card, Banner Card, Media Card, FAQ Card, Profile Card
 - **Controls:** Badge, Button, Tag, Contact Pill
 - **Blocks** (designed 2026-10-27, in the Figma section Blocks): Stat tile, Quote card, Logo wall, Feature grid, Process flow, Comparison table, CTA band, Cover block

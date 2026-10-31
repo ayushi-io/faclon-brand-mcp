@@ -122,6 +122,7 @@ function describe(root, ctx, id) {
       return v.variable;
     }
     if (isObject(v) && "missing" in v) ctx.warn(`${where(at)}: ${what} is bound to a variable that no longer exists`);
+    else if (v === "mixed") ctx.warn(`${where(at)}: ${what} is mixed (different values on one layer); set one value`);
     else if (typeof v === "number" && v !== 0) ctx.warn(`${where(at)}: ${what} is ${v}, not bound to a variable`);
     return v;
   };

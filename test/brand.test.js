@@ -586,7 +586,7 @@ test("components: every value is an existing token, role or component, with a CS
   const logoFiles = new Set(readData(P.assetIndex).assets.filter((a) => a.category === "logos").map((a) => a.id.replace(/^logos\/faclon-labs-/, "")));
   const ids = components.map((c) => c.id);
   assert.equal(new Set(ids).size, ids.length, "component ids are unique");
-  assert.equal(components.length, 28);
+  assert.equal(components.length, 29);
   for (const id of ["stat-tile", "quote-card", "logo-wall", "feature-grid", "process-flow", "comparison-table", "cta-band", "cover-block"]) assert.ok(components.find((c) => c.id === id)?.use, `${id} needs a use line`);
   const skip = new Set(["use", "name", "id", "width"]);
   const walk = (v, key, where) => {
