@@ -985,7 +985,7 @@
         "page": "components",
         "node": "3327:12365"
       },
-      "use": "",
+      "use": "The square behind a Lucide icon in a card or block. Size is the icon size (16, 24, 32 or 40); the square is the icon plus gap/inline on every side, a solid fill with no border. Pick the size for the card's width (profile icons.in_card), so the icon grows with the card. Swap the icon for one that names the item.",
       "props": {
         "Size": [
           "16",
@@ -1435,9 +1435,9 @@
             "align": "center"
           },
           "contains": [
+            "icon-square",
             "heading-content",
-            "image (optional)",
-            "icon-square"
+            "image (optional)"
           ]
         }
       ],

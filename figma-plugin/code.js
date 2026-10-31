@@ -121,10 +121,12 @@ async function buildComponentsSnapshot() {
     return vars[alias.id];
   };
   const styleName = async (id) => (typeof id === "string" && id ? ((await figma.getStyleByIdAsync(id)) || {}).name || null : null);
-  // A bound variable, or the raw value when nothing is bound.
+  // A bound variable, or the raw value when nothing is bound. figma.mixed (a symbol,
+  // which postMessage cannot send) is exported as "mixed" so the build can name the layer.
+  const plain = (v) => (typeof v === "symbol" ? "mixed" : v);
   const value = async (n, ...fields) => {
     for (const f of fields) if (n.boundVariables && n.boundVariables[f]) return varRef(n.boundVariables[f]);
-    return n[fields[0]];
+    return plain(n[fields[0]]);
   };
   const paints = async (list) => {
     const out = [];
@@ -177,8 +179,8 @@ async function buildComponentsSnapshot() {
       const size = n.boundVariables && n.boundVariables.fontSize;
       o.text = {
         style: await styleName(n.textStyleId),
-        fontSize: size ? await varRef(Array.isArray(size) ? size[0] : size) : n.fontSize,
-        autoResize: n.textAutoResize,
+        fontSize: size ? await varRef(Array.isArray(size) ? size[0] : size) : plain(n.fontSize),
+        autoResize: plain(n.textAutoResize),
       };
     }
     if (n.type === "INSTANCE") {
