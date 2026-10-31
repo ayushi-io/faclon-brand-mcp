@@ -101,29 +101,68 @@
       ]
     },
     "content": {
-      "theme": "light",
-      "dark_on_request": true
-    },
-    "rhythm": {
-      "applies_from": 5,
-      "pattern": "after every two light slides, one dark slide",
-      "example_5": [
-        "light",
-        "light",
-        "dark",
-        "light",
-        "light"
-      ]
+      "theme": "light, dark or brand",
+      "rule": "No fixed theme or order: pick each slide's theme from the social templates and its content (brand-blue step posts with a big stat and a visual, dark stat tiles, light quote slides), unless the user asks for one. Mix themes across a carousel so it never reads as one colour."
     },
     "closing": {
       "theme": "same as the cover"
     }
   },
+  "spacing": {
+    "mode": "desktop",
+    "note": "Spacing roles at the 540 px design size; double them at 1080. The grid keeps its 12 px gutter (spacing/12).",
+    "roles": {
+      "gap/inline": {
+        "value": 8,
+        "use": "between adjacent items: an icon and its label, chips"
+      },
+      "gap/stack": {
+        "value": 12,
+        "use": "between stacked elements inside a card or block"
+      },
+      "gap/grid": {
+        "value": 24,
+        "use": "between cards and blocks"
+      },
+      "padding/container": {
+        "value": 16,
+        "use": "inside every card, box and panel"
+      },
+      "padding/section": {
+        "value": 56,
+        "use": "between sections of a slide"
+      }
+    },
+    "card": "UI cards and boxes use the container default: container/primary (container/secondary on light when the card sits on white), 1px border/container, radius/3xl (12px), padding/container. On dark slides the same container tokens in the dark colour mode; on brand slides container/inverse with text/inverse (the templates' dark caption boxes) or container/primary. Size each card to its content."
+  },
+  "content_forms": {
+    "rule": "Before designing a slide, name the shape of its content and draw it in the matching form, built from design-system parts and the blocks (Stat tile, Process flow, Comparison table, Feature grid, Quote card). The social templates show each form. A row of text cards or a bare list is never the form for steps, results or a problem.",
+    "references": "get_brand_guidelines(section: \"data-viz\"): reference layouts for numbers, steps, stages, cycles and systems (stat layouts, charts, funnel, flywheel, staircase, plant drawings), the same in every format. References, not fixed layouts: build designs like them, adapted to the content.",
+    "forms": {
+      "numbers": "A result or KPI: one big number (Display/XL Regular) with its label, and a visual of the change (before and after bars, a line settling into a band, a gauge); several results: stat tiles in a 2x2 or 3-up grid, one highlighted.",
+      "sequence": "Steps or a change in how work is done: an icon flow (icons converging into one pill, or numbered nodes with connectors) with short text under each.",
+      "problem_solution": "A problem and its answer, or before and after: a split contrast, the problem side in the Negative intent and the answer in brand or Positive.",
+      "comparison": "Before and after, or options: labelled bars or a compact comparison table.",
+      "like_items": "Parallel items (data sources, capabilities, pain points): cards or tiles with a Lucide icon per item, sized to their content, or an icon grid.",
+      "quote": "A customer or leader quote: a quote card with the highlighted phrase, name and role, and the headshot from the asset library where it exists.",
+      "message": "One statement or call to action (cover, closing): the headline as the hero, with a design element where the background allows it."
+    }
+  },
+  "product_visuals": {
+    "rule": "A post that shows a product screen (an I/O Sense dashboard, the Bruce AI product visual, an operator view) uses the user's screenshot. There is no product screenshot library, so without one place a placeholder; never draw a fake product UI.",
+    "placeholder": "A frame at the size and position the design needs: container/secondary, 1px dashed border/strong, radius/3xl, with the label DASHBOARD_MOCKUP_<NAME> centred in Body/LG text/secondary. List every placeholder in the delivery note."
+  },
+  "photos": "Photos (the case-study cover, quote backgrounds) come only from the user, in the imagery styles (section \"imagery\"). There is no photography library; never use stock, generated or sampled photos. Ask when a layout needs one.",
   "logo": {
     "position": "top-right by default; top-left when the slide design needs it",
     "width": 132,
     "width_at_export": 264,
-    "every_slide": true
+    "every_slide": true,
+    "files": {
+      "light": "logos/faclon-labs-logo-blue",
+      "dark_and_brand": "logos/faclon-labs-logo-white"
+    },
+    "place": "An <img> from the asset's url (get_brand_guidelines(section: \"assets\", asset_category: \"logos\")) with alt \"Faclon Labs\"; never a placeholder box, a text label or a redrawn logo."
   },
   "bruce_ai": {
     "gradient": "gradient/bruce-ai",
@@ -138,7 +177,7 @@
       "The scope: a single post or a carousel, and how many slides. Nothing is added that was not asked for; when it is unclear, ask.",
       "Square or portrait (the designer can suggest), and the call to action and link, if any.",
       "The cover image: the user generates it and shares it.",
-      "Whether the slides after the cover are dark instead of light."
+      "A slide's theme, when they want a particular one; otherwise the designer picks it from the templates and the content."
     ],
     "fixed": [
       {
@@ -215,5 +254,33 @@
   },
   "severity": {
     "min_size": "error"
+  },
+  "icons": {
+    "source": "Lucide; see get_brand_guidelines(section: \"iconography\")",
+    "beside_text": 24,
+    "on_its_own": 48,
+    "in_card": [
+      {
+        "card_width_min": 0,
+        "card_width_max": 179,
+        "icon": 16,
+        "square": 32,
+        "radius": "radius/md"
+      },
+      {
+        "card_width_min": 180,
+        "card_width_max": 359,
+        "icon": 24,
+        "square": 40,
+        "radius": "radius/xl"
+      },
+      {
+        "card_width_min": 360,
+        "icon": 32,
+        "square": 48,
+        "radius": "radius/xl"
+      }
+    ],
+    "note": "Sizes in px at the design size. In a UI card the icon square follows the card: pick the step for the card's width, so a bigger card gets a bigger icon and square (CSS container queries on the card). The square is the icon plus 8px (gap/inline) on every side, a solid fill with no border; square only. Figma: the Icon square component (Size = icon size)."
   }
 }

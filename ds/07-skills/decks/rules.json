@@ -203,6 +203,7 @@
   },
   "content_forms": {
     "rule": "Before designing a slide, name the shape of its content and draw it in the matching form, built from design-system parts and the blocks (Process flow, Stat tile, Comparison table, Feature grid). A grid or row of text cards is only for like items that sit side by side (decision infographic-required).",
+    "references": "get_brand_guidelines(section: \"data-viz\"): reference layouts for numbers, steps, stages, cycles and systems (stat layouts, charts, funnel, flywheel, staircase, plant drawings), the same in every format. References, not fixed layouts: build designs like them, adapted to the content.",
     "forms": {
       "sequence": "Steps, a workflow or a ticket flow in order: a flow or timeline with numbered nodes and connectors (Process flow), short text under each node.",
       "lifecycle": "A cycle that repeats (MLOps, closed loop, detect-act-verify-learn): a loop diagram, the stages placed around a circle or closed path with arrows back to the start.",
@@ -222,5 +223,33 @@
     "theme": "light",
     "rule": "Slides about what a product shows (an I/O Sense screen, a dashboard, an operator view) use the light theme and show the product as a dashboard mockup next to the user's points (decision product-slides-light-with-mockup).",
     "mockup_placeholder": "Until product screenshots are in the asset library, place a placeholder frame where the mockup goes, at the size and position the design needs: container/secondary, 1px dashed border/strong, radius/3xl, with the label DASHBOARD_MOCKUP_<NAME> centred in Body/24 text/secondary. Never draw a fake product UI. List every placeholder in the delivery note so the user can drop in the screenshot."
+  },
+  "icons": {
+    "source": "Lucide; see get_brand_guidelines(section: \"iconography\")",
+    "beside_text": 32,
+    "on_its_own": 48,
+    "in_card": [
+      {
+        "card_width_min": 0,
+        "card_width_max": 359,
+        "icon": 24,
+        "square": 40,
+        "radius": "radius/xl"
+      },
+      {
+        "card_width_min": 360,
+        "card_width_max": 719,
+        "icon": 32,
+        "square": 48,
+        "radius": "radius/xl"
+      },
+      {
+        "card_width_min": 720,
+        "icon": 40,
+        "square": 56,
+        "radius": "radius/xl"
+      }
+    ],
+    "note": "Sizes in px at the design size. In a UI card the icon square follows the card: pick the step for the card's width, so a bigger card gets a bigger icon and square (CSS container queries on the card). The square is the icon plus 8px (gap/inline) on every side, a solid fill with no border; square only. Figma: the Icon square component (Size = icon size)."
   }
 }

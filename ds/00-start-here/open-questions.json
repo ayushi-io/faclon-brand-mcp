@@ -379,7 +379,7 @@
     },
     {
       "id": "social-theme-rhythm",
-      "decision": "Social posts: the cover is dark; following slides are light by default (dark if the user wants). With five or more slides between cover and closing, one dark slide follows every two light slides. The closing slide follows the cover's theme.",
+      "decision": "Social posts: the cover is dark; following slides are light by default (dark if the user wants). With five or more slides between cover and closing, one dark slide follows every two light slides. The closing slide follows the cover's theme. Replaced for content slides by social-themes-from-templates on 2026-10-30; the cover and closing parts still stand.",
       "decided_on": "2026-10-23"
     },
     {
@@ -534,7 +534,7 @@
     },
     {
       "id": "icons-on-lists",
-      "decision": "Icons are part of the infographic language: give each item in a list or grid of tools, capabilities, features, steps or outcomes a Lucide icon that names it, coloured with a text token. Still no decorative icons, AI cliche icons or an icon on a heading that adds nothing. Replaces the earlier icons-only-when-they-help practice. From brand-team feedback on a generated deck (Cyclone Jam prediction), 2026-10-28.",
+      "decision": "Icons are part of the infographic language: give each item in a list or grid of tools, capabilities, features, steps or outcomes a Lucide icon that names it, coloured with a text token. Still no AI cliche icons. Replaces the earlier icons-only-when-they-help practice. From brand-team feedback on a generated deck (Cyclone Jam prediction), 2026-10-28. The heading limit was lifted by icons-anywhere on 2026-10-30.",
       "decided_on": "2026-10-28"
     },
     {
@@ -546,6 +546,46 @@
       "id": "dot-particle-on-brand",
       "decision": "The dot-particle form may be used on brand backgrounds as well as dark, as on the closing reference slide (29 · Close); the light streak stays brand only. Extends the design-elements decision. Brand team, 2026-10-28.",
       "decided_on": "2026-10-28"
+    },
+    {
+      "id": "social-themes-from-templates",
+      "decision": "Social content slides have no fixed theme or order: light, dark or brand, picked per slide from the social templates (brand-blue step posts with a big stat and a visual, dark stat tiles, light quote slides) and the content, unless the user asks for one. The light-by-default and dark-every-third-slide rhythm no longer applies. The cover stays dark with the user's image, and the closing slide follows the cover. From brand-team feedback on a generated carousel (cement plant energy efficiency), 2026-10-30.",
+      "decided_on": "2026-10-30"
+    },
+    {
+      "id": "design-elements-anywhere",
+      "decision": "The design elements may be used on any slide, post or page whose background allows them, not only covers and closing slides; use them so a piece reads as Faclon Labs. Each still goes only on its own backgrounds (the dot-particle form on dark or brand, the light streak on brand, the dot wave on dark, light or brand), placed from the asset library files. Brand team, 2026-10-30.",
+      "decided_on": "2026-10-30"
+    },
+    {
+      "id": "social-spacing",
+      "decision": "Social posts use the desktop spacing roles at the 540 px design size: gap/inline (8) between adjacent items, gap/stack (12) inside a component, gap/grid (24) between cards, padding/container (16) inside cards and boxes, padding/section (56) between sections; doubled at 1080 export. The 12 px column gutter (spacing/12) stays for the grid. Brand team, 2026-10-30.",
+      "decided_on": "2026-10-30"
+    },
+    {
+      "id": "social-density",
+      "decision": "Social posts follow the deck density rules: each slide's content drawn in its form (a stat, an icon flow, bars or a gauge, stat tiles, a split), never a row of text cards or a bare list; cards and boxes (UI cards) with the container default and padding/container, sized to their content and never stretched to leave empty space; when a slide has little content the type goes up a role and the visual grows. From brand-team feedback on a generated carousel (cement plant energy efficiency): dense content, no infographics, no design element, no UI cards, no logo. 2026-10-30.",
+      "decided_on": "2026-10-30"
+    },
+    {
+      "id": "logo-from-asset-library",
+      "decision": "Every format places the real Faclon Labs logo file from the asset library (logos/faclon-labs-logo-blue on light, logos/faclon-labs-logo-white on dark and brand) as an image from its url; never a placeholder box, a text label or a redrawn logo. Newsletters keep their IMAGE_URL_LOGO placeholder for Brevo. From the same carousel feedback, 2026-10-30.",
+      "decided_on": "2026-10-30"
+    },
+    {
+      "id": "product-colours",
+      "decision": "Product colours are not part of the design system: no colour tokens for I/O Connect, DeepSense or other products. A product mark colour (I/O Connect yellow #FFC716 with black text, DeepSense orange #FF6600) may be used only when the user specifically asks for it; check_design then reports it under color.tokens-only, and the delivery note names it as the user's request. Raised 2026-10-29 from a platform-modules deck; decided by the brand team 2026-10-30.",
+      "decided_on": "2026-10-30"
+    },
+    {
+      "id": "product-screens-and-photos",
+      "decision": "No product screenshot or photography library is planned soon. Product screens in any format use the user's screenshot or the DASHBOARD_MOCKUP_<NAME> placeholder, never a drawn UI; photos come only from the user, never stock, generated or sampled. Brand team, 2026-10-30.",
+      "decided_on": "2026-10-30"
+    },
+    {
+      "id": "icons-anywhere",
+      "decision": "Icons can be used anywhere the content needs them: headers, inline, lists, cards, flows, beside a number or on their own. Each outcome has its own icon sizes beside text, on its own and inside a UI card (profile icons). Icons sit on their own or in a square only, never a circle or polygon unless the user asks; the square is a solid fill, never an outlined or bordered box; the icon keeps at least 4.5:1 contrast with its square or background. Brand team, from the Figma iconography draft, 2026-10-30.",
+      "decided_on": "2026-10-30"
     }
   ],
   "figma_updates_needed": [],

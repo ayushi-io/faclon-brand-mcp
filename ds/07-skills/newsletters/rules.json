@@ -268,5 +268,33 @@
     "alt_text": "ALT_TEXT_<NAME>",
     "rule": "Every image and link is a placeholder; designers upload the images and add the links themselves. Alt text comes from the user; when it has not been given, use ALT_TEXT_<NAME>. Placeholder images keep their final width and height and a container/secondary fill so the layout holds. List every placeholder, with its display size and upload size (2x), at the end.",
     "syntax_note": "Placeholders are plain uppercase names, never Brevo {{ }} syntax: Brevo would treat them as variables. Only {{ unsubscribe }}, {{ mirror }} and {{ contact.ATTRIBUTE }} use it."
+  },
+  "icons": {
+    "source": "Lucide; see get_brand_guidelines(section: \"iconography\")",
+    "beside_text": 20,
+    "on_its_own": 32,
+    "in_card": [
+      {
+        "card_width_min": 0,
+        "card_width_max": 199,
+        "icon": 16,
+        "square": 32,
+        "radius": "radius/md"
+      },
+      {
+        "card_width_min": 200,
+        "card_width_max": 399,
+        "icon": 24,
+        "square": 40,
+        "radius": "radius/xl"
+      },
+      {
+        "card_width_min": 400,
+        "icon": 32,
+        "square": 48,
+        "radius": "radius/xl"
+      }
+    ],
+    "note": "Sizes in px at the design size. In a UI card the icon square follows the card: pick the step for the card's width, so a bigger card gets a bigger icon and square (CSS container queries on the card). The square is the icon plus 8px (gap/inline) on every side, a solid fill with no border; square only. Figma: the Icon square component (Size = icon size)."
   }
 }

@@ -21,7 +21,7 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 
 1. **Think like sales.** Who reads this, where are they in the pipeline and what should they do next? Put the outcome first and make the proof easy to find. The user's words stay as they are.
 2. **Load the rules.** `get_brand_guidelines(section: "rules", format_profile: "document")`, then `get_tokens(format: "document")` and `get_brand_guidelines(section: "components", format_profile: "document")`.
-3. **Plan the pages.** Sections, what leads, which content becomes cards, stats, tables or images.
+3. **Plan the pages.** Sections, what leads, which content becomes cards, stats, charts, tables or images. Draw each section in the form its content has: numbers as a stat layout or a chart, steps as a flow or a staircase, stages as a funnel, a cycle as a flywheel, never paragraphs or a grid of text cards for them. For numbers, steps, stages, cycles and systems, look at `get_brand_guidelines(section: "data-viz")`: reference layouts (stat layouts, charts, a funnel, a flywheel, a staircase of steps, plant drawings) that show the kinds of design you can build and how to place the number, caption, labels and source. They are references, not fixed layouts: build designs like them, adapted to the content and the space.
 4. **Design** on the grid with the components and text styles below. Flow the content across pages with the page-break rules.
 5. **Check.** Run `check_design(html, format_profile: "document")` on the finished HTML, fix every error and run it again; flag warnings about the user's words to the user instead of changing them. Then go through the checklist at the end, which covers what the tool cannot see (layout, spacing, hierarchy, overflow).
 6. **Deliver** one HTML file, named `<topic>_document_faclon_<YYYY-MM-DD>.html` (see section "export"), in the chat only, plus a note of anything flagged.
@@ -47,8 +47,8 @@ Claude, or any AI tool or platform using this skill, acts as a senior designer o
 ## Assets
 
 - Image and illustration styles: `get_brand_guidelines(section: "imagery")` and `(section: "illustration")`. Images and illustrations come from the user, in those styles.
-- The full Faclon Labs logo, blue. The logomark only where the user asks for it.
-- Icons: Lucide, coloured with a text token: one per item in a list or grid of tools, capabilities, features, steps or outcomes; never decorative.
+- The full Faclon Labs logo, blue (`logos/faclon-labs-logo-blue`): the file from the asset library (`get_brand_guidelines(section: "assets", asset_category: "logos")`), placed as an `<img>` by its `url`, never a placeholder box, a text label or a redrawn logo. The logomark only where the user asks for it.
+- Icons: Lucide, anywhere the content needs them (headers, inline, lists, cards, flows), and one per item in a list or grid of tools, capabilities, features, steps or outcomes. 16px beside text, 24px on its own, in a UI card an icon square that grows with the card (the step for the card's width in `icons.in_card`, set with container queries); square only, a solid fill with no border, at least 4.5:1 contrast (section "iconography").
 - Images and screenshots: only what the user supplies.
 
 ## Checklist before delivery

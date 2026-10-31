@@ -63,10 +63,12 @@
     },
     {
       "id": "logo",
-      "text": "Never leave the logo off a post or slide, and never use the logomark instead of the full Faclon Labs logo unless the user asks for it.",
+      "text": "Never leave the logo off a post or slide, or put a placeholder box, a text label or a redrawn logo in its place: place the logo file from the asset library (logos/faclon-labs-logo-blue on light, logos/faclon-labs-logo-white on dark and brand). Never use the logomark instead of the full Faclon Labs logo unless the user asks for it.",
       "basis": [
         "profile:logo",
-        "rule:logo.logomark-on-request"
+        "profile:logo.files",
+        "rule:logo.logomark-on-request",
+        "decision:logo-from-asset-library"
       ]
     },
     {
@@ -90,6 +92,31 @@
       "text": "Never make it look generic or machine-made: no gradients, glows, neon, glass or blur effects, decorative filler (blobs, orbs, sparkles, floating shapes), AI cliche imagery or icons (glowing brains, circuits, robot hands, sparkles or rockets for AI), text effects, or a coloured stripe down one side of a card. Exceptions: the design elements, each on its own background, and the Bruce AI gradient and glow on Bruce AI content.",
       "basis": [
         "rule:design.no-ai-slop"
+      ]
+    },
+    {
+      "id": "text-card-grids",
+      "text": "Never show steps, results, a problem or a set of numbers as a row of text cards or a bare list: draw it in its content form (a big stat with a visual, an icon flow, stat tiles, bars, a split).",
+      "basis": [
+        "decision:infographic-required",
+        "decision:social-density",
+        "profile:content_forms"
+      ]
+    },
+    {
+      "id": "stretched-cards",
+      "text": "Never stretch a card or box to fill a row or the slide when its content is short, or pin short cards to the bottom with empty space above. Size it to its content; if a slide looks empty, raise the type a role or grow the visual.",
+      "basis": [
+        "decision:social-density"
+      ]
+    },
+    {
+      "id": "fake-product-ui",
+      "text": "Never draw a fake product screen or dashboard, and never use a stock, generated or sampled photo. Use the user's screenshot or photo; without one, place the DASHBOARD_MOCKUP_<NAME> placeholder (or ask for the photo) and tell the user.",
+      "basis": [
+        "decision:product-screens-and-photos",
+        "profile:product_visuals.placeholder",
+        "profile:photos"
       ]
     }
   ],
@@ -118,7 +145,7 @@
     },
     {
       "id": "template-layouts",
-      "text": "Avoid template layouts: the same layout on every post or slide, an icon on every heading when it adds nothing, or everything centred. Every element carries content or structure.",
+      "text": "Avoid template layouts: the same layout on every post or slide, or everything centred. Every element carries content or structure.",
       "basis": [
         "rule:design.no-ai-slop",
         "decision:new-card-designs"
@@ -142,19 +169,19 @@
       ]
     },
     {
-      "id": "light-first",
-      "text": "Slides after the cover default to the light theme. If the user wants them dark, use the dark theme; otherwise offer light first.",
+      "id": "themes",
+      "text": "Slides after the cover have no fixed theme or order: pick light, dark or brand per slide from the social templates and the content (brand-blue step posts with a big stat and a visual, dark stat tiles, light quote slides), unless the user asks for one. Mix themes across a carousel.",
       "basis": [
         "profile:carousel.content",
-        "decision:social-theme-rhythm"
+        "decision:social-themes-from-templates"
       ]
     },
     {
-      "id": "rhythm",
-      "text": "With five or more slides between the cover and the closing slide, add one dark slide after every two light slides (five slides: light, light, dark, light, light). With fewer, keep them light.",
+      "id": "start-from-templates",
+      "text": "Start each post or slide from the social template whose layout fits its content (get_brand_guidelines(section: \"templates\", format_profile: \"social\")): take its layout, composition and hierarchy, never its text, numbers or logos.",
       "basis": [
-        "profile:carousel.rhythm",
-        "decision:social-theme-rhythm"
+        "decision:social-themes-from-templates",
+        "decision:social-media-rules"
       ]
     },
     {
@@ -205,10 +232,11 @@
     },
     {
       "id": "design-elements",
-      "text": "Design elements may be used, each only on its own backgrounds: the dot-particle form on dark or brand, the light streak on brand.",
+      "text": "Use the design elements to make posts read as Faclon Labs, on any slide whose background allows them, not only the cover and closing: the dot-particle form on dark or brand, the light streak on brand, the dot wave on dark, light or brand. Place the files from the asset library as they are (get_brand_guidelines(section: \"assets\", asset_category: \"design-elements\")); text never sits on the dots.",
       "basis": [
         "decision:design-elements",
-        "decision:dot-particle-on-brand"
+        "decision:dot-particle-on-brand",
+        "decision:design-elements-anywhere"
       ]
     },
     {
@@ -220,9 +248,11 @@
     },
     {
       "id": "infographic",
-      "text": "Show numbers, steps, comparisons and relationships as charts, diagrams, flows, stat rows and big numbers built from the design system, rather than paragraphs of text.",
+      "text": "Show numbers, steps, comparisons and relationships in their content form (content_forms): a big stat with a visual of the change, an icon flow, stat tiles, bars or a gauge, built from the design system, rather than paragraphs or lists of text.",
       "basis": [
-        "decision:infographic-led"
+        "decision:infographic-led",
+        "decision:infographic-required",
+        "profile:content_forms"
       ]
     },
     {
@@ -244,18 +274,48 @@
     },
     {
       "id": "cards",
-      "text": "Cards are reference designs; build new ones on Card base with design-system tokens, text roles and spacing.",
+      "text": "Put supporting text, stats and items in UI cards and boxes with the container default (container/primary, 1px border/container, radius/3xl, padding/container; on brand slides container/inverse with text/inverse, as in the templates). The named cards and blocks are starting points; build new ones on Card base. Vary card designs between slides.",
       "basis": [
         "decision:new-card-designs",
-        "default:container"
+        "default:container",
+        "decision:social-density",
+        "profile:spacing.card"
+      ]
+    },
+    {
+      "id": "spacing-by-purpose",
+      "text": "Pick spacing by purpose, at the desktop values (540 px design size): gap/inline (8) between adjacent items, gap/stack (12) inside a card, gap/grid (24) between cards, padding/container (16) inside every card and box, padding/section (56) between sections.",
+      "basis": [
+        "rule:spacing.role-defaults",
+        "decision:social-spacing",
+        "profile:spacing.roles"
+      ]
+    },
+    {
+      "id": "density",
+      "text": "Fill the content area with content, not empty space: size cards to their content, give every block of text a box with padding/container or the same breathing room on the grid, and when a slide has little content raise the type a role and grow the visual. Long content goes to the user as options, never squeezed.",
+      "basis": [
+        "decision:social-density",
+        "profile:safe_area"
+      ]
+    },
+    {
+      "id": "alignment",
+      "text": "A label and its text sit on one line or share a first baseline, labels never wrap, and left edges line up across a slide.",
+      "basis": [
+        "decision:social-density",
+        "profile:grid"
       ]
     },
     {
       "id": "icons",
-      "text": "Give each item in a list or grid of tools, capabilities, features, steps or outcomes a Lucide icon that names it, coloured with a text token that suits the surface. No decorative or AI cliche icons, and no icon on a heading when it adds nothing.",
+      "text": "Use Lucide icons anywhere the content needs them: beside a header or title, inline, in lists, cards and flows, beside a number, or on their own; give each item in a list or grid of tools, capabilities, features, steps or outcomes an icon that names it. Use the format's sizes (icons), one size and square style per set; square only (no circle or polygon unless the user asks), a solid fill with no border, and the icon at least 4.5:1 against its square or background. No AI cliche icons.",
       "basis": [
         "rule:icon.lucide-only",
-        "decision:icons-on-lists"
+        "decision:icons-on-lists",
+        "decision:icons-anywhere",
+        "rule:icon.style",
+        "profile:icons"
       ]
     }
   ]
