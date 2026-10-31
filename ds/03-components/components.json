@@ -7,7 +7,7 @@
       "components",
       "Badges"
     ],
-    "extracted_on": "2026-10-27",
+    "extracted_on": "2026-10-31",
     "method": "Variable bindings on each component (not the description text)"
   },
   "usage": [
@@ -457,7 +457,7 @@
             "gap": "gap/inline"
           },
           "contains": [
-            "image"
+            "icon-square"
           ]
         },
         {
@@ -477,7 +477,7 @@
             "gap": "gap/inline"
           },
           "contains": [
-            "image"
+            "icon-square"
           ]
         },
         {
@@ -497,7 +497,7 @@
             "gap": "gap/inline"
           },
           "contains": [
-            "image"
+            "icon-square"
           ]
         },
         {
@@ -978,6 +978,79 @@
       }
     },
     {
+      "id": "icon-square",
+      "name": "Icon square",
+      "kind": "atom",
+      "figma": {
+        "page": "components",
+        "node": "3327:12365"
+      },
+      "use": "",
+      "props": {
+        "Size": [
+          "16",
+          "24",
+          "32",
+          "40"
+        ]
+      },
+      "layout": {
+        "direction": "horizontal",
+        "padding": {
+          "top": "gap/inline",
+          "right": "gap/inline",
+          "bottom": "gap/inline",
+          "left": "gap/inline"
+        },
+        "gap": 0
+      },
+      "surface": {
+        "fill": "container/secondary"
+      },
+      "parts": [
+        {
+          "part": "vector",
+          "stroke": "text/brand",
+          "border_width": 2
+        },
+        {
+          "part": "vector",
+          "stroke": "text/brand",
+          "border_width": 2
+        },
+        {
+          "part": "vector",
+          "stroke": "text/brand",
+          "border_width": 2
+        },
+        {
+          "part": "vector",
+          "stroke": "text/brand",
+          "border_width": 2
+        }
+      ],
+      "variants": {
+        "Size": {
+          "16": {
+            "radius": "radius/md"
+          },
+          "24": {
+            "radius": "radius/xl"
+          },
+          "32": {
+            "radius": "radius/xl"
+          },
+          "40": {
+            "radius": "radius/xl"
+          }
+        }
+      },
+      "width": "hug",
+      "default": {
+        "Size": "16"
+      }
+    },
+    {
       "id": "card-base",
       "name": "Card base",
       "kind": "card",
@@ -1227,7 +1300,7 @@
       "parts": [
         {
           "part": "icon",
-          "component": "image"
+          "component": "icon-square"
         },
         {
           "part": "heading",
@@ -1362,9 +1435,9 @@
             "align": "center"
           },
           "contains": [
-            "image",
             "heading-content",
-            "image (optional)"
+            "image (optional)",
+            "icon-square"
           ]
         }
       ],
